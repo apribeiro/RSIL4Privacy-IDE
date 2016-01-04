@@ -3,9 +3,16 @@
  */
 package org.xtext.example.mydsl.generator;
 
+import com.google.common.collect.Iterators;
+import java.util.Iterator;
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
+import org.eclipse.xtext.xbase.lib.Functions.Function1;
+import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.xtext.example.mydsl.myDsl.Greeting;
 
 /**
  * Generates code from your model files on save.
@@ -16,5 +23,14 @@ import org.eclipse.xtext.generator.IGenerator;
 public class MyDslGenerator implements IGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
+    TreeIterator<EObject> _allContents = resource.getAllContents();
+    Iterator<Greeting> _filter = Iterators.<Greeting>filter(_allContents, Greeting.class);
+    final Function1<Greeting, String> _function = (Greeting it) -> {
+      return it.getName();
+    };
+    Iterator<String> _map = IteratorExtensions.<Greeting, String>map(_filter, _function);
+    String _join = IteratorExtensions.join(_map, ", ");
+    String _plus = ("People to greet: " + _join);
+    fsa.generateFile("greetings.txt", _plus);
   }
 }
