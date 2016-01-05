@@ -423,7 +423,7 @@
 			</activeWhen>
 		</handler>
   <handler
-        class="org.xtext.example.mydsl.handlers.ExcelHandler"
+        class="org.xtext.example.mydsl.ui.handlers.ExcelHandler"
         commandId="org.xtext.example.mydsl.ui.commandExcel">
   </handler>
 	</extension>
@@ -477,7 +477,7 @@
   <extension
         point="org.eclipse.ui.commands">
      <command
-           defaultHandler="org.xtext.example.mydsl.handlers.ExitHandler"
+           defaultHandler="org.xtext.example.mydsl.ui.handlers.ExitHandler"
            id="org.xtext.example.mydsl.ui.commandExit"
            name="Exit">
      </command>
@@ -508,7 +508,5 @@
         </action>
      </objectContribution>
   </extension>
-  <!-- My stuff -->
-  
   
 </plugin>

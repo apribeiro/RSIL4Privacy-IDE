@@ -1,4 +1,4 @@
-package org.xtext.example.mydsl.handlers;
+package org.xtext.example.mydsl.ui.handlers;
 
 import java.util.Iterator;
 
