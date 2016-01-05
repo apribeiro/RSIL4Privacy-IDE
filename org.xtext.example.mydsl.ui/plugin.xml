@@ -357,17 +357,7 @@
            style="push">
      </command>
   </menuContribution>
-  <menuContribution
-        allPopups="true"
-        class="org.xtext.example.mydsl.ui.View"
-        locationURI="popup:org.xtext.example.mydsl.ui.view">
-     <command
-           commandId="org.xtext.example.mydsl.ui.commandExcel"
-           label="Generate Excel"
-           style="push">
-     </command>
-  </menuContribution>
-  <menuContribution
+  <!-- <menuContribution
         allPopups="false"
         class="org.xtext.example.mydsl.ui.View"
         locationURI="popup:org.xtext.example.mydsl.ui.view">
@@ -376,7 +366,7 @@
            label="Generate Excel"
            style="push">
      </command>
-  </menuContribution>
+  </menuContribution> -->
   <menuContribution
         allPopups="false"
         class="org.xtext.example.mydsl.ui.View"
@@ -422,10 +412,6 @@
 				</reference>
 			</activeWhen>
 		</handler>
-  <handler
-        class="org.xtext.example.mydsl.ui.handlers.ExcelHandler"
-        commandId="org.xtext.example.mydsl.ui.commandExcel">
-  </handler>
 	</extension>
     <extension point="org.eclipse.ui.menus">
          <menuContribution
