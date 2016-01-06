@@ -339,6 +339,63 @@
      <menu
            id="rsil4PrivacyMenu"
            label="RSIL4Privacy">
+        <menu
+              id="importFromMenu"
+              label="Import From...">
+           <command
+                 commandId="org.xtext.example.mydsl.ui.commandExcel"
+                 label="Excel"
+                 style="push">
+           </command>
+           <command
+                 commandId="org.xtext.example.mydsl.ui.commandNLText"
+                 label="Natural Language Text"
+                 style="push">
+           </command>
+        </menu>
+        <menu
+              id="exportToMenu"
+              label="Export To...">
+           <command
+                 commandId="org.xtext.example.mydsl.ui.commandWord"
+                 label="Word"
+                 style="push">
+           </command>
+           <command
+                 commandId="org.xtext.example.mydsl.ui.commandExcel2"
+                 label="Excel"
+                 style="push">
+           </command>
+           <command
+                 commandId="org.xtext.example.mydsl.ui.commandJSON"
+                 label="JSON"
+                 style="push">
+           </command>
+           <command
+                 commandId="org.xtext.example.mydsl.ui.commandEddy"
+                 label="Eddy"
+                 style="push">
+           </command>
+           <command
+                 commandId="org.xtext.example.mydsl.ui.commandUML"
+                 label="UML"
+                 style="push">
+           </command>
+        </menu>
+        <command
+              commandId="org.xtext.example.mydsl.ui.commandCheckQuality"
+              label="Check Quality using Eddy Engine"
+              style="push">
+        </command>
+        <separator
+              name="org.xtext.example.mydsl.ui.separator1"
+              visible="true">
+        </separator>
+        <command
+              commandId="org.xtext.example.mydsl.ui.commandConfiguration"
+              label="Configuration"
+              style="push">
+        </command>
         <command
               commandId="org.xtext.example.mydsl.ui.commandExit"
               label="Exit"
