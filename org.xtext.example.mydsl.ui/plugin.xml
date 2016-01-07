@@ -54,6 +54,10 @@
 				</and>
             </activeWhen>
         </handler>
+        <handler
+        	class="org.xtext.example.mydsl.ui.MyDslExecutableExtensionFactory:org.eclipse.xtext.ui.handlers.EddyHandler"
+            commandId="org.xtext.example.mydsl.ui.commandEddy">
+        </handler>
     </extension>
     <extension point="org.eclipse.core.expressions.definitions">
         <definition id="org.xtext.example.mydsl.MyDsl.Editor.opened">
@@ -247,14 +251,14 @@
 	    <persistent value="true"/>
 	</extension>
 
-   <extension
+   <!--<extension
          point="org.eclipse.xtext.builder.participant">
       <participant
             class="org.xtext.example.mydsl.ui.MyDslExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
             fileExtensions="mydsl"
             >
       </participant>
-   </extension>
+   </extension>-->
    <extension
             point="org.eclipse.ui.preferencePages">
         <page
@@ -544,7 +548,6 @@
            name="JSON">
      </command>
      <command
-           defaultHandler="org.xtext.example.mydsl.ui.handlers.EddyHandler"
            id="org.xtext.example.mydsl.ui.commandEddy"
            name="Eddy">
      </command>

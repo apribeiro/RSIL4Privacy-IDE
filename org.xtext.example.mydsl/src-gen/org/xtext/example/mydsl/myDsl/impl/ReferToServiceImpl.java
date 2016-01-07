@@ -5,54 +5,46 @@ package org.xtext.example.mydsl.myDsl.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.example.mydsl.myDsl.Greeting;
 import org.xtext.example.mydsl.myDsl.MyDslPackage;
+import org.xtext.example.mydsl.myDsl.ReferToService;
+import org.xtext.example.mydsl.myDsl.Service;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Greeting</b></em>'.
+ * An implementation of the model object '<em><b>Refer To Service</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.myDsl.impl.GreetingImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myDsl.impl.ReferToServiceImpl#getRefertose <em>Refertose</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeting
+public class ReferToServiceImpl extends MinimalEObjectImpl.Container implements ReferToService
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getRefertose() <em>Refertose</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getRefertose()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected Service refertose;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected GreetingImpl()
+  protected ReferToServiceImpl()
   {
     super();
   }
@@ -65,7 +57,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   @Override
   protected EClass eStaticClass()
   {
-    return MyDslPackage.Literals.GREETING;
+    return MyDslPackage.Literals.REFER_TO_SERVICE;
   }
 
   /**
@@ -73,9 +65,19 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public Service getRefertose()
   {
-    return name;
+    if (refertose != null && refertose.eIsProxy())
+    {
+      InternalEObject oldRefertose = (InternalEObject)refertose;
+      refertose = (Service)eResolveProxy(oldRefertose);
+      if (refertose != oldRefertose)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MyDslPackage.REFER_TO_SERVICE__REFERTOSE, oldRefertose, refertose));
+      }
+    }
+    return refertose;
   }
 
   /**
@@ -83,12 +85,22 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public Service basicGetRefertose()
   {
-    String oldName = name;
-    name = newName;
+    return refertose;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRefertose(Service newRefertose)
+  {
+    Service oldRefertose = refertose;
+    refertose = newRefertose;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.GREETING__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.REFER_TO_SERVICE__REFERTOSE, oldRefertose, refertose));
   }
 
   /**
@@ -101,8 +113,9 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case MyDslPackage.GREETING__NAME:
-        return getName();
+      case MyDslPackage.REFER_TO_SERVICE__REFERTOSE:
+        if (resolve) return getRefertose();
+        return basicGetRefertose();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +130,8 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case MyDslPackage.GREETING__NAME:
-        setName((String)newValue);
+      case MyDslPackage.REFER_TO_SERVICE__REFERTOSE:
+        setRefertose((Service)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +147,8 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case MyDslPackage.GREETING__NAME:
-        setName(NAME_EDEFAULT);
+      case MyDslPackage.REFER_TO_SERVICE__REFERTOSE:
+        setRefertose((Service)null);
         return;
     }
     super.eUnset(featureID);
@@ -151,27 +164,10 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case MyDslPackage.GREETING__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case MyDslPackage.REFER_TO_SERVICE__REFERTOSE:
+        return refertose != null;
     }
     return super.eIsSet(featureID);
   }
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
-  }
-
-} //GreetingImpl
+} //ReferToServiceImpl

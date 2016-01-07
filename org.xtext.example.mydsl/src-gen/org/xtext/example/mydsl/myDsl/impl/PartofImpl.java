@@ -2,55 +2,49 @@
  */
 package org.xtext.example.mydsl.myDsl.impl;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.xtext.example.mydsl.myDsl.Greeting;
-import org.xtext.example.mydsl.myDsl.Model;
 import org.xtext.example.mydsl.myDsl.MyDslPackage;
+import org.xtext.example.mydsl.myDsl.Partof;
+import org.xtext.example.mydsl.myDsl.Recipient;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Model</b></em>'.
+ * An implementation of the model object '<em><b>Partof</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.myDsl.impl.ModelImpl#getGreetings <em>Greetings</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myDsl.impl.PartofImpl#getPartof <em>Partof</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ModelImpl extends MinimalEObjectImpl.Container implements Model
+public class PartofImpl extends MinimalEObjectImpl.Container implements Partof
 {
   /**
-   * The cached value of the '{@link #getGreetings() <em>Greetings</em>}' containment reference list.
+   * The cached value of the '{@link #getPartof() <em>Partof</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getGreetings()
+   * @see #getPartof()
    * @generated
    * @ordered
    */
-  protected EList<Greeting> greetings;
+  protected Recipient partof;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ModelImpl()
+  protected PartofImpl()
   {
     super();
   }
@@ -63,7 +57,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   @Override
   protected EClass eStaticClass()
   {
-    return MyDslPackage.Literals.MODEL;
+    return MyDslPackage.Literals.PARTOF;
   }
 
   /**
@@ -71,13 +65,19 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Greeting> getGreetings()
+  public Recipient getPartof()
   {
-    if (greetings == null)
+    if (partof != null && partof.eIsProxy())
     {
-      greetings = new EObjectContainmentEList<Greeting>(Greeting.class, this, MyDslPackage.MODEL__GREETINGS);
+      InternalEObject oldPartof = (InternalEObject)partof;
+      partof = (Recipient)eResolveProxy(oldPartof);
+      if (partof != oldPartof)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MyDslPackage.PARTOF__PARTOF, oldPartof, partof));
+      }
     }
-    return greetings;
+    return partof;
   }
 
   /**
@@ -85,15 +85,22 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  public Recipient basicGetPartof()
   {
-    switch (featureID)
-    {
-      case MyDslPackage.MODEL__GREETINGS:
-        return ((InternalEList<?>)getGreetings()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+    return partof;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPartof(Recipient newPartof)
+  {
+    Recipient oldPartof = partof;
+    partof = newPartof;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.PARTOF__PARTOF, oldPartof, partof));
   }
 
   /**
@@ -106,8 +113,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case MyDslPackage.MODEL__GREETINGS:
-        return getGreetings();
+      case MyDslPackage.PARTOF__PARTOF:
+        if (resolve) return getPartof();
+        return basicGetPartof();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,15 +125,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case MyDslPackage.MODEL__GREETINGS:
-        getGreetings().clear();
-        getGreetings().addAll((Collection<? extends Greeting>)newValue);
+      case MyDslPackage.PARTOF__PARTOF:
+        setPartof((Recipient)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -141,8 +147,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case MyDslPackage.MODEL__GREETINGS:
-        getGreetings().clear();
+      case MyDslPackage.PARTOF__PARTOF:
+        setPartof((Recipient)null);
         return;
     }
     super.eUnset(featureID);
@@ -158,10 +164,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case MyDslPackage.MODEL__GREETINGS:
-        return greetings != null && !greetings.isEmpty();
+      case MyDslPackage.PARTOF__PARTOF:
+        return partof != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //ModelImpl
+} //PartofImpl

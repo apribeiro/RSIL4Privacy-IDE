@@ -75,14 +75,99 @@ public class MyDslAdapterFactory extends AdapterFactoryImpl
     new MyDslSwitch<Adapter>()
     {
       @Override
-      public Adapter caseModel(Model object)
+      public Adapter casePolicy(Policy object)
       {
-        return createModelAdapter();
+        return createPolicyAdapter();
       }
       @Override
-      public Adapter caseGreeting(Greeting object)
+      public Adapter caseEnforcement(Enforcement object)
       {
-        return createGreetingAdapter();
+        return createEnforcementAdapter();
+      }
+      @Override
+      public Adapter caseService(Service object)
+      {
+        return createServiceAdapter();
+      }
+      @Override
+      public Adapter caseRecipient(Recipient object)
+      {
+        return createRecipientAdapter();
+      }
+      @Override
+      public Adapter casePrivateData(PrivateData object)
+      {
+        return createPrivateDataAdapter();
+      }
+      @Override
+      public Adapter caseAttribute(Attribute object)
+      {
+        return createAttributeAdapter();
+      }
+      @Override
+      public Adapter caseCollection(Collection object)
+      {
+        return createCollectionAdapter();
+      }
+      @Override
+      public Adapter caseDisclosure(Disclosure object)
+      {
+        return createDisclosureAdapter();
+      }
+      @Override
+      public Adapter caseRetention(Retention object)
+      {
+        return createRetentionAdapter();
+      }
+      @Override
+      public Adapter caseUsage(Usage object)
+      {
+        return createUsageAdapter();
+      }
+      @Override
+      public Adapter caseInformative(Informative object)
+      {
+        return createInformativeAdapter();
+      }
+      @Override
+      public Adapter casePartof(Partof object)
+      {
+        return createPartofAdapter();
+      }
+      @Override
+      public Adapter caseReferToRecipient(ReferToRecipient object)
+      {
+        return createReferToRecipientAdapter();
+      }
+      @Override
+      public Adapter caseReferToRecipientSource(ReferToRecipientSource object)
+      {
+        return createReferToRecipientSourceAdapter();
+      }
+      @Override
+      public Adapter caseReferToRecipientTarget(ReferToRecipientTarget object)
+      {
+        return createReferToRecipientTargetAdapter();
+      }
+      @Override
+      public Adapter caseReferToService(ReferToService object)
+      {
+        return createReferToServiceAdapter();
+      }
+      @Override
+      public Adapter caseServicePartof(ServicePartof object)
+      {
+        return createServicePartofAdapter();
+      }
+      @Override
+      public Adapter caseRefPrivateData(RefPrivateData object)
+      {
+        return createRefPrivateDataAdapter();
+      }
+      @Override
+      public Adapter caseRefertoEnforcement(RefertoEnforcement object)
+      {
+        return createRefertoEnforcementAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -107,31 +192,286 @@ public class MyDslAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.Model <em>Model</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.Policy <em>Policy</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.mydsl.myDsl.Model
+   * @see org.xtext.example.mydsl.myDsl.Policy
    * @generated
    */
-  public Adapter createModelAdapter()
+  public Adapter createPolicyAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.Greeting <em>Greeting</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.Enforcement <em>Enforcement</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.mydsl.myDsl.Greeting
+   * @see org.xtext.example.mydsl.myDsl.Enforcement
    * @generated
    */
-  public Adapter createGreetingAdapter()
+  public Adapter createEnforcementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.Service <em>Service</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myDsl.Service
+   * @generated
+   */
+  public Adapter createServiceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.Recipient <em>Recipient</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myDsl.Recipient
+   * @generated
+   */
+  public Adapter createRecipientAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.PrivateData <em>Private Data</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myDsl.PrivateData
+   * @generated
+   */
+  public Adapter createPrivateDataAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.Attribute <em>Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myDsl.Attribute
+   * @generated
+   */
+  public Adapter createAttributeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.Collection <em>Collection</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myDsl.Collection
+   * @generated
+   */
+  public Adapter createCollectionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.Disclosure <em>Disclosure</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myDsl.Disclosure
+   * @generated
+   */
+  public Adapter createDisclosureAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.Retention <em>Retention</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myDsl.Retention
+   * @generated
+   */
+  public Adapter createRetentionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.Usage <em>Usage</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myDsl.Usage
+   * @generated
+   */
+  public Adapter createUsageAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.Informative <em>Informative</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myDsl.Informative
+   * @generated
+   */
+  public Adapter createInformativeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.Partof <em>Partof</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myDsl.Partof
+   * @generated
+   */
+  public Adapter createPartofAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.ReferToRecipient <em>Refer To Recipient</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myDsl.ReferToRecipient
+   * @generated
+   */
+  public Adapter createReferToRecipientAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.ReferToRecipientSource <em>Refer To Recipient Source</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myDsl.ReferToRecipientSource
+   * @generated
+   */
+  public Adapter createReferToRecipientSourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.ReferToRecipientTarget <em>Refer To Recipient Target</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myDsl.ReferToRecipientTarget
+   * @generated
+   */
+  public Adapter createReferToRecipientTargetAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.ReferToService <em>Refer To Service</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myDsl.ReferToService
+   * @generated
+   */
+  public Adapter createReferToServiceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.ServicePartof <em>Service Partof</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myDsl.ServicePartof
+   * @generated
+   */
+  public Adapter createServicePartofAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.RefPrivateData <em>Ref Private Data</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myDsl.RefPrivateData
+   * @generated
+   */
+  public Adapter createRefPrivateDataAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.myDsl.RefertoEnforcement <em>Referto Enforcement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.myDsl.RefertoEnforcement
+   * @generated
+   */
+  public Adapter createRefertoEnforcementAdapter()
   {
     return null;
   }
