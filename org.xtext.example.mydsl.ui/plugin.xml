@@ -343,7 +343,7 @@
               id="importFromMenu"
               label="Import From...">
            <command
-                 commandId="org.xtext.example.mydsl.ui.commandExcel"
+                 commandId="org.xtext.example.mydsl.ui.commandImportExcel"
                  label="Excel"
                  style="push">
            </command>
@@ -362,7 +362,7 @@
                  style="push">
            </command>
            <command
-                 commandId="org.xtext.example.mydsl.ui.commandExcel2"
+                 commandId="org.xtext.example.mydsl.ui.commandExportExcel"
                  label="Excel"
                  style="push">
            </command>
@@ -409,7 +409,7 @@
         class="org.xtext.example.mydsl.ui.View"
         locationURI="popup:org.xtext.example.mydsl.ui.view">
      <command
-           commandId="org.xtext.example.mydsl.ui.commandExcel"
+           commandId="org.xtext.example.mydsl.ui.commandGenerateExcel"
            label="Generate Excel"
            style="push">
      </command>
@@ -515,8 +515,53 @@
            name="Exit">
      </command>
      <command
-           id="org.xtext.example.mydsl.ui.commandExcel"
-           name="Generate Excel">
+           id="org.xtext.example.mydsl.ui.commandGenerateExcel"
+           name="GenerateExcel">
+     </command>
+     <command
+           defaultHandler="org.xtext.example.mydsl.ui.handlers.ImportExcelHandler"
+           id="org.xtext.example.mydsl.ui.commandImportExcel"
+           name="ImportExcel">
+     </command>
+     <command
+           defaultHandler="org.xtext.example.mydsl.ui.handlers.ExportExcelHandler"
+           id="org.xtext.example.mydsl.ui.commandExportExcel"
+           name="ExportExcel">
+     </command>
+     <command
+           defaultHandler="org.xtext.example.mydsl.ui.handlers.NLTextHandler"
+           id="org.xtext.example.mydsl.ui.commandNLText"
+           name="NLText">
+     </command>
+     <command
+           defaultHandler="org.xtext.example.mydsl.ui.handlers.WordHandler"
+           id="org.xtext.example.mydsl.ui.commandWord"
+           name="Word">
+     </command>
+     <command
+           defaultHandler="org.xtext.example.mydsl.ui.handlers.JSONHandler"
+           id="org.xtext.example.mydsl.ui.commandJSON"
+           name="JSON">
+     </command>
+     <command
+           defaultHandler="org.xtext.example.mydsl.ui.handlers.EddyHandler"
+           id="org.xtext.example.mydsl.ui.commandEddy"
+           name="Eddy">
+     </command>
+     <command
+           defaultHandler="org.xtext.example.mydsl.ui.handlers.UMLHandler"
+           id="org.xtext.example.mydsl.ui.commandUML"
+           name="UML">
+     </command>
+     <command
+           defaultHandler="org.xtext.example.mydsl.ui.handlers.CheckQualityHandler"
+           id="org.xtext.example.mydsl.ui.commandCheckQuality"
+           name="CheckQuality">
+     </command>
+     <command
+           defaultHandler="org.xtext.example.mydsl.ui.handlers.ConfigurationHandler"
+           id="org.xtext.example.mydsl.ui.commandConfiguration"
+           name="Configuration">
      </command>
   </extension>
   <extension
