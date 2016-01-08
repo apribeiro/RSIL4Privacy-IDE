@@ -54,6 +54,8 @@ public class EddyHandler extends AbstractHandler implements IHandler {
  
         final EclipseResourceFileSystemAccess2 fsa = fileAccessProvider.get();
         fsa.setOutputPath(srcGenFolder.getFullPath().toString());
+        fsa.setMonitor(new NullProgressMonitor());
+        fsa.setProject(project);
          
         URI uri = URI.createPlatformResourceURI(file.getFullPath().toString(), true);
         ResourceSet rs = resourceSetProvider.get(project);
