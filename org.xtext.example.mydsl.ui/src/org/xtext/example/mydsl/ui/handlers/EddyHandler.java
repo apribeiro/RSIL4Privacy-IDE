@@ -41,7 +41,7 @@ public class EddyHandler extends AbstractHandler implements IHandler {
         IWorkspaceRoot workspace = ResourcesPlugin.getWorkspace().getRoot();
         IProject project = workspace.getProjects()[0];
         IFile file = project.getFile("/src/test.mydsl");
-        IFolder srcGenFolder = project.getFolder("src-gens");
+        IFolder srcGenFolder = project.getFolder("src-gen");
                 
         if (!srcGenFolder.exists()) {
             try {
@@ -53,7 +53,7 @@ public class EddyHandler extends AbstractHandler implements IHandler {
         }
  
         final EclipseResourceFileSystemAccess2 fsa = fileAccessProvider.get();
-        fsa.setOutputPath(srcGenFolder.getFullPath().toString());
+        fsa.setOutputPath(srcGenFolder.getName());
         fsa.setMonitor(new NullProgressMonitor());
         fsa.setProject(project);
          

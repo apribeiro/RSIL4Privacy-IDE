@@ -55,7 +55,7 @@
             </activeWhen>
         </handler>
         <handler
-        	class="org.xtext.example.mydsl.ui.MyDslExecutableExtensionFactory:org.eclipse.xtext.ui.handlers.EddyHandler"
+        	class="org.xtext.example.mydsl.ui.MyDslExecutableExtensionFactory:org.xtext.example.mydsl.ui.handlers.EddyHandler"
             commandId="org.xtext.example.mydsl.ui.commandEddy">
         </handler>
     </extension>
