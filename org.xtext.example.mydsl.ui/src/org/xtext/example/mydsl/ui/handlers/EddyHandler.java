@@ -1,5 +1,7 @@
 package org.xtext.example.mydsl.ui.handlers;
 
+import java.util.ArrayList;
+
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
@@ -7,6 +9,7 @@ import org.eclipse.core.commands.IHandler;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
@@ -24,6 +27,10 @@ import com.google.inject.Provider;
 
 public class EddyHandler extends AbstractHandler implements IHandler {
 
+	private static final String FILE_FOLDER = "src";
+	private static final String GEN_FOLDER = "src-gen";
+	private static final String FILE_EXT = ".mydsl";
+	
 	@Inject
     private IGenerator generator;
  
@@ -40,29 +47,44 @@ public class EddyHandler extends AbstractHandler implements IHandler {
 	public Object execute(ExecutionEvent event) throws ExecutionException {
         IWorkspaceRoot workspace = ResourcesPlugin.getWorkspace().getRoot();
         IProject project = workspace.getProjects()[0];
-        IFile file = project.getFile("/src/test.mydsl");
-        IFolder srcGenFolder = project.getFolder("src-gen");
-                
-        if (!srcGenFolder.exists()) {
-            try {
-                srcGenFolder.create(true, true,
-                        new NullProgressMonitor());
-            } catch (CoreException e) {
-                return null;
+        IFolder fileFolder = project.getFolder(FILE_FOLDER);
+        ArrayList<String> files = new ArrayList<String>();
+        
+        try {
+			for (IResource resource : fileFolder.members()) {
+				if (resource instanceof IFile && resource.getName().endsWith(FILE_EXT)) {
+					files.add(resource.getName());
+				}
+			}
+		} catch (CoreException e) {
+			e.printStackTrace();
+		}
+        
+        if (files.size() > 0) {
+        	IFile file = project.getFile("/" + FILE_FOLDER + "/" + files.get(0));
+            IFolder srcGenFolder = project.getFolder(GEN_FOLDER);
+                    
+            if (!srcGenFolder.exists()) {
+                try {
+                    srcGenFolder.create(true, true,
+                            new NullProgressMonitor());
+                } catch (CoreException e) {
+                    return null;
+                }
             }
-        }
- 
-        final EclipseResourceFileSystemAccess2 fsa = fileAccessProvider.get();
-        fsa.setOutputPath(srcGenFolder.getName());
-        fsa.setMonitor(new NullProgressMonitor());
-        fsa.setProject(project);
-         
-        URI uri = URI.createPlatformResourceURI(file.getFullPath().toString(), true);
-        ResourceSet rs = resourceSetProvider.get(project);
-        Resource r = rs.getResource(uri, true);
-        generator.doGenerate(r, fsa);
+     
+            final EclipseResourceFileSystemAccess2 fsa = fileAccessProvider.get();
+            fsa.setOutputPath(srcGenFolder.getName());
+            fsa.setMonitor(new NullProgressMonitor());
+            fsa.setProject(project);
+             
+            URI uri = URI.createPlatformResourceURI(file.getFullPath().toString(), true);
+            ResourceSet rs = resourceSetProvider.get(project);
+            Resource r = rs.getResource(uri, true);
+            generator.doGenerate(r, fsa);
+		}
             
         return null;
 	}
-
+	
 }
