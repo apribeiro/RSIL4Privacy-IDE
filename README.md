@@ -1,4 +1,4 @@
-# RSIL4Privacy IDE
+# RSLIL4Privacy IDE
 
 The regular use of social networking websites and applications encompasses the collection and retention of personal and very often sensitive information about users. This information needs to remain private and each social network owns a privacy policy that describes in-depth how users' information is managed and disclosed. Problems arise when the development of new systems and applications includes an integration with social networks. The lack of clear understanding and a precise mechanism to enforce the statements described in privacy policies can compromise the development and adaptation of these statements. 
 
