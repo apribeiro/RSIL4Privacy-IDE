@@ -333,8 +333,8 @@
         allPopups="false"
         locationURI="menu:org.eclipse.ui.main.menu">
      <menu
-           id="rsil4PrivacyMenu"
-           label="RSIL4Privacy">
+           id="rslil4PrivacyMenu"
+           label="RSLIL4Privacy">
         <menu
               id="importFromMenu"
               label="Import From...">
@@ -404,8 +404,8 @@
 		allPopups="false"
         locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
      	<menu
-           id="rsil4PrivacyPopupMenu"
-           label="RSIL4Privacy">
+           id="rslil4PrivacyPopupMenu"
+           label="RSLIL4Privacy">
            <menu
               id="exportToPopupMenu"
               label="Export To...">
