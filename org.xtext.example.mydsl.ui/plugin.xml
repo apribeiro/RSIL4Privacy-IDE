@@ -251,14 +251,6 @@
 	    <persistent value="true"/>
 	</extension>
 
-   <!--<extension
-         point="org.eclipse.xtext.builder.participant">
-      <participant
-            class="org.xtext.example.mydsl.ui.MyDslExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
-            fileExtensions="mydsl"
-            >
-      </participant>
-   </extension>-->
    <extension
             point="org.eclipse.ui.preferencePages">
         <page
@@ -409,6 +401,52 @@
      </menu>
   </menuContribution>
   <menuContribution
+		allPopups="false"
+        locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+     	<menu
+           id="rsil4PrivacyPopupMenu"
+           label="RSIL4Privacy">
+           <menu
+              id="exportToPopupMenu"
+              label="Export To...">
+           <command
+                 commandId="org.xtext.example.mydsl.ui.commandWord"
+                 label="Word"
+                 style="push">
+           </command>
+           <command
+                 commandId="org.xtext.example.mydsl.ui.commandExportExcel"
+                 label="Excel"
+                 style="push">
+           </command>
+           <command
+                 commandId="org.xtext.example.mydsl.ui.commandJSON"
+                 label="JSON"
+                 style="push">
+           </command>
+           <command
+                 commandId="org.xtext.example.mydsl.ui.commandEddy"
+                 label="Eddy"
+                 style="push">
+           </command>
+           <command
+                 commandId="org.xtext.example.mydsl.ui.commandUML"
+                 label="UML"
+                 style="push">
+           </command>
+        </menu>
+	    <visibleWhen
+             checkEnabled="false">
+             <iterate>
+		       <adapt type="org.eclipse.core.resources.IResource">
+		          <test property="org.eclipse.core.resources.name" 
+		                value="*.mydsl"/>
+		       </adapt>
+		    </iterate>
+       </visibleWhen>
+     </menu>
+  </menuContribution>
+  <!--<menuContribution
         allPopups="true"
         class="org.xtext.example.mydsl.ui.View"
         locationURI="popup:org.xtext.example.mydsl.ui.view">
@@ -422,11 +460,11 @@
         allPopups="false"
         class="org.xtext.example.mydsl.ui.View"
         locationURI="popup:org.xtext.example.mydsl.ui.view">
-  </menuContribution>
+  </menuContribution>-->
 	</extension>
     <!-- quickfix marker resolution generator for org.xtext.example.mydsl.MyDsl -->
     <extension
-            point="org.eclipse.ui.ide.markerResolution">
+			point="org.eclipse.ui.ide.markerResolution">
         <markerResolutionGenerator
             class="org.xtext.example.mydsl.ui.MyDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
             markerType="org.xtext.example.mydsl.ui.mydsl.check.fast">
@@ -566,28 +604,6 @@
            id="org.xtext.example.mydsl.ui.commandConfiguration"
            name="Configuration">
      </command>
-  </extension>
-  <extension
-        point="org.eclipse.ui.popupMenus">
-     <objectContribution
-           id="org.xtext.example.mydsl.ui.contribution1"
-           objectClass="org.eclipse.core.resources.IFile">
-        <menu
-              id="org.xtext.example.mydsl.ui.rsil4PrivacyMenu"
-              label="RSIL4Privacy"
-              path="additions">
-           <separator
-                 name="group1">
-           </separator>
-        </menu>
-        <action
-              class="org.xtext.example.mydsl.ui.popup.actions.GenerateExcelAction"
-              enablesFor="1"
-              id="org.xtext.example.mydsl.ui.generateExcelAction"
-              label="Generate Excel"
-              menubarPath="org.xtext.example.mydsl.ui.rsil4PrivacyMenu/group1">
-        </action>
-     </objectContribution>
   </extension>
   
 </plugin>
