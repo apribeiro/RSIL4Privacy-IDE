@@ -434,33 +434,32 @@
                  label="UML"
                  style="push">
            </command>
-        </menu>
-	    <visibleWhen
+           <visibleWhen
              checkEnabled="false">
              <iterate>
 		       <adapt type="org.eclipse.core.resources.IResource">
-		          <test property="org.eclipse.core.resources.name" 
+					<test property="org.eclipse.core.resources.name" 
 		                value="*.mydsl"/>
 		       </adapt>
 		    </iterate>
-       </visibleWhen>
+       		</visibleWhen>
+        </menu>
+        <command
+              commandId="org.xtext.example.mydsl.ui.commandCheckQuality"
+              label="Check Quality using Eddy Engine"
+              style="push">
+           <visibleWhen
+             checkEnabled="false">
+             <iterate>
+		       <adapt type="org.eclipse.core.resources.IResource">
+					<test property="org.eclipse.core.resources.name" 
+		                value="*.policy"/>
+		       </adapt>
+		    </iterate>
+       		</visibleWhen>
+        </command>
      </menu>
   </menuContribution>
-  <!--<menuContribution
-        allPopups="true"
-        class="org.xtext.example.mydsl.ui.View"
-        locationURI="popup:org.xtext.example.mydsl.ui.view">
-     <command
-           commandId="org.xtext.example.mydsl.ui.commandGenerateExcel"
-           label="Generate Excel"
-           style="push">
-     </command>
-  </menuContribution>
-  <menuContribution
-        allPopups="false"
-        class="org.xtext.example.mydsl.ui.View"
-        locationURI="popup:org.xtext.example.mydsl.ui.view">
-  </menuContribution>-->
 	</extension>
     <!-- quickfix marker resolution generator for org.xtext.example.mydsl.MyDsl -->
     <extension
