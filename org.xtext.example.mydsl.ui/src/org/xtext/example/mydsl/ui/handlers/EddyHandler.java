@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.core.commands.IHandler;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
@@ -25,7 +24,7 @@ import org.eclipse.xtext.ui.resource.IResourceSetProvider;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 
-public class EddyHandler extends AbstractHandler implements IHandler {
+public class EddyHandler extends AbstractHandler {
 
 	private static final String FILE_FOLDER = "src";
 	private static final String GEN_FOLDER = "src-gen";

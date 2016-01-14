@@ -48,32 +48,53 @@ public class MenuCommandWindow {
 	protected void createContents() {
 		shell = new Shell();
 		shell.setSize(450, 300);
-		shell.setText("SWT Application");
+		shell.setText("RSLIL4Privacy");
 		
 		Button btnRadioButtonAll = new Button(shell, SWT.RADIO);
+		btnRadioButtonAll.setBounds(10, 10, 100, 16);
+		btnRadioButtonAll.setText("Use all projects");
+		btnRadioButtonAll.setSelection(true);
 		btnRadioButtonAll.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 			}
 		});
-		btnRadioButtonAll.setBounds(10, 10, 100, 16);
-		btnRadioButtonAll.setText("Use all projects");
 		
 		Button btnRadioButtonSelected = new Button(shell, SWT.RADIO);
 		btnRadioButtonSelected.setBounds(240, 10, 166, 16);
 		btnRadioButtonSelected.setText("Use projects selected below");
-		
-		Button btnCancel = new Button(shell, SWT.NONE);
-		btnCancel.setBounds(349, 227, 75, 25);
-		btnCancel.setText("Cancel");
+		btnRadioButtonSelected.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+			}
+		});
 		
 		Button btnOk = new Button(shell, SWT.NONE);
 		btnOk.setBounds(268, 227, 75, 25);
 		btnOk.setText("OK");
+		btnOk.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				if (btnRadioButtonAll.getSelection()) {
+					
+				} else if (btnRadioButtonSelected.getSelection()) {
+					
+				}
+			}
+		});
+		
+		Button btnCancel = new Button(shell, SWT.NONE);
+		btnCancel.setBounds(349, 227, 75, 25);
+		btnCancel.setText("Cancel");
+		btnCancel.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				shell.close();
+			}
+		});
 		
 		Composite composite = formToolkit.createComposite(shell, SWT.NONE);
 		composite.setBounds(10, 32, 414, 189);
 		formToolkit.paintBordersFor(composite);
-
 	}
 }
