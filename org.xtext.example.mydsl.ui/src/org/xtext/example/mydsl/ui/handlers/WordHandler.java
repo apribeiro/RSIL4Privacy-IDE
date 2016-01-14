@@ -58,17 +58,24 @@ public class WordHandler extends AbstractHandler {
                 }
             }
             
-            new org.eclipse.emf.mwe.utils.StandaloneSetup().setPlatformUri("../");
-            Injector injector = new MyDslStandaloneSetup().createInjectorAndDoEMFRegistration();
-            XtextResourceSet resourceSet = injector.getInstance(XtextResourceSet.class);
-            resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);
-            Resource resource = resourceSet.getResource(
-                URI.createURI("platform:/resource/" + file.getFullPath().toString()), true);
-            	//URI.createURI("platform:/resource/org.xtext.example.mydsl/src/example.mydsl"), true);
-            PolicyImpl policy = (PolicyImpl) resource.getContents().get(0);
-            
-            System.out.println(policy.getName());
-            System.out.println(policy.getDay() + "-" + policy.getMonth() + "-" + policy.getYear());
+            // Start a new Thread to avoid blocking the UI
+            Runnable runnable = new Runnable() {
+				@Override
+				public void run() {
+					new org.eclipse.emf.mwe.utils.StandaloneSetup().setPlatformUri("../");
+		            Injector injector = new MyDslStandaloneSetup().createInjectorAndDoEMFRegistration();
+		            XtextResourceSet resourceSet = injector.getInstance(XtextResourceSet.class);
+		            resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);
+		            Resource resource = resourceSet.getResource(
+		                URI.createURI("platform:/resource/" + file.getFullPath().toString()), true);
+		            	//URI.createURI("platform:/resource/org.xtext.example.mydsl/src/example.mydsl"), true);
+		            PolicyImpl policy = (PolicyImpl) resource.getContents().get(0);
+		            
+		            System.out.println(policy.getName());
+		            System.out.println(policy.getDay() + "-" + policy.getMonth() + "-" + policy.getYear());					
+				}
+			};
+			new Thread(runnable).start();
 		}
 		
 		return null;
