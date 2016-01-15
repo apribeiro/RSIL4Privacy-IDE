@@ -9,8 +9,7 @@ import org.eclipse.swt.widgets.Shell;
 
 public class ConfigurationWindow {
 
-	protected Shell shell;
-	
+	private Shell shell;
 	private Shell parent;
 
 	public ConfigurationWindow(Shell parent) {

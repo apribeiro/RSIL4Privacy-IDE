@@ -13,6 +13,10 @@ import org.xtext.example.mydsl.ui.windows.MenuCommandWindow;
 
 public class JSONHandler extends AbstractHandler {
 
+	@SuppressWarnings("unused")
+	private static final String GEN_FOLDER = "src-gen";
+	private static final String FILE_EXT = ".mydsl";
+	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		ISelection selection = HandlerUtil.getActiveMenuSelection(event);
@@ -30,7 +34,7 @@ public class JSONHandler extends AbstractHandler {
 					generateJson(file);
 				}
 			};
-			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(), cmd);
+			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(), cmd, FILE_EXT);
 			window.open();
 		}
 		

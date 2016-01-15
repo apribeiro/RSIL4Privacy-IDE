@@ -13,6 +13,8 @@ import org.xtext.example.mydsl.ui.windows.MenuCommandWindow;
 
 public class CheckQualityHandler extends AbstractHandler {
 
+	private static final String FILE_EXT = ".policy";
+	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		ISelection selection = HandlerUtil.getActiveMenuSelection(event);
@@ -30,7 +32,7 @@ public class CheckQualityHandler extends AbstractHandler {
 					callEddyEngine(file);
 				}
 			};
-			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(), cmd);
+			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(), cmd, FILE_EXT);
 			window.open();
 		}
 		

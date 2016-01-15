@@ -1,10 +1,15 @@
 package org.xtext.example.mydsl.ui.windows;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jface.viewers.CheckboxTableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -17,17 +22,21 @@ import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 public class MenuCommandWindow {
-
-	protected Shell shell;
+	
+	private static final String FILE_FOLDER = "src";
+	
 	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
 	
+	private Shell shell;
 	private Shell parent;
 	private Table table_1;
 	private MenuCommand menuCommand;
+	private String fileExtension;
 	
-	public MenuCommandWindow(Shell parent, MenuCommand menuCommand) {
+	public MenuCommandWindow(Shell parent, MenuCommand menuCommand, String fileExtension) {
 		this.parent = parent;
 		this.menuCommand = menuCommand;
+		this.fileExtension = fileExtension;
 	}
 
 	/**
@@ -95,19 +104,22 @@ public class MenuCommandWindow {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				if (btnRadioButtonAll.getSelection()) {
-					menuCommand.execute(workspace.getProjects().length + " project(s)");
-					
+					ArrayList<IProject> projects = new ArrayList<IProject>(
+							Arrays.asList(workspace.getProjects())); 
+					findFilesByExtension(projects);
+					menuCommand.execute(projects.size() + " project(s)");
 				} else if (btnRadioButtonSelected.getSelection()) {
-					ArrayList<TableItem> checkedItems = new ArrayList<TableItem>();
+					ArrayList<IProject> projects = new ArrayList<IProject>();
 					
 					for (TableItem item : table_1.getItems()) {
 						if (item.getChecked()) {
-							checkedItems.add(item);
+							projects.add(workspace.getProject(item.getText()));
+							findFilesByExtension(projects);
 							menuCommand.execute(item.getText());
 						}
 					}
 					
-					System.out.println(checkedItems.size() + " selected!");
+					System.out.println(projects.size() + " selected!");
 				}
 				shell.close();
 			}
@@ -122,5 +134,25 @@ public class MenuCommandWindow {
 				shell.close();
 			}
 		});
+	}
+	
+	private ArrayList<String> findFilesByExtension(ArrayList<IProject> projects) {
+		ArrayList<String> files = new ArrayList<String>();
+
+		for (IProject project : projects) {
+			IFolder fileFolder = project.getFolder(FILE_FOLDER);
+
+			try {
+				for (IResource resource : fileFolder.members()) {
+					if (resource instanceof IFile && resource.getName().endsWith(fileExtension)) {
+						files.add(resource.getName());
+					}
+				}
+			} catch (CoreException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return files;
 	}
 }

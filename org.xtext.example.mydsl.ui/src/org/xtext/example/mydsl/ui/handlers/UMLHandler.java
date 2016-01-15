@@ -9,7 +9,10 @@ import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 public class UMLHandler extends AbstractHandler {
-
+	
+	@SuppressWarnings("unused")
+	private static final String GEN_FOLDER = "src-gen";
+	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		ISelection selection = HandlerUtil.getActiveMenuSelection(event);
