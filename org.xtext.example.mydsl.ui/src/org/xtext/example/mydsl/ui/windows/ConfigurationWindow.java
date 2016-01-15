@@ -10,18 +10,11 @@ import org.eclipse.swt.widgets.Shell;
 public class ConfigurationWindow {
 
 	protected Shell shell;
+	
+	private Shell parent;
 
-	/**
-	 * Launch the application.
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		try {
-			ConfigurationWindow window = new ConfigurationWindow();
-			window.open();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public ConfigurationWindow(Shell parent) {
+		this.parent = parent;
 	}
 
 	/**
@@ -43,7 +36,8 @@ public class ConfigurationWindow {
 	 * Create contents of the window.
 	 */
 	protected void createContents() {
-		shell = new Shell();
+		shell = new Shell(parent, SWT.CLOSE | SWT.TITLE | SWT.MAX 
+				| SWT.RESIZE | SWT.APPLICATION_MODAL);
 		shell.setSize(450, 300);
 		shell.setText("RSLIL4Privacy");
 

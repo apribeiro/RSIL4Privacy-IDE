@@ -20,26 +20,12 @@ public class MenuCommandWindow {
 
 	protected Shell shell;
 	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
-	private Shell _parent;
+	
+	private Shell parent;
 	private Table table_1;
-
-	public MenuCommandWindow() { }
 	
 	public MenuCommandWindow(Shell parent) {
-		this._parent = parent;
-	}
-	
-	/**
-	 * Launch the application.
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		try {
-			MenuCommandWindow window = new MenuCommandWindow();
-			window.open();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		this.parent = parent;
 	}
 
 	/**
@@ -61,10 +47,8 @@ public class MenuCommandWindow {
 	 * Create contents of the window.
 	 */
 	protected void createContents() {
-		shell = _parent != null ?
-				new Shell(_parent, SWT.ICON | SWT.CLOSE | SWT.MAX
-						| SWT.TITLE | SWT.BORDER | SWT.APPLICATION_MODAL)
-				: new Shell();
+		shell = new Shell(parent, SWT.CLOSE | SWT.TITLE | SWT.MAX 
+				| SWT.RESIZE | SWT.APPLICATION_MODAL);
 		shell.setSize(450, 300);
 		shell.setText("RSLIL4Privacy");
 		
