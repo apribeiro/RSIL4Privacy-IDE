@@ -38,7 +38,7 @@ public class CheckQualityHandler extends AbstractHandler {
 	}
 
 	private void callEddyEngine(String file) {
-		System.out.println(file);
-		//TODO Call Eddy Engine
+		System.out.println(file + " checked!");
+		// TODO Call Eddy Engine
 	}
 }

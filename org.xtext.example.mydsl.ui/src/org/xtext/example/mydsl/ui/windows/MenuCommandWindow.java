@@ -95,7 +95,7 @@ public class MenuCommandWindow {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				if (btnRadioButtonAll.getSelection()) {
-					menuCommand.execute(workspace.getProjects().length + " projects!");
+					menuCommand.execute(workspace.getProjects().length + " project(s)");
 					
 				} else if (btnRadioButtonSelected.getSelection()) {
 					ArrayList<TableItem> checkedItems = new ArrayList<TableItem>();
@@ -103,7 +103,7 @@ public class MenuCommandWindow {
 					for (TableItem item : table_1.getItems()) {
 						if (item.getChecked()) {
 							checkedItems.add(item);
-							menuCommand.execute(item.getText() + " selected!");
+							menuCommand.execute(item.getText());
 						}
 					}
 					
