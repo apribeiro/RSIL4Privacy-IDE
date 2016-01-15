@@ -23,9 +23,11 @@ public class MenuCommandWindow {
 	
 	private Shell parent;
 	private Table table_1;
+	private MenuCommand menuCommand;
 	
-	public MenuCommandWindow(Shell parent) {
+	public MenuCommandWindow(Shell parent, MenuCommand menuCommand) {
 		this.parent = parent;
+		this.menuCommand = menuCommand;
 	}
 
 	/**
@@ -93,6 +95,7 @@ public class MenuCommandWindow {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				if (btnRadioButtonAll.getSelection()) {
+					menuCommand.execute(workspace.getProjects().length + " projects!");
 					
 				} else if (btnRadioButtonSelected.getSelection()) {
 					ArrayList<TableItem> checkedItems = new ArrayList<TableItem>();
@@ -100,11 +103,13 @@ public class MenuCommandWindow {
 					for (TableItem item : table_1.getItems()) {
 						if (item.getChecked()) {
 							checkedItems.add(item);
+							menuCommand.execute(item.getText() + " selected!");
 						}
 					}
 					
 					System.out.println(checkedItems.size() + " selected!");
 				}
+				shell.close();
 			}
 		});
 		
