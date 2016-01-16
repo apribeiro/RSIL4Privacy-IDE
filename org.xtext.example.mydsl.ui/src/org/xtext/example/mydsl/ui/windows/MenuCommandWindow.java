@@ -40,6 +40,19 @@ public class MenuCommandWindow {
 	}
 
 	/**
+ 	 * Launch the application.
+ 	 * @param args
+ 	 */
+ 	public static void main(String[] args) {
+ 		try {
+ 			MenuCommandWindow window = new MenuCommandWindow(null, null, null);
+ 			window.open();
+ 		} catch (Exception e) {
+ 			e.printStackTrace();
+ 		}
+ 	}
+	
+	/**
 	 * Open the window.
 	 */
 	public void open() {

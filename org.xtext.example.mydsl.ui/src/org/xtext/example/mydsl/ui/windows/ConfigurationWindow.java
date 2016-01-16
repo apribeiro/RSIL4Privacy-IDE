@@ -17,6 +17,19 @@ public class ConfigurationWindow {
 	}
 
 	/**
+ 	 * Launch the application.
+ 	 * @param args
+ 	 */
+ 	public static void main(String[] args) {
+ 		try {
+ 			ConfigurationWindow window = new ConfigurationWindow(null);
+ 			window.open();
+ 		} catch (Exception e) {
+ 			e.printStackTrace();
+ 		}
+ 	}
+	
+	/**
 	 * Open the window.
 	 */
 	public void open() {
