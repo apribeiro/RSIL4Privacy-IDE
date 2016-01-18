@@ -14,9 +14,13 @@ import org.eclipse.swt.widgets.Text;
 
 public class ConfigurationWindow {
 
+	private static final String DEF_WORD_PATH = "RSLIL-WordTemplate.docx";
+	private static final String DEF_EXCEL_PATH = "RSLIL-ExcelTemplate-v1.1.xlsx";
+	
+	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
+	
 	private Shell shell;
 	private Shell parent;
-	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
 
 	public ConfigurationWindow(Shell parent) {
 		this.parent = parent;
@@ -72,11 +76,11 @@ public class ConfigurationWindow {
 		Label lblExcel = formToolkit.createLabel(grpTemplates, "Excel:", SWT.ALPHA);
 		lblExcel.setBounds(10, 54, 37, 15);
 		
-		Text txtWord = formToolkit.createText(grpTemplates, "RSLIL-WordTemplate.docx", SWT.NONE);
+		Text txtWord = formToolkit.createText(grpTemplates, DEF_WORD_PATH, SWT.NONE);
 		txtWord.setBounds(53, 20, 262, 21);
 		txtWord.setEnabled(false);
 		
-		Text txtExcel = formToolkit.createText(grpTemplates, "RSLIL-ExcelTemplate-v1.1.xlsx", SWT.NONE);
+		Text txtExcel = formToolkit.createText(grpTemplates, DEF_EXCEL_PATH, SWT.NONE);
 		txtExcel.setBounds(53, 51, 262, 21);
 		txtExcel.setEnabled(false);
 		
