@@ -2,6 +2,14 @@ package org.xtext.example.mydsl.ui.windows;
 
 import java.io.File;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -14,12 +22,18 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 public class ConfigurationWindow {
 
+	private static final String CONFIG_PATH = "config.xml";
 	private static final String DEF_WORD_PATH = "RSLIL-WordTemplate.docx";
 	private static final String DEF_EXCEL_PATH = "RSLIL-ExcelTemplate-v1.1.xlsx";
 	
+	private final String PLUGIN_PATH = Platform.getInstallLocation()
+			.getURL().getPath().substring(1)
+			+ "plugins/RSLingo4Privacy/";
 	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
 	
 	private Shell shell;
@@ -61,13 +75,7 @@ public class ConfigurationWindow {
 	 * Create contents of the window.
 	 */
 	protected void createContents() {
-		String pluginsPath = Platform.getInstallLocation().getURL().getPath().substring(1)
-				+ "plugins/RSLingo4Privacy"; 
-		File f = new File(pluginsPath);
-		
-		if (!f.exists()) {
-			f.mkdir();
-		}
+		checkPluginFolder();
 		
 		shell = new Shell(parent, SWT.CLOSE | SWT.TITLE | SWT.MAX 
 				| SWT.RESIZE | SWT.APPLICATION_MODAL);
@@ -160,5 +168,52 @@ public class ConfigurationWindow {
 				shell.close();
 			}
 		});
+	}
+	
+	private void checkPluginFolder() {
+		File pluginFolder = new File(PLUGIN_PATH);
+		File configFile = new File(PLUGIN_PATH + CONFIG_PATH);
+		
+		if (!pluginFolder.exists()) {
+			pluginFolder.mkdir();
+		}
+		
+		if (!configFile.exists()) {
+			try {
+				DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+				DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+				Document doc = docBuilder.newDocument();
+				
+				// Configuration elements
+				Element config = doc.createElement("configurations");
+				config.setAttribute("description", "File containing the configurations for RSLingo4Privacy");
+				doc.appendChild(config);
+				// Word template path
+				Element wordConfig = doc.createElement("configuration");
+				wordConfig.setAttribute("name", "word-path");
+				wordConfig.setAttribute("value", "default");
+				config.appendChild(wordConfig);
+				// Excel template path
+				Element excelConfig = doc.createElement("configuration");
+				excelConfig.setAttribute("name", "excel-path");
+				excelConfig.setAttribute("value", "default");
+				config.appendChild(excelConfig);
+				// Eddy Reasoner path
+				Element eddyConfig = doc.createElement("configuration");
+				eddyConfig.setAttribute("name", "eddy-path");
+				eddyConfig.setAttribute("value", "default");
+				config.appendChild(eddyConfig);
+				
+				// Write the content into the config.xml file
+				TransformerFactory transformerFactory = TransformerFactory.newInstance();
+				Transformer transformer = transformerFactory.newTransformer();
+				transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+				DOMSource source = new DOMSource(doc);
+				StreamResult result = new StreamResult(configFile);
+				transformer.transform(source, result);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 	}
 }
