@@ -1,5 +1,8 @@
 package org.xtext.example.mydsl.ui.windows;
 
+import java.io.File;
+
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -7,10 +10,10 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.swt.widgets.Shell;
-import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.ui.forms.widgets.FormToolkit;
 
 public class ConfigurationWindow {
 
@@ -58,6 +61,14 @@ public class ConfigurationWindow {
 	 * Create contents of the window.
 	 */
 	protected void createContents() {
+		String pluginsPath = Platform.getInstallLocation().getURL().getPath().substring(1)
+				+ "plugins/RSLIL4Privacy"; 
+		File f = new File(pluginsPath);
+		
+		if (!f.exists()) {
+			f.mkdir();
+		}
+		
 		shell = new Shell(parent, SWT.CLOSE | SWT.TITLE | SWT.MAX 
 				| SWT.RESIZE | SWT.APPLICATION_MODAL);
 		shell.setSize(450, 300);
@@ -130,6 +141,13 @@ public class ConfigurationWindow {
 		btnOk.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
+				if (!txtWord.getText().equals(DEF_WORD_PATH)) {
+					
+				}
+				
+				if (!txtExcel.getText().equals(DEF_EXCEL_PATH)) {
+					
+				}
 			}
 		});
 		
