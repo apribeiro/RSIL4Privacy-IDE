@@ -74,9 +74,11 @@ public class ConfigurationWindow {
 		
 		Text txtWord = formToolkit.createText(grpTemplates, "RSLIL-WordTemplate.docx", SWT.NONE);
 		txtWord.setBounds(53, 20, 262, 21);
+		txtWord.setEnabled(false);
 		
 		Text txtExcel = formToolkit.createText(grpTemplates, "RSLIL-ExcelTemplate-v1.1.xlsx", SWT.NONE);
 		txtExcel.setBounds(53, 51, 262, 21);
+		txtExcel.setEnabled(false);
 		
 		Button btnBrowseWord = new Button(grpTemplates, SWT.NONE);
 		btnBrowseWord.setBounds(321, 18, 75, 25);
@@ -88,7 +90,11 @@ public class ConfigurationWindow {
 				FileDialog dialog = new FileDialog(shell, SWT.OPEN);
 				dialog.setFilterExtensions(new String[] { "*.docx", "*.doc" });
 				dialog.setText("Select the Word file to upload");
-				dialog.open();
+				String path = dialog.open();
+				
+				if (path != null) {
+					txtWord.setText(path);
+				}
 			}
 		});
 		
@@ -102,7 +108,11 @@ public class ConfigurationWindow {
 				FileDialog dialog = new FileDialog(shell, SWT.OPEN);
 				dialog.setFilterExtensions(new String[] { "*.xlsx", "*.xls" });
 				dialog.setText("Select the Excel file to upload");
-				dialog.open();
+				String path = dialog.open();
+				
+				if (path != null) {
+					txtWord.setText(path);
+				}
 			}
 		});
 		
