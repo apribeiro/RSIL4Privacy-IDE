@@ -74,7 +74,7 @@ public class MenuCommandWindow {
 		shell = new Shell(parent, SWT.CLOSE | SWT.TITLE | SWT.MAX 
 				| SWT.RESIZE | SWT.APPLICATION_MODAL);
 		shell.setSize(450, 300);
-		shell.setText("RSLIL4Privacy");
+		shell.setText("RSLingo4Privacy Studio");
 		
 		Button btnRadioButtonAll = new Button(shell, SWT.RADIO);
 		btnRadioButtonAll.setBounds(10, 10, 100, 16);

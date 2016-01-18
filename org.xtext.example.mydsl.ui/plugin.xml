@@ -333,8 +333,8 @@
         allPopups="false"
         locationURI="menu:org.eclipse.ui.main.menu">
      <menu
-           id="rslil4PrivacyMenu"
-           label="RSLIL4Privacy">
+           id="rslingo4PrivacyMenu"
+           label="RSLingo4Privacy">
         <menu
               id="importFromMenu"
               label="Import From...">
@@ -380,7 +380,7 @@
         </menu>
         <command
               commandId="org.xtext.example.mydsl.ui.commandCheckQuality"
-              label="Check Quality using Eddy Engine"
+              label="Check Quality using Eddy Reasoner"
               style="push">
         </command>
         <separator
@@ -404,8 +404,8 @@
 		allPopups="false"
         locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
      	<menu
-           id="rslil4PrivacyPopupMenu"
-           label="RSLIL4Privacy">
+           id="rslingo4PrivacyPopupMenu"
+           label="RSLingo4Privacy">
            <menu
               id="exportToPopupMenu"
               label="Export To...">
@@ -446,7 +446,7 @@
         </menu>
         <command
               commandId="org.xtext.example.mydsl.ui.commandCheckQuality"
-              label="Check Quality using Eddy Engine"
+              label="Check Quality using Eddy Reasoner"
               style="push">
            <visibleWhen
              checkEnabled="false">

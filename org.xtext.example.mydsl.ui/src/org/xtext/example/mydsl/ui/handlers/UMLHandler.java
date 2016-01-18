@@ -22,12 +22,12 @@ public class UMLHandler extends AbstractHandler {
 		if (selection != null) {
 			MessageDialog.openInformation(
 				window.getShell(),
-				"RSLIL4Privacy",
+				"RSLingo4Privacy Studio",
 				"UML Model generated (ContextMenu)!");
 		} else {
 			MessageDialog.openInformation(
 				window.getShell(),
-				"RSLIL4Privacy",
+				"RSLingo4Privacy Studio",
 				"UML Model generated (MenuBar)!");
 		}
 		

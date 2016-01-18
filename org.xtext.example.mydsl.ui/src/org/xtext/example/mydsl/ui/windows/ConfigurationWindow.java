@@ -62,7 +62,7 @@ public class ConfigurationWindow {
 	 */
 	protected void createContents() {
 		String pluginsPath = Platform.getInstallLocation().getURL().getPath().substring(1)
-				+ "plugins/RSLIL4Privacy"; 
+				+ "plugins/RSLingo4Privacy"; 
 		File f = new File(pluginsPath);
 		
 		if (!f.exists()) {
@@ -72,7 +72,7 @@ public class ConfigurationWindow {
 		shell = new Shell(parent, SWT.CLOSE | SWT.TITLE | SWT.MAX 
 				| SWT.RESIZE | SWT.APPLICATION_MODAL);
 		shell.setSize(450, 300);
-		shell.setText("RSLIL4Privacy");
+		shell.setText("RSLingo4Privacy Studio");
 		
 		Group grpTemplates = new Group(shell, SWT.NONE);
 		grpTemplates.setText("Templates");
@@ -132,7 +132,7 @@ public class ConfigurationWindow {
 		});
 		
 		Group grpQualityEngine = new Group(shell, SWT.NONE);
-		grpQualityEngine.setText("Requirement Quality Engine");
+		grpQualityEngine.setText("Eddy Reasoner");
 		grpQualityEngine.setBounds(10, 98, 414, 82);
 		
 		Button btnOk = new Button(shell, SWT.NONE);
