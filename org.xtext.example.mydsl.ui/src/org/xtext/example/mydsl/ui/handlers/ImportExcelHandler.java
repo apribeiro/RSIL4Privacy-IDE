@@ -115,8 +115,6 @@ public class ImportExcelHandler extends AbstractHandler {
     	
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("};");
-    	
-//		System.out.println(sb);
 		
 		IFile fileSt = srcGenFolder.getFile(fileName + ".Statements.mydsl");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
@@ -173,8 +171,6 @@ public class ImportExcelHandler extends AbstractHandler {
     	
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("};");
-    	
-//		System.out.println(sb);
 		
 		IFile fileSt = srcGenFolder.getFile(fileName + ".PrivateData.mydsl");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
@@ -231,8 +227,6 @@ public class ImportExcelHandler extends AbstractHandler {
     	
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("};");
-    	
-//		System.out.println(sb);
 		
 		IFile fileSt = srcGenFolder.getFile(fileName + ".Services.mydsl");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
@@ -287,8 +281,6 @@ public class ImportExcelHandler extends AbstractHandler {
     	
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("};");
-    	
-//		System.out.println(sb);
 		
 		IFile fileSt = srcGenFolder.getFile(fileName + ".Enforcements.mydsl");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
@@ -349,8 +341,6 @@ public class ImportExcelHandler extends AbstractHandler {
     	
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("};");
-    	
-//		System.out.println(sb);
 		
 		IFile fileSt = srcGenFolder.getFile(fileName + ".Recipients.mydsl");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
