@@ -115,7 +115,7 @@ public class ImportExcelHandler extends AbstractHandler {
     	
 //		System.out.println(sb);
 		
-		IFile fileSt = srcGenFolder.getFile(fileName + "Statements.mydsl");
+		IFile fileSt = srcGenFolder.getFile(fileName + ".Statements.mydsl");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		if (!fileSt.exists()) {
@@ -172,7 +172,7 @@ public class ImportExcelHandler extends AbstractHandler {
     	
 //		System.out.println(sb);
 		
-		IFile fileSt = srcGenFolder.getFile(fileName + "PrivateData.mydsl");
+		IFile fileSt = srcGenFolder.getFile(fileName + ".PrivateData.mydsl");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		if (!fileSt.exists()) {
@@ -203,20 +203,22 @@ public class ImportExcelHandler extends AbstractHandler {
     		Row row = rowIt.next();
     		Cell cellId = row.getCell(0);
     		
-    		if (cellId != null && cellId.getCellType() == Cell.CELL_TYPE_NUMERIC) {
-    			int id = (int) cellId.getNumericCellValue();
-    			Cell cellName = row.getCell(1);
-	    		String name = cellName.getStringCellValue();
-	    		Cell cellPrivateData = row.getCell(2);
-	    		String privateData = cellPrivateData.getStringCellValue();
-	    		
-	    		sb.append("Service S" + id + " {");
-	    		sb.append("\n");
-	    		sb.append("\tDescription \"" + name + "\",");
-	    		sb.append("\n");
-	    		sb.append("\tRefersTo PrivateData" + privateData + ",");
-	    		sb.append("\n};");
-	    		sb.append("\n\n");
+    		if (cellId != null) {
+    			if (cellId.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+    				int id = (int) cellId.getNumericCellValue();
+        			Cell cellName = row.getCell(1);
+    	    		String name = cellName.getStringCellValue();
+    	    		Cell cellPrivateData = row.getCell(4);
+    	    		String privateData = cellPrivateData.getStringCellValue();
+    	    		
+    	    		sb.append("Service S" + id + " {");
+    	    		sb.append("\n");
+    	    		sb.append("\tDescription \"" + name + "\",");
+    	    		sb.append("\n");
+    	    		sb.append("\tRefersTo PrivateData " + privateData + ",");
+    	    		sb.append("\n};");
+    	    		sb.append("\n\n");
+				}
 			}
     		else
     			break;
@@ -227,7 +229,7 @@ public class ImportExcelHandler extends AbstractHandler {
     	
 //		System.out.println(sb);
 		
-		IFile fileSt = srcGenFolder.getFile(fileName + "Services.mydsl");
+		IFile fileSt = srcGenFolder.getFile(fileName + ".Services.mydsl");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		if (!fileSt.exists()) {
