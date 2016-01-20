@@ -50,6 +50,7 @@ public class ImportExcelHandler extends AbstractHandler {
 				generateStatementsFile(srcGenFolder, filePath, dialog.getFileName());
 				generatePrivateDataFile(srcGenFolder, filePath, dialog.getFileName());
 				generateServicesFile(srcGenFolder, filePath, dialog.getFileName());
+				generateEnforcementsFile(srcGenFolder, filePath, dialog.getFileName());
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -230,6 +231,61 @@ public class ImportExcelHandler extends AbstractHandler {
 //		System.out.println(sb);
 		
 		IFile fileSt = srcGenFolder.getFile(fileName + ".Services.mydsl");
+		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
+		
+		if (!fileSt.exists()) {
+			fileSt.create(source, IResource.FORCE, null);
+		} else {
+			fileSt.setContents(source, IResource.FORCE, null);
+		}
+	}
+	
+	private void generateEnforcementsFile(IFolder srcGenFolder, String filePath, String fileName) throws Exception {
+		StringBuilder sb = new StringBuilder();
+		InputStream inp = new FileInputStream(filePath);
+		Workbook wb = WorkbookFactory.create(inp);
+		sb.append("Package " + fileName + ".Enforcements.RSLingo4Privacy {");
+		sb.append("\n");
+		sb.append("\n");
+		
+		// Get the Statements Sheet
+	    Sheet sheet = wb.getSheetAt(4);
+    	Iterator<Row> rowIt = sheet.rowIterator();
+    	// Ignore the Header row
+    	rowIt.next();
+    	
+    	while (rowIt.hasNext()) {
+    		Row row = rowIt.next();
+    		Cell cellId = row.getCell(0);
+    		
+    		if (cellId != null) {
+    			int id = (int) cellId.getNumericCellValue();
+    			Cell cellName = row.getCell(1);
+	    		String name = cellName.getStringCellValue();
+    			Cell cellDescription = row.getCell(2);
+	    		String description = cellDescription.getStringCellValue();
+	    		Cell cellType = row.getCell(3);
+	    		String type = cellType.getStringCellValue();
+	    		sb.append("Enforcement En" + id + " {");
+	    		sb.append("\n");
+	    		sb.append("\tName \"" + name + "\",");
+	    		sb.append("\n");
+	    		sb.append("\tDescription \"" + description + "\",");
+	    		sb.append("\n");
+	    		sb.append("\tType " + type);
+	    		sb.append("\n};");
+	    		sb.append("\n\n");
+			}
+    		else
+    			break;
+		}
+    	
+    	sb.deleteCharAt(sb.length() - 1);
+    	sb.append("};");
+    	
+//		System.out.println(sb);
+		
+		IFile fileSt = srcGenFolder.getFile(fileName + ".Enforcements.mydsl");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		if (!fileSt.exists()) {
