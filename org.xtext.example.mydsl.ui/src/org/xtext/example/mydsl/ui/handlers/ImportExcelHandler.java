@@ -51,6 +51,7 @@ public class ImportExcelHandler extends AbstractHandler {
 				generatePrivateDataFile(srcGenFolder, filePath, dialog.getFileName());
 				generateServicesFile(srcGenFolder, filePath, dialog.getFileName());
 				generateEnforcementsFile(srcGenFolder, filePath, dialog.getFileName());
+				generateRecipientsFile(srcGenFolder, filePath, dialog.getFileName());
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -59,7 +60,8 @@ public class ImportExcelHandler extends AbstractHandler {
 		return null;
 	}
 	
-	private void generateStatementsFile(IFolder srcGenFolder, String filePath, String fileName) throws Exception {
+	private void generateStatementsFile(IFolder srcGenFolder, String filePath, String fileName)
+			throws Exception {
 		StringBuilder sb = new StringBuilder();
 		InputStream inp = new FileInputStream(filePath);
 		Workbook wb = WorkbookFactory.create(inp);
@@ -126,7 +128,8 @@ public class ImportExcelHandler extends AbstractHandler {
 		}
 	}
 	
-	private void generatePrivateDataFile(IFolder srcGenFolder, String filePath, String fileName) throws Exception {
+	private void generatePrivateDataFile(IFolder srcGenFolder, String filePath, String fileName)
+			throws Exception {
 		StringBuilder sb = new StringBuilder();
 		InputStream inp = new FileInputStream(filePath);
 		Workbook wb = WorkbookFactory.create(inp);
@@ -183,7 +186,8 @@ public class ImportExcelHandler extends AbstractHandler {
 		}
 	}
 	
-	private void generateServicesFile(IFolder srcGenFolder, String filePath, String fileName) throws Exception {
+	private void generateServicesFile(IFolder srcGenFolder, String filePath, String fileName)
+			throws Exception {
 		StringBuilder sb = new StringBuilder();
 		InputStream inp = new FileInputStream(filePath);
 		Workbook wb = WorkbookFactory.create(inp);
@@ -240,7 +244,8 @@ public class ImportExcelHandler extends AbstractHandler {
 		}
 	}
 	
-	private void generateEnforcementsFile(IFolder srcGenFolder, String filePath, String fileName) throws Exception {
+	private void generateEnforcementsFile(IFolder srcGenFolder, String filePath, String fileName)
+			throws Exception {
 		StringBuilder sb = new StringBuilder();
 		InputStream inp = new FileInputStream(filePath);
 		Workbook wb = WorkbookFactory.create(inp);
@@ -286,6 +291,68 @@ public class ImportExcelHandler extends AbstractHandler {
 //		System.out.println(sb);
 		
 		IFile fileSt = srcGenFolder.getFile(fileName + ".Enforcements.mydsl");
+		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
+		
+		if (!fileSt.exists()) {
+			fileSt.create(source, IResource.FORCE, null);
+		} else {
+			fileSt.setContents(source, IResource.FORCE, null);
+		}
+	}
+	
+	private void generateRecipientsFile(IFolder srcGenFolder, String filePath, String fileName)
+			throws Exception {
+		StringBuilder sb = new StringBuilder();
+		InputStream inp = new FileInputStream(filePath);
+		Workbook wb = WorkbookFactory.create(inp);
+		sb.append("Package " + fileName + ".Recipients.RSLingo4Privacy {");
+		sb.append("\n");
+		sb.append("\n");
+		
+		// Get the Statements Sheet
+	    Sheet sheet = wb.getSheetAt(1);
+    	Iterator<Row> rowIt = sheet.rowIterator();
+    	// Ignore the Header row
+    	rowIt.next();
+    	
+    	while (rowIt.hasNext()) {
+    		Row row = rowIt.next();
+    		Cell cellId = row.getCell(0);
+    		
+    		if (cellId != null) {
+    			if (cellId.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+    				int id = (int) cellId.getNumericCellValue();
+        			Cell cellDescription = row.getCell(1);
+    	    		String description = cellDescription.getStringCellValue();
+    	    		Cell cellScope = row.getCell(2);
+    	    		String scope = cellScope.getStringCellValue();
+    	    		scope = scope.substring(0, 1).toUpperCase() + scope.substring(1);
+    	    		Cell cellType = row.getCell(3);
+    	    		String type = cellType.getStringCellValue();
+    	    		type = type.substring(0, 1).toUpperCase() + type.substring(1);
+    	    		sb.append("Recipient R" + id + " {");
+    	    		sb.append("\n");
+    	    		sb.append("\tName \"" + description + "\",");
+    	    		sb.append("\n");
+    	    		sb.append("\tDescription \"" + description + "\",");
+    	    		sb.append("\n");
+    	    		sb.append("\tScope " + scope + ",");
+    	    		sb.append("\n");
+    	    		sb.append("\tType " + type + ",");
+    	    		sb.append("\n};");
+    	    		sb.append("\n\n");
+				}
+			}
+    		else
+    			break;
+		}
+    	
+    	sb.deleteCharAt(sb.length() - 1);
+    	sb.append("};");
+    	
+//		System.out.println(sb);
+		
+		IFile fileSt = srcGenFolder.getFile(fileName + ".Recipients.mydsl");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		if (!fileSt.exists()) {
