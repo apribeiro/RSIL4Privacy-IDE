@@ -59,10 +59,9 @@ public class WordHandler extends AbstractHandler {
 	            Resource resource = resourceSet.getResource(
 	                URI.createURI("platform:/resource/" + file.getFullPath().toString()), true);
 	            	//URI.createURI("platform:/resource/org.xtext.example.mydsl/src/example.mydsl"), true);
-//	            PolicyImpl policy = (PolicyImpl) resource.getContents().get(0);
-//	            
-//	            System.out.println(policy.getName());
-//	            System.out.println(policy.getDay() + "-" + policy.getMonth() + "-" + policy.getYear());
+	            PolicyImpl policy = (PolicyImpl) resource.getContents().get(0);
+	            
+	            System.out.println(policy.getName());
 	    		// TODO Generate Word file
 			}
 		};
