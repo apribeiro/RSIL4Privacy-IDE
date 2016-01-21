@@ -9,9 +9,7 @@
       fileExtensions="mydsl" ecorePackage="MyDsl.ecore#/">
     <genClasses ecoreClass="MyDsl.ecore#//Policy">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Policy/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Policy/Day"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Policy/Month"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Policy/Year"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Policy/importelements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Policy/collection"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Policy/disclosure"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Policy/retention"/>
@@ -21,6 +19,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Policy/recipient"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Policy/service"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Policy/enforcement"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Import/importedNamespace"/>
     </genClasses>
     <genClasses ecoreClass="MyDsl.ecore#//Enforcement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Enforcement/name"/>

@@ -65,6 +65,7 @@ public class MyDslFactoryImpl extends EFactoryImpl implements MyDslFactory
     switch (eClass.getClassifierID())
     {
       case MyDslPackage.POLICY: return createPolicy();
+      case MyDslPackage.IMPORT: return createImport();
       case MyDslPackage.ENFORCEMENT: return createEnforcement();
       case MyDslPackage.SERVICE: return createService();
       case MyDslPackage.RECIPIENT: return createRecipient();
@@ -97,6 +98,17 @@ public class MyDslFactoryImpl extends EFactoryImpl implements MyDslFactory
   {
     PolicyImpl policy = new PolicyImpl();
     return policy;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Import createImport()
+  {
+    ImportImpl import_ = new ImportImpl();
+    return import_;
   }
 
   /**

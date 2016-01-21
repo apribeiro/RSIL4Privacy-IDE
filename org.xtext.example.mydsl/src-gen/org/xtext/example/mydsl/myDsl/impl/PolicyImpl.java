@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.xtext.example.mydsl.myDsl.Collection;
 import org.xtext.example.mydsl.myDsl.Disclosure;
 import org.xtext.example.mydsl.myDsl.Enforcement;
+import org.xtext.example.mydsl.myDsl.Import;
 import org.xtext.example.mydsl.myDsl.Informative;
 import org.xtext.example.mydsl.myDsl.MyDslPackage;
 import org.xtext.example.mydsl.myDsl.Policy;
@@ -37,9 +38,7 @@ import org.xtext.example.mydsl.myDsl.Usage;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.myDsl.impl.PolicyImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.myDsl.impl.PolicyImpl#getDay <em>Day</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.myDsl.impl.PolicyImpl#getMonth <em>Month</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.myDsl.impl.PolicyImpl#getYear <em>Year</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myDsl.impl.PolicyImpl#getImportelements <em>Importelements</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myDsl.impl.PolicyImpl#getCollection <em>Collection</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myDsl.impl.PolicyImpl#getDisclosure <em>Disclosure</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myDsl.impl.PolicyImpl#getRetention <em>Retention</em>}</li>
@@ -76,64 +75,14 @@ public class PolicyImpl extends MinimalEObjectImpl.Container implements Policy
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getDay() <em>Day</em>}' attribute.
+   * The cached value of the '{@link #getImportelements() <em>Importelements</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDay()
+   * @see #getImportelements()
    * @generated
    * @ordered
    */
-  protected static final int DAY_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getDay() <em>Day</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDay()
-   * @generated
-   * @ordered
-   */
-  protected int day = DAY_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getMonth() <em>Month</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getMonth()
-   * @generated
-   * @ordered
-   */
-  protected static final String MONTH_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getMonth() <em>Month</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getMonth()
-   * @generated
-   * @ordered
-   */
-  protected String month = MONTH_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getYear() <em>Year</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getYear()
-   * @generated
-   * @ordered
-   */
-  protected static final int YEAR_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getYear() <em>Year</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getYear()
-   * @generated
-   * @ordered
-   */
-  protected int year = YEAR_EDEFAULT;
+  protected EList<Import> importelements;
 
   /**
    * The cached value of the '{@link #getCollection() <em>Collection</em>}' containment reference list.
@@ -274,68 +223,13 @@ public class PolicyImpl extends MinimalEObjectImpl.Container implements Policy
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getDay()
+  public EList<Import> getImportelements()
   {
-    return day;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setDay(int newDay)
-  {
-    int oldDay = day;
-    day = newDay;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.POLICY__DAY, oldDay, day));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getMonth()
-  {
-    return month;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setMonth(String newMonth)
-  {
-    String oldMonth = month;
-    month = newMonth;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.POLICY__MONTH, oldMonth, month));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public int getYear()
-  {
-    return year;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setYear(int newYear)
-  {
-    int oldYear = year;
-    year = newYear;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.POLICY__YEAR, oldYear, year));
+    if (importelements == null)
+    {
+      importelements = new EObjectContainmentEList<Import>(Import.class, this, MyDslPackage.POLICY__IMPORTELEMENTS);
+    }
+    return importelements;
   }
 
   /**
@@ -474,6 +368,8 @@ public class PolicyImpl extends MinimalEObjectImpl.Container implements Policy
   {
     switch (featureID)
     {
+      case MyDslPackage.POLICY__IMPORTELEMENTS:
+        return ((InternalEList<?>)getImportelements()).basicRemove(otherEnd, msgs);
       case MyDslPackage.POLICY__COLLECTION:
         return ((InternalEList<?>)getCollection()).basicRemove(otherEnd, msgs);
       case MyDslPackage.POLICY__DISCLOSURE:
@@ -508,12 +404,8 @@ public class PolicyImpl extends MinimalEObjectImpl.Container implements Policy
     {
       case MyDslPackage.POLICY__NAME:
         return getName();
-      case MyDslPackage.POLICY__DAY:
-        return getDay();
-      case MyDslPackage.POLICY__MONTH:
-        return getMonth();
-      case MyDslPackage.POLICY__YEAR:
-        return getYear();
+      case MyDslPackage.POLICY__IMPORTELEMENTS:
+        return getImportelements();
       case MyDslPackage.POLICY__COLLECTION:
         return getCollection();
       case MyDslPackage.POLICY__DISCLOSURE:
@@ -550,14 +442,9 @@ public class PolicyImpl extends MinimalEObjectImpl.Container implements Policy
       case MyDslPackage.POLICY__NAME:
         setName((String)newValue);
         return;
-      case MyDslPackage.POLICY__DAY:
-        setDay((Integer)newValue);
-        return;
-      case MyDslPackage.POLICY__MONTH:
-        setMonth((String)newValue);
-        return;
-      case MyDslPackage.POLICY__YEAR:
-        setYear((Integer)newValue);
+      case MyDslPackage.POLICY__IMPORTELEMENTS:
+        getImportelements().clear();
+        getImportelements().addAll((java.util.Collection<? extends Import>)newValue);
         return;
       case MyDslPackage.POLICY__COLLECTION:
         getCollection().clear();
@@ -612,14 +499,8 @@ public class PolicyImpl extends MinimalEObjectImpl.Container implements Policy
       case MyDslPackage.POLICY__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case MyDslPackage.POLICY__DAY:
-        setDay(DAY_EDEFAULT);
-        return;
-      case MyDslPackage.POLICY__MONTH:
-        setMonth(MONTH_EDEFAULT);
-        return;
-      case MyDslPackage.POLICY__YEAR:
-        setYear(YEAR_EDEFAULT);
+      case MyDslPackage.POLICY__IMPORTELEMENTS:
+        getImportelements().clear();
         return;
       case MyDslPackage.POLICY__COLLECTION:
         getCollection().clear();
@@ -664,12 +545,8 @@ public class PolicyImpl extends MinimalEObjectImpl.Container implements Policy
     {
       case MyDslPackage.POLICY__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case MyDslPackage.POLICY__DAY:
-        return day != DAY_EDEFAULT;
-      case MyDslPackage.POLICY__MONTH:
-        return MONTH_EDEFAULT == null ? month != null : !MONTH_EDEFAULT.equals(month);
-      case MyDslPackage.POLICY__YEAR:
-        return year != YEAR_EDEFAULT;
+      case MyDslPackage.POLICY__IMPORTELEMENTS:
+        return importelements != null && !importelements.isEmpty();
       case MyDslPackage.POLICY__COLLECTION:
         return collection != null && !collection.isEmpty();
       case MyDslPackage.POLICY__DISCLOSURE:
@@ -705,12 +582,6 @@ public class PolicyImpl extends MinimalEObjectImpl.Container implements Policy
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", Day: ");
-    result.append(day);
-    result.append(", Month: ");
-    result.append(month);
-    result.append(", Year: ");
-    result.append(year);
     result.append(')');
     return result.toString();
   }

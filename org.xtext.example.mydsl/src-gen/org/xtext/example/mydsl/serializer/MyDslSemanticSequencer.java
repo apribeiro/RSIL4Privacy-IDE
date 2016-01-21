@@ -20,6 +20,7 @@ import org.xtext.example.mydsl.myDsl.Attribute;
 import org.xtext.example.mydsl.myDsl.Collection;
 import org.xtext.example.mydsl.myDsl.Disclosure;
 import org.xtext.example.mydsl.myDsl.Enforcement;
+import org.xtext.example.mydsl.myDsl.Import;
 import org.xtext.example.mydsl.myDsl.Informative;
 import org.xtext.example.mydsl.myDsl.MyDslPackage;
 import org.xtext.example.mydsl.myDsl.Partof;
@@ -58,6 +59,9 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case MyDslPackage.ENFORCEMENT:
 				sequence_Enforcement(context, (Enforcement) semanticObject); 
+				return; 
+			case MyDslPackage.IMPORT:
+				sequence_Import(context, (Import) semanticObject); 
 				return; 
 			case MyDslPackage.INFORMATIVE:
 				sequence_Informative(context, (Informative) semanticObject); 
@@ -137,7 +141,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         refprivatedata+=RefPrivateData* 
 	 *         refertoservice+=ReferToService* 
 	 *         refertoEnforcement+=RefertoEnforcement* 
-	 *         (modalitykind='Permission' | modalitykind='Obligation' | modalitykind='Prohibition')
+	 *         (modalitykind='Permitted' | modalitykind='Obligation' | modalitykind='Forbidden')
 	 *     )
 	 */
 	protected void sequence_Collection(EObject context, Collection semanticObject) {
@@ -158,7 +162,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         refprivatedata+=RefPrivateData* 
 	 *         refertoservice+=ReferToService* 
 	 *         refertoEnforcement+=RefertoEnforcement* 
-	 *         (modalitykind='Permission' | modalitykind='Obligation' | modalitykind='Prohibition')
+	 *         (modalitykind='Permitted' | modalitykind='Obligation' | modalitykind='Forbidden')
 	 *     )
 	 */
 	protected void sequence_Disclosure(EObject context, Disclosure semanticObject) {
@@ -182,6 +186,22 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
+	 *     importedNamespace=QualifiedNameWithWildcard
+	 */
+	protected void sequence_Import(EObject context, Import semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.IMPORT__IMPORTED_NAMESPACE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.IMPORT__IMPORTED_NAMESPACE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getImportAccess().getImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_0(), semanticObject.getImportedNamespace());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (
 	 *         name=ID 
 	 *         description=STRING 
@@ -190,7 +210,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         refprivatedata+=RefPrivateData* 
 	 *         refertoservice+=ReferToService* 
 	 *         refertoEnforcement+=RefertoEnforcement* 
-	 *         (modalitykind='Permission' | modalitykind='Obligation' | modalitykind='Prohibition')
+	 *         (modalitykind='Permitted' | modalitykind='Obligation' | modalitykind='Forbidden')
 	 *     )
 	 */
 	protected void sequence_Informative(EObject context, Informative semanticObject) {
@@ -217,24 +237,13 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (
-	 *         name=STRING 
-	 *         Day=INT 
-	 *         (
-	 *             Month='Jan' | 
-	 *             Month='Feb' | 
-	 *             Month='Mar' | 
-	 *             Month='Apr' | 
-	 *             Month='May' | 
-	 *             Month='Jun' | 
-	 *             Month='Jul' | 
-	 *             Month='Aug' | 
-	 *             Month='Sep' | 
-	 *             Month='Oct' | 
-	 *             Month='Nov' | 
-	 *             Month='Dec'
-	 *         ) 
-	 *         Year=INT 
-	 *         (collection+=Collection | disclosure+=Disclosure | retention+=Retention | usage+=Usage | informative+=Informative)* 
+	 *         name=QualifiedName 
+	 *         importelements+=Import* 
+	 *         collection+=Collection* 
+	 *         disclosure+=Disclosure* 
+	 *         retention+=Retention* 
+	 *         usage+=Usage* 
+	 *         informative+=Informative* 
 	 *         privateData+=PrivateData* 
 	 *         recipient+=Recipient* 
 	 *         service+=Service* 
@@ -378,7 +387,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         refprivatedata+=RefPrivateData* 
 	 *         refertoservice+=ReferToService* 
 	 *         refertoEnforcement+=RefertoEnforcement* 
-	 *         (modalitykind='Permission' | modalitykind='Obligation' | modalitykind='Prohibition')
+	 *         (modalitykind='Permitted' | modalitykind='Obligation' | modalitykind='Forbidden')
 	 *     )
 	 */
 	protected void sequence_Retention(EObject context, Retention semanticObject) {
@@ -421,7 +430,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         refprivatedata+=RefPrivateData* 
 	 *         refertoservice+=ReferToService* 
 	 *         refertoEnforcement+=RefertoEnforcement* 
-	 *         (modalitykind='Permission' | modalitykind='Obligation' | modalitykind='Prohibition')
+	 *         (modalitykind='Permitted' | modalitykind='Obligation' | modalitykind='Forbidden')
 	 *     )
 	 */
 	protected void sequence_Usage(EObject context, Usage semanticObject) {

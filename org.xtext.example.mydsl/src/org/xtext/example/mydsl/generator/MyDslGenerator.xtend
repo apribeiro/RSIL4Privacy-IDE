@@ -31,11 +31,6 @@ import org.xtext.example.mydsl.myDsl.Recipient
 class MyDslGenerator implements IGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(typeof(Greeting))
-//				.map[name]
-//				.join(', '))
 		fsa.generateFile(resource.className + '.policy', 		
 		resource.allContents.filter(typeof(Policy)).map[compilepo].join(' '))    
 	}

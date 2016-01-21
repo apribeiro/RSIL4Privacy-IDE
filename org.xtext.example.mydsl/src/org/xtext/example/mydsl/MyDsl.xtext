@@ -3,13 +3,27 @@ grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
 generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
 
 Policy:
-	'PrivacyPolicy' name=STRING 
-	'Last revised:' Day= INT Month=('Jan'|'Feb'|'Mar'|'Apr'|'May'|'Jun'|'Jul'|'Aug'|'Sep'|'Oct'|'Nov'|'Dec') Year=INT';'
- 	(collection+=Collection | disclosure+=Disclosure | retention+=Retention | usage+=Usage | informative+=Informative)*
- 	privateData+=PrivateData*
-	recipient+=Recipient*
-	service+=Service*
-	enforcement+=Enforcement*;
+  'Package' name = QualifiedName '{'
+    importelements += Import*
+    collection+=Collection*
+    disclosure+=Disclosure*
+    retention+=Retention*
+    usage+=Usage*
+    informative+=Informative*
+    privateData+=PrivateData*
+    recipient+=Recipient*
+    service+=Service*
+    enforcement+=Enforcement*
+  '};';
+
+QualifiedName:
+  ID ('.' ID)*;
+
+Import:
+  'import' importedNamespace = QualifiedNameWithWildcard;
+  
+QualifiedNameWithWildcard:
+  QualifiedName '.*'?;
 	
 Enforcement:
 	'Enforcement' name=ID '{' 
@@ -47,7 +61,7 @@ Collection:
 	('RefersTo PrivateData' refprivatedata+=RefPrivateData*',')?
 	('RefersTo Service' refertoservice+=ReferToService*',')?
 	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement*',')?
-	'Modality' modalitykind=('Permission'|'Obligation'|'Prohibition') '};'; 
+	'Modality' modalitykind=('Permitted'|'Obligation'|'Forbidden') '};';
 	
 Disclosure: 
 	'Disclosure' name=ID '{' 
@@ -60,7 +74,7 @@ Disclosure:
 	('RefersTo PrivateData' refprivatedata+=RefPrivateData*',')?
 	('RefersTo Service' refertoservice+=ReferToService*',')?
 	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement*',')?
-	'Modality' modalitykind=('Permission'|'Obligation'|'Prohibition') '};';
+	'Modality' modalitykind=('Permitted'|'Obligation'|'Forbidden') '};';
 	
 Retention: 
 	'Retention' name=ID '{' 
@@ -71,7 +85,7 @@ Retention:
 	('RefersTo PrivateData' refprivatedata+=RefPrivateData*',')?
 	('RefersTo Service' refertoservice+=ReferToService*',')?
 	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement*',')?
-	'Modality' modalitykind=('Permission'|'Obligation'|'Prohibition')'};';
+	'Modality' modalitykind=('Permitted'|'Obligation'|'Forbidden') '};';
 	
 Usage:
 	'Usage' name=ID '{' 
@@ -81,7 +95,7 @@ Usage:
 	('RefersTo PrivateData' refprivatedata+=RefPrivateData*',')?
 	('RefersTo Service' refertoservice+=ReferToService*',')?
 	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement*',')?
-	'Modality' modalitykind=('Permission'|'Obligation'|'Prohibition')'};';
+	'Modality' modalitykind=('Permitted'|'Obligation'|'Forbidden') '};';
 	
 Informative:
 	'Informative' name=ID '{' 
@@ -91,7 +105,7 @@ Informative:
 	('RefersTo PrivateData' refprivatedata+=RefPrivateData*',')?
 	('RefersTo Service' refertoservice+=ReferToService*',')?
 	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement*',')?
-	'Modality' modalitykind=('Permission'|'Obligation'|'Prohibition')'};';
+	'Modality' modalitykind=('Permitted'|'Obligation'|'Forbidden') '};';
 	
 Partof:
 	partof=[Recipient]('-')?;

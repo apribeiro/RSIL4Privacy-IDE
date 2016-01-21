@@ -13,6 +13,7 @@ import org.xtext.example.mydsl.myDsl.Attribute;
 import org.xtext.example.mydsl.myDsl.Collection;
 import org.xtext.example.mydsl.myDsl.Disclosure;
 import org.xtext.example.mydsl.myDsl.Enforcement;
+import org.xtext.example.mydsl.myDsl.Import;
 import org.xtext.example.mydsl.myDsl.Informative;
 import org.xtext.example.mydsl.myDsl.MyDslFactory;
 import org.xtext.example.mydsl.myDsl.MyDslPackage;
@@ -45,6 +46,13 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
    * @generated
    */
   private EClass policyEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass importEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -260,29 +268,9 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getPolicy_Day()
+  public EReference getPolicy_Importelements()
   {
-    return (EAttribute)policyEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPolicy_Month()
-  {
-    return (EAttribute)policyEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPolicy_Year()
-  {
-    return (EAttribute)policyEClass.getEStructuralFeatures().get(3);
+    return (EReference)policyEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -292,7 +280,7 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
    */
   public EReference getPolicy_Collection()
   {
-    return (EReference)policyEClass.getEStructuralFeatures().get(4);
+    return (EReference)policyEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -302,7 +290,7 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
    */
   public EReference getPolicy_Disclosure()
   {
-    return (EReference)policyEClass.getEStructuralFeatures().get(5);
+    return (EReference)policyEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -312,7 +300,7 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
    */
   public EReference getPolicy_Retention()
   {
-    return (EReference)policyEClass.getEStructuralFeatures().get(6);
+    return (EReference)policyEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -322,7 +310,7 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
    */
   public EReference getPolicy_Usage()
   {
-    return (EReference)policyEClass.getEStructuralFeatures().get(7);
+    return (EReference)policyEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -332,7 +320,7 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
    */
   public EReference getPolicy_Informative()
   {
-    return (EReference)policyEClass.getEStructuralFeatures().get(8);
+    return (EReference)policyEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -342,7 +330,7 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
    */
   public EReference getPolicy_PrivateData()
   {
-    return (EReference)policyEClass.getEStructuralFeatures().get(9);
+    return (EReference)policyEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -352,7 +340,7 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
    */
   public EReference getPolicy_Recipient()
   {
-    return (EReference)policyEClass.getEStructuralFeatures().get(10);
+    return (EReference)policyEClass.getEStructuralFeatures().get(8);
   }
 
   /**
@@ -362,7 +350,7 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
    */
   public EReference getPolicy_Service()
   {
-    return (EReference)policyEClass.getEStructuralFeatures().get(11);
+    return (EReference)policyEClass.getEStructuralFeatures().get(9);
   }
 
   /**
@@ -372,7 +360,27 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
    */
   public EReference getPolicy_Enforcement()
   {
-    return (EReference)policyEClass.getEStructuralFeatures().get(12);
+    return (EReference)policyEClass.getEStructuralFeatures().get(10);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getImport()
+  {
+    return importEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getImport_ImportedNamespace()
+  {
+    return (EAttribute)importEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1317,9 +1325,7 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
     // Create classes and their features
     policyEClass = createEClass(POLICY);
     createEAttribute(policyEClass, POLICY__NAME);
-    createEAttribute(policyEClass, POLICY__DAY);
-    createEAttribute(policyEClass, POLICY__MONTH);
-    createEAttribute(policyEClass, POLICY__YEAR);
+    createEReference(policyEClass, POLICY__IMPORTELEMENTS);
     createEReference(policyEClass, POLICY__COLLECTION);
     createEReference(policyEClass, POLICY__DISCLOSURE);
     createEReference(policyEClass, POLICY__RETENTION);
@@ -1329,6 +1335,9 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
     createEReference(policyEClass, POLICY__RECIPIENT);
     createEReference(policyEClass, POLICY__SERVICE);
     createEReference(policyEClass, POLICY__ENFORCEMENT);
+
+    importEClass = createEClass(IMPORT);
+    createEAttribute(importEClass, IMPORT__IMPORTED_NAMESPACE);
 
     enforcementEClass = createEClass(ENFORCEMENT);
     createEAttribute(enforcementEClass, ENFORCEMENT__NAME);
@@ -1473,9 +1482,7 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
     // Initialize classes and features; add operations and parameters
     initEClass(policyEClass, Policy.class, "Policy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPolicy_Name(), ecorePackage.getEString(), "name", null, 0, 1, Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPolicy_Day(), ecorePackage.getEInt(), "Day", null, 0, 1, Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPolicy_Month(), ecorePackage.getEString(), "Month", null, 0, 1, Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPolicy_Year(), ecorePackage.getEInt(), "Year", null, 0, 1, Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPolicy_Importelements(), this.getImport(), null, "importelements", null, 0, -1, Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPolicy_Collection(), this.getCollection(), null, "collection", null, 0, -1, Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPolicy_Disclosure(), this.getDisclosure(), null, "disclosure", null, 0, -1, Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPolicy_Retention(), this.getRetention(), null, "retention", null, 0, -1, Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1485,6 +1492,9 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
     initEReference(getPolicy_Recipient(), this.getRecipient(), null, "recipient", null, 0, -1, Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPolicy_Service(), this.getService(), null, "service", null, 0, -1, Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPolicy_Enforcement(), this.getEnforcement(), null, "enforcement", null, 0, -1, Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getImport_ImportedNamespace(), ecorePackage.getEString(), "importedNamespace", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(enforcementEClass, Enforcement.class, "Enforcement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEnforcement_Name(), ecorePackage.getEString(), "name", null, 0, 1, Enforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

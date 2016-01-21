@@ -16,9 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.myDsl.Policy#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.myDsl.Policy#getDay <em>Day</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.myDsl.Policy#getMonth <em>Month</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.myDsl.Policy#getYear <em>Year</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myDsl.Policy#getImportelements <em>Importelements</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myDsl.Policy#getCollection <em>Collection</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myDsl.Policy#getDisclosure <em>Disclosure</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myDsl.Policy#getRetention <em>Retention</em>}</li>
@@ -63,82 +61,20 @@ public interface Policy extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Day</b></em>' attribute.
+   * Returns the value of the '<em><b>Importelements</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.myDsl.Import}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Day</em>' attribute isn't clear,
+   * If the meaning of the '<em>Importelements</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Day</em>' attribute.
-   * @see #setDay(int)
-   * @see org.xtext.example.mydsl.myDsl.MyDslPackage#getPolicy_Day()
-   * @model
+   * @return the value of the '<em>Importelements</em>' containment reference list.
+   * @see org.xtext.example.mydsl.myDsl.MyDslPackage#getPolicy_Importelements()
+   * @model containment="true"
    * @generated
    */
-  int getDay();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.myDsl.Policy#getDay <em>Day</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Day</em>' attribute.
-   * @see #getDay()
-   * @generated
-   */
-  void setDay(int value);
-
-  /**
-   * Returns the value of the '<em><b>Month</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Month</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Month</em>' attribute.
-   * @see #setMonth(String)
-   * @see org.xtext.example.mydsl.myDsl.MyDslPackage#getPolicy_Month()
-   * @model
-   * @generated
-   */
-  String getMonth();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.myDsl.Policy#getMonth <em>Month</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Month</em>' attribute.
-   * @see #getMonth()
-   * @generated
-   */
-  void setMonth(String value);
-
-  /**
-   * Returns the value of the '<em><b>Year</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Year</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Year</em>' attribute.
-   * @see #setYear(int)
-   * @see org.xtext.example.mydsl.myDsl.MyDslPackage#getPolicy_Year()
-   * @model
-   * @generated
-   */
-  int getYear();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.myDsl.Policy#getYear <em>Year</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Year</em>' attribute.
-   * @see #getYear()
-   * @generated
-   */
-  void setYear(int value);
+  EList<Import> getImportelements();
 
   /**
    * Returns the value of the '<em><b>Collection</b></em>' containment reference list.

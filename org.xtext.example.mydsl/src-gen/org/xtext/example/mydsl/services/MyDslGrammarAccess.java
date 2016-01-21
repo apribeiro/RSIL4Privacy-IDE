@@ -21,187 +21,189 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	public class PolicyElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Policy");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cPrivacyPolicyKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cPackageKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameSTRINGTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cLastRevisedKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cDayAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cDayINTTerminalRuleCall_3_0 = (RuleCall)cDayAssignment_3.eContents().get(0);
-		private final Assignment cMonthAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final Alternatives cMonthAlternatives_4_0 = (Alternatives)cMonthAssignment_4.eContents().get(0);
-		private final Keyword cMonthJanKeyword_4_0_0 = (Keyword)cMonthAlternatives_4_0.eContents().get(0);
-		private final Keyword cMonthFebKeyword_4_0_1 = (Keyword)cMonthAlternatives_4_0.eContents().get(1);
-		private final Keyword cMonthMarKeyword_4_0_2 = (Keyword)cMonthAlternatives_4_0.eContents().get(2);
-		private final Keyword cMonthAprKeyword_4_0_3 = (Keyword)cMonthAlternatives_4_0.eContents().get(3);
-		private final Keyword cMonthMayKeyword_4_0_4 = (Keyword)cMonthAlternatives_4_0.eContents().get(4);
-		private final Keyword cMonthJunKeyword_4_0_5 = (Keyword)cMonthAlternatives_4_0.eContents().get(5);
-		private final Keyword cMonthJulKeyword_4_0_6 = (Keyword)cMonthAlternatives_4_0.eContents().get(6);
-		private final Keyword cMonthAugKeyword_4_0_7 = (Keyword)cMonthAlternatives_4_0.eContents().get(7);
-		private final Keyword cMonthSepKeyword_4_0_8 = (Keyword)cMonthAlternatives_4_0.eContents().get(8);
-		private final Keyword cMonthOctKeyword_4_0_9 = (Keyword)cMonthAlternatives_4_0.eContents().get(9);
-		private final Keyword cMonthNovKeyword_4_0_10 = (Keyword)cMonthAlternatives_4_0.eContents().get(10);
-		private final Keyword cMonthDecKeyword_4_0_11 = (Keyword)cMonthAlternatives_4_0.eContents().get(11);
-		private final Assignment cYearAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cYearINTTerminalRuleCall_5_0 = (RuleCall)cYearAssignment_5.eContents().get(0);
-		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Alternatives cAlternatives_7 = (Alternatives)cGroup.eContents().get(7);
-		private final Assignment cCollectionAssignment_7_0 = (Assignment)cAlternatives_7.eContents().get(0);
-		private final RuleCall cCollectionCollectionParserRuleCall_7_0_0 = (RuleCall)cCollectionAssignment_7_0.eContents().get(0);
-		private final Assignment cDisclosureAssignment_7_1 = (Assignment)cAlternatives_7.eContents().get(1);
-		private final RuleCall cDisclosureDisclosureParserRuleCall_7_1_0 = (RuleCall)cDisclosureAssignment_7_1.eContents().get(0);
-		private final Assignment cRetentionAssignment_7_2 = (Assignment)cAlternatives_7.eContents().get(2);
-		private final RuleCall cRetentionRetentionParserRuleCall_7_2_0 = (RuleCall)cRetentionAssignment_7_2.eContents().get(0);
-		private final Assignment cUsageAssignment_7_3 = (Assignment)cAlternatives_7.eContents().get(3);
-		private final RuleCall cUsageUsageParserRuleCall_7_3_0 = (RuleCall)cUsageAssignment_7_3.eContents().get(0);
-		private final Assignment cInformativeAssignment_7_4 = (Assignment)cAlternatives_7.eContents().get(4);
-		private final RuleCall cInformativeInformativeParserRuleCall_7_4_0 = (RuleCall)cInformativeAssignment_7_4.eContents().get(0);
-		private final Assignment cPrivateDataAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cPrivateDataPrivateDataParserRuleCall_8_0 = (RuleCall)cPrivateDataAssignment_8.eContents().get(0);
-		private final Assignment cRecipientAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cRecipientRecipientParserRuleCall_9_0 = (RuleCall)cRecipientAssignment_9.eContents().get(0);
-		private final Assignment cServiceAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cServiceServiceParserRuleCall_10_0 = (RuleCall)cServiceAssignment_10.eContents().get(0);
-		private final Assignment cEnforcementAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cEnforcementEnforcementParserRuleCall_11_0 = (RuleCall)cEnforcementAssignment_11.eContents().get(0);
+		private final RuleCall cNameQualifiedNameParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cImportelementsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cImportelementsImportParserRuleCall_3_0 = (RuleCall)cImportelementsAssignment_3.eContents().get(0);
+		private final Assignment cCollectionAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cCollectionCollectionParserRuleCall_4_0 = (RuleCall)cCollectionAssignment_4.eContents().get(0);
+		private final Assignment cDisclosureAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cDisclosureDisclosureParserRuleCall_5_0 = (RuleCall)cDisclosureAssignment_5.eContents().get(0);
+		private final Assignment cRetentionAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cRetentionRetentionParserRuleCall_6_0 = (RuleCall)cRetentionAssignment_6.eContents().get(0);
+		private final Assignment cUsageAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cUsageUsageParserRuleCall_7_0 = (RuleCall)cUsageAssignment_7.eContents().get(0);
+		private final Assignment cInformativeAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cInformativeInformativeParserRuleCall_8_0 = (RuleCall)cInformativeAssignment_8.eContents().get(0);
+		private final Assignment cPrivateDataAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cPrivateDataPrivateDataParserRuleCall_9_0 = (RuleCall)cPrivateDataAssignment_9.eContents().get(0);
+		private final Assignment cRecipientAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cRecipientRecipientParserRuleCall_10_0 = (RuleCall)cRecipientAssignment_10.eContents().get(0);
+		private final Assignment cServiceAssignment_11 = (Assignment)cGroup.eContents().get(11);
+		private final RuleCall cServiceServiceParserRuleCall_11_0 = (RuleCall)cServiceAssignment_11.eContents().get(0);
+		private final Assignment cEnforcementAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cEnforcementEnforcementParserRuleCall_12_0 = (RuleCall)cEnforcementAssignment_12.eContents().get(0);
+		private final Keyword cRightCurlyBracketSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
 		//Policy:
-		//	"PrivacyPolicy" name=STRING "Last revised:" Day=INT Month=("Jan" | "Feb" | "Mar" | "Apr" | "May" | "Jun" | "Jul" |
-		//	"Aug" | "Sep" | "Oct" | "Nov" | "Dec") Year=INT ";" (collection+=Collection | disclosure+=Disclosure |
-		//	retention+=Retention | usage+=Usage | informative+=Informative)* privateData+=PrivateData* recipient+=Recipient*
-		//	service+=Service* enforcement+=Enforcement*;
+		//	"Package" name=QualifiedName "{" importelements+=Import* collection+=Collection* disclosure+=Disclosure*
+		//	retention+=Retention* usage+=Usage* informative+=Informative* privateData+=PrivateData* recipient+=Recipient*
+		//	service+=Service* enforcement+=Enforcement* "};";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"PrivacyPolicy" name=STRING "Last revised:" Day=INT Month=("Jan" | "Feb" | "Mar" | "Apr" | "May" | "Jun" | "Jul" | "Aug"
-		//| "Sep" | "Oct" | "Nov" | "Dec") Year=INT ";" (collection+=Collection | disclosure+=Disclosure | retention+=Retention
-		//| usage+=Usage | informative+=Informative)* privateData+=PrivateData* recipient+=Recipient* service+=Service*
-		//enforcement+=Enforcement*
+		//"Package" name=QualifiedName "{" importelements+=Import* collection+=Collection* disclosure+=Disclosure*
+		//retention+=Retention* usage+=Usage* informative+=Informative* privateData+=PrivateData* recipient+=Recipient*
+		//service+=Service* enforcement+=Enforcement* "};"
 		public Group getGroup() { return cGroup; }
 
-		//"PrivacyPolicy"
-		public Keyword getPrivacyPolicyKeyword_0() { return cPrivacyPolicyKeyword_0; }
+		//"Package"
+		public Keyword getPackageKeyword_0() { return cPackageKeyword_0; }
 
-		//name=STRING
+		//name=QualifiedName
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_1_0() { return cNameSTRINGTerminalRuleCall_1_0; }
+		//QualifiedName
+		public RuleCall getNameQualifiedNameParserRuleCall_1_0() { return cNameQualifiedNameParserRuleCall_1_0; }
 
-		//"Last revised:"
-		public Keyword getLastRevisedKeyword_2() { return cLastRevisedKeyword_2; }
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//Day=INT
-		public Assignment getDayAssignment_3() { return cDayAssignment_3; }
+		//importelements+=Import*
+		public Assignment getImportelementsAssignment_3() { return cImportelementsAssignment_3; }
 
-		//INT
-		public RuleCall getDayINTTerminalRuleCall_3_0() { return cDayINTTerminalRuleCall_3_0; }
+		//Import
+		public RuleCall getImportelementsImportParserRuleCall_3_0() { return cImportelementsImportParserRuleCall_3_0; }
 
-		//Month=("Jan" | "Feb" | "Mar" | "Apr" | "May" | "Jun" | "Jul" | "Aug" | "Sep" | "Oct" | "Nov" | "Dec")
-		public Assignment getMonthAssignment_4() { return cMonthAssignment_4; }
-
-		//"Jan" | "Feb" | "Mar" | "Apr" | "May" | "Jun" | "Jul" | "Aug" | "Sep" | "Oct" | "Nov" | "Dec"
-		public Alternatives getMonthAlternatives_4_0() { return cMonthAlternatives_4_0; }
-
-		//"Jan"
-		public Keyword getMonthJanKeyword_4_0_0() { return cMonthJanKeyword_4_0_0; }
-
-		//"Feb"
-		public Keyword getMonthFebKeyword_4_0_1() { return cMonthFebKeyword_4_0_1; }
-
-		//"Mar"
-		public Keyword getMonthMarKeyword_4_0_2() { return cMonthMarKeyword_4_0_2; }
-
-		//"Apr"
-		public Keyword getMonthAprKeyword_4_0_3() { return cMonthAprKeyword_4_0_3; }
-
-		//"May"
-		public Keyword getMonthMayKeyword_4_0_4() { return cMonthMayKeyword_4_0_4; }
-
-		//"Jun"
-		public Keyword getMonthJunKeyword_4_0_5() { return cMonthJunKeyword_4_0_5; }
-
-		//"Jul"
-		public Keyword getMonthJulKeyword_4_0_6() { return cMonthJulKeyword_4_0_6; }
-
-		//"Aug"
-		public Keyword getMonthAugKeyword_4_0_7() { return cMonthAugKeyword_4_0_7; }
-
-		//"Sep"
-		public Keyword getMonthSepKeyword_4_0_8() { return cMonthSepKeyword_4_0_8; }
-
-		//"Oct"
-		public Keyword getMonthOctKeyword_4_0_9() { return cMonthOctKeyword_4_0_9; }
-
-		//"Nov"
-		public Keyword getMonthNovKeyword_4_0_10() { return cMonthNovKeyword_4_0_10; }
-
-		//"Dec"
-		public Keyword getMonthDecKeyword_4_0_11() { return cMonthDecKeyword_4_0_11; }
-
-		//Year=INT
-		public Assignment getYearAssignment_5() { return cYearAssignment_5; }
-
-		//INT
-		public RuleCall getYearINTTerminalRuleCall_5_0() { return cYearINTTerminalRuleCall_5_0; }
-
-		//";"
-		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
-
-		//(collection+=Collection | disclosure+=Disclosure | retention+=Retention | usage+=Usage | informative+=Informative)*
-		public Alternatives getAlternatives_7() { return cAlternatives_7; }
-
-		//collection+=Collection
-		public Assignment getCollectionAssignment_7_0() { return cCollectionAssignment_7_0; }
+		//collection+=Collection*
+		public Assignment getCollectionAssignment_4() { return cCollectionAssignment_4; }
 
 		//Collection
-		public RuleCall getCollectionCollectionParserRuleCall_7_0_0() { return cCollectionCollectionParserRuleCall_7_0_0; }
+		public RuleCall getCollectionCollectionParserRuleCall_4_0() { return cCollectionCollectionParserRuleCall_4_0; }
 
-		//disclosure+=Disclosure
-		public Assignment getDisclosureAssignment_7_1() { return cDisclosureAssignment_7_1; }
+		//disclosure+=Disclosure*
+		public Assignment getDisclosureAssignment_5() { return cDisclosureAssignment_5; }
 
 		//Disclosure
-		public RuleCall getDisclosureDisclosureParserRuleCall_7_1_0() { return cDisclosureDisclosureParserRuleCall_7_1_0; }
+		public RuleCall getDisclosureDisclosureParserRuleCall_5_0() { return cDisclosureDisclosureParserRuleCall_5_0; }
 
-		//retention+=Retention
-		public Assignment getRetentionAssignment_7_2() { return cRetentionAssignment_7_2; }
+		//retention+=Retention*
+		public Assignment getRetentionAssignment_6() { return cRetentionAssignment_6; }
 
 		//Retention
-		public RuleCall getRetentionRetentionParserRuleCall_7_2_0() { return cRetentionRetentionParserRuleCall_7_2_0; }
+		public RuleCall getRetentionRetentionParserRuleCall_6_0() { return cRetentionRetentionParserRuleCall_6_0; }
 
-		//usage+=Usage
-		public Assignment getUsageAssignment_7_3() { return cUsageAssignment_7_3; }
+		//usage+=Usage*
+		public Assignment getUsageAssignment_7() { return cUsageAssignment_7; }
 
 		//Usage
-		public RuleCall getUsageUsageParserRuleCall_7_3_0() { return cUsageUsageParserRuleCall_7_3_0; }
+		public RuleCall getUsageUsageParserRuleCall_7_0() { return cUsageUsageParserRuleCall_7_0; }
 
-		//informative+=Informative
-		public Assignment getInformativeAssignment_7_4() { return cInformativeAssignment_7_4; }
+		//informative+=Informative*
+		public Assignment getInformativeAssignment_8() { return cInformativeAssignment_8; }
 
 		//Informative
-		public RuleCall getInformativeInformativeParserRuleCall_7_4_0() { return cInformativeInformativeParserRuleCall_7_4_0; }
+		public RuleCall getInformativeInformativeParserRuleCall_8_0() { return cInformativeInformativeParserRuleCall_8_0; }
 
 		//privateData+=PrivateData*
-		public Assignment getPrivateDataAssignment_8() { return cPrivateDataAssignment_8; }
+		public Assignment getPrivateDataAssignment_9() { return cPrivateDataAssignment_9; }
 
 		//PrivateData
-		public RuleCall getPrivateDataPrivateDataParserRuleCall_8_0() { return cPrivateDataPrivateDataParserRuleCall_8_0; }
+		public RuleCall getPrivateDataPrivateDataParserRuleCall_9_0() { return cPrivateDataPrivateDataParserRuleCall_9_0; }
 
 		//recipient+=Recipient*
-		public Assignment getRecipientAssignment_9() { return cRecipientAssignment_9; }
+		public Assignment getRecipientAssignment_10() { return cRecipientAssignment_10; }
 
 		//Recipient
-		public RuleCall getRecipientRecipientParserRuleCall_9_0() { return cRecipientRecipientParserRuleCall_9_0; }
+		public RuleCall getRecipientRecipientParserRuleCall_10_0() { return cRecipientRecipientParserRuleCall_10_0; }
 
 		//service+=Service*
-		public Assignment getServiceAssignment_10() { return cServiceAssignment_10; }
+		public Assignment getServiceAssignment_11() { return cServiceAssignment_11; }
 
 		//Service
-		public RuleCall getServiceServiceParserRuleCall_10_0() { return cServiceServiceParserRuleCall_10_0; }
+		public RuleCall getServiceServiceParserRuleCall_11_0() { return cServiceServiceParserRuleCall_11_0; }
 
 		//enforcement+=Enforcement*
-		public Assignment getEnforcementAssignment_11() { return cEnforcementAssignment_11; }
+		public Assignment getEnforcementAssignment_12() { return cEnforcementAssignment_12; }
 
 		//Enforcement
-		public RuleCall getEnforcementEnforcementParserRuleCall_11_0() { return cEnforcementEnforcementParserRuleCall_11_0; }
+		public RuleCall getEnforcementEnforcementParserRuleCall_12_0() { return cEnforcementEnforcementParserRuleCall_12_0; }
+
+		//"};"
+		public Keyword getRightCurlyBracketSemicolonKeyword_13() { return cRightCurlyBracketSemicolonKeyword_13; }
+	}
+
+	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QualifiedName");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//QualifiedName:
+		//	ID ("." ID)*;
+		@Override public ParserRule getRule() { return rule; }
+
+		//ID ("." ID)*
+		public Group getGroup() { return cGroup; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+
+		//("." ID)*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"."
+		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
+	}
+
+	public class ImportElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Import");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cImportKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cImportedNamespaceAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_0 = (RuleCall)cImportedNamespaceAssignment_1.eContents().get(0);
+		
+		//Import:
+		//	"import" importedNamespace=QualifiedNameWithWildcard;
+		@Override public ParserRule getRule() { return rule; }
+
+		//"import" importedNamespace=QualifiedNameWithWildcard
+		public Group getGroup() { return cGroup; }
+
+		//"import"
+		public Keyword getImportKeyword_0() { return cImportKeyword_0; }
+
+		//importedNamespace=QualifiedNameWithWildcard
+		public Assignment getImportedNamespaceAssignment_1() { return cImportedNamespaceAssignment_1; }
+
+		//QualifiedNameWithWildcard
+		public RuleCall getImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_0() { return cImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_0; }
+	}
+
+	public class QualifiedNameWithWildcardElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QualifiedNameWithWildcard");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cQualifiedNameParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Keyword cFullStopAsteriskKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		
+		//QualifiedNameWithWildcard:
+		//	QualifiedName ".*"?;
+		@Override public ParserRule getRule() { return rule; }
+
+		//QualifiedName ".*"?
+		public Group getGroup() { return cGroup; }
+
+		//QualifiedName
+		public RuleCall getQualifiedNameParserRuleCall_0() { return cQualifiedNameParserRuleCall_0; }
+
+		//".*"?
+		public Keyword getFullStopAsteriskKeyword_1() { return cFullStopAsteriskKeyword_1; }
 	}
 
 	public class EnforcementElements extends AbstractParserRuleElementFinder {
@@ -709,22 +711,22 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cModalityKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Assignment cModalitykindAssignment_14 = (Assignment)cGroup.eContents().get(14);
 		private final Alternatives cModalitykindAlternatives_14_0 = (Alternatives)cModalitykindAssignment_14.eContents().get(0);
-		private final Keyword cModalitykindPermissionKeyword_14_0_0 = (Keyword)cModalitykindAlternatives_14_0.eContents().get(0);
+		private final Keyword cModalitykindPermittedKeyword_14_0_0 = (Keyword)cModalitykindAlternatives_14_0.eContents().get(0);
 		private final Keyword cModalitykindObligationKeyword_14_0_1 = (Keyword)cModalitykindAlternatives_14_0.eContents().get(1);
-		private final Keyword cModalitykindProhibitionKeyword_14_0_2 = (Keyword)cModalitykindAlternatives_14_0.eContents().get(2);
+		private final Keyword cModalitykindForbiddenKeyword_14_0_2 = (Keyword)cModalitykindAlternatives_14_0.eContents().get(2);
 		private final Keyword cRightCurlyBracketSemicolonKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		
 		//Collection:
 		//	"Collection" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Collection"
 		//	partof=[Collection] ",")? ("RefersTo PrivateData" refprivatedata+=RefPrivateData* ",")? ("RefersTo Service"
 		//	refertoservice+=ReferToService* ",")? ("RefersTo Enforcement" refertoEnforcement+=RefertoEnforcement* ",")?
-		//	"Modality" modalitykind=("Permission" | "Obligation" | "Prohibition") "};";
+		//	"Modality" modalitykind=("Permitted" | "Obligation" | "Forbidden") "};";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"Collection" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Collection"
 		//partof=[Collection] ",")? ("RefersTo PrivateData" refprivatedata+=RefPrivateData* ",")? ("RefersTo Service"
 		//refertoservice+=ReferToService* ",")? ("RefersTo Enforcement" refertoEnforcement+=RefertoEnforcement* ",")? "Modality"
-		//modalitykind=("Permission" | "Obligation" | "Prohibition") "};"
+		//modalitykind=("Permitted" | "Obligation" | "Forbidden") "};"
 		public Group getGroup() { return cGroup; }
 
 		//"Collection"
@@ -829,20 +831,20 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"Modality"
 		public Keyword getModalityKeyword_13() { return cModalityKeyword_13; }
 
-		//modalitykind=("Permission" | "Obligation" | "Prohibition")
+		//modalitykind=("Permitted" | "Obligation" | "Forbidden")
 		public Assignment getModalitykindAssignment_14() { return cModalitykindAssignment_14; }
 
-		//"Permission" | "Obligation" | "Prohibition"
+		//"Permitted" | "Obligation" | "Forbidden"
 		public Alternatives getModalitykindAlternatives_14_0() { return cModalitykindAlternatives_14_0; }
 
-		//"Permission"
-		public Keyword getModalitykindPermissionKeyword_14_0_0() { return cModalitykindPermissionKeyword_14_0_0; }
+		//"Permitted"
+		public Keyword getModalitykindPermittedKeyword_14_0_0() { return cModalitykindPermittedKeyword_14_0_0; }
 
 		//"Obligation"
 		public Keyword getModalitykindObligationKeyword_14_0_1() { return cModalitykindObligationKeyword_14_0_1; }
 
-		//"Prohibition"
-		public Keyword getModalitykindProhibitionKeyword_14_0_2() { return cModalitykindProhibitionKeyword_14_0_2; }
+		//"Forbidden"
+		public Keyword getModalitykindForbiddenKeyword_14_0_2() { return cModalitykindForbiddenKeyword_14_0_2; }
 
 		//"};"
 		public Keyword getRightCurlyBracketSemicolonKeyword_15() { return cRightCurlyBracketSemicolonKeyword_15; }
@@ -902,9 +904,9 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cModalityKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		private final Assignment cModalitykindAssignment_17 = (Assignment)cGroup.eContents().get(17);
 		private final Alternatives cModalitykindAlternatives_17_0 = (Alternatives)cModalitykindAssignment_17.eContents().get(0);
-		private final Keyword cModalitykindPermissionKeyword_17_0_0 = (Keyword)cModalitykindAlternatives_17_0.eContents().get(0);
+		private final Keyword cModalitykindPermittedKeyword_17_0_0 = (Keyword)cModalitykindAlternatives_17_0.eContents().get(0);
 		private final Keyword cModalitykindObligationKeyword_17_0_1 = (Keyword)cModalitykindAlternatives_17_0.eContents().get(1);
-		private final Keyword cModalitykindProhibitionKeyword_17_0_2 = (Keyword)cModalitykindAlternatives_17_0.eContents().get(2);
+		private final Keyword cModalitykindForbiddenKeyword_17_0_2 = (Keyword)cModalitykindAlternatives_17_0.eContents().get(2);
 		private final Keyword cRightCurlyBracketSemicolonKeyword_18 = (Keyword)cGroup.eContents().get(18);
 		
 		//Disclosure:
@@ -913,7 +915,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	("RefersTo Recipient-Source" referToRecipientsource+=ReferToRecipientSource* ",")? ("RefersTo Recipient-Target"
 		//	referToRecipienttarget+=ReferToRecipientTarget* ",")? ("RefersTo PrivateData" refprivatedata+=RefPrivateData* ",")?
 		//	("RefersTo Service" refertoservice+=ReferToService* ",")? ("RefersTo Enforcement"
-		//	refertoEnforcement+=RefertoEnforcement* ",")? "Modality" modalitykind=("Permission" | "Obligation" | "Prohibition")
+		//	refertoEnforcement+=RefertoEnforcement* ",")? "Modality" modalitykind=("Permitted" | "Obligation" | "Forbidden")
 		//	"};";
 		@Override public ParserRule getRule() { return rule; }
 
@@ -922,8 +924,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//referToRecipientsource+=ReferToRecipientSource* ",")? ("RefersTo Recipient-Target"
 		//referToRecipienttarget+=ReferToRecipientTarget* ",")? ("RefersTo PrivateData" refprivatedata+=RefPrivateData* ",")?
 		//("RefersTo Service" refertoservice+=ReferToService* ",")? ("RefersTo Enforcement"
-		//refertoEnforcement+=RefertoEnforcement* ",")? "Modality" modalitykind=("Permission" | "Obligation" | "Prohibition")
-		//"};"
+		//refertoEnforcement+=RefertoEnforcement* ",")? "Modality" modalitykind=("Permitted" | "Obligation" | "Forbidden") "};"
 		public Group getGroup() { return cGroup; }
 
 		//"Disclosure"
@@ -1073,20 +1074,20 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"Modality"
 		public Keyword getModalityKeyword_16() { return cModalityKeyword_16; }
 
-		//modalitykind=("Permission" | "Obligation" | "Prohibition")
+		//modalitykind=("Permitted" | "Obligation" | "Forbidden")
 		public Assignment getModalitykindAssignment_17() { return cModalitykindAssignment_17; }
 
-		//"Permission" | "Obligation" | "Prohibition"
+		//"Permitted" | "Obligation" | "Forbidden"
 		public Alternatives getModalitykindAlternatives_17_0() { return cModalitykindAlternatives_17_0; }
 
-		//"Permission"
-		public Keyword getModalitykindPermissionKeyword_17_0_0() { return cModalitykindPermissionKeyword_17_0_0; }
+		//"Permitted"
+		public Keyword getModalitykindPermittedKeyword_17_0_0() { return cModalitykindPermittedKeyword_17_0_0; }
 
 		//"Obligation"
 		public Keyword getModalitykindObligationKeyword_17_0_1() { return cModalitykindObligationKeyword_17_0_1; }
 
-		//"Prohibition"
-		public Keyword getModalitykindProhibitionKeyword_17_0_2() { return cModalitykindProhibitionKeyword_17_0_2; }
+		//"Forbidden"
+		public Keyword getModalitykindForbiddenKeyword_17_0_2() { return cModalitykindForbiddenKeyword_17_0_2; }
 
 		//"};"
 		public Keyword getRightCurlyBracketSemicolonKeyword_18() { return cRightCurlyBracketSemicolonKeyword_18; }
@@ -1135,24 +1136,23 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cModalityKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		private final Assignment cModalitykindAssignment_17 = (Assignment)cGroup.eContents().get(17);
 		private final Alternatives cModalitykindAlternatives_17_0 = (Alternatives)cModalitykindAssignment_17.eContents().get(0);
-		private final Keyword cModalitykindPermissionKeyword_17_0_0 = (Keyword)cModalitykindAlternatives_17_0.eContents().get(0);
+		private final Keyword cModalitykindPermittedKeyword_17_0_0 = (Keyword)cModalitykindAlternatives_17_0.eContents().get(0);
 		private final Keyword cModalitykindObligationKeyword_17_0_1 = (Keyword)cModalitykindAlternatives_17_0.eContents().get(1);
-		private final Keyword cModalitykindProhibitionKeyword_17_0_2 = (Keyword)cModalitykindAlternatives_17_0.eContents().get(2);
+		private final Keyword cModalitykindForbiddenKeyword_17_0_2 = (Keyword)cModalitykindAlternatives_17_0.eContents().get(2);
 		private final Keyword cRightCurlyBracketSemicolonKeyword_18 = (Keyword)cGroup.eContents().get(18);
 		
 		//Retention:
 		//	"Retention" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Retention"
 		//	partof=[Retention] ",")? "Period" period=STRING "," ("RefersTo PrivateData" refprivatedata+=RefPrivateData* ",")?
 		//	("RefersTo Service" refertoservice+=ReferToService* ",")? ("RefersTo Enforcement"
-		//	refertoEnforcement+=RefertoEnforcement* ",")? "Modality" modalitykind=("Permission" | "Obligation" | "Prohibition")
+		//	refertoEnforcement+=RefertoEnforcement* ",")? "Modality" modalitykind=("Permitted" | "Obligation" | "Forbidden")
 		//	"};";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"Retention" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Retention"
 		//partof=[Retention] ",")? "Period" period=STRING "," ("RefersTo PrivateData" refprivatedata+=RefPrivateData* ",")?
 		//("RefersTo Service" refertoservice+=ReferToService* ",")? ("RefersTo Enforcement"
-		//refertoEnforcement+=RefertoEnforcement* ",")? "Modality" modalitykind=("Permission" | "Obligation" | "Prohibition")
-		//"};"
+		//refertoEnforcement+=RefertoEnforcement* ",")? "Modality" modalitykind=("Permitted" | "Obligation" | "Forbidden") "};"
 		public Group getGroup() { return cGroup; }
 
 		//"Retention"
@@ -1269,20 +1269,20 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"Modality"
 		public Keyword getModalityKeyword_16() { return cModalityKeyword_16; }
 
-		//modalitykind=("Permission" | "Obligation" | "Prohibition")
+		//modalitykind=("Permitted" | "Obligation" | "Forbidden")
 		public Assignment getModalitykindAssignment_17() { return cModalitykindAssignment_17; }
 
-		//"Permission" | "Obligation" | "Prohibition"
+		//"Permitted" | "Obligation" | "Forbidden"
 		public Alternatives getModalitykindAlternatives_17_0() { return cModalitykindAlternatives_17_0; }
 
-		//"Permission"
-		public Keyword getModalitykindPermissionKeyword_17_0_0() { return cModalitykindPermissionKeyword_17_0_0; }
+		//"Permitted"
+		public Keyword getModalitykindPermittedKeyword_17_0_0() { return cModalitykindPermittedKeyword_17_0_0; }
 
 		//"Obligation"
 		public Keyword getModalitykindObligationKeyword_17_0_1() { return cModalitykindObligationKeyword_17_0_1; }
 
-		//"Prohibition"
-		public Keyword getModalitykindProhibitionKeyword_17_0_2() { return cModalitykindProhibitionKeyword_17_0_2; }
+		//"Forbidden"
+		public Keyword getModalitykindForbiddenKeyword_17_0_2() { return cModalitykindForbiddenKeyword_17_0_2; }
 
 		//"};"
 		public Keyword getRightCurlyBracketSemicolonKeyword_18() { return cRightCurlyBracketSemicolonKeyword_18; }
@@ -1327,22 +1327,22 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cModalityKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Assignment cModalitykindAssignment_14 = (Assignment)cGroup.eContents().get(14);
 		private final Alternatives cModalitykindAlternatives_14_0 = (Alternatives)cModalitykindAssignment_14.eContents().get(0);
-		private final Keyword cModalitykindPermissionKeyword_14_0_0 = (Keyword)cModalitykindAlternatives_14_0.eContents().get(0);
+		private final Keyword cModalitykindPermittedKeyword_14_0_0 = (Keyword)cModalitykindAlternatives_14_0.eContents().get(0);
 		private final Keyword cModalitykindObligationKeyword_14_0_1 = (Keyword)cModalitykindAlternatives_14_0.eContents().get(1);
-		private final Keyword cModalitykindProhibitionKeyword_14_0_2 = (Keyword)cModalitykindAlternatives_14_0.eContents().get(2);
+		private final Keyword cModalitykindForbiddenKeyword_14_0_2 = (Keyword)cModalitykindAlternatives_14_0.eContents().get(2);
 		private final Keyword cRightCurlyBracketSemicolonKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		
 		//Usage:
 		//	"Usage" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Usage"
 		//	partof=[Usage] ",")? ("RefersTo PrivateData" refprivatedata+=RefPrivateData* ",")? ("RefersTo Service"
 		//	refertoservice+=ReferToService* ",")? ("RefersTo Enforcement" refertoEnforcement+=RefertoEnforcement* ",")?
-		//	"Modality" modalitykind=("Permission" | "Obligation" | "Prohibition") "};";
+		//	"Modality" modalitykind=("Permitted" | "Obligation" | "Forbidden") "};";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"Usage" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Usage" partof=[Usage]
 		//",")? ("RefersTo PrivateData" refprivatedata+=RefPrivateData* ",")? ("RefersTo Service"
 		//refertoservice+=ReferToService* ",")? ("RefersTo Enforcement" refertoEnforcement+=RefertoEnforcement* ",")? "Modality"
-		//modalitykind=("Permission" | "Obligation" | "Prohibition") "};"
+		//modalitykind=("Permitted" | "Obligation" | "Forbidden") "};"
 		public Group getGroup() { return cGroup; }
 
 		//"Usage"
@@ -1447,20 +1447,20 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"Modality"
 		public Keyword getModalityKeyword_13() { return cModalityKeyword_13; }
 
-		//modalitykind=("Permission" | "Obligation" | "Prohibition")
+		//modalitykind=("Permitted" | "Obligation" | "Forbidden")
 		public Assignment getModalitykindAssignment_14() { return cModalitykindAssignment_14; }
 
-		//"Permission" | "Obligation" | "Prohibition"
+		//"Permitted" | "Obligation" | "Forbidden"
 		public Alternatives getModalitykindAlternatives_14_0() { return cModalitykindAlternatives_14_0; }
 
-		//"Permission"
-		public Keyword getModalitykindPermissionKeyword_14_0_0() { return cModalitykindPermissionKeyword_14_0_0; }
+		//"Permitted"
+		public Keyword getModalitykindPermittedKeyword_14_0_0() { return cModalitykindPermittedKeyword_14_0_0; }
 
 		//"Obligation"
 		public Keyword getModalitykindObligationKeyword_14_0_1() { return cModalitykindObligationKeyword_14_0_1; }
 
-		//"Prohibition"
-		public Keyword getModalitykindProhibitionKeyword_14_0_2() { return cModalitykindProhibitionKeyword_14_0_2; }
+		//"Forbidden"
+		public Keyword getModalitykindForbiddenKeyword_14_0_2() { return cModalitykindForbiddenKeyword_14_0_2; }
 
 		//"};"
 		public Keyword getRightCurlyBracketSemicolonKeyword_15() { return cRightCurlyBracketSemicolonKeyword_15; }
@@ -1505,22 +1505,22 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cModalityKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Assignment cModalitykindAssignment_14 = (Assignment)cGroup.eContents().get(14);
 		private final Alternatives cModalitykindAlternatives_14_0 = (Alternatives)cModalitykindAssignment_14.eContents().get(0);
-		private final Keyword cModalitykindPermissionKeyword_14_0_0 = (Keyword)cModalitykindAlternatives_14_0.eContents().get(0);
+		private final Keyword cModalitykindPermittedKeyword_14_0_0 = (Keyword)cModalitykindAlternatives_14_0.eContents().get(0);
 		private final Keyword cModalitykindObligationKeyword_14_0_1 = (Keyword)cModalitykindAlternatives_14_0.eContents().get(1);
-		private final Keyword cModalitykindProhibitionKeyword_14_0_2 = (Keyword)cModalitykindAlternatives_14_0.eContents().get(2);
+		private final Keyword cModalitykindForbiddenKeyword_14_0_2 = (Keyword)cModalitykindAlternatives_14_0.eContents().get(2);
 		private final Keyword cRightCurlyBracketSemicolonKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		
 		//Informative:
 		//	"Informative" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Informative"
 		//	partof=[Informative] ",")? ("RefersTo PrivateData" refprivatedata+=RefPrivateData* ",")? ("RefersTo Service"
 		//	refertoservice+=ReferToService* ",")? ("RefersTo Enforcement" refertoEnforcement+=RefertoEnforcement* ",")?
-		//	"Modality" modalitykind=("Permission" | "Obligation" | "Prohibition") "};";
+		//	"Modality" modalitykind=("Permitted" | "Obligation" | "Forbidden") "};";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"Informative" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Informative"
 		//partof=[Informative] ",")? ("RefersTo PrivateData" refprivatedata+=RefPrivateData* ",")? ("RefersTo Service"
 		//refertoservice+=ReferToService* ",")? ("RefersTo Enforcement" refertoEnforcement+=RefertoEnforcement* ",")? "Modality"
-		//modalitykind=("Permission" | "Obligation" | "Prohibition") "};"
+		//modalitykind=("Permitted" | "Obligation" | "Forbidden") "};"
 		public Group getGroup() { return cGroup; }
 
 		//"Informative"
@@ -1625,20 +1625,20 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"Modality"
 		public Keyword getModalityKeyword_13() { return cModalityKeyword_13; }
 
-		//modalitykind=("Permission" | "Obligation" | "Prohibition")
+		//modalitykind=("Permitted" | "Obligation" | "Forbidden")
 		public Assignment getModalitykindAssignment_14() { return cModalitykindAssignment_14; }
 
-		//"Permission" | "Obligation" | "Prohibition"
+		//"Permitted" | "Obligation" | "Forbidden"
 		public Alternatives getModalitykindAlternatives_14_0() { return cModalitykindAlternatives_14_0; }
 
-		//"Permission"
-		public Keyword getModalitykindPermissionKeyword_14_0_0() { return cModalitykindPermissionKeyword_14_0_0; }
+		//"Permitted"
+		public Keyword getModalitykindPermittedKeyword_14_0_0() { return cModalitykindPermittedKeyword_14_0_0; }
 
 		//"Obligation"
 		public Keyword getModalitykindObligationKeyword_14_0_1() { return cModalitykindObligationKeyword_14_0_1; }
 
-		//"Prohibition"
-		public Keyword getModalitykindProhibitionKeyword_14_0_2() { return cModalitykindProhibitionKeyword_14_0_2; }
+		//"Forbidden"
+		public Keyword getModalitykindForbiddenKeyword_14_0_2() { return cModalitykindForbiddenKeyword_14_0_2; }
 
 		//"};"
 		public Keyword getRightCurlyBracketSemicolonKeyword_15() { return cRightCurlyBracketSemicolonKeyword_15; }
@@ -1870,6 +1870,9 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	private final PolicyElements pPolicy;
+	private final QualifiedNameElements pQualifiedName;
+	private final ImportElements pImport;
+	private final QualifiedNameWithWildcardElements pQualifiedNameWithWildcard;
 	private final EnforcementElements pEnforcement;
 	private final ServiceElements pService;
 	private final RecipientElements pRecipient;
@@ -1899,6 +1902,9 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pPolicy = new PolicyElements();
+		this.pQualifiedName = new QualifiedNameElements();
+		this.pImport = new ImportElements();
+		this.pQualifiedNameWithWildcard = new QualifiedNameWithWildcardElements();
 		this.pEnforcement = new EnforcementElements();
 		this.pService = new ServiceElements();
 		this.pRecipient = new RecipientElements();
@@ -1947,16 +1953,45 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Policy:
-	//	"PrivacyPolicy" name=STRING "Last revised:" Day=INT Month=("Jan" | "Feb" | "Mar" | "Apr" | "May" | "Jun" | "Jul" |
-	//	"Aug" | "Sep" | "Oct" | "Nov" | "Dec") Year=INT ";" (collection+=Collection | disclosure+=Disclosure |
-	//	retention+=Retention | usage+=Usage | informative+=Informative)* privateData+=PrivateData* recipient+=Recipient*
-	//	service+=Service* enforcement+=Enforcement*;
+	//	"Package" name=QualifiedName "{" importelements+=Import* collection+=Collection* disclosure+=Disclosure*
+	//	retention+=Retention* usage+=Usage* informative+=Informative* privateData+=PrivateData* recipient+=Recipient*
+	//	service+=Service* enforcement+=Enforcement* "};";
 	public PolicyElements getPolicyAccess() {
 		return pPolicy;
 	}
 	
 	public ParserRule getPolicyRule() {
 		return getPolicyAccess().getRule();
+	}
+
+	//QualifiedName:
+	//	ID ("." ID)*;
+	public QualifiedNameElements getQualifiedNameAccess() {
+		return pQualifiedName;
+	}
+	
+	public ParserRule getQualifiedNameRule() {
+		return getQualifiedNameAccess().getRule();
+	}
+
+	//Import:
+	//	"import" importedNamespace=QualifiedNameWithWildcard;
+	public ImportElements getImportAccess() {
+		return pImport;
+	}
+	
+	public ParserRule getImportRule() {
+		return getImportAccess().getRule();
+	}
+
+	//QualifiedNameWithWildcard:
+	//	QualifiedName ".*"?;
+	public QualifiedNameWithWildcardElements getQualifiedNameWithWildcardAccess() {
+		return pQualifiedNameWithWildcard;
+	}
+	
+	public ParserRule getQualifiedNameWithWildcardRule() {
+		return getQualifiedNameWithWildcardAccess().getRule();
 	}
 
 	//Enforcement:
@@ -2018,7 +2053,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	"Collection" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Collection"
 	//	partof=[Collection] ",")? ("RefersTo PrivateData" refprivatedata+=RefPrivateData* ",")? ("RefersTo Service"
 	//	refertoservice+=ReferToService* ",")? ("RefersTo Enforcement" refertoEnforcement+=RefertoEnforcement* ",")?
-	//	"Modality" modalitykind=("Permission" | "Obligation" | "Prohibition") "};";
+	//	"Modality" modalitykind=("Permitted" | "Obligation" | "Forbidden") "};";
 	public CollectionElements getCollectionAccess() {
 		return pCollection;
 	}
@@ -2033,7 +2068,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	("RefersTo Recipient-Source" referToRecipientsource+=ReferToRecipientSource* ",")? ("RefersTo Recipient-Target"
 	//	referToRecipienttarget+=ReferToRecipientTarget* ",")? ("RefersTo PrivateData" refprivatedata+=RefPrivateData* ",")?
 	//	("RefersTo Service" refertoservice+=ReferToService* ",")? ("RefersTo Enforcement"
-	//	refertoEnforcement+=RefertoEnforcement* ",")? "Modality" modalitykind=("Permission" | "Obligation" | "Prohibition")
+	//	refertoEnforcement+=RefertoEnforcement* ",")? "Modality" modalitykind=("Permitted" | "Obligation" | "Forbidden")
 	//	"};";
 	public DisclosureElements getDisclosureAccess() {
 		return pDisclosure;
@@ -2047,7 +2082,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	"Retention" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Retention"
 	//	partof=[Retention] ",")? "Period" period=STRING "," ("RefersTo PrivateData" refprivatedata+=RefPrivateData* ",")?
 	//	("RefersTo Service" refertoservice+=ReferToService* ",")? ("RefersTo Enforcement"
-	//	refertoEnforcement+=RefertoEnforcement* ",")? "Modality" modalitykind=("Permission" | "Obligation" | "Prohibition")
+	//	refertoEnforcement+=RefertoEnforcement* ",")? "Modality" modalitykind=("Permitted" | "Obligation" | "Forbidden")
 	//	"};";
 	public RetentionElements getRetentionAccess() {
 		return pRetention;
@@ -2061,7 +2096,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	"Usage" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Usage"
 	//	partof=[Usage] ",")? ("RefersTo PrivateData" refprivatedata+=RefPrivateData* ",")? ("RefersTo Service"
 	//	refertoservice+=ReferToService* ",")? ("RefersTo Enforcement" refertoEnforcement+=RefertoEnforcement* ",")?
-	//	"Modality" modalitykind=("Permission" | "Obligation" | "Prohibition") "};";
+	//	"Modality" modalitykind=("Permitted" | "Obligation" | "Forbidden") "};";
 	public UsageElements getUsageAccess() {
 		return pUsage;
 	}
@@ -2074,7 +2109,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	"Informative" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Informative"
 	//	partof=[Informative] ",")? ("RefersTo PrivateData" refprivatedata+=RefPrivateData* ",")? ("RefersTo Service"
 	//	refertoservice+=ReferToService* ",")? ("RefersTo Enforcement" refertoEnforcement+=RefertoEnforcement* ",")?
-	//	"Modality" modalitykind=("Permission" | "Obligation" | "Prohibition") "};";
+	//	"Modality" modalitykind=("Permitted" | "Obligation" | "Forbidden") "};";
 	public InformativeElements getInformativeAccess() {
 		return pInformative;
 	}

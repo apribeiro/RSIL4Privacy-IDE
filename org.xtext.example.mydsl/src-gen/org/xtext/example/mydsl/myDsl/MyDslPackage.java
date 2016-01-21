@@ -76,31 +76,13 @@ public interface MyDslPackage extends EPackage
   int POLICY__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Day</b></em>' attribute.
+   * The feature id for the '<em><b>Importelements</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int POLICY__DAY = 1;
-
-  /**
-   * The feature id for the '<em><b>Month</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POLICY__MONTH = 2;
-
-  /**
-   * The feature id for the '<em><b>Year</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POLICY__YEAR = 3;
+  int POLICY__IMPORTELEMENTS = 1;
 
   /**
    * The feature id for the '<em><b>Collection</b></em>' containment reference list.
@@ -109,7 +91,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY__COLLECTION = 4;
+  int POLICY__COLLECTION = 2;
 
   /**
    * The feature id for the '<em><b>Disclosure</b></em>' containment reference list.
@@ -118,7 +100,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY__DISCLOSURE = 5;
+  int POLICY__DISCLOSURE = 3;
 
   /**
    * The feature id for the '<em><b>Retention</b></em>' containment reference list.
@@ -127,7 +109,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY__RETENTION = 6;
+  int POLICY__RETENTION = 4;
 
   /**
    * The feature id for the '<em><b>Usage</b></em>' containment reference list.
@@ -136,7 +118,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY__USAGE = 7;
+  int POLICY__USAGE = 5;
 
   /**
    * The feature id for the '<em><b>Informative</b></em>' containment reference list.
@@ -145,7 +127,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY__INFORMATIVE = 8;
+  int POLICY__INFORMATIVE = 6;
 
   /**
    * The feature id for the '<em><b>Private Data</b></em>' containment reference list.
@@ -154,7 +136,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY__PRIVATE_DATA = 9;
+  int POLICY__PRIVATE_DATA = 7;
 
   /**
    * The feature id for the '<em><b>Recipient</b></em>' containment reference list.
@@ -163,7 +145,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY__RECIPIENT = 10;
+  int POLICY__RECIPIENT = 8;
 
   /**
    * The feature id for the '<em><b>Service</b></em>' containment reference list.
@@ -172,7 +154,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY__SERVICE = 11;
+  int POLICY__SERVICE = 9;
 
   /**
    * The feature id for the '<em><b>Enforcement</b></em>' containment reference list.
@@ -181,7 +163,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY__ENFORCEMENT = 12;
+  int POLICY__ENFORCEMENT = 10;
 
   /**
    * The number of structural features of the '<em>Policy</em>' class.
@@ -190,7 +172,35 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY_FEATURE_COUNT = 13;
+  int POLICY_FEATURE_COUNT = 11;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.ImportImpl <em>Import</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myDsl.impl.ImportImpl
+   * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getImport()
+   * @generated
+   */
+  int IMPORT = 1;
+
+  /**
+   * The feature id for the '<em><b>Imported Namespace</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMPORT__IMPORTED_NAMESPACE = 0;
+
+  /**
+   * The number of structural features of the '<em>Import</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMPORT_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.EnforcementImpl <em>Enforcement</em>}' class.
@@ -200,7 +210,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getEnforcement()
    * @generated
    */
-  int ENFORCEMENT = 1;
+  int ENFORCEMENT = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -255,7 +265,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getService()
    * @generated
    */
-  int SERVICE = 2;
+  int SERVICE = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -319,7 +329,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getRecipient()
    * @generated
    */
-  int RECIPIENT = 3;
+  int RECIPIENT = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -392,7 +402,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getPrivateData()
    * @generated
    */
-  int PRIVATE_DATA = 4;
+  int PRIVATE_DATA = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -447,7 +457,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getAttribute()
    * @generated
    */
-  int ATTRIBUTE = 5;
+  int ATTRIBUTE = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -484,7 +494,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getCollection()
    * @generated
    */
-  int COLLECTION = 6;
+  int COLLECTION = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -575,7 +585,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getDisclosure()
    * @generated
    */
-  int DISCLOSURE = 7;
+  int DISCLOSURE = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -693,7 +703,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getRetention()
    * @generated
    */
-  int RETENTION = 8;
+  int RETENTION = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -793,7 +803,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getUsage()
    * @generated
    */
-  int USAGE = 9;
+  int USAGE = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -884,7 +894,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getInformative()
    * @generated
    */
-  int INFORMATIVE = 10;
+  int INFORMATIVE = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -975,7 +985,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getPartof()
    * @generated
    */
-  int PARTOF = 11;
+  int PARTOF = 12;
 
   /**
    * The feature id for the '<em><b>Partof</b></em>' reference.
@@ -1003,7 +1013,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getReferToRecipient()
    * @generated
    */
-  int REFER_TO_RECIPIENT = 12;
+  int REFER_TO_RECIPIENT = 13;
 
   /**
    * The feature id for the '<em><b>Refertore</b></em>' reference.
@@ -1031,7 +1041,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getReferToRecipientSource()
    * @generated
    */
-  int REFER_TO_RECIPIENT_SOURCE = 13;
+  int REFER_TO_RECIPIENT_SOURCE = 14;
 
   /**
    * The feature id for the '<em><b>Refertore</b></em>' reference.
@@ -1059,7 +1069,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getReferToRecipientTarget()
    * @generated
    */
-  int REFER_TO_RECIPIENT_TARGET = 14;
+  int REFER_TO_RECIPIENT_TARGET = 15;
 
   /**
    * The feature id for the '<em><b>Refertore</b></em>' reference.
@@ -1087,7 +1097,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getReferToService()
    * @generated
    */
-  int REFER_TO_SERVICE = 15;
+  int REFER_TO_SERVICE = 16;
 
   /**
    * The feature id for the '<em><b>Refertose</b></em>' reference.
@@ -1115,7 +1125,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getServicePartof()
    * @generated
    */
-  int SERVICE_PARTOF = 16;
+  int SERVICE_PARTOF = 17;
 
   /**
    * The feature id for the '<em><b>Refertoservice</b></em>' reference.
@@ -1143,7 +1153,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getRefPrivateData()
    * @generated
    */
-  int REF_PRIVATE_DATA = 17;
+  int REF_PRIVATE_DATA = 18;
 
   /**
    * The feature id for the '<em><b>Refpr</b></em>' reference.
@@ -1171,7 +1181,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getRefertoEnforcement()
    * @generated
    */
-  int REFERTO_ENFORCEMENT = 18;
+  int REFERTO_ENFORCEMENT = 19;
 
   /**
    * The feature id for the '<em><b>Refst</b></em>' reference.
@@ -1214,37 +1224,15 @@ public interface MyDslPackage extends EPackage
   EAttribute getPolicy_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Policy#getDay <em>Day</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.myDsl.Policy#getImportelements <em>Importelements</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Day</em>'.
-   * @see org.xtext.example.mydsl.myDsl.Policy#getDay()
+   * @return the meta object for the containment reference list '<em>Importelements</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Policy#getImportelements()
    * @see #getPolicy()
    * @generated
    */
-  EAttribute getPolicy_Day();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Policy#getMonth <em>Month</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Month</em>'.
-   * @see org.xtext.example.mydsl.myDsl.Policy#getMonth()
-   * @see #getPolicy()
-   * @generated
-   */
-  EAttribute getPolicy_Month();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Policy#getYear <em>Year</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Year</em>'.
-   * @see org.xtext.example.mydsl.myDsl.Policy#getYear()
-   * @see #getPolicy()
-   * @generated
-   */
-  EAttribute getPolicy_Year();
+  EReference getPolicy_Importelements();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.myDsl.Policy#getCollection <em>Collection</em>}'.
@@ -1344,6 +1332,27 @@ public interface MyDslPackage extends EPackage
    * @generated
    */
   EReference getPolicy_Enforcement();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Import <em>Import</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Import</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Import
+   * @generated
+   */
+  EClass getImport();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Import#getImportedNamespace <em>Imported Namespace</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Imported Namespace</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Import#getImportedNamespace()
+   * @see #getImport()
+   * @generated
+   */
+  EAttribute getImport_ImportedNamespace();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Enforcement <em>Enforcement</em>}'.
@@ -2370,28 +2379,12 @@ public interface MyDslPackage extends EPackage
     EAttribute POLICY__NAME = eINSTANCE.getPolicy_Name();
 
     /**
-     * The meta object literal for the '<em><b>Day</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Importelements</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute POLICY__DAY = eINSTANCE.getPolicy_Day();
-
-    /**
-     * The meta object literal for the '<em><b>Month</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute POLICY__MONTH = eINSTANCE.getPolicy_Month();
-
-    /**
-     * The meta object literal for the '<em><b>Year</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute POLICY__YEAR = eINSTANCE.getPolicy_Year();
+    EReference POLICY__IMPORTELEMENTS = eINSTANCE.getPolicy_Importelements();
 
     /**
      * The meta object literal for the '<em><b>Collection</b></em>' containment reference list feature.
@@ -2464,6 +2457,24 @@ public interface MyDslPackage extends EPackage
      * @generated
      */
     EReference POLICY__ENFORCEMENT = eINSTANCE.getPolicy_Enforcement();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.ImportImpl <em>Import</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myDsl.impl.ImportImpl
+     * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getImport()
+     * @generated
+     */
+    EClass IMPORT = eINSTANCE.getImport();
+
+    /**
+     * The meta object literal for the '<em><b>Imported Namespace</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMPORT__IMPORTED_NAMESPACE = eINSTANCE.getImport_ImportedNamespace();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.EnforcementImpl <em>Enforcement</em>}' class.
