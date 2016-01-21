@@ -13,8 +13,6 @@ import org.xtext.example.mydsl.ui.windows.MenuCommandWindow;
 
 public class JSONHandler extends AbstractHandler {
 
-	@SuppressWarnings("unused")
-	private static final String GEN_FOLDER = "src-gen";
 	private static final String FILE_EXT = ".mydsl";
 	
 	@Override
@@ -25,13 +23,13 @@ public class JSONHandler extends AbstractHandler {
 		if (selection != null) {
 			IStructuredSelection structuredSelection = (IStructuredSelection) selection;
 			IFile file = (IFile) structuredSelection.getFirstElement();
-			generateJson(file.getName());
+			generateJsonFile(file.getName());
 		} else {
 			IWorkbenchWindow workbenchWindow = HandlerUtil.getActiveWorkbenchWindowChecked(event);
 			MenuCommand cmd = new MenuCommand() {
 				@Override
 				public void execute(String file) {
-					generateJson(file);
+					generateJsonFile(file);
 				}
 			};
 			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(), cmd, FILE_EXT);
@@ -41,7 +39,7 @@ public class JSONHandler extends AbstractHandler {
 		return null;
 	}
 
-	private void generateJson(String file) {
+	private void generateJsonFile(String file) {
 		System.out.println(file + ".json generated!");
 		// TODO Generate Json file
 	}

@@ -13,8 +13,6 @@ import org.xtext.example.mydsl.ui.windows.MenuCommandWindow;
 
 public class ExportExcelHandler extends AbstractHandler {
 
-	@SuppressWarnings("unused")
-	private static final String GEN_FOLDER = "src-gen";
 	private static final String FILE_EXT = ".mydsl";
 	
 	@Override
