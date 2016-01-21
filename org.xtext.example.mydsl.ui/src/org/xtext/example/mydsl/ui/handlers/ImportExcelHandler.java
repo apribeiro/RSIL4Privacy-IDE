@@ -1,6 +1,7 @@
 package org.xtext.example.mydsl.ui.handlers;
 
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Iterator;
@@ -28,6 +29,7 @@ import org.eclipse.ui.handlers.HandlerUtil;
 public class ImportExcelHandler extends AbstractHandler {
 
 	private static final String GEN_FOLDER = "src-gen";
+	private static final String DOCS_FOLDER = "docs";
 	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
@@ -47,6 +49,13 @@ public class ImportExcelHandler extends AbstractHandler {
                     srcGenFolder.create(true, true, new NullProgressMonitor());
 	            }
 				
+	            IFolder docsFolder = srcGenFolder.getFolder(DOCS_FOLDER);
+	    		
+	    		if (!docsFolder.exists()) {
+	    			docsFolder.create(true, true, new NullProgressMonitor());
+	            }
+	            
+	            importExcelFile(docsFolder, filePath, dialog.getFileName());
 				generateStatementsFile(srcGenFolder, filePath, dialog.getFileName());
 				generatePrivateDataFile(srcGenFolder, filePath, dialog.getFileName());
 				generateServicesFile(srcGenFolder, filePath, dialog.getFileName());
@@ -58,6 +67,18 @@ public class ImportExcelHandler extends AbstractHandler {
 		}
 		
 		return null;
+	}
+	
+	private void importExcelFile(IFolder docsFolder, String filePath, String fileName)
+			throws Exception {
+		IFile file = docsFolder.getFile(fileName);
+		InputStream source = new FileInputStream(new File(filePath));
+		
+		if (!file.exists()) {
+			file.create(source, IResource.FORCE, null);
+		} else {
+			file.setContents(source, IResource.FORCE, null);
+		}
 	}
 	
 	private void generateStatementsFile(IFolder srcGenFolder, String filePath, String fileName)
@@ -116,13 +137,13 @@ public class ImportExcelHandler extends AbstractHandler {
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("};");
 		
-		IFile fileSt = srcGenFolder.getFile(fileName + ".Statements.mydsl");
+		IFile file = srcGenFolder.getFile(fileName + ".Statements.mydsl");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
-		if (!fileSt.exists()) {
-			fileSt.create(source, IResource.FORCE, null);
+		if (!file.exists()) {
+			file.create(source, IResource.FORCE, null);
 		} else {
-			fileSt.setContents(source, IResource.FORCE, null);
+			file.setContents(source, IResource.FORCE, null);
 		}
 	}
 	
@@ -172,13 +193,13 @@ public class ImportExcelHandler extends AbstractHandler {
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("};");
 		
-		IFile fileSt = srcGenFolder.getFile(fileName + ".PrivateData.mydsl");
+		IFile file = srcGenFolder.getFile(fileName + ".PrivateData.mydsl");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
-		if (!fileSt.exists()) {
-			fileSt.create(source, IResource.FORCE, null);
+		if (!file.exists()) {
+			file.create(source, IResource.FORCE, null);
 		} else {
-			fileSt.setContents(source, IResource.FORCE, null);
+			file.setContents(source, IResource.FORCE, null);
 		}
 	}
 	
@@ -228,13 +249,13 @@ public class ImportExcelHandler extends AbstractHandler {
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("};");
 		
-		IFile fileSt = srcGenFolder.getFile(fileName + ".Services.mydsl");
+		IFile file = srcGenFolder.getFile(fileName + ".Services.mydsl");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
-		if (!fileSt.exists()) {
-			fileSt.create(source, IResource.FORCE, null);
+		if (!file.exists()) {
+			file.create(source, IResource.FORCE, null);
 		} else {
-			fileSt.setContents(source, IResource.FORCE, null);
+			file.setContents(source, IResource.FORCE, null);
 		}
 	}
 	
@@ -282,13 +303,13 @@ public class ImportExcelHandler extends AbstractHandler {
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("};");
 		
-		IFile fileSt = srcGenFolder.getFile(fileName + ".Enforcements.mydsl");
+		IFile file = srcGenFolder.getFile(fileName + ".Enforcements.mydsl");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
-		if (!fileSt.exists()) {
-			fileSt.create(source, IResource.FORCE, null);
+		if (!file.exists()) {
+			file.create(source, IResource.FORCE, null);
 		} else {
-			fileSt.setContents(source, IResource.FORCE, null);
+			file.setContents(source, IResource.FORCE, null);
 		}
 	}
 	
@@ -342,13 +363,13 @@ public class ImportExcelHandler extends AbstractHandler {
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("};");
 		
-		IFile fileSt = srcGenFolder.getFile(fileName + ".Recipients.mydsl");
+		IFile file = srcGenFolder.getFile(fileName + ".Recipients.mydsl");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
-		if (!fileSt.exists()) {
-			fileSt.create(source, IResource.FORCE, null);
+		if (!file.exists()) {
+			file.create(source, IResource.FORCE, null);
 		} else {
-			fileSt.setContents(source, IResource.FORCE, null);
+			file.setContents(source, IResource.FORCE, null);
 		}
 	}
 }
