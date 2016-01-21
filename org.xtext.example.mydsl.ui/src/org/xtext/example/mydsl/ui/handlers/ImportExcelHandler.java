@@ -89,7 +89,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		sb.append("Package " + fileName + ".Statements.RSLingo4Privacy {");
 		sb.append("\n");
 		sb.append("\n");
-		sb.append("import " + fileName + ".PrivateData.RSLingo4Privacy.*");
+		sb.append("import " + fileName + ".Privatedata.RSLingo4Privacy.*");
 		sb.append("\n");
 		sb.append("import " + fileName + ".Services.RSLingo4Privacy.*");
 		sb.append("\n");
@@ -126,6 +126,12 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		sb.append("\n");
 	    		sb.append("\tCondition \"" + condition + "\",");
 	    		sb.append("\n");
+	    		
+	    		if (type.equals("Retention")) {
+	    			sb.append("\tPeriod \"As long as it is necessary\",");
+		    		sb.append("\n");
+				}
+	    		
 	    		sb.append("\tModality " + modality);
 	    		sb.append("\n};");
 	    		sb.append("\n\n");
@@ -152,7 +158,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		StringBuilder sb = new StringBuilder();
 		InputStream inp = new FileInputStream(filePath);
 		Workbook wb = WorkbookFactory.create(inp);
-		sb.append("Package " + fileName + ".PrivateData.RSLingo4Privacy {");
+		sb.append("Package " + fileName + ".Privatedata.RSLingo4Privacy {");
 		sb.append("\n");
 		sb.append("\n");
 		
@@ -193,7 +199,7 @@ public class ImportExcelHandler extends AbstractHandler {
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("};");
 		
-		IFile file = srcGenFolder.getFile(fileName + ".PrivateData.mydsl");
+		IFile file = srcGenFolder.getFile(fileName + ".Privatedata.mydsl");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		if (!file.exists()) {
@@ -211,7 +217,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		sb.append("Package " + fileName + ".Services.RSLingo4Privacy {");
 		sb.append("\n");
 		sb.append("\n");
-		sb.append("import " + fileName + ".PrivateData.RSLingo4Privacy.*");
+		sb.append("import " + fileName + ".Privatedata.RSLingo4Privacy.*");
 		sb.append("\n");
 		sb.append("\n");
 		
@@ -230,12 +236,16 @@ public class ImportExcelHandler extends AbstractHandler {
     				int id = (int) cellId.getNumericCellValue();
         			Cell cellName = row.getCell(1);
     	    		String name = cellName.getStringCellValue();
+    	    		Cell cellDescription = row.getCell(2);
+    	    		String description = cellDescription.getStringCellValue();
     	    		Cell cellPrivateData = row.getCell(4);
     	    		String privateData = cellPrivateData.getStringCellValue();
     	    		
     	    		sb.append("Service S" + id + " {");
     	    		sb.append("\n");
-    	    		sb.append("\tDescription \"" + name + "\",");
+    	    		sb.append("\tName \"" + name + "\",");
+    	    		sb.append("\n");
+    	    		sb.append("\tDescription \"" + description + "\",");
     	    		sb.append("\n");
     	    		sb.append("\tRefersTo PrivateData " + privateData + ",");
     	    		sb.append("\n};");
@@ -351,7 +361,7 @@ public class ImportExcelHandler extends AbstractHandler {
     	    		sb.append("\n");
     	    		sb.append("\tScope " + scope + ",");
     	    		sb.append("\n");
-    	    		sb.append("\tType " + type + ",");
+    	    		sb.append("\tType " + type);
     	    		sb.append("\n};");
     	    		sb.append("\n\n");
 				}
