@@ -351,7 +351,7 @@ public class MyDslGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     {
       String _modalitykind = coll.getModalitykind();
-      boolean _equals = Objects.equal(_modalitykind, "Permission");
+      boolean _equals = Objects.equal(_modalitykind, "Permitted");
       if (_equals) {
         _builder.append("P ");
       } else {
@@ -419,7 +419,7 @@ public class MyDslGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     {
       String _modalitykind = tran.getModalitykind();
-      boolean _equals = Objects.equal(_modalitykind, "Permission");
+      boolean _equals = Objects.equal(_modalitykind, "Permitted");
       if (_equals) {
         _builder.append("P ");
       } else {
@@ -531,7 +531,7 @@ public class MyDslGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     {
       String _modalitykind = ret.getModalitykind();
-      boolean _equals = Objects.equal(_modalitykind, "Permission");
+      boolean _equals = Objects.equal(_modalitykind, "Permitted");
       if (_equals) {
         _builder.append("P ");
       } else {
@@ -599,7 +599,7 @@ public class MyDslGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     {
       String _modalitykind = use.getModalitykind();
-      boolean _equals = Objects.equal(_modalitykind, "Permission");
+      boolean _equals = Objects.equal(_modalitykind, "Permitted");
       if (_equals) {
         _builder.append("P ");
       } else {
@@ -667,7 +667,7 @@ public class MyDslGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     {
       String _modalitykind = inf.getModalitykind();
-      boolean _equals = Objects.equal(_modalitykind, "Permission");
+      boolean _equals = Objects.equal(_modalitykind, "Permitted");
       if (_equals) {
         _builder.append("P ");
       } else {

@@ -83,13 +83,13 @@ def compiledetumat (Attribute pdat)
 '''«pdat.name»'''
  
 def compilecollection(Collection coll)
-'''«IF coll.modalitykind== 'Permission'»P «ELSEIF coll.modalitykind== 'Obligation'»O «ELSE»R «ENDIF»COLLECT «/*
+'''«IF coll.modalitykind== 'Permitted'»P «ELSEIF coll.modalitykind== 'Obligation'»O «ELSE»R «ENDIF»COLLECT «/*
 */»«IF coll.refprivatedata.length== 8»ALL-Information «ELSE»«FOR p:coll.refprivatedata SEPARATOR','»«p.compilep» «ENDFOR»«ENDIF»«/*
 */»«IF !coll.refertoservice.empty»FOR «FOR b:coll.refertoservice SEPARATOR ','»«b.compiles»«ENDFOR»«ELSE»FOR Anything«ENDIF»
 '''
 
 def compiletransfer(Disclosure tran)
-'''«IF tran.modalitykind== 'Permission'»P «ELSEIF tran.modalitykind== 'Obligation'»O «ELSE»R «ENDIF»TRANSFER «/*
+'''«IF tran.modalitykind== 'Permitted'»P «ELSEIF tran.modalitykind== 'Obligation'»O «ELSE»R «ENDIF»TRANSFER «/*
 */»«IF tran.refprivatedata.length== 8»ALL-Information «ELSE»«FOR p:tran.refprivatedata SEPARATOR','»«p.compilep» «ENDFOR»«ENDIF»«/*
 */»«IF !tran.referToRecipientsource.empty»FROM «FOR rs:tran.referToRecipientsource SEPARATOR ','»«rs.compiler»«ENDFOR» «ENDIF»«/*
 */»«IF !tran.referToRecipienttarget.empty»TO «FOR rt:tran.referToRecipienttarget SEPARATOR ','»«rt.compiler»«ENDFOR» «ENDIF»«/*
@@ -97,19 +97,19 @@ def compiletransfer(Disclosure tran)
 '''
  
 def compileretention(Retention ret)
-'''«IF ret.modalitykind== 'Permission'»P «ELSEIF ret.modalitykind== 'Obligation'»O «ELSE»R «ENDIF»RETAIN «/*
+'''«IF ret.modalitykind== 'Permitted'»P «ELSEIF ret.modalitykind== 'Obligation'»O «ELSE»R «ENDIF»RETAIN «/*
 */»«IF ret.refprivatedata.length== 8»ALL-Information «ELSE»«FOR p:ret.refprivatedata SEPARATOR','»«p.compilep» «ENDFOR»«ENDIF»«/*
 */»«IF !ret.refertoservice.empty»FOR «FOR b:ret.refertoservice SEPARATOR ','»«b.compiles»«ENDFOR»«ELSE»FOR Anything«ENDIF»
 '''
  
 def compileusage(Usage use)
-'''«IF use.modalitykind== 'Permission'»P «ELSEIF use.modalitykind== 'Obligation'»O «ELSE»R «ENDIF»USE «/*
+'''«IF use.modalitykind== 'Permitted'»P «ELSEIF use.modalitykind== 'Obligation'»O «ELSE»R «ENDIF»USE «/*
 */»«IF use.refprivatedata.length== 8»ALL-Information «ELSE»«FOR p:use.refprivatedata SEPARATOR','»«p.compilep» «ENDFOR»«ENDIF»«/*
 */»«IF !use.refertoservice.empty»FOR «FOR b:use.refertoservice SEPARATOR ','»«b.compiles»«ENDFOR»«ELSE»FOR Anything«ENDIF»
 '''
  
 def compileinformative(Informative inf)
-'''«IF inf.modalitykind== 'Permission'»P «ELSEIF inf.modalitykind== 'Obligation'»O «ELSE»R «ENDIF»INFORM «/*
+'''«IF inf.modalitykind== 'Permitted'»P «ELSEIF inf.modalitykind== 'Obligation'»O «ELSE»R «ENDIF»INFORM «/*
 */»«IF inf.refprivatedata.length== 8»ALL-Information «FOR p:inf.refprivatedata SEPARATOR','»«p.compilep» «ENDFOR»«ENDIF»«/*
 */»«IF !inf.refertoservice.empty»FOR «FOR b:inf.refertoservice SEPARATOR ','»«b.compiles»«ENDFOR»«ELSE»FOR Anything«ENDIF»
 '''
