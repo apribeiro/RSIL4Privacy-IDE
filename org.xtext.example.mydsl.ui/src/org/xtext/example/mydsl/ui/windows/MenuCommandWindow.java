@@ -24,6 +24,8 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 public class MenuCommandWindow {
 	
 	private static final String FILE_FOLDER = "src";
+	public static final int IMPORT_MODE = 0;
+	public static final int EXPORT_MODE = 1;
 	
 	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
 	
@@ -119,20 +121,24 @@ public class MenuCommandWindow {
 				if (btnRadioButtonAll.getSelection()) {
 					ArrayList<IProject> projects = new ArrayList<IProject>(
 							Arrays.asList(workspace.getProjects())); 
-					findFilesByExtension(projects);
-					menuCommand.execute(projects.size() + " project(s)");
+					ArrayList<String> files = findFilesByExtension(projects);
+					
+					for (String file : files) {
+						menuCommand.execute(file);
+					}
 				} else if (btnRadioButtonSelected.getSelection()) {
 					ArrayList<IProject> projects = new ArrayList<IProject>();
 					
 					for (TableItem item : table_1.getItems()) {
 						if (item.getChecked()) {
 							projects.add(workspace.getProject(item.getText()));
-							findFilesByExtension(projects);
-							menuCommand.execute(item.getText());
+							ArrayList<String> files = findFilesByExtension(projects);
+							
+							for (String file : files) {
+								menuCommand.execute(file);
+							}
 						}
 					}
-					
-					System.out.println(projects.size() + " selected!");
 				}
 				shell.close();
 			}
@@ -165,7 +171,6 @@ public class MenuCommandWindow {
 				e.printStackTrace();
 			}
 		}
-		
 		return files;
 	}
 }
