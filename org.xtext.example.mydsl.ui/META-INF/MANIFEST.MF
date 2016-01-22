@@ -36,4 +36,8 @@ Bundle-ClassPath: .,
  libs/poi-3.13/poi-excelant-3.13-20150929.jar,
  libs/poi-3.13/poi-ooxml-3.13-20150929.jar,
  libs/poi-3.13/poi-ooxml-schemas-3.13-20150929.jar,
- libs/poi-3.13/poi-scratchpad-3.13-20150929.jar
+ libs/poi-3.13/poi-scratchpad-3.13-20150929.jar,
+ libs/eddy/eddy.jar,
+ libs/eddy/FaCTpp-OWLAPI-3.4-v1.6.2.jar,
+ libs/eddy/HermiT.jar,
+ libs/eddy/org.semanticweb.HermiT.jar
