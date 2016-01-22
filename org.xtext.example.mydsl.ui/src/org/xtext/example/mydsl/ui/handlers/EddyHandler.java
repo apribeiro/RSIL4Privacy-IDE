@@ -27,7 +27,6 @@ import com.google.inject.Provider;
 
 public class EddyHandler extends AbstractHandler {
 
-	private static final String FILE_FOLDER = "src";
 	private static final String GEN_FOLDER = "src-gen";
 	private static final String FILE_EXT = ".mydsl";
 	
@@ -52,24 +51,24 @@ public class EddyHandler extends AbstractHandler {
 			IStructuredSelection structuredSelection = (IStructuredSelection) selection;
 			IFile file = (IFile) structuredSelection.getFirstElement();
 			IProject project = file.getProject();
-			generateEddyFile(project, file.getName());
+			generateEddyFile(project, file);
 		} else {
 			IWorkbenchWindow workbenchWindow = HandlerUtil.getActiveWorkbenchWindowChecked(event);
 			MenuCommand cmd = new MenuCommand() {
 				@Override
-				public void execute(String file) {
-//					generateEddyFile(project, file);
+				public void execute(IProject project, IFile file) {
+					generateEddyFile(project, file);
 				}
 			};
-			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(), cmd, FILE_EXT);
+			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(),
+					cmd, false, FILE_EXT);
 			window.open();
 		}
 		
         return null;
 	}
 	
-	private void generateEddyFile(IProject project, String fileName) {
-		IFile file = project.getFile("/" + FILE_FOLDER + "/" + fileName);
+	private void generateEddyFile(IProject project, IFile file) {
         IFolder srcGenFolder = project.getFolder(GEN_FOLDER);
                 
         if (!srcGenFolder.exists()) {

@@ -23,9 +23,7 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 
 public class MenuCommandWindow {
 	
-	private static final String FILE_FOLDER = "src";
-	public static final int IMPORT_MODE = 0;
-	public static final int EXPORT_MODE = 1;
+	private static final String SRC_FOLDER = "src";
 	
 	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
 	
@@ -33,11 +31,14 @@ public class MenuCommandWindow {
 	private Shell parent;
 	private Table table_1;
 	private MenuCommand menuCommand;
+	private boolean importMode;
 	private String fileExtension;
 	
-	public MenuCommandWindow(Shell parent, MenuCommand menuCommand, String fileExtension) {
+	public MenuCommandWindow(Shell parent, MenuCommand menuCommand,
+			boolean importMode, String fileExtension) {
 		this.parent = parent;
 		this.menuCommand = menuCommand;
+		this.importMode = importMode;
 		this.fileExtension = fileExtension;
 	}
 
@@ -47,7 +48,7 @@ public class MenuCommandWindow {
  	 */
  	public static void main(String[] args) {
  		try {
- 			MenuCommandWindow window = new MenuCommandWindow(null, null, null);
+ 			MenuCommandWindow window = new MenuCommandWindow(null, null, false, null);
  			window.open();
  		} catch (Exception e) {
  			e.printStackTrace();
@@ -121,21 +122,33 @@ public class MenuCommandWindow {
 				if (btnRadioButtonAll.getSelection()) {
 					ArrayList<IProject> projects = new ArrayList<IProject>(
 							Arrays.asList(workspace.getProjects())); 
-					ArrayList<String> files = findFilesByExtension(projects);
 					
-					for (String file : files) {
-						menuCommand.execute(file);
+					if (importMode) {
+						for (IProject project : projects) {
+							menuCommand.execute(project, null);
+						}
+					} else {
+						for (IProject project : projects) {
+							ArrayList<IFile> files = findFilesByExtension(project);
+							
+							for (IFile file : files) {
+								menuCommand.execute(project, file);
+							}
+						}
 					}
-				} else if (btnRadioButtonSelected.getSelection()) {
-					ArrayList<IProject> projects = new ArrayList<IProject>();
-					
+				} else if (btnRadioButtonSelected.getSelection()) {				
 					for (TableItem item : table_1.getItems()) {
 						if (item.getChecked()) {
-							projects.add(workspace.getProject(item.getText()));
-							ArrayList<String> files = findFilesByExtension(projects);
+							IProject project = workspace.getProject(item.getText());
 							
-							for (String file : files) {
-								menuCommand.execute(file);
+							if (importMode) {
+								menuCommand.execute(project, null);
+							} else {
+								ArrayList<IFile> files = findFilesByExtension(project);
+								
+								for (IFile file : files) {
+									menuCommand.execute(project, file);
+								}
 							}
 						}
 					}
@@ -155,21 +168,18 @@ public class MenuCommandWindow {
 		});
 	}
 	
-	private ArrayList<String> findFilesByExtension(ArrayList<IProject> projects) {
-		ArrayList<String> files = new ArrayList<String>();
+	private ArrayList<IFile> findFilesByExtension(IProject project) {
+		ArrayList<IFile> files = new ArrayList<IFile>();
+		IFolder fileFolder = project.getFolder(SRC_FOLDER);
 
-		for (IProject project : projects) {
-			IFolder fileFolder = project.getFolder(FILE_FOLDER);
-
-			try {
-				for (IResource resource : fileFolder.members()) {
-					if (resource instanceof IFile && resource.getName().endsWith(fileExtension)) {
-						files.add(resource.getName());
-					}
+		try {
+			for (IResource resource : fileFolder.members()) {
+				if (resource instanceof IFile && resource.getName().endsWith(fileExtension)) {
+					files.add((IFile) resource);
 				}
-			} catch (CoreException e) {
-				e.printStackTrace();
 			}
+		} catch (CoreException e) {
+			e.printStackTrace();
 		}
 		return files;
 	}

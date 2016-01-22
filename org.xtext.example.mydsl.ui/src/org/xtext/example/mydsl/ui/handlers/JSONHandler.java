@@ -4,6 +4,7 @@ import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IProject;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.IWorkbenchWindow;
@@ -23,24 +24,25 @@ public class JSONHandler extends AbstractHandler {
 		if (selection != null) {
 			IStructuredSelection structuredSelection = (IStructuredSelection) selection;
 			IFile file = (IFile) structuredSelection.getFirstElement();
-			generateJsonFile(file.getName());
+			generateJsonFile(file);
 		} else {
 			IWorkbenchWindow workbenchWindow = HandlerUtil.getActiveWorkbenchWindowChecked(event);
 			MenuCommand cmd = new MenuCommand() {
 				@Override
-				public void execute(String file) {
+				public void execute(IProject project, IFile file) {
 					generateJsonFile(file);
 				}
 			};
-			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(), cmd, FILE_EXT);
+			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(),
+					cmd, false, FILE_EXT);
 			window.open();
 		}
 		
 		return null;
 	}
 
-	private void generateJsonFile(String file) {
-		System.out.println(file + ".json generated!");
+	private void generateJsonFile(IFile file) {
+		System.out.println(file.getName() + ".json generated!");
 		// TODO Generate Json file
 	}
 }

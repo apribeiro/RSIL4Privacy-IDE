@@ -4,6 +4,7 @@ import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IProject;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.IWorkbenchWindow;
@@ -28,11 +29,12 @@ public class UMLHandler extends AbstractHandler {
 			IWorkbenchWindow workbenchWindow = HandlerUtil.getActiveWorkbenchWindowChecked(event);
 			MenuCommand cmd = new MenuCommand() {
 				@Override
-				public void execute(String file) {
-//					generateUMLFile(file);
+				public void execute(IProject project, IFile file) {
+					generateUMLFile(file);
 				}
 			};
-			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(), cmd, FILE_EXT);
+			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(),
+					cmd, false, FILE_EXT);
 			window.open();
 		}
 		
@@ -40,7 +42,7 @@ public class UMLHandler extends AbstractHandler {
 	}
 
 	private void generateUMLFile(IFile file) {
-		System.out.println(file + ".uml generated!");
+		System.out.println(file.getName() + ".uml generated!");
 		// TODO Generate UML file
 	}
 }

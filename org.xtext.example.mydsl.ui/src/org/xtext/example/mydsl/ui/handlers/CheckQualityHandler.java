@@ -4,6 +4,7 @@ import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IProject;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.IWorkbenchWindow;
@@ -23,24 +24,25 @@ public class CheckQualityHandler extends AbstractHandler {
 		if (selection != null) {
 			IStructuredSelection structuredSelection = (IStructuredSelection) selection;
 			IFile file = (IFile) structuredSelection.getFirstElement();
-			callEddyEngine(file.getName());
+			callEddyReasoner(file);
 		} else {
 			IWorkbenchWindow workbenchWindow = HandlerUtil.getActiveWorkbenchWindowChecked(event);
 			MenuCommand cmd = new MenuCommand() {
 				@Override
-				public void execute(String file) {
-					callEddyEngine(file);
+				public void execute(IProject project, IFile file) {
+					callEddyReasoner(file);
 				}
 			};
-			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(), cmd, FILE_EXT);
+			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(),
+					cmd, false, FILE_EXT);
 			window.open();
 		}
 		
 		return null;
 	}
 
-	private void callEddyEngine(String file) {
-		System.out.println(file + " checked!");
+	private void callEddyReasoner(IFile file) {
+		System.out.println(file.getName() + " checked!");
 		// TODO Call Eddy Engine
 	}
 }

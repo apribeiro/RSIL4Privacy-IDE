@@ -4,6 +4,7 @@ import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.viewers.ISelection;
@@ -36,11 +37,12 @@ public class WordHandler extends AbstractHandler {
 			IWorkbenchWindow workbenchWindow = HandlerUtil.getActiveWorkbenchWindowChecked(event);
 			MenuCommand cmd = new MenuCommand() {
 				@Override
-				public void execute(String file) {
-//					generateWordFile(file);
+				public void execute(IProject project, IFile file) {
+					generateWordFile(file);
 				}
 			};
-			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(), cmd, FILE_EXT);
+			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(),
+					cmd, false, FILE_EXT);
 			window.open();
 		}
 		
