@@ -24,6 +24,7 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 public class MenuCommandWindow {
 	
 	private static final String SRC_FOLDER = "src";
+	private static final String GEN_FOLDER = "src-gen";
 	
 	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
 	
@@ -170,12 +171,16 @@ public class MenuCommandWindow {
 	
 	private ArrayList<IFile> findFilesByExtension(IProject project) {
 		ArrayList<IFile> files = new ArrayList<IFile>();
-		IFolder fileFolder = project.getFolder(SRC_FOLDER);
+		ArrayList<IFolder> folders = new ArrayList<IFolder>();
+		folders.add(project.getFolder(SRC_FOLDER));
+		folders.add(project.getFolder(GEN_FOLDER));
 
 		try {
-			for (IResource resource : fileFolder.members()) {
-				if (resource instanceof IFile && resource.getName().endsWith(fileExtension)) {
-					files.add((IFile) resource);
+			for (IFolder folder : folders) {
+				for (IResource resource : folder.members()) {
+					if (resource instanceof IFile && resource.getName().endsWith(fileExtension)) {
+						files.add((IFile) resource);
+					}
 				}
 			}
 		} catch (CoreException e) {
