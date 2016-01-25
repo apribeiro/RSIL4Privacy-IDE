@@ -9,6 +9,8 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.IWorkbenchWindow;
@@ -20,7 +22,6 @@ import org.semanticweb.owlapi.util.SimpleIRIMapper;
 import org.xtext.example.mydsl.ui.windows.MenuCommand;
 import org.xtext.example.mydsl.ui.windows.MenuCommandWindow;
 
-import eddy.example.ConflictExample;
 import eddy.lang.Policy;
 import eddy.lang.analysis.CompilationProfile;
 import eddy.lang.analysis.Conflict;
@@ -62,35 +63,37 @@ public class CheckQualityHandler extends AbstractHandler {
 	}
 
 	private void callEddyReasoner(IFile file) {
-		System.out.println(file.getName() + " checked!");
-		// TODO Call Eddy Engine
 		try {
-			final String filestub = "examples/example.conflicts";
-			final String exampleName = ConflictExample.class.getName();
+			String pluginPath = Platform.getInstallLocation()
+					.getURL().getPath().substring(1)
+					+ "plugins/RSLingo4Privacy/";
+			String policyBase = "policy-base.owl";
+			String fileName = file.getName().split("\\.")[0];
 			boolean useLocal = true;
 			
 			long time = System.currentTimeMillis();
 			Parser parser = new Parser();
-			Policy policy = parser.parse(new File(file.getLocation().toOSString()));//filestub + ".policy"));
+			Policy policy = parser.parse(new File(file.getLocation().toOSString()));
 			Compiler compiler = new Compiler();
 			
-			// use the local copy of the upper ontology
+			// Use the local copy of the upper ontology
 			if (useLocal) {
 				IRI docIRI = IRI.create("http://gaius.isri.cmu.edu/2011/8/policy-base.owl");
-				SimpleIRIMapper mapper = new SimpleIRIMapper(docIRI, IRI.create(new File("examples/policy-base.owl")));
+				SimpleIRIMapper mapper = new SimpleIRIMapper(docIRI, IRI.create(
+						new File(pluginPath + policyBase)));
 				compiler.getManager().addIRIMapper(mapper);
 				
-				// tell extension calculator to use local ontology
-				ExtensionCalculator.setOntologyBasePolicy("examples/policy-base.owl");
+				// Tell extension calculator to use local ontology
+				ExtensionCalculator.setOntologyBasePolicy(pluginPath + policyBase);
 			}
 			
-			// compile the policy
+			// Compile the policy
 			Compilation comp = compiler.compile(policy);
 			time = System.currentTimeMillis() - time;
-			System.err.println(exampleName + ": Parsing policy... " + (time / 1000) + " secs");
+			System.err.println(fileName + ": Parsing policy... " + (time / 1000) + " secs");
 			
-			// compute extension and detect conflicts
-			System.err.print(exampleName + ": Detecting conflicts..");
+			// Compute extension and detect conflicts
+			System.err.print(file.getName() + ": Detecting conflicts..");
 			time = System.currentTimeMillis();
 			
 			ConflictAnalyzer analyzer = new ConflictAnalyzer();
@@ -101,35 +104,36 @@ public class CheckQualityHandler extends AbstractHandler {
 			time = System.currentTimeMillis() - time;
 			System.err.println(". " + (time / 1000) + " secs");
 			
-			// report the conflicts
+			// Report the conflicts
 			ConflictPrinter printer = new ConflictPrinter(System.err);
 			TreeSet<String> rules = new TreeSet<String>();
+			
 			for (Conflict c : conflicts) {
-				/*
-				System.err.println(exampleName + ": Conflict at " + c.toString());
-				rules.add(c.rule1.id);
-				rules.add(c.rule2.id);
-				//*/
 				printer.print(c);
 			}
 			printer.close();
 			
 			if (conflicts.size() > 0) {
-				System.err.println(exampleName + ": Found " + conflicts.size() + " conflicting interpretations across " + rules.size() + " rules");
+				System.err.println(fileName + ": Found " + conflicts.size() + " conflicting interpretations across " + rules.size() + " rules");
 			}
 			else {
-				System.err.println(exampleName + ": No conflicts found");
+				System.err.println(fileName + ": No conflicts found");
 			}
 			
-			// save the ontology to a file for inspection
+			// Save the ontology to a file for inspection
+			String projectPath = file.getProject().getLocation().toOSString();
 			OWLOntology ontology = comp.getOntology();
 			OWLOntologyManager manager = ontology.getOWLOntologyManager();
-			manager.saveOntology(ontology, IRI.create(new File(filestub + ".owl")));
-			System.err.println(exampleName + ": Saved ontology as '" + filestub + ".owl'");
+			manager.saveOntology(ontology, IRI.create(
+					new File(projectPath + "/src-gen/" + fileName + ".owl")));
+			System.err.println(fileName + ": Saved ontology as '" + fileName + ".owl'");
 			
-			System.err.println(exampleName + ": Finished.");
+			System.err.println(fileName + ": Finished.");
 			CompilationProfile.computeProfile(comp);
 			comp.printProperties(System.out);
+
+			// Refresh the project
+			file.getProject().refreshLocal(IResource.DEPTH_INFINITE, null);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
