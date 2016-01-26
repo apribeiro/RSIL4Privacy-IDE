@@ -403,12 +403,20 @@ public class ImportExcelHandler extends AbstractHandler {
     	    		Cell cellType = row.getCell(3);
     	    		String type = cellType.getStringCellValue();
     	    		type = type.substring(0, 1).toUpperCase() + type.substring(1);
+    	    		Cell cellPartOf = row.getCell(5);
     	    		sb.append("Recipient R" + id + " {");
     	    		sb.append("\n");
     	    		sb.append("\tName \"" + description + "\",");
     	    		sb.append("\n");
     	    		sb.append("\tDescription \"" + description + "\",");
     	    		sb.append("\n");
+    	    		
+    	    		if (cellPartOf.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+    	    			int partOf = (int) cellPartOf.getNumericCellValue();
+    	    			sb.append("\tRecipient_Part R" + partOf + ",");
+    	    			sb.append("\n");
+					}
+    	    		
     	    		sb.append("\tScope " + scope + ",");
     	    		sb.append("\n");
     	    		sb.append("\tType " + type);
