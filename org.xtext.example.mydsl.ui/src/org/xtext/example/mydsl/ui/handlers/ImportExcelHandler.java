@@ -201,7 +201,6 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		String description = cellDescription.getStringCellValue();
 	    		Cell cellAttributes = row.getCell(3);
 	    		String attributes = cellAttributes.getStringCellValue();
-	    		attributes = attributes.substring(0, 1).toUpperCase() + attributes.substring(1);
 	    		
 	    		sb.append("PrivateData PD" + id + " {");
 	    		sb.append("\n");
@@ -209,7 +208,15 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		sb.append("\n");
 	    		sb.append("\tType " + type + ",");
 	    		sb.append("\n");
-	    		sb.append("\tAttribute \"" + attributes + "\" Description \"" + attributes + "\"");
+	    		
+	    		for (String a : attributes.split(",\n")) {
+	    			a = a.substring(0, 1).toUpperCase() + a.substring(1);
+	    			sb.append("\tAttribute \"" + a + "\" Description \"" + a + "\",");
+	    			sb.append("\n");
+				}
+	    		// Delete last ',\n'
+	    		sb.deleteCharAt(sb.length() - 2);
+	    		sb.deleteCharAt(sb.length() - 1);
 	    		sb.append("\n};");
 	    		sb.append("\n\n");
 			}
