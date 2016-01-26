@@ -120,7 +120,7 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		modality = modality.substring(0, 1).toUpperCase() + modality.substring(1);
 	    		Cell cellType = row.getCell(4);
 	    		String type = cellType.getStringCellValue();
-	    		Cell cellPD = row.getCell(5);
+	    		Cell cellPrivateData = row.getCell(5);
 	    		sb.append(type + " st" + id + " {");
 	    		sb.append("\n");
 	    		sb.append("\tDescription \"" + description + "\",");
@@ -133,17 +133,17 @@ public class ImportExcelHandler extends AbstractHandler {
 		    		sb.append("\n");
 				}
 	    		
-	    		if (cellPD.getCellType() == Cell.CELL_TYPE_NUMERIC) {
-	    			int pd = (int) cellPD.getNumericCellValue();
-	    			sb.append("\tRefersTo PrivateData PD" + pd + ",");
+	    		if (cellPrivateData.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+	    			int privateData = (int) cellPrivateData.getNumericCellValue();
+	    			sb.append("\tRefersTo PrivateData PD" + privateData + ",");
 	    			sb.append("\n");
-				} else if (cellPD.getCellType() == Cell.CELL_TYPE_STRING) {
-					String pd = cellPD.getStringCellValue();
+				} else if (cellPrivateData.getCellType() == Cell.CELL_TYPE_STRING) {
+					String privateData = cellPrivateData.getStringCellValue();
 					
-					if (!pd.equals("All")) {
+					if (!privateData.equals("All")) {
 						sb.append("\tRefersTo PrivateData ");
 			    		
-		    			for (String s : pd.split(", ")) {
+		    			for (String s : privateData.split(", ")) {
 		    				sb.append("PD" + s + "-"); 
 						}
 		    			// Delete last '-'
@@ -201,7 +201,6 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		String description = cellDescription.getStringCellValue();
 	    		Cell cellAttributes = row.getCell(3);
 	    		String attributes = cellAttributes.getStringCellValue();
-	    		
 	    		sb.append("PrivateData PD" + id + " {");
 	    		sb.append("\n");
 	    		sb.append("\tDescription \"" + description + "\",");
@@ -260,25 +259,48 @@ public class ImportExcelHandler extends AbstractHandler {
     		Cell cellId = row.getCell(0);
     		
     		if (cellId != null) {
-    			if (cellId.getCellType() == Cell.CELL_TYPE_NUMERIC) {
-    				int id = (int) cellId.getNumericCellValue();
-        			Cell cellName = row.getCell(1);
-    	    		String name = cellName.getStringCellValue();
-    	    		Cell cellDescription = row.getCell(2);
-    	    		String description = cellDescription.getStringCellValue();
-    	    		Cell cellPrivateData = row.getCell(4);
-    	    		String privateData = cellPrivateData.getStringCellValue();
-    	    		
-    	    		sb.append("Service S" + id + " {");
-    	    		sb.append("\n");
-    	    		sb.append("\tName \"" + name + "\",");
-    	    		sb.append("\n");
-    	    		sb.append("\tDescription \"" + description + "\",");
-    	    		sb.append("\n");
-    	    		sb.append("\tRefersTo PrivateData " + privateData + ",");
-    	    		sb.append("\n};");
-    	    		sb.append("\n\n");
+    			int id = (int) cellId.getNumericCellValue();
+    			Cell cellName = row.getCell(1);
+	    		String name = cellName.getStringCellValue();
+	    		Cell cellDescription = row.getCell(2);
+	    		String description = cellDescription.getStringCellValue();
+	    		Cell cellPrivateData = row.getCell(4);
+	    		Cell cellPartOf = row.getCell(5);
+	    		sb.append("Service S" + id + " {");
+	    		sb.append("\n");
+	    		sb.append("\tName \"" + name + "\",");
+	    		sb.append("\n");
+	    		sb.append("\tDescription \"" + description + "\",");
+	    		sb.append("\n");
+	    		
+	    		if (cellPrivateData.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+	    			int privateData = (int) cellPrivateData.getNumericCellValue();
+	    			sb.append("\tRefersTo PrivateData PD" + privateData + ",");
+	    			sb.append("\n");
+				} else if (cellPrivateData.getCellType() == Cell.CELL_TYPE_STRING) {
+					String privateData = cellPrivateData.getStringCellValue();
+					
+					if (!privateData.equals("All")) {
+						sb.append("\tRefersTo PrivateData ");
+			    		
+		    			for (String s : privateData.split(", ")) {
+		    				sb.append("PD" + s + "-");
+						}
+		    			// Delete last '-'
+		    			sb.deleteCharAt(sb.length() - 1);
+		    			sb.append(",");
+		    			sb.append("\n");
+					}
 				}
+	    		
+	    		if (cellPartOf.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+	    			int partOf = (int) cellPartOf.getNumericCellValue();
+	    			sb.append("\tService_Part S" + partOf);
+	    			sb.append("\n");
+				}
+	    		
+	    		sb.append("};");
+	    		sb.append("\n\n");
 			}
     		else
     			break;
