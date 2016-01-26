@@ -100,7 +100,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		sb.append("\n");
 		
 		// Get the Statements Sheet
-	    Sheet sheet = wb.getSheetAt(0);
+	    Sheet sheet = wb.getSheetAt(1);
     	Iterator<Row> rowIt = sheet.rowIterator();
     	// Ignore the Header row
     	rowIt.next();
@@ -163,7 +163,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		sb.append("\n");
 		
 		// Get the Statements Sheet
-	    Sheet sheet = wb.getSheetAt(3);
+	    Sheet sheet = wb.getSheetAt(4);
     	Iterator<Row> rowIt = sheet.rowIterator();
     	// Ignore the Header row
     	rowIt.next();
@@ -222,7 +222,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		sb.append("\n");
 		
 		// Get the Statements Sheet
-	    Sheet sheet = wb.getSheetAt(2);
+	    Sheet sheet = wb.getSheetAt(3);
     	Iterator<Row> rowIt = sheet.rowIterator();
     	// Ignore the Header row
     	rowIt.next();
@@ -279,7 +279,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		sb.append("\n");
 		
 		// Get the Statements Sheet
-	    Sheet sheet = wb.getSheetAt(4);
+	    Sheet sheet = wb.getSheetAt(5);
     	Iterator<Row> rowIt = sheet.rowIterator();
     	// Ignore the Header row
     	rowIt.next();
@@ -333,7 +333,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		sb.append("\n");
 		
 		// Get the Statements Sheet
-	    Sheet sheet = wb.getSheetAt(1);
+	    Sheet sheet = wb.getSheetAt(2);
     	Iterator<Row> rowIt = sheet.rowIterator();
     	// Ignore the Header row
     	rowIt.next();
