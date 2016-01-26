@@ -121,6 +121,8 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		Cell cellType = row.getCell(4);
 	    		String type = cellType.getStringCellValue();
 	    		Cell cellPrivateData = row.getCell(5);
+	    		Cell cellService = row.getCell(6);
+	    		Cell cellEnforcement = row.getCell(7);
 	    		sb.append(type + " st" + id + " {");
 	    		sb.append("\n");
 	    		sb.append("\tDescription \"" + description + "\",");
@@ -145,6 +147,46 @@ public class ImportExcelHandler extends AbstractHandler {
 			    		
 		    			for (String s : privateData.split(", ")) {
 		    				sb.append("PD" + s + "-"); 
+						}
+		    			// Delete last '-'
+		    			sb.deleteCharAt(sb.length() - 1);
+		    			sb.append(",");
+		    			sb.append("\n");
+					}
+				}
+	    		
+	    		if (cellService.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+	    			int service = (int) cellService.getNumericCellValue();
+	    			sb.append("\tRefersTo Service S" + service + ",");
+	    			sb.append("\n");
+				} else if (cellService.getCellType() == Cell.CELL_TYPE_STRING) {
+					String service = cellService.getStringCellValue();
+					
+					if (!service.equals("All")) {
+						sb.append("\tRefersTo Service ");
+			    		
+		    			for (String s : service.split(", ")) {
+		    				sb.append("S" + s + "-"); 
+						}
+		    			// Delete last '-'
+		    			sb.deleteCharAt(sb.length() - 1);
+		    			sb.append(",");
+		    			sb.append("\n");
+					}
+				}
+	    		
+	    		if (cellEnforcement.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+	    			int enforcement = (int) cellEnforcement.getNumericCellValue();
+	    			sb.append("\tRefersTo Enforcement E" + enforcement + ",");
+	    			sb.append("\n");
+				} else if (cellEnforcement.getCellType() == Cell.CELL_TYPE_STRING) {
+					String enforcement = cellEnforcement.getStringCellValue();
+					
+					if (!enforcement.equals("All")) {
+						sb.append("\tRefersTo Enforcement ");
+			    		
+		    			for (String s : enforcement.split(", ")) {
+		    				sb.append("E" + s + "-"); 
 						}
 		    			// Delete last '-'
 		    			sb.deleteCharAt(sb.length() - 1);
