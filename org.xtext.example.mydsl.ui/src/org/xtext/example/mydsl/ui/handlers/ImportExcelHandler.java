@@ -120,6 +120,7 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		modality = modality.substring(0, 1).toUpperCase() + modality.substring(1);
 	    		Cell cellType = row.getCell(4);
 	    		String type = cellType.getStringCellValue();
+	    		Cell cellPD = row.getCell(5);
 	    		sb.append(type + " st" + id + " {");
 	    		sb.append("\n");
 	    		sb.append("\tDescription \"" + description + "\",");
@@ -130,6 +131,26 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		if (type.equals("Retention")) {
 	    			sb.append("\tPeriod \"As long as it is necessary\",");
 		    		sb.append("\n");
+				}
+	    		
+	    		if (cellPD.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+	    			int pd = (int) cellPD.getNumericCellValue();
+	    			sb.append("\tRefersTo PrivateData PD" + pd + ",");
+	    			sb.append("\n");
+				} else if (cellPD.getCellType() == Cell.CELL_TYPE_STRING) {
+					String pd = cellPD.getStringCellValue();
+					
+					if (!pd.equals("All")) {
+						sb.append("\tRefersTo PrivateData ");
+			    		
+		    			for (String s : pd.split(", ")) {
+		    				sb.append("PD" + s + "-"); 
+						}
+		    			// Delete last '-'
+		    			sb.deleteCharAt(sb.length() - 1);
+		    			sb.append(",");
+		    			sb.append("\n");
+					}
 				}
 	    		
 	    		sb.append("\tModality " + modality);
