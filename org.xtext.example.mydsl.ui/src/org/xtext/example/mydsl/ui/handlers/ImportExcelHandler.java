@@ -121,8 +121,8 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		Cell cellType = row.getCell(4);
 	    		String type = cellType.getStringCellValue();
 	    		Cell cellPrivateData = row.getCell(5);
-	    		Cell cellService = row.getCell(6);
-	    		Cell cellEnforcement = row.getCell(7);
+	    		Cell cellService = row.getCell(7);
+	    		Cell cellEnforcement = row.getCell(8);
 	    		sb.append(type + " st" + id + " {");
 	    		sb.append("\n");
 	    		sb.append("\tDescription \"" + description + "\",");
@@ -177,7 +177,7 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		
 	    		if (cellEnforcement.getCellType() == Cell.CELL_TYPE_NUMERIC) {
 	    			int enforcement = (int) cellEnforcement.getNumericCellValue();
-	    			sb.append("\tRefersTo Enforcement E" + enforcement + ",");
+	    			sb.append("\tRefersTo Enforcement En" + enforcement + ",");
 	    			sb.append("\n");
 				} else if (cellEnforcement.getCellType() == Cell.CELL_TYPE_STRING) {
 					String enforcement = cellEnforcement.getStringCellValue();
@@ -186,7 +186,7 @@ public class ImportExcelHandler extends AbstractHandler {
 						sb.append("\tRefersTo Enforcement ");
 			    		
 		    			for (String s : enforcement.split(", ")) {
-		    				sb.append("E" + s + "-"); 
+		    				sb.append("En" + s + "-"); 
 						}
 		    			// Delete last '-'
 		    			sb.deleteCharAt(sb.length() - 1);
