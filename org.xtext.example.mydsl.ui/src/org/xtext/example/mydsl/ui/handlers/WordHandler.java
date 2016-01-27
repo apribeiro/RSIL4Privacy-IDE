@@ -1,10 +1,19 @@
 package org.xtext.example.mydsl.ui.handlers;
 
+import java.io.File;
+import java.io.FileOutputStream;
+
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+import org.apache.poi.xwpf.usermodel.XWPFRun;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.viewers.ISelection;
@@ -22,6 +31,8 @@ import com.google.inject.Injector;
 
 public class WordHandler extends AbstractHandler {
 
+	private static final String GEN_FOLDER = "src-gen";
+	private static final String DOCS_FOLDER = "docs";
 	private static final String FILE_EXT = ".mydsl";
 	
 	@Override
@@ -50,6 +61,23 @@ public class WordHandler extends AbstractHandler {
 	}
 
 	private void generateWordFile(IFile file) {
+		IProject project = file.getProject();
+		IFolder srcGenFolder = project.getFolder(GEN_FOLDER);
+        
+        try {
+        	if (!srcGenFolder.exists()) {
+                srcGenFolder.create(true, true, new NullProgressMonitor());
+            }
+    		
+            IFolder docsFolder = srcGenFolder.getFolder(DOCS_FOLDER);
+    		
+    		if (!docsFolder.exists()) {
+    			docsFolder.create(true, true, new NullProgressMonitor());
+            }
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		// Start a new Thread to avoid blocking the UI
         Runnable runnable = new Runnable() {
 			@Override
@@ -62,9 +90,31 @@ public class WordHandler extends AbstractHandler {
 	                URI.createURI("platform:/resource/" + file.getFullPath().toString()), true);
 	            	//URI.createURI("platform:/resource/org.xtext.example.mydsl/src/example.mydsl"), true);
 	            PolicyImpl policy = (PolicyImpl) resource.getContents().get(0);
-	            
-	            System.out.println(policy.getName());
-	    		// TODO Generate Word file
+
+	            // TODO Generate Word file
+	            try {
+	            	IProject project = file.getProject();
+	            	XWPFDocument document = new XWPFDocument(); 
+		            //Write the Document in file system
+		            FileOutputStream out = new FileOutputStream(
+		            		new File(project.getLocation().toOSString()
+		            				+ "/" + GEN_FOLDER + "/" + DOCS_FOLDER 
+		            				+ "/" + file.getName() + ".docx"));
+		                 
+		            //create Paragraph
+		            XWPFParagraph paragraph = document.createParagraph();
+		            XWPFRun run = paragraph.createRun();
+		            run.setText("Package: " + policy.getName());
+		            document.write(out);
+		            out.close();
+		            document.close();
+		            
+		            project.refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
+		            
+		            System.out.println(file.getName() + ".docx written successfully");
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
 		};
 		new Thread(runnable).start();
