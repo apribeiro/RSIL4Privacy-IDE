@@ -126,14 +126,18 @@ public class MenuCommandWindow {
 					
 					if (importMode) {
 						for (IProject project : projects) {
-							menuCommand.execute(project, null);
+							if (project.isOpen()) {
+								menuCommand.execute(project, null);
+							}
 						}
 					} else {
 						for (IProject project : projects) {
-							ArrayList<IFile> files = findFilesByExtension(project);
-							
-							for (IFile file : files) {
-								menuCommand.execute(project, file);
+							if (project.isOpen()) {
+								ArrayList<IFile> files = findFilesByExtension(project);
+								
+								for (IFile file : files) {
+									menuCommand.execute(project, file);
+								}
 							}
 						}
 					}
@@ -142,13 +146,15 @@ public class MenuCommandWindow {
 						if (item.getChecked()) {
 							IProject project = workspace.getProject(item.getText());
 							
-							if (importMode) {
-								menuCommand.execute(project, null);
-							} else {
-								ArrayList<IFile> files = findFilesByExtension(project);
-								
-								for (IFile file : files) {
-									menuCommand.execute(project, file);
+							if (project.isOpen()) {
+								if (importMode) {
+									menuCommand.execute(project, null);
+								} else {
+									ArrayList<IFile> files = findFilesByExtension(project);
+									
+									for (IFile file : files) {
+										menuCommand.execute(project, file);
+									}
 								}
 							}
 						}
