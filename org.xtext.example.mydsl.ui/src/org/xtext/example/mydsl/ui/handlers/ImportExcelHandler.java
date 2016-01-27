@@ -18,13 +18,13 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
-import org.eclipse.core.resources.IWorkspaceRoot;
-import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
+import org.xtext.example.mydsl.ui.windows.MenuCommand;
+import org.xtext.example.mydsl.ui.windows.MenuCommandWindow;
 
 public class ImportExcelHandler extends AbstractHandler {
 
@@ -33,40 +33,51 @@ public class ImportExcelHandler extends AbstractHandler {
 	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-		IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindowChecked(event);
-		FileDialog dialog = new FileDialog(window.getShell(), SWT.OPEN);
+		IWorkbenchWindow workbenchWindow = HandlerUtil.getActiveWorkbenchWindowChecked(event);
+		FileDialog dialog = new FileDialog(workbenchWindow.getShell(), SWT.OPEN);
 		dialog.setFilterExtensions(new String[] { "*.xlsx", "*.xls" });
 		dialog.setText("Select the Excel file to upload");
-		String filePath = dialog.open();
+		final String filePath = dialog.open();
+		final String fileName = dialog.getFileName();
 		
 		if (filePath != null) {
-			try {
-				IWorkspaceRoot workspace = ResourcesPlugin.getWorkspace().getRoot();
-		        IProject project = workspace.getProjects()[0];
-				IFolder srcGenFolder = project.getFolder(GEN_FOLDER);
-                
-	            if (!srcGenFolder.exists()) {
-                    srcGenFolder.create(true, true, new NullProgressMonitor());
-	            }
-				
-	            IFolder docsFolder = srcGenFolder.getFolder(DOCS_FOLDER);
-	    		
-	    		if (!docsFolder.exists()) {
-	    			docsFolder.create(true, true, new NullProgressMonitor());
-	            }
-	            
-	            importExcelFile(docsFolder, filePath, dialog.getFileName());
-				generateStatementsFile(srcGenFolder, filePath, dialog.getFileName());
-				generatePrivateDataFile(srcGenFolder, filePath, dialog.getFileName());
-				generateServicesFile(srcGenFolder, filePath, dialog.getFileName());
-				generateEnforcementsFile(srcGenFolder, filePath, dialog.getFileName());
-				generateRecipientsFile(srcGenFolder, filePath, dialog.getFileName());
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+			MenuCommand cmd = new MenuCommand() {
+				@Override
+				public void execute(IProject project, IFile file) {
+					importExcelAndGenerateFiles(project, filePath, fileName);
+				}
+			};
+			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(),
+					cmd, true, null);
+			window.open();
 		}
 		
 		return null;
+	}
+	
+	private void importExcelAndGenerateFiles(IProject project, String filePath, String fileName) {
+		try {
+			IFolder srcGenFolder = project.getFolder(GEN_FOLDER);
+            
+            if (!srcGenFolder.exists()) {
+                srcGenFolder.create(true, true, new NullProgressMonitor());
+            }
+			
+            IFolder docsFolder = srcGenFolder.getFolder(DOCS_FOLDER);
+    		
+    		if (!docsFolder.exists()) {
+    			docsFolder.create(true, true, new NullProgressMonitor());
+            }
+    		
+    		importExcelFile(docsFolder, filePath, fileName);
+			generateStatementsFile(srcGenFolder, filePath, fileName);
+			generatePrivateDataFile(srcGenFolder, filePath, fileName);
+			generateServicesFile(srcGenFolder, filePath, fileName);
+			generateEnforcementsFile(srcGenFolder, filePath, fileName);
+			generateRecipientsFile(srcGenFolder, filePath, fileName);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	private void importExcelFile(IFolder docsFolder, String filePath, String fileName)
