@@ -33,8 +33,8 @@ import org.w3c.dom.NodeList;
 public class ConfigurationWindow {
 
 	private static final String CONFIG_PATH = "config.xml";
-	private static final String DEF_WORD_PATH = "RSLIL-WordTemplate.docx";
-	private static final String DEF_EXCEL_PATH = "RSLIL-ExcelTemplate-v1.1.xlsx";
+	private static final String DEF_WORD_PATH = "RSL-IL4Privacy-WordTemplate.docx";
+	private static final String DEF_EXCEL_PATH = "RSL-IL4Privacy-ExcelTemplate-v1.1.xlsx";
 	private static final String DEF_EDDY_PATH = "Eddy.jar";
 	
 	private final String PLUGIN_PATH = Platform.getInstallLocation()
