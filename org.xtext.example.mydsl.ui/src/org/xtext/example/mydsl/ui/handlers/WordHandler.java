@@ -1,7 +1,9 @@
 package org.xtext.example.mydsl.ui.handlers;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStream;
 
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
@@ -14,6 +16,7 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.viewers.ISelection;
@@ -34,6 +37,11 @@ public class WordHandler extends AbstractHandler {
 	private static final String GEN_FOLDER = "src-gen";
 	private static final String DOCS_FOLDER = "docs";
 	private static final String FILE_EXT = ".mydsl";
+	private static final String DEF_WORD_PATH = "RSL-IL4Privacy-WordTemplate.docx";
+	
+	private final String PLUGIN_PATH = Platform.getInstallLocation()
+			.getURL().getPath().substring(1)
+			+ "plugins/RSLingo4Privacy/";
 	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
@@ -93,18 +101,19 @@ public class WordHandler extends AbstractHandler {
 
 	            // TODO Generate Word file
 	            try {
-	            	IProject project = file.getProject();
-	            	XWPFDocument document = new XWPFDocument(); 
-		            //Write the Document in file system
-		            FileOutputStream out = new FileOutputStream(
-		            		new File(project.getLocation().toOSString()
-		            				+ "/" + GEN_FOLDER + "/" + DOCS_FOLDER 
-		            				+ "/" + file.getName() + ".docx"));
+	            	InputStream from = new FileInputStream(PLUGIN_PATH + DEF_WORD_PATH);
+	            	XWPFDocument document = new XWPFDocument(from);
+		            // Write the Document in file system
 		                 
 		            //create Paragraph
 		            XWPFParagraph paragraph = document.createParagraph();
 		            XWPFRun run = paragraph.createRun();
 		            run.setText("Package: " + policy.getName());
+		            
+		            File to = new File(project.getLocation().toOSString()
+            				+ "/" + GEN_FOLDER + "/" + DOCS_FOLDER 
+            				+ "/" + file.getName() + ".docx");
+		            FileOutputStream out = new FileOutputStream(to);
 		            document.write(out);
 		            out.close();
 		            document.close();
