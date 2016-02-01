@@ -142,7 +142,9 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		sb.append("\n");
 	    		
 	    		if (type.equals("Retention")) {
-	    			sb.append("\tPeriod \"As long as it is necessary\",");
+	    			Cell cellPeriod = row.getCell(9);
+		    		String period = cellPeriod.getStringCellValue();
+	    			sb.append("\tPeriod \"" + period + "\",");
 		    		sb.append("\n");
 				}
 	    		
@@ -317,8 +319,8 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		String name = cellName.getStringCellValue();
 	    		Cell cellDescription = row.getCell(2);
 	    		String description = cellDescription.getStringCellValue();
-	    		Cell cellPrivateData = row.getCell(4);
-	    		Cell cellPartOf = row.getCell(5);
+	    		Cell cellPrivateData = row.getCell(3);
+	    		Cell cellPartOf = row.getCell(4);
 	    		sb.append("Service S" + id + " {");
 	    		sb.append("\n");
 	    		sb.append("\tName \"" + name + "\",");
@@ -456,7 +458,7 @@ public class ImportExcelHandler extends AbstractHandler {
     	    		Cell cellType = row.getCell(3);
     	    		String type = cellType.getStringCellValue();
     	    		type = type.substring(0, 1).toUpperCase() + type.substring(1);
-    	    		Cell cellPartOf = row.getCell(5);
+    	    		Cell cellPartOf = row.getCell(4);
     	    		sb.append("Recipient R" + id + " {");
     	    		sb.append("\n");
     	    		sb.append("\tName \"" + description + "\",");
