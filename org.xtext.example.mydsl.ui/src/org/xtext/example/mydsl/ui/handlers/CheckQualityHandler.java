@@ -1,7 +1,9 @@
 package org.xtext.example.mydsl.ui.handlers;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.InputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.TreeSet;
 
@@ -123,12 +125,17 @@ public class CheckQualityHandler extends AbstractHandler {
 			addToLog(logger, ". " + (time / 1000) + " secs");
 			
 			// Report the conflicts
-			ConflictPrinter printer = new ConflictPrinter(System.err);
+			ByteArrayOutputStream osConflicts = new ByteArrayOutputStream();
+			PrintStream ps = new PrintStream(osConflicts);
+//			ConflictPrinter printer = new ConflictPrinter(System.err);
+			ConflictPrinter printer = new ConflictPrinter(ps);
 			TreeSet<String> rules = new TreeSet<String>();
 			
 			for (Conflict c : conflicts) {
 				printer.print(c);
 			}
+			addToLog(logger, osConflicts.toString());
+			osConflicts.close();
 			printer.close();
 			
 			if (conflicts.size() > 0) {
@@ -148,7 +155,13 @@ public class CheckQualityHandler extends AbstractHandler {
 			
 			addToLog(logger, file.getName() + ": Finished.");
 			CompilationProfile.computeProfile(comp);
-			comp.printProperties(System.out);
+//			comp.printProperties(System.out);
+			ByteArrayOutputStream osProperties = new ByteArrayOutputStream();
+			PrintStream ps2 = new PrintStream(osProperties);
+			comp.printProperties(ps2);
+			addToLog(logger, osProperties.toString());
+			osProperties.close();
+			ps2.close();
 
 			IFile logFile = srcGenFolder.getFile(fileName + ".log");
 			InputStream source = new StringInputStream(logger.toString());
@@ -160,7 +173,7 @@ public class CheckQualityHandler extends AbstractHandler {
 			}
 			
 			// Refresh the project
-			file.getProject().refreshLocal(IResource.DEPTH_INFINITE, null);
+			file.getProject().refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
