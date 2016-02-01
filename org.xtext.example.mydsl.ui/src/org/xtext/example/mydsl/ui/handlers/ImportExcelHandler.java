@@ -148,6 +148,30 @@ public class ImportExcelHandler extends AbstractHandler {
 		    		sb.append("\n");
 				}
 	    		
+	    		if (type.equals("Disclosure")) {
+	    			Cell cellRecipient = row.getCell(6);
+	    			
+	    			if (cellRecipient.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+		    			int recipient = (int) cellRecipient.getNumericCellValue();
+		    			sb.append("\tRefersTo Recipient R" + recipient + ",");
+		    			sb.append("\n");
+					} else if (cellRecipient.getCellType() == Cell.CELL_TYPE_STRING) {
+						String recipient = cellRecipient.getStringCellValue();
+						
+						if (!recipient.equals("All")) {
+							sb.append("\tRefersTo Recipient ");
+				    		
+			    			for (String s : recipient.split(", ")) {
+			    				sb.append("R" + s + "-"); 
+							}
+			    			// Delete last '-'
+			    			sb.deleteCharAt(sb.length() - 1);
+			    			sb.append(",");
+			    			sb.append("\n");
+						}
+					}
+				}
+	    		
 	    		if (cellPrivateData.getCellType() == Cell.CELL_TYPE_NUMERIC) {
 	    			int privateData = (int) cellPrivateData.getNumericCellValue();
 	    			sb.append("\tRefersTo PrivateData PD" + privateData + ",");
