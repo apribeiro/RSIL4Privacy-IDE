@@ -86,9 +86,9 @@ public class ImportExcelHandler extends AbstractHandler {
 		InputStream source = new FileInputStream(new File(filePath));
 		
 		if (!file.exists()) {
-			file.create(source, IResource.FORCE, null);
+			file.create(source, IResource.FORCE, new NullProgressMonitor());
 		} else {
-			file.setContents(source, IResource.FORCE, null);
+			file.setContents(source, IResource.FORCE, new NullProgressMonitor());
 		}
 	}
 	
