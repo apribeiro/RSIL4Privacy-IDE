@@ -93,6 +93,14 @@ public class DocumentHelper {
 		replaceText(par, tag, value, false);
 	}
 	
+	public static void addLineBreakToParagraph(XWPFParagraph par) {
+		List<XWPFRun> runs = par.getRuns();
+		
+		if (runs != null) {
+			runs.get(runs.size() - 1).addCarriageReturn();
+		}
+	}
+	
 	public static XWPFParagraph getParagraph(XWPFDocument doc, String tag) {
 		XWPFParagraph paragraph = null;
 
