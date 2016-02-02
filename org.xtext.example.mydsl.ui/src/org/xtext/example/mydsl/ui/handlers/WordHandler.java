@@ -7,7 +7,7 @@ import java.io.InputStream;
 
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
-import org.apache.poi.xwpf.usermodel.XWPFRun;
+import org.apache.xmlbeans.XmlCursor;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
@@ -26,6 +26,7 @@ import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.xtext.example.mydsl.MyDslStandaloneSetup;
+import org.xtext.example.mydsl.myDsl.PrivateData;
 import org.xtext.example.mydsl.myDsl.impl.PolicyImpl;
 import org.xtext.example.mydsl.ui.windows.MenuCommand;
 import org.xtext.example.mydsl.ui.windows.MenuCommandWindow;
@@ -103,13 +104,32 @@ public class WordHandler extends AbstractHandler {
 	            try {
 	            	InputStream from = new FileInputStream(PLUGIN_PATH + DEF_WORD_PATH);
 	            	XWPFDocument document = new XWPFDocument(from);
-		            // Write the Document in file system
-		                 
-		            //create Paragraph
-		            XWPFParagraph paragraph = document.createParagraph();
-		            XWPFRun run = paragraph.createRun();
-		            run.setText("Package: " + policy.getName());
 		            
+		            for (PrivateData data : policy.getPrivateData()) {
+		            	// Create Paragraph
+		            	XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@PDEnd");
+			            XmlCursor cursor = tEnd.getCTP().newCursor();
+			            
+			            XWPFParagraph tName = DocumentHelper.getParagraph(document, "@PDName");
+			            XWPFParagraph nName = document.insertNewParagraph(cursor);
+			            DocumentHelper.cloneParagraph(nName, tName);
+			            DocumentHelper.replaceText(nName, "@PDName", data.getPrivatedata()
+			            		+ " (" + data.getName() + ")");
+			            
+			            XWPFParagraph tType = DocumentHelper.getParagraph(document, "@PDType");
+			            cursor = tEnd.getCTP().newCursor();
+			            XWPFParagraph nType = document.insertNewParagraph(cursor);
+			            DocumentHelper.cloneParagraph(nType, tType);
+			            DocumentHelper.replaceText(nType, "@PDType", data.getPrivateDataKind());
+			            
+			            XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@PDDescription");
+			            cursor = tEnd.getCTP().newCursor();
+			            XWPFParagraph nDesc = document.insertNewParagraph(cursor);
+			            DocumentHelper.cloneParagraph(nDesc, tDesc);
+			            DocumentHelper.replaceText(nDesc, "@PDDescription", data.getPrivatedata(), true);
+					}
+		            
+		            // Write the Document in file system
 		            File to = new File(project.getLocation().toOSString()
             				+ "/" + GEN_FOLDER + "/" + DOCS_FOLDER 
             				+ "/" + file.getName() + ".docx");

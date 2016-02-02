@@ -41,7 +41,7 @@ public class DocumentHelper {
 		}
 	}
 
-	public static void replaceText(XWPFParagraph par, String tag, String value) {
+	public static void replaceText(XWPFParagraph par, String tag, String value, boolean addLineBreak) {
 		List<XWPFRun> runs = par.getRuns();
 
 		if (runs != null) {
@@ -54,6 +54,10 @@ public class DocumentHelper {
 					String runText = run.getText(run.getTextPosition());
 					String replaced = runText.replace(tag, value);
 					run.setText(replaced, 0);
+					
+					if (addLineBreak) {
+						run.addCarriageReturn();
+					}
 				} else {
 					// The search string spans over more than one Run
 					// Put the Strings together
@@ -71,6 +75,10 @@ public class DocumentHelper {
 					XWPFRun partOne = runs.get(found.getBeginRun());
 					partOne.setText(replaced, 0);
 
+					if (addLineBreak) {
+						partOne.addCarriageReturn();
+					}
+					
 					// Remove the text in the other Runs.
 					for (int runPos = found.getBeginRun() + 1; runPos <= found.getEndRun(); runPos++) {
 						XWPFRun partNext = runs.get(runPos);
@@ -79,18 +87,12 @@ public class DocumentHelper {
 				}
 			}
 		}
-
-//		if (runs != null) {
-//			for (XWPFRun r : runs) {
-//				String text = r.getText(0);
-//				if (text != null && text.contains(tag)) {
-//					text = text.replace(tag, value);
-//					r.setText(text, 0);
-//				}
-//			}
-//		}
 	}
 
+	public static void replaceText(XWPFParagraph par, String tag, String value) {
+		replaceText(par, tag, value, false);
+	}
+	
 	public static XWPFParagraph getParagraph(XWPFDocument doc, String tag) {
 		XWPFParagraph paragraph = null;
 
