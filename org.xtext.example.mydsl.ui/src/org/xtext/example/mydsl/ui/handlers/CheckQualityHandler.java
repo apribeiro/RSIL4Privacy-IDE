@@ -133,6 +133,7 @@ public class CheckQualityHandler extends AbstractHandler {
 			
 			for (Conflict c : conflicts) {
 				printer.print(c);
+				printer.println();
 			}
 			addToLog(logger, osConflicts.toString());
 			osConflicts.close();
@@ -153,7 +154,7 @@ public class CheckQualityHandler extends AbstractHandler {
 					new File(projectPath + "/" + GEN_FOLDER + "/" + fileName + ".owl")));
 			addToLog(logger, fileName + ": Saved ontology as '" + fileName + ".owl'");
 			
-			addToLog(logger, file.getName() + ": Finished.");
+			addToLog(logger, file.getName() + ": Finished.\n");
 			CompilationProfile.computeProfile(comp);
 //			comp.printProperties(System.out);
 			ByteArrayOutputStream osProperties = new ByteArrayOutputStream();
