@@ -72,7 +72,7 @@ public class DocumentHelper {
 					partOne.setText(replaced, 0);
 
 					// Remove the text in the other Runs.
-					for (int runPos = found.getBeginRun()+1; runPos <= found.getEndRun(); runPos++) {
+					for (int runPos = found.getBeginRun() + 1; runPos <= found.getEndRun(); runPos++) {
 						XWPFRun partNext = runs.get(runPos);
 						partNext.setText("", 0);
 					}
@@ -80,15 +80,15 @@ public class DocumentHelper {
 			}
 		}
 
-		if (runs != null) {
-			for (XWPFRun r : runs) {
-				String text = r.getText(0);
-				if (text != null && text.contains(tag)) {
-					text = text.replace(tag, value);
-					r.setText(text, 0);
-				}
-			}
-		}
+//		if (runs != null) {
+//			for (XWPFRun r : runs) {
+//				String text = r.getText(0);
+//				if (text != null && text.contains(tag)) {
+//					text = text.replace(tag, value);
+//					r.setText(text, 0);
+//				}
+//			}
+//		}
 	}
 
 	public static XWPFParagraph getParagraph(XWPFDocument doc, String tag) {
