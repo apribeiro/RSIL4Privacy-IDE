@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
@@ -26,11 +28,13 @@ import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.xtext.example.mydsl.MyDslStandaloneSetup;
+import org.xtext.example.mydsl.myDsl.Attribute;
 import org.xtext.example.mydsl.myDsl.PrivateData;
 import org.xtext.example.mydsl.myDsl.impl.PolicyImpl;
 import org.xtext.example.mydsl.ui.windows.MenuCommand;
 import org.xtext.example.mydsl.ui.windows.MenuCommandWindow;
 
+import com.google.common.collect.Lists;
 import com.google.inject.Injector;
 
 public class WordHandler extends AbstractHandler {
@@ -105,9 +109,11 @@ public class WordHandler extends AbstractHandler {
 	            	InputStream from = new FileInputStream(PLUGIN_PATH + DEF_WORD_PATH);
 	            	XWPFDocument document = new XWPFDocument(from);
 		            
-		            for (PrivateData data : policy.getPrivateData()) {
-		            	// Create Paragraph
+		            for (PrivateData data : Lists.reverse(policy.getPrivateData())) {
 		            	XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@PDEnd");
+		            	// Get the position of the paragraph after the end tag
+		            	int endPos = document.getParagraphPos(document.getPosOfParagraph(tEnd)) + 1;
+		            	tEnd = document.getParagraphArray(endPos);
 			            XmlCursor cursor = tEnd.getCTP().newCursor();
 			            
 			            XWPFParagraph tName = DocumentHelper.getParagraph(document, "@PDName");
@@ -126,7 +132,34 @@ public class WordHandler extends AbstractHandler {
 			            cursor = tEnd.getCTP().newCursor();
 			            XWPFParagraph nDesc = document.insertNewParagraph(cursor);
 			            DocumentHelper.cloneParagraph(nDesc, tDesc);
-			            DocumentHelper.replaceText(nDesc, "@PDDescription", data.getPrivatedata(), true);
+			            DocumentHelper.replaceText(nDesc, "@PDDescription", data.getPrivatedata());
+			            
+			            XWPFParagraph nAttr = null;
+			            
+			            for (Attribute attr : data.getAttribute()) {
+			            	XWPFParagraph tAttr = DocumentHelper.getParagraph(document, "@PDAttrName");
+			            	cursor = tEnd.getCTP().newCursor();
+				            nAttr = document.insertNewParagraph(cursor);
+				            DocumentHelper.cloneParagraph(nAttr, tAttr);
+				            DocumentHelper.replaceText(nAttr, "@PDAttrName", attr.getName());
+				            DocumentHelper.replaceText(nAttr, "@PDAttrDescription", attr.getAttributeName());
+			            }
+			            
+			            // Add a newline to the last paragraph
+			            if (nAttr != null) {
+							DocumentHelper.addLineBreakToParagraph(nAttr);
+						}
+					}
+		            
+		            // Delete Private Data Tags paragraphs
+		            XWPFParagraph tName = DocumentHelper.getParagraph(document, "@PDStart");
+		            int posStart = document.getParagraphPos(document.getPosOfParagraph(tName));
+		            XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@PDEnd");
+		            int posEnd = document.getParagraphPos(document.getPosOfParagraph(tEnd));
+		            List<XWPFParagraph> tParagraphs = new ArrayList<XWPFParagraph>(document.getParagraphs().subList(posStart, posEnd + 1));
+		            
+		            for (XWPFParagraph tp : tParagraphs) {
+		            	document.removeBodyElement(document.getPosOfParagraph(tp));
 					}
 		            
 		            // Write the Document in file system
