@@ -119,7 +119,6 @@ public class WordHandler extends AbstractHandler {
 				//URI.createURI("platform:/resource/org.xtext.example.mydsl/src/example.mydsl"), true);
 				Policy policy = (Policy) resource.getContents().get(0);
 
-				// TODO Generate Word file
 				try {
 					InputStream from = new FileInputStream(PLUGIN_PATH + DEF_WORD_PATH);
 					XWPFDocument document = new XWPFDocument(from);
