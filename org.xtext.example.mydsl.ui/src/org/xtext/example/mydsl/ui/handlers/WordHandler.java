@@ -30,13 +30,21 @@ import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.xtext.example.mydsl.MyDslStandaloneSetup;
 import org.xtext.example.mydsl.myDsl.Attribute;
+import org.xtext.example.mydsl.myDsl.Collection;
+import org.xtext.example.mydsl.myDsl.Disclosure;
 import org.xtext.example.mydsl.myDsl.Enforcement;
+import org.xtext.example.mydsl.myDsl.Informative;
 import org.xtext.example.mydsl.myDsl.Partof;
 import org.xtext.example.mydsl.myDsl.PrivateData;
 import org.xtext.example.mydsl.myDsl.Recipient;
 import org.xtext.example.mydsl.myDsl.RefPrivateData;
+import org.xtext.example.mydsl.myDsl.ReferToRecipient;
+import org.xtext.example.mydsl.myDsl.ReferToService;
+import org.xtext.example.mydsl.myDsl.RefertoEnforcement;
+import org.xtext.example.mydsl.myDsl.Retention;
 import org.xtext.example.mydsl.myDsl.Service;
 import org.xtext.example.mydsl.myDsl.ServicePartof;
+import org.xtext.example.mydsl.myDsl.Usage;
 import org.xtext.example.mydsl.myDsl.Policy;
 import org.xtext.example.mydsl.ui.windows.MenuCommand;
 import org.xtext.example.mydsl.ui.windows.MenuCommandWindow;
@@ -120,6 +128,7 @@ public class WordHandler extends AbstractHandler {
 					writeServices(policy, document);
 					writeRecipients(policy, document);
 					writeEnforcements(policy, document);
+					writeStatements(policy, document);
 
 					// Write the Document in file system
 					File to = new File(project.getLocation().toOSString()
@@ -407,5 +416,581 @@ public class WordHandler extends AbstractHandler {
 		}
 	}
 	
-	// TODO Write Statements 
+	private void writeStatements(Policy policy, XWPFDocument document) {
+		writeInformativeStatements(document, policy);
+		writeUsageStatements(document, policy);
+		writeRetentionStatements(document, policy);
+		writeDisclosureStatements(document, policy);
+		writeCollectionStatements(document, policy);
+		
+		// Delete Services Tags paragraphs
+		XWPFParagraph tStart = DocumentHelper.getParagraph(document, "@StStart");
+		int posStart = document.getParagraphPos(document.getPosOfParagraph(tStart));
+		XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@StEnd");
+		int posEnd = document.getParagraphPos(document.getPosOfParagraph(tEnd));
+		List<XWPFParagraph> tParagraphs = new ArrayList<XWPFParagraph>(document.getParagraphs().subList(posStart, posEnd + 1));
+
+		for (XWPFParagraph tp : tParagraphs) {
+			document.removeBodyElement(document.getPosOfParagraph(tp));
+		}
+	}
+	
+	private void writeInformativeStatements(XWPFDocument document, Policy policy) {
+		for (Informative informative : Lists.reverse(policy.getInformative())) {
+			XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@StEnd");
+			// Get the position of the paragraph after the end tag
+			int endPos = document.getParagraphPos(document.getPosOfParagraph(tEnd)) + 1;
+			tEnd = document.getParagraphArray(endPos);
+			XmlCursor cursor = tEnd.getCTP().newCursor();
+
+			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@StId");
+			XWPFParagraph nName = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nName, tName);
+			DocumentHelper.replaceText(nName, "@StId", informative.getName());
+
+			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@StDescription");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nDesc, tDesc);
+			DocumentHelper.replaceText(nDesc, "@StDescription", informative.getDescription());
+			
+			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@StType");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nType = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nType, tType);
+			DocumentHelper.replaceText(nType, "@StType", "Informative");
+
+			XWPFParagraph tModality = DocumentHelper.getParagraph(document, "@StModality");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nModality = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nModality, tModality);
+			DocumentHelper.replaceText(nModality, "@StModality", informative.getModalitykind());
+			
+			XWPFParagraph last = nModality;
+			
+			// Add Private Data Section
+			EList<RefPrivateData> refPrivateData = informative.getRefprivatedata();
+			
+			if (refPrivateData.size() > 0) {
+				XWPFParagraph tPDSection = DocumentHelper.getParagraph(document, "@StPDName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tPDSection) - 1);
+				tPDSection = document.getParagraphArray(attrSubPos);
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nPDSection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nPDSection, tPDSection);
+
+				for (RefPrivateData refPD : refPrivateData) {
+					PrivateData data = refPD.getRefpr();
+					XWPFParagraph tStPDName = DocumentHelper.getParagraph(document, "@StPDName");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nStPDName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nStPDName, tStPDName);
+					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getPrivatedata()
+							+ " (" + data.getName() + ")");
+					last = nStPDName;
+				}
+			}
+			
+			// Add Services Section
+			EList<ReferToService> referToService = informative.getRefertoservice();
+			
+			if (referToService.size() > 0) {
+				XWPFParagraph tSSection = DocumentHelper.getParagraph(document, "@StSName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tSSection) - 1);
+				tSSection = document.getParagraphArray(attrSubPos);
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nSSection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nSSection, tSSection);
+
+				for (ReferToService refService : referToService) {
+					Service service = refService.getRefertose();
+					XWPFParagraph tStSName = DocumentHelper.getParagraph(document, "@StSName");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nStSName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nStSName, tStSName);
+					DocumentHelper.replaceText(nStSName, "@StSName", service.getServicename()
+							+ " (" + service.getName() + ")");
+					last = nStSName;
+				}
+			}
+			
+			// Add Enforcements Section
+			EList<RefertoEnforcement> referToEnf = informative.getRefertoEnforcement();
+			
+			if (referToEnf.size() > 0) {
+				XWPFParagraph tESection = DocumentHelper.getParagraph(document, "@StEName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tESection) - 1);
+				tESection = document.getParagraphArray(attrSubPos);
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nESection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nESection, tESection);
+
+				for (RefertoEnforcement refEnf : referToEnf) {
+					Enforcement enforcement = refEnf.getRefst();
+					XWPFParagraph tStEName = DocumentHelper.getParagraph(document, "@StEName");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nStEName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nStEName, tStEName);
+					DocumentHelper.replaceText(nStEName, "@StEName", enforcement.getEnforcementName()
+							+ " (" + enforcement.getName() + ")");
+					last = nStEName;
+				}
+			}
+			
+			// Add a newline to the last paragraph
+			DocumentHelper.addLineBreakToParagraph(last);
+		}
+	}
+	
+	private void writeUsageStatements(XWPFDocument document, Policy policy) {
+		for (Usage usage : Lists.reverse(policy.getUsage())) {
+			XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@StEnd");
+			// Get the position of the paragraph after the end tag
+			int endPos = document.getParagraphPos(document.getPosOfParagraph(tEnd)) + 1;
+			tEnd = document.getParagraphArray(endPos);
+			XmlCursor cursor = tEnd.getCTP().newCursor();
+
+			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@StId");
+			XWPFParagraph nName = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nName, tName);
+			DocumentHelper.replaceText(nName, "@StId", usage.getName());
+
+			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@StDescription");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nDesc, tDesc);
+			DocumentHelper.replaceText(nDesc, "@StDescription", usage.getDescription());
+			
+			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@StType");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nType = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nType, tType);
+			DocumentHelper.replaceText(nType, "@StType", "Usage");
+
+			XWPFParagraph tModality = DocumentHelper.getParagraph(document, "@StModality");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nModality = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nModality, tModality);
+			DocumentHelper.replaceText(nModality, "@StModality", usage.getModalitykind());
+			
+			XWPFParagraph last = nModality;
+			
+			// Add Private Data Section
+			EList<RefPrivateData> refPrivateData = usage.getRefprivatedata();
+			
+			if (refPrivateData.size() > 0) {
+				XWPFParagraph tPDSection = DocumentHelper.getParagraph(document, "@StPDName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tPDSection) - 1);
+				tPDSection = document.getParagraphArray(attrSubPos);
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nPDSection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nPDSection, tPDSection);
+
+				for (RefPrivateData refPD : refPrivateData) {
+					PrivateData data = refPD.getRefpr();
+					XWPFParagraph tStPDName = DocumentHelper.getParagraph(document, "@StPDName");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nStPDName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nStPDName, tStPDName);
+					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getPrivatedata()
+							+ " (" + data.getName() + ")");
+					last = nStPDName;
+				}
+			}
+			
+			// Add Services Section
+			EList<ReferToService> referToService = usage.getRefertoservice();
+			
+			if (referToService.size() > 0) {
+				XWPFParagraph tSSection = DocumentHelper.getParagraph(document, "@StSName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tSSection) - 1);
+				tSSection = document.getParagraphArray(attrSubPos);
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nSSection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nSSection, tSSection);
+
+				for (ReferToService refService : referToService) {
+					Service service = refService.getRefertose();
+					XWPFParagraph tStSName = DocumentHelper.getParagraph(document, "@StSName");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nStSName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nStSName, tStSName);
+					DocumentHelper.replaceText(nStSName, "@StSName", service.getServicename()
+							+ " (" + service.getName() + ")");
+					last = nStSName;
+				}
+			}
+			
+			// Add Enforcements Section
+			EList<RefertoEnforcement> referToEnf = usage.getRefertoEnforcement();
+			
+			if (referToEnf.size() > 0) {
+				XWPFParagraph tESection = DocumentHelper.getParagraph(document, "@StEName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tESection) - 1);
+				tESection = document.getParagraphArray(attrSubPos);
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nESection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nESection, tESection);
+
+				for (RefertoEnforcement refEnf : referToEnf) {
+					Enforcement enforcement = refEnf.getRefst();
+					XWPFParagraph tStEName = DocumentHelper.getParagraph(document, "@StEName");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nStEName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nStEName, tStEName);
+					DocumentHelper.replaceText(nStEName, "@StEName", enforcement.getEnforcementName()
+							+ " (" + enforcement.getName() + ")");
+					last = nStEName;
+				}
+			}
+			
+			// Add a newline to the last paragraph
+			DocumentHelper.addLineBreakToParagraph(last);
+		}
+	}
+	
+	private void writeRetentionStatements(XWPFDocument document, Policy policy) {
+		for (Retention retention : Lists.reverse(policy.getRetention())) {
+			XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@StEnd");
+			// Get the position of the paragraph after the end tag
+			int endPos = document.getParagraphPos(document.getPosOfParagraph(tEnd)) + 1;
+			tEnd = document.getParagraphArray(endPos);
+			XmlCursor cursor = tEnd.getCTP().newCursor();
+
+			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@StId");
+			XWPFParagraph nName = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nName, tName);
+			DocumentHelper.replaceText(nName, "@StId", retention.getName());
+
+			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@StDescription");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nDesc, tDesc);
+			DocumentHelper.replaceText(nDesc, "@StDescription", retention.getDescription());
+			
+			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@StType");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nType = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nType, tType);
+			DocumentHelper.replaceText(nType, "@StType", "Retention");
+
+			XWPFParagraph tModality = DocumentHelper.getParagraph(document, "@StModality");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nModality = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nModality, tModality);
+			DocumentHelper.replaceText(nModality, "@StModality", retention.getModalitykind());
+			
+			// Add Private Data Section
+			EList<RefPrivateData> refPrivateData = retention.getRefprivatedata();
+			
+			if (refPrivateData.size() > 0) {
+				XWPFParagraph tPDSection = DocumentHelper.getParagraph(document, "@StPDName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tPDSection) - 1);
+				tPDSection = document.getParagraphArray(attrSubPos);
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nPDSection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nPDSection, tPDSection);
+
+				for (RefPrivateData refPD : refPrivateData) {
+					PrivateData data = refPD.getRefpr();
+					XWPFParagraph tStPDName = DocumentHelper.getParagraph(document, "@StPDName");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nStPDName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nStPDName, tStPDName);
+					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getPrivatedata()
+							+ " (" + data.getName() + ")");
+				}
+			}
+			
+			// Add Services Section
+			EList<ReferToService> referToService = retention.getRefertoservice();
+			
+			if (referToService.size() > 0) {
+				XWPFParagraph tSSection = DocumentHelper.getParagraph(document, "@StSName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tSSection) - 1);
+				tSSection = document.getParagraphArray(attrSubPos);
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nSSection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nSSection, tSSection);
+
+				for (ReferToService refService : referToService) {
+					Service service = refService.getRefertose();
+					XWPFParagraph tStSName = DocumentHelper.getParagraph(document, "@StSName");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nStSName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nStSName, tStSName);
+					DocumentHelper.replaceText(nStSName, "@StSName", service.getServicename()
+							+ " (" + service.getName() + ")");
+				}
+			}
+			
+			// Add Enforcements Section
+			EList<RefertoEnforcement> referToEnf = retention.getRefertoEnforcement();
+			
+			if (referToEnf.size() > 0) {
+				XWPFParagraph tESection = DocumentHelper.getParagraph(document, "@StEName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tESection) - 1);
+				tESection = document.getParagraphArray(attrSubPos);
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nESection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nESection, tESection);
+
+				for (RefertoEnforcement refEnf : referToEnf) {
+					Enforcement enforcement = refEnf.getRefst();
+					XWPFParagraph tStEName = DocumentHelper.getParagraph(document, "@StEName");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nStEName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nStEName, tStEName);
+					DocumentHelper.replaceText(nStEName, "@StEName", enforcement.getEnforcementName()
+							+ " (" + enforcement.getName() + ")");
+				}
+			}
+			
+			XWPFParagraph tPeriod = DocumentHelper.getParagraph(document, "@StPeriod");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nPeriod = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nPeriod, tPeriod);
+			DocumentHelper.replaceText(nPeriod, "@StPeriod", retention.getPeriod());
+			
+			// Add a newline to the last paragraph
+			DocumentHelper.addLineBreakToParagraph(nPeriod);
+		}
+	}
+	
+	private void writeDisclosureStatements(XWPFDocument document, Policy policy) {
+		for (Disclosure disclosure : Lists.reverse(policy.getDisclosure())) {
+			XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@StEnd");
+			// Get the position of the paragraph after the end tag
+			int endPos = document.getParagraphPos(document.getPosOfParagraph(tEnd)) + 1;
+			tEnd = document.getParagraphArray(endPos);
+			XmlCursor cursor = tEnd.getCTP().newCursor();
+
+			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@StId");
+			XWPFParagraph nName = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nName, tName);
+			DocumentHelper.replaceText(nName, "@StId", disclosure.getName());
+
+			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@StDescription");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nDesc, tDesc);
+			DocumentHelper.replaceText(nDesc, "@StDescription", disclosure.getDescription());
+			
+			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@StType");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nType = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nType, tType);
+			DocumentHelper.replaceText(nType, "@StType", "Disclosure");
+
+			XWPFParagraph tModality = DocumentHelper.getParagraph(document, "@StModality");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nModality = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nModality, tModality);
+			DocumentHelper.replaceText(nModality, "@StModality", disclosure.getModalitykind());
+			
+			XWPFParagraph last = nModality;
+			
+			// Add Private Data Section
+			EList<RefPrivateData> refPrivateData = disclosure.getRefprivatedata();
+			
+			if (refPrivateData.size() > 0) {
+				XWPFParagraph tPDSection = DocumentHelper.getParagraph(document, "@StPDName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tPDSection) - 1);
+				tPDSection = document.getParagraphArray(attrSubPos);
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nPDSection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nPDSection, tPDSection);
+
+				for (RefPrivateData refPD : refPrivateData) {
+					PrivateData data = refPD.getRefpr();
+					XWPFParagraph tStPDName = DocumentHelper.getParagraph(document, "@StPDName");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nStPDName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nStPDName, tStPDName);
+					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getPrivatedata()
+							+ " (" + data.getName() + ")");
+					last = nStPDName;
+				}
+			}
+			
+			// Add Recipients Section
+			EList<ReferToRecipient> refToRecipient =  disclosure.getReferToRecipient();
+			
+			if (refToRecipient.size() > 0) {
+				XWPFParagraph tRSection = DocumentHelper.getParagraph(document, "@StRName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tRSection) - 1);
+				tRSection = document.getParagraphArray(attrSubPos);
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nRSection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nRSection, tRSection);
+
+				for (ReferToRecipient refRec : refToRecipient) {
+					Recipient recipient = refRec.getRefertore();
+					XWPFParagraph tStRName = DocumentHelper.getParagraph(document, "@StRName");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nStRName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nStRName, tStRName);
+					DocumentHelper.replaceText(nStRName, "@StRName", recipient.getRecipientname()
+							+ " (" + recipient.getName() + ")");
+					last = nStRName;
+				}
+			}
+			
+			// Add Services Section
+			EList<ReferToService> referToService = disclosure.getRefertoservice();
+			
+			if (referToService.size() > 0) {
+				XWPFParagraph tSSection = DocumentHelper.getParagraph(document, "@StSName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tSSection) - 1);
+				tSSection = document.getParagraphArray(attrSubPos);
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nSSection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nSSection, tSSection);
+
+				for (ReferToService refService : referToService) {
+					Service service = refService.getRefertose();
+					XWPFParagraph tStSName = DocumentHelper.getParagraph(document, "@StSName");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nStSName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nStSName, tStSName);
+					DocumentHelper.replaceText(nStSName, "@StSName", service.getServicename()
+							+ " (" + service.getName() + ")");
+					last = nStSName;
+				}
+			}
+			
+			// Add Enforcements Section
+			EList<RefertoEnforcement> referToEnf = disclosure.getRefertoEnforcement();
+			
+			if (referToEnf.size() > 0) {
+				XWPFParagraph tESection = DocumentHelper.getParagraph(document, "@StEName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tESection) - 1);
+				tESection = document.getParagraphArray(attrSubPos);
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nESection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nESection, tESection);
+
+				for (RefertoEnforcement refEnf : referToEnf) {
+					Enforcement enforcement = refEnf.getRefst();
+					XWPFParagraph tStEName = DocumentHelper.getParagraph(document, "@StEName");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nStEName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nStEName, tStEName);
+					DocumentHelper.replaceText(nStEName, "@StEName", enforcement.getEnforcementName()
+							+ " (" + enforcement.getName() + ")");
+					last = nStEName;
+				}
+			}
+			
+			// Add a newline to the last paragraph
+			DocumentHelper.addLineBreakToParagraph(last);
+		}
+	}
+	
+	private void writeCollectionStatements(XWPFDocument document, Policy policy) {
+		for (Collection collection : Lists.reverse(policy.getCollection())) {
+			XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@StEnd");
+			// Get the position of the paragraph after the end tag
+			int endPos = document.getParagraphPos(document.getPosOfParagraph(tEnd)) + 1;
+			tEnd = document.getParagraphArray(endPos);
+			XmlCursor cursor = tEnd.getCTP().newCursor();
+
+			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@StId");
+			XWPFParagraph nName = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nName, tName);
+			DocumentHelper.replaceText(nName, "@StId", collection.getName());
+
+			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@StDescription");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nDesc, tDesc);
+			DocumentHelper.replaceText(nDesc, "@StDescription", collection.getDescription());
+			
+			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@StType");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nType = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nType, tType);
+			DocumentHelper.replaceText(nType, "@StType", "Collection");
+
+			XWPFParagraph tModality = DocumentHelper.getParagraph(document, "@StModality");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nModality = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nModality, tModality);
+			DocumentHelper.replaceText(nModality, "@StModality", collection.getModalitykind());
+			
+			XWPFParagraph last = nModality;
+			
+			// Add Private Data Section
+			EList<RefPrivateData> refPrivateData = collection.getRefprivatedata();
+			
+			if (refPrivateData.size() > 0) {
+				XWPFParagraph tPDSection = DocumentHelper.getParagraph(document, "@StPDName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tPDSection) - 1);
+				tPDSection = document.getParagraphArray(attrSubPos);
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nPDSection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nPDSection, tPDSection);
+
+				for (RefPrivateData refPD : refPrivateData) {
+					PrivateData data = refPD.getRefpr();
+					XWPFParagraph tStPDName = DocumentHelper.getParagraph(document, "@StPDName");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nStPDName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nStPDName, tStPDName);
+					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getPrivatedata()
+							+ " (" + data.getName() + ")");
+					last = nStPDName;
+				}
+			}
+			
+			// Add Services Section
+			EList<ReferToService> referToService = collection.getRefertoservice();
+			
+			if (referToService.size() > 0) {
+				XWPFParagraph tSSection = DocumentHelper.getParagraph(document, "@StSName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tSSection) - 1);
+				tSSection = document.getParagraphArray(attrSubPos);
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nSSection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nSSection, tSSection);
+
+				for (ReferToService refService : referToService) {
+					Service service = refService.getRefertose();
+					XWPFParagraph tStSName = DocumentHelper.getParagraph(document, "@StSName");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nStSName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nStSName, tStSName);
+					DocumentHelper.replaceText(nStSName, "@StSName", service.getServicename()
+							+ " (" + service.getName() + ")");
+					last = nStSName;
+				}
+			}
+			
+			// Add Enforcements Section
+			EList<RefertoEnforcement> referToEnf = collection.getRefertoEnforcement();
+			
+			if (referToEnf.size() > 0) {
+				XWPFParagraph tESection = DocumentHelper.getParagraph(document, "@StEName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tESection) - 1);
+				tESection = document.getParagraphArray(attrSubPos);
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nESection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nESection, tESection);
+
+				for (RefertoEnforcement refEnf : referToEnf) {
+					Enforcement enforcement = refEnf.getRefst();
+					XWPFParagraph tStEName = DocumentHelper.getParagraph(document, "@StEName");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nStEName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nStEName, tStEName);
+					DocumentHelper.replaceText(nStEName, "@StEName", enforcement.getEnforcementName()
+							+ " (" + enforcement.getName() + ")");
+					last = nStEName;
+				}
+			}
+			
+			// Add a newline to the last paragraph
+			DocumentHelper.addLineBreakToParagraph(last);
+		}
+	}
 }
