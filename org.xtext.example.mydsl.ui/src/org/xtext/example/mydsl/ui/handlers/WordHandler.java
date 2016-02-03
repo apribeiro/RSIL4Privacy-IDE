@@ -29,7 +29,10 @@ import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.xtext.example.mydsl.MyDslStandaloneSetup;
 import org.xtext.example.mydsl.myDsl.Attribute;
+import org.xtext.example.mydsl.myDsl.Enforcement;
+import org.xtext.example.mydsl.myDsl.Partof;
 import org.xtext.example.mydsl.myDsl.PrivateData;
+import org.xtext.example.mydsl.myDsl.Recipient;
 import org.xtext.example.mydsl.myDsl.RefPrivateData;
 import org.xtext.example.mydsl.myDsl.Service;
 import org.xtext.example.mydsl.myDsl.ServicePartof;
@@ -114,6 +117,8 @@ public class WordHandler extends AbstractHandler {
 
 					writePrivateData(policy, document);
 					writeServices(policy, document);
+					writeRecipients(policy, document);
+					writeEnforcements(policy, document);
 
 					// Write the Document in file system
 					File to = new File(project.getLocation().toOSString()
@@ -251,4 +256,114 @@ public class WordHandler extends AbstractHandler {
 		}
 	}
 
+	private void writeRecipients(PolicyImpl policy, XWPFDocument document) {
+		for (Recipient recipient : Lists.reverse(policy.getRecipient())) {
+			XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@REnd");
+			// Get the position of the paragraph after the end tag
+			int endPos = document.getParagraphPos(document.getPosOfParagraph(tEnd)) + 1;
+			tEnd = document.getParagraphArray(endPos);
+			XmlCursor cursor = tEnd.getCTP().newCursor();
+
+			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@RName");
+			XWPFParagraph nName = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nName, tName);
+			DocumentHelper.replaceText(nName, "@RName", recipient.getRecipientname()
+					+ " (" + recipient.getName() + ")");
+
+			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@RDescription");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nDesc, tDesc);
+			DocumentHelper.replaceText(nDesc, "@RDescription", recipient.getDescription());
+			
+			XWPFParagraph tScope = DocumentHelper.getParagraph(document, "@RScope");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nScope = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nScope, tScope);
+			DocumentHelper.replaceText(nScope, "@RScope", recipient.getRecipientScopeKind());
+			
+			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@RType");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nType = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nType, tType);
+			DocumentHelper.replaceText(nType, "@RType", recipient.getRecipientTypeKind());
+
+			if (recipient.getPartof().size() > 0) {
+				XWPFParagraph nSRName = null;
+				
+				for (Partof sub : recipient.getPartof()) {
+					Recipient subRecipient = sub.getPartof();
+					XWPFParagraph tSRName = DocumentHelper.getParagraph(document, "@SRName");
+					cursor = tEnd.getCTP().newCursor();
+					nSRName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nSRName, tSRName);
+					DocumentHelper.replaceText(nSRName, "@SRName", subRecipient.getRecipientname()
+							+ " (" + subRecipient.getName() + ")");
+					DocumentHelper.replaceText(nSRName, "@SRDescription", subRecipient.getDescription());
+				}
+
+				// Add a newline to the last paragraph
+				if (nSRName != null) {
+					DocumentHelper.addLineBreakToParagraph(nSRName);
+				}
+			} else {
+				DocumentHelper.addLineBreakToParagraph(nType);
+			}
+		}
+
+		// Delete Services Tags paragraphs
+		XWPFParagraph tStart = DocumentHelper.getParagraph(document, "@RStart");
+		int posStart = document.getParagraphPos(document.getPosOfParagraph(tStart));
+		XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@REnd");
+		int posEnd = document.getParagraphPos(document.getPosOfParagraph(tEnd));
+		List<XWPFParagraph> tParagraphs = new ArrayList<XWPFParagraph>(document.getParagraphs().subList(posStart, posEnd + 1));
+
+		for (XWPFParagraph tp : tParagraphs) {
+			document.removeBodyElement(document.getPosOfParagraph(tp));
+		}
+	}
+
+	private void writeEnforcements(PolicyImpl policy, XWPFDocument document) {
+		for (Enforcement enforcement : Lists.reverse(policy.getEnforcement())) {
+			XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@EEnd");
+			// Get the position of the paragraph after the end tag
+			int endPos = document.getParagraphPos(document.getPosOfParagraph(tEnd)) + 1;
+			tEnd = document.getParagraphArray(endPos);
+			XmlCursor cursor = tEnd.getCTP().newCursor();
+
+			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@EName");
+			XWPFParagraph nName = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nName, tName);
+			DocumentHelper.replaceText(nName, "@EName", enforcement.getEnforcementName()
+					+ " (" + enforcement.getName() + ")");
+
+			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@EDescription");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nDesc, tDesc);
+			DocumentHelper.replaceText(nDesc, "@EDescription", enforcement.getEnforcementDescription());
+			
+			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@EType");
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nType = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nType, tType);
+			DocumentHelper.replaceText(nType, "@EType", enforcement.getEnforcementKind());
+
+			// Add a newline to the last paragraph
+			DocumentHelper.addLineBreakToParagraph(nType);
+		}
+
+		// Delete Services Tags paragraphs
+		XWPFParagraph tStart = DocumentHelper.getParagraph(document, "@EStart");
+		int posStart = document.getParagraphPos(document.getPosOfParagraph(tStart));
+		XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@EEnd");
+		int posEnd = document.getParagraphPos(document.getPosOfParagraph(tEnd));
+		List<XWPFParagraph> tParagraphs = new ArrayList<XWPFParagraph>(document.getParagraphs().subList(posStart, posEnd + 1));
+
+		for (XWPFParagraph tp : tParagraphs) {
+			document.removeBodyElement(document.getPosOfParagraph(tp));
+		}
+	}
+	
+	// TODO Write Statements 
 }
