@@ -19,6 +19,7 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.viewers.ISelection;
@@ -36,7 +37,7 @@ import org.xtext.example.mydsl.myDsl.Recipient;
 import org.xtext.example.mydsl.myDsl.RefPrivateData;
 import org.xtext.example.mydsl.myDsl.Service;
 import org.xtext.example.mydsl.myDsl.ServicePartof;
-import org.xtext.example.mydsl.myDsl.impl.PolicyImpl;
+import org.xtext.example.mydsl.myDsl.Policy;
 import org.xtext.example.mydsl.ui.windows.MenuCommand;
 import org.xtext.example.mydsl.ui.windows.MenuCommandWindow;
 
@@ -108,7 +109,7 @@ public class WordHandler extends AbstractHandler {
 				Resource resource = resourceSet.getResource(
 						URI.createURI("platform:/resource/" + file.getFullPath().toString()), true);
 				//URI.createURI("platform:/resource/org.xtext.example.mydsl/src/example.mydsl"), true);
-				PolicyImpl policy = (PolicyImpl) resource.getContents().get(0);
+				Policy policy = (Policy) resource.getContents().get(0);
 
 				// TODO Generate Word file
 				try {
@@ -140,7 +141,7 @@ public class WordHandler extends AbstractHandler {
 		new Thread(runnable).start();
 	}
 
-	private void writePrivateData(PolicyImpl policy, XWPFDocument document) {
+	private void writePrivateData(Policy policy, XWPFDocument document) {
 		for (PrivateData data : Lists.reverse(policy.getPrivateData())) {
 			XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@PDEnd");
 			// Get the position of the paragraph after the end tag
@@ -166,8 +167,16 @@ public class WordHandler extends AbstractHandler {
 			DocumentHelper.cloneParagraph(nDesc, tDesc);
 			DocumentHelper.replaceText(nDesc, "@PDDescription", data.getPrivatedata());
 
+			// Copy Attributes Section
+			XWPFParagraph tAttrSection = DocumentHelper.getParagraph(document, "@PDAttrName");
+			int attrSecPos = document.getParagraphPos(document.getPosOfParagraph(tAttrSection) - 1);
+			tAttrSection = document.getParagraphArray(attrSecPos);
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nAttrSection = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nAttrSection, tAttrSection);
+			
 			XWPFParagraph nAttr = null;
-
+			
 			for (Attribute attr : data.getAttribute()) {
 				XWPFParagraph tAttr = DocumentHelper.getParagraph(document, "@PDAttrName");
 				cursor = tEnd.getCTP().newCursor();
@@ -195,7 +204,8 @@ public class WordHandler extends AbstractHandler {
 		}
 	}
 
-	private void writeServices(PolicyImpl policy, XWPFDocument document) {
+	
+	private void writeServices(Policy policy, XWPFDocument document) {
 		for (Service service : Lists.reverse(policy.getService())) {
 			XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@SEnd");
 			// Get the position of the paragraph after the end tag
@@ -215,17 +225,37 @@ public class WordHandler extends AbstractHandler {
 			DocumentHelper.cloneParagraph(nDesc, tDesc);
 			DocumentHelper.replaceText(nDesc, "@SDescription", service.getDescription());
 
-			for (ServicePartof sub : service.getServicepartof()) {
-				Service subService = sub.getRefertoservice();
-				XWPFParagraph tSSName = DocumentHelper.getParagraph(document, "@SSName");
+			EList<ServicePartof> servicePartOf = service.getServicepartof();
+			
+			if (servicePartOf.size() > 0) {
+				// Copy Sub-Services Section
+				XWPFParagraph tSubSection = DocumentHelper.getParagraph(document, "@SSName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tSubSection) - 1);
+				tSubSection = document.getParagraphArray(attrSubPos);
 				cursor = tEnd.getCTP().newCursor();
-				XWPFParagraph nSSName = document.insertNewParagraph(cursor);
-				DocumentHelper.cloneParagraph(nSSName, tSSName);
-				DocumentHelper.replaceText(nSSName, "@SSName", subService.getServicename()
-						+ " (" + subService.getName() + ")");
-				DocumentHelper.replaceText(nSSName, "@SSDescription", subService.getDescription());
+				XWPFParagraph nSubSection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nSubSection, tSubSection);
+				
+				for (ServicePartof sub : servicePartOf) {
+					Service subService = sub.getRefertoservice();
+					XWPFParagraph tSSName = DocumentHelper.getParagraph(document, "@SSName");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nSSName = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nSSName, tSSName);
+					DocumentHelper.replaceText(nSSName, "@SSName", subService.getServicename()
+							+ " (" + subService.getName() + ")");
+					DocumentHelper.replaceText(nSSName, "@SSDescription", subService.getDescription());
+				}
 			}
 
+			// Copy Private Data Section
+			XWPFParagraph tPDSection = DocumentHelper.getParagraph(document, "@SPDName");
+			int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tPDSection) - 1);
+			tPDSection = document.getParagraphArray(attrSubPos);
+			cursor = tEnd.getCTP().newCursor();
+			XWPFParagraph nPDSection = document.insertNewParagraph(cursor);
+			DocumentHelper.cloneParagraph(nPDSection, tPDSection);
+			
 			XWPFParagraph nSPDName = null;
 
 			for (RefPrivateData refPD : service.getRefprivatedata()) {
@@ -256,7 +286,8 @@ public class WordHandler extends AbstractHandler {
 		}
 	}
 
-	private void writeRecipients(PolicyImpl policy, XWPFDocument document) {
+	
+	private void writeRecipients(Policy policy, XWPFDocument document) {
 		for (Recipient recipient : Lists.reverse(policy.getRecipient())) {
 			XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@REnd");
 			// Get the position of the paragraph after the end tag
@@ -288,10 +319,20 @@ public class WordHandler extends AbstractHandler {
 			DocumentHelper.cloneParagraph(nType, tType);
 			DocumentHelper.replaceText(nType, "@RType", recipient.getRecipientTypeKind());
 
-			if (recipient.getPartof().size() > 0) {
+			EList<Partof> partOf = recipient.getPartof();
+			
+			if (partOf.size() > 0) {
+				// Copy Sub-Recipients Section
+				XWPFParagraph tSubSection = DocumentHelper.getParagraph(document, "@SRName");
+				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tSubSection) - 1);
+				tSubSection = document.getParagraphArray(attrSubPos);
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nSubSection = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nSubSection, tSubSection);
+				
 				XWPFParagraph nSRName = null;
 				
-				for (Partof sub : recipient.getPartof()) {
+				for (Partof sub : partOf) {
 					Recipient subRecipient = sub.getPartof();
 					XWPFParagraph tSRName = DocumentHelper.getParagraph(document, "@SRName");
 					cursor = tEnd.getCTP().newCursor();
@@ -323,7 +364,8 @@ public class WordHandler extends AbstractHandler {
 		}
 	}
 
-	private void writeEnforcements(PolicyImpl policy, XWPFDocument document) {
+	
+	private void writeEnforcements(Policy policy, XWPFDocument document) {
 		for (Enforcement enforcement : Lists.reverse(policy.getEnforcement())) {
 			XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@EEnd");
 			// Get the position of the paragraph after the end tag
