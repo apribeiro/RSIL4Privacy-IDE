@@ -16,9 +16,9 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2;
-import org.eclipse.xtext.generator.IGenerator;
 import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.ui.resource.IResourceSetProvider;
+import org.xtext.example.mydsl.generator.MyDslGenerator;
 import org.xtext.example.mydsl.ui.windows.MenuCommand;
 import org.xtext.example.mydsl.ui.windows.MenuCommandWindow;
 
@@ -31,7 +31,7 @@ public class EddyHandler extends AbstractHandler {
 	private static final String FILE_EXT = ".mydsl";
 	
 	@Inject
-    private IGenerator generator;
+    private MyDslGenerator generator;
  
     @Inject
     private Provider<EclipseResourceFileSystemAccess2> fileAccessProvider;

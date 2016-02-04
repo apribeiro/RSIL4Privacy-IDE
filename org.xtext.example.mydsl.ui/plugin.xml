@@ -58,6 +58,14 @@
         	class="org.xtext.example.mydsl.ui.MyDslExecutableExtensionFactory:org.xtext.example.mydsl.ui.handlers.EddyHandler"
             commandId="org.xtext.example.mydsl.ui.commandEddy">
         </handler>
+        <handler
+        	class="org.xtext.example.mydsl.ui.MyDslExecutableExtensionFactory:org.xtext.example.mydsl.ui.handlers.JSONHandler"
+            commandId="org.xtext.example.mydsl.ui.commandJSON">
+        </handler>
+        <handler
+        	class="org.xtext.example.mydsl.ui.MyDslExecutableExtensionFactory:org.xtext.example.mydsl.ui.handlers.TextHandler"
+            commandId="org.xtext.example.mydsl.ui.commandText">
+        </handler>
     </extension>
     <extension point="org.eclipse.core.expressions.definitions">
         <definition id="org.xtext.example.mydsl.MyDsl.Editor.opened">
@@ -373,6 +381,11 @@
                  style="push">
            </command>
            <command
+                 commandId="org.xtext.example.mydsl.ui.commandText"
+                 label="Text"
+                 style="push">
+           </command>
+           <command
                  commandId="org.xtext.example.mydsl.ui.commandUML"
                  label="UML"
                  style="push">
@@ -427,6 +440,11 @@
            <command
                  commandId="org.xtext.example.mydsl.ui.commandEddy"
                  label="Eddy"
+                 style="push">
+           </command>
+           <command
+                 commandId="org.xtext.example.mydsl.ui.commandText"
+                 label="Text"
                  style="push">
            </command>
            <command
@@ -580,13 +598,16 @@
            name="Word">
      </command>
      <command
-           defaultHandler="org.xtext.example.mydsl.ui.handlers.JSONHandler"
            id="org.xtext.example.mydsl.ui.commandJSON"
            name="JSON">
      </command>
      <command
            id="org.xtext.example.mydsl.ui.commandEddy"
            name="Eddy">
+     </command>
+     <command
+           id="org.xtext.example.mydsl.ui.commandText"
+           name="Text">
      </command>
      <command
            defaultHandler="org.xtext.example.mydsl.ui.handlers.UMLHandler"

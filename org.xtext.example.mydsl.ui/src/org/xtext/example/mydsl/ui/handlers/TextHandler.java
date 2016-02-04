@@ -25,7 +25,7 @@ import org.xtext.example.mydsl.ui.windows.MenuCommandWindow;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 
-public class JSONHandler extends AbstractHandler {
+public class TextHandler extends AbstractHandler {
 
 	private static final String GEN_FOLDER = "src-gen";
 	private static final String FILE_EXT = ".mydsl";
@@ -87,7 +87,7 @@ public class JSONHandler extends AbstractHandler {
         URI uri = URI.createPlatformResourceURI(file.getFullPath().toString(), true);
         ResourceSet rs = resourceSetProvider.get(project);
         Resource r = rs.getResource(uri, true);
-        generator.setGenMode(MyDslGenerator.JSON_MODE);
+        generator.setGenMode(MyDslGenerator.TEXT_MODE);
         generator.doGenerate(r, fsa);
 	}
 }
