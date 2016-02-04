@@ -385,11 +385,6 @@
                  label="Text"
                  style="push">
            </command>
-           <command
-                 commandId="org.xtext.example.mydsl.ui.commandUML"
-                 label="UML"
-                 style="push">
-           </command>
         </menu>
         <command
               commandId="org.xtext.example.mydsl.ui.commandCheckQuality"
@@ -445,11 +440,6 @@
            <command
                  commandId="org.xtext.example.mydsl.ui.commandText"
                  label="Text"
-                 style="push">
-           </command>
-           <command
-                 commandId="org.xtext.example.mydsl.ui.commandUML"
-                 label="UML"
                  style="push">
            </command>
            <visibleWhen
@@ -608,11 +598,6 @@
      <command
            id="org.xtext.example.mydsl.ui.commandText"
            name="Text">
-     </command>
-     <command
-           defaultHandler="org.xtext.example.mydsl.ui.handlers.UMLHandler"
-           id="org.xtext.example.mydsl.ui.commandUML"
-           name="UML">
      </command>
      <command
            defaultHandler="org.xtext.example.mydsl.ui.handlers.CheckQualityHandler"
