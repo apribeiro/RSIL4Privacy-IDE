@@ -22,6 +22,7 @@ import org.xtext.example.mydsl.myDsl.ServicePartof
 import org.xtext.example.mydsl.myDsl.Service
 import org.xtext.example.mydsl.myDsl.Partof
 import org.xtext.example.mydsl.myDsl.Recipient
+import com.google.inject.Inject
 
 /**
  * Generates code from your model files on save.
@@ -30,9 +31,29 @@ import org.xtext.example.mydsl.myDsl.Recipient
  */
 class MyDslGenerator implements IGenerator {
 	
+	public static final String JSON_MODE = "JsonMode";
+	public static final String TEXT_MODE = "TextMode";
+	
+	@Inject
+	MyDsl2JsonGenerator jsonGen
+	@Inject
+	MyDsl2TextGenerator textGen
+	
+	private String genMode;
+	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-		fsa.generateFile(resource.className + '.policy', 		
-		resource.allContents.filter(typeof(Policy)).map[compilepo].join(' '))    
+		if (genMode == null) {
+			fsa.generateFile(resource.className + '.policy', 		
+			resource.allContents.filter(typeof(Policy)).map[compilepo].join(' '))
+		} else if (genMode.equals(JSON_MODE)) {
+			jsonGen.doGenerate(resource, fsa);
+		} else if (genMode.equals(TEXT_MODE)) {
+			textGen.doGenerate(resource, fsa);
+		}
+	}
+	
+	def public void setGenMode(String mode) {
+		this.genMode = mode;
 	}
 	
 	def className(Resource res) {
