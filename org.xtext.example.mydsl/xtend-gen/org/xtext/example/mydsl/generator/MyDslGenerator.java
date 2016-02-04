@@ -5,6 +5,7 @@ package org.xtext.example.mydsl.generator;
 
 import com.google.common.base.Objects;
 import com.google.common.collect.Iterators;
+import com.google.inject.Inject;
 import java.util.Iterator;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
@@ -17,6 +18,8 @@ import org.eclipse.xtext.generator.IGenerator;
 import org.eclipse.xtext.xbase.lib.Conversions;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.xtext.example.mydsl.generator.MyDsl2JsonGenerator;
+import org.xtext.example.mydsl.generator.MyDsl2TextGenerator;
 import org.xtext.example.mydsl.myDsl.Attribute;
 import org.xtext.example.mydsl.myDsl.Collection;
 import org.xtext.example.mydsl.myDsl.Disclosure;
@@ -41,18 +44,47 @@ import org.xtext.example.mydsl.myDsl.Usage;
  */
 @SuppressWarnings("all")
 public class MyDslGenerator implements IGenerator {
+  public final static String JSON_MODE = "JsonMode";
+  
+  public final static String TEXT_MODE = "TextMode";
+  
+  @Inject
+  private MyDsl2JsonGenerator jsonGen;
+  
+  @Inject
+  private MyDsl2TextGenerator textGen;
+  
+  private String genMode;
+  
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
-    String _className = this.className(resource);
-    String _plus = (_className + ".policy");
-    TreeIterator<EObject> _allContents = resource.getAllContents();
-    Iterator<Policy> _filter = Iterators.<Policy>filter(_allContents, Policy.class);
-    final Function1<Policy, CharSequence> _function = (Policy it) -> {
-      return this.compilepo(it);
-    };
-    Iterator<CharSequence> _map = IteratorExtensions.<Policy, CharSequence>map(_filter, _function);
-    String _join = IteratorExtensions.join(_map, " ");
-    fsa.generateFile(_plus, _join);
+    boolean _equals = Objects.equal(this.genMode, null);
+    if (_equals) {
+      String _className = this.className(resource);
+      String _plus = (_className + ".policy");
+      TreeIterator<EObject> _allContents = resource.getAllContents();
+      Iterator<Policy> _filter = Iterators.<Policy>filter(_allContents, Policy.class);
+      final Function1<Policy, CharSequence> _function = (Policy it) -> {
+        return this.compilepo(it);
+      };
+      Iterator<CharSequence> _map = IteratorExtensions.<Policy, CharSequence>map(_filter, _function);
+      String _join = IteratorExtensions.join(_map, " ");
+      fsa.generateFile(_plus, _join);
+    } else {
+      boolean _equals_1 = this.genMode.equals(MyDslGenerator.JSON_MODE);
+      if (_equals_1) {
+        this.jsonGen.doGenerate(resource, fsa);
+      } else {
+        boolean _equals_2 = this.genMode.equals(MyDslGenerator.TEXT_MODE);
+        if (_equals_2) {
+          this.textGen.doGenerate(resource, fsa);
+        }
+      }
+    }
+  }
+  
+  public void setGenMode(final String mode) {
+    this.genMode = mode;
   }
   
   public String className(final Resource res) {
