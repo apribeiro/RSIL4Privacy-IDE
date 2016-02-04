@@ -191,5 +191,3 @@ def compilepart (Partof part)
 def compilerreEn (RefertoEnforcement en)
 '''«en.refst.name»'''
 }   
-
-
