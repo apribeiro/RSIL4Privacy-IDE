@@ -1,0 +1,63 @@
+Package Facebook.Recipients.rslil4priv {
+
+Recipient R1 { 
+	Name "FacebookFamily",
+	Description "Facebook family companies",
+	Scope Internal, 
+	Type Organization
+};
+
+Recipient R2 {
+	Name "FacebookOwner",
+	Description "Owner of all or part of Facebook Services",
+	PartOf Recipient R1,
+	Scope Internal, 
+	Type Organization
+};
+
+Recipient R3 { 
+	Name "Advertising",
+	Description "Advertising, measurement or analytics partners",
+	Scope External,
+	Type Organization
+};
+
+Recipient R4 { 
+	Name "ServiceProvider",
+	Description "Vendors, service providers, and other partners who globally support our business",
+	PartOf Recipient R3, 
+	Scope External, 
+	Type Organization
+};
+
+Recipient R5 {
+	Name "ThirdParties",
+	Description  "Third parties",
+	PartOf Recipient R3, 
+	Scope External, 
+	Type Organization
+};
+
+Recipient R6 { 
+	Name "Friends&Followers",
+	Description "People you share and communicate with", 
+	Scope Internal/External,
+	Type Individual
+};
+
+Recipient R7 { 
+	Name "Members",
+	Description "People on Facebook Services",
+	PartOf Recipient R6, 
+	Scope Internal, 
+	Type Individual
+};
+
+Recipient R8 { 
+	Name "Visitors",
+		Description "People on and off Facebook Services",
+	PartOf Recipient R7, 
+	Scope Internal, 
+	Type Individual
+};
+};

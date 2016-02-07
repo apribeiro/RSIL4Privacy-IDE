@@ -1,0 +1,32 @@
+Package Facebook.Enforcements.rslil4priv { 
+
+Enforcement En1 { 
+	Name "Activity Log tool",
+	Description "Users are able to manage the content and information shared when using Facebook",
+	Type Tool
+};
+
+Enforcement En2 { 
+	Name "Download Your Information tool",
+	Description "Users are able to download information associated with their Facebook account",
+	Type Tool
+};
+
+Enforcement En3 { 
+	Name "Policy changes notification",
+	Description "Users are notified regarding changes to the privacy policy",
+	Type Action
+};
+
+Enforcement En4 {
+	Name "Account Deletion",
+	Description "Delete all content associated with users' Facebook account",
+	Type Action
+};
+
+Enforcement En5 {
+	Name "Account Deactivation",
+	Description "Deactivate users' Facebook account",
+	Type Action
+};
+};
