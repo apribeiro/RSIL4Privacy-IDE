@@ -216,7 +216,7 @@ public class WordHandler extends AbstractHandler {
 	private void writeServices(Policy policy, XWPFDocument document) {
 		HashMap<Service, ArrayList<Service>> servicesMap = new HashMap<Service, ArrayList<Service>>();
 		
-		for (Service service : Lists.reverse(policy.getService())) {
+		for (Service service : policy.getService()) {
 			if (service.getServicepartof().size() > 0) {
 				for (ServicePartof sub : service.getServicepartof()) {
 					Service subService = sub.getRefertoservice();
@@ -273,7 +273,12 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.cloneParagraph(nSSName, tSSName);
 					DocumentHelper.replaceText(nSSName, "@SSName", subService.getServicename()
 							+ " (" + subService.getName() + ")");
-					DocumentHelper.replaceText(nSSName, "@SSDescription", subService.getDescription());
+					
+					XWPFParagraph tSSDescription = DocumentHelper.getParagraph(document, "@SSDescription");
+					cursor = tEnd.getCTP().newCursor();
+					XWPFParagraph nSSDescription = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nSSDescription, tSSDescription);
+					DocumentHelper.replaceText(nSSDescription, "@SSDescription", subService.getDescription());
 				}
 			}
 
