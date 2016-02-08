@@ -316,7 +316,29 @@ public class WordHandler extends AbstractHandler {
 	}
 
 	private void writeRecipients(Policy policy, XWPFDocument document) {
+		HashMap<Recipient, ArrayList<Recipient>> recipientsMap = new HashMap<Recipient, ArrayList<Recipient>>();
+		
 		for (Recipient recipient : Lists.reverse(policy.getRecipient())) {
+			if (recipient.getPartof().size() > 0) {
+				for (Partof sub : recipient.getPartof()) {
+					Recipient subRecipient = sub.getPartof();
+					
+					if (!recipientsMap.containsKey(subRecipient)) {
+						recipientsMap.put(subRecipient, new ArrayList<Recipient>());
+						recipientsMap.get(subRecipient).add(recipient);
+					} else {
+						recipientsMap.get(subRecipient).add(recipient);
+					}
+				}
+			} else {
+				if (!recipientsMap.containsKey(recipient)) {
+					recipientsMap.put(recipient, new ArrayList<Recipient>());
+				}
+			}
+		}
+		
+		
+		for (Recipient recipient : recipientsMap.keySet()) {
 			XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@REnd");
 			// Get the position of the paragraph after the end tag
 			int endPos = document.getParagraphPos(document.getPosOfParagraph(tEnd)) + 1;
@@ -347,9 +369,9 @@ public class WordHandler extends AbstractHandler {
 			DocumentHelper.cloneParagraph(nType, tType);
 			DocumentHelper.replaceText(nType, "@RType", recipient.getRecipientTypeKind());
 
-			EList<Partof> partOf = recipient.getPartof();
+			ArrayList<Recipient> subRecipients = recipientsMap.get(recipient);
 			
-			if (partOf.size() > 0) {
+			if (subRecipients.size() > 0) {
 				// Copy Sub-Recipients Section
 				XWPFParagraph tSubSection = DocumentHelper.getParagraph(document, "@SRName");
 				int attrSubPos = document.getParagraphPos(document.getPosOfParagraph(tSubSection) - 1);
@@ -360,8 +382,7 @@ public class WordHandler extends AbstractHandler {
 				
 				XWPFParagraph nSRName = null;
 				
-				for (Partof sub : partOf) {
-					Recipient subRecipient = sub.getPartof();
+				for (Recipient subRecipient : subRecipients) {
 					XWPFParagraph tSRName = DocumentHelper.getParagraph(document, "@SRName");
 					cursor = tEnd.getCTP().newCursor();
 					nSRName = document.insertNewParagraph(cursor);
