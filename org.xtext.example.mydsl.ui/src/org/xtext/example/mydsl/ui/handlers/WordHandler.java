@@ -216,7 +216,7 @@ public class WordHandler extends AbstractHandler {
 	private void writeServices(Policy policy, XWPFDocument document) {
 		HashMap<Service, ArrayList<Service>> servicesMap = new HashMap<Service, ArrayList<Service>>();
 		
-		for (Service service : policy.getService()) {
+		for (Service service : Lists.reverse(policy.getService())) {
 			if (service.getServicepartof().size() > 0) {
 				for (ServicePartof sub : service.getServicepartof()) {
 					Service subService = sub.getRefertoservice();
@@ -255,7 +255,7 @@ public class WordHandler extends AbstractHandler {
 			DocumentHelper.cloneParagraph(nDesc, tDesc);
 			DocumentHelper.replaceText(nDesc, "@SDescription", service.getDescription());
 
-			ArrayList<Service> subservices = servicesMap.get(service);
+			List<Service> subservices = Lists.reverse(servicesMap.get(service));
 			
 			if (subservices.size() > 0) {
 				// Copy Sub-Services Section
@@ -342,7 +342,6 @@ public class WordHandler extends AbstractHandler {
 			}
 		}
 		
-		
 		for (Recipient recipient : recipientsMap.keySet()) {
 			XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@REnd");
 			// Get the position of the paragraph after the end tag
@@ -374,7 +373,7 @@ public class WordHandler extends AbstractHandler {
 			DocumentHelper.cloneParagraph(nType, tType);
 			DocumentHelper.replaceText(nType, "@RType", recipient.getRecipientTypeKind());
 
-			ArrayList<Recipient> subRecipients = recipientsMap.get(recipient);
+			List<Recipient> subRecipients = Lists.reverse(recipientsMap.get(recipient));
 			
 			if (subRecipients.size() > 0) {
 				// Copy Sub-Recipients Section
@@ -385,21 +384,26 @@ public class WordHandler extends AbstractHandler {
 				XWPFParagraph nSubSection = document.insertNewParagraph(cursor);
 				DocumentHelper.cloneParagraph(nSubSection, tSubSection);
 				
-				XWPFParagraph nSRName = null;
+				XWPFParagraph nSRDescription = null;
 				
 				for (Recipient subRecipient : subRecipients) {
 					XWPFParagraph tSRName = DocumentHelper.getParagraph(document, "@SRName");
 					cursor = tEnd.getCTP().newCursor();
-					nSRName = document.insertNewParagraph(cursor);
+					XWPFParagraph nSRName = document.insertNewParagraph(cursor);
 					DocumentHelper.cloneParagraph(nSRName, tSRName);
 					DocumentHelper.replaceText(nSRName, "@SRName", subRecipient.getRecipientname()
 							+ " (" + subRecipient.getName() + ")");
-					DocumentHelper.replaceText(nSRName, "@SRDescription", subRecipient.getDescription());
+					
+					XWPFParagraph tSRDescription = DocumentHelper.getParagraph(document, "@SRDescription");
+					cursor = tEnd.getCTP().newCursor();
+					nSRDescription = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nSRDescription, tSRDescription);
+					DocumentHelper.replaceText(nSRDescription, "@SRDescription", subRecipient.getDescription());
 				}
 
 				// Add a newline to the last paragraph
-				if (nSRName != null) {
-					DocumentHelper.addLineBreakToParagraph(nSRName);
+				if (nSRDescription != null) {
+					DocumentHelper.addLineBreakToParagraph(nSRDescription);
 				}
 			} else {
 				DocumentHelper.addLineBreakToParagraph(nType);
