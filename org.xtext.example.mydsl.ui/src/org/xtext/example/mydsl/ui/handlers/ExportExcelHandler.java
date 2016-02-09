@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
@@ -24,6 +26,7 @@ import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.xtext.example.mydsl.MyDslStandaloneSetup;
+import org.xtext.example.mydsl.myDsl.Collection;
 import org.xtext.example.mydsl.myDsl.Policy;
 import org.xtext.example.mydsl.ui.windows.MenuCommand;
 import org.xtext.example.mydsl.ui.windows.MenuCommandWindow;
@@ -99,7 +102,7 @@ public class ExportExcelHandler extends AbstractHandler {
 
 				try {
 					InputStream from = new FileInputStream(PLUGIN_PATH + DEF_WORD_PATH);
-					XSSFWorkbook  workbook = new XSSFWorkbook(from);
+					XSSFWorkbook workbook = new XSSFWorkbook(from);
 
 					writeStatements(policy, workbook);
 					writePrivateData(policy, workbook);
@@ -128,7 +131,55 @@ public class ExportExcelHandler extends AbstractHandler {
 	}
 	
 	private void writeStatements(Policy policy, XSSFWorkbook workbook) {
-		// TODO Auto-generated method stub
+		writeCollectionStatements(policy, workbook);
+		
+		// Delete Template Row
+//		XSSFSheet sheet = workbook.getSheet("Statements");
+//		XSSFRow tRow = (XSSFRow) DocumentHelper.getCell(sheet, "StId").getRow();
+//		int lastRowNum = sheet.getLastRowNum();
+//		int tRowNum = tRow.getRowNum();
+//		
+//		if (tRowNum >= 0 && tRowNum < lastRowNum) {
+//			sheet.shiftRows(tRowNum + 1, lastRowNum, 1, true, true);
+//		}
+		
+//		sheet.removeRow(tRow);
+	}
+	
+	private void writeCollectionStatements(Policy policy, XSSFWorkbook workbook) {
+		XSSFSheet sheet = workbook.getSheet("Statements");
+		XSSFRow tRow = (XSSFRow) DocumentHelper.getCell(sheet, "StId").getRow();
+		
+		for (Collection collection : policy.getCollection()) {
+			XSSFRow nRow = sheet.createRow(sheet.getLastRowNum() + 1);
+			DocumentHelper.cloneRow(workbook, sheet, nRow, tRow);
+			
+			DocumentHelper.replaceText(nRow, "StId", collection.getName());
+			DocumentHelper.replaceText(nRow, "StDescription", collection.getDescription());
+			DocumentHelper.replaceText(nRow, "StCondition", collection.getCondition());
+			String modality = collection.getModalitykind();
+			modality = modality.substring(0, 1).toLowerCase() + modality.substring(1);
+			DocumentHelper.replaceText(nRow, "StModality", modality);
+			DocumentHelper.replaceText(nRow, "StType", "Collection");
+			
+			if (collection.getRefprivatedata().size() > 0) {
+				DocumentHelper.replaceText(nRow, "StPDId", "pdid");
+			} else {
+				DocumentHelper.replaceText(nRow, "StPDId", "");
+			}
+			
+			if (collection.getRefertoservice().size() > 0) {
+				DocumentHelper.replaceText(nRow, "StSId", "sid");
+			} else {
+				DocumentHelper.replaceText(nRow, "StSId", "");
+			}
+			
+			if (collection.getRefertoEnforcement().size() > 0) {
+				DocumentHelper.replaceText(nRow, "StEId", "eid");
+			} else {
+				DocumentHelper.replaceText(nRow, "StEId", "");
+			}
+		}
 	}
 	
 	private void writeRecipients(Policy policy, XSSFWorkbook workbook) {

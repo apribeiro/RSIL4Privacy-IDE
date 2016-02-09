@@ -2,6 +2,14 @@ package org.xtext.example.mydsl.ui.handlers;
 
 import java.util.List;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.util.CellRangeAddress;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFCellStyle;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.xwpf.usermodel.PositionInParagraph;
 import org.apache.poi.xwpf.usermodel.TextSegement;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
@@ -117,6 +125,7 @@ public class DocumentHelper {
 	public static void cloneParagraph(XWPFParagraph clone, XWPFParagraph source) {
 		CTPPr pPr = clone.getCTP().isSetPPr() ? clone.getCTP().getPPr() : clone.getCTP().addNewPPr();
 		pPr.set(source.getCTP().getPPr());
+		
 		for (XWPFRun r : source.getRuns()) {
 			XWPFRun nr = clone.createRun();
 			cloneRun(nr, r);
@@ -127,5 +136,113 @@ public class DocumentHelper {
 		CTRPr rPr = clone.getCTR().isSetRPr() ? clone.getCTR().getRPr() : clone.getCTR().addNewRPr();
 		rPr.set(source.getCTR().getRPr());
 		clone.setText(source.getText(0));
+	}
+	
+	public static Cell getCell(XSSFSheet sheet, String tag) {
+		XSSFCell cell = null;
+		
+		for (Row row : sheet) {
+			for (Cell c : row) {
+	            if (c.getCellType() == Cell.CELL_TYPE_STRING) {
+	                if (c.getRichStringCellValue().getString().trim().equals(tag)) {
+	                    return c;
+	                }
+	            }
+	        }
+		}
+		return cell;
+	}
+	
+	public static void cloneRow(XSSFWorkbook workbook, XSSFSheet sheet, XSSFRow clone, XSSFRow source) {
+		// Loop through source columns to add to new row
+		for (int i = 0; i < source.getLastCellNum(); i++) {
+			// Grab a copy of the old/new cell
+			XSSFCell oldCell = source.getCell(i);
+			XSSFCell newCell = clone.createCell(i);
+
+			// If the old cell is null jump to next cell
+			if (oldCell == null) {
+				newCell = null;
+				continue;
+			}
+
+			// Copy style from old cell and apply to new cell
+			XSSFCellStyle newCellStyle = workbook.createCellStyle();
+			newCellStyle.cloneStyleFrom(oldCell.getCellStyle());
+			newCell.setCellStyle(newCellStyle);
+
+			// If there is a cell comment, copy
+			if (oldCell.getCellComment() != null) {
+				newCell.setCellComment(oldCell.getCellComment());
+			}
+
+			// If there is a cell hyperlink, copy
+			if (oldCell.getHyperlink() != null) {
+				newCell.setHyperlink(oldCell.getHyperlink());
+			}
+
+			// Set the cell data type
+			newCell.setCellType(oldCell.getCellType());
+
+			// Set the cell data value
+			switch (oldCell.getCellType()) {
+			case Cell.CELL_TYPE_BLANK:
+				newCell.setCellValue(oldCell.getStringCellValue());
+				break;
+			case Cell.CELL_TYPE_BOOLEAN:
+				newCell.setCellValue(oldCell.getBooleanCellValue());
+				break;
+			case Cell.CELL_TYPE_ERROR:
+				newCell.setCellErrorValue(oldCell.getErrorCellValue());
+				break;
+			case Cell.CELL_TYPE_FORMULA:
+				newCell.setCellFormula(oldCell.getCellFormula());
+				break;
+			case Cell.CELL_TYPE_NUMERIC:
+				newCell.setCellValue(oldCell.getNumericCellValue());
+				break;
+			case Cell.CELL_TYPE_STRING:
+				newCell.setCellValue(oldCell.getRichStringCellValue());
+				break;
+			}
+		}
+
+		// If there are are any merged regions in the source row, copy to new row
+		for (int i = 0; i < sheet.getNumMergedRegions(); i++) {
+			CellRangeAddress cellRangeAddress = sheet.getMergedRegion(i);
+			
+			if (cellRangeAddress.getFirstRow() == source.getRowNum()) {
+				CellRangeAddress newCellRangeAddress = new CellRangeAddress(clone.getRowNum(),
+						(clone.getRowNum() +
+								(cellRangeAddress.getLastRow() - cellRangeAddress.getFirstRow()
+										)),
+						cellRangeAddress.getFirstColumn(),
+						cellRangeAddress.getLastColumn());
+				sheet.addMergedRegion(newCellRangeAddress);
+			}
+		}
+	}
+	
+	public static void replaceText(XSSFRow row, String tag, String value) {
+		for (Cell c : row) {
+            if (c.getCellType() == Cell.CELL_TYPE_STRING) {
+                if (c.getRichStringCellValue().getString().trim().equals(tag)) {
+                	if (tryParseInt(value)) {
+                		c.setCellValue(Integer.parseInt(value));
+					} else {
+						c.setCellValue(value);
+					}
+                }
+            }
+		}
+	}
+	
+	private static boolean tryParseInt(String value) {
+		try {
+			Integer.parseInt(value);
+			return true;
+		} catch (NumberFormatException e) {
+			return false;
+		}
 	}
 }
