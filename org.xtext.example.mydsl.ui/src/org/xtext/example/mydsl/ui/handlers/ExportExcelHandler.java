@@ -150,17 +150,10 @@ public class ExportExcelHandler extends AbstractHandler {
 		writeUsageStatements(policy, workbook);
 		writeInformativeStatements(policy, workbook);
 		
-		// Delete Template Row
+		// Delete the Template Row
 		XSSFSheet sheet = workbook.getSheet("Statements");
 		XSSFRow tRow = (XSSFRow) DocumentHelper.getCell(sheet, "StId").getRow();
-//		int lastRowNum = sheet.getLastRowNum();
-//		int tRowNum = tRow.getRowNum();
-//		
-//		if (tRowNum >= 0 && tRowNum < lastRowNum) {
-//			sheet.shiftRows(tRowNum + 1, lastRowNum, 1, true, true);
-//		}
-		
-		sheet.removeRow(tRow);
+		sheet.shiftRows(tRow.getRowNum() + 1, sheet.getLastRowNum(), -1);
 	}
 	
 	private void writeCollectionStatements(Policy policy, XSSFWorkbook workbook) {
@@ -529,8 +522,8 @@ public class ExportExcelHandler extends AbstractHandler {
 			}
 		}
 		
-		// Delete Template Row
-		sheet.removeRow(tRow);
+		// Delete the Template Row
+		sheet.shiftRows(tRow.getRowNum() + 1, sheet.getLastRowNum(), -1);
 	}
 	
 	private void writeServices(Policy policy, XSSFWorkbook workbook) {
@@ -568,8 +561,8 @@ public class ExportExcelHandler extends AbstractHandler {
 			}
 		}
 		
-		// Delete Template Row
-		sheet.removeRow(tRow);
+		// Delete the Template Row
+		sheet.shiftRows(tRow.getRowNum() + 1, sheet.getLastRowNum(), -1);
 	}
 	
 	private void writePrivateData(Policy policy, XSSFWorkbook workbook) {
@@ -608,8 +601,8 @@ public class ExportExcelHandler extends AbstractHandler {
 			}
 		}
 		
-		// Delete Template Row
-		sheet.removeRow(tRow);
+		// Delete the Template Row
+		sheet.shiftRows(tRow.getRowNum() + 1, sheet.getLastRowNum(), -1);
 	}
 	
 	private void writeEnforcements(Policy policy, XSSFWorkbook workbook) {
@@ -626,7 +619,7 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "EType", enforcement.getEnforcementKind());
 		}
 		
-		// Delete Template Row
-		sheet.removeRow(tRow);
+		// Delete the Template Row
+		sheet.shiftRows(tRow.getRowNum() + 1, sheet.getLastRowNum(), -1);
 	}
 }
