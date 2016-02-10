@@ -146,8 +146,8 @@ public class ExportExcelHandler extends AbstractHandler {
 		writeInformativeStatements(policy, workbook);
 		
 		// Delete Template Row
-//		XSSFSheet sheet = workbook.getSheet("Statements");
-//		XSSFRow tRow = (XSSFRow) DocumentHelper.getCell(sheet, "StId").getRow();
+		XSSFSheet sheet = workbook.getSheet("Statements");
+		XSSFRow tRow = (XSSFRow) DocumentHelper.getCell(sheet, "StId").getRow();
 //		int lastRowNum = sheet.getLastRowNum();
 //		int tRowNum = tRow.getRowNum();
 //		
@@ -155,7 +155,7 @@ public class ExportExcelHandler extends AbstractHandler {
 //			sheet.shiftRows(tRowNum + 1, lastRowNum, 1, true, true);
 //		}
 		
-//		sheet.removeRow(tRow);
+		sheet.removeRow(tRow);
 	}
 	
 	private void writeCollectionStatements(Policy policy, XSSFWorkbook workbook) {
@@ -378,6 +378,9 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "SRId", "");
 			}
 		}
+		
+		// Delete Template Row
+		sheet.removeRow(tRow);
 	}
 	
 	private void writeServices(Policy policy, XSSFWorkbook workbook) {
@@ -404,6 +407,9 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "SSSId", "");
 			}
 		}
+		
+		// Delete Template Row
+		sheet.removeRow(tRow);
 	}
 	
 	private void writePrivateData(Policy policy, XSSFWorkbook workbook) {
@@ -425,6 +431,9 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "PDAttributes", "");
 			}
 		}
+		
+		// Delete Template Row
+		sheet.removeRow(tRow);
 	}
 	
 	private void writeEnforcements(Policy policy, XSSFWorkbook workbook) {
@@ -440,5 +449,8 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "EDescription", enforcement.getEnforcementDescription());
 			DocumentHelper.replaceText(nRow, "EType", enforcement.getEnforcementKind());
 		}
+		
+		// Delete Template Row
+		sheet.removeRow(tRow);
 	}
 }
