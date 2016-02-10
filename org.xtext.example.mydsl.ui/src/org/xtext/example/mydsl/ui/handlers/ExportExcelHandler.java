@@ -34,6 +34,7 @@ import org.xtext.example.mydsl.myDsl.Informative;
 import org.xtext.example.mydsl.myDsl.Policy;
 import org.xtext.example.mydsl.myDsl.PrivateData;
 import org.xtext.example.mydsl.myDsl.Recipient;
+import org.xtext.example.mydsl.myDsl.RefPrivateData;
 import org.xtext.example.mydsl.myDsl.Retention;
 import org.xtext.example.mydsl.myDsl.Service;
 import org.xtext.example.mydsl.myDsl.Usage;
@@ -397,15 +398,25 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "SDescription", service.getDescription());
 			
 			if (service.getRefprivatedata().size() > 0) {
-				DocumentHelper.replaceText(nRow, "SPDId", "pdid");
+				StringBuilder pdIds = new StringBuilder();
+				
+				for (RefPrivateData attr : service.getRefprivatedata()) {
+					PrivateData pd = attr.getRefpr();
+					pdIds.append(pd.getName());
+					pdIds.append(", ");
+				}
+				pdIds.delete(pdIds.length() - 2, pdIds.length());
+				
+				DocumentHelper.replaceText(nRow, "SPDId", pdIds.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "SPDId", "");
 			}
 			
 			if (service.getServicepartof().size() > 0) {
-				DocumentHelper.replaceText(nRow, "SSSId", "ssid");
+				String ssId = service.getServicepartof().get(0).getRefertoservice().getName();
+				DocumentHelper.replaceText(nRow, "SSId", ssId);
 			} else {
-				DocumentHelper.replaceText(nRow, "SSSId", "");
+				DocumentHelper.replaceText(nRow, "SSId", "");
 			}
 		}
 		
