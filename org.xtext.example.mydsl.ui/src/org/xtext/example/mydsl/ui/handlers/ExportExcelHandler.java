@@ -375,7 +375,8 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "RType", type);
 			
 			if (recipient.getPartof().size() > 0) {
-				DocumentHelper.replaceText(nRow, "SRId", "rid");
+				String rId = recipient.getPartof().get(0).getPartof().getName();
+				DocumentHelper.replaceText(nRow, "SRId", rId);
 			} else {
 				DocumentHelper.replaceText(nRow, "SRId", "");
 			}
