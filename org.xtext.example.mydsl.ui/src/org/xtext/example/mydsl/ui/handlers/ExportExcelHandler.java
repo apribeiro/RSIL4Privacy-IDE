@@ -27,7 +27,11 @@ import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.xtext.example.mydsl.MyDslStandaloneSetup;
 import org.xtext.example.mydsl.myDsl.Collection;
+import org.xtext.example.mydsl.myDsl.Disclosure;
+import org.xtext.example.mydsl.myDsl.Informative;
 import org.xtext.example.mydsl.myDsl.Policy;
+import org.xtext.example.mydsl.myDsl.Retention;
+import org.xtext.example.mydsl.myDsl.Usage;
 import org.xtext.example.mydsl.ui.windows.MenuCommand;
 import org.xtext.example.mydsl.ui.windows.MenuCommandWindow;
 
@@ -132,6 +136,10 @@ public class ExportExcelHandler extends AbstractHandler {
 	
 	private void writeStatements(Policy policy, XSSFWorkbook workbook) {
 		writeCollectionStatements(policy, workbook);
+		writeDisclosureStatements(policy, workbook);
+		writeRetentionStatements(policy, workbook);
+		writeUsageStatements(policy, workbook);
+		writeInformativeStatements(policy, workbook);
 		
 		// Delete Template Row
 //		XSSFSheet sheet = workbook.getSheet("Statements");
@@ -168,6 +176,8 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "StPDId", "");
 			}
 			
+			DocumentHelper.replaceText(nRow, "StRId", "");
+			
 			if (collection.getRefertoservice().size() > 0) {
 				DocumentHelper.replaceText(nRow, "StSId", "sid");
 			} else {
@@ -179,6 +189,172 @@ public class ExportExcelHandler extends AbstractHandler {
 			} else {
 				DocumentHelper.replaceText(nRow, "StEId", "");
 			}
+			
+			DocumentHelper.replaceText(nRow, "StPeriod", "");
+		}
+	}
+	
+	private void writeDisclosureStatements(Policy policy, XSSFWorkbook workbook) {
+		XSSFSheet sheet = workbook.getSheet("Statements");
+		XSSFRow tRow = (XSSFRow) DocumentHelper.getCell(sheet, "StId").getRow();
+		
+		for (Disclosure disclosure : policy.getDisclosure()) {
+			XSSFRow nRow = sheet.createRow(sheet.getLastRowNum() + 1);
+			DocumentHelper.cloneRow(workbook, sheet, nRow, tRow);
+			
+			DocumentHelper.replaceText(nRow, "StId", disclosure.getName());
+			DocumentHelper.replaceText(nRow, "StDescription", disclosure.getDescription());
+			DocumentHelper.replaceText(nRow, "StCondition", disclosure.getCondition());
+			String modality = disclosure.getModalitykind();
+			modality = modality.substring(0, 1).toLowerCase() + modality.substring(1);
+			DocumentHelper.replaceText(nRow, "StModality", modality);
+			DocumentHelper.replaceText(nRow, "StType", "Disclosure");
+			
+			if (disclosure.getRefprivatedata().size() > 0) {
+				DocumentHelper.replaceText(nRow, "StPDId", "pdid");
+			} else {
+				DocumentHelper.replaceText(nRow, "StPDId", "");
+			}
+			
+			if (disclosure.getReferToRecipient().size() > 0) {
+				DocumentHelper.replaceText(nRow, "StRId", "rid");
+			} else {
+				DocumentHelper.replaceText(nRow, "StRId", "");
+			}
+			
+			if (disclosure.getRefertoservice().size() > 0) {
+				DocumentHelper.replaceText(nRow, "StSId", "sid");
+			} else {
+				DocumentHelper.replaceText(nRow, "StSId", "");
+			}
+			
+			if (disclosure.getRefertoEnforcement().size() > 0) {
+				DocumentHelper.replaceText(nRow, "StEId", "eid");
+			} else {
+				DocumentHelper.replaceText(nRow, "StEId", "");
+			}
+			
+			DocumentHelper.replaceText(nRow, "StPeriod", "");
+		}
+	}
+	
+	private void writeRetentionStatements(Policy policy, XSSFWorkbook workbook) {
+		XSSFSheet sheet = workbook.getSheet("Statements");
+		XSSFRow tRow = (XSSFRow) DocumentHelper.getCell(sheet, "StId").getRow();
+		
+		for (Retention retention : policy.getRetention()) {
+			XSSFRow nRow = sheet.createRow(sheet.getLastRowNum() + 1);
+			DocumentHelper.cloneRow(workbook, sheet, nRow, tRow);
+			
+			DocumentHelper.replaceText(nRow, "StId", retention.getName());
+			DocumentHelper.replaceText(nRow, "StDescription", retention.getDescription());
+			DocumentHelper.replaceText(nRow, "StCondition", retention.getCondition());
+			String modality = retention.getModalitykind();
+			modality = modality.substring(0, 1).toLowerCase() + modality.substring(1);
+			DocumentHelper.replaceText(nRow, "StModality", modality);
+			DocumentHelper.replaceText(nRow, "StType", "Retention");
+			
+			if (retention.getRefprivatedata().size() > 0) {
+				DocumentHelper.replaceText(nRow, "StPDId", "pdid");
+			} else {
+				DocumentHelper.replaceText(nRow, "StPDId", "");
+			}
+			
+			DocumentHelper.replaceText(nRow, "StRId", "");
+			
+			if (retention.getRefertoservice().size() > 0) {
+				DocumentHelper.replaceText(nRow, "StSId", "sid");
+			} else {
+				DocumentHelper.replaceText(nRow, "StSId", "");
+			}
+			
+			if (retention.getRefertoEnforcement().size() > 0) {
+				DocumentHelper.replaceText(nRow, "StEId", "eid");
+			} else {
+				DocumentHelper.replaceText(nRow, "StEId", "");
+			}
+			
+			DocumentHelper.replaceText(nRow, "StPeriod", retention.getPeriod());
+		}
+	}
+	
+	private void writeUsageStatements(Policy policy, XSSFWorkbook workbook) {
+		XSSFSheet sheet = workbook.getSheet("Statements");
+		XSSFRow tRow = (XSSFRow) DocumentHelper.getCell(sheet, "StId").getRow();
+		
+		for (Usage usage : policy.getUsage()) {
+			XSSFRow nRow = sheet.createRow(sheet.getLastRowNum() + 1);
+			DocumentHelper.cloneRow(workbook, sheet, nRow, tRow);
+			
+			DocumentHelper.replaceText(nRow, "StId", usage.getName());
+			DocumentHelper.replaceText(nRow, "StDescription", usage.getDescription());
+			DocumentHelper.replaceText(nRow, "StCondition", usage.getCondition());
+			String modality = usage.getModalitykind();
+			modality = modality.substring(0, 1).toLowerCase() + modality.substring(1);
+			DocumentHelper.replaceText(nRow, "StModality", modality);
+			DocumentHelper.replaceText(nRow, "StType", "Usage");
+			
+			if (usage.getRefprivatedata().size() > 0) {
+				DocumentHelper.replaceText(nRow, "StPDId", "pdid");
+			} else {
+				DocumentHelper.replaceText(nRow, "StPDId", "");
+			}
+			
+			DocumentHelper.replaceText(nRow, "StRId", "");
+			
+			if (usage.getRefertoservice().size() > 0) {
+				DocumentHelper.replaceText(nRow, "StSId", "sid");
+			} else {
+				DocumentHelper.replaceText(nRow, "StSId", "");
+			}
+			
+			if (usage.getRefertoEnforcement().size() > 0) {
+				DocumentHelper.replaceText(nRow, "StEId", "eid");
+			} else {
+				DocumentHelper.replaceText(nRow, "StEId", "");
+			}
+			
+			DocumentHelper.replaceText(nRow, "StPeriod", "");
+		}
+	}
+	
+	private void writeInformativeStatements(Policy policy, XSSFWorkbook workbook) {
+		XSSFSheet sheet = workbook.getSheet("Statements");
+		XSSFRow tRow = (XSSFRow) DocumentHelper.getCell(sheet, "StId").getRow();
+		
+		for (Informative informative : policy.getInformative()) {
+			XSSFRow nRow = sheet.createRow(sheet.getLastRowNum() + 1);
+			DocumentHelper.cloneRow(workbook, sheet, nRow, tRow);
+			
+			DocumentHelper.replaceText(nRow, "StId", informative.getName());
+			DocumentHelper.replaceText(nRow, "StDescription", informative.getDescription());
+			DocumentHelper.replaceText(nRow, "StCondition", informative.getCondition());
+			String modality = informative.getModalitykind();
+			modality = modality.substring(0, 1).toLowerCase() + modality.substring(1);
+			DocumentHelper.replaceText(nRow, "StModality", modality);
+			DocumentHelper.replaceText(nRow, "StType", "Informative");
+			
+			if (informative.getRefprivatedata().size() > 0) {
+				DocumentHelper.replaceText(nRow, "StPDId", "pdid");
+			} else {
+				DocumentHelper.replaceText(nRow, "StPDId", "");
+			}
+			
+			DocumentHelper.replaceText(nRow, "StRId", "");
+			
+			if (informative.getRefertoservice().size() > 0) {
+				DocumentHelper.replaceText(nRow, "StSId", "sid");
+			} else {
+				DocumentHelper.replaceText(nRow, "StSId", "");
+			}
+			
+			if (informative.getRefertoEnforcement().size() > 0) {
+				DocumentHelper.replaceText(nRow, "StEId", "eid");
+			} else {
+				DocumentHelper.replaceText(nRow, "StEId", "");
+			}
+			
+			DocumentHelper.replaceText(nRow, "StPeriod", "");
 		}
 	}
 	
