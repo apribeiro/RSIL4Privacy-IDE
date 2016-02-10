@@ -28,9 +28,13 @@ import org.eclipse.xtext.resource.XtextResourceSet;
 import org.xtext.example.mydsl.MyDslStandaloneSetup;
 import org.xtext.example.mydsl.myDsl.Collection;
 import org.xtext.example.mydsl.myDsl.Disclosure;
+import org.xtext.example.mydsl.myDsl.Enforcement;
 import org.xtext.example.mydsl.myDsl.Informative;
 import org.xtext.example.mydsl.myDsl.Policy;
+import org.xtext.example.mydsl.myDsl.PrivateData;
+import org.xtext.example.mydsl.myDsl.Recipient;
 import org.xtext.example.mydsl.myDsl.Retention;
+import org.xtext.example.mydsl.myDsl.Service;
 import org.xtext.example.mydsl.myDsl.Usage;
 import org.xtext.example.mydsl.ui.windows.MenuCommand;
 import org.xtext.example.mydsl.ui.windows.MenuCommandWindow;
@@ -165,8 +169,7 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StId", collection.getName());
 			DocumentHelper.replaceText(nRow, "StDescription", collection.getDescription());
 			DocumentHelper.replaceText(nRow, "StCondition", collection.getCondition());
-			String modality = collection.getModalitykind();
-			modality = modality.substring(0, 1).toLowerCase() + modality.substring(1);
+			String modality = collection.getModalitykind().toLowerCase();
 			DocumentHelper.replaceText(nRow, "StModality", modality);
 			DocumentHelper.replaceText(nRow, "StType", "Collection");
 			
@@ -205,8 +208,7 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StId", disclosure.getName());
 			DocumentHelper.replaceText(nRow, "StDescription", disclosure.getDescription());
 			DocumentHelper.replaceText(nRow, "StCondition", disclosure.getCondition());
-			String modality = disclosure.getModalitykind();
-			modality = modality.substring(0, 1).toLowerCase() + modality.substring(1);
+			String modality = disclosure.getModalitykind().toLowerCase();
 			DocumentHelper.replaceText(nRow, "StModality", modality);
 			DocumentHelper.replaceText(nRow, "StType", "Disclosure");
 			
@@ -249,8 +251,7 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StId", retention.getName());
 			DocumentHelper.replaceText(nRow, "StDescription", retention.getDescription());
 			DocumentHelper.replaceText(nRow, "StCondition", retention.getCondition());
-			String modality = retention.getModalitykind();
-			modality = modality.substring(0, 1).toLowerCase() + modality.substring(1);
+			String modality = retention.getModalitykind().toLowerCase();
 			DocumentHelper.replaceText(nRow, "StModality", modality);
 			DocumentHelper.replaceText(nRow, "StType", "Retention");
 			
@@ -289,8 +290,7 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StId", usage.getName());
 			DocumentHelper.replaceText(nRow, "StDescription", usage.getDescription());
 			DocumentHelper.replaceText(nRow, "StCondition", usage.getCondition());
-			String modality = usage.getModalitykind();
-			modality = modality.substring(0, 1).toLowerCase() + modality.substring(1);
+			String modality = usage.getModalitykind().toLowerCase();
 			DocumentHelper.replaceText(nRow, "StModality", modality);
 			DocumentHelper.replaceText(nRow, "StType", "Usage");
 			
@@ -329,8 +329,7 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StId", informative.getName());
 			DocumentHelper.replaceText(nRow, "StDescription", informative.getDescription());
 			DocumentHelper.replaceText(nRow, "StCondition", informative.getCondition());
-			String modality = informative.getModalitykind();
-			modality = modality.substring(0, 1).toLowerCase() + modality.substring(1);
+			String modality = informative.getModalitykind().toLowerCase();
 			DocumentHelper.replaceText(nRow, "StModality", modality);
 			DocumentHelper.replaceText(nRow, "StType", "Informative");
 			
@@ -359,18 +358,87 @@ public class ExportExcelHandler extends AbstractHandler {
 	}
 	
 	private void writeRecipients(Policy policy, XSSFWorkbook workbook) {
-		// TODO Auto-generated method stub
+		XSSFSheet sheet = workbook.getSheet("Recipients");
+		XSSFRow tRow = (XSSFRow) DocumentHelper.getCell(sheet, "RId").getRow();
+		
+		for (Recipient recipient : policy.getRecipient()) {
+			XSSFRow nRow = sheet.createRow(sheet.getLastRowNum() + 1);
+			DocumentHelper.cloneRow(workbook, sheet, nRow, tRow);
+			
+			DocumentHelper.replaceText(nRow, "RId", recipient.getName());
+			DocumentHelper.replaceText(nRow, "RDescription", recipient.getDescription());
+			String scope = recipient.getRecipientScopeKind().toLowerCase();
+			DocumentHelper.replaceText(nRow, "RScope", scope);
+			String type = recipient.getRecipientTypeKind().toLowerCase();
+			DocumentHelper.replaceText(nRow, "RType", type);
+			
+			if (recipient.getPartof().size() > 0) {
+				DocumentHelper.replaceText(nRow, "SRId", "rid");
+			} else {
+				DocumentHelper.replaceText(nRow, "SRId", "");
+			}
+		}
 	}
 	
 	private void writeServices(Policy policy, XSSFWorkbook workbook) {
-		// TODO Auto-generated method stub
+		XSSFSheet sheet = workbook.getSheet("Services");
+		XSSFRow tRow = (XSSFRow) DocumentHelper.getCell(sheet, "SId").getRow();
+		
+		for (Service service : policy.getService()) {
+			XSSFRow nRow = sheet.createRow(sheet.getLastRowNum() + 1);
+			DocumentHelper.cloneRow(workbook, sheet, nRow, tRow);
+			
+			DocumentHelper.replaceText(nRow, "SId", service.getName());
+			DocumentHelper.replaceText(nRow, "SName", service.getServicename());
+			DocumentHelper.replaceText(nRow, "SDescription", service.getDescription());
+			
+			if (service.getRefprivatedata().size() > 0) {
+				DocumentHelper.replaceText(nRow, "SPDId", "pdid");
+			} else {
+				DocumentHelper.replaceText(nRow, "SPDId", "");
+			}
+			
+			if (service.getServicepartof().size() > 0) {
+				DocumentHelper.replaceText(nRow, "SSSId", "ssid");
+			} else {
+				DocumentHelper.replaceText(nRow, "SSSId", "");
+			}
+		}
 	}
 	
 	private void writePrivateData(Policy policy, XSSFWorkbook workbook) {
-		// TODO Auto-generated method stub
+		XSSFSheet sheet = workbook.getSheet("PrivateData");
+		XSSFRow tRow = (XSSFRow) DocumentHelper.getCell(sheet, "PDId").getRow();
+		
+		for (PrivateData privateData : policy.getPrivateData()) {
+			XSSFRow nRow = sheet.createRow(sheet.getLastRowNum() + 1);
+			DocumentHelper.cloneRow(workbook, sheet, nRow, tRow);
+			
+			DocumentHelper.replaceText(nRow, "PDId", privateData.getName());
+			// FIXME Separate Type words
+			DocumentHelper.replaceText(nRow, "PDType", privateData.getPrivateDataKind());
+			DocumentHelper.replaceText(nRow, "PDDescription", privateData.getPrivatedata());
+			
+			if (privateData.getAttribute().size() > 0) {
+				DocumentHelper.replaceText(nRow, "PDAttributes", "attributes");
+			} else {
+				DocumentHelper.replaceText(nRow, "PDAttributes", "");
+			}
+		}
 	}
 	
 	private void writeEnforcements(Policy policy, XSSFWorkbook workbook) {
-		// TODO Auto-generated method stub
+		XSSFSheet sheet = workbook.getSheet("Enforcements");
+		XSSFRow tRow = (XSSFRow) DocumentHelper.getCell(sheet, "EId").getRow();
+		
+		for (Enforcement enforcement : policy.getEnforcement()) {
+			XSSFRow nRow = sheet.createRow(sheet.getLastRowNum() + 1);
+			DocumentHelper.cloneRow(workbook, sheet, nRow, tRow);
+			
+			DocumentHelper.replaceText(nRow, "EId", enforcement.getName());
+			DocumentHelper.replaceText(nRow, "EName", enforcement.getEnforcementName());
+			DocumentHelper.replaceText(nRow, "EDescription", enforcement.getEnforcementDescription());
+			DocumentHelper.replaceText(nRow, "EType", enforcement.getEnforcementKind());
+		}
 	}
 }
