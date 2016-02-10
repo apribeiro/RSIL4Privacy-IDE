@@ -35,6 +35,9 @@ import org.xtext.example.mydsl.myDsl.Policy;
 import org.xtext.example.mydsl.myDsl.PrivateData;
 import org.xtext.example.mydsl.myDsl.Recipient;
 import org.xtext.example.mydsl.myDsl.RefPrivateData;
+import org.xtext.example.mydsl.myDsl.ReferToRecipient;
+import org.xtext.example.mydsl.myDsl.ReferToService;
+import org.xtext.example.mydsl.myDsl.RefertoEnforcement;
 import org.xtext.example.mydsl.myDsl.Retention;
 import org.xtext.example.mydsl.myDsl.Service;
 import org.xtext.example.mydsl.myDsl.Usage;
@@ -176,7 +179,16 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StType", "Collection");
 			
 			if (collection.getRefprivatedata().size() > 0) {
-				DocumentHelper.replaceText(nRow, "StPDId", "pdid");
+				StringBuilder pdIds = new StringBuilder();
+				
+				for (RefPrivateData ref : collection.getRefprivatedata()) {
+					PrivateData pd = ref.getRefpr();
+					pdIds.append(pd.getName());
+					pdIds.append(", ");
+				}
+				pdIds.delete(pdIds.length() - 2, pdIds.length());
+				
+				DocumentHelper.replaceText(nRow, "StPDId", pdIds.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "StPDId", "");
 			}
@@ -184,13 +196,31 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StRId", "");
 			
 			if (collection.getRefertoservice().size() > 0) {
-				DocumentHelper.replaceText(nRow, "StSId", "sid");
+				StringBuilder sIds = new StringBuilder();
+				
+				for (ReferToService ref : collection.getRefertoservice()) {
+					Service s = ref.getRefertose();
+					sIds.append(s.getName());
+					sIds.append(", ");
+				}
+				sIds.delete(sIds.length() - 2, sIds.length());
+				
+				DocumentHelper.replaceText(nRow, "StSId", sIds.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
 			
 			if (collection.getRefertoEnforcement().size() > 0) {
-				DocumentHelper.replaceText(nRow, "StEId", "eid");
+				StringBuilder eIds = new StringBuilder();
+				
+				for (RefertoEnforcement ref : collection.getRefertoEnforcement()) {
+					Enforcement e = ref.getRefst();
+					eIds.append(e.getName());
+					eIds.append(", ");
+				}
+				eIds.delete(eIds.length() - 2, eIds.length());
+				
+				DocumentHelper.replaceText(nRow, "StEId", eIds.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "StEId", "");
 			}
@@ -215,25 +245,61 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StType", "Disclosure");
 			
 			if (disclosure.getRefprivatedata().size() > 0) {
-				DocumentHelper.replaceText(nRow, "StPDId", "pdid");
+				StringBuilder pdIds = new StringBuilder();
+				
+				for (RefPrivateData ref : disclosure.getRefprivatedata()) {
+					PrivateData pd = ref.getRefpr();
+					pdIds.append(pd.getName());
+					pdIds.append(", ");
+				}
+				pdIds.delete(pdIds.length() - 2, pdIds.length());
+				
+				DocumentHelper.replaceText(nRow, "StPDId", pdIds.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "StPDId", "");
 			}
 			
 			if (disclosure.getReferToRecipient().size() > 0) {
-				DocumentHelper.replaceText(nRow, "StRId", "rid");
+				StringBuilder rIds = new StringBuilder();
+				
+				for (ReferToRecipient ref : disclosure.getReferToRecipient()) {
+					Recipient r = ref.getRefertore();
+					rIds.append(r.getName());
+					rIds.append(", ");
+				}
+				rIds.delete(rIds.length() - 2, rIds.length());
+				
+				DocumentHelper.replaceText(nRow, "StRId", rIds.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "StRId", "");
 			}
 			
 			if (disclosure.getRefertoservice().size() > 0) {
-				DocumentHelper.replaceText(nRow, "StSId", "sid");
+				StringBuilder sIds = new StringBuilder();
+				
+				for (ReferToService ref : disclosure.getRefertoservice()) {
+					Service s = ref.getRefertose();
+					sIds.append(s.getName());
+					sIds.append(", ");
+				}
+				sIds.delete(sIds.length() - 2, sIds.length());
+				
+				DocumentHelper.replaceText(nRow, "StSId", sIds.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
 			
 			if (disclosure.getRefertoEnforcement().size() > 0) {
-				DocumentHelper.replaceText(nRow, "StEId", "eid");
+				StringBuilder eIds = new StringBuilder();
+				
+				for (RefertoEnforcement ref : disclosure.getRefertoEnforcement()) {
+					Enforcement e = ref.getRefst();
+					eIds.append(e.getName());
+					eIds.append(", ");
+				}
+				eIds.delete(eIds.length() - 2, eIds.length());
+				
+				DocumentHelper.replaceText(nRow, "StEId", eIds.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "StEId", "");
 			}
@@ -258,7 +324,16 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StType", "Retention");
 			
 			if (retention.getRefprivatedata().size() > 0) {
-				DocumentHelper.replaceText(nRow, "StPDId", "pdid");
+				StringBuilder pdIds = new StringBuilder();
+				
+				for (RefPrivateData ref : retention.getRefprivatedata()) {
+					PrivateData pd = ref.getRefpr();
+					pdIds.append(pd.getName());
+					pdIds.append(", ");
+				}
+				pdIds.delete(pdIds.length() - 2, pdIds.length());
+				
+				DocumentHelper.replaceText(nRow, "StPDId", pdIds.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "StPDId", "");
 			}
@@ -266,13 +341,31 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StRId", "");
 			
 			if (retention.getRefertoservice().size() > 0) {
-				DocumentHelper.replaceText(nRow, "StSId", "sid");
+				StringBuilder sIds = new StringBuilder();
+				
+				for (ReferToService ref : retention.getRefertoservice()) {
+					Service s = ref.getRefertose();
+					sIds.append(s.getName());
+					sIds.append(", ");
+				}
+				sIds.delete(sIds.length() - 2, sIds.length());
+				
+				DocumentHelper.replaceText(nRow, "StSId", sIds.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
 			
 			if (retention.getRefertoEnforcement().size() > 0) {
-				DocumentHelper.replaceText(nRow, "StEId", "eid");
+				StringBuilder eIds = new StringBuilder();
+				
+				for (RefertoEnforcement ref : retention.getRefertoEnforcement()) {
+					Enforcement e = ref.getRefst();
+					eIds.append(e.getName());
+					eIds.append(", ");
+				}
+				eIds.delete(eIds.length() - 2, eIds.length());
+				
+				DocumentHelper.replaceText(nRow, "StEId", eIds.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "StEId", "");
 			}
@@ -297,7 +390,16 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StType", "Usage");
 			
 			if (usage.getRefprivatedata().size() > 0) {
-				DocumentHelper.replaceText(nRow, "StPDId", "pdid");
+				StringBuilder pdIds = new StringBuilder();
+				
+				for (RefPrivateData ref : usage.getRefprivatedata()) {
+					PrivateData pd = ref.getRefpr();
+					pdIds.append(pd.getName());
+					pdIds.append(", ");
+				}
+				pdIds.delete(pdIds.length() - 2, pdIds.length());
+				
+				DocumentHelper.replaceText(nRow, "StPDId", pdIds.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "StPDId", "");
 			}
@@ -305,13 +407,31 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StRId", "");
 			
 			if (usage.getRefertoservice().size() > 0) {
-				DocumentHelper.replaceText(nRow, "StSId", "sid");
+				StringBuilder sIds = new StringBuilder();
+				
+				for (ReferToService ref : usage.getRefertoservice()) {
+					Service s = ref.getRefertose();
+					sIds.append(s.getName());
+					sIds.append(", ");
+				}
+				sIds.delete(sIds.length() - 2, sIds.length());
+				
+				DocumentHelper.replaceText(nRow, "StSId", sIds.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
 			
 			if (usage.getRefertoEnforcement().size() > 0) {
-				DocumentHelper.replaceText(nRow, "StEId", "eid");
+				StringBuilder eIds = new StringBuilder();
+				
+				for (RefertoEnforcement ref : usage.getRefertoEnforcement()) {
+					Enforcement e = ref.getRefst();
+					eIds.append(e.getName());
+					eIds.append(", ");
+				}
+				eIds.delete(eIds.length() - 2, eIds.length());
+				
+				DocumentHelper.replaceText(nRow, "StEId", eIds.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "StEId", "");
 			}
@@ -336,7 +456,16 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StType", "Informative");
 			
 			if (informative.getRefprivatedata().size() > 0) {
-				DocumentHelper.replaceText(nRow, "StPDId", "pdid");
+				StringBuilder pdIds = new StringBuilder();
+				
+				for (RefPrivateData ref : informative.getRefprivatedata()) {
+					PrivateData pd = ref.getRefpr();
+					pdIds.append(pd.getName());
+					pdIds.append(", ");
+				}
+				pdIds.delete(pdIds.length() - 2, pdIds.length());
+				
+				DocumentHelper.replaceText(nRow, "StPDId", pdIds.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "StPDId", "");
 			}
@@ -344,13 +473,31 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StRId", "");
 			
 			if (informative.getRefertoservice().size() > 0) {
-				DocumentHelper.replaceText(nRow, "StSId", "sid");
+				StringBuilder sIds = new StringBuilder();
+				
+				for (ReferToService ref : informative.getRefertoservice()) {
+					Service s = ref.getRefertose();
+					sIds.append(s.getName());
+					sIds.append(", ");
+				}
+				sIds.delete(sIds.length() - 2, sIds.length());
+				
+				DocumentHelper.replaceText(nRow, "StSId", sIds.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
 			
 			if (informative.getRefertoEnforcement().size() > 0) {
-				DocumentHelper.replaceText(nRow, "StEId", "eid");
+				StringBuilder eIds = new StringBuilder();
+				
+				for (RefertoEnforcement ref : informative.getRefertoEnforcement()) {
+					Enforcement e = ref.getRefst();
+					eIds.append(e.getName());
+					eIds.append(", ");
+				}
+				eIds.delete(eIds.length() - 2, eIds.length());
+				
+				DocumentHelper.replaceText(nRow, "StEId", eIds.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "StEId", "");
 			}
