@@ -26,6 +26,7 @@ import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.xtext.example.mydsl.MyDslStandaloneSetup;
+import org.xtext.example.mydsl.myDsl.Attribute;
 import org.xtext.example.mydsl.myDsl.Collection;
 import org.xtext.example.mydsl.myDsl.Disclosure;
 import org.xtext.example.mydsl.myDsl.Enforcement;
@@ -421,12 +422,28 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.cloneRow(workbook, sheet, nRow, tRow);
 			
 			DocumentHelper.replaceText(nRow, "PDId", privateData.getName());
-			// FIXME Separate Type words
-			DocumentHelper.replaceText(nRow, "PDType", privateData.getPrivateDataKind());
+
+			String type = privateData.getPrivateDataKind();
+			
+			if (type.equals("PersonalInformation")) {
+				type = "Personal Information";
+			} else {
+				type = "Usage Information";
+			}
+			
+			DocumentHelper.replaceText(nRow, "PDType", type);
 			DocumentHelper.replaceText(nRow, "PDDescription", privateData.getPrivatedata());
 			
 			if (privateData.getAttribute().size() > 0) {
-				DocumentHelper.replaceText(nRow, "PDAttributes", "attributes");
+				StringBuilder attributes = new StringBuilder();
+				
+				for (Attribute attr : privateData.getAttribute()) {
+					attributes.append(attr.getName());
+					attributes.append(", ");
+				}
+				attributes.delete(attributes.length() - 2, attributes.length());
+				
+				DocumentHelper.replaceText(nRow, "PDAttributes", attributes.toString());
 			} else {
 				DocumentHelper.replaceText(nRow, "PDAttributes", "");
 			}
