@@ -87,7 +87,7 @@ public class CheckQualityHandler extends AbstractHandler {
 					.getURL().getPath().substring(1)
 					+ "plugins/RSLingo4Privacy/";
 			String policyBase = "policy-base.owl";
-			String fileName = file.getName().split("\\.")[0];
+			String fileName = file.getName().split(FILE_EXT)[0];
 			StringBuilder logger = new StringBuilder();
 			boolean useLocal = true;
 			

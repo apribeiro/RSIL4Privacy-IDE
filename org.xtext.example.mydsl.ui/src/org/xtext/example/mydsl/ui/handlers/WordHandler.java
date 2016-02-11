@@ -131,9 +131,10 @@ public class WordHandler extends AbstractHandler {
 					writeStatements(policy, document);
 
 					// Write the Document in file system
+					String fileName = file.getName().split(FILE_EXT)[0];
 					File to = new File(project.getLocation().toOSString()
 							+ "/" + GEN_FOLDER + "/" + DOCS_FOLDER 
-							+ "/" + file.getName() + ".docx");
+							+ "/" + fileName + ".docx");
 					FileOutputStream out = new FileOutputStream(to);
 					document.write(out);
 					out.close();
@@ -141,7 +142,7 @@ public class WordHandler extends AbstractHandler {
 
 					project.refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
 
-					System.out.println(file.getName() + ".docx written successfully");
+					System.out.println(fileName + ".docx written successfully");
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

@@ -124,9 +124,10 @@ public class ExportExcelHandler extends AbstractHandler {
 					writeEnforcements(policy, workbook);
 
 					// Write the Document in file system
+					String fileName = file.getName().split(FILE_EXT)[0];
 					File to = new File(project.getLocation().toOSString()
 							+ "/" + GEN_FOLDER + "/" + DOCS_FOLDER 
-							+ "/" + file.getName() + ".xlsx");
+							+ "/" + fileName + ".xlsx");
 					FileOutputStream out = new FileOutputStream(to);
 					workbook.write(out);
 					out.close();
@@ -134,7 +135,7 @@ public class ExportExcelHandler extends AbstractHandler {
 
 					project.refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
 
-					System.out.println(file.getName() + ".xlsx generated!");
+					System.out.println(fileName + ".xlsx generated!");
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
