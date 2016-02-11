@@ -69,6 +69,12 @@ public class ImportExcelHandler extends AbstractHandler {
     			docsFolder.create(true, true, new NullProgressMonitor());
             }
     		
+    		if (fileName.endsWith(".xlsx")) {
+				fileName = fileName.split(".xlsx")[0];
+			} else if (fileName.endsWith(".xls")) {
+				fileName = fileName.split(".xls")[0];
+			}
+    		
     		importExcelFile(docsFolder, filePath, fileName);
 			generateStatementsFile(srcGenFolder, filePath, fileName);
 			generatePrivateDataFile(srcGenFolder, filePath, fileName);
