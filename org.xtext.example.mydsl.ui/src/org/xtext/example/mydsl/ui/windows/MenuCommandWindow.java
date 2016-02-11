@@ -179,7 +179,11 @@ public class MenuCommandWindow {
 		ArrayList<IFile> files = new ArrayList<IFile>();
 		ArrayList<IFolder> folders = new ArrayList<IFolder>();
 		folders.add(project.getFolder(SRC_FOLDER));
-		folders.add(project.getFolder(GEN_FOLDER));
+		IFolder srcGenFolder = project.getFolder(GEN_FOLDER);
+		
+		if (srcGenFolder.exists()) {
+			folders.add(srcGenFolder);
+		}
 
 		try {
 			for (IFolder folder : folders) {
