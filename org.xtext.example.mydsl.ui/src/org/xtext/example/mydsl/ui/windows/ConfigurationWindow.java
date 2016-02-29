@@ -147,7 +147,7 @@ public class ConfigurationWindow {
 		});
 		
 		Group grpEddy = new Group(shell, SWT.NONE);
-		grpEddy.setText("Eddy Reasoner");
+		grpEddy.setText("Eddy Engine");
 		grpEddy.setBounds(10, 98, 414, 82);
 		
 		Label lblJarPath = formToolkit.createLabel(grpEddy, "Jar Path:", SWT.ALPHA);

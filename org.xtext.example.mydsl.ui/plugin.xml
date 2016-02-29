@@ -388,7 +388,7 @@
         </menu>
         <command
               commandId="org.xtext.example.mydsl.ui.commandCheckQuality"
-              label="Check Quality using Eddy Reasoner"
+              label="Check Quality using Eddy Engine"
               style="push">
         </command>
         <separator
@@ -454,7 +454,7 @@
         </menu>
         <command
               commandId="org.xtext.example.mydsl.ui.commandCheckQuality"
-              label="Check Quality using Eddy Reasoner"
+              label="Check Quality using Eddy Engine"
               style="push">
            <visibleWhen
              checkEnabled="false">
