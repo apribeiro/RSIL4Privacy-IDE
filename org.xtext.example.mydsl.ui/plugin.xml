@@ -339,7 +339,7 @@
 		</menuContribution>
     	<menuContribution locationURI="popup:#TextEditorContext?after=additions">
 		     	<menu
-		           id="rslingo4PrivacyPopupMenu"
+		           id="rslingo4PrivacyTextEditorPopupMenu"
 		           label="RSLingo4Privacy">
 		           <menu
 		              id="exportToPopupMenu"
