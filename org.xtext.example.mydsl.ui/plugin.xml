@@ -376,19 +376,6 @@
                    	 </reference>
 		       	   </visibleWhen>
 		        </menu>
-		        <command
-		              commandId="org.xtext.example.mydsl.ui.commandCheckQuality"
-		              label="Check Quality using Eddy Engine"
-		              style="push">
-		           <visibleWhen
-		             checkEnabled="false">
-		                <not>
-		                	<reference
-                         		definitionId="org.xtext.example.mydsl.MyDsl.Editor.opened">
-                   	 		</reference>
-		                </not>
-		       	   </visibleWhen>
-		        </command>
 		     </menu>
 	    </menuContribution>
 	  <menuContribution

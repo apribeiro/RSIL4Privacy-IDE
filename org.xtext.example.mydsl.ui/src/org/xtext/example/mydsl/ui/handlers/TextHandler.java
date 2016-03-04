@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2;
@@ -48,16 +49,23 @@ public class TextHandler extends AbstractHandler {
 		
 		// Check if the command was triggered using the ContextMenu
 		if (selection != null) {
-			IStructuredSelection structuredSelection = (IStructuredSelection) selection;
-			IFile file = (IFile) structuredSelection.getFirstElement();
-			IProject project = file.getProject();
-			generateJsonFile(project, file);
+			if (selection instanceof IStructuredSelection) {
+				IStructuredSelection structuredSelection = (IStructuredSelection) selection;
+				IFile file = (IFile) structuredSelection.getFirstElement();
+				IProject project = file.getProject();
+				generateTextFile(project, file);
+			} else {
+				IEditorPart activeEditor = HandlerUtil.getActiveEditor(event);
+				IFile file = (IFile) activeEditor.getEditorInput().getAdapter(IFile.class);
+				IProject project = file.getProject();
+				generateTextFile(project, file);
+			}
 		} else {
 			IWorkbenchWindow workbenchWindow = HandlerUtil.getActiveWorkbenchWindowChecked(event);
 			MenuCommand cmd = new MenuCommand() {
 				@Override
 				public void execute(IProject project, IFile file) {
-					generateJsonFile(project, file);
+					generateTextFile(project, file);
 				}
 			};
 			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(),
@@ -68,7 +76,7 @@ public class TextHandler extends AbstractHandler {
 		return null;
 	}
 
-	private void generateJsonFile(IProject project, IFile file) {
+	private void generateTextFile(IProject project, IFile file) {
 		IFolder srcGenFolder = project.getFolder(GEN_FOLDER);
         
         if (!srcGenFolder.exists()) {

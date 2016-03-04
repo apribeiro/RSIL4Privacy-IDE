@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2;
@@ -48,10 +49,17 @@ public class JSONHandler extends AbstractHandler {
 		
 		// Check if the command was triggered using the ContextMenu
 		if (selection != null) {
-			IStructuredSelection structuredSelection = (IStructuredSelection) selection;
-			IFile file = (IFile) structuredSelection.getFirstElement();
-			IProject project = file.getProject();
-			generateJsonFile(project, file);
+			if (selection instanceof IStructuredSelection) {
+				IStructuredSelection structuredSelection = (IStructuredSelection) selection;
+				IFile file = (IFile) structuredSelection.getFirstElement();
+				IProject project = file.getProject();
+				generateJsonFile(project, file);
+			} else {
+				IEditorPart activeEditor = HandlerUtil.getActiveEditor(event);
+				IFile file = (IFile) activeEditor.getEditorInput().getAdapter(IFile.class);
+				IProject project = file.getProject();
+				generateJsonFile(project, file);
+			}
 		} else {
 			IWorkbenchWindow workbenchWindow = HandlerUtil.getActiveWorkbenchWindowChecked(event);
 			MenuCommand cmd = new MenuCommand() {

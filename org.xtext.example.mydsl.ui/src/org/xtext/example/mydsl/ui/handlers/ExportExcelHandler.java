@@ -21,6 +21,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.xtext.resource.XtextResource;
@@ -63,9 +64,15 @@ public class ExportExcelHandler extends AbstractHandler {
 		
 		// Check if the command was triggered using the ContextMenu
 		if (selection != null) {
-			IStructuredSelection structuredSelection = (IStructuredSelection) selection;
-			IFile file = (IFile) structuredSelection.getFirstElement();
-			generateExcel(file);
+			if (selection instanceof IStructuredSelection) {
+				IStructuredSelection structuredSelection = (IStructuredSelection) selection;
+				IFile file = (IFile) structuredSelection.getFirstElement();
+				generateExcel(file);
+			} else {
+				IEditorPart activeEditor = HandlerUtil.getActiveEditor(event);
+				IFile file = (IFile) activeEditor.getEditorInput().getAdapter(IFile.class);
+				generateExcel(file);
+			}
 		} else {
 			IWorkbenchWindow workbenchWindow = HandlerUtil.getActiveWorkbenchWindowChecked(event);
 			MenuCommand cmd = new MenuCommand() {
