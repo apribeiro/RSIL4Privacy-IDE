@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="rSLIL4Privacy" nsURI="http://www.rslil4privacy.rslingo/RSLIL4Privacy"
+    nsPrefix="rSLIL4Privacy">
+  <eClassifiers xsi:type="ecore:EClass" name="Policy">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="importelements" upperBound="-1"
+        eType="#//Import" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="collection" upperBound="-1"
+        eType="#//Collection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="disclosure" upperBound="-1"
+        eType="#//Disclosure" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="retention" upperBound="-1"
+        eType="#//Retention" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usage" upperBound="-1"
+        eType="#//Usage" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="informative" upperBound="-1"
+        eType="#//Informative" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="privateData" upperBound="-1"
+        eType="#//PrivateData" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="recipient" upperBound="-1"
+        eType="#//Recipient" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="service" upperBound="-1"
+        eType="#//Service" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enforcement" upperBound="-1"
+        eType="#//Enforcement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Import">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importedNamespace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Enforcement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enforcementName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enforcementDescription"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enforcementKind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="servicename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refprivatedata" upperBound="-1"
+        eType="#//RefPrivateData" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servicepartof" upperBound="-1"
+        eType="#//ServicePartof" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Recipient">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recipientname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partof" upperBound="-1"
+        eType="#//Partof" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="RecipientScopeKind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="RecipientTypeKind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrivateData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="privatedata" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PrivateDataKind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" upperBound="-1"
+        eType="#//Attribute" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attributeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Collection">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partof" eType="#//Collection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refprivatedata" upperBound="-1"
+        eType="#//RefPrivateData" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refertoservice" upperBound="-1"
+        eType="#//ReferToService" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refertoEnforcement" upperBound="-1"
+        eType="#//RefertoEnforcement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modalitykind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Disclosure">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partof" eType="#//Disclosure"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referToRecipient" upperBound="-1"
+        eType="#//ReferToRecipient" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referToRecipientsource"
+        upperBound="-1" eType="#//ReferToRecipientSource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referToRecipienttarget"
+        upperBound="-1" eType="#//ReferToRecipientTarget" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refprivatedata" upperBound="-1"
+        eType="#//RefPrivateData" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refertoservice" upperBound="-1"
+        eType="#//ReferToService" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refertoEnforcement" upperBound="-1"
+        eType="#//RefertoEnforcement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modalitykind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Retention">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partof" eType="#//Retention"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="period" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refprivatedata" upperBound="-1"
+        eType="#//RefPrivateData" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refertoservice" upperBound="-1"
+        eType="#//ReferToService" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refertoEnforcement" upperBound="-1"
+        eType="#//RefertoEnforcement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modalitykind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Usage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partof" eType="#//Usage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refprivatedata" upperBound="-1"
+        eType="#//RefPrivateData" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refertoservice" upperBound="-1"
+        eType="#//ReferToService" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refertoEnforcement" upperBound="-1"
+        eType="#//RefertoEnforcement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modalitykind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Informative">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partof" eType="#//Informative"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refprivatedata" upperBound="-1"
+        eType="#//RefPrivateData" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refertoservice" upperBound="-1"
+        eType="#//ReferToService" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refertoEnforcement" upperBound="-1"
+        eType="#//RefertoEnforcement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modalitykind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Partof">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partof" eType="#//Recipient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferToRecipient">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refertore" eType="#//Recipient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferToRecipientSource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refertore" eType="#//Recipient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferToRecipientTarget">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refertore" eType="#//Recipient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferToService">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refertose" eType="#//Service"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServicePartof">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refertoservice" eType="#//Service"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RefPrivateData">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refpr" eType="#//PrivateData"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RefertoEnforcement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refst" eType="#//Enforcement"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,133 @@
+grammar rslingo.rslil4privacy.RSLIL4Privacy with org.eclipse.xtext.common.Terminals
+
+generate rSLIL4Privacy "http://www.rslil4privacy.rslingo/RSLIL4Privacy"
+
+Policy:
+  'Package' name = QualifiedName '{'
+    importelements += Import*
+    collection+=Collection*
+    disclosure+=Disclosure*
+    retention+=Retention*
+    usage+=Usage*
+    informative+=Informative*
+    privateData+=PrivateData*
+    recipient+=Recipient*
+    service+=Service*
+    enforcement+=Enforcement*
+  '};';
+
+QualifiedName:
+  ID ('.' ID)*;
+
+Import:
+  'import' importedNamespace = QualifiedNameWithWildcard;
+  
+QualifiedNameWithWildcard:
+  QualifiedName '.*'?;
+	
+Enforcement:
+	'Enforcement' name=ID '{' 
+	'Name'enforcementName=STRING ','
+	'Description'enforcementDescription=STRING ','
+	'Type' enforcementKind=('Action'|'Algorithm'|'Config'|'Process'|'Tool')'};';
+	
+Service:
+	'Service' name=ID '{'
+	'Name' servicename=STRING','
+	('Description' description=STRING',')?
+	('RefersTo PrivateData' refprivatedata+=RefPrivateData*',')?
+	('Service_Part' servicepartof+=ServicePartof*)?'};';
+	
+Recipient:
+	'Recipient' name=ID '{' 
+	'Name' recipientname=STRING ','
+	'Description' description=STRING ','
+	('Recipient_Part' partof+=Partof*',')?
+ 	'Scope' RecipientScopeKind=('Internal'|'External'|'Internal/External')','
+ 	'Type' RecipientTypeKind=('Individual'|'Organization'|'Individual/Organization')'};';
+ 		
+PrivateData:
+   'PrivateData' name=ID '{' 
+   'Description' privatedata=STRING ','
+   'Type' PrivateDataKind=('PersonalInformation'| 'UsageInformation')',' attribute+=Attribute* '};'; 	
+ Attribute:
+ 	'Attribute' name=STRING 'Description' attributeName=STRING (',')?;
+
+Collection: 
+	'Collection' name=ID '{' 
+	'Description' description=STRING ','
+	'Condition' condition = STRING','
+	('PartOf Collection' partof=[Collection]',')?
+	('RefersTo PrivateData' refprivatedata+=RefPrivateData*',')?
+	('RefersTo Service' refertoservice+=ReferToService*',')?
+	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement*',')?
+	'Modality' modalitykind=('Permitted'|'Obligation'|'Forbidden') '};';
+	
+Disclosure: 
+	'Disclosure' name=ID '{' 
+	'Description' description=STRING ','
+	'Condition' condition = STRING','
+	('PartOf Disclosure' partof=[Disclosure]',')?
+	('RefersTo Recipient' referToRecipient+=ReferToRecipient* ',')?
+	('RefersTo Recipient-Source' referToRecipientsource+=ReferToRecipientSource* ',')?
+	('RefersTo Recipient-Target' referToRecipienttarget+=ReferToRecipientTarget* ',')?
+	('RefersTo PrivateData' refprivatedata+=RefPrivateData*',')?
+	('RefersTo Service' refertoservice+=ReferToService*',')?
+	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement*',')?
+	'Modality' modalitykind=('Permitted'|'Obligation'|'Forbidden') '};';
+	
+Retention: 
+	'Retention' name=ID '{' 
+	'Description' description=STRING ','
+	'Condition' condition = STRING','
+	('PartOf Retention' partof=[Retention]',')?
+	'Period' period=STRING','
+	('RefersTo PrivateData' refprivatedata+=RefPrivateData*',')?
+	('RefersTo Service' refertoservice+=ReferToService*',')?
+	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement*',')?
+	'Modality' modalitykind=('Permitted'|'Obligation'|'Forbidden') '};';
+	
+Usage:
+	'Usage' name=ID '{' 
+	'Description' description=STRING ','
+	'Condition' condition = STRING','
+	('PartOf Usage' partof=[Usage]',')?
+	('RefersTo PrivateData' refprivatedata+=RefPrivateData*',')?
+	('RefersTo Service' refertoservice+=ReferToService*',')?
+	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement*',')?
+	'Modality' modalitykind=('Permitted'|'Obligation'|'Forbidden') '};';
+	
+Informative:
+	'Informative' name=ID '{' 
+	'Description' description=STRING ','
+	'Condition' condition = STRING','
+	('PartOf Informative' partof=[Informative]',')?
+	('RefersTo PrivateData' refprivatedata+=RefPrivateData*',')?
+	('RefersTo Service' refertoservice+=ReferToService*',')?
+	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement*',')?
+	'Modality' modalitykind=('Permitted'|'Obligation'|'Forbidden') '};';
+	
+Partof:
+	partof=[Recipient]('-')?;
+
+ReferToRecipient:
+	refertore=[Recipient]('-')?;
+	
+ReferToRecipientSource:
+	refertore=[Recipient]('-')?;
+	
+ReferToRecipientTarget:
+	refertore=[Recipient]('-')?;
+	
+ReferToService:
+	refertose=[Service] ('-')?;
+	
+ServicePartof:
+	refertoservice=[Service] ('-')?;
+		
+RefPrivateData: 
+	refpr=[PrivateData] ('-')?;
+	
+RefertoEnforcement:
+	refst=[Enforcement] ('-')?;
+
