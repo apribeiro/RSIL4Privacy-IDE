@@ -3,8 +3,8 @@ grammar rslingo.rslil4privacy.RSLIL4Privacy with org.eclipse.xtext.common.Termin
 generate rSLIL4Privacy "http://www.rslil4privacy.rslingo/RSLIL4Privacy"
 
 Policy:
-  'Package' name = QualifiedName '{'
-    importelements += Import*
+  'Package' name=QualifiedName '{'
+    importelements+=Import*
     collection+=Collection*
     disclosure+=Disclosure*
     retention+=Retention*
@@ -20,31 +20,31 @@ QualifiedName:
   ID ('.' ID)*;
 
 Import:
-  'import' importedNamespace = QualifiedNameWithWildcard;
+  'import' importedNamespace=QualifiedNameWithWildcard;
   
 QualifiedNameWithWildcard:
   QualifiedName '.*'?;
 	
 Enforcement:
-	'Enforcement' name=ID '{' 
+	'Enforcement' name=ID '{'
 	'Name'enforcementName=STRING ','
 	'Description'enforcementDescription=STRING ','
-	'Type' enforcementKind=('Action'|'Algorithm'|'Config'|'Process'|'Tool')'};';
+	'Type' enforcementKind=('Action'|'Algorithm'|'Config'|'Process'|'Tool') '};';
 	
 Service:
 	'Service' name=ID '{'
-	'Name' servicename=STRING','
-	('Description' description=STRING',')?
-	('RefersTo PrivateData' refprivatedata+=RefPrivateData*',')?
-	('Service_Part' servicepartof+=ServicePartof*)?'};';
+	'Name' servicename=STRING ','
+	('Description' description=STRING ',')?
+	('RefersTo PrivateData' refprivatedata+=RefPrivateData* ',')?
+	('Service_Part' servicepartof+=ServicePartof*)? '};';
 	
 Recipient:
-	'Recipient' name=ID '{' 
+	'Recipient' name=ID '{'
 	'Name' recipientname=STRING ','
 	'Description' description=STRING ','
-	('Recipient_Part' partof+=Partof*',')?
- 	'Scope' RecipientScopeKind=('Internal'|'External'|'Internal/External')','
- 	'Type' RecipientTypeKind=('Individual'|'Organization'|'Individual/Organization')'};';
+	('Recipient_Part' partof+=Partof* ',')?
+ 	'Scope' RecipientScopeKind=('Internal'|'External'|'Internal/External') ','
+ 	'Type' RecipientTypeKind=('Individual'|'Organization'|'Individual/Organization') '};';
  		
 PrivateData:
    'PrivateData' name=ID '{' 
@@ -53,58 +53,58 @@ PrivateData:
  Attribute:
  	'Attribute' name=STRING 'Description' attributeName=STRING (',')?;
 
-Collection: 
-	'Collection' name=ID '{' 
+Collection:
+	'Collection' name=ID '{'
 	'Description' description=STRING ','
-	'Condition' condition = STRING','
-	('PartOf Collection' partof=[Collection]',')?
-	('RefersTo PrivateData' refprivatedata+=RefPrivateData*',')?
-	('RefersTo Service' refertoservice+=ReferToService*',')?
-	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement*',')?
+	'Condition' condition = STRING ','
+	('PartOf Collection' partof=[Collection] ',')?
+	('RefersTo PrivateData' refprivatedata+=RefPrivateData* ',')?
+	('RefersTo Service' refertoservice+=ReferToService* ',')?
+	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement* ',')?
 	'Modality' modalitykind=('Permitted'|'Obligation'|'Forbidden') '};';
 	
-Disclosure: 
-	'Disclosure' name=ID '{' 
+Disclosure:
+	'Disclosure' name=ID '{'
 	'Description' description=STRING ','
-	'Condition' condition = STRING','
-	('PartOf Disclosure' partof=[Disclosure]',')?
+	'Condition' condition=STRING ','
+	('PartOf Disclosure' partof=[Disclosure] ',')?
 	('RefersTo Recipient' referToRecipient+=ReferToRecipient* ',')?
 	('RefersTo Recipient-Source' referToRecipientsource+=ReferToRecipientSource* ',')?
 	('RefersTo Recipient-Target' referToRecipienttarget+=ReferToRecipientTarget* ',')?
-	('RefersTo PrivateData' refprivatedata+=RefPrivateData*',')?
-	('RefersTo Service' refertoservice+=ReferToService*',')?
-	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement*',')?
+	('RefersTo PrivateData' refprivatedata+=RefPrivateData* ',')?
+	('RefersTo Service' refertoservice+=ReferToService* ',')?
+	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement* ',')?
 	'Modality' modalitykind=('Permitted'|'Obligation'|'Forbidden') '};';
 	
-Retention: 
-	'Retention' name=ID '{' 
+Retention:
+	'Retention' name=ID '{'
 	'Description' description=STRING ','
-	'Condition' condition = STRING','
-	('PartOf Retention' partof=[Retention]',')?
-	'Period' period=STRING','
+	'Condition' condition=STRING ','
+	('PartOf Retention' partof=[Retention] ',')?
+	'Period' period=STRING ','
 	('RefersTo PrivateData' refprivatedata+=RefPrivateData*',')?
-	('RefersTo Service' refertoservice+=ReferToService*',')?
-	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement*',')?
+	('RefersTo Service' refertoservice+=ReferToService* ',')?
+	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement* ',')?
 	'Modality' modalitykind=('Permitted'|'Obligation'|'Forbidden') '};';
 	
 Usage:
-	'Usage' name=ID '{' 
+	'Usage' name=ID '{'
 	'Description' description=STRING ','
-	'Condition' condition = STRING','
-	('PartOf Usage' partof=[Usage]',')?
-	('RefersTo PrivateData' refprivatedata+=RefPrivateData*',')?
-	('RefersTo Service' refertoservice+=ReferToService*',')?
-	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement*',')?
+	'Condition' condition=STRING ','
+	('PartOf Usage' partof=[Usage] ',')?
+	('RefersTo PrivateData' refprivatedata+=RefPrivateData* ',')?
+	('RefersTo Service' refertoservice+=ReferToService* ',')?
+	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement* ',')?
 	'Modality' modalitykind=('Permitted'|'Obligation'|'Forbidden') '};';
 	
 Informative:
 	'Informative' name=ID '{' 
 	'Description' description=STRING ','
-	'Condition' condition = STRING','
-	('PartOf Informative' partof=[Informative]',')?
-	('RefersTo PrivateData' refprivatedata+=RefPrivateData*',')?
-	('RefersTo Service' refertoservice+=ReferToService*',')?
-	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement*',')?
+	'Condition' condition=STRING ','
+	('PartOf Informative' partof=[Informative] ',')?
+	('RefersTo PrivateData' refprivatedata+=RefPrivateData* ',')?
+	('RefersTo Service' refertoservice+=ReferToService* ',')?
+	('RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement* ',')?
 	'Modality' modalitykind=('Permitted'|'Obligation'|'Forbidden') '};';
 	
 Partof:
@@ -120,14 +120,13 @@ ReferToRecipientTarget:
 	refertore=[Recipient]('-')?;
 	
 ReferToService:
-	refertose=[Service] ('-')?;
+	refertose=[Service]('-')?;
 	
 ServicePartof:
-	refertoservice=[Service] ('-')?;
+	refertoservice=[Service]('-')?;
 		
 RefPrivateData: 
-	refpr=[PrivateData] ('-')?;
+	refpr=[PrivateData]('-')?;
 	
 RefertoEnforcement:
-	refst=[Enforcement] ('-')?;
-
+	refst=[Enforcement]('-')?;
