@@ -43,7 +43,6 @@ public class ImportExcelHandler extends AbstractHandler {
 		final String fileName = dialog.getFileName();
 		
 		if (filePath != null) {
-			
 			ImportWindow importWindow = new ImportWindow();
 			String importMode = importWindow.open();
 			
@@ -59,7 +58,6 @@ public class ImportExcelHandler extends AbstractHandler {
 				window.open();
 			}
 		}
-		
 		return null;
 	}
 	
@@ -114,8 +112,32 @@ public class ImportExcelHandler extends AbstractHandler {
 		}
 	}
 	
-	private void generateSingleFile(IFolder srcGenFolder, String filePath, String fileName) {
-		// TODO: Implement generateSingleFile.
+	private void generateSingleFile(IFolder srcGenFolder, String filePath, String fileName) 
+			throws Exception {
+		StringBuilder sb = new StringBuilder();
+		InputStream inp = new FileInputStream(filePath);
+		Workbook wb = WorkbookFactory.create(inp);
+		sb.append("Package " + fileName + ".RSLingo4Privacy {");
+		sb.append("\n");
+		sb.append("\n");
+		
+		generateStatementsRegion(wb, sb);
+		generatePrivateDataRegion(wb, sb);
+		generateRecipientsRegion(wb, sb);
+		generateServicesRegion(wb, sb);
+		generateEnforcementsRegion(wb, sb);
+    	
+    	sb.deleteCharAt(sb.length() - 1);
+		sb.append("};");
+		
+		IFile file = srcGenFolder.getFile(fileName + ".rslil");
+		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
+		
+		if (!file.exists()) {
+			file.create(source, IResource.FORCE, null);
+		} else {
+			file.setContents(source, IResource.FORCE, null);
+		}
 	}
 	
 	private void generateMasterFile(IFolder srcGenFolder, String filePath, String fileName) {
@@ -140,6 +162,121 @@ public class ImportExcelHandler extends AbstractHandler {
 		sb.append("\n");
 		sb.append("\n");
 		
+		generateStatementsRegion(wb, sb);
+    	
+    	sb.deleteCharAt(sb.length() - 1);
+    	sb.append("};");
+		
+		IFile file = srcGenFolder.getFile(fileName + ".Statements.rslil");
+		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
+		
+		if (!file.exists()) {
+			file.create(source, IResource.FORCE, null);
+		} else {
+			file.setContents(source, IResource.FORCE, null);
+		}
+	}
+	
+	private void generatePrivateDataFile(IFolder srcGenFolder, String filePath, String fileName)
+			throws Exception {
+		StringBuilder sb = new StringBuilder();
+		InputStream inp = new FileInputStream(filePath);
+		Workbook wb = WorkbookFactory.create(inp);
+		sb.append("Package " + fileName + ".Privatedata.RSLingo4Privacy {");
+		sb.append("\n");
+		sb.append("\n");
+		
+		generatePrivateDataRegion(wb, sb);
+    	
+    	sb.deleteCharAt(sb.length() - 1);
+    	sb.append("};");
+		
+		IFile file = srcGenFolder.getFile(fileName + ".Privatedata.rslil");
+		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
+		
+		if (!file.exists()) {
+			file.create(source, IResource.FORCE, null);
+		} else {
+			file.setContents(source, IResource.FORCE, null);
+		}
+	}
+	
+	private void generateServicesFile(IFolder srcGenFolder, String filePath, String fileName)
+			throws Exception {
+		StringBuilder sb = new StringBuilder();
+		InputStream inp = new FileInputStream(filePath);
+		Workbook wb = WorkbookFactory.create(inp);
+		sb.append("Package " + fileName + ".Services.RSLingo4Privacy {");
+		sb.append("\n");
+		sb.append("\n");
+		sb.append("import " + fileName + ".Privatedata.RSLingo4Privacy.*");
+		sb.append("\n");
+		sb.append("\n");
+		
+		generateServicesRegion(wb, sb);
+    	
+    	sb.deleteCharAt(sb.length() - 1);
+    	sb.append("};");
+		
+		IFile file = srcGenFolder.getFile(fileName + ".Services.rslil");
+		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
+		
+		if (!file.exists()) {
+			file.create(source, IResource.FORCE, null);
+		} else {
+			file.setContents(source, IResource.FORCE, null);
+		}
+	}
+	
+	private void generateEnforcementsFile(IFolder srcGenFolder, String filePath, String fileName)
+			throws Exception {
+		StringBuilder sb = new StringBuilder();
+		InputStream inp = new FileInputStream(filePath);
+		Workbook wb = WorkbookFactory.create(inp);
+		sb.append("Package " + fileName + ".Enforcements.RSLingo4Privacy {");
+		sb.append("\n");
+		sb.append("\n");
+		
+		generateEnforcementsRegion(wb, sb);
+    	
+    	sb.deleteCharAt(sb.length() - 1);
+    	sb.append("};");
+		
+		IFile file = srcGenFolder.getFile(fileName + ".Enforcements.rslil");
+		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
+		
+		if (!file.exists()) {
+			file.create(source, IResource.FORCE, null);
+		} else {
+			file.setContents(source, IResource.FORCE, null);
+		}
+	}	
+	
+	private void generateRecipientsFile(IFolder srcGenFolder, String filePath, String fileName)
+			throws Exception {
+		StringBuilder sb = new StringBuilder();
+		InputStream inp = new FileInputStream(filePath);
+		Workbook wb = WorkbookFactory.create(inp);
+		sb.append("Package " + fileName + ".Recipients.RSLingo4Privacy {");
+		sb.append("\n");
+		sb.append("\n");
+		
+		generateRecipientsRegion(wb, sb);
+    	
+    	sb.deleteCharAt(sb.length() - 1);
+    	sb.append("};");
+		
+		IFile file = srcGenFolder.getFile(fileName + ".Recipients.rslil");
+		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
+		
+		if (!file.exists()) {
+			file.create(source, IResource.FORCE, null);
+		} else {
+			file.setContents(source, IResource.FORCE, null);
+		}
+	}
+	
+	private void generateStatementsRegion(Workbook wb, StringBuilder sb) {
 		// Get the Statements Sheet
 	    Sheet sheet = wb.getSheet("Statements");
     	Iterator<Row> rowIt = sheet.rowIterator();
@@ -269,29 +406,9 @@ public class ImportExcelHandler extends AbstractHandler {
     		else
     			break;
 		}
-    	
-    	sb.deleteCharAt(sb.length() - 1);
-    	sb.append("};");
-		
-		IFile file = srcGenFolder.getFile(fileName + ".Statements.rslil");
-		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
-		
-		if (!file.exists()) {
-			file.create(source, IResource.FORCE, null);
-		} else {
-			file.setContents(source, IResource.FORCE, null);
-		}
 	}
 	
-	private void generatePrivateDataFile(IFolder srcGenFolder, String filePath, String fileName)
-			throws Exception {
-		StringBuilder sb = new StringBuilder();
-		InputStream inp = new FileInputStream(filePath);
-		Workbook wb = WorkbookFactory.create(inp);
-		sb.append("Package " + fileName + ".Privatedata.RSLingo4Privacy {");
-		sb.append("\n");
-		sb.append("\n");
-		
+	private void generatePrivateDataRegion(Workbook wb, StringBuilder sb) {
 		// Get the Private Data Sheet
 	    Sheet sheet = wb.getSheet("PrivateData");
     	Iterator<Row> rowIt = sheet.rowIterator();
@@ -331,32 +448,9 @@ public class ImportExcelHandler extends AbstractHandler {
     		else
     			break;
 		}
-    	
-    	sb.deleteCharAt(sb.length() - 1);
-    	sb.append("};");
-		
-		IFile file = srcGenFolder.getFile(fileName + ".Privatedata.rslil");
-		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
-		
-		if (!file.exists()) {
-			file.create(source, IResource.FORCE, null);
-		} else {
-			file.setContents(source, IResource.FORCE, null);
-		}
 	}
 	
-	private void generateServicesFile(IFolder srcGenFolder, String filePath, String fileName)
-			throws Exception {
-		StringBuilder sb = new StringBuilder();
-		InputStream inp = new FileInputStream(filePath);
-		Workbook wb = WorkbookFactory.create(inp);
-		sb.append("Package " + fileName + ".Services.RSLingo4Privacy {");
-		sb.append("\n");
-		sb.append("\n");
-		sb.append("import " + fileName + ".Privatedata.RSLingo4Privacy.*");
-		sb.append("\n");
-		sb.append("\n");
-		
+	private void generateServicesRegion(Workbook wb, StringBuilder sb) {
 		// Get the Services Sheet
 	    Sheet sheet = wb.getSheet("Services");
     	Iterator<Row> rowIt = sheet.rowIterator();
@@ -414,29 +508,9 @@ public class ImportExcelHandler extends AbstractHandler {
     		else
     			break;
 		}
-    	
-    	sb.deleteCharAt(sb.length() - 1);
-    	sb.append("};");
-		
-		IFile file = srcGenFolder.getFile(fileName + ".Services.rslil");
-		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
-		
-		if (!file.exists()) {
-			file.create(source, IResource.FORCE, null);
-		} else {
-			file.setContents(source, IResource.FORCE, null);
-		}
 	}
 	
-	private void generateEnforcementsFile(IFolder srcGenFolder, String filePath, String fileName)
-			throws Exception {
-		StringBuilder sb = new StringBuilder();
-		InputStream inp = new FileInputStream(filePath);
-		Workbook wb = WorkbookFactory.create(inp);
-		sb.append("Package " + fileName + ".Enforcements.RSLingo4Privacy {");
-		sb.append("\n");
-		sb.append("\n");
-		
+	private void generateEnforcementsRegion(Workbook wb, StringBuilder sb) {
 		// Get the Enforcements Sheet
 	    Sheet sheet = wb.getSheet("Enforcements");
     	Iterator<Row> rowIt = sheet.rowIterator();
@@ -468,29 +542,9 @@ public class ImportExcelHandler extends AbstractHandler {
     		else
     			break;
 		}
-    	
-    	sb.deleteCharAt(sb.length() - 1);
-    	sb.append("};");
-		
-		IFile file = srcGenFolder.getFile(fileName + ".Enforcements.rslil");
-		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
-		
-		if (!file.exists()) {
-			file.create(source, IResource.FORCE, null);
-		} else {
-			file.setContents(source, IResource.FORCE, null);
-		}
 	}
 	
-	private void generateRecipientsFile(IFolder srcGenFolder, String filePath, String fileName)
-			throws Exception {
-		StringBuilder sb = new StringBuilder();
-		InputStream inp = new FileInputStream(filePath);
-		Workbook wb = WorkbookFactory.create(inp);
-		sb.append("Package " + fileName + ".Recipients.RSLingo4Privacy {");
-		sb.append("\n");
-		sb.append("\n");
-		
+	private void generateRecipientsRegion(Workbook wb, StringBuilder sb) {
 		// Get the Recipients Sheet
 	    Sheet sheet = wb.getSheet("Recipients");
     	Iterator<Row> rowIt = sheet.rowIterator();
@@ -535,18 +589,6 @@ public class ImportExcelHandler extends AbstractHandler {
 			}
     		else
     			break;
-		}
-    	
-    	sb.deleteCharAt(sb.length() - 1);
-    	sb.append("};");
-		
-		IFile file = srcGenFolder.getFile(fileName + ".Recipients.rslil");
-		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
-		
-		if (!file.exists()) {
-			file.create(source, IResource.FORCE, null);
-		} else {
-			file.setContents(source, IResource.FORCE, null);
 		}
 	}
 }
