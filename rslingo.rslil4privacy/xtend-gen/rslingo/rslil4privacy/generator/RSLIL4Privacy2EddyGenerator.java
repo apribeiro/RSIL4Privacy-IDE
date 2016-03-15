@@ -408,7 +408,7 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
           }
         }
       } else {
-        _builder.append("FOR Anything");
+        _builder.append("FOR anything");
       }
     }
     _builder.newLineIfNotEmpty();
@@ -520,7 +520,7 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
           }
         }
       } else {
-        _builder.append("FOR Anything");
+        _builder.append("FOR anything");
       }
     }
     _builder.newLineIfNotEmpty();
@@ -588,7 +588,7 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
           }
         }
       } else {
-        _builder.append("FOR Anything");
+        _builder.append("FOR anything");
       }
     }
     _builder.newLineIfNotEmpty();
@@ -656,7 +656,7 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
           }
         }
       } else {
-        _builder.append("FOR Anything");
+        _builder.append("FOR anything");
       }
     }
     _builder.newLineIfNotEmpty();
@@ -723,7 +723,7 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
           }
         }
       } else {
-        _builder.append("FOR Anything");
+        _builder.append("FOR anything");
       }
     }
     _builder.newLineIfNotEmpty();

@@ -31,8 +31,9 @@ import rslingo.rslil4privacy.rSLIL4Privacy.Usage
 class RSLIL4Privacy2EddyGenerator implements IGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-		fsa.generateFile(resource.className + '.policy', 		
-			resource.allContents.filter(typeof(Policy)).map[compilepo].join(' '))
+		fsa.generateFile(resource.className + '.policy',
+			resource.allContents.filter(typeof(Policy)).map[compilepo].join(' ')
+		)
 	}
 	
 	def className(Resource res) {
@@ -85,7 +86,7 @@ def compiledetumat (Attribute pdat)
 def compilecollection(Collection coll)
 '''«IF coll.modalitykind== 'Permitted'»P «ELSEIF coll.modalitykind== 'Obligation'»O «ELSE»R «ENDIF»COLLECT «/*
 */»«IF coll.refprivatedata.length== 8»ALL-Information «ELSE»«FOR p:coll.refprivatedata SEPARATOR','»«p.compilep» «ENDFOR»«ENDIF»«/*
-*/»«IF !coll.refertoservice.empty»FOR «FOR b:coll.refertoservice SEPARATOR ','»«b.compiles»«ENDFOR»«ELSE»FOR Anything«ENDIF»
+*/»«IF !coll.refertoservice.empty»FOR «FOR b:coll.refertoservice SEPARATOR ','»«b.compiles»«ENDFOR»«ELSE»FOR anything«ENDIF»
 '''
 
 def compiletransfer(Disclosure tran)
@@ -93,25 +94,25 @@ def compiletransfer(Disclosure tran)
 */»«IF tran.refprivatedata.length== 8»ALL-Information «ELSE»«FOR p:tran.refprivatedata SEPARATOR','»«p.compilep» «ENDFOR»«ENDIF»«/*
 */»«IF !tran.referToRecipientsource.empty»FROM «FOR rs:tran.referToRecipientsource SEPARATOR ','»«rs.compiler»«ENDFOR» «ENDIF»«/*
 */»«IF !tran.referToRecipienttarget.empty»TO «FOR rt:tran.referToRecipienttarget SEPARATOR ','»«rt.compiler»«ENDFOR» «ENDIF»«/*
-*/»«IF !tran.refertoservice.empty»FOR «FOR b:tran.refertoservice SEPARATOR ','»«b.compiles»«ENDFOR»«ELSE»FOR Anything«ENDIF»
+*/»«IF !tran.refertoservice.empty»FOR «FOR b:tran.refertoservice SEPARATOR ','»«b.compiles»«ENDFOR»«ELSE»FOR anything«ENDIF»
 '''
  
 def compileretention(Retention ret)
 '''«IF ret.modalitykind== 'Permitted'»P «ELSEIF ret.modalitykind== 'Obligation'»O «ELSE»R «ENDIF»RETAIN «/*
 */»«IF ret.refprivatedata.length== 8»ALL-Information «ELSE»«FOR p:ret.refprivatedata SEPARATOR','»«p.compilep» «ENDFOR»«ENDIF»«/*
-*/»«IF !ret.refertoservice.empty»FOR «FOR b:ret.refertoservice SEPARATOR ','»«b.compiles»«ENDFOR»«ELSE»FOR Anything«ENDIF»
+*/»«IF !ret.refertoservice.empty»FOR «FOR b:ret.refertoservice SEPARATOR ','»«b.compiles»«ENDFOR»«ELSE»FOR anything«ENDIF»
 '''
  
 def compileusage(Usage use)
 '''«IF use.modalitykind== 'Permitted'»P «ELSEIF use.modalitykind== 'Obligation'»O «ELSE»R «ENDIF»USE «/*
 */»«IF use.refprivatedata.length== 8»ALL-Information «ELSE»«FOR p:use.refprivatedata SEPARATOR','»«p.compilep» «ENDFOR»«ENDIF»«/*
-*/»«IF !use.refertoservice.empty»FOR «FOR b:use.refertoservice SEPARATOR ','»«b.compiles»«ENDFOR»«ELSE»FOR Anything«ENDIF»
+*/»«IF !use.refertoservice.empty»FOR «FOR b:use.refertoservice SEPARATOR ','»«b.compiles»«ENDFOR»«ELSE»FOR anything«ENDIF»
 '''
  
 def compileinformative(Informative inf)
 '''«IF inf.modalitykind== 'Permitted'»P «ELSEIF inf.modalitykind== 'Obligation'»O «ELSE»R «ENDIF»INFORM «/*
 */»«IF inf.refprivatedata.length== 8»ALL-Information «FOR p:inf.refprivatedata SEPARATOR','»«p.compilep» «ENDFOR»«ENDIF»«/*
-*/»«IF !inf.refertoservice.empty»FOR «FOR b:inf.refertoservice SEPARATOR ','»«b.compiles»«ENDFOR»«ELSE»FOR Anything«ENDIF»
+*/»«IF !inf.refertoservice.empty»FOR «FOR b:inf.refertoservice SEPARATOR ','»«b.compiles»«ENDFOR»«ELSE»FOR anything«ENDIF»
 '''
 
 def compiler(ReferToRecipientSource rs) '''«rs.refertore.recipientname»'''
