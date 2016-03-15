@@ -23,6 +23,8 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
+
+import rslingo.rslil4privacy.ui.windows.ImportWindow;
 import rslingo.rslil4privacy.ui.windows.MenuCommand;
 import rslingo.rslil4privacy.ui.windows.MenuCommandWindow;
 
@@ -41,21 +43,28 @@ public class ImportExcelHandler extends AbstractHandler {
 		final String fileName = dialog.getFileName();
 		
 		if (filePath != null) {
-			MenuCommand cmd = new MenuCommand() {
-				@Override
-				public void execute(IProject project, IFile file) {
-					importExcelAndGenerateFiles(project, filePath, fileName);
-				}
-			};
-			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(),
-					cmd, true, null);
-			window.open();
+			
+			ImportWindow importWindow = new ImportWindow();
+			String importMode = importWindow.open();
+			
+			if (importMode != null) {
+				MenuCommand cmd = new MenuCommand() {
+					@Override
+					public void execute(IProject project, IFile file) {
+						importExcelAndGenerateFiles(project, filePath, fileName, importMode);
+					}
+				};
+				MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(),
+						cmd, true, null);
+				window.open();
+			}
 		}
 		
 		return null;
 	}
 	
-	private void importExcelAndGenerateFiles(IProject project, String filePath, String fileName) {
+	private void importExcelAndGenerateFiles(IProject project, String filePath,
+			String fileName, String importMode) {
 		try {
 			IFolder srcGenFolder = project.getFolder(GEN_FOLDER);
             
@@ -77,12 +86,17 @@ public class ImportExcelHandler extends AbstractHandler {
 			} else if (fileName.endsWith(".xls")) {
 				fileName = fileName.split(".xls")[0];
 			}
-
-			generateStatementsFile(srcGenFolder, filePath, fileName);
-			generatePrivateDataFile(srcGenFolder, filePath, fileName);
-			generateServicesFile(srcGenFolder, filePath, fileName);
-			generateEnforcementsFile(srcGenFolder, filePath, fileName);
-			generateRecipientsFile(srcGenFolder, filePath, fileName);
+    		
+    		if (importMode.equals(ImportWindow.SINGLE)) {
+    			generateSingleFile(srcGenFolder, filePath, fileName);
+			} else {
+				generateMasterFile(srcGenFolder, filePath, fileName);
+				generateStatementsFile(srcGenFolder, filePath, fileName);
+				generatePrivateDataFile(srcGenFolder, filePath, fileName);
+				generateServicesFile(srcGenFolder, filePath, fileName);
+				generateEnforcementsFile(srcGenFolder, filePath, fileName);
+				generateRecipientsFile(srcGenFolder, filePath, fileName);
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -98,6 +112,14 @@ public class ImportExcelHandler extends AbstractHandler {
 		} else {
 			file.setContents(source, IResource.FORCE, new NullProgressMonitor());
 		}
+	}
+	
+	private void generateSingleFile(IFolder srcGenFolder, String filePath, String fileName) {
+		// TODO: Implement generateSingleFile.
+	}
+	
+	private void generateMasterFile(IFolder srcGenFolder, String filePath, String fileName) {
+		// TODO: Implement generateMasterFileMasterFile.
 	}
 	
 	private void generateStatementsFile(IFolder srcGenFolder, String filePath, String fileName)
