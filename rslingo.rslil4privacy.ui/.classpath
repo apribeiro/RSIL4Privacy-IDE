@@ -3,6 +3,19 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="src-gen"/>
 	<classpathentry kind="src" path="xtend-gen"/>
+	<classpathentry exported="true" kind="lib" path="libs/OwlViz/Jena-2.5.3/lib/antlr-2.7.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/OwlViz/Jena-2.5.3/lib/commons-logging-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/OwlViz/Jena-2.5.3/lib/icu4j_3_4.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/OwlViz/Jena-2.5.3/lib/iri.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/OwlViz/Jena-2.5.3/lib/jena.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/OwlViz/Jena-2.5.3/lib/json.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/OwlViz/Jena-2.5.3/lib/log4j-1.2.12.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/OwlViz/Jena-2.5.3/lib/xercesImpl.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/OwlViz/Jena-2.5.3/lib/xml-apis.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/OwlViz/looks-2.1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/OwlViz/OWLViz.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/OwlViz/protege-owl.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/OwlViz/protege.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="lib" path="libs/eddy/eddy.jar"/>
