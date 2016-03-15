@@ -1,7 +1,10 @@
 package rslingo.rslil4privacy.ui.handlers;
 
+import java.awt.Dimension;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -26,11 +29,8 @@ import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.util.SimpleIRIMapper;
-import rslingo.rslil4privacy.ui.windows.MenuCommand;
-import rslingo.rslil4privacy.ui.windows.MenuCommandWindow;
 
 import eddy.lang.Policy;
-import eddy.lang.analysis.CompilationProfile;
 import eddy.lang.analysis.Conflict;
 import eddy.lang.analysis.ConflictAnalyzer;
 import eddy.lang.analysis.ConflictPrinter;
@@ -39,6 +39,18 @@ import eddy.lang.analysis.ExtensionCalculator;
 import eddy.lang.parser.Compilation;
 import eddy.lang.parser.Compiler;
 import eddy.lang.parser.Parser;
+import edu.stanford.smi.protegex.owl.ProtegeOWL;
+import edu.stanford.smi.protegex.owl.model.OWLClass;
+import edu.stanford.smi.protegex.owl.model.OWLModel;
+import edu.stanford.smi.protegex.owl.model.OWLNamedClass;
+import rslingo.rslil4privacy.ui.windows.MenuCommand;
+import rslingo.rslil4privacy.ui.windows.MenuCommandWindow;
+import uk.ac.man.cs.mig.coode.owlviz.model.OWLKBAssertedGraphModel;
+import uk.ac.man.cs.mig.coode.owlviz.ui.renderer.OWLClsNodeLabelRenderer;
+import uk.ac.man.cs.mig.coode.owlviz.ui.renderer.OWLClsNodeRenderer;
+import uk.ac.man.cs.mig.util.graph.controller.impl.DefaultController;
+import uk.ac.man.cs.mig.util.graph.export.impl.PNGExportFormat;
+import uk.ac.man.cs.mig.util.graph.layout.dotlayoutengine.DotLayoutEngineProperties;
 
 public class CheckQualityHandler extends AbstractHandler {
 
@@ -110,10 +122,9 @@ public class CheckQualityHandler extends AbstractHandler {
 			// Compile the policy
 			Compilation comp = compiler.compile(policy);
 			time = System.currentTimeMillis() - time;
-			addToLog(logger, file.getName() + ": Parsing policy... " + (time / 1000) + " secs");
+			addToLog(logger, file.getName() + ": Parsing policy... " + (time / 1000.0) + " secs");
 			
 			// Compute extension and detect conflicts
-			addToLog(logger, file.getName() + ": Detecting conflicts..");
 			time = System.currentTimeMillis();
 			
 			ConflictAnalyzer analyzer = new ConflictAnalyzer();
@@ -122,7 +133,7 @@ public class CheckQualityHandler extends AbstractHandler {
 			ArrayList<Conflict> conflicts = analyzer.analyze(ext);
 			
 			time = System.currentTimeMillis() - time;
-			addToLog(logger, ". " + (time / 1000) + " secs");
+			addToLog(logger, file.getName() + ": Detecting conflicts... " + (time / 1000.0) + " secs\n");
 			
 			// Report the conflicts
 			ByteArrayOutputStream osConflicts = new ByteArrayOutputStream();
@@ -132,6 +143,8 @@ public class CheckQualityHandler extends AbstractHandler {
 			TreeSet<String> rules = new TreeSet<String>();
 			
 			for (Conflict c : conflicts) {
+				rules.add(c.rule1.id);
+				rules.add(c.rule2.id);
 				printer.print(c);
 				printer.println();
 			}
@@ -148,22 +161,27 @@ public class CheckQualityHandler extends AbstractHandler {
 			
 			// Save the ontology to a file for inspection
 			String projectPath = file.getProject().getLocation().toOSString();
+			String genPath = projectPath + "/" + GEN_FOLDER + "/";
 			OWLOntology ontology = comp.getOntology();
 			OWLOntologyManager manager = ontology.getOWLOntologyManager();
 			manager.saveOntology(ontology, IRI.create(
-					new File(projectPath + "/" + GEN_FOLDER + "/" + fileName + ".owl")));
-			addToLog(logger, fileName + ": Saved ontology as '" + fileName + ".owl'");
+					new File(genPath + fileName + ".owl")));
+			addToLog(logger, file.getName() + ": Saved ontology as '" + fileName + ".owl'");
 			
 			addToLog(logger, file.getName() + ": Finished.\n");
-			CompilationProfile.computeProfile(comp);
+			
+			// Performance Indicators
+//			CompilationProfile.computeProfile(comp);
 //			comp.printProperties(System.out);
-			ByteArrayOutputStream osProperties = new ByteArrayOutputStream();
-			PrintStream ps2 = new PrintStream(osProperties);
-			comp.printProperties(ps2);
-			addToLog(logger, osProperties.toString());
-			osProperties.close();
-			ps2.close();
+//			ByteArrayOutputStream osProperties = new ByteArrayOutputStream();
+//			PrintStream ps2 = new PrintStream(osProperties);
+//			comp.printProperties(ps2);
+//			addToLog(logger, osProperties.toString());
+//			osProperties.close();
+//			ps2.close();
 
+			generateOwlPng(genPath, fileName);
+			
 			IFile logFile = srcGenFolder.getFile(fileName + ".log");
 			InputStream source = new StringInputStream(logger.toString());
 			
@@ -178,6 +196,37 @@ public class CheckQualityHandler extends AbstractHandler {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	private void generateOwlPng(String genPath, String fileName) throws Exception {
+		FileInputStream is = new FileInputStream(genPath + fileName + ".owl"); 
+		OWLModel model = ProtegeOWL.createJenaOWLModelFromInputStream(is);
+		
+		final DefaultController controller = new DefaultController(
+				new OWLKBAssertedGraphModel(model));
+		controller.setNodeRenderer(
+				new OWLClsNodeRenderer(controller, controller.getVisualisedObjectManager(),
+						new OWLClsNodeLabelRenderer(), model));		
+		
+		OWLNamedClass thing = model.getOWLNamedClass("owl:Thing");
+		
+		if (thing != null) {
+			controller.getVisualisedObjectManager().showObject(thing);
+			controller.getVisualisedObjectManager().showChildren(thing, 4, OWLClass.class);
+		}
+		
+		controller.getGraphView().setPreferredSize(new Dimension(400, 400));
+
+		DotLayoutEngineProperties properties = DotLayoutEngineProperties.getInstance();
+		properties.setDotProcessPath("C:/Program Files (x86)/Graphviz2.24/bin/dot.exe");
+		controller.getGraphView().revalidateGraph();
+
+		String path = genPath + fileName + ".png";
+		PNGExportFormat exportFormat = new PNGExportFormat();
+		
+		FileOutputStream fos = new FileOutputStream(path);
+		exportFormat.export(controller, fos);
+		fos.close();
 	}
 	
 	private void addToLog(StringBuilder logger, String message) {
