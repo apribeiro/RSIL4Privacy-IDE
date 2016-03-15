@@ -17,13 +17,13 @@ Policy:
   '};';
 
 QualifiedName:
-  ID ('.' ID)*;
+  	ID ('.' ID)*;
 
 Import:
-  'import' importedNamespace=QualifiedNameWithWildcard;
+	'import' importedNamespace=QualifiedNameWithWildcard;
   
 QualifiedNameWithWildcard:
-  QualifiedName '.*'?;
+  	QualifiedName '.*'?;
 	
 Enforcement:
 	'Enforcement' name=ID '{'
@@ -47,9 +47,9 @@ Recipient:
  	'Type' RecipientTypeKind=('Individual'|'Organization'|'Individual/Organization') '};';
  		
 PrivateData:
-   'PrivateData' name=ID '{' 
-   'Description' privatedata=STRING ','
-   'Type' PrivateDataKind=('PersonalInformation'| 'UsageInformation')',' attribute+=Attribute* '};'; 	
+	'PrivateData' name=ID '{' 
+	'Description' privatedata=STRING ','
+	'Type' PrivateDataKind=('PersonalInformation'| 'UsageInformation')',' attribute+=Attribute* '};'; 	
  Attribute:
  	'Attribute' name=STRING 'Description' attributeName=STRING (',')?;
 
