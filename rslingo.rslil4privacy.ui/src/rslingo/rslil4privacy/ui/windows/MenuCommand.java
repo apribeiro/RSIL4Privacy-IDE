@@ -11,7 +11,8 @@ public interface MenuCommand {
 	 * 
 	 * @param project the source project
 	 * @param file the source file used for the generation
+	 * @throws Exception 
 	 */
-	public void execute(IProject project, IFile file);
+	public void execute(IProject project, IFile file) throws Exception;
 	
 }

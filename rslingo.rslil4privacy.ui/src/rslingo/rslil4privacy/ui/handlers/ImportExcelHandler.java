@@ -49,7 +49,7 @@ public class ImportExcelHandler extends AbstractHandler {
 			if (importMode != null) {
 				MenuCommand cmd = new MenuCommand() {
 					@Override
-					public void execute(IProject project, IFile file) {
+					public void execute(IProject project, IFile file) throws Exception {
 						importExcelAndGenerateFiles(project, filePath, fileName, importMode);
 					}
 				};
@@ -62,41 +62,37 @@ public class ImportExcelHandler extends AbstractHandler {
 	}
 	
 	private void importExcelAndGenerateFiles(IProject project, String filePath,
-			String fileName, String importMode) {
-		try {
-			IFolder srcGenFolder = project.getFolder(GEN_FOLDER);
-            
-            if (!srcGenFolder.exists()) {
-                srcGenFolder.create(true, true, new NullProgressMonitor());
-            }
-			
-            IFolder docsFolder = srcGenFolder.getFolder(DOCS_FOLDER);
-    		
-    		if (!docsFolder.exists()) {
-    			docsFolder.create(true, true, new NullProgressMonitor());
-            }
+			String fileName, String importMode) throws Exception {
+		IFolder srcGenFolder = project.getFolder(GEN_FOLDER);
+        
+        if (!srcGenFolder.exists()) {
+            srcGenFolder.create(true, true, new NullProgressMonitor());
+        }
+		
+        IFolder docsFolder = srcGenFolder.getFolder(DOCS_FOLDER);
+		
+		if (!docsFolder.exists()) {
+			docsFolder.create(true, true, new NullProgressMonitor());
+        }
 
-    		importExcelFile(docsFolder, filePath, fileName);
-    		
-    		// Remove file extension
-    		if (fileName.endsWith(".xlsx")) {
-				fileName = fileName.split(".xlsx")[0];
-			} else if (fileName.endsWith(".xls")) {
-				fileName = fileName.split(".xls")[0];
-			}
-    		
-    		if (importMode.equals(ImportWindow.SINGLE)) {
-    			generateSingleFile(srcGenFolder, filePath, fileName);
-			} else {
-				generateMasterFile(srcGenFolder, filePath, fileName);
-				generateStatementsFile(srcGenFolder, filePath, fileName);
-				generatePrivateDataFile(srcGenFolder, filePath, fileName);
-				generateServicesFile(srcGenFolder, filePath, fileName);
-				generateEnforcementsFile(srcGenFolder, filePath, fileName);
-				generateRecipientsFile(srcGenFolder, filePath, fileName);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
+		importExcelFile(docsFolder, filePath, fileName);
+		
+		// Remove file extension
+		if (fileName.endsWith(".xlsx")) {
+			fileName = fileName.split(".xlsx")[0];
+		} else if (fileName.endsWith(".xls")) {
+			fileName = fileName.split(".xls")[0];
+		}
+		
+		if (importMode.equals(ImportWindow.SINGLE)) {
+			generateSingleFile(srcGenFolder, filePath, fileName);
+		} else {
+			generateMasterFile(srcGenFolder, filePath, fileName);
+			generateStatementsFile(srcGenFolder, filePath, fileName);
+			generatePrivateDataFile(srcGenFolder, filePath, fileName);
+			generateServicesFile(srcGenFolder, filePath, fileName);
+			generateEnforcementsFile(srcGenFolder, filePath, fileName);
+			generateRecipientsFile(srcGenFolder, filePath, fileName);
 		}
 	}
 	

@@ -10,6 +10,7 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.CheckboxTableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -120,36 +121,20 @@ public class MenuCommandWindow {
 		btnOk.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				if (btnRadioButtonAll.getSelection()) {
-					ArrayList<IProject> projects = new ArrayList<IProject>(
-							Arrays.asList(workspace.getProjects())); 
-					
-					if (importMode) {
-						for (IProject project : projects) {
-							if (project.isOpen()) {
-								menuCommand.execute(project, null);
-							}
-						}
-					} else {
-						for (IProject project : projects) {
-							if (project.isOpen()) {
-								ArrayList<IFile> files = findFilesByExtension(project);
-								
-								for (IFile file : files) {
-									menuCommand.execute(project, file);
+				try {
+					if (btnRadioButtonAll.getSelection()) {
+						ArrayList<IProject> projects = new ArrayList<IProject>(
+								Arrays.asList(workspace.getProjects())); 
+						
+						if (importMode) {
+							for (IProject project : projects) {
+								if (project.isOpen()) {
+									menuCommand.execute(project, null);
 								}
 							}
-						}
-					}
-				} else if (btnRadioButtonSelected.getSelection()) {				
-					for (TableItem item : table_1.getItems()) {
-						if (item.getChecked()) {
-							IProject project = workspace.getProject(item.getText());
-							
-							if (project.isOpen()) {
-								if (importMode) {
-									menuCommand.execute(project, null);
-								} else {
+						} else {
+							for (IProject project : projects) {
+								if (project.isOpen()) {
 									ArrayList<IFile> files = findFilesByExtension(project);
 									
 									for (IFile file : files) {
@@ -158,8 +143,32 @@ public class MenuCommandWindow {
 								}
 							}
 						}
+					} else if (btnRadioButtonSelected.getSelection()) {				
+						for (TableItem item : table_1.getItems()) {
+							if (item.getChecked()) {
+								IProject project = workspace.getProject(item.getText());
+								
+								if (project.isOpen()) {
+									if (importMode) {
+										menuCommand.execute(project, null);
+									} else {
+										ArrayList<IFile> files = findFilesByExtension(project);
+										
+										for (IFile file : files) {
+											menuCommand.execute(project, file);
+										}
+									}
+								}
+							}
+						}
 					}
+				} catch (Exception e2) {
+					e2.printStackTrace();
+				    MessageDialog errorDialog = new MessageDialog(parent, "RSLingo4Privacy Studio",
+				    		null, e2.getMessage(), MessageDialog.ERROR, new String[] { "OK" }, 0);
+				    errorDialog.open();
 				}
+			
 				shell.close();
 			}
 		});
