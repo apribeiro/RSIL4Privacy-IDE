@@ -22,8 +22,12 @@ import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.ui.IEditorDescriptor;
+import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.handlers.HandlerUtil;
+import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.xtext.util.StringInputStream;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -193,6 +197,12 @@ public class CheckQualityHandler extends AbstractHandler {
 			
 			// Refresh the project
 			file.getProject().refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
+			
+			// Open the log file
+			IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
+			IEditorDescriptor desc = PlatformUI.getWorkbench().
+					getEditorRegistry().getDefaultEditor(logFile.getName());
+			page.openEditor(new FileEditorInput(logFile), desc.getId());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
