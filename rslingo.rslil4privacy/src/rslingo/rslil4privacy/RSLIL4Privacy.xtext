@@ -3,28 +3,43 @@ grammar rslingo.rslil4privacy.RSLIL4Privacy with org.eclipse.xtext.common.Termin
 generate rSLIL4Privacy "http://www.rslil4privacy.rslingo/RSLIL4Privacy"
 
 Policy:
-  'Package' name=QualifiedName '{'
-    importelements+=Import*
-    collection+=Collection*
-    disclosure+=Disclosure*
-    retention+=Retention*
-    usage+=Usage*
-    informative+=Informative*
-    privateData+=PrivateData*
-    recipient+=Recipient*
-    service+=Service*
-    enforcement+=Enforcement*
-  '};';
+	'Package' name=QualifiedName '{'
+    	importelements+=Import*
+    	(metadata=Metadata)?
+    	collection+=Collection*
+	    disclosure+=Disclosure*
+	    retention+=Retention*
+	    usage+=Usage*
+	    informative+=Informative*
+	    privateData+=PrivateData*
+	    recipient+=Recipient*
+	    service+=Service*
+	    enforcement+=Enforcement*
+  	'};';
 
 QualifiedName:
   	ID ('.' ID)*;
 
 Import:
 	'import' importedNamespace=QualifiedNameWithWildcard;
-  
+
 QualifiedNameWithWildcard:
   	QualifiedName '.*'?;
-	
+
+Metadata:
+	'PolicyMetadata {'
+		'Author(s)' authors=STRING ','
+		'Organization(s)' organizations=STRING ','
+		'Date' date=Date ','
+		'Version' version=STRING
+	'}';
+
+Date:
+	day=INT '-' month=Month '-' year=INT;
+
+Month:
+	name=('Jan'|'Feb'|'Mar'|'Apr'|'May'|'Jun'|'Jul'|'Aug'|'Sep'|'Oct'|'Nov'|'Dec');
+
 Enforcement:
 	'Enforcement' name=ID '{'
 	'Name' enforcementName=STRING ','

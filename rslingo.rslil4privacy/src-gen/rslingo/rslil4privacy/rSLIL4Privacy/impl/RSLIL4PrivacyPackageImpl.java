@@ -11,10 +11,13 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import rslingo.rslil4privacy.rSLIL4Privacy.Attribute;
 import rslingo.rslil4privacy.rSLIL4Privacy.Collection;
+import rslingo.rslil4privacy.rSLIL4Privacy.Date;
 import rslingo.rslil4privacy.rSLIL4Privacy.Disclosure;
 import rslingo.rslil4privacy.rSLIL4Privacy.Enforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.Import;
 import rslingo.rslil4privacy.rSLIL4Privacy.Informative;
+import rslingo.rslil4privacy.rSLIL4Privacy.Metadata;
+import rslingo.rslil4privacy.rSLIL4Privacy.Month;
 import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
 import rslingo.rslil4privacy.rSLIL4Privacy.PrivateData;
 import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyFactory;
@@ -53,6 +56,27 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * @generated
    */
   private EClass importEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass metadataEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dateEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass monthEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -278,7 +302,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPolicy_Collection()
+  public EReference getPolicy_Metadata()
   {
     return (EReference)policyEClass.getEStructuralFeatures().get(2);
   }
@@ -288,7 +312,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPolicy_Disclosure()
+  public EReference getPolicy_Collection()
   {
     return (EReference)policyEClass.getEStructuralFeatures().get(3);
   }
@@ -298,7 +322,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPolicy_Retention()
+  public EReference getPolicy_Disclosure()
   {
     return (EReference)policyEClass.getEStructuralFeatures().get(4);
   }
@@ -308,7 +332,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPolicy_Usage()
+  public EReference getPolicy_Retention()
   {
     return (EReference)policyEClass.getEStructuralFeatures().get(5);
   }
@@ -318,7 +342,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPolicy_Informative()
+  public EReference getPolicy_Usage()
   {
     return (EReference)policyEClass.getEStructuralFeatures().get(6);
   }
@@ -328,7 +352,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPolicy_PrivateData()
+  public EReference getPolicy_Informative()
   {
     return (EReference)policyEClass.getEStructuralFeatures().get(7);
   }
@@ -338,7 +362,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPolicy_Recipient()
+  public EReference getPolicy_PrivateData()
   {
     return (EReference)policyEClass.getEStructuralFeatures().get(8);
   }
@@ -348,7 +372,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPolicy_Service()
+  public EReference getPolicy_Recipient()
   {
     return (EReference)policyEClass.getEStructuralFeatures().get(9);
   }
@@ -358,9 +382,19 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPolicy_Enforcement()
+  public EReference getPolicy_Service()
   {
     return (EReference)policyEClass.getEStructuralFeatures().get(10);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPolicy_Enforcement()
+  {
+    return (EReference)policyEClass.getEStructuralFeatures().get(11);
   }
 
   /**
@@ -381,6 +415,116 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
   public EAttribute getImport_ImportedNamespace()
   {
     return (EAttribute)importEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMetadata()
+  {
+    return metadataEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMetadata_Authors()
+  {
+    return (EAttribute)metadataEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMetadata_Organizations()
+  {
+    return (EAttribute)metadataEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMetadata_Date()
+  {
+    return (EReference)metadataEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMetadata_Version()
+  {
+    return (EAttribute)metadataEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDate()
+  {
+    return dateEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDate_Day()
+  {
+    return (EAttribute)dateEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDate_Month()
+  {
+    return (EReference)dateEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDate_Year()
+  {
+    return (EAttribute)dateEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMonth()
+  {
+    return monthEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMonth_Name()
+  {
+    return (EAttribute)monthEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1326,6 +1470,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
     policyEClass = createEClass(POLICY);
     createEAttribute(policyEClass, POLICY__NAME);
     createEReference(policyEClass, POLICY__IMPORTELEMENTS);
+    createEReference(policyEClass, POLICY__METADATA);
     createEReference(policyEClass, POLICY__COLLECTION);
     createEReference(policyEClass, POLICY__DISCLOSURE);
     createEReference(policyEClass, POLICY__RETENTION);
@@ -1338,6 +1483,20 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
 
     importEClass = createEClass(IMPORT);
     createEAttribute(importEClass, IMPORT__IMPORTED_NAMESPACE);
+
+    metadataEClass = createEClass(METADATA);
+    createEAttribute(metadataEClass, METADATA__AUTHORS);
+    createEAttribute(metadataEClass, METADATA__ORGANIZATIONS);
+    createEReference(metadataEClass, METADATA__DATE);
+    createEAttribute(metadataEClass, METADATA__VERSION);
+
+    dateEClass = createEClass(DATE);
+    createEAttribute(dateEClass, DATE__DAY);
+    createEReference(dateEClass, DATE__MONTH);
+    createEAttribute(dateEClass, DATE__YEAR);
+
+    monthEClass = createEClass(MONTH);
+    createEAttribute(monthEClass, MONTH__NAME);
 
     enforcementEClass = createEClass(ENFORCEMENT);
     createEAttribute(enforcementEClass, ENFORCEMENT__NAME);
@@ -1483,6 +1642,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
     initEClass(policyEClass, Policy.class, "Policy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPolicy_Name(), ecorePackage.getEString(), "name", null, 0, 1, Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPolicy_Importelements(), this.getImport(), null, "importelements", null, 0, -1, Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPolicy_Metadata(), this.getMetadata(), null, "metadata", null, 0, 1, Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPolicy_Collection(), this.getCollection(), null, "collection", null, 0, -1, Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPolicy_Disclosure(), this.getDisclosure(), null, "disclosure", null, 0, -1, Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPolicy_Retention(), this.getRetention(), null, "retention", null, 0, -1, Policy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1495,6 +1655,20 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
 
     initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getImport_ImportedNamespace(), ecorePackage.getEString(), "importedNamespace", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(metadataEClass, Metadata.class, "Metadata", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMetadata_Authors(), ecorePackage.getEString(), "authors", null, 0, 1, Metadata.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMetadata_Organizations(), ecorePackage.getEString(), "organizations", null, 0, 1, Metadata.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMetadata_Date(), this.getDate(), null, "date", null, 0, 1, Metadata.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMetadata_Version(), ecorePackage.getEString(), "version", null, 0, 1, Metadata.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dateEClass, Date.class, "Date", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDate_Day(), ecorePackage.getEInt(), "day", null, 0, 1, Date.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDate_Month(), this.getMonth(), null, "month", null, 0, 1, Date.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDate_Year(), ecorePackage.getEInt(), "year", null, 0, 1, Date.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(monthEClass, Month.class, "Month", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMonth_Name(), ecorePackage.getEString(), "name", null, 0, 1, Month.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(enforcementEClass, Enforcement.class, "Enforcement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEnforcement_Name(), ecorePackage.getEString(), "name", null, 0, 1, Enforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

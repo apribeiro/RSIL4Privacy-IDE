@@ -85,13 +85,22 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int POLICY__IMPORTELEMENTS = 1;
 
   /**
+   * The feature id for the '<em><b>Metadata</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POLICY__METADATA = 2;
+
+  /**
    * The feature id for the '<em><b>Collection</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int POLICY__COLLECTION = 2;
+  int POLICY__COLLECTION = 3;
 
   /**
    * The feature id for the '<em><b>Disclosure</b></em>' containment reference list.
@@ -100,7 +109,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY__DISCLOSURE = 3;
+  int POLICY__DISCLOSURE = 4;
 
   /**
    * The feature id for the '<em><b>Retention</b></em>' containment reference list.
@@ -109,7 +118,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY__RETENTION = 4;
+  int POLICY__RETENTION = 5;
 
   /**
    * The feature id for the '<em><b>Usage</b></em>' containment reference list.
@@ -118,7 +127,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY__USAGE = 5;
+  int POLICY__USAGE = 6;
 
   /**
    * The feature id for the '<em><b>Informative</b></em>' containment reference list.
@@ -127,7 +136,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY__INFORMATIVE = 6;
+  int POLICY__INFORMATIVE = 7;
 
   /**
    * The feature id for the '<em><b>Private Data</b></em>' containment reference list.
@@ -136,7 +145,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY__PRIVATE_DATA = 7;
+  int POLICY__PRIVATE_DATA = 8;
 
   /**
    * The feature id for the '<em><b>Recipient</b></em>' containment reference list.
@@ -145,7 +154,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY__RECIPIENT = 8;
+  int POLICY__RECIPIENT = 9;
 
   /**
    * The feature id for the '<em><b>Service</b></em>' containment reference list.
@@ -154,7 +163,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY__SERVICE = 9;
+  int POLICY__SERVICE = 10;
 
   /**
    * The feature id for the '<em><b>Enforcement</b></em>' containment reference list.
@@ -163,7 +172,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY__ENFORCEMENT = 10;
+  int POLICY__ENFORCEMENT = 11;
 
   /**
    * The number of structural features of the '<em>Policy</em>' class.
@@ -172,7 +181,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POLICY_FEATURE_COUNT = 11;
+  int POLICY_FEATURE_COUNT = 12;
 
   /**
    * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ImportImpl <em>Import</em>}' class.
@@ -203,6 +212,135 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int IMPORT_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.MetadataImpl <em>Metadata</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.MetadataImpl
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getMetadata()
+   * @generated
+   */
+  int METADATA = 2;
+
+  /**
+   * The feature id for the '<em><b>Authors</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int METADATA__AUTHORS = 0;
+
+  /**
+   * The feature id for the '<em><b>Organizations</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int METADATA__ORGANIZATIONS = 1;
+
+  /**
+   * The feature id for the '<em><b>Date</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int METADATA__DATE = 2;
+
+  /**
+   * The feature id for the '<em><b>Version</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int METADATA__VERSION = 3;
+
+  /**
+   * The number of structural features of the '<em>Metadata</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int METADATA_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DateImpl <em>Date</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.DateImpl
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getDate()
+   * @generated
+   */
+  int DATE = 3;
+
+  /**
+   * The feature id for the '<em><b>Day</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATE__DAY = 0;
+
+  /**
+   * The feature id for the '<em><b>Month</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATE__MONTH = 1;
+
+  /**
+   * The feature id for the '<em><b>Year</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATE__YEAR = 2;
+
+  /**
+   * The number of structural features of the '<em>Date</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATE_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.MonthImpl <em>Month</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.MonthImpl
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getMonth()
+   * @generated
+   */
+  int MONTH = 4;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MONTH__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Month</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MONTH_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.EnforcementImpl <em>Enforcement</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -210,7 +348,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getEnforcement()
    * @generated
    */
-  int ENFORCEMENT = 2;
+  int ENFORCEMENT = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -265,7 +403,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getService()
    * @generated
    */
-  int SERVICE = 3;
+  int SERVICE = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -329,7 +467,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRecipient()
    * @generated
    */
-  int RECIPIENT = 4;
+  int RECIPIENT = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -402,7 +540,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getPrivateData()
    * @generated
    */
-  int PRIVATE_DATA = 5;
+  int PRIVATE_DATA = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -457,7 +595,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getAttribute()
    * @generated
    */
-  int ATTRIBUTE = 6;
+  int ATTRIBUTE = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -494,7 +632,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getCollection()
    * @generated
    */
-  int COLLECTION = 7;
+  int COLLECTION = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -585,7 +723,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getDisclosure()
    * @generated
    */
-  int DISCLOSURE = 8;
+  int DISCLOSURE = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -703,7 +841,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRetention()
    * @generated
    */
-  int RETENTION = 9;
+  int RETENTION = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -803,7 +941,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getUsage()
    * @generated
    */
-  int USAGE = 10;
+  int USAGE = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -894,7 +1032,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getInformative()
    * @generated
    */
-  int INFORMATIVE = 11;
+  int INFORMATIVE = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -985,7 +1123,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRecipientPart()
    * @generated
    */
-  int RECIPIENT_PART = 12;
+  int RECIPIENT_PART = 15;
 
   /**
    * The feature id for the '<em><b>Recipient Part</b></em>' reference.
@@ -1013,7 +1151,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefRecipient()
    * @generated
    */
-  int REF_RECIPIENT = 13;
+  int REF_RECIPIENT = 16;
 
   /**
    * The feature id for the '<em><b>Ref Recipient</b></em>' reference.
@@ -1041,7 +1179,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefRecipientSource()
    * @generated
    */
-  int REF_RECIPIENT_SOURCE = 14;
+  int REF_RECIPIENT_SOURCE = 17;
 
   /**
    * The feature id for the '<em><b>Ref Recipient Source</b></em>' reference.
@@ -1069,7 +1207,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefRecipientTarget()
    * @generated
    */
-  int REF_RECIPIENT_TARGET = 15;
+  int REF_RECIPIENT_TARGET = 18;
 
   /**
    * The feature id for the '<em><b>Ref Recipient Target</b></em>' reference.
@@ -1097,7 +1235,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefService()
    * @generated
    */
-  int REF_SERVICE = 16;
+  int REF_SERVICE = 19;
 
   /**
    * The feature id for the '<em><b>Ref Service</b></em>' reference.
@@ -1125,7 +1263,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getServicePart()
    * @generated
    */
-  int SERVICE_PART = 17;
+  int SERVICE_PART = 20;
 
   /**
    * The feature id for the '<em><b>Service Part</b></em>' reference.
@@ -1153,7 +1291,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefPrivateData()
    * @generated
    */
-  int REF_PRIVATE_DATA = 18;
+  int REF_PRIVATE_DATA = 21;
 
   /**
    * The feature id for the '<em><b>Ref Private Data</b></em>' reference.
@@ -1181,7 +1319,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefEnforcement()
    * @generated
    */
-  int REF_ENFORCEMENT = 19;
+  int REF_ENFORCEMENT = 22;
 
   /**
    * The feature id for the '<em><b>Ref Enforcement</b></em>' reference.
@@ -1233,6 +1371,17 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    */
   EReference getPolicy_Importelements();
+
+  /**
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Policy#getMetadata <em>Metadata</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Metadata</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Policy#getMetadata()
+   * @see #getPolicy()
+   * @generated
+   */
+  EReference getPolicy_Metadata();
 
   /**
    * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Policy#getCollection <em>Collection</em>}'.
@@ -1353,6 +1502,124 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    */
   EAttribute getImport_ImportedNamespace();
+
+  /**
+   * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.Metadata <em>Metadata</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Metadata</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Metadata
+   * @generated
+   */
+  EClass getMetadata();
+
+  /**
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Metadata#getAuthors <em>Authors</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Authors</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Metadata#getAuthors()
+   * @see #getMetadata()
+   * @generated
+   */
+  EAttribute getMetadata_Authors();
+
+  /**
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Metadata#getOrganizations <em>Organizations</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Organizations</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Metadata#getOrganizations()
+   * @see #getMetadata()
+   * @generated
+   */
+  EAttribute getMetadata_Organizations();
+
+  /**
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Metadata#getDate <em>Date</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Date</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Metadata#getDate()
+   * @see #getMetadata()
+   * @generated
+   */
+  EReference getMetadata_Date();
+
+  /**
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Metadata#getVersion <em>Version</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Version</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Metadata#getVersion()
+   * @see #getMetadata()
+   * @generated
+   */
+  EAttribute getMetadata_Version();
+
+  /**
+   * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.Date <em>Date</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Date</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Date
+   * @generated
+   */
+  EClass getDate();
+
+  /**
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Date#getDay <em>Day</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Day</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Date#getDay()
+   * @see #getDate()
+   * @generated
+   */
+  EAttribute getDate_Day();
+
+  /**
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Date#getMonth <em>Month</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Month</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Date#getMonth()
+   * @see #getDate()
+   * @generated
+   */
+  EReference getDate_Month();
+
+  /**
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Date#getYear <em>Year</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Year</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Date#getYear()
+   * @see #getDate()
+   * @generated
+   */
+  EAttribute getDate_Year();
+
+  /**
+   * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.Month <em>Month</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Month</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Month
+   * @generated
+   */
+  EClass getMonth();
+
+  /**
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Month#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Month#getName()
+   * @see #getMonth()
+   * @generated
+   */
+  EAttribute getMonth_Name();
 
   /**
    * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.Enforcement <em>Enforcement</em>}'.
@@ -2387,6 +2654,14 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EReference POLICY__IMPORTELEMENTS = eINSTANCE.getPolicy_Importelements();
 
     /**
+     * The meta object literal for the '<em><b>Metadata</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POLICY__METADATA = eINSTANCE.getPolicy_Metadata();
+
+    /**
      * The meta object literal for the '<em><b>Collection</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2475,6 +2750,100 @@ public interface RSLIL4PrivacyPackage extends EPackage
      * @generated
      */
     EAttribute IMPORT__IMPORTED_NAMESPACE = eINSTANCE.getImport_ImportedNamespace();
+
+    /**
+     * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.MetadataImpl <em>Metadata</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.MetadataImpl
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getMetadata()
+     * @generated
+     */
+    EClass METADATA = eINSTANCE.getMetadata();
+
+    /**
+     * The meta object literal for the '<em><b>Authors</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute METADATA__AUTHORS = eINSTANCE.getMetadata_Authors();
+
+    /**
+     * The meta object literal for the '<em><b>Organizations</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute METADATA__ORGANIZATIONS = eINSTANCE.getMetadata_Organizations();
+
+    /**
+     * The meta object literal for the '<em><b>Date</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference METADATA__DATE = eINSTANCE.getMetadata_Date();
+
+    /**
+     * The meta object literal for the '<em><b>Version</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute METADATA__VERSION = eINSTANCE.getMetadata_Version();
+
+    /**
+     * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DateImpl <em>Date</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.DateImpl
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getDate()
+     * @generated
+     */
+    EClass DATE = eINSTANCE.getDate();
+
+    /**
+     * The meta object literal for the '<em><b>Day</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DATE__DAY = eINSTANCE.getDate_Day();
+
+    /**
+     * The meta object literal for the '<em><b>Month</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DATE__MONTH = eINSTANCE.getDate_Month();
+
+    /**
+     * The meta object literal for the '<em><b>Year</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DATE__YEAR = eINSTANCE.getDate_Year();
+
+    /**
+     * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.MonthImpl <em>Month</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.MonthImpl
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getMonth()
+     * @generated
+     */
+    EClass MONTH = eINSTANCE.getMonth();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MONTH__NAME = eINSTANCE.getMonth_Name();
 
     /**
      * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.EnforcementImpl <em>Enforcement</em>}' class.

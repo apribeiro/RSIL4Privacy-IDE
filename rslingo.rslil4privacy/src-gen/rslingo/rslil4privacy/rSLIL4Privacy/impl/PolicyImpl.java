@@ -21,6 +21,7 @@ import rslingo.rslil4privacy.rSLIL4Privacy.Disclosure;
 import rslingo.rslil4privacy.rSLIL4Privacy.Enforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.Import;
 import rslingo.rslil4privacy.rSLIL4Privacy.Informative;
+import rslingo.rslil4privacy.rSLIL4Privacy.Metadata;
 import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
 import rslingo.rslil4privacy.rSLIL4Privacy.PrivateData;
 import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
@@ -39,6 +40,7 @@ import rslingo.rslil4privacy.rSLIL4Privacy.Usage;
  * <ul>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.PolicyImpl#getName <em>Name</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.PolicyImpl#getImportelements <em>Importelements</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.PolicyImpl#getMetadata <em>Metadata</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.PolicyImpl#getCollection <em>Collection</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.PolicyImpl#getDisclosure <em>Disclosure</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.PolicyImpl#getRetention <em>Retention</em>}</li>
@@ -83,6 +85,16 @@ public class PolicyImpl extends MinimalEObjectImpl.Container implements Policy
    * @ordered
    */
   protected EList<Import> importelements;
+
+  /**
+   * The cached value of the '{@link #getMetadata() <em>Metadata</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMetadata()
+   * @generated
+   * @ordered
+   */
+  protected Metadata metadata;
 
   /**
    * The cached value of the '{@link #getCollection() <em>Collection</em>}' containment reference list.
@@ -237,6 +249,54 @@ public class PolicyImpl extends MinimalEObjectImpl.Container implements Policy
    * <!-- end-user-doc -->
    * @generated
    */
+  public Metadata getMetadata()
+  {
+    return metadata;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetMetadata(Metadata newMetadata, NotificationChain msgs)
+  {
+    Metadata oldMetadata = metadata;
+    metadata = newMetadata;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.POLICY__METADATA, oldMetadata, newMetadata);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setMetadata(Metadata newMetadata)
+  {
+    if (newMetadata != metadata)
+    {
+      NotificationChain msgs = null;
+      if (metadata != null)
+        msgs = ((InternalEObject)metadata).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RSLIL4PrivacyPackage.POLICY__METADATA, null, msgs);
+      if (newMetadata != null)
+        msgs = ((InternalEObject)newMetadata).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RSLIL4PrivacyPackage.POLICY__METADATA, null, msgs);
+      msgs = basicSetMetadata(newMetadata, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.POLICY__METADATA, newMetadata, newMetadata));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<Collection> getCollection()
   {
     if (collection == null)
@@ -370,6 +430,8 @@ public class PolicyImpl extends MinimalEObjectImpl.Container implements Policy
     {
       case RSLIL4PrivacyPackage.POLICY__IMPORTELEMENTS:
         return ((InternalEList<?>)getImportelements()).basicRemove(otherEnd, msgs);
+      case RSLIL4PrivacyPackage.POLICY__METADATA:
+        return basicSetMetadata(null, msgs);
       case RSLIL4PrivacyPackage.POLICY__COLLECTION:
         return ((InternalEList<?>)getCollection()).basicRemove(otherEnd, msgs);
       case RSLIL4PrivacyPackage.POLICY__DISCLOSURE:
@@ -406,6 +468,8 @@ public class PolicyImpl extends MinimalEObjectImpl.Container implements Policy
         return getName();
       case RSLIL4PrivacyPackage.POLICY__IMPORTELEMENTS:
         return getImportelements();
+      case RSLIL4PrivacyPackage.POLICY__METADATA:
+        return getMetadata();
       case RSLIL4PrivacyPackage.POLICY__COLLECTION:
         return getCollection();
       case RSLIL4PrivacyPackage.POLICY__DISCLOSURE:
@@ -445,6 +509,9 @@ public class PolicyImpl extends MinimalEObjectImpl.Container implements Policy
       case RSLIL4PrivacyPackage.POLICY__IMPORTELEMENTS:
         getImportelements().clear();
         getImportelements().addAll((java.util.Collection<? extends Import>)newValue);
+        return;
+      case RSLIL4PrivacyPackage.POLICY__METADATA:
+        setMetadata((Metadata)newValue);
         return;
       case RSLIL4PrivacyPackage.POLICY__COLLECTION:
         getCollection().clear();
@@ -502,6 +569,9 @@ public class PolicyImpl extends MinimalEObjectImpl.Container implements Policy
       case RSLIL4PrivacyPackage.POLICY__IMPORTELEMENTS:
         getImportelements().clear();
         return;
+      case RSLIL4PrivacyPackage.POLICY__METADATA:
+        setMetadata((Metadata)null);
+        return;
       case RSLIL4PrivacyPackage.POLICY__COLLECTION:
         getCollection().clear();
         return;
@@ -547,6 +617,8 @@ public class PolicyImpl extends MinimalEObjectImpl.Container implements Policy
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case RSLIL4PrivacyPackage.POLICY__IMPORTELEMENTS:
         return importelements != null && !importelements.isEmpty();
+      case RSLIL4PrivacyPackage.POLICY__METADATA:
+        return metadata != null;
       case RSLIL4PrivacyPackage.POLICY__COLLECTION:
         return collection != null && !collection.isEmpty();
       case RSLIL4PrivacyPackage.POLICY__DISCLOSURE:

@@ -41,6 +41,33 @@ public interface RSLIL4PrivacyFactory extends EFactory
   Import createImport();
 
   /**
+   * Returns a new object of class '<em>Metadata</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Metadata</em>'.
+   * @generated
+   */
+  Metadata createMetadata();
+
+  /**
+   * Returns a new object of class '<em>Date</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Date</em>'.
+   * @generated
+   */
+  Date createDate();
+
+  /**
+   * Returns a new object of class '<em>Month</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Month</em>'.
+   * @generated
+   */
+  Month createMonth();
+
+  /**
    * Returns a new object of class '<em>Enforcement</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

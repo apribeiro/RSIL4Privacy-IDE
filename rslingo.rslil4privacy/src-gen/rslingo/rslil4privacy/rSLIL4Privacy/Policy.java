@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Policy#getName <em>Name</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Policy#getImportelements <em>Importelements</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Policy#getMetadata <em>Metadata</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Policy#getCollection <em>Collection</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Policy#getDisclosure <em>Disclosure</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Policy#getRetention <em>Retention</em>}</li>
@@ -75,6 +76,32 @@ public interface Policy extends EObject
    * @generated
    */
   EList<Import> getImportelements();
+
+  /**
+   * Returns the value of the '<em><b>Metadata</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Metadata</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Metadata</em>' containment reference.
+   * @see #setMetadata(Metadata)
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getPolicy_Metadata()
+   * @model containment="true"
+   * @generated
+   */
+  Metadata getMetadata();
+
+  /**
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Policy#getMetadata <em>Metadata</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Metadata</em>' containment reference.
+   * @see #getMetadata()
+   * @generated
+   */
+  void setMetadata(Metadata value);
 
   /**
    * Returns the value of the '<em><b>Collection</b></em>' containment reference list.

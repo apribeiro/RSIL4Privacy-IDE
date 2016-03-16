@@ -18,10 +18,13 @@ import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import rslingo.rslil4privacy.rSLIL4Privacy.Attribute;
 import rslingo.rslil4privacy.rSLIL4Privacy.Collection;
+import rslingo.rslil4privacy.rSLIL4Privacy.Date;
 import rslingo.rslil4privacy.rSLIL4Privacy.Disclosure;
 import rslingo.rslil4privacy.rSLIL4Privacy.Enforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.Import;
 import rslingo.rslil4privacy.rSLIL4Privacy.Informative;
+import rslingo.rslil4privacy.rSLIL4Privacy.Metadata;
+import rslingo.rslil4privacy.rSLIL4Privacy.Month;
 import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
 import rslingo.rslil4privacy.rSLIL4Privacy.PrivateData;
 import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
@@ -54,6 +57,9 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 			case RSLIL4PrivacyPackage.COLLECTION:
 				sequence_Collection(context, (Collection) semanticObject); 
 				return; 
+			case RSLIL4PrivacyPackage.DATE:
+				sequence_Date(context, (Date) semanticObject); 
+				return; 
 			case RSLIL4PrivacyPackage.DISCLOSURE:
 				sequence_Disclosure(context, (Disclosure) semanticObject); 
 				return; 
@@ -65,6 +71,12 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 				return; 
 			case RSLIL4PrivacyPackage.INFORMATIVE:
 				sequence_Informative(context, (Informative) semanticObject); 
+				return; 
+			case RSLIL4PrivacyPackage.METADATA:
+				sequence_Metadata(context, (Metadata) semanticObject); 
+				return; 
+			case RSLIL4PrivacyPackage.MONTH:
+				sequence_Month(context, (Month) semanticObject); 
 				return; 
 			case RSLIL4PrivacyPackage.POLICY:
 				sequence_Policy(context, (Policy) semanticObject); 
@@ -151,6 +163,28 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
+	 *     (day=INT month=Month year=INT)
+	 */
+	protected void sequence_Date(EObject context, Date semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.DATE__DAY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.DATE__DAY));
+			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.DATE__MONTH) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.DATE__MONTH));
+			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.DATE__YEAR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.DATE__YEAR));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getDateAccess().getDayINTTerminalRuleCall_0_0(), semanticObject.getDay());
+		feeder.accept(grammarAccess.getDateAccess().getMonthMonthParserRuleCall_2_0(), semanticObject.getMonth());
+		feeder.accept(grammarAccess.getDateAccess().getYearINTTerminalRuleCall_4_0(), semanticObject.getYear());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (
 	 *         name=ID 
 	 *         description=STRING 
@@ -215,9 +249,57 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
+	 *     (authors=STRING organizations=STRING date=Date version=STRING)
+	 */
+	protected void sequence_Metadata(EObject context, Metadata semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__AUTHORS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__AUTHORS));
+			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__ORGANIZATIONS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__ORGANIZATIONS));
+			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__DATE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__DATE));
+			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__VERSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__VERSION));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getMetadataAccess().getAuthorsSTRINGTerminalRuleCall_2_0(), semanticObject.getAuthors());
+		feeder.accept(grammarAccess.getMetadataAccess().getOrganizationsSTRINGTerminalRuleCall_5_0(), semanticObject.getOrganizations());
+		feeder.accept(grammarAccess.getMetadataAccess().getDateDateParserRuleCall_8_0(), semanticObject.getDate());
+		feeder.accept(grammarAccess.getMetadataAccess().getVersionSTRINGTerminalRuleCall_11_0(), semanticObject.getVersion());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name='Jan' | 
+	 *         name='Feb' | 
+	 *         name='Mar' | 
+	 *         name='Apr' | 
+	 *         name='May' | 
+	 *         name='Jun' | 
+	 *         name='Jul' | 
+	 *         name='Aug' | 
+	 *         name='Sep' | 
+	 *         name='Oct' | 
+	 *         name='Nov' | 
+	 *         name='Dec'
+	 *     )
+	 */
+	protected void sequence_Month(EObject context, Month semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (
 	 *         name=QualifiedName 
 	 *         importelements+=Import* 
+	 *         metadata=Metadata? 
 	 *         collection+=Collection* 
 	 *         disclosure+=Disclosure* 
 	 *         retention+=Retention* 

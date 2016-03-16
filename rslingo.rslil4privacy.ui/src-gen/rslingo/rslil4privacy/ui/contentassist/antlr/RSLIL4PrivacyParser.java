@@ -37,6 +37,7 @@ public class RSLIL4PrivacyParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getMonthAccess().getNameAlternatives_0(), "rule__Month__NameAlternatives_0");
 					put(grammarAccess.getEnforcementAccess().getTypeAlternatives_10_0(), "rule__Enforcement__TypeAlternatives_10_0");
 					put(grammarAccess.getRecipientAccess().getScopeAlternatives_11_0(), "rule__Recipient__ScopeAlternatives_11_0");
 					put(grammarAccess.getRecipientAccess().getTypeAlternatives_14_0(), "rule__Recipient__TypeAlternatives_14_0");
@@ -51,6 +52,8 @@ public class RSLIL4PrivacyParser extends AbstractContentAssistParser {
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 					put(grammarAccess.getImportAccess().getGroup(), "rule__Import__Group__0");
 					put(grammarAccess.getQualifiedNameWithWildcardAccess().getGroup(), "rule__QualifiedNameWithWildcard__Group__0");
+					put(grammarAccess.getMetadataAccess().getGroup(), "rule__Metadata__Group__0");
+					put(grammarAccess.getDateAccess().getGroup(), "rule__Date__Group__0");
 					put(grammarAccess.getEnforcementAccess().getGroup(), "rule__Enforcement__Group__0");
 					put(grammarAccess.getServiceAccess().getGroup(), "rule__Service__Group__0");
 					put(grammarAccess.getServiceAccess().getGroup_6(), "rule__Service__Group_6__0");
@@ -98,16 +101,25 @@ public class RSLIL4PrivacyParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRefEnforcementAccess().getGroup(), "rule__RefEnforcement__Group__0");
 					put(grammarAccess.getPolicyAccess().getNameAssignment_1(), "rule__Policy__NameAssignment_1");
 					put(grammarAccess.getPolicyAccess().getImportelementsAssignment_3(), "rule__Policy__ImportelementsAssignment_3");
-					put(grammarAccess.getPolicyAccess().getCollectionAssignment_4(), "rule__Policy__CollectionAssignment_4");
-					put(grammarAccess.getPolicyAccess().getDisclosureAssignment_5(), "rule__Policy__DisclosureAssignment_5");
-					put(grammarAccess.getPolicyAccess().getRetentionAssignment_6(), "rule__Policy__RetentionAssignment_6");
-					put(grammarAccess.getPolicyAccess().getUsageAssignment_7(), "rule__Policy__UsageAssignment_7");
-					put(grammarAccess.getPolicyAccess().getInformativeAssignment_8(), "rule__Policy__InformativeAssignment_8");
-					put(grammarAccess.getPolicyAccess().getPrivateDataAssignment_9(), "rule__Policy__PrivateDataAssignment_9");
-					put(grammarAccess.getPolicyAccess().getRecipientAssignment_10(), "rule__Policy__RecipientAssignment_10");
-					put(grammarAccess.getPolicyAccess().getServiceAssignment_11(), "rule__Policy__ServiceAssignment_11");
-					put(grammarAccess.getPolicyAccess().getEnforcementAssignment_12(), "rule__Policy__EnforcementAssignment_12");
+					put(grammarAccess.getPolicyAccess().getMetadataAssignment_4(), "rule__Policy__MetadataAssignment_4");
+					put(grammarAccess.getPolicyAccess().getCollectionAssignment_5(), "rule__Policy__CollectionAssignment_5");
+					put(grammarAccess.getPolicyAccess().getDisclosureAssignment_6(), "rule__Policy__DisclosureAssignment_6");
+					put(grammarAccess.getPolicyAccess().getRetentionAssignment_7(), "rule__Policy__RetentionAssignment_7");
+					put(grammarAccess.getPolicyAccess().getUsageAssignment_8(), "rule__Policy__UsageAssignment_8");
+					put(grammarAccess.getPolicyAccess().getInformativeAssignment_9(), "rule__Policy__InformativeAssignment_9");
+					put(grammarAccess.getPolicyAccess().getPrivateDataAssignment_10(), "rule__Policy__PrivateDataAssignment_10");
+					put(grammarAccess.getPolicyAccess().getRecipientAssignment_11(), "rule__Policy__RecipientAssignment_11");
+					put(grammarAccess.getPolicyAccess().getServiceAssignment_12(), "rule__Policy__ServiceAssignment_12");
+					put(grammarAccess.getPolicyAccess().getEnforcementAssignment_13(), "rule__Policy__EnforcementAssignment_13");
 					put(grammarAccess.getImportAccess().getImportedNamespaceAssignment_1(), "rule__Import__ImportedNamespaceAssignment_1");
+					put(grammarAccess.getMetadataAccess().getAuthorsAssignment_2(), "rule__Metadata__AuthorsAssignment_2");
+					put(grammarAccess.getMetadataAccess().getOrganizationsAssignment_5(), "rule__Metadata__OrganizationsAssignment_5");
+					put(grammarAccess.getMetadataAccess().getDateAssignment_8(), "rule__Metadata__DateAssignment_8");
+					put(grammarAccess.getMetadataAccess().getVersionAssignment_11(), "rule__Metadata__VersionAssignment_11");
+					put(grammarAccess.getDateAccess().getDayAssignment_0(), "rule__Date__DayAssignment_0");
+					put(grammarAccess.getDateAccess().getMonthAssignment_2(), "rule__Date__MonthAssignment_2");
+					put(grammarAccess.getDateAccess().getYearAssignment_4(), "rule__Date__YearAssignment_4");
+					put(grammarAccess.getMonthAccess().getNameAssignment(), "rule__Month__NameAssignment");
 					put(grammarAccess.getEnforcementAccess().getNameAssignment_1(), "rule__Enforcement__NameAssignment_1");
 					put(grammarAccess.getEnforcementAccess().getEnforcementNameAssignment_4(), "rule__Enforcement__EnforcementNameAssignment_4");
 					put(grammarAccess.getEnforcementAccess().getDescriptionAssignment_7(), "rule__Enforcement__DescriptionAssignment_7");

@@ -27,35 +27,37 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cImportelementsAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cImportelementsImportParserRuleCall_3_0 = (RuleCall)cImportelementsAssignment_3.eContents().get(0);
-		private final Assignment cCollectionAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cCollectionCollectionParserRuleCall_4_0 = (RuleCall)cCollectionAssignment_4.eContents().get(0);
-		private final Assignment cDisclosureAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cDisclosureDisclosureParserRuleCall_5_0 = (RuleCall)cDisclosureAssignment_5.eContents().get(0);
-		private final Assignment cRetentionAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cRetentionRetentionParserRuleCall_6_0 = (RuleCall)cRetentionAssignment_6.eContents().get(0);
-		private final Assignment cUsageAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cUsageUsageParserRuleCall_7_0 = (RuleCall)cUsageAssignment_7.eContents().get(0);
-		private final Assignment cInformativeAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cInformativeInformativeParserRuleCall_8_0 = (RuleCall)cInformativeAssignment_8.eContents().get(0);
-		private final Assignment cPrivateDataAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cPrivateDataPrivateDataParserRuleCall_9_0 = (RuleCall)cPrivateDataAssignment_9.eContents().get(0);
-		private final Assignment cRecipientAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cRecipientRecipientParserRuleCall_10_0 = (RuleCall)cRecipientAssignment_10.eContents().get(0);
-		private final Assignment cServiceAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cServiceServiceParserRuleCall_11_0 = (RuleCall)cServiceAssignment_11.eContents().get(0);
-		private final Assignment cEnforcementAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cEnforcementEnforcementParserRuleCall_12_0 = (RuleCall)cEnforcementAssignment_12.eContents().get(0);
-		private final Keyword cRightCurlyBracketSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Assignment cMetadataAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cMetadataMetadataParserRuleCall_4_0 = (RuleCall)cMetadataAssignment_4.eContents().get(0);
+		private final Assignment cCollectionAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cCollectionCollectionParserRuleCall_5_0 = (RuleCall)cCollectionAssignment_5.eContents().get(0);
+		private final Assignment cDisclosureAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cDisclosureDisclosureParserRuleCall_6_0 = (RuleCall)cDisclosureAssignment_6.eContents().get(0);
+		private final Assignment cRetentionAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cRetentionRetentionParserRuleCall_7_0 = (RuleCall)cRetentionAssignment_7.eContents().get(0);
+		private final Assignment cUsageAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cUsageUsageParserRuleCall_8_0 = (RuleCall)cUsageAssignment_8.eContents().get(0);
+		private final Assignment cInformativeAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cInformativeInformativeParserRuleCall_9_0 = (RuleCall)cInformativeAssignment_9.eContents().get(0);
+		private final Assignment cPrivateDataAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cPrivateDataPrivateDataParserRuleCall_10_0 = (RuleCall)cPrivateDataAssignment_10.eContents().get(0);
+		private final Assignment cRecipientAssignment_11 = (Assignment)cGroup.eContents().get(11);
+		private final RuleCall cRecipientRecipientParserRuleCall_11_0 = (RuleCall)cRecipientAssignment_11.eContents().get(0);
+		private final Assignment cServiceAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cServiceServiceParserRuleCall_12_0 = (RuleCall)cServiceAssignment_12.eContents().get(0);
+		private final Assignment cEnforcementAssignment_13 = (Assignment)cGroup.eContents().get(13);
+		private final RuleCall cEnforcementEnforcementParserRuleCall_13_0 = (RuleCall)cEnforcementAssignment_13.eContents().get(0);
+		private final Keyword cRightCurlyBracketSemicolonKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		
 		//Policy:
-		//	"Package" name=QualifiedName "{" importelements+=Import* collection+=Collection* disclosure+=Disclosure*
-		//	retention+=Retention* usage+=Usage* informative+=Informative* privateData+=PrivateData* recipient+=Recipient*
-		//	service+=Service* enforcement+=Enforcement* "};";
+		//	"Package" name=QualifiedName "{" importelements+=Import* metadata=Metadata? collection+=Collection*
+		//	disclosure+=Disclosure* retention+=Retention* usage+=Usage* informative+=Informative* privateData+=PrivateData*
+		//	recipient+=Recipient* service+=Service* enforcement+=Enforcement* "};";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"Package" name=QualifiedName "{" importelements+=Import* collection+=Collection* disclosure+=Disclosure*
-		//retention+=Retention* usage+=Usage* informative+=Informative* privateData+=PrivateData* recipient+=Recipient*
-		//service+=Service* enforcement+=Enforcement* "};"
+		//"Package" name=QualifiedName "{" importelements+=Import* metadata=Metadata? collection+=Collection*
+		//disclosure+=Disclosure* retention+=Retention* usage+=Usage* informative+=Informative* privateData+=PrivateData*
+		//recipient+=Recipient* service+=Service* enforcement+=Enforcement* "};"
 		public Group getGroup() { return cGroup; }
 
 		//"Package"
@@ -76,62 +78,68 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//Import
 		public RuleCall getImportelementsImportParserRuleCall_3_0() { return cImportelementsImportParserRuleCall_3_0; }
 
+		//metadata=Metadata?
+		public Assignment getMetadataAssignment_4() { return cMetadataAssignment_4; }
+
+		//Metadata
+		public RuleCall getMetadataMetadataParserRuleCall_4_0() { return cMetadataMetadataParserRuleCall_4_0; }
+
 		//collection+=Collection*
-		public Assignment getCollectionAssignment_4() { return cCollectionAssignment_4; }
+		public Assignment getCollectionAssignment_5() { return cCollectionAssignment_5; }
 
 		//Collection
-		public RuleCall getCollectionCollectionParserRuleCall_4_0() { return cCollectionCollectionParserRuleCall_4_0; }
+		public RuleCall getCollectionCollectionParserRuleCall_5_0() { return cCollectionCollectionParserRuleCall_5_0; }
 
 		//disclosure+=Disclosure*
-		public Assignment getDisclosureAssignment_5() { return cDisclosureAssignment_5; }
+		public Assignment getDisclosureAssignment_6() { return cDisclosureAssignment_6; }
 
 		//Disclosure
-		public RuleCall getDisclosureDisclosureParserRuleCall_5_0() { return cDisclosureDisclosureParserRuleCall_5_0; }
+		public RuleCall getDisclosureDisclosureParserRuleCall_6_0() { return cDisclosureDisclosureParserRuleCall_6_0; }
 
 		//retention+=Retention*
-		public Assignment getRetentionAssignment_6() { return cRetentionAssignment_6; }
+		public Assignment getRetentionAssignment_7() { return cRetentionAssignment_7; }
 
 		//Retention
-		public RuleCall getRetentionRetentionParserRuleCall_6_0() { return cRetentionRetentionParserRuleCall_6_0; }
+		public RuleCall getRetentionRetentionParserRuleCall_7_0() { return cRetentionRetentionParserRuleCall_7_0; }
 
 		//usage+=Usage*
-		public Assignment getUsageAssignment_7() { return cUsageAssignment_7; }
+		public Assignment getUsageAssignment_8() { return cUsageAssignment_8; }
 
 		//Usage
-		public RuleCall getUsageUsageParserRuleCall_7_0() { return cUsageUsageParserRuleCall_7_0; }
+		public RuleCall getUsageUsageParserRuleCall_8_0() { return cUsageUsageParserRuleCall_8_0; }
 
 		//informative+=Informative*
-		public Assignment getInformativeAssignment_8() { return cInformativeAssignment_8; }
+		public Assignment getInformativeAssignment_9() { return cInformativeAssignment_9; }
 
 		//Informative
-		public RuleCall getInformativeInformativeParserRuleCall_8_0() { return cInformativeInformativeParserRuleCall_8_0; }
+		public RuleCall getInformativeInformativeParserRuleCall_9_0() { return cInformativeInformativeParserRuleCall_9_0; }
 
 		//privateData+=PrivateData*
-		public Assignment getPrivateDataAssignment_9() { return cPrivateDataAssignment_9; }
+		public Assignment getPrivateDataAssignment_10() { return cPrivateDataAssignment_10; }
 
 		//PrivateData
-		public RuleCall getPrivateDataPrivateDataParserRuleCall_9_0() { return cPrivateDataPrivateDataParserRuleCall_9_0; }
+		public RuleCall getPrivateDataPrivateDataParserRuleCall_10_0() { return cPrivateDataPrivateDataParserRuleCall_10_0; }
 
 		//recipient+=Recipient*
-		public Assignment getRecipientAssignment_10() { return cRecipientAssignment_10; }
+		public Assignment getRecipientAssignment_11() { return cRecipientAssignment_11; }
 
 		//Recipient
-		public RuleCall getRecipientRecipientParserRuleCall_10_0() { return cRecipientRecipientParserRuleCall_10_0; }
+		public RuleCall getRecipientRecipientParserRuleCall_11_0() { return cRecipientRecipientParserRuleCall_11_0; }
 
 		//service+=Service*
-		public Assignment getServiceAssignment_11() { return cServiceAssignment_11; }
+		public Assignment getServiceAssignment_12() { return cServiceAssignment_12; }
 
 		//Service
-		public RuleCall getServiceServiceParserRuleCall_11_0() { return cServiceServiceParserRuleCall_11_0; }
+		public RuleCall getServiceServiceParserRuleCall_12_0() { return cServiceServiceParserRuleCall_12_0; }
 
 		//enforcement+=Enforcement*
-		public Assignment getEnforcementAssignment_12() { return cEnforcementAssignment_12; }
+		public Assignment getEnforcementAssignment_13() { return cEnforcementAssignment_13; }
 
 		//Enforcement
-		public RuleCall getEnforcementEnforcementParserRuleCall_12_0() { return cEnforcementEnforcementParserRuleCall_12_0; }
+		public RuleCall getEnforcementEnforcementParserRuleCall_13_0() { return cEnforcementEnforcementParserRuleCall_13_0; }
 
 		//"};"
-		public Keyword getRightCurlyBracketSemicolonKeyword_13() { return cRightCurlyBracketSemicolonKeyword_13; }
+		public Keyword getRightCurlyBracketSemicolonKeyword_14() { return cRightCurlyBracketSemicolonKeyword_14; }
 	}
 
 	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
@@ -204,6 +212,196 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 
 		//".*"?
 		public Keyword getFullStopAsteriskKeyword_1() { return cFullStopAsteriskKeyword_1; }
+	}
+
+	public class MetadataElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Metadata");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cPolicyMetadataKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cAuthorSKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cAuthorsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cAuthorsSTRINGTerminalRuleCall_2_0 = (RuleCall)cAuthorsAssignment_2.eContents().get(0);
+		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cOrganizationSKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cOrganizationsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cOrganizationsSTRINGTerminalRuleCall_5_0 = (RuleCall)cOrganizationsAssignment_5.eContents().get(0);
+		private final Keyword cCommaKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cDateKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cDateAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cDateDateParserRuleCall_8_0 = (RuleCall)cDateAssignment_8.eContents().get(0);
+		private final Keyword cCommaKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Keyword cVersionKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Assignment cVersionAssignment_11 = (Assignment)cGroup.eContents().get(11);
+		private final RuleCall cVersionSTRINGTerminalRuleCall_11_0 = (RuleCall)cVersionAssignment_11.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
+		
+		//Metadata:
+		//	"PolicyMetadata {" "Author(s)" authors=STRING "," "Organization(s)" organizations=STRING "," "Date" date=Date ","
+		//	"Version" version=STRING "}";
+		@Override public ParserRule getRule() { return rule; }
+
+		//"PolicyMetadata {" "Author(s)" authors=STRING "," "Organization(s)" organizations=STRING "," "Date" date=Date ","
+		//"Version" version=STRING "}"
+		public Group getGroup() { return cGroup; }
+
+		//"PolicyMetadata {"
+		public Keyword getPolicyMetadataKeyword_0() { return cPolicyMetadataKeyword_0; }
+
+		//"Author(s)"
+		public Keyword getAuthorSKeyword_1() { return cAuthorSKeyword_1; }
+
+		//authors=STRING
+		public Assignment getAuthorsAssignment_2() { return cAuthorsAssignment_2; }
+
+		//STRING
+		public RuleCall getAuthorsSTRINGTerminalRuleCall_2_0() { return cAuthorsSTRINGTerminalRuleCall_2_0; }
+
+		//","
+		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
+
+		//"Organization(s)"
+		public Keyword getOrganizationSKeyword_4() { return cOrganizationSKeyword_4; }
+
+		//organizations=STRING
+		public Assignment getOrganizationsAssignment_5() { return cOrganizationsAssignment_5; }
+
+		//STRING
+		public RuleCall getOrganizationsSTRINGTerminalRuleCall_5_0() { return cOrganizationsSTRINGTerminalRuleCall_5_0; }
+
+		//","
+		public Keyword getCommaKeyword_6() { return cCommaKeyword_6; }
+
+		//"Date"
+		public Keyword getDateKeyword_7() { return cDateKeyword_7; }
+
+		//date=Date
+		public Assignment getDateAssignment_8() { return cDateAssignment_8; }
+
+		//Date
+		public RuleCall getDateDateParserRuleCall_8_0() { return cDateDateParserRuleCall_8_0; }
+
+		//","
+		public Keyword getCommaKeyword_9() { return cCommaKeyword_9; }
+
+		//"Version"
+		public Keyword getVersionKeyword_10() { return cVersionKeyword_10; }
+
+		//version=STRING
+		public Assignment getVersionAssignment_11() { return cVersionAssignment_11; }
+
+		//STRING
+		public RuleCall getVersionSTRINGTerminalRuleCall_11_0() { return cVersionSTRINGTerminalRuleCall_11_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
+	}
+
+	public class DateElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Date");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cDayAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cDayINTTerminalRuleCall_0_0 = (RuleCall)cDayAssignment_0.eContents().get(0);
+		private final Keyword cHyphenMinusKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cMonthAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cMonthMonthParserRuleCall_2_0 = (RuleCall)cMonthAssignment_2.eContents().get(0);
+		private final Keyword cHyphenMinusKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cYearAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cYearINTTerminalRuleCall_4_0 = (RuleCall)cYearAssignment_4.eContents().get(0);
+		
+		//Date:
+		//	day=INT "-" month=Month "-" year=INT;
+		@Override public ParserRule getRule() { return rule; }
+
+		//day=INT "-" month=Month "-" year=INT
+		public Group getGroup() { return cGroup; }
+
+		//day=INT
+		public Assignment getDayAssignment_0() { return cDayAssignment_0; }
+
+		//INT
+		public RuleCall getDayINTTerminalRuleCall_0_0() { return cDayINTTerminalRuleCall_0_0; }
+
+		//"-"
+		public Keyword getHyphenMinusKeyword_1() { return cHyphenMinusKeyword_1; }
+
+		//month=Month
+		public Assignment getMonthAssignment_2() { return cMonthAssignment_2; }
+
+		//Month
+		public RuleCall getMonthMonthParserRuleCall_2_0() { return cMonthMonthParserRuleCall_2_0; }
+
+		//"-"
+		public Keyword getHyphenMinusKeyword_3() { return cHyphenMinusKeyword_3; }
+
+		//year=INT
+		public Assignment getYearAssignment_4() { return cYearAssignment_4; }
+
+		//INT
+		public RuleCall getYearINTTerminalRuleCall_4_0() { return cYearINTTerminalRuleCall_4_0; }
+	}
+
+	public class MonthElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Month");
+		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
+		private final Alternatives cNameAlternatives_0 = (Alternatives)cNameAssignment.eContents().get(0);
+		private final Keyword cNameJanKeyword_0_0 = (Keyword)cNameAlternatives_0.eContents().get(0);
+		private final Keyword cNameFebKeyword_0_1 = (Keyword)cNameAlternatives_0.eContents().get(1);
+		private final Keyword cNameMarKeyword_0_2 = (Keyword)cNameAlternatives_0.eContents().get(2);
+		private final Keyword cNameAprKeyword_0_3 = (Keyword)cNameAlternatives_0.eContents().get(3);
+		private final Keyword cNameMayKeyword_0_4 = (Keyword)cNameAlternatives_0.eContents().get(4);
+		private final Keyword cNameJunKeyword_0_5 = (Keyword)cNameAlternatives_0.eContents().get(5);
+		private final Keyword cNameJulKeyword_0_6 = (Keyword)cNameAlternatives_0.eContents().get(6);
+		private final Keyword cNameAugKeyword_0_7 = (Keyword)cNameAlternatives_0.eContents().get(7);
+		private final Keyword cNameSepKeyword_0_8 = (Keyword)cNameAlternatives_0.eContents().get(8);
+		private final Keyword cNameOctKeyword_0_9 = (Keyword)cNameAlternatives_0.eContents().get(9);
+		private final Keyword cNameNovKeyword_0_10 = (Keyword)cNameAlternatives_0.eContents().get(10);
+		private final Keyword cNameDecKeyword_0_11 = (Keyword)cNameAlternatives_0.eContents().get(11);
+		
+		//Month:
+		//	name=("Jan" | "Feb" | "Mar" | "Apr" | "May" | "Jun" | "Jul" | "Aug" | "Sep" | "Oct" | "Nov" | "Dec");
+		@Override public ParserRule getRule() { return rule; }
+
+		//name=("Jan" | "Feb" | "Mar" | "Apr" | "May" | "Jun" | "Jul" | "Aug" | "Sep" | "Oct" | "Nov" | "Dec")
+		public Assignment getNameAssignment() { return cNameAssignment; }
+
+		//"Jan" | "Feb" | "Mar" | "Apr" | "May" | "Jun" | "Jul" | "Aug" | "Sep" | "Oct" | "Nov" | "Dec"
+		public Alternatives getNameAlternatives_0() { return cNameAlternatives_0; }
+
+		//"Jan"
+		public Keyword getNameJanKeyword_0_0() { return cNameJanKeyword_0_0; }
+
+		//"Feb"
+		public Keyword getNameFebKeyword_0_1() { return cNameFebKeyword_0_1; }
+
+		//"Mar"
+		public Keyword getNameMarKeyword_0_2() { return cNameMarKeyword_0_2; }
+
+		//"Apr"
+		public Keyword getNameAprKeyword_0_3() { return cNameAprKeyword_0_3; }
+
+		//"May"
+		public Keyword getNameMayKeyword_0_4() { return cNameMayKeyword_0_4; }
+
+		//"Jun"
+		public Keyword getNameJunKeyword_0_5() { return cNameJunKeyword_0_5; }
+
+		//"Jul"
+		public Keyword getNameJulKeyword_0_6() { return cNameJulKeyword_0_6; }
+
+		//"Aug"
+		public Keyword getNameAugKeyword_0_7() { return cNameAugKeyword_0_7; }
+
+		//"Sep"
+		public Keyword getNameSepKeyword_0_8() { return cNameSepKeyword_0_8; }
+
+		//"Oct"
+		public Keyword getNameOctKeyword_0_9() { return cNameOctKeyword_0_9; }
+
+		//"Nov"
+		public Keyword getNameNovKeyword_0_10() { return cNameNovKeyword_0_10; }
+
+		//"Dec"
+		public Keyword getNameDecKeyword_0_11() { return cNameDecKeyword_0_11; }
 	}
 
 	public class EnforcementElements extends AbstractParserRuleElementFinder {
@@ -1879,6 +2077,9 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 	private final QualifiedNameElements pQualifiedName;
 	private final ImportElements pImport;
 	private final QualifiedNameWithWildcardElements pQualifiedNameWithWildcard;
+	private final MetadataElements pMetadata;
+	private final DateElements pDate;
+	private final MonthElements pMonth;
 	private final EnforcementElements pEnforcement;
 	private final ServiceElements pService;
 	private final RecipientElements pRecipient;
@@ -1911,6 +2112,9 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		this.pQualifiedName = new QualifiedNameElements();
 		this.pImport = new ImportElements();
 		this.pQualifiedNameWithWildcard = new QualifiedNameWithWildcardElements();
+		this.pMetadata = new MetadataElements();
+		this.pDate = new DateElements();
+		this.pMonth = new MonthElements();
 		this.pEnforcement = new EnforcementElements();
 		this.pService = new ServiceElements();
 		this.pRecipient = new RecipientElements();
@@ -1959,9 +2163,9 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Policy:
-	//	"Package" name=QualifiedName "{" importelements+=Import* collection+=Collection* disclosure+=Disclosure*
-	//	retention+=Retention* usage+=Usage* informative+=Informative* privateData+=PrivateData* recipient+=Recipient*
-	//	service+=Service* enforcement+=Enforcement* "};";
+	//	"Package" name=QualifiedName "{" importelements+=Import* metadata=Metadata? collection+=Collection*
+	//	disclosure+=Disclosure* retention+=Retention* usage+=Usage* informative+=Informative* privateData+=PrivateData*
+	//	recipient+=Recipient* service+=Service* enforcement+=Enforcement* "};";
 	public PolicyElements getPolicyAccess() {
 		return pPolicy;
 	}
@@ -1998,6 +2202,37 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getQualifiedNameWithWildcardRule() {
 		return getQualifiedNameWithWildcardAccess().getRule();
+	}
+
+	//Metadata:
+	//	"PolicyMetadata {" "Author(s)" authors=STRING "," "Organization(s)" organizations=STRING "," "Date" date=Date ","
+	//	"Version" version=STRING "}";
+	public MetadataElements getMetadataAccess() {
+		return pMetadata;
+	}
+	
+	public ParserRule getMetadataRule() {
+		return getMetadataAccess().getRule();
+	}
+
+	//Date:
+	//	day=INT "-" month=Month "-" year=INT;
+	public DateElements getDateAccess() {
+		return pDate;
+	}
+	
+	public ParserRule getDateRule() {
+		return getDateAccess().getRule();
+	}
+
+	//Month:
+	//	name=("Jan" | "Feb" | "Mar" | "Apr" | "May" | "Jun" | "Jul" | "Aug" | "Sep" | "Oct" | "Nov" | "Dec");
+	public MonthElements getMonthAccess() {
+		return pMonth;
+	}
+	
+	public ParserRule getMonthRule() {
+		return getMonthAccess().getRule();
 	}
 
 	//Enforcement:

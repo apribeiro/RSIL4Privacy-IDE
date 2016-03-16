@@ -66,6 +66,9 @@ public class RSLIL4PrivacyFactoryImpl extends EFactoryImpl implements RSLIL4Priv
     {
       case RSLIL4PrivacyPackage.POLICY: return createPolicy();
       case RSLIL4PrivacyPackage.IMPORT: return createImport();
+      case RSLIL4PrivacyPackage.METADATA: return createMetadata();
+      case RSLIL4PrivacyPackage.DATE: return createDate();
+      case RSLIL4PrivacyPackage.MONTH: return createMonth();
       case RSLIL4PrivacyPackage.ENFORCEMENT: return createEnforcement();
       case RSLIL4PrivacyPackage.SERVICE: return createService();
       case RSLIL4PrivacyPackage.RECIPIENT: return createRecipient();
@@ -109,6 +112,39 @@ public class RSLIL4PrivacyFactoryImpl extends EFactoryImpl implements RSLIL4Priv
   {
     ImportImpl import_ = new ImportImpl();
     return import_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Metadata createMetadata()
+  {
+    MetadataImpl metadata = new MetadataImpl();
+    return metadata;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Date createDate()
+  {
+    DateImpl date = new DateImpl();
+    return date;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Month createMonth()
+  {
+    MonthImpl month = new MonthImpl();
+    return month;
   }
 
   /**

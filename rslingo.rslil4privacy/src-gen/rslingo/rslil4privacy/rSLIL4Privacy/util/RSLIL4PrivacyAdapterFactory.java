@@ -85,6 +85,21 @@ public class RSLIL4PrivacyAdapterFactory extends AdapterFactoryImpl
         return createImportAdapter();
       }
       @Override
+      public Adapter caseMetadata(Metadata object)
+      {
+        return createMetadataAdapter();
+      }
+      @Override
+      public Adapter caseDate(Date object)
+      {
+        return createDateAdapter();
+      }
+      @Override
+      public Adapter caseMonth(Month object)
+      {
+        return createMonthAdapter();
+      }
+      @Override
       public Adapter caseEnforcement(Enforcement object)
       {
         return createEnforcementAdapter();
@@ -222,6 +237,51 @@ public class RSLIL4PrivacyAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createImportAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link rslingo.rslil4privacy.rSLIL4Privacy.Metadata <em>Metadata</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Metadata
+   * @generated
+   */
+  public Adapter createMetadataAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link rslingo.rslil4privacy.rSLIL4Privacy.Date <em>Date</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Date
+   * @generated
+   */
+  public Adapter createDateAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link rslingo.rslil4privacy.rSLIL4Privacy.Month <em>Month</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Month
+   * @generated
+   */
+  public Adapter createMonthAdapter()
   {
     return null;
   }
