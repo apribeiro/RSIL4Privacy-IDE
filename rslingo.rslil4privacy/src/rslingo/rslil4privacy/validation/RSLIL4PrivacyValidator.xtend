@@ -3,7 +3,10 @@
  */
 package rslingo.rslil4privacy.validation
 
-//import org.eclipse.xtext.validation.Check
+import org.eclipse.xtext.validation.Check
+import rslingo.rslil4privacy.rSLIL4Privacy.Date
+import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage
+import java.util.Calendar
 
 /**
  * This class contains custom validation rules. 
@@ -12,14 +15,26 @@ package rslingo.rslil4privacy.validation
  */
 class RSLIL4PrivacyValidator extends AbstractRSLIL4PrivacyValidator {
 
-//  public static val INVALID_NAME = 'invalidName'
-//
-//	@Check
-//	def checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.name.charAt(0))) {
-//			warning('Name should start with a capital', 
-//					MyDslPackage.Literals.GREETING__NAME,
-//					INVALID_NAME)
-//		}
-//	}
+	@Check
+	def checkDate(Date date) {
+		if (date.day < 1 || date.day > 31) {
+			error('Day should be between 1 and 31', 
+					RSLIL4PrivacyPackage.Literals.DATE__DAY)
+		} else if (date.month.name.equals("Feb")) {
+			if (isLeapYear(date.year) && date.day > 29) {
+				error('Feb ' + date.year + ' only has 29 days', RSLIL4PrivacyPackage.Literals.DATE__DAY)	
+			} else if (!isLeapYear(date.year) && date.day > 28) {
+				error('Feb ' + date.year + ' only has 28 days', RSLIL4PrivacyPackage.Literals.DATE__DAY)
+			}
+		} else if (date.month.name.equals("Apr") || date.month.name.equals("Jun")
+					|| date.month.name.equals("Sep") || date.month.name.equals("Nov")) {
+			error(date.month.name + ' ' + date.year + 'only has 30 days', RSLIL4PrivacyPackage.Literals.DATE__DAY)
+		}
+	}
+	
+	def boolean isLeapYear(int year) {
+	  	var cal = Calendar.getInstance()
+	  	cal.set(Calendar.YEAR, year)
+	  	return cal.getActualMaximum(Calendar.DAY_OF_YEAR) > 365;
+	}
 }
