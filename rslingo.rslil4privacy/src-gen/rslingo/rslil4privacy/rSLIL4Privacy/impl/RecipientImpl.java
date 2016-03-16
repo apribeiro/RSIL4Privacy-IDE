@@ -18,9 +18,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import rslingo.rslil4privacy.rSLIL4Privacy.Partof;
 import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
 import rslingo.rslil4privacy.rSLIL4Privacy.Recipient;
+import rslingo.rslil4privacy.rSLIL4Privacy.RecipientPart;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,11 +31,11 @@ import rslingo.rslil4privacy.rSLIL4Privacy.Recipient;
  * </p>
  * <ul>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RecipientImpl#getName <em>Name</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RecipientImpl#getRecipientname <em>Recipientname</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RecipientImpl#getRecipientName <em>Recipient Name</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RecipientImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RecipientImpl#getPartof <em>Partof</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RecipientImpl#getRecipientScopeKind <em>Recipient Scope Kind</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RecipientImpl#getRecipientTypeKind <em>Recipient Type Kind</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RecipientImpl#getRecipientPart <em>Recipient Part</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RecipientImpl#getScope <em>Scope</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RecipientImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,24 +63,24 @@ public class RecipientImpl extends MinimalEObjectImpl.Container implements Recip
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getRecipientname() <em>Recipientname</em>}' attribute.
+   * The default value of the '{@link #getRecipientName() <em>Recipient Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRecipientname()
+   * @see #getRecipientName()
    * @generated
    * @ordered
    */
-  protected static final String RECIPIENTNAME_EDEFAULT = null;
+  protected static final String RECIPIENT_NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getRecipientname() <em>Recipientname</em>}' attribute.
+   * The cached value of the '{@link #getRecipientName() <em>Recipient Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRecipientname()
+   * @see #getRecipientName()
    * @generated
    * @ordered
    */
-  protected String recipientname = RECIPIENTNAME_EDEFAULT;
+  protected String recipientName = RECIPIENT_NAME_EDEFAULT;
 
   /**
    * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -103,54 +103,54 @@ public class RecipientImpl extends MinimalEObjectImpl.Container implements Recip
   protected String description = DESCRIPTION_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getPartof() <em>Partof</em>}' containment reference list.
+   * The cached value of the '{@link #getRecipientPart() <em>Recipient Part</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPartof()
+   * @see #getRecipientPart()
    * @generated
    * @ordered
    */
-  protected EList<Partof> partof;
+  protected EList<RecipientPart> recipientPart;
 
   /**
-   * The default value of the '{@link #getRecipientScopeKind() <em>Recipient Scope Kind</em>}' attribute.
+   * The default value of the '{@link #getScope() <em>Scope</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRecipientScopeKind()
+   * @see #getScope()
    * @generated
    * @ordered
    */
-  protected static final String RECIPIENT_SCOPE_KIND_EDEFAULT = null;
+  protected static final String SCOPE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getRecipientScopeKind() <em>Recipient Scope Kind</em>}' attribute.
+   * The cached value of the '{@link #getScope() <em>Scope</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRecipientScopeKind()
+   * @see #getScope()
    * @generated
    * @ordered
    */
-  protected String recipientScopeKind = RECIPIENT_SCOPE_KIND_EDEFAULT;
+  protected String scope = SCOPE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getRecipientTypeKind() <em>Recipient Type Kind</em>}' attribute.
+   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRecipientTypeKind()
+   * @see #getType()
    * @generated
    * @ordered
    */
-  protected static final String RECIPIENT_TYPE_KIND_EDEFAULT = null;
+  protected static final String TYPE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getRecipientTypeKind() <em>Recipient Type Kind</em>}' attribute.
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRecipientTypeKind()
+   * @see #getType()
    * @generated
    * @ordered
    */
-  protected String recipientTypeKind = RECIPIENT_TYPE_KIND_EDEFAULT;
+  protected String type = TYPE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -201,9 +201,9 @@ public class RecipientImpl extends MinimalEObjectImpl.Container implements Recip
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getRecipientname()
+  public String getRecipientName()
   {
-    return recipientname;
+    return recipientName;
   }
 
   /**
@@ -211,12 +211,12 @@ public class RecipientImpl extends MinimalEObjectImpl.Container implements Recip
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRecipientname(String newRecipientname)
+  public void setRecipientName(String newRecipientName)
   {
-    String oldRecipientname = recipientname;
-    recipientname = newRecipientname;
+    String oldRecipientName = recipientName;
+    recipientName = newRecipientName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.RECIPIENT__RECIPIENTNAME, oldRecipientname, recipientname));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_NAME, oldRecipientName, recipientName));
   }
 
   /**
@@ -247,13 +247,13 @@ public class RecipientImpl extends MinimalEObjectImpl.Container implements Recip
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Partof> getPartof()
+  public EList<RecipientPart> getRecipientPart()
   {
-    if (partof == null)
+    if (recipientPart == null)
     {
-      partof = new EObjectContainmentEList<Partof>(Partof.class, this, RSLIL4PrivacyPackage.RECIPIENT__PARTOF);
+      recipientPart = new EObjectContainmentEList<RecipientPart>(RecipientPart.class, this, RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_PART);
     }
-    return partof;
+    return recipientPart;
   }
 
   /**
@@ -261,9 +261,9 @@ public class RecipientImpl extends MinimalEObjectImpl.Container implements Recip
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getRecipientScopeKind()
+  public String getScope()
   {
-    return recipientScopeKind;
+    return scope;
   }
 
   /**
@@ -271,12 +271,12 @@ public class RecipientImpl extends MinimalEObjectImpl.Container implements Recip
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRecipientScopeKind(String newRecipientScopeKind)
+  public void setScope(String newScope)
   {
-    String oldRecipientScopeKind = recipientScopeKind;
-    recipientScopeKind = newRecipientScopeKind;
+    String oldScope = scope;
+    scope = newScope;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_SCOPE_KIND, oldRecipientScopeKind, recipientScopeKind));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.RECIPIENT__SCOPE, oldScope, scope));
   }
 
   /**
@@ -284,9 +284,9 @@ public class RecipientImpl extends MinimalEObjectImpl.Container implements Recip
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getRecipientTypeKind()
+  public String getType()
   {
-    return recipientTypeKind;
+    return type;
   }
 
   /**
@@ -294,12 +294,12 @@ public class RecipientImpl extends MinimalEObjectImpl.Container implements Recip
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRecipientTypeKind(String newRecipientTypeKind)
+  public void setType(String newType)
   {
-    String oldRecipientTypeKind = recipientTypeKind;
-    recipientTypeKind = newRecipientTypeKind;
+    String oldType = type;
+    type = newType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_TYPE_KIND, oldRecipientTypeKind, recipientTypeKind));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.RECIPIENT__TYPE, oldType, type));
   }
 
   /**
@@ -312,8 +312,8 @@ public class RecipientImpl extends MinimalEObjectImpl.Container implements Recip
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.RECIPIENT__PARTOF:
-        return ((InternalEList<?>)getPartof()).basicRemove(otherEnd, msgs);
+      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_PART:
+        return ((InternalEList<?>)getRecipientPart()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -330,16 +330,16 @@ public class RecipientImpl extends MinimalEObjectImpl.Container implements Recip
     {
       case RSLIL4PrivacyPackage.RECIPIENT__NAME:
         return getName();
-      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENTNAME:
-        return getRecipientname();
+      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_NAME:
+        return getRecipientName();
       case RSLIL4PrivacyPackage.RECIPIENT__DESCRIPTION:
         return getDescription();
-      case RSLIL4PrivacyPackage.RECIPIENT__PARTOF:
-        return getPartof();
-      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_SCOPE_KIND:
-        return getRecipientScopeKind();
-      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_TYPE_KIND:
-        return getRecipientTypeKind();
+      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_PART:
+        return getRecipientPart();
+      case RSLIL4PrivacyPackage.RECIPIENT__SCOPE:
+        return getScope();
+      case RSLIL4PrivacyPackage.RECIPIENT__TYPE:
+        return getType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -358,21 +358,21 @@ public class RecipientImpl extends MinimalEObjectImpl.Container implements Recip
       case RSLIL4PrivacyPackage.RECIPIENT__NAME:
         setName((String)newValue);
         return;
-      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENTNAME:
-        setRecipientname((String)newValue);
+      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_NAME:
+        setRecipientName((String)newValue);
         return;
       case RSLIL4PrivacyPackage.RECIPIENT__DESCRIPTION:
         setDescription((String)newValue);
         return;
-      case RSLIL4PrivacyPackage.RECIPIENT__PARTOF:
-        getPartof().clear();
-        getPartof().addAll((Collection<? extends Partof>)newValue);
+      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_PART:
+        getRecipientPart().clear();
+        getRecipientPart().addAll((Collection<? extends RecipientPart>)newValue);
         return;
-      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_SCOPE_KIND:
-        setRecipientScopeKind((String)newValue);
+      case RSLIL4PrivacyPackage.RECIPIENT__SCOPE:
+        setScope((String)newValue);
         return;
-      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_TYPE_KIND:
-        setRecipientTypeKind((String)newValue);
+      case RSLIL4PrivacyPackage.RECIPIENT__TYPE:
+        setType((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -391,20 +391,20 @@ public class RecipientImpl extends MinimalEObjectImpl.Container implements Recip
       case RSLIL4PrivacyPackage.RECIPIENT__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENTNAME:
-        setRecipientname(RECIPIENTNAME_EDEFAULT);
+      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_NAME:
+        setRecipientName(RECIPIENT_NAME_EDEFAULT);
         return;
       case RSLIL4PrivacyPackage.RECIPIENT__DESCRIPTION:
         setDescription(DESCRIPTION_EDEFAULT);
         return;
-      case RSLIL4PrivacyPackage.RECIPIENT__PARTOF:
-        getPartof().clear();
+      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_PART:
+        getRecipientPart().clear();
         return;
-      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_SCOPE_KIND:
-        setRecipientScopeKind(RECIPIENT_SCOPE_KIND_EDEFAULT);
+      case RSLIL4PrivacyPackage.RECIPIENT__SCOPE:
+        setScope(SCOPE_EDEFAULT);
         return;
-      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_TYPE_KIND:
-        setRecipientTypeKind(RECIPIENT_TYPE_KIND_EDEFAULT);
+      case RSLIL4PrivacyPackage.RECIPIENT__TYPE:
+        setType(TYPE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -422,16 +422,16 @@ public class RecipientImpl extends MinimalEObjectImpl.Container implements Recip
     {
       case RSLIL4PrivacyPackage.RECIPIENT__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENTNAME:
-        return RECIPIENTNAME_EDEFAULT == null ? recipientname != null : !RECIPIENTNAME_EDEFAULT.equals(recipientname);
+      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_NAME:
+        return RECIPIENT_NAME_EDEFAULT == null ? recipientName != null : !RECIPIENT_NAME_EDEFAULT.equals(recipientName);
       case RSLIL4PrivacyPackage.RECIPIENT__DESCRIPTION:
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-      case RSLIL4PrivacyPackage.RECIPIENT__PARTOF:
-        return partof != null && !partof.isEmpty();
-      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_SCOPE_KIND:
-        return RECIPIENT_SCOPE_KIND_EDEFAULT == null ? recipientScopeKind != null : !RECIPIENT_SCOPE_KIND_EDEFAULT.equals(recipientScopeKind);
-      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_TYPE_KIND:
-        return RECIPIENT_TYPE_KIND_EDEFAULT == null ? recipientTypeKind != null : !RECIPIENT_TYPE_KIND_EDEFAULT.equals(recipientTypeKind);
+      case RSLIL4PrivacyPackage.RECIPIENT__RECIPIENT_PART:
+        return recipientPart != null && !recipientPart.isEmpty();
+      case RSLIL4PrivacyPackage.RECIPIENT__SCOPE:
+        return SCOPE_EDEFAULT == null ? scope != null : !SCOPE_EDEFAULT.equals(scope);
+      case RSLIL4PrivacyPackage.RECIPIENT__TYPE:
+        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
     }
     return super.eIsSet(featureID);
   }
@@ -449,14 +449,14 @@ public class RecipientImpl extends MinimalEObjectImpl.Container implements Recip
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", recipientname: ");
-    result.append(recipientname);
+    result.append(", recipientName: ");
+    result.append(recipientName);
     result.append(", description: ");
     result.append(description);
-    result.append(", RecipientScopeKind: ");
-    result.append(recipientScopeKind);
-    result.append(", RecipientTypeKind: ");
-    result.append(recipientTypeKind);
+    result.append(", scope: ");
+    result.append(scope);
+    result.append(", type: ");
+    result.append(type);
     result.append(')');
     return result.toString();
   }

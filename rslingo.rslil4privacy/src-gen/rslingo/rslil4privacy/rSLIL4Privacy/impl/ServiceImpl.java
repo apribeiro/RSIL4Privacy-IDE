@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
 import rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData;
 import rslingo.rslil4privacy.rSLIL4Privacy.Service;
-import rslingo.rslil4privacy.rSLIL4Privacy.ServicePartof;
+import rslingo.rslil4privacy.rSLIL4Privacy.ServicePart;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,10 +32,10 @@ import rslingo.rslil4privacy.rSLIL4Privacy.ServicePartof;
  * </p>
  * <ul>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServiceImpl#getName <em>Name</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServiceImpl#getServicename <em>Servicename</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServiceImpl#getServiceName <em>Service Name</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServiceImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServiceImpl#getRefprivatedata <em>Refprivatedata</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServiceImpl#getServicepartof <em>Servicepartof</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServiceImpl#getRefPrivateData <em>Ref Private Data</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServiceImpl#getServicePart <em>Service Part</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,24 +63,24 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getServicename() <em>Servicename</em>}' attribute.
+   * The default value of the '{@link #getServiceName() <em>Service Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getServicename()
+   * @see #getServiceName()
    * @generated
    * @ordered
    */
-  protected static final String SERVICENAME_EDEFAULT = null;
+  protected static final String SERVICE_NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getServicename() <em>Servicename</em>}' attribute.
+   * The cached value of the '{@link #getServiceName() <em>Service Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getServicename()
+   * @see #getServiceName()
    * @generated
    * @ordered
    */
-  protected String servicename = SERVICENAME_EDEFAULT;
+  protected String serviceName = SERVICE_NAME_EDEFAULT;
 
   /**
    * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -103,24 +103,24 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
   protected String description = DESCRIPTION_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getRefprivatedata() <em>Refprivatedata</em>}' containment reference list.
+   * The cached value of the '{@link #getRefPrivateData() <em>Ref Private Data</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRefprivatedata()
+   * @see #getRefPrivateData()
    * @generated
    * @ordered
    */
-  protected EList<RefPrivateData> refprivatedata;
+  protected EList<RefPrivateData> refPrivateData;
 
   /**
-   * The cached value of the '{@link #getServicepartof() <em>Servicepartof</em>}' containment reference list.
+   * The cached value of the '{@link #getServicePart() <em>Service Part</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getServicepartof()
+   * @see #getServicePart()
    * @generated
    * @ordered
    */
-  protected EList<ServicePartof> servicepartof;
+  protected EList<ServicePart> servicePart;
 
   /**
    * <!-- begin-user-doc -->
@@ -171,9 +171,9 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getServicename()
+  public String getServiceName()
   {
-    return servicename;
+    return serviceName;
   }
 
   /**
@@ -181,12 +181,12 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setServicename(String newServicename)
+  public void setServiceName(String newServiceName)
   {
-    String oldServicename = servicename;
-    servicename = newServicename;
+    String oldServiceName = serviceName;
+    serviceName = newServiceName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.SERVICE__SERVICENAME, oldServicename, servicename));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.SERVICE__SERVICE_NAME, oldServiceName, serviceName));
   }
 
   /**
@@ -217,13 +217,13 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<RefPrivateData> getRefprivatedata()
+  public EList<RefPrivateData> getRefPrivateData()
   {
-    if (refprivatedata == null)
+    if (refPrivateData == null)
     {
-      refprivatedata = new EObjectContainmentEList<RefPrivateData>(RefPrivateData.class, this, RSLIL4PrivacyPackage.SERVICE__REFPRIVATEDATA);
+      refPrivateData = new EObjectContainmentEList<RefPrivateData>(RefPrivateData.class, this, RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA);
     }
-    return refprivatedata;
+    return refPrivateData;
   }
 
   /**
@@ -231,13 +231,13 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ServicePartof> getServicepartof()
+  public EList<ServicePart> getServicePart()
   {
-    if (servicepartof == null)
+    if (servicePart == null)
     {
-      servicepartof = new EObjectContainmentEList<ServicePartof>(ServicePartof.class, this, RSLIL4PrivacyPackage.SERVICE__SERVICEPARTOF);
+      servicePart = new EObjectContainmentEList<ServicePart>(ServicePart.class, this, RSLIL4PrivacyPackage.SERVICE__SERVICE_PART);
     }
-    return servicepartof;
+    return servicePart;
   }
 
   /**
@@ -250,10 +250,10 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.SERVICE__REFPRIVATEDATA:
-        return ((InternalEList<?>)getRefprivatedata()).basicRemove(otherEnd, msgs);
-      case RSLIL4PrivacyPackage.SERVICE__SERVICEPARTOF:
-        return ((InternalEList<?>)getServicepartof()).basicRemove(otherEnd, msgs);
+      case RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA:
+        return ((InternalEList<?>)getRefPrivateData()).basicRemove(otherEnd, msgs);
+      case RSLIL4PrivacyPackage.SERVICE__SERVICE_PART:
+        return ((InternalEList<?>)getServicePart()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -270,14 +270,14 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
     {
       case RSLIL4PrivacyPackage.SERVICE__NAME:
         return getName();
-      case RSLIL4PrivacyPackage.SERVICE__SERVICENAME:
-        return getServicename();
+      case RSLIL4PrivacyPackage.SERVICE__SERVICE_NAME:
+        return getServiceName();
       case RSLIL4PrivacyPackage.SERVICE__DESCRIPTION:
         return getDescription();
-      case RSLIL4PrivacyPackage.SERVICE__REFPRIVATEDATA:
-        return getRefprivatedata();
-      case RSLIL4PrivacyPackage.SERVICE__SERVICEPARTOF:
-        return getServicepartof();
+      case RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA:
+        return getRefPrivateData();
+      case RSLIL4PrivacyPackage.SERVICE__SERVICE_PART:
+        return getServicePart();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -296,19 +296,19 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
       case RSLIL4PrivacyPackage.SERVICE__NAME:
         setName((String)newValue);
         return;
-      case RSLIL4PrivacyPackage.SERVICE__SERVICENAME:
-        setServicename((String)newValue);
+      case RSLIL4PrivacyPackage.SERVICE__SERVICE_NAME:
+        setServiceName((String)newValue);
         return;
       case RSLIL4PrivacyPackage.SERVICE__DESCRIPTION:
         setDescription((String)newValue);
         return;
-      case RSLIL4PrivacyPackage.SERVICE__REFPRIVATEDATA:
-        getRefprivatedata().clear();
-        getRefprivatedata().addAll((Collection<? extends RefPrivateData>)newValue);
+      case RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA:
+        getRefPrivateData().clear();
+        getRefPrivateData().addAll((Collection<? extends RefPrivateData>)newValue);
         return;
-      case RSLIL4PrivacyPackage.SERVICE__SERVICEPARTOF:
-        getServicepartof().clear();
-        getServicepartof().addAll((Collection<? extends ServicePartof>)newValue);
+      case RSLIL4PrivacyPackage.SERVICE__SERVICE_PART:
+        getServicePart().clear();
+        getServicePart().addAll((Collection<? extends ServicePart>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -327,17 +327,17 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
       case RSLIL4PrivacyPackage.SERVICE__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case RSLIL4PrivacyPackage.SERVICE__SERVICENAME:
-        setServicename(SERVICENAME_EDEFAULT);
+      case RSLIL4PrivacyPackage.SERVICE__SERVICE_NAME:
+        setServiceName(SERVICE_NAME_EDEFAULT);
         return;
       case RSLIL4PrivacyPackage.SERVICE__DESCRIPTION:
         setDescription(DESCRIPTION_EDEFAULT);
         return;
-      case RSLIL4PrivacyPackage.SERVICE__REFPRIVATEDATA:
-        getRefprivatedata().clear();
+      case RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA:
+        getRefPrivateData().clear();
         return;
-      case RSLIL4PrivacyPackage.SERVICE__SERVICEPARTOF:
-        getServicepartof().clear();
+      case RSLIL4PrivacyPackage.SERVICE__SERVICE_PART:
+        getServicePart().clear();
         return;
     }
     super.eUnset(featureID);
@@ -355,14 +355,14 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
     {
       case RSLIL4PrivacyPackage.SERVICE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case RSLIL4PrivacyPackage.SERVICE__SERVICENAME:
-        return SERVICENAME_EDEFAULT == null ? servicename != null : !SERVICENAME_EDEFAULT.equals(servicename);
+      case RSLIL4PrivacyPackage.SERVICE__SERVICE_NAME:
+        return SERVICE_NAME_EDEFAULT == null ? serviceName != null : !SERVICE_NAME_EDEFAULT.equals(serviceName);
       case RSLIL4PrivacyPackage.SERVICE__DESCRIPTION:
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-      case RSLIL4PrivacyPackage.SERVICE__REFPRIVATEDATA:
-        return refprivatedata != null && !refprivatedata.isEmpty();
-      case RSLIL4PrivacyPackage.SERVICE__SERVICEPARTOF:
-        return servicepartof != null && !servicepartof.isEmpty();
+      case RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA:
+        return refPrivateData != null && !refPrivateData.isEmpty();
+      case RSLIL4PrivacyPackage.SERVICE__SERVICE_PART:
+        return servicePart != null && !servicePart.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -380,8 +380,8 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", servicename: ");
-    result.append(servicename);
+    result.append(", serviceName: ");
+    result.append(serviceName);
     result.append(", description: ");
     result.append(description);
     result.append(')');

@@ -231,22 +231,22 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int ENFORCEMENT__ENFORCEMENT_NAME = 1;
 
   /**
-   * The feature id for the '<em><b>Enforcement Description</b></em>' attribute.
+   * The feature id for the '<em><b>Description</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ENFORCEMENT__ENFORCEMENT_DESCRIPTION = 2;
+  int ENFORCEMENT__DESCRIPTION = 2;
 
   /**
-   * The feature id for the '<em><b>Enforcement Kind</b></em>' attribute.
+   * The feature id for the '<em><b>Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ENFORCEMENT__ENFORCEMENT_KIND = 3;
+  int ENFORCEMENT__TYPE = 3;
 
   /**
    * The number of structural features of the '<em>Enforcement</em>' class.
@@ -277,13 +277,13 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int SERVICE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Servicename</b></em>' attribute.
+   * The feature id for the '<em><b>Service Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SERVICE__SERVICENAME = 1;
+  int SERVICE__SERVICE_NAME = 1;
 
   /**
    * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -295,22 +295,22 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int SERVICE__DESCRIPTION = 2;
 
   /**
-   * The feature id for the '<em><b>Refprivatedata</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SERVICE__REFPRIVATEDATA = 3;
+  int SERVICE__REF_PRIVATE_DATA = 3;
 
   /**
-   * The feature id for the '<em><b>Servicepartof</b></em>' containment reference list.
+   * The feature id for the '<em><b>Service Part</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SERVICE__SERVICEPARTOF = 4;
+  int SERVICE__SERVICE_PART = 4;
 
   /**
    * The number of structural features of the '<em>Service</em>' class.
@@ -341,13 +341,13 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int RECIPIENT__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Recipientname</b></em>' attribute.
+   * The feature id for the '<em><b>Recipient Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RECIPIENT__RECIPIENTNAME = 1;
+  int RECIPIENT__RECIPIENT_NAME = 1;
 
   /**
    * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -359,31 +359,31 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int RECIPIENT__DESCRIPTION = 2;
 
   /**
-   * The feature id for the '<em><b>Partof</b></em>' containment reference list.
+   * The feature id for the '<em><b>Recipient Part</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RECIPIENT__PARTOF = 3;
+  int RECIPIENT__RECIPIENT_PART = 3;
 
   /**
-   * The feature id for the '<em><b>Recipient Scope Kind</b></em>' attribute.
+   * The feature id for the '<em><b>Scope</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RECIPIENT__RECIPIENT_SCOPE_KIND = 4;
+  int RECIPIENT__SCOPE = 4;
 
   /**
-   * The feature id for the '<em><b>Recipient Type Kind</b></em>' attribute.
+   * The feature id for the '<em><b>Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RECIPIENT__RECIPIENT_TYPE_KIND = 5;
+  int RECIPIENT__TYPE = 5;
 
   /**
    * The number of structural features of the '<em>Recipient</em>' class.
@@ -414,22 +414,22 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int PRIVATE_DATA__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Privatedata</b></em>' attribute.
+   * The feature id for the '<em><b>Description</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PRIVATE_DATA__PRIVATEDATA = 1;
+  int PRIVATE_DATA__DESCRIPTION = 1;
 
   /**
-   * The feature id for the '<em><b>Private Data Kind</b></em>' attribute.
+   * The feature id for the '<em><b>Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PRIVATE_DATA__PRIVATE_DATA_KIND = 2;
+  int PRIVATE_DATA__TYPE = 2;
 
   /**
    * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
@@ -469,13 +469,13 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int ATTRIBUTE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Attribute Name</b></em>' attribute.
+   * The feature id for the '<em><b>Description</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATTRIBUTE__ATTRIBUTE_NAME = 1;
+  int ATTRIBUTE__DESCRIPTION = 1;
 
   /**
    * The number of structural features of the '<em>Attribute</em>' class.
@@ -524,49 +524,49 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int COLLECTION__CONDITION = 2;
 
   /**
-   * The feature id for the '<em><b>Partof</b></em>' reference.
+   * The feature id for the '<em><b>Part Collection</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COLLECTION__PARTOF = 3;
+  int COLLECTION__PART_COLLECTION = 3;
 
   /**
-   * The feature id for the '<em><b>Refprivatedata</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COLLECTION__REFPRIVATEDATA = 4;
+  int COLLECTION__REF_PRIVATE_DATA = 4;
 
   /**
-   * The feature id for the '<em><b>Refertoservice</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Service</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COLLECTION__REFERTOSERVICE = 5;
+  int COLLECTION__REF_SERVICE = 5;
 
   /**
-   * The feature id for the '<em><b>Referto Enforcement</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Enforcement</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COLLECTION__REFERTO_ENFORCEMENT = 6;
+  int COLLECTION__REF_ENFORCEMENT = 6;
 
   /**
-   * The feature id for the '<em><b>Modalitykind</b></em>' attribute.
+   * The feature id for the '<em><b>Modality</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COLLECTION__MODALITYKIND = 7;
+  int COLLECTION__MODALITY = 7;
 
   /**
    * The number of structural features of the '<em>Collection</em>' class.
@@ -615,76 +615,76 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int DISCLOSURE__CONDITION = 2;
 
   /**
-   * The feature id for the '<em><b>Partof</b></em>' reference.
+   * The feature id for the '<em><b>Part Disclosure</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DISCLOSURE__PARTOF = 3;
+  int DISCLOSURE__PART_DISCLOSURE = 3;
 
   /**
-   * The feature id for the '<em><b>Refer To Recipient</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Recipient</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DISCLOSURE__REFER_TO_RECIPIENT = 4;
+  int DISCLOSURE__REF_RECIPIENT = 4;
 
   /**
-   * The feature id for the '<em><b>Refer To Recipientsource</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Recipient Source</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DISCLOSURE__REFER_TO_RECIPIENTSOURCE = 5;
+  int DISCLOSURE__REF_RECIPIENT_SOURCE = 5;
 
   /**
-   * The feature id for the '<em><b>Refer To Recipienttarget</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Recipient Target</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DISCLOSURE__REFER_TO_RECIPIENTTARGET = 6;
+  int DISCLOSURE__REF_RECIPIENT_TARGET = 6;
 
   /**
-   * The feature id for the '<em><b>Refprivatedata</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DISCLOSURE__REFPRIVATEDATA = 7;
+  int DISCLOSURE__REF_PRIVATE_DATA = 7;
 
   /**
-   * The feature id for the '<em><b>Refertoservice</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Service</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DISCLOSURE__REFERTOSERVICE = 8;
+  int DISCLOSURE__REF_SERVICE = 8;
 
   /**
-   * The feature id for the '<em><b>Referto Enforcement</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Enforcement</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DISCLOSURE__REFERTO_ENFORCEMENT = 9;
+  int DISCLOSURE__REF_ENFORCEMENT = 9;
 
   /**
-   * The feature id for the '<em><b>Modalitykind</b></em>' attribute.
+   * The feature id for the '<em><b>Modality</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DISCLOSURE__MODALITYKIND = 10;
+  int DISCLOSURE__MODALITY = 10;
 
   /**
    * The number of structural features of the '<em>Disclosure</em>' class.
@@ -733,13 +733,13 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int RETENTION__CONDITION = 2;
 
   /**
-   * The feature id for the '<em><b>Partof</b></em>' reference.
+   * The feature id for the '<em><b>Part Retention</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RETENTION__PARTOF = 3;
+  int RETENTION__PART_RETENTION = 3;
 
   /**
    * The feature id for the '<em><b>Period</b></em>' attribute.
@@ -751,40 +751,40 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int RETENTION__PERIOD = 4;
 
   /**
-   * The feature id for the '<em><b>Refprivatedata</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RETENTION__REFPRIVATEDATA = 5;
+  int RETENTION__REF_PRIVATE_DATA = 5;
 
   /**
-   * The feature id for the '<em><b>Refertoservice</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Service</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RETENTION__REFERTOSERVICE = 6;
+  int RETENTION__REF_SERVICE = 6;
 
   /**
-   * The feature id for the '<em><b>Referto Enforcement</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Enforcement</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RETENTION__REFERTO_ENFORCEMENT = 7;
+  int RETENTION__REF_ENFORCEMENT = 7;
 
   /**
-   * The feature id for the '<em><b>Modalitykind</b></em>' attribute.
+   * The feature id for the '<em><b>Modality</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RETENTION__MODALITYKIND = 8;
+  int RETENTION__MODALITY = 8;
 
   /**
    * The number of structural features of the '<em>Retention</em>' class.
@@ -833,49 +833,49 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int USAGE__CONDITION = 2;
 
   /**
-   * The feature id for the '<em><b>Partof</b></em>' reference.
+   * The feature id for the '<em><b>Part Usage</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int USAGE__PARTOF = 3;
+  int USAGE__PART_USAGE = 3;
 
   /**
-   * The feature id for the '<em><b>Refprivatedata</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int USAGE__REFPRIVATEDATA = 4;
+  int USAGE__REF_PRIVATE_DATA = 4;
 
   /**
-   * The feature id for the '<em><b>Refertoservice</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Service</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int USAGE__REFERTOSERVICE = 5;
+  int USAGE__REF_SERVICE = 5;
 
   /**
-   * The feature id for the '<em><b>Referto Enforcement</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Enforcement</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int USAGE__REFERTO_ENFORCEMENT = 6;
+  int USAGE__REF_ENFORCEMENT = 6;
 
   /**
-   * The feature id for the '<em><b>Modalitykind</b></em>' attribute.
+   * The feature id for the '<em><b>Modality</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int USAGE__MODALITYKIND = 7;
+  int USAGE__MODALITY = 7;
 
   /**
    * The number of structural features of the '<em>Usage</em>' class.
@@ -924,49 +924,49 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int INFORMATIVE__CONDITION = 2;
 
   /**
-   * The feature id for the '<em><b>Partof</b></em>' reference.
+   * The feature id for the '<em><b>Part Informative</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INFORMATIVE__PARTOF = 3;
+  int INFORMATIVE__PART_INFORMATIVE = 3;
 
   /**
-   * The feature id for the '<em><b>Refprivatedata</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INFORMATIVE__REFPRIVATEDATA = 4;
+  int INFORMATIVE__REF_PRIVATE_DATA = 4;
 
   /**
-   * The feature id for the '<em><b>Refertoservice</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Service</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INFORMATIVE__REFERTOSERVICE = 5;
+  int INFORMATIVE__REF_SERVICE = 5;
 
   /**
-   * The feature id for the '<em><b>Referto Enforcement</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Enforcement</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INFORMATIVE__REFERTO_ENFORCEMENT = 6;
+  int INFORMATIVE__REF_ENFORCEMENT = 6;
 
   /**
-   * The feature id for the '<em><b>Modalitykind</b></em>' attribute.
+   * The feature id for the '<em><b>Modality</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INFORMATIVE__MODALITYKIND = 7;
+  int INFORMATIVE__MODALITY = 7;
 
   /**
    * The number of structural features of the '<em>Informative</em>' class.
@@ -978,172 +978,172 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int INFORMATIVE_FEATURE_COUNT = 8;
 
   /**
-   * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.PartofImpl <em>Partof</em>}' class.
+   * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RecipientPartImpl <em>Recipient Part</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.PartofImpl
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getPartof()
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RecipientPartImpl
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRecipientPart()
    * @generated
    */
-  int PARTOF = 12;
+  int RECIPIENT_PART = 12;
 
   /**
-   * The feature id for the '<em><b>Partof</b></em>' reference.
+   * The feature id for the '<em><b>Recipient Part</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARTOF__PARTOF = 0;
+  int RECIPIENT_PART__RECIPIENT_PART = 0;
 
   /**
-   * The number of structural features of the '<em>Partof</em>' class.
+   * The number of structural features of the '<em>Recipient Part</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARTOF_FEATURE_COUNT = 1;
+  int RECIPIENT_PART_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToRecipientImpl <em>Refer To Recipient</em>}' class.
+   * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientImpl <em>Ref Recipient</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToRecipientImpl
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getReferToRecipient()
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientImpl
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefRecipient()
    * @generated
    */
-  int REFER_TO_RECIPIENT = 13;
+  int REF_RECIPIENT = 13;
 
   /**
-   * The feature id for the '<em><b>Refertore</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REFER_TO_RECIPIENT__REFERTORE = 0;
-
-  /**
-   * The number of structural features of the '<em>Refer To Recipient</em>' class.
+   * The feature id for the '<em><b>Ref Recipient</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REFER_TO_RECIPIENT_FEATURE_COUNT = 1;
+  int REF_RECIPIENT__REF_RECIPIENT = 0;
 
   /**
-   * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToRecipientSourceImpl <em>Refer To Recipient Source</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToRecipientSourceImpl
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getReferToRecipientSource()
-   * @generated
-   */
-  int REFER_TO_RECIPIENT_SOURCE = 14;
-
-  /**
-   * The feature id for the '<em><b>Refertore</b></em>' reference.
+   * The number of structural features of the '<em>Ref Recipient</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REFER_TO_RECIPIENT_SOURCE__REFERTORE = 0;
+  int REF_RECIPIENT_FEATURE_COUNT = 1;
 
   /**
-   * The number of structural features of the '<em>Refer To Recipient Source</em>' class.
+   * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientSourceImpl <em>Ref Recipient Source</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientSourceImpl
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefRecipientSource()
+   * @generated
+   */
+  int REF_RECIPIENT_SOURCE = 14;
+
+  /**
+   * The feature id for the '<em><b>Ref Recipient Source</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REFER_TO_RECIPIENT_SOURCE_FEATURE_COUNT = 1;
+  int REF_RECIPIENT_SOURCE__REF_RECIPIENT_SOURCE = 0;
 
   /**
-   * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToRecipientTargetImpl <em>Refer To Recipient Target</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToRecipientTargetImpl
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getReferToRecipientTarget()
-   * @generated
-   */
-  int REFER_TO_RECIPIENT_TARGET = 15;
-
-  /**
-   * The feature id for the '<em><b>Refertore</b></em>' reference.
+   * The number of structural features of the '<em>Ref Recipient Source</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REFER_TO_RECIPIENT_TARGET__REFERTORE = 0;
+  int REF_RECIPIENT_SOURCE_FEATURE_COUNT = 1;
 
   /**
-   * The number of structural features of the '<em>Refer To Recipient Target</em>' class.
+   * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientTargetImpl <em>Ref Recipient Target</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientTargetImpl
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefRecipientTarget()
+   * @generated
+   */
+  int REF_RECIPIENT_TARGET = 15;
+
+  /**
+   * The feature id for the '<em><b>Ref Recipient Target</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REFER_TO_RECIPIENT_TARGET_FEATURE_COUNT = 1;
+  int REF_RECIPIENT_TARGET__REF_RECIPIENT_TARGET = 0;
 
   /**
-   * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToServiceImpl <em>Refer To Service</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToServiceImpl
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getReferToService()
-   * @generated
-   */
-  int REFER_TO_SERVICE = 16;
-
-  /**
-   * The feature id for the '<em><b>Refertose</b></em>' reference.
+   * The number of structural features of the '<em>Ref Recipient Target</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REFER_TO_SERVICE__REFERTOSE = 0;
+  int REF_RECIPIENT_TARGET_FEATURE_COUNT = 1;
 
   /**
-   * The number of structural features of the '<em>Refer To Service</em>' class.
+   * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefServiceImpl <em>Ref Service</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RefServiceImpl
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefService()
+   * @generated
+   */
+  int REF_SERVICE = 16;
+
+  /**
+   * The feature id for the '<em><b>Ref Service</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REFER_TO_SERVICE_FEATURE_COUNT = 1;
+  int REF_SERVICE__REF_SERVICE = 0;
 
   /**
-   * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServicePartofImpl <em>Service Partof</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.ServicePartofImpl
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getServicePartof()
-   * @generated
-   */
-  int SERVICE_PARTOF = 17;
-
-  /**
-   * The feature id for the '<em><b>Refertoservice</b></em>' reference.
+   * The number of structural features of the '<em>Ref Service</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SERVICE_PARTOF__REFERTOSERVICE = 0;
+  int REF_SERVICE_FEATURE_COUNT = 1;
 
   /**
-   * The number of structural features of the '<em>Service Partof</em>' class.
+   * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServicePartImpl <em>Service Part</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.ServicePartImpl
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getServicePart()
+   * @generated
+   */
+  int SERVICE_PART = 17;
+
+  /**
+   * The feature id for the '<em><b>Service Part</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SERVICE_PARTOF_FEATURE_COUNT = 1;
+  int SERVICE_PART__SERVICE_PART = 0;
+
+  /**
+   * The number of structural features of the '<em>Service Part</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SERVICE_PART_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefPrivateDataImpl <em>Ref Private Data</em>}' class.
@@ -1156,13 +1156,13 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int REF_PRIVATE_DATA = 18;
 
   /**
-   * The feature id for the '<em><b>Refpr</b></em>' reference.
+   * The feature id for the '<em><b>Ref Private Data</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REF_PRIVATE_DATA__REFPR = 0;
+  int REF_PRIVATE_DATA__REF_PRIVATE_DATA = 0;
 
   /**
    * The number of structural features of the '<em>Ref Private Data</em>' class.
@@ -1174,32 +1174,32 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int REF_PRIVATE_DATA_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefertoEnforcementImpl <em>Referto Enforcement</em>}' class.
+   * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefEnforcementImpl <em>Ref Enforcement</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RefertoEnforcementImpl
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefertoEnforcement()
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RefEnforcementImpl
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefEnforcement()
    * @generated
    */
-  int REFERTO_ENFORCEMENT = 19;
+  int REF_ENFORCEMENT = 19;
 
   /**
-   * The feature id for the '<em><b>Refst</b></em>' reference.
+   * The feature id for the '<em><b>Ref Enforcement</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REFERTO_ENFORCEMENT__REFST = 0;
+  int REF_ENFORCEMENT__REF_ENFORCEMENT = 0;
 
   /**
-   * The number of structural features of the '<em>Referto Enforcement</em>' class.
+   * The number of structural features of the '<em>Ref Enforcement</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REFERTO_ENFORCEMENT_FEATURE_COUNT = 1;
+  int REF_ENFORCEMENT_FEATURE_COUNT = 1;
 
 
   /**
@@ -1387,26 +1387,26 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getEnforcement_EnforcementName();
 
   /**
-   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getEnforcementDescription <em>Enforcement Description</em>}'.
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getDescription <em>Description</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Enforcement Description</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getEnforcementDescription()
+   * @return the meta object for the attribute '<em>Description</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getDescription()
    * @see #getEnforcement()
    * @generated
    */
-  EAttribute getEnforcement_EnforcementDescription();
+  EAttribute getEnforcement_Description();
 
   /**
-   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getEnforcementKind <em>Enforcement Kind</em>}'.
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Enforcement Kind</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getEnforcementKind()
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getType()
    * @see #getEnforcement()
    * @generated
    */
-  EAttribute getEnforcement_EnforcementKind();
+  EAttribute getEnforcement_Type();
 
   /**
    * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.Service <em>Service</em>}'.
@@ -1430,15 +1430,15 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getService_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Service#getServicename <em>Servicename</em>}'.
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Service#getServiceName <em>Service Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Servicename</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Service#getServicename()
+   * @return the meta object for the attribute '<em>Service Name</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Service#getServiceName()
    * @see #getService()
    * @generated
    */
-  EAttribute getService_Servicename();
+  EAttribute getService_ServiceName();
 
   /**
    * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Service#getDescription <em>Description</em>}'.
@@ -1452,26 +1452,26 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getService_Description();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Service#getRefprivatedata <em>Refprivatedata</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Service#getRefPrivateData <em>Ref Private Data</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Refprivatedata</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Service#getRefprivatedata()
+   * @return the meta object for the containment reference list '<em>Ref Private Data</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Service#getRefPrivateData()
    * @see #getService()
    * @generated
    */
-  EReference getService_Refprivatedata();
+  EReference getService_RefPrivateData();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Service#getServicepartof <em>Servicepartof</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Service#getServicePart <em>Service Part</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Servicepartof</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Service#getServicepartof()
+   * @return the meta object for the containment reference list '<em>Service Part</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Service#getServicePart()
    * @see #getService()
    * @generated
    */
-  EReference getService_Servicepartof();
+  EReference getService_ServicePart();
 
   /**
    * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient <em>Recipient</em>}'.
@@ -1495,15 +1495,15 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getRecipient_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientname <em>Recipientname</em>}'.
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientName <em>Recipient Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Recipientname</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientname()
+   * @return the meta object for the attribute '<em>Recipient Name</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientName()
    * @see #getRecipient()
    * @generated
    */
-  EAttribute getRecipient_Recipientname();
+  EAttribute getRecipient_RecipientName();
 
   /**
    * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getDescription <em>Description</em>}'.
@@ -1517,37 +1517,37 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getRecipient_Description();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getPartof <em>Partof</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientPart <em>Recipient Part</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Partof</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getPartof()
+   * @return the meta object for the containment reference list '<em>Recipient Part</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientPart()
    * @see #getRecipient()
    * @generated
    */
-  EReference getRecipient_Partof();
+  EReference getRecipient_RecipientPart();
 
   /**
-   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientScopeKind <em>Recipient Scope Kind</em>}'.
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getScope <em>Scope</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Recipient Scope Kind</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientScopeKind()
+   * @return the meta object for the attribute '<em>Scope</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getScope()
    * @see #getRecipient()
    * @generated
    */
-  EAttribute getRecipient_RecipientScopeKind();
+  EAttribute getRecipient_Scope();
 
   /**
-   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientTypeKind <em>Recipient Type Kind</em>}'.
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Recipient Type Kind</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientTypeKind()
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getType()
    * @see #getRecipient()
    * @generated
    */
-  EAttribute getRecipient_RecipientTypeKind();
+  EAttribute getRecipient_Type();
 
   /**
    * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData <em>Private Data</em>}'.
@@ -1571,26 +1571,26 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getPrivateData_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getPrivatedata <em>Privatedata</em>}'.
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getDescription <em>Description</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Privatedata</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getPrivatedata()
+   * @return the meta object for the attribute '<em>Description</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getDescription()
    * @see #getPrivateData()
    * @generated
    */
-  EAttribute getPrivateData_Privatedata();
+  EAttribute getPrivateData_Description();
 
   /**
-   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getPrivateDataKind <em>Private Data Kind</em>}'.
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Private Data Kind</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getPrivateDataKind()
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getType()
    * @see #getPrivateData()
    * @generated
    */
-  EAttribute getPrivateData_PrivateDataKind();
+  EAttribute getPrivateData_Type();
 
   /**
    * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getAttribute <em>Attribute</em>}'.
@@ -1625,15 +1625,15 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getAttribute_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Attribute#getAttributeName <em>Attribute Name</em>}'.
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Attribute#getDescription <em>Description</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Attribute Name</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Attribute#getAttributeName()
+   * @return the meta object for the attribute '<em>Description</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Attribute#getDescription()
    * @see #getAttribute()
    * @generated
    */
-  EAttribute getAttribute_AttributeName();
+  EAttribute getAttribute_Description();
 
   /**
    * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.Collection <em>Collection</em>}'.
@@ -1679,59 +1679,59 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getCollection_Condition();
 
   /**
-   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Collection#getPartof <em>Partof</em>}'.
+   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Collection#getPartCollection <em>Part Collection</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Partof</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Collection#getPartof()
+   * @return the meta object for the reference '<em>Part Collection</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Collection#getPartCollection()
    * @see #getCollection()
    * @generated
    */
-  EReference getCollection_Partof();
+  EReference getCollection_PartCollection();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefprivatedata <em>Refprivatedata</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefPrivateData <em>Ref Private Data</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Refprivatedata</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefprivatedata()
+   * @return the meta object for the containment reference list '<em>Ref Private Data</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefPrivateData()
    * @see #getCollection()
    * @generated
    */
-  EReference getCollection_Refprivatedata();
+  EReference getCollection_RefPrivateData();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefertoservice <em>Refertoservice</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefService <em>Ref Service</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Refertoservice</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefertoservice()
+   * @return the meta object for the containment reference list '<em>Ref Service</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefService()
    * @see #getCollection()
    * @generated
    */
-  EReference getCollection_Refertoservice();
+  EReference getCollection_RefService();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefertoEnforcement <em>Referto Enforcement</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefEnforcement <em>Ref Enforcement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Referto Enforcement</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefertoEnforcement()
+   * @return the meta object for the containment reference list '<em>Ref Enforcement</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefEnforcement()
    * @see #getCollection()
    * @generated
    */
-  EReference getCollection_RefertoEnforcement();
+  EReference getCollection_RefEnforcement();
 
   /**
-   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Collection#getModalitykind <em>Modalitykind</em>}'.
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Collection#getModality <em>Modality</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Modalitykind</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Collection#getModalitykind()
+   * @return the meta object for the attribute '<em>Modality</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Collection#getModality()
    * @see #getCollection()
    * @generated
    */
-  EAttribute getCollection_Modalitykind();
+  EAttribute getCollection_Modality();
 
   /**
    * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure <em>Disclosure</em>}'.
@@ -1777,92 +1777,92 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getDisclosure_Condition();
 
   /**
-   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getPartof <em>Partof</em>}'.
+   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getPartDisclosure <em>Part Disclosure</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Partof</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getPartof()
+   * @return the meta object for the reference '<em>Part Disclosure</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getPartDisclosure()
    * @see #getDisclosure()
    * @generated
    */
-  EReference getDisclosure_Partof();
+  EReference getDisclosure_PartDisclosure();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getReferToRecipient <em>Refer To Recipient</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipient <em>Ref Recipient</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Refer To Recipient</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getReferToRecipient()
+   * @return the meta object for the containment reference list '<em>Ref Recipient</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipient()
    * @see #getDisclosure()
    * @generated
    */
-  EReference getDisclosure_ReferToRecipient();
+  EReference getDisclosure_RefRecipient();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getReferToRecipientsource <em>Refer To Recipientsource</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipientSource <em>Ref Recipient Source</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Refer To Recipientsource</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getReferToRecipientsource()
+   * @return the meta object for the containment reference list '<em>Ref Recipient Source</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipientSource()
    * @see #getDisclosure()
    * @generated
    */
-  EReference getDisclosure_ReferToRecipientsource();
+  EReference getDisclosure_RefRecipientSource();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getReferToRecipienttarget <em>Refer To Recipienttarget</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipientTarget <em>Ref Recipient Target</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Refer To Recipienttarget</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getReferToRecipienttarget()
+   * @return the meta object for the containment reference list '<em>Ref Recipient Target</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipientTarget()
    * @see #getDisclosure()
    * @generated
    */
-  EReference getDisclosure_ReferToRecipienttarget();
+  EReference getDisclosure_RefRecipientTarget();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefprivatedata <em>Refprivatedata</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefPrivateData <em>Ref Private Data</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Refprivatedata</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefprivatedata()
+   * @return the meta object for the containment reference list '<em>Ref Private Data</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefPrivateData()
    * @see #getDisclosure()
    * @generated
    */
-  EReference getDisclosure_Refprivatedata();
+  EReference getDisclosure_RefPrivateData();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefertoservice <em>Refertoservice</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefService <em>Ref Service</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Refertoservice</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefertoservice()
+   * @return the meta object for the containment reference list '<em>Ref Service</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefService()
    * @see #getDisclosure()
    * @generated
    */
-  EReference getDisclosure_Refertoservice();
+  EReference getDisclosure_RefService();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefertoEnforcement <em>Referto Enforcement</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefEnforcement <em>Ref Enforcement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Referto Enforcement</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefertoEnforcement()
+   * @return the meta object for the containment reference list '<em>Ref Enforcement</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefEnforcement()
    * @see #getDisclosure()
    * @generated
    */
-  EReference getDisclosure_RefertoEnforcement();
+  EReference getDisclosure_RefEnforcement();
 
   /**
-   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getModalitykind <em>Modalitykind</em>}'.
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getModality <em>Modality</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Modalitykind</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getModalitykind()
+   * @return the meta object for the attribute '<em>Modality</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getModality()
    * @see #getDisclosure()
    * @generated
    */
-  EAttribute getDisclosure_Modalitykind();
+  EAttribute getDisclosure_Modality();
 
   /**
    * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention <em>Retention</em>}'.
@@ -1908,15 +1908,15 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getRetention_Condition();
 
   /**
-   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getPartof <em>Partof</em>}'.
+   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getPartRetention <em>Part Retention</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Partof</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Retention#getPartof()
+   * @return the meta object for the reference '<em>Part Retention</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Retention#getPartRetention()
    * @see #getRetention()
    * @generated
    */
-  EReference getRetention_Partof();
+  EReference getRetention_PartRetention();
 
   /**
    * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getPeriod <em>Period</em>}'.
@@ -1930,48 +1930,48 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getRetention_Period();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefprivatedata <em>Refprivatedata</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefPrivateData <em>Ref Private Data</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Refprivatedata</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefprivatedata()
+   * @return the meta object for the containment reference list '<em>Ref Private Data</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefPrivateData()
    * @see #getRetention()
    * @generated
    */
-  EReference getRetention_Refprivatedata();
+  EReference getRetention_RefPrivateData();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefertoservice <em>Refertoservice</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefService <em>Ref Service</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Refertoservice</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefertoservice()
+   * @return the meta object for the containment reference list '<em>Ref Service</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefService()
    * @see #getRetention()
    * @generated
    */
-  EReference getRetention_Refertoservice();
+  EReference getRetention_RefService();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefertoEnforcement <em>Referto Enforcement</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefEnforcement <em>Ref Enforcement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Referto Enforcement</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefertoEnforcement()
+   * @return the meta object for the containment reference list '<em>Ref Enforcement</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefEnforcement()
    * @see #getRetention()
    * @generated
    */
-  EReference getRetention_RefertoEnforcement();
+  EReference getRetention_RefEnforcement();
 
   /**
-   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getModalitykind <em>Modalitykind</em>}'.
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getModality <em>Modality</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Modalitykind</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Retention#getModalitykind()
+   * @return the meta object for the attribute '<em>Modality</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Retention#getModality()
    * @see #getRetention()
    * @generated
    */
-  EAttribute getRetention_Modalitykind();
+  EAttribute getRetention_Modality();
 
   /**
    * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.Usage <em>Usage</em>}'.
@@ -2017,59 +2017,59 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getUsage_Condition();
 
   /**
-   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Usage#getPartof <em>Partof</em>}'.
+   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Usage#getPartUsage <em>Part Usage</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Partof</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Usage#getPartof()
+   * @return the meta object for the reference '<em>Part Usage</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Usage#getPartUsage()
    * @see #getUsage()
    * @generated
    */
-  EReference getUsage_Partof();
+  EReference getUsage_PartUsage();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefprivatedata <em>Refprivatedata</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefPrivateData <em>Ref Private Data</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Refprivatedata</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefprivatedata()
+   * @return the meta object for the containment reference list '<em>Ref Private Data</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefPrivateData()
    * @see #getUsage()
    * @generated
    */
-  EReference getUsage_Refprivatedata();
+  EReference getUsage_RefPrivateData();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefertoservice <em>Refertoservice</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefService <em>Ref Service</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Refertoservice</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefertoservice()
+   * @return the meta object for the containment reference list '<em>Ref Service</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefService()
    * @see #getUsage()
    * @generated
    */
-  EReference getUsage_Refertoservice();
+  EReference getUsage_RefService();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefertoEnforcement <em>Referto Enforcement</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefEnforcement <em>Ref Enforcement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Referto Enforcement</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefertoEnforcement()
+   * @return the meta object for the containment reference list '<em>Ref Enforcement</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefEnforcement()
    * @see #getUsage()
    * @generated
    */
-  EReference getUsage_RefertoEnforcement();
+  EReference getUsage_RefEnforcement();
 
   /**
-   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Usage#getModalitykind <em>Modalitykind</em>}'.
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Usage#getModality <em>Modality</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Modalitykind</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Usage#getModalitykind()
+   * @return the meta object for the attribute '<em>Modality</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Usage#getModality()
    * @see #getUsage()
    * @generated
    */
-  EAttribute getUsage_Modalitykind();
+  EAttribute getUsage_Modality();
 
   /**
    * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative <em>Informative</em>}'.
@@ -2115,185 +2115,185 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getInformative_Condition();
 
   /**
-   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getPartof <em>Partof</em>}'.
+   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getPartInformative <em>Part Informative</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Partof</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Informative#getPartof()
+   * @return the meta object for the reference '<em>Part Informative</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Informative#getPartInformative()
    * @see #getInformative()
    * @generated
    */
-  EReference getInformative_Partof();
+  EReference getInformative_PartInformative();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefprivatedata <em>Refprivatedata</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefPrivateData <em>Ref Private Data</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Refprivatedata</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefprivatedata()
+   * @return the meta object for the containment reference list '<em>Ref Private Data</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefPrivateData()
    * @see #getInformative()
    * @generated
    */
-  EReference getInformative_Refprivatedata();
+  EReference getInformative_RefPrivateData();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefertoservice <em>Refertoservice</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefService <em>Ref Service</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Refertoservice</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefertoservice()
+   * @return the meta object for the containment reference list '<em>Ref Service</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefService()
    * @see #getInformative()
    * @generated
    */
-  EReference getInformative_Refertoservice();
+  EReference getInformative_RefService();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefertoEnforcement <em>Referto Enforcement</em>}'.
+   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefEnforcement <em>Ref Enforcement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Referto Enforcement</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefertoEnforcement()
+   * @return the meta object for the containment reference list '<em>Ref Enforcement</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefEnforcement()
    * @see #getInformative()
    * @generated
    */
-  EReference getInformative_RefertoEnforcement();
+  EReference getInformative_RefEnforcement();
 
   /**
-   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getModalitykind <em>Modalitykind</em>}'.
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getModality <em>Modality</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Modalitykind</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Informative#getModalitykind()
+   * @return the meta object for the attribute '<em>Modality</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Informative#getModality()
    * @see #getInformative()
    * @generated
    */
-  EAttribute getInformative_Modalitykind();
+  EAttribute getInformative_Modality();
 
   /**
-   * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.Partof <em>Partof</em>}'.
+   * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RecipientPart <em>Recipient Part</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Partof</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Partof
+   * @return the meta object for class '<em>Recipient Part</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RecipientPart
    * @generated
    */
-  EClass getPartof();
+  EClass getRecipientPart();
 
   /**
-   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Partof#getPartof <em>Partof</em>}'.
+   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.RecipientPart#getRecipientPart <em>Recipient Part</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Partof</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Partof#getPartof()
-   * @see #getPartof()
+   * @return the meta object for the reference '<em>Recipient Part</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RecipientPart#getRecipientPart()
+   * @see #getRecipientPart()
    * @generated
    */
-  EReference getPartof_Partof();
+  EReference getRecipientPart_RecipientPart();
 
   /**
-   * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipient <em>Refer To Recipient</em>}'.
+   * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipient <em>Ref Recipient</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Refer To Recipient</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipient
+   * @return the meta object for class '<em>Ref Recipient</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefRecipient
    * @generated
    */
-  EClass getReferToRecipient();
+  EClass getRefRecipient();
 
   /**
-   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipient#getRefertore <em>Refertore</em>}'.
+   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipient#getRefRecipient <em>Ref Recipient</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Refertore</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipient#getRefertore()
-   * @see #getReferToRecipient()
+   * @return the meta object for the reference '<em>Ref Recipient</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefRecipient#getRefRecipient()
+   * @see #getRefRecipient()
    * @generated
    */
-  EReference getReferToRecipient_Refertore();
+  EReference getRefRecipient_RefRecipient();
 
   /**
-   * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipientSource <em>Refer To Recipient Source</em>}'.
+   * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientSource <em>Ref Recipient Source</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Refer To Recipient Source</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipientSource
+   * @return the meta object for class '<em>Ref Recipient Source</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientSource
    * @generated
    */
-  EClass getReferToRecipientSource();
+  EClass getRefRecipientSource();
 
   /**
-   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipientSource#getRefertore <em>Refertore</em>}'.
+   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientSource#getRefRecipientSource <em>Ref Recipient Source</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Refertore</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipientSource#getRefertore()
-   * @see #getReferToRecipientSource()
+   * @return the meta object for the reference '<em>Ref Recipient Source</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientSource#getRefRecipientSource()
+   * @see #getRefRecipientSource()
    * @generated
    */
-  EReference getReferToRecipientSource_Refertore();
+  EReference getRefRecipientSource_RefRecipientSource();
 
   /**
-   * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipientTarget <em>Refer To Recipient Target</em>}'.
+   * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientTarget <em>Ref Recipient Target</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Refer To Recipient Target</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipientTarget
+   * @return the meta object for class '<em>Ref Recipient Target</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientTarget
    * @generated
    */
-  EClass getReferToRecipientTarget();
+  EClass getRefRecipientTarget();
 
   /**
-   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipientTarget#getRefertore <em>Refertore</em>}'.
+   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientTarget#getRefRecipientTarget <em>Ref Recipient Target</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Refertore</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipientTarget#getRefertore()
-   * @see #getReferToRecipientTarget()
+   * @return the meta object for the reference '<em>Ref Recipient Target</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientTarget#getRefRecipientTarget()
+   * @see #getRefRecipientTarget()
    * @generated
    */
-  EReference getReferToRecipientTarget_Refertore();
+  EReference getRefRecipientTarget_RefRecipientTarget();
 
   /**
-   * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.ReferToService <em>Refer To Service</em>}'.
+   * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefService <em>Ref Service</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Refer To Service</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.ReferToService
+   * @return the meta object for class '<em>Ref Service</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefService
    * @generated
    */
-  EClass getReferToService();
+  EClass getRefService();
 
   /**
-   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.ReferToService#getRefertose <em>Refertose</em>}'.
+   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefService#getRefService <em>Ref Service</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Refertose</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.ReferToService#getRefertose()
-   * @see #getReferToService()
+   * @return the meta object for the reference '<em>Ref Service</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefService#getRefService()
+   * @see #getRefService()
    * @generated
    */
-  EReference getReferToService_Refertose();
+  EReference getRefService_RefService();
 
   /**
-   * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.ServicePartof <em>Service Partof</em>}'.
+   * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.ServicePart <em>Service Part</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Service Partof</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.ServicePartof
+   * @return the meta object for class '<em>Service Part</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.ServicePart
    * @generated
    */
-  EClass getServicePartof();
+  EClass getServicePart();
 
   /**
-   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.ServicePartof#getRefertoservice <em>Refertoservice</em>}'.
+   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.ServicePart#getServicePart <em>Service Part</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Refertoservice</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.ServicePartof#getRefertoservice()
-   * @see #getServicePartof()
+   * @return the meta object for the reference '<em>Service Part</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.ServicePart#getServicePart()
+   * @see #getServicePart()
    * @generated
    */
-  EReference getServicePartof_Refertoservice();
+  EReference getServicePart_ServicePart();
 
   /**
    * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData <em>Ref Private Data</em>}'.
@@ -2306,36 +2306,36 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EClass getRefPrivateData();
 
   /**
-   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData#getRefpr <em>Refpr</em>}'.
+   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData#getRefPrivateData <em>Ref Private Data</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Refpr</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData#getRefpr()
+   * @return the meta object for the reference '<em>Ref Private Data</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData#getRefPrivateData()
    * @see #getRefPrivateData()
    * @generated
    */
-  EReference getRefPrivateData_Refpr();
+  EReference getRefPrivateData_RefPrivateData();
 
   /**
-   * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefertoEnforcement <em>Referto Enforcement</em>}'.
+   * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement <em>Ref Enforcement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Referto Enforcement</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefertoEnforcement
+   * @return the meta object for class '<em>Ref Enforcement</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement
    * @generated
    */
-  EClass getRefertoEnforcement();
+  EClass getRefEnforcement();
 
   /**
-   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefertoEnforcement#getRefst <em>Refst</em>}'.
+   * Returns the meta object for the reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement#getRefEnforcement <em>Ref Enforcement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Refst</em>'.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefertoEnforcement#getRefst()
-   * @see #getRefertoEnforcement()
+   * @return the meta object for the reference '<em>Ref Enforcement</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement#getRefEnforcement()
+   * @see #getRefEnforcement()
    * @generated
    */
-  EReference getRefertoEnforcement_Refst();
+  EReference getRefEnforcement_RefEnforcement();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -2503,20 +2503,20 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute ENFORCEMENT__ENFORCEMENT_NAME = eINSTANCE.getEnforcement_EnforcementName();
 
     /**
-     * The meta object literal for the '<em><b>Enforcement Description</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ENFORCEMENT__ENFORCEMENT_DESCRIPTION = eINSTANCE.getEnforcement_EnforcementDescription();
+    EAttribute ENFORCEMENT__DESCRIPTION = eINSTANCE.getEnforcement_Description();
 
     /**
-     * The meta object literal for the '<em><b>Enforcement Kind</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ENFORCEMENT__ENFORCEMENT_KIND = eINSTANCE.getEnforcement_EnforcementKind();
+    EAttribute ENFORCEMENT__TYPE = eINSTANCE.getEnforcement_Type();
 
     /**
      * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServiceImpl <em>Service</em>}' class.
@@ -2537,12 +2537,12 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute SERVICE__NAME = eINSTANCE.getService_Name();
 
     /**
-     * The meta object literal for the '<em><b>Servicename</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Service Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SERVICE__SERVICENAME = eINSTANCE.getService_Servicename();
+    EAttribute SERVICE__SERVICE_NAME = eINSTANCE.getService_ServiceName();
 
     /**
      * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
@@ -2553,20 +2553,20 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute SERVICE__DESCRIPTION = eINSTANCE.getService_Description();
 
     /**
-     * The meta object literal for the '<em><b>Refprivatedata</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SERVICE__REFPRIVATEDATA = eINSTANCE.getService_Refprivatedata();
+    EReference SERVICE__REF_PRIVATE_DATA = eINSTANCE.getService_RefPrivateData();
 
     /**
-     * The meta object literal for the '<em><b>Servicepartof</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Service Part</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SERVICE__SERVICEPARTOF = eINSTANCE.getService_Servicepartof();
+    EReference SERVICE__SERVICE_PART = eINSTANCE.getService_ServicePart();
 
     /**
      * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RecipientImpl <em>Recipient</em>}' class.
@@ -2587,12 +2587,12 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute RECIPIENT__NAME = eINSTANCE.getRecipient_Name();
 
     /**
-     * The meta object literal for the '<em><b>Recipientname</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Recipient Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute RECIPIENT__RECIPIENTNAME = eINSTANCE.getRecipient_Recipientname();
+    EAttribute RECIPIENT__RECIPIENT_NAME = eINSTANCE.getRecipient_RecipientName();
 
     /**
      * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
@@ -2603,28 +2603,28 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute RECIPIENT__DESCRIPTION = eINSTANCE.getRecipient_Description();
 
     /**
-     * The meta object literal for the '<em><b>Partof</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Recipient Part</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference RECIPIENT__PARTOF = eINSTANCE.getRecipient_Partof();
+    EReference RECIPIENT__RECIPIENT_PART = eINSTANCE.getRecipient_RecipientPart();
 
     /**
-     * The meta object literal for the '<em><b>Recipient Scope Kind</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Scope</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute RECIPIENT__RECIPIENT_SCOPE_KIND = eINSTANCE.getRecipient_RecipientScopeKind();
+    EAttribute RECIPIENT__SCOPE = eINSTANCE.getRecipient_Scope();
 
     /**
-     * The meta object literal for the '<em><b>Recipient Type Kind</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute RECIPIENT__RECIPIENT_TYPE_KIND = eINSTANCE.getRecipient_RecipientTypeKind();
+    EAttribute RECIPIENT__TYPE = eINSTANCE.getRecipient_Type();
 
     /**
      * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.PrivateDataImpl <em>Private Data</em>}' class.
@@ -2645,20 +2645,20 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute PRIVATE_DATA__NAME = eINSTANCE.getPrivateData_Name();
 
     /**
-     * The meta object literal for the '<em><b>Privatedata</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PRIVATE_DATA__PRIVATEDATA = eINSTANCE.getPrivateData_Privatedata();
+    EAttribute PRIVATE_DATA__DESCRIPTION = eINSTANCE.getPrivateData_Description();
 
     /**
-     * The meta object literal for the '<em><b>Private Data Kind</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PRIVATE_DATA__PRIVATE_DATA_KIND = eINSTANCE.getPrivateData_PrivateDataKind();
+    EAttribute PRIVATE_DATA__TYPE = eINSTANCE.getPrivateData_Type();
 
     /**
      * The meta object literal for the '<em><b>Attribute</b></em>' containment reference list feature.
@@ -2687,12 +2687,12 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute ATTRIBUTE__NAME = eINSTANCE.getAttribute_Name();
 
     /**
-     * The meta object literal for the '<em><b>Attribute Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ATTRIBUTE__ATTRIBUTE_NAME = eINSTANCE.getAttribute_AttributeName();
+    EAttribute ATTRIBUTE__DESCRIPTION = eINSTANCE.getAttribute_Description();
 
     /**
      * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl <em>Collection</em>}' class.
@@ -2729,44 +2729,44 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute COLLECTION__CONDITION = eINSTANCE.getCollection_Condition();
 
     /**
-     * The meta object literal for the '<em><b>Partof</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Part Collection</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COLLECTION__PARTOF = eINSTANCE.getCollection_Partof();
+    EReference COLLECTION__PART_COLLECTION = eINSTANCE.getCollection_PartCollection();
 
     /**
-     * The meta object literal for the '<em><b>Refprivatedata</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COLLECTION__REFPRIVATEDATA = eINSTANCE.getCollection_Refprivatedata();
+    EReference COLLECTION__REF_PRIVATE_DATA = eINSTANCE.getCollection_RefPrivateData();
 
     /**
-     * The meta object literal for the '<em><b>Refertoservice</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Service</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COLLECTION__REFERTOSERVICE = eINSTANCE.getCollection_Refertoservice();
+    EReference COLLECTION__REF_SERVICE = eINSTANCE.getCollection_RefService();
 
     /**
-     * The meta object literal for the '<em><b>Referto Enforcement</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Enforcement</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COLLECTION__REFERTO_ENFORCEMENT = eINSTANCE.getCollection_RefertoEnforcement();
+    EReference COLLECTION__REF_ENFORCEMENT = eINSTANCE.getCollection_RefEnforcement();
 
     /**
-     * The meta object literal for the '<em><b>Modalitykind</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Modality</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute COLLECTION__MODALITYKIND = eINSTANCE.getCollection_Modalitykind();
+    EAttribute COLLECTION__MODALITY = eINSTANCE.getCollection_Modality();
 
     /**
      * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl <em>Disclosure</em>}' class.
@@ -2803,68 +2803,68 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute DISCLOSURE__CONDITION = eINSTANCE.getDisclosure_Condition();
 
     /**
-     * The meta object literal for the '<em><b>Partof</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Part Disclosure</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DISCLOSURE__PARTOF = eINSTANCE.getDisclosure_Partof();
+    EReference DISCLOSURE__PART_DISCLOSURE = eINSTANCE.getDisclosure_PartDisclosure();
 
     /**
-     * The meta object literal for the '<em><b>Refer To Recipient</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Recipient</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DISCLOSURE__REFER_TO_RECIPIENT = eINSTANCE.getDisclosure_ReferToRecipient();
+    EReference DISCLOSURE__REF_RECIPIENT = eINSTANCE.getDisclosure_RefRecipient();
 
     /**
-     * The meta object literal for the '<em><b>Refer To Recipientsource</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Recipient Source</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DISCLOSURE__REFER_TO_RECIPIENTSOURCE = eINSTANCE.getDisclosure_ReferToRecipientsource();
+    EReference DISCLOSURE__REF_RECIPIENT_SOURCE = eINSTANCE.getDisclosure_RefRecipientSource();
 
     /**
-     * The meta object literal for the '<em><b>Refer To Recipienttarget</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Recipient Target</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DISCLOSURE__REFER_TO_RECIPIENTTARGET = eINSTANCE.getDisclosure_ReferToRecipienttarget();
+    EReference DISCLOSURE__REF_RECIPIENT_TARGET = eINSTANCE.getDisclosure_RefRecipientTarget();
 
     /**
-     * The meta object literal for the '<em><b>Refprivatedata</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DISCLOSURE__REFPRIVATEDATA = eINSTANCE.getDisclosure_Refprivatedata();
+    EReference DISCLOSURE__REF_PRIVATE_DATA = eINSTANCE.getDisclosure_RefPrivateData();
 
     /**
-     * The meta object literal for the '<em><b>Refertoservice</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Service</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DISCLOSURE__REFERTOSERVICE = eINSTANCE.getDisclosure_Refertoservice();
+    EReference DISCLOSURE__REF_SERVICE = eINSTANCE.getDisclosure_RefService();
 
     /**
-     * The meta object literal for the '<em><b>Referto Enforcement</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Enforcement</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DISCLOSURE__REFERTO_ENFORCEMENT = eINSTANCE.getDisclosure_RefertoEnforcement();
+    EReference DISCLOSURE__REF_ENFORCEMENT = eINSTANCE.getDisclosure_RefEnforcement();
 
     /**
-     * The meta object literal for the '<em><b>Modalitykind</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Modality</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DISCLOSURE__MODALITYKIND = eINSTANCE.getDisclosure_Modalitykind();
+    EAttribute DISCLOSURE__MODALITY = eINSTANCE.getDisclosure_Modality();
 
     /**
      * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RetentionImpl <em>Retention</em>}' class.
@@ -2901,12 +2901,12 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute RETENTION__CONDITION = eINSTANCE.getRetention_Condition();
 
     /**
-     * The meta object literal for the '<em><b>Partof</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Part Retention</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference RETENTION__PARTOF = eINSTANCE.getRetention_Partof();
+    EReference RETENTION__PART_RETENTION = eINSTANCE.getRetention_PartRetention();
 
     /**
      * The meta object literal for the '<em><b>Period</b></em>' attribute feature.
@@ -2917,36 +2917,36 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute RETENTION__PERIOD = eINSTANCE.getRetention_Period();
 
     /**
-     * The meta object literal for the '<em><b>Refprivatedata</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference RETENTION__REFPRIVATEDATA = eINSTANCE.getRetention_Refprivatedata();
+    EReference RETENTION__REF_PRIVATE_DATA = eINSTANCE.getRetention_RefPrivateData();
 
     /**
-     * The meta object literal for the '<em><b>Refertoservice</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Service</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference RETENTION__REFERTOSERVICE = eINSTANCE.getRetention_Refertoservice();
+    EReference RETENTION__REF_SERVICE = eINSTANCE.getRetention_RefService();
 
     /**
-     * The meta object literal for the '<em><b>Referto Enforcement</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Enforcement</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference RETENTION__REFERTO_ENFORCEMENT = eINSTANCE.getRetention_RefertoEnforcement();
+    EReference RETENTION__REF_ENFORCEMENT = eINSTANCE.getRetention_RefEnforcement();
 
     /**
-     * The meta object literal for the '<em><b>Modalitykind</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Modality</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute RETENTION__MODALITYKIND = eINSTANCE.getRetention_Modalitykind();
+    EAttribute RETENTION__MODALITY = eINSTANCE.getRetention_Modality();
 
     /**
      * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.UsageImpl <em>Usage</em>}' class.
@@ -2983,44 +2983,44 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute USAGE__CONDITION = eINSTANCE.getUsage_Condition();
 
     /**
-     * The meta object literal for the '<em><b>Partof</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Part Usage</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference USAGE__PARTOF = eINSTANCE.getUsage_Partof();
+    EReference USAGE__PART_USAGE = eINSTANCE.getUsage_PartUsage();
 
     /**
-     * The meta object literal for the '<em><b>Refprivatedata</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference USAGE__REFPRIVATEDATA = eINSTANCE.getUsage_Refprivatedata();
+    EReference USAGE__REF_PRIVATE_DATA = eINSTANCE.getUsage_RefPrivateData();
 
     /**
-     * The meta object literal for the '<em><b>Refertoservice</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Service</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference USAGE__REFERTOSERVICE = eINSTANCE.getUsage_Refertoservice();
+    EReference USAGE__REF_SERVICE = eINSTANCE.getUsage_RefService();
 
     /**
-     * The meta object literal for the '<em><b>Referto Enforcement</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Enforcement</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference USAGE__REFERTO_ENFORCEMENT = eINSTANCE.getUsage_RefertoEnforcement();
+    EReference USAGE__REF_ENFORCEMENT = eINSTANCE.getUsage_RefEnforcement();
 
     /**
-     * The meta object literal for the '<em><b>Modalitykind</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Modality</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute USAGE__MODALITYKIND = eINSTANCE.getUsage_Modalitykind();
+    EAttribute USAGE__MODALITY = eINSTANCE.getUsage_Modality();
 
     /**
      * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.InformativeImpl <em>Informative</em>}' class.
@@ -3057,152 +3057,152 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute INFORMATIVE__CONDITION = eINSTANCE.getInformative_Condition();
 
     /**
-     * The meta object literal for the '<em><b>Partof</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Part Informative</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference INFORMATIVE__PARTOF = eINSTANCE.getInformative_Partof();
+    EReference INFORMATIVE__PART_INFORMATIVE = eINSTANCE.getInformative_PartInformative();
 
     /**
-     * The meta object literal for the '<em><b>Refprivatedata</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference INFORMATIVE__REFPRIVATEDATA = eINSTANCE.getInformative_Refprivatedata();
+    EReference INFORMATIVE__REF_PRIVATE_DATA = eINSTANCE.getInformative_RefPrivateData();
 
     /**
-     * The meta object literal for the '<em><b>Refertoservice</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Service</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference INFORMATIVE__REFERTOSERVICE = eINSTANCE.getInformative_Refertoservice();
+    EReference INFORMATIVE__REF_SERVICE = eINSTANCE.getInformative_RefService();
 
     /**
-     * The meta object literal for the '<em><b>Referto Enforcement</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Enforcement</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference INFORMATIVE__REFERTO_ENFORCEMENT = eINSTANCE.getInformative_RefertoEnforcement();
+    EReference INFORMATIVE__REF_ENFORCEMENT = eINSTANCE.getInformative_RefEnforcement();
 
     /**
-     * The meta object literal for the '<em><b>Modalitykind</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Modality</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute INFORMATIVE__MODALITYKIND = eINSTANCE.getInformative_Modalitykind();
+    EAttribute INFORMATIVE__MODALITY = eINSTANCE.getInformative_Modality();
 
     /**
-     * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.PartofImpl <em>Partof</em>}' class.
+     * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RecipientPartImpl <em>Recipient Part</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.PartofImpl
-     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getPartof()
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RecipientPartImpl
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRecipientPart()
      * @generated
      */
-    EClass PARTOF = eINSTANCE.getPartof();
+    EClass RECIPIENT_PART = eINSTANCE.getRecipientPart();
 
     /**
-     * The meta object literal for the '<em><b>Partof</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Recipient Part</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PARTOF__PARTOF = eINSTANCE.getPartof_Partof();
+    EReference RECIPIENT_PART__RECIPIENT_PART = eINSTANCE.getRecipientPart_RecipientPart();
 
     /**
-     * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToRecipientImpl <em>Refer To Recipient</em>}' class.
+     * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientImpl <em>Ref Recipient</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToRecipientImpl
-     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getReferToRecipient()
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientImpl
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefRecipient()
      * @generated
      */
-    EClass REFER_TO_RECIPIENT = eINSTANCE.getReferToRecipient();
+    EClass REF_RECIPIENT = eINSTANCE.getRefRecipient();
 
     /**
-     * The meta object literal for the '<em><b>Refertore</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Ref Recipient</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference REFER_TO_RECIPIENT__REFERTORE = eINSTANCE.getReferToRecipient_Refertore();
+    EReference REF_RECIPIENT__REF_RECIPIENT = eINSTANCE.getRefRecipient_RefRecipient();
 
     /**
-     * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToRecipientSourceImpl <em>Refer To Recipient Source</em>}' class.
+     * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientSourceImpl <em>Ref Recipient Source</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToRecipientSourceImpl
-     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getReferToRecipientSource()
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientSourceImpl
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefRecipientSource()
      * @generated
      */
-    EClass REFER_TO_RECIPIENT_SOURCE = eINSTANCE.getReferToRecipientSource();
+    EClass REF_RECIPIENT_SOURCE = eINSTANCE.getRefRecipientSource();
 
     /**
-     * The meta object literal for the '<em><b>Refertore</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Ref Recipient Source</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference REFER_TO_RECIPIENT_SOURCE__REFERTORE = eINSTANCE.getReferToRecipientSource_Refertore();
+    EReference REF_RECIPIENT_SOURCE__REF_RECIPIENT_SOURCE = eINSTANCE.getRefRecipientSource_RefRecipientSource();
 
     /**
-     * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToRecipientTargetImpl <em>Refer To Recipient Target</em>}' class.
+     * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientTargetImpl <em>Ref Recipient Target</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToRecipientTargetImpl
-     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getReferToRecipientTarget()
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientTargetImpl
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefRecipientTarget()
      * @generated
      */
-    EClass REFER_TO_RECIPIENT_TARGET = eINSTANCE.getReferToRecipientTarget();
+    EClass REF_RECIPIENT_TARGET = eINSTANCE.getRefRecipientTarget();
 
     /**
-     * The meta object literal for the '<em><b>Refertore</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Ref Recipient Target</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference REFER_TO_RECIPIENT_TARGET__REFERTORE = eINSTANCE.getReferToRecipientTarget_Refertore();
+    EReference REF_RECIPIENT_TARGET__REF_RECIPIENT_TARGET = eINSTANCE.getRefRecipientTarget_RefRecipientTarget();
 
     /**
-     * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToServiceImpl <em>Refer To Service</em>}' class.
+     * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefServiceImpl <em>Ref Service</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToServiceImpl
-     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getReferToService()
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RefServiceImpl
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefService()
      * @generated
      */
-    EClass REFER_TO_SERVICE = eINSTANCE.getReferToService();
+    EClass REF_SERVICE = eINSTANCE.getRefService();
 
     /**
-     * The meta object literal for the '<em><b>Refertose</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Ref Service</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference REFER_TO_SERVICE__REFERTOSE = eINSTANCE.getReferToService_Refertose();
+    EReference REF_SERVICE__REF_SERVICE = eINSTANCE.getRefService_RefService();
 
     /**
-     * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServicePartofImpl <em>Service Partof</em>}' class.
+     * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServicePartImpl <em>Service Part</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.ServicePartofImpl
-     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getServicePartof()
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.ServicePartImpl
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getServicePart()
      * @generated
      */
-    EClass SERVICE_PARTOF = eINSTANCE.getServicePartof();
+    EClass SERVICE_PART = eINSTANCE.getServicePart();
 
     /**
-     * The meta object literal for the '<em><b>Refertoservice</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Service Part</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SERVICE_PARTOF__REFERTOSERVICE = eINSTANCE.getServicePartof_Refertoservice();
+    EReference SERVICE_PART__SERVICE_PART = eINSTANCE.getServicePart_ServicePart();
 
     /**
      * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefPrivateDataImpl <em>Ref Private Data</em>}' class.
@@ -3215,30 +3215,30 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EClass REF_PRIVATE_DATA = eINSTANCE.getRefPrivateData();
 
     /**
-     * The meta object literal for the '<em><b>Refpr</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Ref Private Data</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference REF_PRIVATE_DATA__REFPR = eINSTANCE.getRefPrivateData_Refpr();
+    EReference REF_PRIVATE_DATA__REF_PRIVATE_DATA = eINSTANCE.getRefPrivateData_RefPrivateData();
 
     /**
-     * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefertoEnforcementImpl <em>Referto Enforcement</em>}' class.
+     * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefEnforcementImpl <em>Ref Enforcement</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RefertoEnforcementImpl
-     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefertoEnforcement()
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RefEnforcementImpl
+     * @see rslingo.rslil4privacy.rSLIL4Privacy.impl.RSLIL4PrivacyPackageImpl#getRefEnforcement()
      * @generated
      */
-    EClass REFERTO_ENFORCEMENT = eINSTANCE.getRefertoEnforcement();
+    EClass REF_ENFORCEMENT = eINSTANCE.getRefEnforcement();
 
     /**
-     * The meta object literal for the '<em><b>Refst</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Ref Enforcement</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference REFERTO_ENFORCEMENT__REFST = eINSTANCE.getRefertoEnforcement_Refst();
+    EReference REF_ENFORCEMENT__REF_ENFORCEMENT = eINSTANCE.getRefEnforcement_RefEnforcement();
 
   }
 

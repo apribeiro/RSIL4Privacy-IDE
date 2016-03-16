@@ -19,9 +19,9 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToService;
-import rslingo.rslil4privacy.rSLIL4Privacy.RefertoEnforcement;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefService;
 import rslingo.rslil4privacy.rSLIL4Privacy.Usage;
 
 /**
@@ -35,11 +35,11 @@ import rslingo.rslil4privacy.rSLIL4Privacy.Usage;
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.UsageImpl#getName <em>Name</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.UsageImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.UsageImpl#getCondition <em>Condition</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.UsageImpl#getPartof <em>Partof</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.UsageImpl#getRefprivatedata <em>Refprivatedata</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.UsageImpl#getRefertoservice <em>Refertoservice</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.UsageImpl#getRefertoEnforcement <em>Referto Enforcement</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.UsageImpl#getModalitykind <em>Modalitykind</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.UsageImpl#getPartUsage <em>Part Usage</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.UsageImpl#getRefPrivateData <em>Ref Private Data</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.UsageImpl#getRefService <em>Ref Service</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.UsageImpl#getRefEnforcement <em>Ref Enforcement</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.UsageImpl#getModality <em>Modality</em>}</li>
  * </ul>
  *
  * @generated
@@ -107,64 +107,64 @@ public class UsageImpl extends MinimalEObjectImpl.Container implements Usage
   protected String condition = CONDITION_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getPartof() <em>Partof</em>}' reference.
+   * The cached value of the '{@link #getPartUsage() <em>Part Usage</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPartof()
+   * @see #getPartUsage()
    * @generated
    * @ordered
    */
-  protected Usage partof;
+  protected Usage partUsage;
 
   /**
-   * The cached value of the '{@link #getRefprivatedata() <em>Refprivatedata</em>}' containment reference list.
+   * The cached value of the '{@link #getRefPrivateData() <em>Ref Private Data</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRefprivatedata()
+   * @see #getRefPrivateData()
    * @generated
    * @ordered
    */
-  protected EList<RefPrivateData> refprivatedata;
+  protected EList<RefPrivateData> refPrivateData;
 
   /**
-   * The cached value of the '{@link #getRefertoservice() <em>Refertoservice</em>}' containment reference list.
+   * The cached value of the '{@link #getRefService() <em>Ref Service</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRefertoservice()
+   * @see #getRefService()
    * @generated
    * @ordered
    */
-  protected EList<ReferToService> refertoservice;
+  protected EList<RefService> refService;
 
   /**
-   * The cached value of the '{@link #getRefertoEnforcement() <em>Referto Enforcement</em>}' containment reference list.
+   * The cached value of the '{@link #getRefEnforcement() <em>Ref Enforcement</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRefertoEnforcement()
+   * @see #getRefEnforcement()
    * @generated
    * @ordered
    */
-  protected EList<RefertoEnforcement> refertoEnforcement;
+  protected EList<RefEnforcement> refEnforcement;
 
   /**
-   * The default value of the '{@link #getModalitykind() <em>Modalitykind</em>}' attribute.
+   * The default value of the '{@link #getModality() <em>Modality</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getModalitykind()
+   * @see #getModality()
    * @generated
    * @ordered
    */
-  protected static final String MODALITYKIND_EDEFAULT = null;
+  protected static final String MODALITY_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getModalitykind() <em>Modalitykind</em>}' attribute.
+   * The cached value of the '{@link #getModality() <em>Modality</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getModalitykind()
+   * @see #getModality()
    * @generated
    * @ordered
    */
-  protected String modalitykind = MODALITYKIND_EDEFAULT;
+  protected String modality = MODALITY_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -261,19 +261,19 @@ public class UsageImpl extends MinimalEObjectImpl.Container implements Usage
    * <!-- end-user-doc -->
    * @generated
    */
-  public Usage getPartof()
+  public Usage getPartUsage()
   {
-    if (partof != null && partof.eIsProxy())
+    if (partUsage != null && partUsage.eIsProxy())
     {
-      InternalEObject oldPartof = (InternalEObject)partof;
-      partof = (Usage)eResolveProxy(oldPartof);
-      if (partof != oldPartof)
+      InternalEObject oldPartUsage = (InternalEObject)partUsage;
+      partUsage = (Usage)eResolveProxy(oldPartUsage);
+      if (partUsage != oldPartUsage)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSLIL4PrivacyPackage.USAGE__PARTOF, oldPartof, partof));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSLIL4PrivacyPackage.USAGE__PART_USAGE, oldPartUsage, partUsage));
       }
     }
-    return partof;
+    return partUsage;
   }
 
   /**
@@ -281,9 +281,9 @@ public class UsageImpl extends MinimalEObjectImpl.Container implements Usage
    * <!-- end-user-doc -->
    * @generated
    */
-  public Usage basicGetPartof()
+  public Usage basicGetPartUsage()
   {
-    return partof;
+    return partUsage;
   }
 
   /**
@@ -291,12 +291,12 @@ public class UsageImpl extends MinimalEObjectImpl.Container implements Usage
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPartof(Usage newPartof)
+  public void setPartUsage(Usage newPartUsage)
   {
-    Usage oldPartof = partof;
-    partof = newPartof;
+    Usage oldPartUsage = partUsage;
+    partUsage = newPartUsage;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.USAGE__PARTOF, oldPartof, partof));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.USAGE__PART_USAGE, oldPartUsage, partUsage));
   }
 
   /**
@@ -304,13 +304,13 @@ public class UsageImpl extends MinimalEObjectImpl.Container implements Usage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<RefPrivateData> getRefprivatedata()
+  public EList<RefPrivateData> getRefPrivateData()
   {
-    if (refprivatedata == null)
+    if (refPrivateData == null)
     {
-      refprivatedata = new EObjectContainmentEList<RefPrivateData>(RefPrivateData.class, this, RSLIL4PrivacyPackage.USAGE__REFPRIVATEDATA);
+      refPrivateData = new EObjectContainmentEList<RefPrivateData>(RefPrivateData.class, this, RSLIL4PrivacyPackage.USAGE__REF_PRIVATE_DATA);
     }
-    return refprivatedata;
+    return refPrivateData;
   }
 
   /**
@@ -318,13 +318,13 @@ public class UsageImpl extends MinimalEObjectImpl.Container implements Usage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ReferToService> getRefertoservice()
+  public EList<RefService> getRefService()
   {
-    if (refertoservice == null)
+    if (refService == null)
     {
-      refertoservice = new EObjectContainmentEList<ReferToService>(ReferToService.class, this, RSLIL4PrivacyPackage.USAGE__REFERTOSERVICE);
+      refService = new EObjectContainmentEList<RefService>(RefService.class, this, RSLIL4PrivacyPackage.USAGE__REF_SERVICE);
     }
-    return refertoservice;
+    return refService;
   }
 
   /**
@@ -332,13 +332,13 @@ public class UsageImpl extends MinimalEObjectImpl.Container implements Usage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<RefertoEnforcement> getRefertoEnforcement()
+  public EList<RefEnforcement> getRefEnforcement()
   {
-    if (refertoEnforcement == null)
+    if (refEnforcement == null)
     {
-      refertoEnforcement = new EObjectContainmentEList<RefertoEnforcement>(RefertoEnforcement.class, this, RSLIL4PrivacyPackage.USAGE__REFERTO_ENFORCEMENT);
+      refEnforcement = new EObjectContainmentEList<RefEnforcement>(RefEnforcement.class, this, RSLIL4PrivacyPackage.USAGE__REF_ENFORCEMENT);
     }
-    return refertoEnforcement;
+    return refEnforcement;
   }
 
   /**
@@ -346,9 +346,9 @@ public class UsageImpl extends MinimalEObjectImpl.Container implements Usage
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getModalitykind()
+  public String getModality()
   {
-    return modalitykind;
+    return modality;
   }
 
   /**
@@ -356,12 +356,12 @@ public class UsageImpl extends MinimalEObjectImpl.Container implements Usage
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setModalitykind(String newModalitykind)
+  public void setModality(String newModality)
   {
-    String oldModalitykind = modalitykind;
-    modalitykind = newModalitykind;
+    String oldModality = modality;
+    modality = newModality;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.USAGE__MODALITYKIND, oldModalitykind, modalitykind));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.USAGE__MODALITY, oldModality, modality));
   }
 
   /**
@@ -374,12 +374,12 @@ public class UsageImpl extends MinimalEObjectImpl.Container implements Usage
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.USAGE__REFPRIVATEDATA:
-        return ((InternalEList<?>)getRefprivatedata()).basicRemove(otherEnd, msgs);
-      case RSLIL4PrivacyPackage.USAGE__REFERTOSERVICE:
-        return ((InternalEList<?>)getRefertoservice()).basicRemove(otherEnd, msgs);
-      case RSLIL4PrivacyPackage.USAGE__REFERTO_ENFORCEMENT:
-        return ((InternalEList<?>)getRefertoEnforcement()).basicRemove(otherEnd, msgs);
+      case RSLIL4PrivacyPackage.USAGE__REF_PRIVATE_DATA:
+        return ((InternalEList<?>)getRefPrivateData()).basicRemove(otherEnd, msgs);
+      case RSLIL4PrivacyPackage.USAGE__REF_SERVICE:
+        return ((InternalEList<?>)getRefService()).basicRemove(otherEnd, msgs);
+      case RSLIL4PrivacyPackage.USAGE__REF_ENFORCEMENT:
+        return ((InternalEList<?>)getRefEnforcement()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -400,17 +400,17 @@ public class UsageImpl extends MinimalEObjectImpl.Container implements Usage
         return getDescription();
       case RSLIL4PrivacyPackage.USAGE__CONDITION:
         return getCondition();
-      case RSLIL4PrivacyPackage.USAGE__PARTOF:
-        if (resolve) return getPartof();
-        return basicGetPartof();
-      case RSLIL4PrivacyPackage.USAGE__REFPRIVATEDATA:
-        return getRefprivatedata();
-      case RSLIL4PrivacyPackage.USAGE__REFERTOSERVICE:
-        return getRefertoservice();
-      case RSLIL4PrivacyPackage.USAGE__REFERTO_ENFORCEMENT:
-        return getRefertoEnforcement();
-      case RSLIL4PrivacyPackage.USAGE__MODALITYKIND:
-        return getModalitykind();
+      case RSLIL4PrivacyPackage.USAGE__PART_USAGE:
+        if (resolve) return getPartUsage();
+        return basicGetPartUsage();
+      case RSLIL4PrivacyPackage.USAGE__REF_PRIVATE_DATA:
+        return getRefPrivateData();
+      case RSLIL4PrivacyPackage.USAGE__REF_SERVICE:
+        return getRefService();
+      case RSLIL4PrivacyPackage.USAGE__REF_ENFORCEMENT:
+        return getRefEnforcement();
+      case RSLIL4PrivacyPackage.USAGE__MODALITY:
+        return getModality();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -435,23 +435,23 @@ public class UsageImpl extends MinimalEObjectImpl.Container implements Usage
       case RSLIL4PrivacyPackage.USAGE__CONDITION:
         setCondition((String)newValue);
         return;
-      case RSLIL4PrivacyPackage.USAGE__PARTOF:
-        setPartof((Usage)newValue);
+      case RSLIL4PrivacyPackage.USAGE__PART_USAGE:
+        setPartUsage((Usage)newValue);
         return;
-      case RSLIL4PrivacyPackage.USAGE__REFPRIVATEDATA:
-        getRefprivatedata().clear();
-        getRefprivatedata().addAll((Collection<? extends RefPrivateData>)newValue);
+      case RSLIL4PrivacyPackage.USAGE__REF_PRIVATE_DATA:
+        getRefPrivateData().clear();
+        getRefPrivateData().addAll((Collection<? extends RefPrivateData>)newValue);
         return;
-      case RSLIL4PrivacyPackage.USAGE__REFERTOSERVICE:
-        getRefertoservice().clear();
-        getRefertoservice().addAll((Collection<? extends ReferToService>)newValue);
+      case RSLIL4PrivacyPackage.USAGE__REF_SERVICE:
+        getRefService().clear();
+        getRefService().addAll((Collection<? extends RefService>)newValue);
         return;
-      case RSLIL4PrivacyPackage.USAGE__REFERTO_ENFORCEMENT:
-        getRefertoEnforcement().clear();
-        getRefertoEnforcement().addAll((Collection<? extends RefertoEnforcement>)newValue);
+      case RSLIL4PrivacyPackage.USAGE__REF_ENFORCEMENT:
+        getRefEnforcement().clear();
+        getRefEnforcement().addAll((Collection<? extends RefEnforcement>)newValue);
         return;
-      case RSLIL4PrivacyPackage.USAGE__MODALITYKIND:
-        setModalitykind((String)newValue);
+      case RSLIL4PrivacyPackage.USAGE__MODALITY:
+        setModality((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -476,20 +476,20 @@ public class UsageImpl extends MinimalEObjectImpl.Container implements Usage
       case RSLIL4PrivacyPackage.USAGE__CONDITION:
         setCondition(CONDITION_EDEFAULT);
         return;
-      case RSLIL4PrivacyPackage.USAGE__PARTOF:
-        setPartof((Usage)null);
+      case RSLIL4PrivacyPackage.USAGE__PART_USAGE:
+        setPartUsage((Usage)null);
         return;
-      case RSLIL4PrivacyPackage.USAGE__REFPRIVATEDATA:
-        getRefprivatedata().clear();
+      case RSLIL4PrivacyPackage.USAGE__REF_PRIVATE_DATA:
+        getRefPrivateData().clear();
         return;
-      case RSLIL4PrivacyPackage.USAGE__REFERTOSERVICE:
-        getRefertoservice().clear();
+      case RSLIL4PrivacyPackage.USAGE__REF_SERVICE:
+        getRefService().clear();
         return;
-      case RSLIL4PrivacyPackage.USAGE__REFERTO_ENFORCEMENT:
-        getRefertoEnforcement().clear();
+      case RSLIL4PrivacyPackage.USAGE__REF_ENFORCEMENT:
+        getRefEnforcement().clear();
         return;
-      case RSLIL4PrivacyPackage.USAGE__MODALITYKIND:
-        setModalitykind(MODALITYKIND_EDEFAULT);
+      case RSLIL4PrivacyPackage.USAGE__MODALITY:
+        setModality(MODALITY_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -511,16 +511,16 @@ public class UsageImpl extends MinimalEObjectImpl.Container implements Usage
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
       case RSLIL4PrivacyPackage.USAGE__CONDITION:
         return CONDITION_EDEFAULT == null ? condition != null : !CONDITION_EDEFAULT.equals(condition);
-      case RSLIL4PrivacyPackage.USAGE__PARTOF:
-        return partof != null;
-      case RSLIL4PrivacyPackage.USAGE__REFPRIVATEDATA:
-        return refprivatedata != null && !refprivatedata.isEmpty();
-      case RSLIL4PrivacyPackage.USAGE__REFERTOSERVICE:
-        return refertoservice != null && !refertoservice.isEmpty();
-      case RSLIL4PrivacyPackage.USAGE__REFERTO_ENFORCEMENT:
-        return refertoEnforcement != null && !refertoEnforcement.isEmpty();
-      case RSLIL4PrivacyPackage.USAGE__MODALITYKIND:
-        return MODALITYKIND_EDEFAULT == null ? modalitykind != null : !MODALITYKIND_EDEFAULT.equals(modalitykind);
+      case RSLIL4PrivacyPackage.USAGE__PART_USAGE:
+        return partUsage != null;
+      case RSLIL4PrivacyPackage.USAGE__REF_PRIVATE_DATA:
+        return refPrivateData != null && !refPrivateData.isEmpty();
+      case RSLIL4PrivacyPackage.USAGE__REF_SERVICE:
+        return refService != null && !refService.isEmpty();
+      case RSLIL4PrivacyPackage.USAGE__REF_ENFORCEMENT:
+        return refEnforcement != null && !refEnforcement.isEmpty();
+      case RSLIL4PrivacyPackage.USAGE__MODALITY:
+        return MODALITY_EDEFAULT == null ? modality != null : !MODALITY_EDEFAULT.equals(modality);
     }
     return super.eIsSet(featureID);
   }
@@ -542,8 +542,8 @@ public class UsageImpl extends MinimalEObjectImpl.Container implements Usage
     result.append(description);
     result.append(", condition: ");
     result.append(condition);
-    result.append(", modalitykind: ");
-    result.append(modalitykind);
+    result.append(", modality: ");
+    result.append(modality);
     result.append(')');
     return result.toString();
   }

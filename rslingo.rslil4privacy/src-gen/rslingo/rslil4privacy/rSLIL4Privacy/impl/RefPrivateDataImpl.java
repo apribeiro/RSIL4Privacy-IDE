@@ -22,7 +22,7 @@ import rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefPrivateDataImpl#getRefpr <em>Refpr</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefPrivateDataImpl#getRefPrivateData <em>Ref Private Data</em>}</li>
  * </ul>
  *
  * @generated
@@ -30,14 +30,14 @@ import rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData;
 public class RefPrivateDataImpl extends MinimalEObjectImpl.Container implements RefPrivateData
 {
   /**
-   * The cached value of the '{@link #getRefpr() <em>Refpr</em>}' reference.
+   * The cached value of the '{@link #getRefPrivateData() <em>Ref Private Data</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRefpr()
+   * @see #getRefPrivateData()
    * @generated
    * @ordered
    */
-  protected PrivateData refpr;
+  protected PrivateData refPrivateData;
 
   /**
    * <!-- begin-user-doc -->
@@ -65,19 +65,19 @@ public class RefPrivateDataImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public PrivateData getRefpr()
+  public PrivateData getRefPrivateData()
   {
-    if (refpr != null && refpr.eIsProxy())
+    if (refPrivateData != null && refPrivateData.eIsProxy())
     {
-      InternalEObject oldRefpr = (InternalEObject)refpr;
-      refpr = (PrivateData)eResolveProxy(oldRefpr);
-      if (refpr != oldRefpr)
+      InternalEObject oldRefPrivateData = (InternalEObject)refPrivateData;
+      refPrivateData = (PrivateData)eResolveProxy(oldRefPrivateData);
+      if (refPrivateData != oldRefPrivateData)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REFPR, oldRefpr, refpr));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REF_PRIVATE_DATA, oldRefPrivateData, refPrivateData));
       }
     }
-    return refpr;
+    return refPrivateData;
   }
 
   /**
@@ -85,9 +85,9 @@ public class RefPrivateDataImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public PrivateData basicGetRefpr()
+  public PrivateData basicGetRefPrivateData()
   {
-    return refpr;
+    return refPrivateData;
   }
 
   /**
@@ -95,12 +95,12 @@ public class RefPrivateDataImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRefpr(PrivateData newRefpr)
+  public void setRefPrivateData(PrivateData newRefPrivateData)
   {
-    PrivateData oldRefpr = refpr;
-    refpr = newRefpr;
+    PrivateData oldRefPrivateData = refPrivateData;
+    refPrivateData = newRefPrivateData;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REFPR, oldRefpr, refpr));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REF_PRIVATE_DATA, oldRefPrivateData, refPrivateData));
   }
 
   /**
@@ -113,9 +113,9 @@ public class RefPrivateDataImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REFPR:
-        if (resolve) return getRefpr();
-        return basicGetRefpr();
+      case RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REF_PRIVATE_DATA:
+        if (resolve) return getRefPrivateData();
+        return basicGetRefPrivateData();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -130,8 +130,8 @@ public class RefPrivateDataImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REFPR:
-        setRefpr((PrivateData)newValue);
+      case RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REF_PRIVATE_DATA:
+        setRefPrivateData((PrivateData)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -147,8 +147,8 @@ public class RefPrivateDataImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REFPR:
-        setRefpr((PrivateData)null);
+      case RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REF_PRIVATE_DATA:
+        setRefPrivateData((PrivateData)null);
         return;
     }
     super.eUnset(featureID);
@@ -164,8 +164,8 @@ public class RefPrivateDataImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REFPR:
-        return refpr != null;
+      case RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REF_PRIVATE_DATA:
+        return refPrivateData != null;
     }
     return super.eIsSet(featureID);
   }

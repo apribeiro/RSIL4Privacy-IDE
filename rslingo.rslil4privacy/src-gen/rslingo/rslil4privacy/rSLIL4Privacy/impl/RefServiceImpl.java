@@ -11,40 +11,40 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToService;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefService;
 import rslingo.rslil4privacy.rSLIL4Privacy.Service;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Refer To Service</b></em>'.
+ * An implementation of the model object '<em><b>Ref Service</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToServiceImpl#getRefertose <em>Refertose</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefServiceImpl#getRefService <em>Ref Service</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ReferToServiceImpl extends MinimalEObjectImpl.Container implements ReferToService
+public class RefServiceImpl extends MinimalEObjectImpl.Container implements RefService
 {
   /**
-   * The cached value of the '{@link #getRefertose() <em>Refertose</em>}' reference.
+   * The cached value of the '{@link #getRefService() <em>Ref Service</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRefertose()
+   * @see #getRefService()
    * @generated
    * @ordered
    */
-  protected Service refertose;
+  protected Service refService;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ReferToServiceImpl()
+  protected RefServiceImpl()
   {
     super();
   }
@@ -57,7 +57,7 @@ public class ReferToServiceImpl extends MinimalEObjectImpl.Container implements 
   @Override
   protected EClass eStaticClass()
   {
-    return RSLIL4PrivacyPackage.Literals.REFER_TO_SERVICE;
+    return RSLIL4PrivacyPackage.Literals.REF_SERVICE;
   }
 
   /**
@@ -65,19 +65,19 @@ public class ReferToServiceImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public Service getRefertose()
+  public Service getRefService()
   {
-    if (refertose != null && refertose.eIsProxy())
+    if (refService != null && refService.eIsProxy())
     {
-      InternalEObject oldRefertose = (InternalEObject)refertose;
-      refertose = (Service)eResolveProxy(oldRefertose);
-      if (refertose != oldRefertose)
+      InternalEObject oldRefService = (InternalEObject)refService;
+      refService = (Service)eResolveProxy(oldRefService);
+      if (refService != oldRefService)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSLIL4PrivacyPackage.REFER_TO_SERVICE__REFERTOSE, oldRefertose, refertose));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSLIL4PrivacyPackage.REF_SERVICE__REF_SERVICE, oldRefService, refService));
       }
     }
-    return refertose;
+    return refService;
   }
 
   /**
@@ -85,9 +85,9 @@ public class ReferToServiceImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public Service basicGetRefertose()
+  public Service basicGetRefService()
   {
-    return refertose;
+    return refService;
   }
 
   /**
@@ -95,12 +95,12 @@ public class ReferToServiceImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRefertose(Service newRefertose)
+  public void setRefService(Service newRefService)
   {
-    Service oldRefertose = refertose;
-    refertose = newRefertose;
+    Service oldRefService = refService;
+    refService = newRefService;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.REFER_TO_SERVICE__REFERTOSE, oldRefertose, refertose));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.REF_SERVICE__REF_SERVICE, oldRefService, refService));
   }
 
   /**
@@ -113,9 +113,9 @@ public class ReferToServiceImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.REFER_TO_SERVICE__REFERTOSE:
-        if (resolve) return getRefertose();
-        return basicGetRefertose();
+      case RSLIL4PrivacyPackage.REF_SERVICE__REF_SERVICE:
+        if (resolve) return getRefService();
+        return basicGetRefService();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -130,8 +130,8 @@ public class ReferToServiceImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.REFER_TO_SERVICE__REFERTOSE:
-        setRefertose((Service)newValue);
+      case RSLIL4PrivacyPackage.REF_SERVICE__REF_SERVICE:
+        setRefService((Service)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -147,8 +147,8 @@ public class ReferToServiceImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.REFER_TO_SERVICE__REFERTOSE:
-        setRefertose((Service)null);
+      case RSLIL4PrivacyPackage.REF_SERVICE__REF_SERVICE:
+        setRefService((Service)null);
         return;
     }
     super.eUnset(featureID);
@@ -164,10 +164,10 @@ public class ReferToServiceImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.REFER_TO_SERVICE__REFERTOSE:
-        return refertose != null;
+      case RSLIL4PrivacyPackage.REF_SERVICE__REF_SERVICE:
+        return refService != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //ReferToServiceImpl
+} //RefServiceImpl

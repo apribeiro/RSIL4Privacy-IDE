@@ -38,10 +38,10 @@ import rslingo.rslil4privacy.rSLIL4Privacy.Informative;
 import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
 import rslingo.rslil4privacy.rSLIL4Privacy.PrivateData;
 import rslingo.rslil4privacy.rSLIL4Privacy.Recipient;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipient;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToService;
-import rslingo.rslil4privacy.rSLIL4Privacy.RefertoEnforcement;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefRecipient;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefService;
 import rslingo.rslil4privacy.rSLIL4Privacy.Retention;
 import rslingo.rslil4privacy.rSLIL4Privacy.Service;
 import rslingo.rslil4privacy.rSLIL4Privacy.Usage;
@@ -176,15 +176,15 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StId", collection.getName());
 			DocumentHelper.replaceText(nRow, "StDescription", collection.getDescription());
 			DocumentHelper.replaceText(nRow, "StCondition", collection.getCondition());
-			String modality = collection.getModalitykind().toLowerCase();
+			String modality = collection.getModality().toLowerCase();
 			DocumentHelper.replaceText(nRow, "StModality", modality);
 			DocumentHelper.replaceText(nRow, "StType", "Collection");
 			
-			if (collection.getRefprivatedata().size() > 0) {
+			if (collection.getRefPrivateData().size() > 0) {
 				StringBuilder pdIds = new StringBuilder();
 				
-				for (RefPrivateData ref : collection.getRefprivatedata()) {
-					PrivateData pd = ref.getRefpr();
+				for (RefPrivateData ref : collection.getRefPrivateData()) {
+					PrivateData pd = ref.getRefPrivateData();
 					pdIds.append(pd.getName());
 					pdIds.append(", ");
 				}
@@ -197,11 +197,11 @@ public class ExportExcelHandler extends AbstractHandler {
 			
 			DocumentHelper.replaceText(nRow, "StRId", "");
 			
-			if (collection.getRefertoservice().size() > 0) {
+			if (collection.getRefService().size() > 0) {
 				StringBuilder sIds = new StringBuilder();
 				
-				for (ReferToService ref : collection.getRefertoservice()) {
-					Service s = ref.getRefertose();
+				for (RefService ref : collection.getRefService()) {
+					Service s = ref.getRefService();
 					sIds.append(s.getName());
 					sIds.append(", ");
 				}
@@ -212,11 +212,11 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
 			
-			if (collection.getRefertoEnforcement().size() > 0) {
+			if (collection.getRefEnforcement().size() > 0) {
 				StringBuilder eIds = new StringBuilder();
 				
-				for (RefertoEnforcement ref : collection.getRefertoEnforcement()) {
-					Enforcement e = ref.getRefst();
+				for (RefEnforcement ref : collection.getRefEnforcement()) {
+					Enforcement e = ref.getRefEnforcement();
 					eIds.append(e.getName());
 					eIds.append(", ");
 				}
@@ -242,15 +242,15 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StId", disclosure.getName());
 			DocumentHelper.replaceText(nRow, "StDescription", disclosure.getDescription());
 			DocumentHelper.replaceText(nRow, "StCondition", disclosure.getCondition());
-			String modality = disclosure.getModalitykind().toLowerCase();
+			String modality = disclosure.getModality().toLowerCase();
 			DocumentHelper.replaceText(nRow, "StModality", modality);
 			DocumentHelper.replaceText(nRow, "StType", "Disclosure");
 			
-			if (disclosure.getRefprivatedata().size() > 0) {
+			if (disclosure.getRefPrivateData().size() > 0) {
 				StringBuilder pdIds = new StringBuilder();
 				
-				for (RefPrivateData ref : disclosure.getRefprivatedata()) {
-					PrivateData pd = ref.getRefpr();
+				for (RefPrivateData ref : disclosure.getRefPrivateData()) {
+					PrivateData pd = ref.getRefPrivateData();
 					pdIds.append(pd.getName());
 					pdIds.append(", ");
 				}
@@ -261,11 +261,11 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "StPDId", "");
 			}
 			
-			if (disclosure.getReferToRecipient().size() > 0) {
+			if (disclosure.getRefRecipient().size() > 0) {
 				StringBuilder rIds = new StringBuilder();
 				
-				for (ReferToRecipient ref : disclosure.getReferToRecipient()) {
-					Recipient r = ref.getRefertore();
+				for (RefRecipient ref : disclosure.getRefRecipient()) {
+					Recipient r = ref.getRefRecipient();
 					rIds.append(r.getName());
 					rIds.append(", ");
 				}
@@ -276,11 +276,11 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "StRId", "");
 			}
 			
-			if (disclosure.getRefertoservice().size() > 0) {
+			if (disclosure.getRefService().size() > 0) {
 				StringBuilder sIds = new StringBuilder();
 				
-				for (ReferToService ref : disclosure.getRefertoservice()) {
-					Service s = ref.getRefertose();
+				for (RefService ref : disclosure.getRefService()) {
+					Service s = ref.getRefService();
 					sIds.append(s.getName());
 					sIds.append(", ");
 				}
@@ -291,11 +291,11 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
 			
-			if (disclosure.getRefertoEnforcement().size() > 0) {
+			if (disclosure.getRefEnforcement().size() > 0) {
 				StringBuilder eIds = new StringBuilder();
 				
-				for (RefertoEnforcement ref : disclosure.getRefertoEnforcement()) {
-					Enforcement e = ref.getRefst();
+				for (RefEnforcement ref : disclosure.getRefEnforcement()) {
+					Enforcement e = ref.getRefEnforcement();
 					eIds.append(e.getName());
 					eIds.append(", ");
 				}
@@ -321,15 +321,15 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StId", retention.getName());
 			DocumentHelper.replaceText(nRow, "StDescription", retention.getDescription());
 			DocumentHelper.replaceText(nRow, "StCondition", retention.getCondition());
-			String modality = retention.getModalitykind().toLowerCase();
+			String modality = retention.getModality().toLowerCase();
 			DocumentHelper.replaceText(nRow, "StModality", modality);
 			DocumentHelper.replaceText(nRow, "StType", "Retention");
 			
-			if (retention.getRefprivatedata().size() > 0) {
+			if (retention.getRefPrivateData().size() > 0) {
 				StringBuilder pdIds = new StringBuilder();
 				
-				for (RefPrivateData ref : retention.getRefprivatedata()) {
-					PrivateData pd = ref.getRefpr();
+				for (RefPrivateData ref : retention.getRefPrivateData()) {
+					PrivateData pd = ref.getRefPrivateData();
 					pdIds.append(pd.getName());
 					pdIds.append(", ");
 				}
@@ -342,11 +342,11 @@ public class ExportExcelHandler extends AbstractHandler {
 			
 			DocumentHelper.replaceText(nRow, "StRId", "");
 			
-			if (retention.getRefertoservice().size() > 0) {
+			if (retention.getRefService().size() > 0) {
 				StringBuilder sIds = new StringBuilder();
 				
-				for (ReferToService ref : retention.getRefertoservice()) {
-					Service s = ref.getRefertose();
+				for (RefService ref : retention.getRefService()) {
+					Service s = ref.getRefService();
 					sIds.append(s.getName());
 					sIds.append(", ");
 				}
@@ -357,11 +357,11 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
 			
-			if (retention.getRefertoEnforcement().size() > 0) {
+			if (retention.getRefEnforcement().size() > 0) {
 				StringBuilder eIds = new StringBuilder();
 				
-				for (RefertoEnforcement ref : retention.getRefertoEnforcement()) {
-					Enforcement e = ref.getRefst();
+				for (RefEnforcement ref : retention.getRefEnforcement()) {
+					Enforcement e = ref.getRefEnforcement();
 					eIds.append(e.getName());
 					eIds.append(", ");
 				}
@@ -387,15 +387,15 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StId", usage.getName());
 			DocumentHelper.replaceText(nRow, "StDescription", usage.getDescription());
 			DocumentHelper.replaceText(nRow, "StCondition", usage.getCondition());
-			String modality = usage.getModalitykind().toLowerCase();
+			String modality = usage.getModality().toLowerCase();
 			DocumentHelper.replaceText(nRow, "StModality", modality);
 			DocumentHelper.replaceText(nRow, "StType", "Usage");
 			
-			if (usage.getRefprivatedata().size() > 0) {
+			if (usage.getRefPrivateData().size() > 0) {
 				StringBuilder pdIds = new StringBuilder();
 				
-				for (RefPrivateData ref : usage.getRefprivatedata()) {
-					PrivateData pd = ref.getRefpr();
+				for (RefPrivateData ref : usage.getRefPrivateData()) {
+					PrivateData pd = ref.getRefPrivateData();
 					pdIds.append(pd.getName());
 					pdIds.append(", ");
 				}
@@ -408,11 +408,11 @@ public class ExportExcelHandler extends AbstractHandler {
 			
 			DocumentHelper.replaceText(nRow, "StRId", "");
 			
-			if (usage.getRefertoservice().size() > 0) {
+			if (usage.getRefService().size() > 0) {
 				StringBuilder sIds = new StringBuilder();
 				
-				for (ReferToService ref : usage.getRefertoservice()) {
-					Service s = ref.getRefertose();
+				for (RefService ref : usage.getRefService()) {
+					Service s = ref.getRefService();
 					sIds.append(s.getName());
 					sIds.append(", ");
 				}
@@ -423,11 +423,11 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
 			
-			if (usage.getRefertoEnforcement().size() > 0) {
+			if (usage.getRefEnforcement().size() > 0) {
 				StringBuilder eIds = new StringBuilder();
 				
-				for (RefertoEnforcement ref : usage.getRefertoEnforcement()) {
-					Enforcement e = ref.getRefst();
+				for (RefEnforcement ref : usage.getRefEnforcement()) {
+					Enforcement e = ref.getRefEnforcement();
 					eIds.append(e.getName());
 					eIds.append(", ");
 				}
@@ -453,15 +453,15 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StId", informative.getName());
 			DocumentHelper.replaceText(nRow, "StDescription", informative.getDescription());
 			DocumentHelper.replaceText(nRow, "StCondition", informative.getCondition());
-			String modality = informative.getModalitykind().toLowerCase();
+			String modality = informative.getModality().toLowerCase();
 			DocumentHelper.replaceText(nRow, "StModality", modality);
 			DocumentHelper.replaceText(nRow, "StType", "Informative");
 			
-			if (informative.getRefprivatedata().size() > 0) {
+			if (informative.getRefPrivateData().size() > 0) {
 				StringBuilder pdIds = new StringBuilder();
 				
-				for (RefPrivateData ref : informative.getRefprivatedata()) {
-					PrivateData pd = ref.getRefpr();
+				for (RefPrivateData ref : informative.getRefPrivateData()) {
+					PrivateData pd = ref.getRefPrivateData();
 					pdIds.append(pd.getName());
 					pdIds.append(", ");
 				}
@@ -474,11 +474,11 @@ public class ExportExcelHandler extends AbstractHandler {
 			
 			DocumentHelper.replaceText(nRow, "StRId", "");
 			
-			if (informative.getRefertoservice().size() > 0) {
+			if (informative.getRefService().size() > 0) {
 				StringBuilder sIds = new StringBuilder();
 				
-				for (ReferToService ref : informative.getRefertoservice()) {
-					Service s = ref.getRefertose();
+				for (RefService ref : informative.getRefService()) {
+					Service s = ref.getRefService();
 					sIds.append(s.getName());
 					sIds.append(", ");
 				}
@@ -489,11 +489,11 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
 			
-			if (informative.getRefertoEnforcement().size() > 0) {
+			if (informative.getRefEnforcement().size() > 0) {
 				StringBuilder eIds = new StringBuilder();
 				
-				for (RefertoEnforcement ref : informative.getRefertoEnforcement()) {
-					Enforcement e = ref.getRefst();
+				for (RefEnforcement ref : informative.getRefEnforcement()) {
+					Enforcement e = ref.getRefEnforcement();
 					eIds.append(e.getName());
 					eIds.append(", ");
 				}
@@ -518,13 +518,13 @@ public class ExportExcelHandler extends AbstractHandler {
 			
 			DocumentHelper.replaceText(nRow, "RId", recipient.getName());
 			DocumentHelper.replaceText(nRow, "RDescription", recipient.getDescription());
-			String scope = recipient.getRecipientScopeKind().toLowerCase();
+			String scope = recipient.getScope().toLowerCase();
 			DocumentHelper.replaceText(nRow, "RScope", scope);
-			String type = recipient.getRecipientTypeKind().toLowerCase();
+			String type = recipient.getType().toLowerCase();
 			DocumentHelper.replaceText(nRow, "RType", type);
 			
-			if (recipient.getPartof().size() > 0) {
-				String rId = recipient.getPartof().get(0).getPartof().getName();
+			if (recipient.getRecipientPart().size() > 0) {
+				String rId = recipient.getRecipientPart().get(0).getRecipientPart().getName();
 				DocumentHelper.replaceText(nRow, "SRId", rId);
 			} else {
 				DocumentHelper.replaceText(nRow, "SRId", "");
@@ -544,14 +544,14 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.cloneRow(workbook, sheet, nRow, tRow);
 			
 			DocumentHelper.replaceText(nRow, "SId", service.getName());
-			DocumentHelper.replaceText(nRow, "SName", service.getServicename());
+			DocumentHelper.replaceText(nRow, "SName", service.getServiceName());
 			DocumentHelper.replaceText(nRow, "SDescription", service.getDescription());
 			
-			if (service.getRefprivatedata().size() > 0) {
+			if (service.getRefPrivateData().size() > 0) {
 				StringBuilder pdIds = new StringBuilder();
 				
-				for (RefPrivateData attr : service.getRefprivatedata()) {
-					PrivateData pd = attr.getRefpr();
+				for (RefPrivateData attr : service.getRefPrivateData()) {
+					PrivateData pd = attr.getRefPrivateData();
 					pdIds.append(pd.getName());
 					pdIds.append(", ");
 				}
@@ -562,8 +562,8 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "SPDId", "");
 			}
 			
-			if (service.getServicepartof().size() > 0) {
-				String ssId = service.getServicepartof().get(0).getRefertoservice().getName();
+			if (service.getServicePart().size() > 0) {
+				String ssId = service.getServicePart().get(0).getServicePart().getName();
 				DocumentHelper.replaceText(nRow, "SSId", ssId);
 			} else {
 				DocumentHelper.replaceText(nRow, "SSId", "");
@@ -584,7 +584,7 @@ public class ExportExcelHandler extends AbstractHandler {
 			
 			DocumentHelper.replaceText(nRow, "PDId", privateData.getName());
 
-			String type = privateData.getPrivateDataKind();
+			String type = privateData.getType();
 			
 			if (type.equals("PersonalInformation")) {
 				type = "Personal Information";
@@ -593,7 +593,7 @@ public class ExportExcelHandler extends AbstractHandler {
 			}
 			
 			DocumentHelper.replaceText(nRow, "PDType", type);
-			DocumentHelper.replaceText(nRow, "PDDescription", privateData.getPrivatedata());
+			DocumentHelper.replaceText(nRow, "PDDescription", privateData.getDescription());
 			
 			if (privateData.getAttribute().size() > 0) {
 				StringBuilder attributes = new StringBuilder();
@@ -624,8 +624,8 @@ public class ExportExcelHandler extends AbstractHandler {
 			
 			DocumentHelper.replaceText(nRow, "EId", enforcement.getName());
 			DocumentHelper.replaceText(nRow, "EName", enforcement.getEnforcementName());
-			DocumentHelper.replaceText(nRow, "EDescription", enforcement.getEnforcementDescription());
-			DocumentHelper.replaceText(nRow, "EType", enforcement.getEnforcementKind());
+			DocumentHelper.replaceText(nRow, "EDescription", enforcement.getDescription());
+			DocumentHelper.replaceText(nRow, "EType", enforcement.getType());
 		}
 		
 		// Delete the Template Row

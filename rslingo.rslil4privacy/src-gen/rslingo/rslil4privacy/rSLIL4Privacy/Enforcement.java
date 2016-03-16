@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getName <em>Name</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getEnforcementName <em>Enforcement Name</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getEnforcementDescription <em>Enforcement Description</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getEnforcementKind <em>Enforcement Kind</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getDescription <em>Description</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getEnforcement()
@@ -78,55 +78,55 @@ public interface Enforcement extends EObject
   void setEnforcementName(String value);
 
   /**
-   * Returns the value of the '<em><b>Enforcement Description</b></em>' attribute.
+   * Returns the value of the '<em><b>Description</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Enforcement Description</em>' attribute isn't clear,
+   * If the meaning of the '<em>Description</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Enforcement Description</em>' attribute.
-   * @see #setEnforcementDescription(String)
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getEnforcement_EnforcementDescription()
+   * @return the value of the '<em>Description</em>' attribute.
+   * @see #setDescription(String)
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getEnforcement_Description()
    * @model
    * @generated
    */
-  String getEnforcementDescription();
+  String getDescription();
 
   /**
-   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getEnforcementDescription <em>Enforcement Description</em>}' attribute.
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getDescription <em>Description</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Enforcement Description</em>' attribute.
-   * @see #getEnforcementDescription()
+   * @param value the new value of the '<em>Description</em>' attribute.
+   * @see #getDescription()
    * @generated
    */
-  void setEnforcementDescription(String value);
+  void setDescription(String value);
 
   /**
-   * Returns the value of the '<em><b>Enforcement Kind</b></em>' attribute.
+   * Returns the value of the '<em><b>Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Enforcement Kind</em>' attribute isn't clear,
+   * If the meaning of the '<em>Type</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Enforcement Kind</em>' attribute.
-   * @see #setEnforcementKind(String)
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getEnforcement_EnforcementKind()
+   * @return the value of the '<em>Type</em>' attribute.
+   * @see #setType(String)
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getEnforcement_Type()
    * @model
    * @generated
    */
-  String getEnforcementKind();
+  String getType();
 
   /**
-   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getEnforcementKind <em>Enforcement Kind</em>}' attribute.
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Enforcement#getType <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Enforcement Kind</em>' attribute.
-   * @see #getEnforcementKind()
+   * @param value the new value of the '<em>Type</em>' attribute.
+   * @see #getType()
    * @generated
    */
-  void setEnforcementKind(String value);
+  void setType(String value);
 
 } // Enforcement

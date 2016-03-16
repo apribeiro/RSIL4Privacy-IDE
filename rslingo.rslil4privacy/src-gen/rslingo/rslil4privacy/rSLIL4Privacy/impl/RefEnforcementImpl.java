@@ -10,41 +10,41 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import rslingo.rslil4privacy.rSLIL4Privacy.Enforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
-import rslingo.rslil4privacy.rSLIL4Privacy.Service;
-import rslingo.rslil4privacy.rSLIL4Privacy.ServicePartof;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Service Partof</b></em>'.
+ * An implementation of the model object '<em><b>Ref Enforcement</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServicePartofImpl#getRefertoservice <em>Refertoservice</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefEnforcementImpl#getRefEnforcement <em>Ref Enforcement</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ServicePartofImpl extends MinimalEObjectImpl.Container implements ServicePartof
+public class RefEnforcementImpl extends MinimalEObjectImpl.Container implements RefEnforcement
 {
   /**
-   * The cached value of the '{@link #getRefertoservice() <em>Refertoservice</em>}' reference.
+   * The cached value of the '{@link #getRefEnforcement() <em>Ref Enforcement</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRefertoservice()
+   * @see #getRefEnforcement()
    * @generated
    * @ordered
    */
-  protected Service refertoservice;
+  protected Enforcement refEnforcement;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ServicePartofImpl()
+  protected RefEnforcementImpl()
   {
     super();
   }
@@ -57,7 +57,7 @@ public class ServicePartofImpl extends MinimalEObjectImpl.Container implements S
   @Override
   protected EClass eStaticClass()
   {
-    return RSLIL4PrivacyPackage.Literals.SERVICE_PARTOF;
+    return RSLIL4PrivacyPackage.Literals.REF_ENFORCEMENT;
   }
 
   /**
@@ -65,19 +65,19 @@ public class ServicePartofImpl extends MinimalEObjectImpl.Container implements S
    * <!-- end-user-doc -->
    * @generated
    */
-  public Service getRefertoservice()
+  public Enforcement getRefEnforcement()
   {
-    if (refertoservice != null && refertoservice.eIsProxy())
+    if (refEnforcement != null && refEnforcement.eIsProxy())
     {
-      InternalEObject oldRefertoservice = (InternalEObject)refertoservice;
-      refertoservice = (Service)eResolveProxy(oldRefertoservice);
-      if (refertoservice != oldRefertoservice)
+      InternalEObject oldRefEnforcement = (InternalEObject)refEnforcement;
+      refEnforcement = (Enforcement)eResolveProxy(oldRefEnforcement);
+      if (refEnforcement != oldRefEnforcement)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSLIL4PrivacyPackage.SERVICE_PARTOF__REFERTOSERVICE, oldRefertoservice, refertoservice));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSLIL4PrivacyPackage.REF_ENFORCEMENT__REF_ENFORCEMENT, oldRefEnforcement, refEnforcement));
       }
     }
-    return refertoservice;
+    return refEnforcement;
   }
 
   /**
@@ -85,9 +85,9 @@ public class ServicePartofImpl extends MinimalEObjectImpl.Container implements S
    * <!-- end-user-doc -->
    * @generated
    */
-  public Service basicGetRefertoservice()
+  public Enforcement basicGetRefEnforcement()
   {
-    return refertoservice;
+    return refEnforcement;
   }
 
   /**
@@ -95,12 +95,12 @@ public class ServicePartofImpl extends MinimalEObjectImpl.Container implements S
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRefertoservice(Service newRefertoservice)
+  public void setRefEnforcement(Enforcement newRefEnforcement)
   {
-    Service oldRefertoservice = refertoservice;
-    refertoservice = newRefertoservice;
+    Enforcement oldRefEnforcement = refEnforcement;
+    refEnforcement = newRefEnforcement;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.SERVICE_PARTOF__REFERTOSERVICE, oldRefertoservice, refertoservice));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.REF_ENFORCEMENT__REF_ENFORCEMENT, oldRefEnforcement, refEnforcement));
   }
 
   /**
@@ -113,9 +113,9 @@ public class ServicePartofImpl extends MinimalEObjectImpl.Container implements S
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.SERVICE_PARTOF__REFERTOSERVICE:
-        if (resolve) return getRefertoservice();
-        return basicGetRefertoservice();
+      case RSLIL4PrivacyPackage.REF_ENFORCEMENT__REF_ENFORCEMENT:
+        if (resolve) return getRefEnforcement();
+        return basicGetRefEnforcement();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -130,8 +130,8 @@ public class ServicePartofImpl extends MinimalEObjectImpl.Container implements S
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.SERVICE_PARTOF__REFERTOSERVICE:
-        setRefertoservice((Service)newValue);
+      case RSLIL4PrivacyPackage.REF_ENFORCEMENT__REF_ENFORCEMENT:
+        setRefEnforcement((Enforcement)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -147,8 +147,8 @@ public class ServicePartofImpl extends MinimalEObjectImpl.Container implements S
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.SERVICE_PARTOF__REFERTOSERVICE:
-        setRefertoservice((Service)null);
+      case RSLIL4PrivacyPackage.REF_ENFORCEMENT__REF_ENFORCEMENT:
+        setRefEnforcement((Enforcement)null);
         return;
     }
     super.eUnset(featureID);
@@ -164,10 +164,10 @@ public class ServicePartofImpl extends MinimalEObjectImpl.Container implements S
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.SERVICE_PARTOF__REFERTOSERVICE:
-        return refertoservice != null;
+      case RSLIL4PrivacyPackage.REF_ENFORCEMENT__REF_ENFORCEMENT:
+        return refEnforcement != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //ServicePartofImpl
+} //RefEnforcementImpl

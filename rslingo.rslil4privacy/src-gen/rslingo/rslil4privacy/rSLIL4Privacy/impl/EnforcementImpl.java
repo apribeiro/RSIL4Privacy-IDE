@@ -22,8 +22,8 @@ import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
  * <ul>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.EnforcementImpl#getName <em>Name</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.EnforcementImpl#getEnforcementName <em>Enforcement Name</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.EnforcementImpl#getEnforcementDescription <em>Enforcement Description</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.EnforcementImpl#getEnforcementKind <em>Enforcement Kind</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.EnforcementImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.EnforcementImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -71,44 +71,44 @@ public class EnforcementImpl extends MinimalEObjectImpl.Container implements Enf
   protected String enforcementName = ENFORCEMENT_NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getEnforcementDescription() <em>Enforcement Description</em>}' attribute.
+   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getEnforcementDescription()
+   * @see #getDescription()
    * @generated
    * @ordered
    */
-  protected static final String ENFORCEMENT_DESCRIPTION_EDEFAULT = null;
+  protected static final String DESCRIPTION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getEnforcementDescription() <em>Enforcement Description</em>}' attribute.
+   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getEnforcementDescription()
+   * @see #getDescription()
    * @generated
    * @ordered
    */
-  protected String enforcementDescription = ENFORCEMENT_DESCRIPTION_EDEFAULT;
+  protected String description = DESCRIPTION_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getEnforcementKind() <em>Enforcement Kind</em>}' attribute.
+   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getEnforcementKind()
+   * @see #getType()
    * @generated
    * @ordered
    */
-  protected static final String ENFORCEMENT_KIND_EDEFAULT = null;
+  protected static final String TYPE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getEnforcementKind() <em>Enforcement Kind</em>}' attribute.
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getEnforcementKind()
+   * @see #getType()
    * @generated
    * @ordered
    */
-  protected String enforcementKind = ENFORCEMENT_KIND_EDEFAULT;
+  protected String type = TYPE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -182,9 +182,9 @@ public class EnforcementImpl extends MinimalEObjectImpl.Container implements Enf
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getEnforcementDescription()
+  public String getDescription()
   {
-    return enforcementDescription;
+    return description;
   }
 
   /**
@@ -192,12 +192,12 @@ public class EnforcementImpl extends MinimalEObjectImpl.Container implements Enf
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEnforcementDescription(String newEnforcementDescription)
+  public void setDescription(String newDescription)
   {
-    String oldEnforcementDescription = enforcementDescription;
-    enforcementDescription = newEnforcementDescription;
+    String oldDescription = description;
+    description = newDescription;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.ENFORCEMENT__ENFORCEMENT_DESCRIPTION, oldEnforcementDescription, enforcementDescription));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.ENFORCEMENT__DESCRIPTION, oldDescription, description));
   }
 
   /**
@@ -205,9 +205,9 @@ public class EnforcementImpl extends MinimalEObjectImpl.Container implements Enf
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getEnforcementKind()
+  public String getType()
   {
-    return enforcementKind;
+    return type;
   }
 
   /**
@@ -215,12 +215,12 @@ public class EnforcementImpl extends MinimalEObjectImpl.Container implements Enf
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEnforcementKind(String newEnforcementKind)
+  public void setType(String newType)
   {
-    String oldEnforcementKind = enforcementKind;
-    enforcementKind = newEnforcementKind;
+    String oldType = type;
+    type = newType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.ENFORCEMENT__ENFORCEMENT_KIND, oldEnforcementKind, enforcementKind));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.ENFORCEMENT__TYPE, oldType, type));
   }
 
   /**
@@ -237,10 +237,10 @@ public class EnforcementImpl extends MinimalEObjectImpl.Container implements Enf
         return getName();
       case RSLIL4PrivacyPackage.ENFORCEMENT__ENFORCEMENT_NAME:
         return getEnforcementName();
-      case RSLIL4PrivacyPackage.ENFORCEMENT__ENFORCEMENT_DESCRIPTION:
-        return getEnforcementDescription();
-      case RSLIL4PrivacyPackage.ENFORCEMENT__ENFORCEMENT_KIND:
-        return getEnforcementKind();
+      case RSLIL4PrivacyPackage.ENFORCEMENT__DESCRIPTION:
+        return getDescription();
+      case RSLIL4PrivacyPackage.ENFORCEMENT__TYPE:
+        return getType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -261,11 +261,11 @@ public class EnforcementImpl extends MinimalEObjectImpl.Container implements Enf
       case RSLIL4PrivacyPackage.ENFORCEMENT__ENFORCEMENT_NAME:
         setEnforcementName((String)newValue);
         return;
-      case RSLIL4PrivacyPackage.ENFORCEMENT__ENFORCEMENT_DESCRIPTION:
-        setEnforcementDescription((String)newValue);
+      case RSLIL4PrivacyPackage.ENFORCEMENT__DESCRIPTION:
+        setDescription((String)newValue);
         return;
-      case RSLIL4PrivacyPackage.ENFORCEMENT__ENFORCEMENT_KIND:
-        setEnforcementKind((String)newValue);
+      case RSLIL4PrivacyPackage.ENFORCEMENT__TYPE:
+        setType((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -287,11 +287,11 @@ public class EnforcementImpl extends MinimalEObjectImpl.Container implements Enf
       case RSLIL4PrivacyPackage.ENFORCEMENT__ENFORCEMENT_NAME:
         setEnforcementName(ENFORCEMENT_NAME_EDEFAULT);
         return;
-      case RSLIL4PrivacyPackage.ENFORCEMENT__ENFORCEMENT_DESCRIPTION:
-        setEnforcementDescription(ENFORCEMENT_DESCRIPTION_EDEFAULT);
+      case RSLIL4PrivacyPackage.ENFORCEMENT__DESCRIPTION:
+        setDescription(DESCRIPTION_EDEFAULT);
         return;
-      case RSLIL4PrivacyPackage.ENFORCEMENT__ENFORCEMENT_KIND:
-        setEnforcementKind(ENFORCEMENT_KIND_EDEFAULT);
+      case RSLIL4PrivacyPackage.ENFORCEMENT__TYPE:
+        setType(TYPE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -311,10 +311,10 @@ public class EnforcementImpl extends MinimalEObjectImpl.Container implements Enf
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case RSLIL4PrivacyPackage.ENFORCEMENT__ENFORCEMENT_NAME:
         return ENFORCEMENT_NAME_EDEFAULT == null ? enforcementName != null : !ENFORCEMENT_NAME_EDEFAULT.equals(enforcementName);
-      case RSLIL4PrivacyPackage.ENFORCEMENT__ENFORCEMENT_DESCRIPTION:
-        return ENFORCEMENT_DESCRIPTION_EDEFAULT == null ? enforcementDescription != null : !ENFORCEMENT_DESCRIPTION_EDEFAULT.equals(enforcementDescription);
-      case RSLIL4PrivacyPackage.ENFORCEMENT__ENFORCEMENT_KIND:
-        return ENFORCEMENT_KIND_EDEFAULT == null ? enforcementKind != null : !ENFORCEMENT_KIND_EDEFAULT.equals(enforcementKind);
+      case RSLIL4PrivacyPackage.ENFORCEMENT__DESCRIPTION:
+        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+      case RSLIL4PrivacyPackage.ENFORCEMENT__TYPE:
+        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
     }
     return super.eIsSet(featureID);
   }
@@ -334,10 +334,10 @@ public class EnforcementImpl extends MinimalEObjectImpl.Container implements Enf
     result.append(name);
     result.append(", enforcementName: ");
     result.append(enforcementName);
-    result.append(", enforcementDescription: ");
-    result.append(enforcementDescription);
-    result.append(", enforcementKind: ");
-    result.append(enforcementKind);
+    result.append(", description: ");
+    result.append(description);
+    result.append(", type: ");
+    result.append(type);
     result.append(')');
     return result.toString();
   }

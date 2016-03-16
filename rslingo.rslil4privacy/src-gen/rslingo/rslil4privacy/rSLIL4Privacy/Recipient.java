@@ -16,11 +16,11 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getName <em>Name</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientname <em>Recipientname</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientName <em>Recipient Name</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getDescription <em>Description</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getPartof <em>Partof</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientScopeKind <em>Recipient Scope Kind</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientTypeKind <em>Recipient Type Kind</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientPart <em>Recipient Part</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getScope <em>Scope</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRecipient()
@@ -56,30 +56,30 @@ public interface Recipient extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Recipientname</b></em>' attribute.
+   * Returns the value of the '<em><b>Recipient Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Recipientname</em>' attribute isn't clear,
+   * If the meaning of the '<em>Recipient Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Recipientname</em>' attribute.
-   * @see #setRecipientname(String)
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRecipient_Recipientname()
+   * @return the value of the '<em>Recipient Name</em>' attribute.
+   * @see #setRecipientName(String)
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRecipient_RecipientName()
    * @model
    * @generated
    */
-  String getRecipientname();
+  String getRecipientName();
 
   /**
-   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientname <em>Recipientname</em>}' attribute.
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientName <em>Recipient Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Recipientname</em>' attribute.
-   * @see #getRecipientname()
+   * @param value the new value of the '<em>Recipient Name</em>' attribute.
+   * @see #getRecipientName()
    * @generated
    */
-  void setRecipientname(String value);
+  void setRecipientName(String value);
 
   /**
    * Returns the value of the '<em><b>Description</b></em>' attribute.
@@ -108,71 +108,71 @@ public interface Recipient extends EObject
   void setDescription(String value);
 
   /**
-   * Returns the value of the '<em><b>Partof</b></em>' containment reference list.
-   * The list contents are of type {@link rslingo.rslil4privacy.rSLIL4Privacy.Partof}.
+   * Returns the value of the '<em><b>Recipient Part</b></em>' containment reference list.
+   * The list contents are of type {@link rslingo.rslil4privacy.rSLIL4Privacy.RecipientPart}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Partof</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Recipient Part</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Partof</em>' containment reference list.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRecipient_Partof()
+   * @return the value of the '<em>Recipient Part</em>' containment reference list.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRecipient_RecipientPart()
    * @model containment="true"
    * @generated
    */
-  EList<Partof> getPartof();
+  EList<RecipientPart> getRecipientPart();
 
   /**
-   * Returns the value of the '<em><b>Recipient Scope Kind</b></em>' attribute.
+   * Returns the value of the '<em><b>Scope</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Recipient Scope Kind</em>' attribute isn't clear,
+   * If the meaning of the '<em>Scope</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Recipient Scope Kind</em>' attribute.
-   * @see #setRecipientScopeKind(String)
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRecipient_RecipientScopeKind()
+   * @return the value of the '<em>Scope</em>' attribute.
+   * @see #setScope(String)
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRecipient_Scope()
    * @model
    * @generated
    */
-  String getRecipientScopeKind();
+  String getScope();
 
   /**
-   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientScopeKind <em>Recipient Scope Kind</em>}' attribute.
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getScope <em>Scope</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Recipient Scope Kind</em>' attribute.
-   * @see #getRecipientScopeKind()
+   * @param value the new value of the '<em>Scope</em>' attribute.
+   * @see #getScope()
    * @generated
    */
-  void setRecipientScopeKind(String value);
+  void setScope(String value);
 
   /**
-   * Returns the value of the '<em><b>Recipient Type Kind</b></em>' attribute.
+   * Returns the value of the '<em><b>Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Recipient Type Kind</em>' attribute isn't clear,
+   * If the meaning of the '<em>Type</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Recipient Type Kind</em>' attribute.
-   * @see #setRecipientTypeKind(String)
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRecipient_RecipientTypeKind()
+   * @return the value of the '<em>Type</em>' attribute.
+   * @see #setType(String)
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRecipient_Type()
    * @model
    * @generated
    */
-  String getRecipientTypeKind();
+  String getType();
 
   /**
-   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getRecipientTypeKind <em>Recipient Type Kind</em>}' attribute.
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Recipient#getType <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Recipient Type Kind</em>' attribute.
-   * @see #getRecipientTypeKind()
+   * @param value the new value of the '<em>Type</em>' attribute.
+   * @see #getType()
    * @generated
    */
-  void setRecipientTypeKind(String value);
+  void setType(String value);
 
 } // Recipient

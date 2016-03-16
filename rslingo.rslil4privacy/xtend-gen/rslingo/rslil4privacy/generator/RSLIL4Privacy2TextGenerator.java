@@ -17,17 +17,17 @@ import rslingo.rslil4privacy.rSLIL4Privacy.Collection;
 import rslingo.rslil4privacy.rSLIL4Privacy.Disclosure;
 import rslingo.rslil4privacy.rSLIL4Privacy.Enforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.Informative;
-import rslingo.rslil4privacy.rSLIL4Privacy.Partof;
 import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
 import rslingo.rslil4privacy.rSLIL4Privacy.PrivateData;
 import rslingo.rslil4privacy.rSLIL4Privacy.Recipient;
+import rslingo.rslil4privacy.rSLIL4Privacy.RecipientPart;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipientTarget;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToService;
-import rslingo.rslil4privacy.rSLIL4Privacy.RefertoEnforcement;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientTarget;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefService;
 import rslingo.rslil4privacy.rSLIL4Privacy.Retention;
 import rslingo.rslil4privacy.rSLIL4Privacy.Service;
-import rslingo.rslil4privacy.rSLIL4Privacy.ServicePartof;
+import rslingo.rslil4privacy.rSLIL4Privacy.ServicePart;
 import rslingo.rslil4privacy.rSLIL4Privacy.Usage;
 
 /**
@@ -44,10 +44,10 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     TreeIterator<EObject> _allContents = resource.getAllContents();
     Iterator<Policy> _filter = Iterators.<Policy>filter(_allContents, Policy.class);
     final Function1<Policy, CharSequence> _function = (Policy it) -> {
-      return this.compilepo(it);
+      return this.compile(it);
     };
     Iterator<CharSequence> _map = IteratorExtensions.<Policy, CharSequence>map(_filter, _function);
-    String _join = IteratorExtensions.join(_map, "\r\n\r\n");
+    String _join = IteratorExtensions.join(_map, " ");
     fsa.generateFile(_plus, _join);
   }
   
@@ -58,7 +58,7 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     return name.substring(0, _indexOf);
   }
   
-  public CharSequence compilepo(final Policy policy) {
+  public CharSequence compile(final Policy policy) {
     StringConcatenation _builder = new StringConcatenation();
     String _name = policy.getName();
     _builder.append(_name, "");
@@ -78,9 +78,9 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
         _builder.newLine();
         {
           EList<Enforcement> _enforcement_1 = policy.getEnforcement();
-          for(final Enforcement x : _enforcement_1) {
-            CharSequence _compileEn = this.compileEn(x);
-            _builder.append(_compileEn, "");
+          for(final Enforcement e : _enforcement_1) {
+            CharSequence _compile = this.compile(e);
+            _builder.append(_compile, "");
           }
         }
       }
@@ -98,9 +98,9 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
         _builder.newLine();
         {
           EList<Service> _service_1 = policy.getService();
-          for(final Service x_1 : _service_1) {
-            CharSequence _compileSer = this.compileSer(x_1);
-            _builder.append(_compileSer, "");
+          for(final Service s : _service_1) {
+            CharSequence _compile_1 = this.compile(s);
+            _builder.append(_compile_1, "");
           }
         }
       }
@@ -118,9 +118,9 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
         _builder.newLine();
         {
           EList<Recipient> _recipient_1 = policy.getRecipient();
-          for(final Recipient x_2 : _recipient_1) {
-            CharSequence _compileRec = this.compileRec(x_2);
-            _builder.append(_compileRec, "");
+          for(final Recipient r : _recipient_1) {
+            CharSequence _compile_2 = this.compile(r);
+            _builder.append(_compile_2, "");
           }
         }
       }
@@ -138,9 +138,9 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
         _builder.newLine();
         {
           EList<PrivateData> _privateData_1 = policy.getPrivateData();
-          for(final PrivateData x_3 : _privateData_1) {
-            CharSequence _compilePr = this.compilePr(x_3);
-            _builder.append(_compilePr, "");
+          for(final PrivateData p : _privateData_1) {
+            CharSequence _compile_3 = this.compile(p);
+            _builder.append(_compile_3, "");
           }
         }
       }
@@ -158,15 +158,14 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
         _builder.newLine();
         {
           EList<Collection> _collection_1 = policy.getCollection();
-          for(final Collection x_4 : _collection_1) {
-            CharSequence _compilecol = this.compilecol(x_4);
-            _builder.append(_compilecol, "");
+          for(final Collection c : _collection_1) {
+            CharSequence _compile_4 = this.compile(c);
+            _builder.append(_compile_4, "");
           }
         }
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.newLine();
     {
       EList<Disclosure> _disclosure = policy.getDisclosure();
       boolean _isEmpty_5 = _disclosure.isEmpty();
@@ -179,9 +178,9 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
         _builder.newLine();
         {
           EList<Disclosure> _disclosure_1 = policy.getDisclosure();
-          for(final Disclosure x_5 : _disclosure_1) {
-            CharSequence _compiledis = this.compiledis(x_5);
-            _builder.append(_compiledis, "");
+          for(final Disclosure d : _disclosure_1) {
+            CharSequence _compile_5 = this.compile(d);
+            _builder.append(_compile_5, "");
           }
         }
       }
@@ -199,9 +198,9 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
         _builder.newLine();
         {
           EList<Retention> _retention_1 = policy.getRetention();
-          for(final Retention x_6 : _retention_1) {
-            CharSequence _compileret = this.compileret(x_6);
-            _builder.append(_compileret, "");
+          for(final Retention r_1 : _retention_1) {
+            CharSequence _compile_6 = this.compile(r_1);
+            _builder.append(_compile_6, "");
           }
         }
       }
@@ -219,9 +218,9 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
         _builder.newLine();
         {
           EList<Usage> _usage_1 = policy.getUsage();
-          for(final Usage x_7 : _usage_1) {
-            CharSequence _compileuset = this.compileuset(x_7);
-            _builder.append(_compileuset, "");
+          for(final Usage u : _usage_1) {
+            CharSequence _compile_7 = this.compile(u);
+            _builder.append(_compile_7, "");
           }
         }
       }
@@ -239,9 +238,9 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
         _builder.newLine();
         {
           EList<Informative> _informative_1 = policy.getInformative();
-          for(final Informative x_8 : _informative_1) {
-            CharSequence _compileinf = this.compileinf(x_8);
-            _builder.append(_compileinf, "");
+          for(final Informative i : _informative_1) {
+            CharSequence _compile_8 = this.compile(i);
+            _builder.append(_compile_8, "");
           }
         }
       }
@@ -250,52 +249,52 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence compileEn(final Enforcement En) {
+  public CharSequence compile(final Enforcement e) {
     StringConcatenation _builder = new StringConcatenation();
-    String _name = En.getName();
+    String _name = e.getName();
     _builder.append(_name, "");
     _builder.append(".");
-    String _enforcementName = En.getEnforcementName();
+    String _enforcementName = e.getEnforcementName();
     _builder.append(_enforcementName, "");
     _builder.append("(");
-    String _enforcementKind = En.getEnforcementKind();
-    _builder.append(_enforcementKind, "");
+    String _type = e.getType();
+    _builder.append(_type, "");
     _builder.append("):");
     _builder.newLineIfNotEmpty();
-    String _enforcementDescription = En.getEnforcementDescription();
-    _builder.append(_enforcementDescription, "");
+    String _description = e.getDescription();
+    _builder.append(_description, "");
     _builder.append(",");
     _builder.newLineIfNotEmpty();
     return _builder;
   }
   
-  public CharSequence compileSer(final Service se) {
+  public CharSequence compile(final Service s) {
     StringConcatenation _builder = new StringConcatenation();
-    String _servicename = se.getServicename();
-    _builder.append(_servicename, "");
+    String _serviceName = s.getServiceName();
+    _builder.append(_serviceName, "");
     _builder.append(":");
-    String _description = se.getDescription();
+    String _description = s.getDescription();
     _builder.append(_description, "");
     _builder.append(",");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     {
-      EList<ServicePartof> _servicepartof = se.getServicepartof();
-      boolean _isEmpty = _servicepartof.isEmpty();
+      EList<ServicePart> _servicePart = s.getServicePart();
+      boolean _isEmpty = _servicePart.isEmpty();
       boolean _not = (!_isEmpty);
       if (_not) {
         _builder.append("Service_Part:");
         {
-          EList<ServicePartof> _servicepartof_1 = se.getServicepartof();
+          EList<ServicePart> _servicePart_1 = s.getServicePart();
           boolean _hasElements = false;
-          for(final ServicePartof part : _servicepartof_1) {
+          for(final ServicePart part : _servicePart_1) {
             if (!_hasElements) {
               _hasElements = true;
             } else {
               _builder.appendImmediate(",", "\t");
             }
-            CharSequence _compilerespart = this.compilerespart(part);
-            _builder.append(_compilerespart, "\t");
+            CharSequence _compileServicePart = this.compileServicePart(part);
+            _builder.append(_compileServicePart, "\t");
           }
         }
         _builder.append(",");
@@ -304,22 +303,22 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     {
-      EList<RefPrivateData> _refprivatedata = se.getRefprivatedata();
-      boolean _isEmpty_1 = _refprivatedata.isEmpty();
+      EList<RefPrivateData> _refPrivateData = s.getRefPrivateData();
+      boolean _isEmpty_1 = _refPrivateData.isEmpty();
       boolean _not_1 = (!_isEmpty_1);
       if (_not_1) {
         _builder.append("Refers To PrivateData:");
         {
-          EList<RefPrivateData> _refprivatedata_1 = se.getRefprivatedata();
+          EList<RefPrivateData> _refPrivateData_1 = s.getRefPrivateData();
           boolean _hasElements_1 = false;
-          for(final RefPrivateData part_1 : _refprivatedata_1) {
+          for(final RefPrivateData part_1 : _refPrivateData_1) {
             if (!_hasElements_1) {
               _hasElements_1 = true;
             } else {
               _builder.appendImmediate(",", "\t");
             }
-            CharSequence _compilerrefp = this.compilerrefp(part_1);
-            _builder.append(_compilerrefp, "\t");
+            CharSequence _compileRefPrivateData = this.compileRefPrivateData(part_1);
+            _builder.append(_compileRefPrivateData, "\t");
           }
         }
         _builder.append(",");
@@ -329,19 +328,19 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence compileRec(final Recipient r) {
+  public CharSequence compile(final Recipient r) {
     StringConcatenation _builder = new StringConcatenation();
     String _name = r.getName();
     _builder.append(_name, "");
     _builder.append(".");
-    String _recipientname = r.getRecipientname();
-    _builder.append(_recipientname, "");
+    String _recipientName = r.getRecipientName();
+    _builder.append(_recipientName, "");
     _builder.append("(");
-    String _recipientScopeKind = r.getRecipientScopeKind();
-    _builder.append(_recipientScopeKind, "");
+    String _scope = r.getScope();
+    _builder.append(_scope, "");
     _builder.append("-");
-    String _recipientTypeKind = r.getRecipientTypeKind();
-    _builder.append(_recipientTypeKind, "");
+    String _type = r.getType();
+    _builder.append(_type, "");
     _builder.append("):");
     _builder.newLineIfNotEmpty();
     _builder.append("   ");
@@ -351,22 +350,22 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     _builder.newLineIfNotEmpty();
     _builder.append("   ");
     {
-      EList<Partof> _partof = r.getPartof();
-      boolean _isEmpty = _partof.isEmpty();
+      EList<RecipientPart> _recipientPart = r.getRecipientPart();
+      boolean _isEmpty = _recipientPart.isEmpty();
       boolean _not = (!_isEmpty);
       if (_not) {
         _builder.append("Recipient_Part:");
         {
-          EList<Partof> _partof_1 = r.getPartof();
+          EList<RecipientPart> _recipientPart_1 = r.getRecipientPart();
           boolean _hasElements = false;
-          for(final Partof part : _partof_1) {
+          for(final RecipientPart part : _recipientPart_1) {
             if (!_hasElements) {
               _hasElements = true;
             } else {
               _builder.appendImmediate(",", "   ");
             }
-            CharSequence _compilepart = this.compilepart(part);
-            _builder.append(_compilepart, "   ");
+            CharSequence _compileRecipientPart = this.compileRecipientPart(part);
+            _builder.append(_compileRecipientPart, "   ");
           }
         }
         _builder.append(",");
@@ -376,22 +375,22 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence compilePr(final PrivateData e) {
+  public CharSequence compile(final PrivateData p) {
     StringConcatenation _builder = new StringConcatenation();
-    String _name = e.getName();
+    String _name = p.getName();
     _builder.append(_name, "");
     _builder.append("(");
-    String _privateDataKind = e.getPrivateDataKind();
-    _builder.append(_privateDataKind, "");
+    String _type = p.getType();
+    _builder.append(_type, "");
     _builder.append("): ");
-    String _privatedata = e.getPrivatedata();
-    _builder.append(_privatedata, "");
+    String _description = p.getDescription();
+    _builder.append(_description, "");
     _builder.append(",");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.append("Attribute:");
     {
-      EList<Attribute> _attribute = e.getAttribute();
+      EList<Attribute> _attribute = p.getAttribute();
       boolean _hasElements = false;
       for(final Attribute a : _attribute) {
         if (!_hasElements) {
@@ -412,41 +411,41 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     String _name = a.getName();
     _builder.append(_name, "");
     _builder.append("(");
-    String _attributeName = a.getAttributeName();
-    _builder.append(_attributeName, "");
+    String _name_1 = a.getName();
+    _builder.append(_name_1, "");
     _builder.append(")");
     return _builder;
   }
   
-  public CharSequence compilecol(final Collection col) {
+  public CharSequence compile(final Collection c) {
     StringConcatenation _builder = new StringConcatenation();
-    String _name = col.getName();
+    String _name = c.getName();
     _builder.append(_name, "");
     _builder.append("(");
-    String _modalitykind = col.getModalitykind();
-    _builder.append(_modalitykind, "");
+    String _modality = c.getModality();
+    _builder.append(_modality, "");
     _builder.append("):");
-    String _description = col.getDescription();
+    String _description = c.getDescription();
     _builder.append(_description, "");
     _builder.append(",");
     _builder.newLineIfNotEmpty();
     {
-      EList<ReferToService> _refertoservice = col.getRefertoservice();
-      boolean _isEmpty = _refertoservice.isEmpty();
+      EList<RefService> _refService = c.getRefService();
+      boolean _isEmpty = _refService.isEmpty();
       boolean _not = (!_isEmpty);
       if (_not) {
         _builder.append("Refers To Service:");
         {
-          EList<ReferToService> _refertoservice_1 = col.getRefertoservice();
+          EList<RefService> _refService_1 = c.getRefService();
           boolean _hasElements = false;
-          for(final ReferToService b : _refertoservice_1) {
+          for(final RefService s : _refService_1) {
             if (!_hasElements) {
               _hasElements = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compilerespart = this.compilerespart(b);
-            _builder.append(_compilerespart, "");
+            CharSequence _compileRefService = this.compileRefService(s);
+            _builder.append(_compileRefService, "");
           }
         }
         _builder.append(",");
@@ -454,22 +453,22 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     }
     _builder.newLineIfNotEmpty();
     {
-      EList<RefPrivateData> _refprivatedata = col.getRefprivatedata();
-      boolean _isEmpty_1 = _refprivatedata.isEmpty();
+      EList<RefPrivateData> _refPrivateData = c.getRefPrivateData();
+      boolean _isEmpty_1 = _refPrivateData.isEmpty();
       boolean _not_1 = (!_isEmpty_1);
       if (_not_1) {
         _builder.append("Refers To PrivateData:");
         {
-          EList<RefPrivateData> _refprivatedata_1 = col.getRefprivatedata();
+          EList<RefPrivateData> _refPrivateData_1 = c.getRefPrivateData();
           boolean _hasElements_1 = false;
-          for(final RefPrivateData p : _refprivatedata_1) {
+          for(final RefPrivateData p : _refPrivateData_1) {
             if (!_hasElements_1) {
               _hasElements_1 = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compilerrefp = this.compilerrefp(p);
-            _builder.append(_compilerrefp, "");
+            CharSequence _compileRefPrivateData = this.compileRefPrivateData(p);
+            _builder.append(_compileRefPrivateData, "");
           }
         }
         _builder.append(",");
@@ -477,22 +476,22 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     }
     _builder.newLineIfNotEmpty();
     {
-      EList<RefertoEnforcement> _refertoEnforcement = col.getRefertoEnforcement();
-      boolean _isEmpty_2 = _refertoEnforcement.isEmpty();
+      EList<RefEnforcement> _refEnforcement = c.getRefEnforcement();
+      boolean _isEmpty_2 = _refEnforcement.isEmpty();
       boolean _not_2 = (!_isEmpty_2);
       if (_not_2) {
         _builder.append("Refers To Enforcement:");
         {
-          EList<RefertoEnforcement> _refertoEnforcement_1 = col.getRefertoEnforcement();
+          EList<RefEnforcement> _refEnforcement_1 = c.getRefEnforcement();
           boolean _hasElements_2 = false;
-          for(final RefertoEnforcement p_1 : _refertoEnforcement_1) {
+          for(final RefEnforcement e : _refEnforcement_1) {
             if (!_hasElements_2) {
               _hasElements_2 = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compilerreEn = this.compilerreEn(p_1);
-            _builder.append(_compilerreEn, "");
+            CharSequence _compileRefEnforcement = this.compileRefEnforcement(e);
+            _builder.append(_compileRefEnforcement, "");
           }
         }
         _builder.append(",");
@@ -502,35 +501,35 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence compiledis(final Disclosure dis) {
+  public CharSequence compile(final Disclosure d) {
     StringConcatenation _builder = new StringConcatenation();
-    String _name = dis.getName();
+    String _name = d.getName();
     _builder.append(_name, "");
     _builder.append("(");
-    String _modalitykind = dis.getModalitykind();
-    _builder.append(_modalitykind, "");
+    String _modality = d.getModality();
+    _builder.append(_modality, "");
     _builder.append("):");
-    String _description = dis.getDescription();
+    String _description = d.getDescription();
     _builder.append(_description, "");
     _builder.append(",");
     _builder.newLineIfNotEmpty();
     {
-      EList<ReferToRecipientTarget> _referToRecipienttarget = dis.getReferToRecipienttarget();
-      boolean _isEmpty = _referToRecipienttarget.isEmpty();
+      EList<RefRecipientTarget> _refRecipientTarget = d.getRefRecipientTarget();
+      boolean _isEmpty = _refRecipientTarget.isEmpty();
       boolean _not = (!_isEmpty);
       if (_not) {
         _builder.append("Refers To Recipient:");
         {
-          EList<ReferToRecipientTarget> _referToRecipienttarget_1 = dis.getReferToRecipienttarget();
+          EList<RefRecipientTarget> _refRecipientTarget_1 = d.getRefRecipientTarget();
           boolean _hasElements = false;
-          for(final ReferToRecipientTarget p : _referToRecipienttarget_1) {
+          for(final RefRecipientTarget p : _refRecipientTarget_1) {
             if (!_hasElements) {
               _hasElements = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compileres = this.compileres(p);
-            _builder.append(_compileres, "");
+            CharSequence _compileRefRecipientTarget = this.compileRefRecipientTarget(p);
+            _builder.append(_compileRefRecipientTarget, "");
           }
         }
         _builder.append(",");
@@ -538,22 +537,22 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     }
     _builder.newLineIfNotEmpty();
     {
-      EList<ReferToService> _refertoservice = dis.getRefertoservice();
-      boolean _isEmpty_1 = _refertoservice.isEmpty();
+      EList<RefService> _refService = d.getRefService();
+      boolean _isEmpty_1 = _refService.isEmpty();
       boolean _not_1 = (!_isEmpty_1);
       if (_not_1) {
         _builder.append("Refers To Service:");
         {
-          EList<ReferToService> _refertoservice_1 = dis.getRefertoservice();
+          EList<RefService> _refService_1 = d.getRefService();
           boolean _hasElements_1 = false;
-          for(final ReferToService b : _refertoservice_1) {
+          for(final RefService s : _refService_1) {
             if (!_hasElements_1) {
               _hasElements_1 = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compilerespart = this.compilerespart(b);
-            _builder.append(_compilerespart, "");
+            CharSequence _compileRefService = this.compileRefService(s);
+            _builder.append(_compileRefService, "");
           }
         }
         _builder.append(",");
@@ -561,22 +560,22 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     }
     _builder.newLineIfNotEmpty();
     {
-      EList<RefPrivateData> _refprivatedata = dis.getRefprivatedata();
-      boolean _isEmpty_2 = _refprivatedata.isEmpty();
+      EList<RefPrivateData> _refPrivateData = d.getRefPrivateData();
+      boolean _isEmpty_2 = _refPrivateData.isEmpty();
       boolean _not_2 = (!_isEmpty_2);
       if (_not_2) {
         _builder.append("Refers To PrivateData:");
         {
-          EList<RefPrivateData> _refprivatedata_1 = dis.getRefprivatedata();
+          EList<RefPrivateData> _refPrivateData_1 = d.getRefPrivateData();
           boolean _hasElements_2 = false;
-          for(final RefPrivateData p_1 : _refprivatedata_1) {
+          for(final RefPrivateData p_1 : _refPrivateData_1) {
             if (!_hasElements_2) {
               _hasElements_2 = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compilerrefp = this.compilerrefp(p_1);
-            _builder.append(_compilerrefp, "");
+            CharSequence _compileRefPrivateData = this.compileRefPrivateData(p_1);
+            _builder.append(_compileRefPrivateData, "");
           }
         }
         _builder.append(",");
@@ -584,22 +583,22 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     }
     _builder.newLineIfNotEmpty();
     {
-      EList<RefertoEnforcement> _refertoEnforcement = dis.getRefertoEnforcement();
-      boolean _isEmpty_3 = _refertoEnforcement.isEmpty();
+      EList<RefEnforcement> _refEnforcement = d.getRefEnforcement();
+      boolean _isEmpty_3 = _refEnforcement.isEmpty();
       boolean _not_3 = (!_isEmpty_3);
       if (_not_3) {
         _builder.append("Refers To Enforcement:");
         {
-          EList<RefertoEnforcement> _refertoEnforcement_1 = dis.getRefertoEnforcement();
+          EList<RefEnforcement> _refEnforcement_1 = d.getRefEnforcement();
           boolean _hasElements_3 = false;
-          for(final RefertoEnforcement d : _refertoEnforcement_1) {
+          for(final RefEnforcement e : _refEnforcement_1) {
             if (!_hasElements_3) {
               _hasElements_3 = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compilerreEn = this.compilerreEn(d);
-            _builder.append(_compilerreEn, "");
+            CharSequence _compileRefEnforcement = this.compileRefEnforcement(e);
+            _builder.append(_compileRefEnforcement, "");
           }
         }
         _builder.append(",");
@@ -609,38 +608,38 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence compileret(final Retention ret) {
+  public CharSequence compile(final Retention r) {
     StringConcatenation _builder = new StringConcatenation();
-    String _name = ret.getName();
+    String _name = r.getName();
     _builder.append(_name, "");
     _builder.append("(");
-    String _modalitykind = ret.getModalitykind();
-    _builder.append(_modalitykind, "");
+    String _modality = r.getModality();
+    _builder.append(_modality, "");
     _builder.append("-");
-    String _period = ret.getPeriod();
+    String _period = r.getPeriod();
     _builder.append(_period, "");
     _builder.append("):");
-    String _description = ret.getDescription();
+    String _description = r.getDescription();
     _builder.append(_description, "");
     _builder.append(",");
     _builder.newLineIfNotEmpty();
     {
-      EList<ReferToService> _refertoservice = ret.getRefertoservice();
-      boolean _isEmpty = _refertoservice.isEmpty();
+      EList<RefService> _refService = r.getRefService();
+      boolean _isEmpty = _refService.isEmpty();
       boolean _not = (!_isEmpty);
       if (_not) {
         _builder.append("Refers To Service:");
         {
-          EList<ReferToService> _refertoservice_1 = ret.getRefertoservice();
+          EList<RefService> _refService_1 = r.getRefService();
           boolean _hasElements = false;
-          for(final ReferToService b : _refertoservice_1) {
+          for(final RefService s : _refService_1) {
             if (!_hasElements) {
               _hasElements = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compilerespart = this.compilerespart(b);
-            _builder.append(_compilerespart, "");
+            CharSequence _compileRefService = this.compileRefService(s);
+            _builder.append(_compileRefService, "");
           }
         }
         _builder.append(",");
@@ -648,22 +647,22 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     }
     _builder.newLineIfNotEmpty();
     {
-      EList<RefPrivateData> _refprivatedata = ret.getRefprivatedata();
-      boolean _isEmpty_1 = _refprivatedata.isEmpty();
+      EList<RefPrivateData> _refPrivateData = r.getRefPrivateData();
+      boolean _isEmpty_1 = _refPrivateData.isEmpty();
       boolean _not_1 = (!_isEmpty_1);
       if (_not_1) {
         _builder.append("Refers To PrivateData:");
         {
-          EList<RefPrivateData> _refprivatedata_1 = ret.getRefprivatedata();
+          EList<RefPrivateData> _refPrivateData_1 = r.getRefPrivateData();
           boolean _hasElements_1 = false;
-          for(final RefPrivateData p : _refprivatedata_1) {
+          for(final RefPrivateData p : _refPrivateData_1) {
             if (!_hasElements_1) {
               _hasElements_1 = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compilerrefp = this.compilerrefp(p);
-            _builder.append(_compilerrefp, "");
+            CharSequence _compileRefPrivateData = this.compileRefPrivateData(p);
+            _builder.append(_compileRefPrivateData, "");
           }
         }
         _builder.append(",");
@@ -671,22 +670,22 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     }
     _builder.newLineIfNotEmpty();
     {
-      EList<RefertoEnforcement> _refertoEnforcement = ret.getRefertoEnforcement();
-      boolean _isEmpty_2 = _refertoEnforcement.isEmpty();
+      EList<RefEnforcement> _refEnforcement = r.getRefEnforcement();
+      boolean _isEmpty_2 = _refEnforcement.isEmpty();
       boolean _not_2 = (!_isEmpty_2);
       if (_not_2) {
         _builder.append("Refers To Enforcement:");
         {
-          EList<RefertoEnforcement> _refertoEnforcement_1 = ret.getRefertoEnforcement();
+          EList<RefEnforcement> _refEnforcement_1 = r.getRefEnforcement();
           boolean _hasElements_2 = false;
-          for(final RefertoEnforcement p_1 : _refertoEnforcement_1) {
+          for(final RefEnforcement e : _refEnforcement_1) {
             if (!_hasElements_2) {
               _hasElements_2 = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compilerreEn = this.compilerreEn(p_1);
-            _builder.append(_compilerreEn, "");
+            CharSequence _compileRefEnforcement = this.compileRefEnforcement(e);
+            _builder.append(_compileRefEnforcement, "");
           }
         }
         _builder.append(",");
@@ -696,35 +695,35 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence compileuset(final Usage u) {
+  public CharSequence compile(final Usage u) {
     StringConcatenation _builder = new StringConcatenation();
     String _name = u.getName();
     _builder.append(_name, "");
     _builder.append("(");
-    String _modalitykind = u.getModalitykind();
-    _builder.append(_modalitykind, "");
+    String _modality = u.getModality();
+    _builder.append(_modality, "");
     _builder.append("):");
     String _description = u.getDescription();
     _builder.append(_description, "");
     _builder.append(",");
     _builder.newLineIfNotEmpty();
     {
-      EList<ReferToService> _refertoservice = u.getRefertoservice();
-      boolean _isEmpty = _refertoservice.isEmpty();
+      EList<RefService> _refService = u.getRefService();
+      boolean _isEmpty = _refService.isEmpty();
       boolean _not = (!_isEmpty);
       if (_not) {
         _builder.append("Refers To Service:");
         {
-          EList<ReferToService> _refertoservice_1 = u.getRefertoservice();
+          EList<RefService> _refService_1 = u.getRefService();
           boolean _hasElements = false;
-          for(final ReferToService b : _refertoservice_1) {
+          for(final RefService b : _refService_1) {
             if (!_hasElements) {
               _hasElements = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compilerespart = this.compilerespart(b);
-            _builder.append(_compilerespart, "");
+            CharSequence _compileRefService = this.compileRefService(b);
+            _builder.append(_compileRefService, "");
           }
         }
         _builder.append(",");
@@ -732,22 +731,22 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     }
     _builder.newLineIfNotEmpty();
     {
-      EList<RefPrivateData> _refprivatedata = u.getRefprivatedata();
-      boolean _isEmpty_1 = _refprivatedata.isEmpty();
+      EList<RefPrivateData> _refPrivateData = u.getRefPrivateData();
+      boolean _isEmpty_1 = _refPrivateData.isEmpty();
       boolean _not_1 = (!_isEmpty_1);
       if (_not_1) {
         _builder.append("Refers To PrivateData:");
         {
-          EList<RefPrivateData> _refprivatedata_1 = u.getRefprivatedata();
+          EList<RefPrivateData> _refPrivateData_1 = u.getRefPrivateData();
           boolean _hasElements_1 = false;
-          for(final RefPrivateData p : _refprivatedata_1) {
+          for(final RefPrivateData p : _refPrivateData_1) {
             if (!_hasElements_1) {
               _hasElements_1 = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compilerrefp = this.compilerrefp(p);
-            _builder.append(_compilerrefp, "");
+            CharSequence _compileRefPrivateData = this.compileRefPrivateData(p);
+            _builder.append(_compileRefPrivateData, "");
           }
         }
         _builder.append(",");
@@ -755,22 +754,22 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     }
     _builder.newLineIfNotEmpty();
     {
-      EList<RefertoEnforcement> _refertoEnforcement = u.getRefertoEnforcement();
-      boolean _isEmpty_2 = _refertoEnforcement.isEmpty();
+      EList<RefEnforcement> _refEnforcement = u.getRefEnforcement();
+      boolean _isEmpty_2 = _refEnforcement.isEmpty();
       boolean _not_2 = (!_isEmpty_2);
       if (_not_2) {
         _builder.append("Refers To Enforcement:");
         {
-          EList<RefertoEnforcement> _refertoEnforcement_1 = u.getRefertoEnforcement();
+          EList<RefEnforcement> _refEnforcement_1 = u.getRefEnforcement();
           boolean _hasElements_2 = false;
-          for(final RefertoEnforcement p_1 : _refertoEnforcement_1) {
+          for(final RefEnforcement e : _refEnforcement_1) {
             if (!_hasElements_2) {
               _hasElements_2 = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compilerreEn = this.compilerreEn(p_1);
-            _builder.append(_compilerreEn, "");
+            CharSequence _compileRefEnforcement = this.compileRefEnforcement(e);
+            _builder.append(_compileRefEnforcement, "");
           }
         }
         _builder.append(",");
@@ -780,35 +779,35 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence compileinf(final Informative I) {
+  public CharSequence compile(final Informative i) {
     StringConcatenation _builder = new StringConcatenation();
-    String _name = I.getName();
+    String _name = i.getName();
     _builder.append(_name, "");
     _builder.append("(");
-    String _modalitykind = I.getModalitykind();
-    _builder.append(_modalitykind, "");
+    String _modality = i.getModality();
+    _builder.append(_modality, "");
     _builder.append("):");
-    String _description = I.getDescription();
+    String _description = i.getDescription();
     _builder.append(_description, "");
     _builder.append(",");
     _builder.newLineIfNotEmpty();
     {
-      EList<ReferToService> _refertoservice = I.getRefertoservice();
-      boolean _isEmpty = _refertoservice.isEmpty();
+      EList<RefService> _refService = i.getRefService();
+      boolean _isEmpty = _refService.isEmpty();
       boolean _not = (!_isEmpty);
       if (_not) {
         _builder.append("Refers To Service:");
         {
-          EList<ReferToService> _refertoservice_1 = I.getRefertoservice();
+          EList<RefService> _refService_1 = i.getRefService();
           boolean _hasElements = false;
-          for(final ReferToService b : _refertoservice_1) {
+          for(final RefService s : _refService_1) {
             if (!_hasElements) {
               _hasElements = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compilerespart = this.compilerespart(b);
-            _builder.append(_compilerespart, "");
+            CharSequence _compileRefService = this.compileRefService(s);
+            _builder.append(_compileRefService, "");
           }
         }
         _builder.append(",");
@@ -816,22 +815,22 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     }
     _builder.newLineIfNotEmpty();
     {
-      EList<RefPrivateData> _refprivatedata = I.getRefprivatedata();
-      boolean _isEmpty_1 = _refprivatedata.isEmpty();
+      EList<RefPrivateData> _refPrivateData = i.getRefPrivateData();
+      boolean _isEmpty_1 = _refPrivateData.isEmpty();
       boolean _not_1 = (!_isEmpty_1);
       if (_not_1) {
         _builder.append("Refers To PrivateData:");
         {
-          EList<RefPrivateData> _refprivatedata_1 = I.getRefprivatedata();
+          EList<RefPrivateData> _refPrivateData_1 = i.getRefPrivateData();
           boolean _hasElements_1 = false;
-          for(final RefPrivateData p : _refprivatedata_1) {
+          for(final RefPrivateData p : _refPrivateData_1) {
             if (!_hasElements_1) {
               _hasElements_1 = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compilerrefp = this.compilerrefp(p);
-            _builder.append(_compilerrefp, "");
+            CharSequence _compileRefPrivateData = this.compileRefPrivateData(p);
+            _builder.append(_compileRefPrivateData, "");
           }
         }
         _builder.append(",");
@@ -839,22 +838,22 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     }
     _builder.newLineIfNotEmpty();
     {
-      EList<RefertoEnforcement> _refertoEnforcement = I.getRefertoEnforcement();
-      boolean _isEmpty_2 = _refertoEnforcement.isEmpty();
+      EList<RefEnforcement> _refEnforcement = i.getRefEnforcement();
+      boolean _isEmpty_2 = _refEnforcement.isEmpty();
       boolean _not_2 = (!_isEmpty_2);
       if (_not_2) {
         _builder.append("Refers To Enforcement:");
         {
-          EList<RefertoEnforcement> _refertoEnforcement_1 = I.getRefertoEnforcement();
+          EList<RefEnforcement> _refEnforcement_1 = i.getRefEnforcement();
           boolean _hasElements_2 = false;
-          for(final RefertoEnforcement p_1 : _refertoEnforcement_1) {
+          for(final RefEnforcement e : _refEnforcement_1) {
             if (!_hasElements_2) {
               _hasElements_2 = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compilerreEn = this.compilerreEn(p_1);
-            _builder.append(_compilerreEn, "");
+            CharSequence _compileRefEnforcement = this.compileRefEnforcement(e);
+            _builder.append(_compileRefEnforcement, "");
           }
         }
         _builder.append(",");
@@ -864,59 +863,59 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence compilepe(final Retention pe) {
+  public CharSequence compilePeriod(final Retention r) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("   ");
     _builder.append("Retention Period:");
-    String _period = pe.getPeriod();
+    String _period = r.getPeriod();
     _builder.append(_period, "   ");
     return _builder;
   }
   
-  public CharSequence compileres(final ReferToRecipientTarget r) {
+  public CharSequence compileRefRecipientTarget(final RefRecipientTarget r) {
     StringConcatenation _builder = new StringConcatenation();
-    Recipient _refertore = r.getRefertore();
-    String _name = _refertore.getName();
+    Recipient _refRecipientTarget = r.getRefRecipientTarget();
+    String _name = _refRecipientTarget.getName();
     _builder.append(_name, "");
     return _builder;
   }
   
-  public CharSequence compilerespart(final ReferToService sp) {
+  public CharSequence compileRefService(final RefService r) {
     StringConcatenation _builder = new StringConcatenation();
-    Service _refertose = sp.getRefertose();
-    String _name = _refertose.getName();
+    Service _refService = r.getRefService();
+    String _name = _refService.getName();
     _builder.append(_name, "");
     return _builder;
   }
   
-  public CharSequence compilerespart(final ServicePartof sp) {
+  public CharSequence compileServicePart(final ServicePart s) {
     StringConcatenation _builder = new StringConcatenation();
-    Service _refertoservice = sp.getRefertoservice();
-    String _name = _refertoservice.getName();
+    Service _servicePart = s.getServicePart();
+    String _name = _servicePart.getName();
     _builder.append(_name, "");
     return _builder;
   }
   
-  public CharSequence compilerrefp(final RefPrivateData pp) {
+  public CharSequence compileRefPrivateData(final RefPrivateData r) {
     StringConcatenation _builder = new StringConcatenation();
-    PrivateData _refpr = pp.getRefpr();
-    String _name = _refpr.getName();
+    PrivateData _refPrivateData = r.getRefPrivateData();
+    String _name = _refPrivateData.getName();
     _builder.append(_name, "");
     return _builder;
   }
   
-  public CharSequence compilepart(final Partof part) {
+  public CharSequence compileRecipientPart(final RecipientPart r) {
     StringConcatenation _builder = new StringConcatenation();
-    Recipient _partof = part.getPartof();
-    String _name = _partof.getName();
+    Recipient _recipientPart = r.getRecipientPart();
+    String _name = _recipientPart.getName();
     _builder.append(_name, "");
     return _builder;
   }
   
-  public CharSequence compilerreEn(final RefertoEnforcement en) {
+  public CharSequence compileRefEnforcement(final RefEnforcement e) {
     StringConcatenation _builder = new StringConcatenation();
-    Enforcement _refst = en.getRefst();
-    String _name = _refst.getName();
+    Enforcement _refEnforcement = e.getRefEnforcement();
+    String _name = _refEnforcement.getName();
     _builder.append(_name, "");
     return _builder;
   }

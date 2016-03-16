@@ -12,39 +12,39 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
 import rslingo.rslil4privacy.rSLIL4Privacy.Recipient;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipient;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientTarget;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Refer To Recipient</b></em>'.
+ * An implementation of the model object '<em><b>Ref Recipient Target</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ReferToRecipientImpl#getRefertore <em>Refertore</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientTargetImpl#getRefRecipientTarget <em>Ref Recipient Target</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ReferToRecipientImpl extends MinimalEObjectImpl.Container implements ReferToRecipient
+public class RefRecipientTargetImpl extends MinimalEObjectImpl.Container implements RefRecipientTarget
 {
   /**
-   * The cached value of the '{@link #getRefertore() <em>Refertore</em>}' reference.
+   * The cached value of the '{@link #getRefRecipientTarget() <em>Ref Recipient Target</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRefertore()
+   * @see #getRefRecipientTarget()
    * @generated
    * @ordered
    */
-  protected Recipient refertore;
+  protected Recipient refRecipientTarget;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ReferToRecipientImpl()
+  protected RefRecipientTargetImpl()
   {
     super();
   }
@@ -57,7 +57,7 @@ public class ReferToRecipientImpl extends MinimalEObjectImpl.Container implement
   @Override
   protected EClass eStaticClass()
   {
-    return RSLIL4PrivacyPackage.Literals.REFER_TO_RECIPIENT;
+    return RSLIL4PrivacyPackage.Literals.REF_RECIPIENT_TARGET;
   }
 
   /**
@@ -65,19 +65,19 @@ public class ReferToRecipientImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public Recipient getRefertore()
+  public Recipient getRefRecipientTarget()
   {
-    if (refertore != null && refertore.eIsProxy())
+    if (refRecipientTarget != null && refRecipientTarget.eIsProxy())
     {
-      InternalEObject oldRefertore = (InternalEObject)refertore;
-      refertore = (Recipient)eResolveProxy(oldRefertore);
-      if (refertore != oldRefertore)
+      InternalEObject oldRefRecipientTarget = (InternalEObject)refRecipientTarget;
+      refRecipientTarget = (Recipient)eResolveProxy(oldRefRecipientTarget);
+      if (refRecipientTarget != oldRefRecipientTarget)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSLIL4PrivacyPackage.REFER_TO_RECIPIENT__REFERTORE, oldRefertore, refertore));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSLIL4PrivacyPackage.REF_RECIPIENT_TARGET__REF_RECIPIENT_TARGET, oldRefRecipientTarget, refRecipientTarget));
       }
     }
-    return refertore;
+    return refRecipientTarget;
   }
 
   /**
@@ -85,9 +85,9 @@ public class ReferToRecipientImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public Recipient basicGetRefertore()
+  public Recipient basicGetRefRecipientTarget()
   {
-    return refertore;
+    return refRecipientTarget;
   }
 
   /**
@@ -95,12 +95,12 @@ public class ReferToRecipientImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRefertore(Recipient newRefertore)
+  public void setRefRecipientTarget(Recipient newRefRecipientTarget)
   {
-    Recipient oldRefertore = refertore;
-    refertore = newRefertore;
+    Recipient oldRefRecipientTarget = refRecipientTarget;
+    refRecipientTarget = newRefRecipientTarget;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.REFER_TO_RECIPIENT__REFERTORE, oldRefertore, refertore));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.REF_RECIPIENT_TARGET__REF_RECIPIENT_TARGET, oldRefRecipientTarget, refRecipientTarget));
   }
 
   /**
@@ -113,9 +113,9 @@ public class ReferToRecipientImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.REFER_TO_RECIPIENT__REFERTORE:
-        if (resolve) return getRefertore();
-        return basicGetRefertore();
+      case RSLIL4PrivacyPackage.REF_RECIPIENT_TARGET__REF_RECIPIENT_TARGET:
+        if (resolve) return getRefRecipientTarget();
+        return basicGetRefRecipientTarget();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -130,8 +130,8 @@ public class ReferToRecipientImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.REFER_TO_RECIPIENT__REFERTORE:
-        setRefertore((Recipient)newValue);
+      case RSLIL4PrivacyPackage.REF_RECIPIENT_TARGET__REF_RECIPIENT_TARGET:
+        setRefRecipientTarget((Recipient)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -147,8 +147,8 @@ public class ReferToRecipientImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.REFER_TO_RECIPIENT__REFERTORE:
-        setRefertore((Recipient)null);
+      case RSLIL4PrivacyPackage.REF_RECIPIENT_TARGET__REF_RECIPIENT_TARGET:
+        setRefRecipientTarget((Recipient)null);
         return;
     }
     super.eUnset(featureID);
@@ -164,10 +164,10 @@ public class ReferToRecipientImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.REFER_TO_RECIPIENT__REFERTORE:
-        return refertore != null;
+      case RSLIL4PrivacyPackage.REF_RECIPIENT_TARGET__REF_RECIPIENT_TARGET:
+        return refRecipientTarget != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //ReferToRecipientImpl
+} //RefRecipientTargetImpl

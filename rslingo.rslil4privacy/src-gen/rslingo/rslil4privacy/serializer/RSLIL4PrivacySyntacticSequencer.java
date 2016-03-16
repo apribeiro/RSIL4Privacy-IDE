@@ -34,18 +34,18 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	protected AbstractElementAlias match_Informative___RefersToEnforcementKeyword_12_0_CommaKeyword_12_2__q;
 	protected AbstractElementAlias match_Informative___RefersToPrivateDataKeyword_10_0_CommaKeyword_10_2__q;
 	protected AbstractElementAlias match_Informative___RefersToServiceKeyword_11_0_CommaKeyword_11_2__q;
-	protected AbstractElementAlias match_Partof_HyphenMinusKeyword_1_q;
+	protected AbstractElementAlias match_RecipientPart_HyphenMinusKeyword_1_q;
 	protected AbstractElementAlias match_Recipient___Recipient_PartKeyword_9_0_CommaKeyword_9_2__q;
+	protected AbstractElementAlias match_RefEnforcement_HyphenMinusKeyword_1_q;
 	protected AbstractElementAlias match_RefPrivateData_HyphenMinusKeyword_1_q;
-	protected AbstractElementAlias match_ReferToRecipientSource_HyphenMinusKeyword_1_q;
-	protected AbstractElementAlias match_ReferToRecipientTarget_HyphenMinusKeyword_1_q;
-	protected AbstractElementAlias match_ReferToRecipient_HyphenMinusKeyword_1_q;
-	protected AbstractElementAlias match_ReferToService_HyphenMinusKeyword_1_q;
-	protected AbstractElementAlias match_RefertoEnforcement_HyphenMinusKeyword_1_q;
+	protected AbstractElementAlias match_RefRecipientSource_HyphenMinusKeyword_1_q;
+	protected AbstractElementAlias match_RefRecipientTarget_HyphenMinusKeyword_1_q;
+	protected AbstractElementAlias match_RefRecipient_HyphenMinusKeyword_1_q;
+	protected AbstractElementAlias match_RefService_HyphenMinusKeyword_1_q;
 	protected AbstractElementAlias match_Retention___RefersToEnforcementKeyword_15_0_CommaKeyword_15_2__q;
 	protected AbstractElementAlias match_Retention___RefersToPrivateDataKeyword_13_0_CommaKeyword_13_2__q;
 	protected AbstractElementAlias match_Retention___RefersToServiceKeyword_14_0_CommaKeyword_14_2__q;
-	protected AbstractElementAlias match_ServicePartof_HyphenMinusKeyword_1_q;
+	protected AbstractElementAlias match_ServicePart_HyphenMinusKeyword_1_q;
 	protected AbstractElementAlias match_Service_Service_PartKeyword_8_0_q;
 	protected AbstractElementAlias match_Service___RefersToPrivateDataKeyword_7_0_CommaKeyword_7_2__q;
 	protected AbstractElementAlias match_Usage___RefersToEnforcementKeyword_12_0_CommaKeyword_12_2__q;
@@ -68,18 +68,18 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 		match_Informative___RefersToEnforcementKeyword_12_0_CommaKeyword_12_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getInformativeAccess().getRefersToEnforcementKeyword_12_0()), new TokenAlias(false, false, grammarAccess.getInformativeAccess().getCommaKeyword_12_2()));
 		match_Informative___RefersToPrivateDataKeyword_10_0_CommaKeyword_10_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getInformativeAccess().getRefersToPrivateDataKeyword_10_0()), new TokenAlias(false, false, grammarAccess.getInformativeAccess().getCommaKeyword_10_2()));
 		match_Informative___RefersToServiceKeyword_11_0_CommaKeyword_11_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getInformativeAccess().getRefersToServiceKeyword_11_0()), new TokenAlias(false, false, grammarAccess.getInformativeAccess().getCommaKeyword_11_2()));
-		match_Partof_HyphenMinusKeyword_1_q = new TokenAlias(false, true, grammarAccess.getPartofAccess().getHyphenMinusKeyword_1());
+		match_RecipientPart_HyphenMinusKeyword_1_q = new TokenAlias(false, true, grammarAccess.getRecipientPartAccess().getHyphenMinusKeyword_1());
 		match_Recipient___Recipient_PartKeyword_9_0_CommaKeyword_9_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getRecipientAccess().getRecipient_PartKeyword_9_0()), new TokenAlias(false, false, grammarAccess.getRecipientAccess().getCommaKeyword_9_2()));
+		match_RefEnforcement_HyphenMinusKeyword_1_q = new TokenAlias(false, true, grammarAccess.getRefEnforcementAccess().getHyphenMinusKeyword_1());
 		match_RefPrivateData_HyphenMinusKeyword_1_q = new TokenAlias(false, true, grammarAccess.getRefPrivateDataAccess().getHyphenMinusKeyword_1());
-		match_ReferToRecipientSource_HyphenMinusKeyword_1_q = new TokenAlias(false, true, grammarAccess.getReferToRecipientSourceAccess().getHyphenMinusKeyword_1());
-		match_ReferToRecipientTarget_HyphenMinusKeyword_1_q = new TokenAlias(false, true, grammarAccess.getReferToRecipientTargetAccess().getHyphenMinusKeyword_1());
-		match_ReferToRecipient_HyphenMinusKeyword_1_q = new TokenAlias(false, true, grammarAccess.getReferToRecipientAccess().getHyphenMinusKeyword_1());
-		match_ReferToService_HyphenMinusKeyword_1_q = new TokenAlias(false, true, grammarAccess.getReferToServiceAccess().getHyphenMinusKeyword_1());
-		match_RefertoEnforcement_HyphenMinusKeyword_1_q = new TokenAlias(false, true, grammarAccess.getRefertoEnforcementAccess().getHyphenMinusKeyword_1());
+		match_RefRecipientSource_HyphenMinusKeyword_1_q = new TokenAlias(false, true, grammarAccess.getRefRecipientSourceAccess().getHyphenMinusKeyword_1());
+		match_RefRecipientTarget_HyphenMinusKeyword_1_q = new TokenAlias(false, true, grammarAccess.getRefRecipientTargetAccess().getHyphenMinusKeyword_1());
+		match_RefRecipient_HyphenMinusKeyword_1_q = new TokenAlias(false, true, grammarAccess.getRefRecipientAccess().getHyphenMinusKeyword_1());
+		match_RefService_HyphenMinusKeyword_1_q = new TokenAlias(false, true, grammarAccess.getRefServiceAccess().getHyphenMinusKeyword_1());
 		match_Retention___RefersToEnforcementKeyword_15_0_CommaKeyword_15_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getRetentionAccess().getRefersToEnforcementKeyword_15_0()), new TokenAlias(false, false, grammarAccess.getRetentionAccess().getCommaKeyword_15_2()));
 		match_Retention___RefersToPrivateDataKeyword_13_0_CommaKeyword_13_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getRetentionAccess().getRefersToPrivateDataKeyword_13_0()), new TokenAlias(false, false, grammarAccess.getRetentionAccess().getCommaKeyword_13_2()));
 		match_Retention___RefersToServiceKeyword_14_0_CommaKeyword_14_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getRetentionAccess().getRefersToServiceKeyword_14_0()), new TokenAlias(false, false, grammarAccess.getRetentionAccess().getCommaKeyword_14_2()));
-		match_ServicePartof_HyphenMinusKeyword_1_q = new TokenAlias(false, true, grammarAccess.getServicePartofAccess().getHyphenMinusKeyword_1());
+		match_ServicePart_HyphenMinusKeyword_1_q = new TokenAlias(false, true, grammarAccess.getServicePartAccess().getHyphenMinusKeyword_1());
 		match_Service_Service_PartKeyword_8_0_q = new TokenAlias(false, true, grammarAccess.getServiceAccess().getService_PartKeyword_8_0());
 		match_Service___RefersToPrivateDataKeyword_7_0_CommaKeyword_7_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getServiceAccess().getRefersToPrivateDataKeyword_7_0()), new TokenAlias(false, false, grammarAccess.getServiceAccess().getCommaKeyword_7_2()));
 		match_Usage___RefersToEnforcementKeyword_12_0_CommaKeyword_12_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getUsageAccess().getRefersToEnforcementKeyword_12_0()), new TokenAlias(false, false, grammarAccess.getUsageAccess().getCommaKeyword_12_2()));
@@ -125,30 +125,30 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 				emit_Informative___RefersToPrivateDataKeyword_10_0_CommaKeyword_10_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Informative___RefersToServiceKeyword_11_0_CommaKeyword_11_2__q.equals(syntax))
 				emit_Informative___RefersToServiceKeyword_11_0_CommaKeyword_11_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Partof_HyphenMinusKeyword_1_q.equals(syntax))
-				emit_Partof_HyphenMinusKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_RecipientPart_HyphenMinusKeyword_1_q.equals(syntax))
+				emit_RecipientPart_HyphenMinusKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Recipient___Recipient_PartKeyword_9_0_CommaKeyword_9_2__q.equals(syntax))
 				emit_Recipient___Recipient_PartKeyword_9_0_CommaKeyword_9_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_RefEnforcement_HyphenMinusKeyword_1_q.equals(syntax))
+				emit_RefEnforcement_HyphenMinusKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_RefPrivateData_HyphenMinusKeyword_1_q.equals(syntax))
 				emit_RefPrivateData_HyphenMinusKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ReferToRecipientSource_HyphenMinusKeyword_1_q.equals(syntax))
-				emit_ReferToRecipientSource_HyphenMinusKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ReferToRecipientTarget_HyphenMinusKeyword_1_q.equals(syntax))
-				emit_ReferToRecipientTarget_HyphenMinusKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ReferToRecipient_HyphenMinusKeyword_1_q.equals(syntax))
-				emit_ReferToRecipient_HyphenMinusKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ReferToService_HyphenMinusKeyword_1_q.equals(syntax))
-				emit_ReferToService_HyphenMinusKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_RefertoEnforcement_HyphenMinusKeyword_1_q.equals(syntax))
-				emit_RefertoEnforcement_HyphenMinusKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_RefRecipientSource_HyphenMinusKeyword_1_q.equals(syntax))
+				emit_RefRecipientSource_HyphenMinusKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_RefRecipientTarget_HyphenMinusKeyword_1_q.equals(syntax))
+				emit_RefRecipientTarget_HyphenMinusKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_RefRecipient_HyphenMinusKeyword_1_q.equals(syntax))
+				emit_RefRecipient_HyphenMinusKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_RefService_HyphenMinusKeyword_1_q.equals(syntax))
+				emit_RefService_HyphenMinusKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Retention___RefersToEnforcementKeyword_15_0_CommaKeyword_15_2__q.equals(syntax))
 				emit_Retention___RefersToEnforcementKeyword_15_0_CommaKeyword_15_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Retention___RefersToPrivateDataKeyword_13_0_CommaKeyword_13_2__q.equals(syntax))
 				emit_Retention___RefersToPrivateDataKeyword_13_0_CommaKeyword_13_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Retention___RefersToServiceKeyword_14_0_CommaKeyword_14_2__q.equals(syntax))
 				emit_Retention___RefersToServiceKeyword_14_0_CommaKeyword_14_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ServicePartof_HyphenMinusKeyword_1_q.equals(syntax))
-				emit_ServicePartof_HyphenMinusKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_ServicePart_HyphenMinusKeyword_1_q.equals(syntax))
+				emit_ServicePart_HyphenMinusKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Service_Service_PartKeyword_8_0_q.equals(syntax))
 				emit_Service_Service_PartKeyword_8_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Service___RefersToPrivateDataKeyword_7_0_CommaKeyword_7_2__q.equals(syntax))
@@ -168,7 +168,7 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     attributeName=STRING (ambiguity) (rule end)
+	 *     description=STRING (ambiguity) (rule end)
 	 */
 	protected void emit_Attribute_CommaKeyword_4_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -179,18 +179,18 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     ('RefersTo Enforcement' ',')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Permitted'
-	 *     partof=[Collection|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     partof=[Collection|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     partof=[Collection|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Permitted'
-	 *     refertoservice+=ReferToService ',' (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     refertoservice+=ReferToService ',' (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     refertoservice+=ReferToService ',' (ambiguity) 'Modality' modalitykind='Permitted'
-	 *     refprivatedata+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     refprivatedata+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     refprivatedata+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Permitted'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Forbidden'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Obligation'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Permitted'
+	 *     partCollection=[Collection|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Forbidden'
+	 *     partCollection=[Collection|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Obligation'
+	 *     partCollection=[Collection|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Permitted'
+	 *     refPrivateData+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Forbidden'
+	 *     refPrivateData+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Obligation'
+	 *     refPrivateData+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Permitted'
+	 *     refService+=RefService ',' (ambiguity) 'Modality' modality='Forbidden'
+	 *     refService+=RefService ',' (ambiguity) 'Modality' modality='Obligation'
+	 *     refService+=RefService ',' (ambiguity) 'Modality' modality='Permitted'
 	 */
 	protected void emit_Collection___RefersToEnforcementKeyword_12_0_CommaKeyword_12_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -201,16 +201,16 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     ('RefersTo PrivateData' ',')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     condition=STRING ',' (ambiguity) 'RefersTo Service' refertoservice+=ReferToService
-	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
-	 *     partof=[Collection|ID] ',' (ambiguity) 'RefersTo Service' refertoservice+=ReferToService
-	 *     partof=[Collection|ID] ',' (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     partof=[Collection|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     partof=[Collection|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     partof=[Collection|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
+	 *     condition=STRING ',' (ambiguity) 'RefersTo Service' refService+=RefService
+	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
+	 *     partCollection=[Collection|ID] ',' (ambiguity) 'RefersTo Service' refService+=RefService
+	 *     partCollection=[Collection|ID] ',' (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     partCollection=[Collection|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     partCollection=[Collection|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     partCollection=[Collection|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
 	 */
 	protected void emit_Collection___RefersToPrivateDataKeyword_10_0_CommaKeyword_10_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -221,18 +221,18 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     ('RefersTo Service' ',')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
-	 *     partof=[Collection|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     partof=[Collection|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     partof=[Collection|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     partof=[Collection|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
+	 *     partCollection=[Collection|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     partCollection=[Collection|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     partCollection=[Collection|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     partCollection=[Collection|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
 	 */
 	protected void emit_Collection___RefersToServiceKeyword_11_0_CommaKeyword_11_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -253,7 +253,7 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         (ambiguity) 
 	 *         'Modality' 
-	 *         modalitykind='Forbidden'
+	 *         modality='Forbidden'
 	 *     )
 	 *     (
 	 *         condition=STRING 
@@ -265,7 +265,7 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         (ambiguity) 
 	 *         'Modality' 
-	 *         modalitykind='Obligation'
+	 *         modality='Obligation'
 	 *     )
 	 *     (
 	 *         condition=STRING 
@@ -277,10 +277,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         (ambiguity) 
 	 *         'Modality' 
-	 *         modalitykind='Permitted'
+	 *         modality='Permitted'
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -289,10 +289,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         (ambiguity) 
 	 *         'Modality' 
-	 *         modalitykind='Forbidden'
+	 *         modality='Forbidden'
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -301,10 +301,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         (ambiguity) 
 	 *         'Modality' 
-	 *         modalitykind='Obligation'
+	 *         modality='Obligation'
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -313,53 +313,23 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         (ambiguity) 
 	 *         'Modality' 
-	 *         modalitykind='Permitted'
+	 *         modality='Permitted'
 	 *     )
-	 *     (
-	 *         referToRecipient+=ReferToRecipient 
-	 *         ',' 
-	 *         ('RefersTo Recipient-Source' ',')? 
-	 *         ('RefersTo Recipient-Target' ',')? 
-	 *         ('RefersTo PrivateData' ',')? 
-	 *         ('RefersTo Service' ',')? 
-	 *         (ambiguity) 
-	 *         'Modality' 
-	 *         modalitykind='Forbidden'
-	 *     )
-	 *     (
-	 *         referToRecipient+=ReferToRecipient 
-	 *         ',' 
-	 *         ('RefersTo Recipient-Source' ',')? 
-	 *         ('RefersTo Recipient-Target' ',')? 
-	 *         ('RefersTo PrivateData' ',')? 
-	 *         ('RefersTo Service' ',')? 
-	 *         (ambiguity) 
-	 *         'Modality' 
-	 *         modalitykind='Obligation'
-	 *     )
-	 *     (
-	 *         referToRecipient+=ReferToRecipient 
-	 *         ',' 
-	 *         ('RefersTo Recipient-Source' ',')? 
-	 *         ('RefersTo Recipient-Target' ',')? 
-	 *         ('RefersTo PrivateData' ',')? 
-	 *         ('RefersTo Service' ',')? 
-	 *         (ambiguity) 
-	 *         'Modality' 
-	 *         modalitykind='Permitted'
-	 *     )
-	 *     referToRecipientsource+=ReferToRecipientSource ',' ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     referToRecipientsource+=ReferToRecipientSource ',' ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     referToRecipientsource+=ReferToRecipientSource ',' ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Permitted'
-	 *     referToRecipienttarget+=ReferToRecipientTarget ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     referToRecipienttarget+=ReferToRecipientTarget ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     referToRecipienttarget+=ReferToRecipientTarget ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Permitted'
-	 *     refertoservice+=ReferToService ',' (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     refertoservice+=ReferToService ',' (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     refertoservice+=ReferToService ',' (ambiguity) 'Modality' modalitykind='Permitted'
-	 *     refprivatedata+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     refprivatedata+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     refprivatedata+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Permitted'
+	 *     refPrivateData+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Forbidden'
+	 *     refPrivateData+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Obligation'
+	 *     refPrivateData+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Permitted'
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Forbidden'
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Obligation'
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Permitted'
+	 *     refRecipientSource+=RefRecipientSource ',' ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Forbidden'
+	 *     refRecipientSource+=RefRecipientSource ',' ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Obligation'
+	 *     refRecipientSource+=RefRecipientSource ',' ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Permitted'
+	 *     refRecipientTarget+=RefRecipientTarget ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Forbidden'
+	 *     refRecipientTarget+=RefRecipientTarget ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Obligation'
+	 *     refRecipientTarget+=RefRecipientTarget ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Permitted'
+	 *     refService+=RefService ',' (ambiguity) 'Modality' modality='Forbidden'
+	 *     refService+=RefService ',' (ambiguity) 'Modality' modality='Obligation'
+	 *     refService+=RefService ',' (ambiguity) 'Modality' modality='Permitted'
 	 */
 	protected void emit_Disclosure___RefersToEnforcementKeyword_15_0_CommaKeyword_15_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -379,7 +349,7 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         (ambiguity) 
 	 *         ('RefersTo Service' ',')? 
 	 *         'RefersTo Enforcement' 
-	 *         refertoEnforcement+=RefertoEnforcement
+	 *         refEnforcement+=RefEnforcement
 	 *     )
 	 *     (
 	 *         condition=STRING 
@@ -391,7 +361,7 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Forbidden'
+	 *         modality='Forbidden'
 	 *     )
 	 *     (
 	 *         condition=STRING 
@@ -403,7 +373,7 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Obligation'
+	 *         modality='Obligation'
 	 *     )
 	 *     (
 	 *         condition=STRING 
@@ -415,10 +385,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Permitted'
+	 *         modality='Permitted'
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -426,10 +396,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         (ambiguity) 
 	 *         ('RefersTo Service' ',')? 
 	 *         'RefersTo Enforcement' 
-	 *         refertoEnforcement+=RefertoEnforcement
+	 *         refEnforcement+=RefEnforcement
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -438,10 +408,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Forbidden'
+	 *         modality='Forbidden'
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -450,10 +420,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Obligation'
+	 *         modality='Obligation'
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -462,64 +432,25 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Permitted'
+	 *         modality='Permitted'
 	 *     )
-	 *     (
-	 *         referToRecipient+=ReferToRecipient 
-	 *         ',' 
-	 *         ('RefersTo Recipient-Source' ',')? 
-	 *         ('RefersTo Recipient-Target' ',')? 
-	 *         (ambiguity) 
-	 *         ('RefersTo Service' ',')? 
-	 *         'RefersTo Enforcement' 
-	 *         refertoEnforcement+=RefertoEnforcement
-	 *     )
-	 *     (
-	 *         referToRecipient+=ReferToRecipient 
-	 *         ',' 
-	 *         ('RefersTo Recipient-Source' ',')? 
-	 *         ('RefersTo Recipient-Target' ',')? 
-	 *         (ambiguity) 
-	 *         ('RefersTo Service' ',')? 
-	 *         ('RefersTo Enforcement' ',')? 
-	 *         'Modality' 
-	 *         modalitykind='Forbidden'
-	 *     )
-	 *     (
-	 *         referToRecipient+=ReferToRecipient 
-	 *         ',' 
-	 *         ('RefersTo Recipient-Source' ',')? 
-	 *         ('RefersTo Recipient-Target' ',')? 
-	 *         (ambiguity) 
-	 *         ('RefersTo Service' ',')? 
-	 *         ('RefersTo Enforcement' ',')? 
-	 *         'Modality' 
-	 *         modalitykind='Obligation'
-	 *     )
-	 *     (
-	 *         referToRecipient+=ReferToRecipient 
-	 *         ',' 
-	 *         ('RefersTo Recipient-Source' ',')? 
-	 *         ('RefersTo Recipient-Target' ',')? 
-	 *         (ambiguity) 
-	 *         ('RefersTo Service' ',')? 
-	 *         ('RefersTo Enforcement' ',')? 
-	 *         'Modality' 
-	 *         modalitykind='Permitted'
-	 *     )
-	 *     condition=STRING ',' ('RefersTo Recipient' ',')? ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? (ambiguity) 'RefersTo Service' refertoservice+=ReferToService
-	 *     partof=[Disclosure|ID] ',' ('RefersTo Recipient' ',')? ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? (ambiguity) 'RefersTo Service' refertoservice+=ReferToService
-	 *     referToRecipient+=ReferToRecipient ',' ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? (ambiguity) 'RefersTo Service' refertoservice+=ReferToService
-	 *     referToRecipientsource+=ReferToRecipientSource ',' ('RefersTo Recipient-Target' ',')? (ambiguity) 'RefersTo Service' refertoservice+=ReferToService
-	 *     referToRecipientsource+=ReferToRecipientSource ',' ('RefersTo Recipient-Target' ',')? (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     referToRecipientsource+=ReferToRecipientSource ',' ('RefersTo Recipient-Target' ',')? (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     referToRecipientsource+=ReferToRecipientSource ',' ('RefersTo Recipient-Target' ',')? (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     referToRecipientsource+=ReferToRecipientSource ',' ('RefersTo Recipient-Target' ',')? (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
-	 *     referToRecipienttarget+=ReferToRecipientTarget ',' (ambiguity) 'RefersTo Service' refertoservice+=ReferToService
-	 *     referToRecipienttarget+=ReferToRecipientTarget ',' (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     referToRecipienttarget+=ReferToRecipientTarget ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     referToRecipienttarget+=ReferToRecipientTarget ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     referToRecipienttarget+=ReferToRecipientTarget ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
+	 *     condition=STRING ',' ('RefersTo Recipient' ',')? ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? (ambiguity) 'RefersTo Service' refService+=RefService
+	 *     partDisclosure=[Disclosure|ID] ',' ('RefersTo Recipient' ',')? ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? (ambiguity) 'RefersTo Service' refService+=RefService
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? (ambiguity) 'RefersTo Service' refService+=RefService
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
+	 *     refRecipientSource+=RefRecipientSource ',' ('RefersTo Recipient-Target' ',')? (ambiguity) 'RefersTo Service' refService+=RefService
+	 *     refRecipientSource+=RefRecipientSource ',' ('RefersTo Recipient-Target' ',')? (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     refRecipientSource+=RefRecipientSource ',' ('RefersTo Recipient-Target' ',')? (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     refRecipientSource+=RefRecipientSource ',' ('RefersTo Recipient-Target' ',')? (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     refRecipientSource+=RefRecipientSource ',' ('RefersTo Recipient-Target' ',')? (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
+	 *     refRecipientTarget+=RefRecipientTarget ',' (ambiguity) 'RefersTo Service' refService+=RefService
+	 *     refRecipientTarget+=RefRecipientTarget ',' (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     refRecipientTarget+=RefRecipientTarget ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     refRecipientTarget+=RefRecipientTarget ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     refRecipientTarget+=RefRecipientTarget ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
 	 */
 	protected void emit_Disclosure___RefersToPrivateDataKeyword_13_0_CommaKeyword_13_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -539,7 +470,7 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo PrivateData' ',')? 
 	 *         ('RefersTo Service' ',')? 
 	 *         'RefersTo Enforcement' 
-	 *         refertoEnforcement+=RefertoEnforcement
+	 *         refEnforcement+=RefEnforcement
 	 *     )
 	 *     (
 	 *         condition=STRING 
@@ -551,7 +482,7 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Forbidden'
+	 *         modality='Forbidden'
 	 *     )
 	 *     (
 	 *         condition=STRING 
@@ -563,7 +494,7 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Obligation'
+	 *         modality='Obligation'
 	 *     )
 	 *     (
 	 *         condition=STRING 
@@ -575,10 +506,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Permitted'
+	 *         modality='Permitted'
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         (ambiguity) 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -586,10 +517,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo PrivateData' ',')? 
 	 *         ('RefersTo Service' ',')? 
 	 *         'RefersTo Enforcement' 
-	 *         refertoEnforcement+=RefertoEnforcement
+	 *         refEnforcement+=RefEnforcement
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         (ambiguity) 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -598,10 +529,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Forbidden'
+	 *         modality='Forbidden'
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         (ambiguity) 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -610,10 +541,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Obligation'
+	 *         modality='Obligation'
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         (ambiguity) 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -622,16 +553,16 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Permitted'
+	 *         modality='Permitted'
 	 *     )
-	 *     condition=STRING ',' (ambiguity) 'RefersTo Recipient-Source' referToRecipientsource+=ReferToRecipientSource
-	 *     condition=STRING ',' (ambiguity) ('RefersTo Recipient-Source' ',')? 'RefersTo Recipient-Target' referToRecipienttarget+=ReferToRecipientTarget
-	 *     condition=STRING ',' (ambiguity) ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? 'RefersTo PrivateData' refprivatedata+=RefPrivateData
-	 *     condition=STRING ',' (ambiguity) ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? 'RefersTo Service' refertoservice+=ReferToService
-	 *     partof=[Disclosure|ID] ',' (ambiguity) 'RefersTo Recipient-Source' referToRecipientsource+=ReferToRecipientSource
-	 *     partof=[Disclosure|ID] ',' (ambiguity) ('RefersTo Recipient-Source' ',')? 'RefersTo Recipient-Target' referToRecipienttarget+=ReferToRecipientTarget
-	 *     partof=[Disclosure|ID] ',' (ambiguity) ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? 'RefersTo PrivateData' refprivatedata+=RefPrivateData
-	 *     partof=[Disclosure|ID] ',' (ambiguity) ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? 'RefersTo Service' refertoservice+=ReferToService
+	 *     condition=STRING ',' (ambiguity) 'RefersTo Recipient-Source' refRecipientSource+=RefRecipientSource
+	 *     condition=STRING ',' (ambiguity) ('RefersTo Recipient-Source' ',')? 'RefersTo Recipient-Target' refRecipientTarget+=RefRecipientTarget
+	 *     condition=STRING ',' (ambiguity) ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? 'RefersTo PrivateData' refPrivateData+=RefPrivateData
+	 *     condition=STRING ',' (ambiguity) ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? 'RefersTo Service' refService+=RefService
+	 *     partDisclosure=[Disclosure|ID] ',' (ambiguity) 'RefersTo Recipient-Source' refRecipientSource+=RefRecipientSource
+	 *     partDisclosure=[Disclosure|ID] ',' (ambiguity) ('RefersTo Recipient-Source' ',')? 'RefersTo Recipient-Target' refRecipientTarget+=RefRecipientTarget
+	 *     partDisclosure=[Disclosure|ID] ',' (ambiguity) ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? 'RefersTo PrivateData' refPrivateData+=RefPrivateData
+	 *     partDisclosure=[Disclosure|ID] ',' (ambiguity) ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? 'RefersTo Service' refService+=RefService
 	 */
 	protected void emit_Disclosure___RefersToRecipientKeyword_10_0_CommaKeyword_10_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -650,8 +581,9 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Recipient-Target' ',')? 
 	 *         ('RefersTo PrivateData' ',')? 
 	 *         ('RefersTo Service' ',')? 
-	 *         'RefersTo Enforcement' 
-	 *         refertoEnforcement+=RefertoEnforcement
+	 *         ('RefersTo Enforcement' ',')? 
+	 *         'Modality' 
+	 *         modality='Forbidden'
 	 *     )
 	 *     (
 	 *         condition=STRING 
@@ -663,7 +595,7 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Forbidden'
+	 *         modality='Obligation'
 	 *     )
 	 *     (
 	 *         condition=STRING 
@@ -675,22 +607,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Obligation'
+	 *         modality='Permitted'
 	 *     )
 	 *     (
-	 *         condition=STRING 
-	 *         ',' 
-	 *         ('RefersTo Recipient' ',')? 
-	 *         (ambiguity) 
-	 *         ('RefersTo Recipient-Target' ',')? 
-	 *         ('RefersTo PrivateData' ',')? 
-	 *         ('RefersTo Service' ',')? 
-	 *         ('RefersTo Enforcement' ',')? 
-	 *         'Modality' 
-	 *         modalitykind='Permitted'
-	 *     )
-	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         (ambiguity) 
@@ -698,10 +618,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo PrivateData' ',')? 
 	 *         ('RefersTo Service' ',')? 
 	 *         'RefersTo Enforcement' 
-	 *         refertoEnforcement+=RefertoEnforcement
+	 *         refEnforcement+=RefEnforcement
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         (ambiguity) 
@@ -710,10 +630,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Forbidden'
+	 *         modality='Forbidden'
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         (ambiguity) 
@@ -722,10 +642,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Obligation'
+	 *         modality='Obligation'
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         (ambiguity) 
@@ -734,21 +654,22 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Permitted'
+	 *         modality='Permitted'
 	 *     )
-	 *     condition=STRING ',' ('RefersTo Recipient' ',')? (ambiguity) 'RefersTo Recipient-Target' referToRecipienttarget+=ReferToRecipientTarget
-	 *     condition=STRING ',' ('RefersTo Recipient' ',')? (ambiguity) ('RefersTo Recipient-Target' ',')? 'RefersTo PrivateData' refprivatedata+=RefPrivateData
-	 *     condition=STRING ',' ('RefersTo Recipient' ',')? (ambiguity) ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? 'RefersTo Service' refertoservice+=ReferToService
-	 *     partof=[Disclosure|ID] ',' ('RefersTo Recipient' ',')? (ambiguity) 'RefersTo Recipient-Target' referToRecipienttarget+=ReferToRecipientTarget
-	 *     partof=[Disclosure|ID] ',' ('RefersTo Recipient' ',')? (ambiguity) ('RefersTo Recipient-Target' ',')? 'RefersTo PrivateData' refprivatedata+=RefPrivateData
-	 *     partof=[Disclosure|ID] ',' ('RefersTo Recipient' ',')? (ambiguity) ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? 'RefersTo Service' refertoservice+=ReferToService
-	 *     referToRecipient+=ReferToRecipient ',' (ambiguity) 'RefersTo Recipient-Target' referToRecipienttarget+=ReferToRecipientTarget
-	 *     referToRecipient+=ReferToRecipient ',' (ambiguity) ('RefersTo Recipient-Target' ',')? 'RefersTo PrivateData' refprivatedata+=RefPrivateData
-	 *     referToRecipient+=ReferToRecipient ',' (ambiguity) ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? 'RefersTo Service' refertoservice+=ReferToService
-	 *     referToRecipient+=ReferToRecipient ',' (ambiguity) ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     referToRecipient+=ReferToRecipient ',' (ambiguity) ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     referToRecipient+=ReferToRecipient ',' (ambiguity) ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     referToRecipient+=ReferToRecipient ',' (ambiguity) ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
+	 *     condition=STRING ',' ('RefersTo Recipient' ',')? (ambiguity) 'RefersTo Recipient-Target' refRecipientTarget+=RefRecipientTarget
+	 *     condition=STRING ',' ('RefersTo Recipient' ',')? (ambiguity) ('RefersTo Recipient-Target' ',')? 'RefersTo PrivateData' refPrivateData+=RefPrivateData
+	 *     condition=STRING ',' ('RefersTo Recipient' ',')? (ambiguity) ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? 'RefersTo Service' refService+=RefService
+	 *     condition=STRING ',' ('RefersTo Recipient' ',')? (ambiguity) ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     partDisclosure=[Disclosure|ID] ',' ('RefersTo Recipient' ',')? (ambiguity) 'RefersTo Recipient-Target' refRecipientTarget+=RefRecipientTarget
+	 *     partDisclosure=[Disclosure|ID] ',' ('RefersTo Recipient' ',')? (ambiguity) ('RefersTo Recipient-Target' ',')? 'RefersTo PrivateData' refPrivateData+=RefPrivateData
+	 *     partDisclosure=[Disclosure|ID] ',' ('RefersTo Recipient' ',')? (ambiguity) ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? 'RefersTo Service' refService+=RefService
+	 *     refRecipient+=RefRecipient ',' (ambiguity) 'RefersTo Recipient-Target' refRecipientTarget+=RefRecipientTarget
+	 *     refRecipient+=RefRecipient ',' (ambiguity) ('RefersTo Recipient-Target' ',')? 'RefersTo PrivateData' refPrivateData+=RefPrivateData
+	 *     refRecipient+=RefRecipient ',' (ambiguity) ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? 'RefersTo Service' refService+=RefService
+	 *     refRecipient+=RefRecipient ',' (ambiguity) ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     refRecipient+=RefRecipient ',' (ambiguity) ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     refRecipient+=RefRecipient ',' (ambiguity) ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     refRecipient+=RefRecipient ',' (ambiguity) ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
 	 */
 	protected void emit_Disclosure___RefersToRecipientSourceKeyword_11_0_CommaKeyword_11_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -767,8 +688,9 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         (ambiguity) 
 	 *         ('RefersTo PrivateData' ',')? 
 	 *         ('RefersTo Service' ',')? 
-	 *         'RefersTo Enforcement' 
-	 *         refertoEnforcement+=RefertoEnforcement
+	 *         ('RefersTo Enforcement' ',')? 
+	 *         'Modality' 
+	 *         modality='Forbidden'
 	 *     )
 	 *     (
 	 *         condition=STRING 
@@ -780,7 +702,7 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Forbidden'
+	 *         modality='Obligation'
 	 *     )
 	 *     (
 	 *         condition=STRING 
@@ -792,22 +714,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Obligation'
+	 *         modality='Permitted'
 	 *     )
 	 *     (
-	 *         condition=STRING 
-	 *         ',' 
-	 *         ('RefersTo Recipient' ',')? 
-	 *         ('RefersTo Recipient-Source' ',')? 
-	 *         (ambiguity) 
-	 *         ('RefersTo PrivateData' ',')? 
-	 *         ('RefersTo Service' ',')? 
-	 *         ('RefersTo Enforcement' ',')? 
-	 *         'Modality' 
-	 *         modalitykind='Permitted'
-	 *     )
-	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -815,10 +725,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo PrivateData' ',')? 
 	 *         ('RefersTo Service' ',')? 
 	 *         'RefersTo Enforcement' 
-	 *         refertoEnforcement+=RefertoEnforcement
+	 *         refEnforcement+=RefEnforcement
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -827,10 +737,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Forbidden'
+	 *         modality='Forbidden'
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -839,10 +749,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Obligation'
+	 *         modality='Obligation'
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -851,24 +761,25 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo Service' ',')? 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Permitted'
+	 *         modality='Permitted'
 	 *     )
-	 *     condition=STRING ',' ('RefersTo Recipient' ',')? ('RefersTo Recipient-Source' ',')? (ambiguity) 'RefersTo PrivateData' refprivatedata+=RefPrivateData
-	 *     condition=STRING ',' ('RefersTo Recipient' ',')? ('RefersTo Recipient-Source' ',')? (ambiguity) ('RefersTo PrivateData' ',')? 'RefersTo Service' refertoservice+=ReferToService
-	 *     partof=[Disclosure|ID] ',' ('RefersTo Recipient' ',')? ('RefersTo Recipient-Source' ',')? (ambiguity) 'RefersTo PrivateData' refprivatedata+=RefPrivateData
-	 *     partof=[Disclosure|ID] ',' ('RefersTo Recipient' ',')? ('RefersTo Recipient-Source' ',')? (ambiguity) ('RefersTo PrivateData' ',')? 'RefersTo Service' refertoservice+=ReferToService
-	 *     referToRecipient+=ReferToRecipient ',' ('RefersTo Recipient-Source' ',')? (ambiguity) 'RefersTo PrivateData' refprivatedata+=RefPrivateData
-	 *     referToRecipient+=ReferToRecipient ',' ('RefersTo Recipient-Source' ',')? (ambiguity) ('RefersTo PrivateData' ',')? 'RefersTo Service' refertoservice+=ReferToService
-	 *     referToRecipient+=ReferToRecipient ',' ('RefersTo Recipient-Source' ',')? (ambiguity) ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     referToRecipient+=ReferToRecipient ',' ('RefersTo Recipient-Source' ',')? (ambiguity) ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     referToRecipient+=ReferToRecipient ',' ('RefersTo Recipient-Source' ',')? (ambiguity) ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     referToRecipient+=ReferToRecipient ',' ('RefersTo Recipient-Source' ',')? (ambiguity) ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
-	 *     referToRecipientsource+=ReferToRecipientSource ',' (ambiguity) 'RefersTo PrivateData' refprivatedata+=RefPrivateData
-	 *     referToRecipientsource+=ReferToRecipientSource ',' (ambiguity) ('RefersTo PrivateData' ',')? 'RefersTo Service' refertoservice+=ReferToService
-	 *     referToRecipientsource+=ReferToRecipientSource ',' (ambiguity) ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     referToRecipientsource+=ReferToRecipientSource ',' (ambiguity) ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     referToRecipientsource+=ReferToRecipientSource ',' (ambiguity) ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     referToRecipientsource+=ReferToRecipientSource ',' (ambiguity) ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
+	 *     condition=STRING ',' ('RefersTo Recipient' ',')? ('RefersTo Recipient-Source' ',')? (ambiguity) 'RefersTo PrivateData' refPrivateData+=RefPrivateData
+	 *     condition=STRING ',' ('RefersTo Recipient' ',')? ('RefersTo Recipient-Source' ',')? (ambiguity) ('RefersTo PrivateData' ',')? 'RefersTo Service' refService+=RefService
+	 *     condition=STRING ',' ('RefersTo Recipient' ',')? ('RefersTo Recipient-Source' ',')? (ambiguity) ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     partDisclosure=[Disclosure|ID] ',' ('RefersTo Recipient' ',')? ('RefersTo Recipient-Source' ',')? (ambiguity) 'RefersTo PrivateData' refPrivateData+=RefPrivateData
+	 *     partDisclosure=[Disclosure|ID] ',' ('RefersTo Recipient' ',')? ('RefersTo Recipient-Source' ',')? (ambiguity) ('RefersTo PrivateData' ',')? 'RefersTo Service' refService+=RefService
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? (ambiguity) 'RefersTo PrivateData' refPrivateData+=RefPrivateData
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? (ambiguity) ('RefersTo PrivateData' ',')? 'RefersTo Service' refService+=RefService
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? (ambiguity) ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? (ambiguity) ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? (ambiguity) ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? (ambiguity) ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
+	 *     refRecipientSource+=RefRecipientSource ',' (ambiguity) 'RefersTo PrivateData' refPrivateData+=RefPrivateData
+	 *     refRecipientSource+=RefRecipientSource ',' (ambiguity) ('RefersTo PrivateData' ',')? 'RefersTo Service' refService+=RefService
+	 *     refRecipientSource+=RefRecipientSource ',' (ambiguity) ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     refRecipientSource+=RefRecipientSource ',' (ambiguity) ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     refRecipientSource+=RefRecipientSource ',' (ambiguity) ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     refRecipientSource+=RefRecipientSource ',' (ambiguity) ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
 	 */
 	protected void emit_Disclosure___RefersToRecipientTargetKeyword_12_0_CommaKeyword_12_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -888,7 +799,7 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo PrivateData' ',')? 
 	 *         (ambiguity) 
 	 *         'RefersTo Enforcement' 
-	 *         refertoEnforcement+=RefertoEnforcement
+	 *         refEnforcement+=RefEnforcement
 	 *     )
 	 *     (
 	 *         condition=STRING 
@@ -900,7 +811,7 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         (ambiguity) 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Forbidden'
+	 *         modality='Forbidden'
 	 *     )
 	 *     (
 	 *         condition=STRING 
@@ -912,7 +823,7 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         (ambiguity) 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Obligation'
+	 *         modality='Obligation'
 	 *     )
 	 *     (
 	 *         condition=STRING 
@@ -924,10 +835,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         (ambiguity) 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Permitted'
+	 *         modality='Permitted'
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -935,10 +846,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         ('RefersTo PrivateData' ',')? 
 	 *         (ambiguity) 
 	 *         'RefersTo Enforcement' 
-	 *         refertoEnforcement+=RefertoEnforcement
+	 *         refEnforcement+=RefEnforcement
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -947,10 +858,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         (ambiguity) 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Forbidden'
+	 *         modality='Forbidden'
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -959,10 +870,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         (ambiguity) 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Obligation'
+	 *         modality='Obligation'
 	 *     )
 	 *     (
-	 *         partof=[Disclosure|ID] 
+	 *         partDisclosure=[Disclosure|ID] 
 	 *         ',' 
 	 *         ('RefersTo Recipient' ',')? 
 	 *         ('RefersTo Recipient-Source' ',')? 
@@ -971,63 +882,24 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *         (ambiguity) 
 	 *         ('RefersTo Enforcement' ',')? 
 	 *         'Modality' 
-	 *         modalitykind='Permitted'
+	 *         modality='Permitted'
 	 *     )
-	 *     (
-	 *         referToRecipient+=ReferToRecipient 
-	 *         ',' 
-	 *         ('RefersTo Recipient-Source' ',')? 
-	 *         ('RefersTo Recipient-Target' ',')? 
-	 *         ('RefersTo PrivateData' ',')? 
-	 *         (ambiguity) 
-	 *         'RefersTo Enforcement' 
-	 *         refertoEnforcement+=RefertoEnforcement
-	 *     )
-	 *     (
-	 *         referToRecipient+=ReferToRecipient 
-	 *         ',' 
-	 *         ('RefersTo Recipient-Source' ',')? 
-	 *         ('RefersTo Recipient-Target' ',')? 
-	 *         ('RefersTo PrivateData' ',')? 
-	 *         (ambiguity) 
-	 *         ('RefersTo Enforcement' ',')? 
-	 *         'Modality' 
-	 *         modalitykind='Forbidden'
-	 *     )
-	 *     (
-	 *         referToRecipient+=ReferToRecipient 
-	 *         ',' 
-	 *         ('RefersTo Recipient-Source' ',')? 
-	 *         ('RefersTo Recipient-Target' ',')? 
-	 *         ('RefersTo PrivateData' ',')? 
-	 *         (ambiguity) 
-	 *         ('RefersTo Enforcement' ',')? 
-	 *         'Modality' 
-	 *         modalitykind='Obligation'
-	 *     )
-	 *     (
-	 *         referToRecipient+=ReferToRecipient 
-	 *         ',' 
-	 *         ('RefersTo Recipient-Source' ',')? 
-	 *         ('RefersTo Recipient-Target' ',')? 
-	 *         ('RefersTo PrivateData' ',')? 
-	 *         (ambiguity) 
-	 *         ('RefersTo Enforcement' ',')? 
-	 *         'Modality' 
-	 *         modalitykind='Permitted'
-	 *     )
-	 *     referToRecipientsource+=ReferToRecipientSource ',' ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     referToRecipientsource+=ReferToRecipientSource ',' ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     referToRecipientsource+=ReferToRecipientSource ',' ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     referToRecipientsource+=ReferToRecipientSource ',' ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
-	 *     referToRecipienttarget+=ReferToRecipientTarget ',' ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     referToRecipienttarget+=ReferToRecipientTarget ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     referToRecipienttarget+=ReferToRecipientTarget ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     referToRecipienttarget+=ReferToRecipientTarget ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     refRecipient+=RefRecipient ',' ('RefersTo Recipient-Source' ',')? ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
+	 *     refRecipientSource+=RefRecipientSource ',' ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     refRecipientSource+=RefRecipientSource ',' ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     refRecipientSource+=RefRecipientSource ',' ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     refRecipientSource+=RefRecipientSource ',' ('RefersTo Recipient-Target' ',')? ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
+	 *     refRecipientTarget+=RefRecipientTarget ',' ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     refRecipientTarget+=RefRecipientTarget ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     refRecipientTarget+=RefRecipientTarget ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     refRecipientTarget+=RefRecipientTarget ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
 	 */
 	protected void emit_Disclosure___RefersToServiceKeyword_14_0_CommaKeyword_14_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -1038,18 +910,18 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     ('RefersTo Enforcement' ',')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Permitted'
-	 *     partof=[Informative|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     partof=[Informative|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     partof=[Informative|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Permitted'
-	 *     refertoservice+=ReferToService ',' (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     refertoservice+=ReferToService ',' (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     refertoservice+=ReferToService ',' (ambiguity) 'Modality' modalitykind='Permitted'
-	 *     refprivatedata+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     refprivatedata+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     refprivatedata+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Permitted'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Forbidden'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Obligation'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Permitted'
+	 *     partInformative=[Informative|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Forbidden'
+	 *     partInformative=[Informative|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Obligation'
+	 *     partInformative=[Informative|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Permitted'
+	 *     refPrivateData+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Forbidden'
+	 *     refPrivateData+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Obligation'
+	 *     refPrivateData+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Permitted'
+	 *     refService+=RefService ',' (ambiguity) 'Modality' modality='Forbidden'
+	 *     refService+=RefService ',' (ambiguity) 'Modality' modality='Obligation'
+	 *     refService+=RefService ',' (ambiguity) 'Modality' modality='Permitted'
 	 */
 	protected void emit_Informative___RefersToEnforcementKeyword_12_0_CommaKeyword_12_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -1060,16 +932,16 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     ('RefersTo PrivateData' ',')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     condition=STRING ',' (ambiguity) 'RefersTo Service' refertoservice+=ReferToService
-	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
-	 *     partof=[Informative|ID] ',' (ambiguity) 'RefersTo Service' refertoservice+=ReferToService
-	 *     partof=[Informative|ID] ',' (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     partof=[Informative|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     partof=[Informative|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     partof=[Informative|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
+	 *     condition=STRING ',' (ambiguity) 'RefersTo Service' refService+=RefService
+	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
+	 *     partInformative=[Informative|ID] ',' (ambiguity) 'RefersTo Service' refService+=RefService
+	 *     partInformative=[Informative|ID] ',' (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     partInformative=[Informative|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     partInformative=[Informative|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     partInformative=[Informative|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
 	 */
 	protected void emit_Informative___RefersToPrivateDataKeyword_10_0_CommaKeyword_10_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -1080,18 +952,18 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     ('RefersTo Service' ',')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
-	 *     partof=[Informative|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     partof=[Informative|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     partof=[Informative|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     partof=[Informative|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
+	 *     partInformative=[Informative|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     partInformative=[Informative|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     partInformative=[Informative|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     partInformative=[Informative|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
 	 */
 	protected void emit_Informative___RefersToServiceKeyword_11_0_CommaKeyword_11_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -1102,9 +974,9 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     '-'?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     partof=[Recipient|ID] (ambiguity) (rule end)
+	 *     recipientPart=[Recipient|ID] (ambiguity) (rule end)
 	 */
-	protected void emit_Partof_HyphenMinusKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_RecipientPart_HyphenMinusKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -1113,9 +985,9 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     ('Recipient_Part' ',')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     description=STRING ',' (ambiguity) 'Scope' RecipientScopeKind='External'
-	 *     description=STRING ',' (ambiguity) 'Scope' RecipientScopeKind='Internal'
-	 *     description=STRING ',' (ambiguity) 'Scope' RecipientScopeKind='Internal/External'
+	 *     description=STRING ',' (ambiguity) 'Scope' scope='External'
+	 *     description=STRING ',' (ambiguity) 'Scope' scope='Internal'
+	 *     description=STRING ',' (ambiguity) 'Scope' scope='Internal/External'
 	 */
 	protected void emit_Recipient___Recipient_PartKeyword_9_0_CommaKeyword_9_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -1126,7 +998,18 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     '-'?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     refpr=[PrivateData|ID] (ambiguity) (rule end)
+	 *     refEnforcement=[Enforcement|ID] (ambiguity) (rule end)
+	 */
+	protected void emit_RefEnforcement_HyphenMinusKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     '-'?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     refPrivateData=[PrivateData|ID] (ambiguity) (rule end)
 	 */
 	protected void emit_RefPrivateData_HyphenMinusKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -1137,9 +1020,9 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     '-'?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     refertore=[Recipient|ID] (ambiguity) (rule end)
+	 *     refRecipientSource=[Recipient|ID] (ambiguity) (rule end)
 	 */
-	protected void emit_ReferToRecipientSource_HyphenMinusKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_RefRecipientSource_HyphenMinusKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -1148,9 +1031,9 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     '-'?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     refertore=[Recipient|ID] (ambiguity) (rule end)
+	 *     refRecipientTarget=[Recipient|ID] (ambiguity) (rule end)
 	 */
-	protected void emit_ReferToRecipientTarget_HyphenMinusKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_RefRecipientTarget_HyphenMinusKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -1159,9 +1042,9 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     '-'?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     refertore=[Recipient|ID] (ambiguity) (rule end)
+	 *     refRecipient=[Recipient|ID] (ambiguity) (rule end)
 	 */
-	protected void emit_ReferToRecipient_HyphenMinusKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_RefRecipient_HyphenMinusKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -1170,20 +1053,9 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     '-'?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     refertose=[Service|ID] (ambiguity) (rule end)
+	 *     refService=[Service|ID] (ambiguity) (rule end)
 	 */
-	protected void emit_ReferToService_HyphenMinusKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '-'?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     refst=[Enforcement|ID] (ambiguity) (rule end)
-	 */
-	protected void emit_RefertoEnforcement_HyphenMinusKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_RefService_HyphenMinusKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -1192,15 +1064,15 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     ('RefersTo Enforcement' ',')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     period=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     period=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     period=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Permitted'
-	 *     refertoservice+=ReferToService ',' (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     refertoservice+=ReferToService ',' (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     refertoservice+=ReferToService ',' (ambiguity) 'Modality' modalitykind='Permitted'
-	 *     refprivatedata+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     refprivatedata+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     refprivatedata+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Permitted'
+	 *     period=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Forbidden'
+	 *     period=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Obligation'
+	 *     period=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Permitted'
+	 *     refPrivateData+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Forbidden'
+	 *     refPrivateData+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Obligation'
+	 *     refPrivateData+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Permitted'
+	 *     refService+=RefService ',' (ambiguity) 'Modality' modality='Forbidden'
+	 *     refService+=RefService ',' (ambiguity) 'Modality' modality='Obligation'
+	 *     refService+=RefService ',' (ambiguity) 'Modality' modality='Permitted'
 	 */
 	protected void emit_Retention___RefersToEnforcementKeyword_15_0_CommaKeyword_15_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -1211,11 +1083,11 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     ('RefersTo PrivateData' ',')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     period=STRING ',' (ambiguity) 'RefersTo Service' refertoservice+=ReferToService
-	 *     period=STRING ',' (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     period=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     period=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     period=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
+	 *     period=STRING ',' (ambiguity) 'RefersTo Service' refService+=RefService
+	 *     period=STRING ',' (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     period=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     period=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     period=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
 	 */
 	protected void emit_Retention___RefersToPrivateDataKeyword_13_0_CommaKeyword_13_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -1226,14 +1098,14 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     ('RefersTo Service' ',')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     period=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     period=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     period=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     period=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
+	 *     period=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     period=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     period=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     period=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
 	 */
 	protected void emit_Retention___RefersToServiceKeyword_14_0_CommaKeyword_14_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -1244,9 +1116,9 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     '-'?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     refertoservice=[Service|ID] (ambiguity) (rule end)
+	 *     servicePart=[Service|ID] (ambiguity) (rule end)
 	 */
-	protected void emit_ServicePartof_HyphenMinusKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ServicePart_HyphenMinusKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -1256,8 +1128,8 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     description=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) '};' (rule end)
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) '};' (rule end)
-	 *     servicename=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) '};' (rule end)
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) '};' (rule end)
+	 *     serviceName=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) '};' (rule end)
 	 */
 	protected void emit_Service_Service_PartKeyword_8_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -1268,10 +1140,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     ('RefersTo PrivateData' ',')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     description=STRING ',' (ambiguity) 'Service_Part' servicepartof+=ServicePartof
+	 *     description=STRING ',' (ambiguity) 'Service_Part' servicePart+=ServicePart
 	 *     description=STRING ',' (ambiguity) 'Service_Part'? '};' (rule end)
-	 *     servicename=STRING ',' (ambiguity) 'Service_Part' servicepartof+=ServicePartof
-	 *     servicename=STRING ',' (ambiguity) 'Service_Part'? '};' (rule end)
+	 *     serviceName=STRING ',' (ambiguity) 'Service_Part' servicePart+=ServicePart
+	 *     serviceName=STRING ',' (ambiguity) 'Service_Part'? '};' (rule end)
 	 */
 	protected void emit_Service___RefersToPrivateDataKeyword_7_0_CommaKeyword_7_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -1282,18 +1154,18 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     ('RefersTo Enforcement' ',')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Permitted'
-	 *     partof=[Usage|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     partof=[Usage|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     partof=[Usage|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Permitted'
-	 *     refertoservice+=ReferToService ',' (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     refertoservice+=ReferToService ',' (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     refertoservice+=ReferToService ',' (ambiguity) 'Modality' modalitykind='Permitted'
-	 *     refprivatedata+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Forbidden'
-	 *     refprivatedata+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Obligation'
-	 *     refprivatedata+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modalitykind='Permitted'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Forbidden'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Obligation'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Permitted'
+	 *     partUsage=[Usage|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Forbidden'
+	 *     partUsage=[Usage|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Obligation'
+	 *     partUsage=[Usage|ID] ',' ('RefersTo PrivateData' ',')? ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Permitted'
+	 *     refPrivateData+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Forbidden'
+	 *     refPrivateData+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Obligation'
+	 *     refPrivateData+=RefPrivateData ',' ('RefersTo Service' ',')? (ambiguity) 'Modality' modality='Permitted'
+	 *     refService+=RefService ',' (ambiguity) 'Modality' modality='Forbidden'
+	 *     refService+=RefService ',' (ambiguity) 'Modality' modality='Obligation'
+	 *     refService+=RefService ',' (ambiguity) 'Modality' modality='Permitted'
 	 */
 	protected void emit_Usage___RefersToEnforcementKeyword_12_0_CommaKeyword_12_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -1304,16 +1176,16 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     ('RefersTo PrivateData' ',')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     condition=STRING ',' (ambiguity) 'RefersTo Service' refertoservice+=ReferToService
-	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
-	 *     partof=[Usage|ID] ',' (ambiguity) 'RefersTo Service' refertoservice+=ReferToService
-	 *     partof=[Usage|ID] ',' (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     partof=[Usage|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     partof=[Usage|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     partof=[Usage|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
+	 *     condition=STRING ',' (ambiguity) 'RefersTo Service' refService+=RefService
+	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     condition=STRING ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
+	 *     partUsage=[Usage|ID] ',' (ambiguity) 'RefersTo Service' refService+=RefService
+	 *     partUsage=[Usage|ID] ',' (ambiguity) ('RefersTo Service' ',')? 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     partUsage=[Usage|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     partUsage=[Usage|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     partUsage=[Usage|ID] ',' (ambiguity) ('RefersTo Service' ',')? ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
 	 */
 	protected void emit_Usage___RefersToPrivateDataKeyword_10_0_CommaKeyword_10_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -1324,18 +1196,18 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     ('RefersTo Service' ',')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
-	 *     partof=[Usage|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     partof=[Usage|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     partof=[Usage|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     partof=[Usage|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) 'RefersTo Enforcement' refertoEnforcement+=RefertoEnforcement
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Forbidden'
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Obligation'
-	 *     refprivatedata+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modalitykind='Permitted'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     condition=STRING ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
+	 *     partUsage=[Usage|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     partUsage=[Usage|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     partUsage=[Usage|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     partUsage=[Usage|ID] ',' ('RefersTo PrivateData' ',')? (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) 'RefersTo Enforcement' refEnforcement+=RefEnforcement
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Forbidden'
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Obligation'
+	 *     refPrivateData+=RefPrivateData ',' (ambiguity) ('RefersTo Enforcement' ',')? 'Modality' modality='Permitted'
 	 */
 	protected void emit_Usage___RefersToServiceKeyword_11_0_CommaKeyword_11_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

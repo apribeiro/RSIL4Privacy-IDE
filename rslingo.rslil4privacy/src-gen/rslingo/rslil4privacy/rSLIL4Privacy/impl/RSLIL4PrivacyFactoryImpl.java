@@ -76,14 +76,14 @@ public class RSLIL4PrivacyFactoryImpl extends EFactoryImpl implements RSLIL4Priv
       case RSLIL4PrivacyPackage.RETENTION: return createRetention();
       case RSLIL4PrivacyPackage.USAGE: return createUsage();
       case RSLIL4PrivacyPackage.INFORMATIVE: return createInformative();
-      case RSLIL4PrivacyPackage.PARTOF: return createPartof();
-      case RSLIL4PrivacyPackage.REFER_TO_RECIPIENT: return createReferToRecipient();
-      case RSLIL4PrivacyPackage.REFER_TO_RECIPIENT_SOURCE: return createReferToRecipientSource();
-      case RSLIL4PrivacyPackage.REFER_TO_RECIPIENT_TARGET: return createReferToRecipientTarget();
-      case RSLIL4PrivacyPackage.REFER_TO_SERVICE: return createReferToService();
-      case RSLIL4PrivacyPackage.SERVICE_PARTOF: return createServicePartof();
+      case RSLIL4PrivacyPackage.RECIPIENT_PART: return createRecipientPart();
+      case RSLIL4PrivacyPackage.REF_RECIPIENT: return createRefRecipient();
+      case RSLIL4PrivacyPackage.REF_RECIPIENT_SOURCE: return createRefRecipientSource();
+      case RSLIL4PrivacyPackage.REF_RECIPIENT_TARGET: return createRefRecipientTarget();
+      case RSLIL4PrivacyPackage.REF_SERVICE: return createRefService();
+      case RSLIL4PrivacyPackage.SERVICE_PART: return createServicePart();
       case RSLIL4PrivacyPackage.REF_PRIVATE_DATA: return createRefPrivateData();
-      case RSLIL4PrivacyPackage.REFERTO_ENFORCEMENT: return createRefertoEnforcement();
+      case RSLIL4PrivacyPackage.REF_ENFORCEMENT: return createRefEnforcement();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -226,10 +226,10 @@ public class RSLIL4PrivacyFactoryImpl extends EFactoryImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public Partof createPartof()
+  public RecipientPart createRecipientPart()
   {
-    PartofImpl partof = new PartofImpl();
-    return partof;
+    RecipientPartImpl recipientPart = new RecipientPartImpl();
+    return recipientPart;
   }
 
   /**
@@ -237,10 +237,10 @@ public class RSLIL4PrivacyFactoryImpl extends EFactoryImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public ReferToRecipient createReferToRecipient()
+  public RefRecipient createRefRecipient()
   {
-    ReferToRecipientImpl referToRecipient = new ReferToRecipientImpl();
-    return referToRecipient;
+    RefRecipientImpl refRecipient = new RefRecipientImpl();
+    return refRecipient;
   }
 
   /**
@@ -248,10 +248,10 @@ public class RSLIL4PrivacyFactoryImpl extends EFactoryImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public ReferToRecipientSource createReferToRecipientSource()
+  public RefRecipientSource createRefRecipientSource()
   {
-    ReferToRecipientSourceImpl referToRecipientSource = new ReferToRecipientSourceImpl();
-    return referToRecipientSource;
+    RefRecipientSourceImpl refRecipientSource = new RefRecipientSourceImpl();
+    return refRecipientSource;
   }
 
   /**
@@ -259,10 +259,10 @@ public class RSLIL4PrivacyFactoryImpl extends EFactoryImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public ReferToRecipientTarget createReferToRecipientTarget()
+  public RefRecipientTarget createRefRecipientTarget()
   {
-    ReferToRecipientTargetImpl referToRecipientTarget = new ReferToRecipientTargetImpl();
-    return referToRecipientTarget;
+    RefRecipientTargetImpl refRecipientTarget = new RefRecipientTargetImpl();
+    return refRecipientTarget;
   }
 
   /**
@@ -270,10 +270,10 @@ public class RSLIL4PrivacyFactoryImpl extends EFactoryImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public ReferToService createReferToService()
+  public RefService createRefService()
   {
-    ReferToServiceImpl referToService = new ReferToServiceImpl();
-    return referToService;
+    RefServiceImpl refService = new RefServiceImpl();
+    return refService;
   }
 
   /**
@@ -281,10 +281,10 @@ public class RSLIL4PrivacyFactoryImpl extends EFactoryImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public ServicePartof createServicePartof()
+  public ServicePart createServicePart()
   {
-    ServicePartofImpl servicePartof = new ServicePartofImpl();
-    return servicePartof;
+    ServicePartImpl servicePart = new ServicePartImpl();
+    return servicePart;
   }
 
   /**
@@ -303,10 +303,10 @@ public class RSLIL4PrivacyFactoryImpl extends EFactoryImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public RefertoEnforcement createRefertoEnforcement()
+  public RefEnforcement createRefEnforcement()
   {
-    RefertoEnforcementImpl refertoEnforcement = new RefertoEnforcementImpl();
-    return refertoEnforcement;
+    RefEnforcementImpl refEnforcement = new RefEnforcementImpl();
+    return refEnforcement;
   }
 
   /**

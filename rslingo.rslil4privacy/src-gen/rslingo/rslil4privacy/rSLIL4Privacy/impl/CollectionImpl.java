@@ -18,9 +18,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import rslingo.rslil4privacy.rSLIL4Privacy.Collection;
 import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToService;
-import rslingo.rslil4privacy.rSLIL4Privacy.RefertoEnforcement;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefService;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,11 +33,11 @@ import rslingo.rslil4privacy.rSLIL4Privacy.RefertoEnforcement;
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getName <em>Name</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getCondition <em>Condition</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getPartof <em>Partof</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getRefprivatedata <em>Refprivatedata</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getRefertoservice <em>Refertoservice</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getRefertoEnforcement <em>Referto Enforcement</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getModalitykind <em>Modalitykind</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getPartCollection <em>Part Collection</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getRefPrivateData <em>Ref Private Data</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getRefService <em>Ref Service</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getRefEnforcement <em>Ref Enforcement</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getModality <em>Modality</em>}</li>
  * </ul>
  *
  * @generated
@@ -105,64 +105,64 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
   protected String condition = CONDITION_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getPartof() <em>Partof</em>}' reference.
+   * The cached value of the '{@link #getPartCollection() <em>Part Collection</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPartof()
+   * @see #getPartCollection()
    * @generated
    * @ordered
    */
-  protected Collection partof;
+  protected Collection partCollection;
 
   /**
-   * The cached value of the '{@link #getRefprivatedata() <em>Refprivatedata</em>}' containment reference list.
+   * The cached value of the '{@link #getRefPrivateData() <em>Ref Private Data</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRefprivatedata()
+   * @see #getRefPrivateData()
    * @generated
    * @ordered
    */
-  protected EList<RefPrivateData> refprivatedata;
+  protected EList<RefPrivateData> refPrivateData;
 
   /**
-   * The cached value of the '{@link #getRefertoservice() <em>Refertoservice</em>}' containment reference list.
+   * The cached value of the '{@link #getRefService() <em>Ref Service</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRefertoservice()
+   * @see #getRefService()
    * @generated
    * @ordered
    */
-  protected EList<ReferToService> refertoservice;
+  protected EList<RefService> refService;
 
   /**
-   * The cached value of the '{@link #getRefertoEnforcement() <em>Referto Enforcement</em>}' containment reference list.
+   * The cached value of the '{@link #getRefEnforcement() <em>Ref Enforcement</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRefertoEnforcement()
+   * @see #getRefEnforcement()
    * @generated
    * @ordered
    */
-  protected EList<RefertoEnforcement> refertoEnforcement;
+  protected EList<RefEnforcement> refEnforcement;
 
   /**
-   * The default value of the '{@link #getModalitykind() <em>Modalitykind</em>}' attribute.
+   * The default value of the '{@link #getModality() <em>Modality</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getModalitykind()
+   * @see #getModality()
    * @generated
    * @ordered
    */
-  protected static final String MODALITYKIND_EDEFAULT = null;
+  protected static final String MODALITY_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getModalitykind() <em>Modalitykind</em>}' attribute.
+   * The cached value of the '{@link #getModality() <em>Modality</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getModalitykind()
+   * @see #getModality()
    * @generated
    * @ordered
    */
-  protected String modalitykind = MODALITYKIND_EDEFAULT;
+  protected String modality = MODALITY_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -259,19 +259,19 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
    * <!-- end-user-doc -->
    * @generated
    */
-  public Collection getPartof()
+  public Collection getPartCollection()
   {
-    if (partof != null && partof.eIsProxy())
+    if (partCollection != null && partCollection.eIsProxy())
     {
-      InternalEObject oldPartof = (InternalEObject)partof;
-      partof = (Collection)eResolveProxy(oldPartof);
-      if (partof != oldPartof)
+      InternalEObject oldPartCollection = (InternalEObject)partCollection;
+      partCollection = (Collection)eResolveProxy(oldPartCollection);
+      if (partCollection != oldPartCollection)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSLIL4PrivacyPackage.COLLECTION__PARTOF, oldPartof, partof));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSLIL4PrivacyPackage.COLLECTION__PART_COLLECTION, oldPartCollection, partCollection));
       }
     }
-    return partof;
+    return partCollection;
   }
 
   /**
@@ -279,9 +279,9 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
    * <!-- end-user-doc -->
    * @generated
    */
-  public Collection basicGetPartof()
+  public Collection basicGetPartCollection()
   {
-    return partof;
+    return partCollection;
   }
 
   /**
@@ -289,12 +289,12 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPartof(Collection newPartof)
+  public void setPartCollection(Collection newPartCollection)
   {
-    Collection oldPartof = partof;
-    partof = newPartof;
+    Collection oldPartCollection = partCollection;
+    partCollection = newPartCollection;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.COLLECTION__PARTOF, oldPartof, partof));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.COLLECTION__PART_COLLECTION, oldPartCollection, partCollection));
   }
 
   /**
@@ -302,13 +302,13 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<RefPrivateData> getRefprivatedata()
+  public EList<RefPrivateData> getRefPrivateData()
   {
-    if (refprivatedata == null)
+    if (refPrivateData == null)
     {
-      refprivatedata = new EObjectContainmentEList<RefPrivateData>(RefPrivateData.class, this, RSLIL4PrivacyPackage.COLLECTION__REFPRIVATEDATA);
+      refPrivateData = new EObjectContainmentEList<RefPrivateData>(RefPrivateData.class, this, RSLIL4PrivacyPackage.COLLECTION__REF_PRIVATE_DATA);
     }
-    return refprivatedata;
+    return refPrivateData;
   }
 
   /**
@@ -316,13 +316,13 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ReferToService> getRefertoservice()
+  public EList<RefService> getRefService()
   {
-    if (refertoservice == null)
+    if (refService == null)
     {
-      refertoservice = new EObjectContainmentEList<ReferToService>(ReferToService.class, this, RSLIL4PrivacyPackage.COLLECTION__REFERTOSERVICE);
+      refService = new EObjectContainmentEList<RefService>(RefService.class, this, RSLIL4PrivacyPackage.COLLECTION__REF_SERVICE);
     }
-    return refertoservice;
+    return refService;
   }
 
   /**
@@ -330,13 +330,13 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<RefertoEnforcement> getRefertoEnforcement()
+  public EList<RefEnforcement> getRefEnforcement()
   {
-    if (refertoEnforcement == null)
+    if (refEnforcement == null)
     {
-      refertoEnforcement = new EObjectContainmentEList<RefertoEnforcement>(RefertoEnforcement.class, this, RSLIL4PrivacyPackage.COLLECTION__REFERTO_ENFORCEMENT);
+      refEnforcement = new EObjectContainmentEList<RefEnforcement>(RefEnforcement.class, this, RSLIL4PrivacyPackage.COLLECTION__REF_ENFORCEMENT);
     }
-    return refertoEnforcement;
+    return refEnforcement;
   }
 
   /**
@@ -344,9 +344,9 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getModalitykind()
+  public String getModality()
   {
-    return modalitykind;
+    return modality;
   }
 
   /**
@@ -354,12 +354,12 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setModalitykind(String newModalitykind)
+  public void setModality(String newModality)
   {
-    String oldModalitykind = modalitykind;
-    modalitykind = newModalitykind;
+    String oldModality = modality;
+    modality = newModality;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.COLLECTION__MODALITYKIND, oldModalitykind, modalitykind));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.COLLECTION__MODALITY, oldModality, modality));
   }
 
   /**
@@ -372,12 +372,12 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.COLLECTION__REFPRIVATEDATA:
-        return ((InternalEList<?>)getRefprivatedata()).basicRemove(otherEnd, msgs);
-      case RSLIL4PrivacyPackage.COLLECTION__REFERTOSERVICE:
-        return ((InternalEList<?>)getRefertoservice()).basicRemove(otherEnd, msgs);
-      case RSLIL4PrivacyPackage.COLLECTION__REFERTO_ENFORCEMENT:
-        return ((InternalEList<?>)getRefertoEnforcement()).basicRemove(otherEnd, msgs);
+      case RSLIL4PrivacyPackage.COLLECTION__REF_PRIVATE_DATA:
+        return ((InternalEList<?>)getRefPrivateData()).basicRemove(otherEnd, msgs);
+      case RSLIL4PrivacyPackage.COLLECTION__REF_SERVICE:
+        return ((InternalEList<?>)getRefService()).basicRemove(otherEnd, msgs);
+      case RSLIL4PrivacyPackage.COLLECTION__REF_ENFORCEMENT:
+        return ((InternalEList<?>)getRefEnforcement()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -398,17 +398,17 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
         return getDescription();
       case RSLIL4PrivacyPackage.COLLECTION__CONDITION:
         return getCondition();
-      case RSLIL4PrivacyPackage.COLLECTION__PARTOF:
-        if (resolve) return getPartof();
-        return basicGetPartof();
-      case RSLIL4PrivacyPackage.COLLECTION__REFPRIVATEDATA:
-        return getRefprivatedata();
-      case RSLIL4PrivacyPackage.COLLECTION__REFERTOSERVICE:
-        return getRefertoservice();
-      case RSLIL4PrivacyPackage.COLLECTION__REFERTO_ENFORCEMENT:
-        return getRefertoEnforcement();
-      case RSLIL4PrivacyPackage.COLLECTION__MODALITYKIND:
-        return getModalitykind();
+      case RSLIL4PrivacyPackage.COLLECTION__PART_COLLECTION:
+        if (resolve) return getPartCollection();
+        return basicGetPartCollection();
+      case RSLIL4PrivacyPackage.COLLECTION__REF_PRIVATE_DATA:
+        return getRefPrivateData();
+      case RSLIL4PrivacyPackage.COLLECTION__REF_SERVICE:
+        return getRefService();
+      case RSLIL4PrivacyPackage.COLLECTION__REF_ENFORCEMENT:
+        return getRefEnforcement();
+      case RSLIL4PrivacyPackage.COLLECTION__MODALITY:
+        return getModality();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -433,23 +433,23 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
       case RSLIL4PrivacyPackage.COLLECTION__CONDITION:
         setCondition((String)newValue);
         return;
-      case RSLIL4PrivacyPackage.COLLECTION__PARTOF:
-        setPartof((Collection)newValue);
+      case RSLIL4PrivacyPackage.COLLECTION__PART_COLLECTION:
+        setPartCollection((Collection)newValue);
         return;
-      case RSLIL4PrivacyPackage.COLLECTION__REFPRIVATEDATA:
-        getRefprivatedata().clear();
-        getRefprivatedata().addAll((java.util.Collection<? extends RefPrivateData>)newValue);
+      case RSLIL4PrivacyPackage.COLLECTION__REF_PRIVATE_DATA:
+        getRefPrivateData().clear();
+        getRefPrivateData().addAll((java.util.Collection<? extends RefPrivateData>)newValue);
         return;
-      case RSLIL4PrivacyPackage.COLLECTION__REFERTOSERVICE:
-        getRefertoservice().clear();
-        getRefertoservice().addAll((java.util.Collection<? extends ReferToService>)newValue);
+      case RSLIL4PrivacyPackage.COLLECTION__REF_SERVICE:
+        getRefService().clear();
+        getRefService().addAll((java.util.Collection<? extends RefService>)newValue);
         return;
-      case RSLIL4PrivacyPackage.COLLECTION__REFERTO_ENFORCEMENT:
-        getRefertoEnforcement().clear();
-        getRefertoEnforcement().addAll((java.util.Collection<? extends RefertoEnforcement>)newValue);
+      case RSLIL4PrivacyPackage.COLLECTION__REF_ENFORCEMENT:
+        getRefEnforcement().clear();
+        getRefEnforcement().addAll((java.util.Collection<? extends RefEnforcement>)newValue);
         return;
-      case RSLIL4PrivacyPackage.COLLECTION__MODALITYKIND:
-        setModalitykind((String)newValue);
+      case RSLIL4PrivacyPackage.COLLECTION__MODALITY:
+        setModality((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -474,20 +474,20 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
       case RSLIL4PrivacyPackage.COLLECTION__CONDITION:
         setCondition(CONDITION_EDEFAULT);
         return;
-      case RSLIL4PrivacyPackage.COLLECTION__PARTOF:
-        setPartof((Collection)null);
+      case RSLIL4PrivacyPackage.COLLECTION__PART_COLLECTION:
+        setPartCollection((Collection)null);
         return;
-      case RSLIL4PrivacyPackage.COLLECTION__REFPRIVATEDATA:
-        getRefprivatedata().clear();
+      case RSLIL4PrivacyPackage.COLLECTION__REF_PRIVATE_DATA:
+        getRefPrivateData().clear();
         return;
-      case RSLIL4PrivacyPackage.COLLECTION__REFERTOSERVICE:
-        getRefertoservice().clear();
+      case RSLIL4PrivacyPackage.COLLECTION__REF_SERVICE:
+        getRefService().clear();
         return;
-      case RSLIL4PrivacyPackage.COLLECTION__REFERTO_ENFORCEMENT:
-        getRefertoEnforcement().clear();
+      case RSLIL4PrivacyPackage.COLLECTION__REF_ENFORCEMENT:
+        getRefEnforcement().clear();
         return;
-      case RSLIL4PrivacyPackage.COLLECTION__MODALITYKIND:
-        setModalitykind(MODALITYKIND_EDEFAULT);
+      case RSLIL4PrivacyPackage.COLLECTION__MODALITY:
+        setModality(MODALITY_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -509,16 +509,16 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
       case RSLIL4PrivacyPackage.COLLECTION__CONDITION:
         return CONDITION_EDEFAULT == null ? condition != null : !CONDITION_EDEFAULT.equals(condition);
-      case RSLIL4PrivacyPackage.COLLECTION__PARTOF:
-        return partof != null;
-      case RSLIL4PrivacyPackage.COLLECTION__REFPRIVATEDATA:
-        return refprivatedata != null && !refprivatedata.isEmpty();
-      case RSLIL4PrivacyPackage.COLLECTION__REFERTOSERVICE:
-        return refertoservice != null && !refertoservice.isEmpty();
-      case RSLIL4PrivacyPackage.COLLECTION__REFERTO_ENFORCEMENT:
-        return refertoEnforcement != null && !refertoEnforcement.isEmpty();
-      case RSLIL4PrivacyPackage.COLLECTION__MODALITYKIND:
-        return MODALITYKIND_EDEFAULT == null ? modalitykind != null : !MODALITYKIND_EDEFAULT.equals(modalitykind);
+      case RSLIL4PrivacyPackage.COLLECTION__PART_COLLECTION:
+        return partCollection != null;
+      case RSLIL4PrivacyPackage.COLLECTION__REF_PRIVATE_DATA:
+        return refPrivateData != null && !refPrivateData.isEmpty();
+      case RSLIL4PrivacyPackage.COLLECTION__REF_SERVICE:
+        return refService != null && !refService.isEmpty();
+      case RSLIL4PrivacyPackage.COLLECTION__REF_ENFORCEMENT:
+        return refEnforcement != null && !refEnforcement.isEmpty();
+      case RSLIL4PrivacyPackage.COLLECTION__MODALITY:
+        return MODALITY_EDEFAULT == null ? modality != null : !MODALITY_EDEFAULT.equals(modality);
     }
     return super.eIsSet(featureID);
   }
@@ -540,8 +540,8 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
     result.append(description);
     result.append(", condition: ");
     result.append(condition);
-    result.append(", modalitykind: ");
-    result.append(modalitykind);
+    result.append(", modality: ");
+    result.append(modality);
     result.append(')');
     return result.toString();
   }

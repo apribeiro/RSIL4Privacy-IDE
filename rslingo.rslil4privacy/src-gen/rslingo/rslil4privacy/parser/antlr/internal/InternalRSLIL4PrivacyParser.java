@@ -1126,7 +1126,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEnforcement"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:429:1: ruleEnforcement returns [EObject current=null] : (otherlv_0= 'Enforcement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_enforcementName_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_enforcementDescription_7_0= RULE_STRING ) ) otherlv_8= ',' otherlv_9= 'Type' ( ( (lv_enforcementKind_10_1= 'Action' | lv_enforcementKind_10_2= 'Algorithm' | lv_enforcementKind_10_3= 'Config' | lv_enforcementKind_10_4= 'Process' | lv_enforcementKind_10_5= 'Tool' ) ) ) otherlv_11= '};' ) ;
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:429:1: ruleEnforcement returns [EObject current=null] : (otherlv_0= 'Enforcement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_enforcementName_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' otherlv_9= 'Type' ( ( (lv_type_10_1= 'Action' | lv_type_10_2= 'Algorithm' | lv_type_10_3= 'Config' | lv_type_10_4= 'Process' | lv_type_10_5= 'Tool' ) ) ) otherlv_11= '};' ) ;
     public final EObject ruleEnforcement() throws RecognitionException {
         EObject current = null;
 
@@ -1137,24 +1137,24 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         Token lv_enforcementName_4_0=null;
         Token otherlv_5=null;
         Token otherlv_6=null;
-        Token lv_enforcementDescription_7_0=null;
+        Token lv_description_7_0=null;
         Token otherlv_8=null;
         Token otherlv_9=null;
-        Token lv_enforcementKind_10_1=null;
-        Token lv_enforcementKind_10_2=null;
-        Token lv_enforcementKind_10_3=null;
-        Token lv_enforcementKind_10_4=null;
-        Token lv_enforcementKind_10_5=null;
+        Token lv_type_10_1=null;
+        Token lv_type_10_2=null;
+        Token lv_type_10_3=null;
+        Token lv_type_10_4=null;
+        Token lv_type_10_5=null;
         Token otherlv_11=null;
 
          enterRule(); 
             
         try {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:432:28: ( (otherlv_0= 'Enforcement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_enforcementName_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_enforcementDescription_7_0= RULE_STRING ) ) otherlv_8= ',' otherlv_9= 'Type' ( ( (lv_enforcementKind_10_1= 'Action' | lv_enforcementKind_10_2= 'Algorithm' | lv_enforcementKind_10_3= 'Config' | lv_enforcementKind_10_4= 'Process' | lv_enforcementKind_10_5= 'Tool' ) ) ) otherlv_11= '};' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:433:1: (otherlv_0= 'Enforcement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_enforcementName_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_enforcementDescription_7_0= RULE_STRING ) ) otherlv_8= ',' otherlv_9= 'Type' ( ( (lv_enforcementKind_10_1= 'Action' | lv_enforcementKind_10_2= 'Algorithm' | lv_enforcementKind_10_3= 'Config' | lv_enforcementKind_10_4= 'Process' | lv_enforcementKind_10_5= 'Tool' ) ) ) otherlv_11= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:432:28: ( (otherlv_0= 'Enforcement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_enforcementName_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' otherlv_9= 'Type' ( ( (lv_type_10_1= 'Action' | lv_type_10_2= 'Algorithm' | lv_type_10_3= 'Config' | lv_type_10_4= 'Process' | lv_type_10_5= 'Tool' ) ) ) otherlv_11= '};' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:433:1: (otherlv_0= 'Enforcement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_enforcementName_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' otherlv_9= 'Type' ( ( (lv_type_10_1= 'Action' | lv_type_10_2= 'Algorithm' | lv_type_10_3= 'Config' | lv_type_10_4= 'Process' | lv_type_10_5= 'Tool' ) ) ) otherlv_11= '};' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:433:1: (otherlv_0= 'Enforcement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_enforcementName_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_enforcementDescription_7_0= RULE_STRING ) ) otherlv_8= ',' otherlv_9= 'Type' ( ( (lv_enforcementKind_10_1= 'Action' | lv_enforcementKind_10_2= 'Algorithm' | lv_enforcementKind_10_3= 'Config' | lv_enforcementKind_10_4= 'Process' | lv_enforcementKind_10_5= 'Tool' ) ) ) otherlv_11= '};' )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:433:3: otherlv_0= 'Enforcement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_enforcementName_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_enforcementDescription_7_0= RULE_STRING ) ) otherlv_8= ',' otherlv_9= 'Type' ( ( (lv_enforcementKind_10_1= 'Action' | lv_enforcementKind_10_2= 'Algorithm' | lv_enforcementKind_10_3= 'Config' | lv_enforcementKind_10_4= 'Process' | lv_enforcementKind_10_5= 'Tool' ) ) ) otherlv_11= '};'
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:433:1: (otherlv_0= 'Enforcement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_enforcementName_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' otherlv_9= 'Type' ( ( (lv_type_10_1= 'Action' | lv_type_10_2= 'Algorithm' | lv_type_10_3= 'Config' | lv_type_10_4= 'Process' | lv_type_10_5= 'Tool' ) ) ) otherlv_11= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:433:3: otherlv_0= 'Enforcement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_enforcementName_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' otherlv_9= 'Type' ( ( (lv_type_10_1= 'Action' | lv_type_10_2= 'Algorithm' | lv_type_10_3= 'Config' | lv_type_10_4= 'Process' | lv_type_10_5= 'Tool' ) ) ) otherlv_11= '};'
             {
             otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleEnforcement827); 
 
@@ -1228,15 +1228,15 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_6, grammarAccess.getEnforcementAccess().getDescriptionKeyword_6());
                 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:489:1: ( (lv_enforcementDescription_7_0= RULE_STRING ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:490:1: (lv_enforcementDescription_7_0= RULE_STRING )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:489:1: ( (lv_description_7_0= RULE_STRING ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:490:1: (lv_description_7_0= RULE_STRING )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:490:1: (lv_enforcementDescription_7_0= RULE_STRING )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:491:3: lv_enforcementDescription_7_0= RULE_STRING
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:490:1: (lv_description_7_0= RULE_STRING )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:491:3: lv_description_7_0= RULE_STRING
             {
-            lv_enforcementDescription_7_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEnforcement936); 
+            lv_description_7_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEnforcement936); 
 
-            			newLeafNode(lv_enforcementDescription_7_0, grammarAccess.getEnforcementAccess().getEnforcementDescriptionSTRINGTerminalRuleCall_7_0()); 
+            			newLeafNode(lv_description_7_0, grammarAccess.getEnforcementAccess().getDescriptionSTRINGTerminalRuleCall_7_0()); 
             		
 
             	        if (current==null) {
@@ -1244,8 +1244,8 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             	        }
                    		setWithLastConsumed(
                    			current, 
-                   			"enforcementDescription",
-                    		lv_enforcementDescription_7_0, 
+                   			"description",
+                    		lv_description_7_0, 
                     		"STRING");
             	    
 
@@ -1262,13 +1262,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_9, grammarAccess.getEnforcementAccess().getTypeKeyword_9());
                 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:515:1: ( ( (lv_enforcementKind_10_1= 'Action' | lv_enforcementKind_10_2= 'Algorithm' | lv_enforcementKind_10_3= 'Config' | lv_enforcementKind_10_4= 'Process' | lv_enforcementKind_10_5= 'Tool' ) ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:516:1: ( (lv_enforcementKind_10_1= 'Action' | lv_enforcementKind_10_2= 'Algorithm' | lv_enforcementKind_10_3= 'Config' | lv_enforcementKind_10_4= 'Process' | lv_enforcementKind_10_5= 'Tool' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:515:1: ( ( (lv_type_10_1= 'Action' | lv_type_10_2= 'Algorithm' | lv_type_10_3= 'Config' | lv_type_10_4= 'Process' | lv_type_10_5= 'Tool' ) ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:516:1: ( (lv_type_10_1= 'Action' | lv_type_10_2= 'Algorithm' | lv_type_10_3= 'Config' | lv_type_10_4= 'Process' | lv_type_10_5= 'Tool' ) )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:516:1: ( (lv_enforcementKind_10_1= 'Action' | lv_enforcementKind_10_2= 'Algorithm' | lv_enforcementKind_10_3= 'Config' | lv_enforcementKind_10_4= 'Process' | lv_enforcementKind_10_5= 'Tool' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:517:1: (lv_enforcementKind_10_1= 'Action' | lv_enforcementKind_10_2= 'Algorithm' | lv_enforcementKind_10_3= 'Config' | lv_enforcementKind_10_4= 'Process' | lv_enforcementKind_10_5= 'Tool' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:516:1: ( (lv_type_10_1= 'Action' | lv_type_10_2= 'Algorithm' | lv_type_10_3= 'Config' | lv_type_10_4= 'Process' | lv_type_10_5= 'Tool' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:517:1: (lv_type_10_1= 'Action' | lv_type_10_2= 'Algorithm' | lv_type_10_3= 'Config' | lv_type_10_4= 'Process' | lv_type_10_5= 'Tool' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:517:1: (lv_enforcementKind_10_1= 'Action' | lv_enforcementKind_10_2= 'Algorithm' | lv_enforcementKind_10_3= 'Config' | lv_enforcementKind_10_4= 'Process' | lv_enforcementKind_10_5= 'Tool' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:517:1: (lv_type_10_1= 'Action' | lv_type_10_2= 'Algorithm' | lv_type_10_3= 'Config' | lv_type_10_4= 'Process' | lv_type_10_5= 'Tool' )
             int alt13=5;
             switch ( input.LA(1) ) {
             case 22:
@@ -1305,81 +1305,81 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             switch (alt13) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:518:3: lv_enforcementKind_10_1= 'Action'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:518:3: lv_type_10_1= 'Action'
                     {
-                    lv_enforcementKind_10_1=(Token)match(input,22,FOLLOW_22_in_ruleEnforcement985); 
+                    lv_type_10_1=(Token)match(input,22,FOLLOW_22_in_ruleEnforcement985); 
 
-                            newLeafNode(lv_enforcementKind_10_1, grammarAccess.getEnforcementAccess().getEnforcementKindActionKeyword_10_0_0());
+                            newLeafNode(lv_type_10_1, grammarAccess.getEnforcementAccess().getTypeActionKeyword_10_0_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getEnforcementRule());
                     	        }
-                           		setWithLastConsumed(current, "enforcementKind", lv_enforcementKind_10_1, null);
+                           		setWithLastConsumed(current, "type", lv_type_10_1, null);
                     	    
 
                     }
                     break;
                 case 2 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:530:8: lv_enforcementKind_10_2= 'Algorithm'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:530:8: lv_type_10_2= 'Algorithm'
                     {
-                    lv_enforcementKind_10_2=(Token)match(input,23,FOLLOW_23_in_ruleEnforcement1014); 
+                    lv_type_10_2=(Token)match(input,23,FOLLOW_23_in_ruleEnforcement1014); 
 
-                            newLeafNode(lv_enforcementKind_10_2, grammarAccess.getEnforcementAccess().getEnforcementKindAlgorithmKeyword_10_0_1());
+                            newLeafNode(lv_type_10_2, grammarAccess.getEnforcementAccess().getTypeAlgorithmKeyword_10_0_1());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getEnforcementRule());
                     	        }
-                           		setWithLastConsumed(current, "enforcementKind", lv_enforcementKind_10_2, null);
+                           		setWithLastConsumed(current, "type", lv_type_10_2, null);
                     	    
 
                     }
                     break;
                 case 3 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:542:8: lv_enforcementKind_10_3= 'Config'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:542:8: lv_type_10_3= 'Config'
                     {
-                    lv_enforcementKind_10_3=(Token)match(input,24,FOLLOW_24_in_ruleEnforcement1043); 
+                    lv_type_10_3=(Token)match(input,24,FOLLOW_24_in_ruleEnforcement1043); 
 
-                            newLeafNode(lv_enforcementKind_10_3, grammarAccess.getEnforcementAccess().getEnforcementKindConfigKeyword_10_0_2());
+                            newLeafNode(lv_type_10_3, grammarAccess.getEnforcementAccess().getTypeConfigKeyword_10_0_2());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getEnforcementRule());
                     	        }
-                           		setWithLastConsumed(current, "enforcementKind", lv_enforcementKind_10_3, null);
+                           		setWithLastConsumed(current, "type", lv_type_10_3, null);
                     	    
 
                     }
                     break;
                 case 4 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:554:8: lv_enforcementKind_10_4= 'Process'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:554:8: lv_type_10_4= 'Process'
                     {
-                    lv_enforcementKind_10_4=(Token)match(input,25,FOLLOW_25_in_ruleEnforcement1072); 
+                    lv_type_10_4=(Token)match(input,25,FOLLOW_25_in_ruleEnforcement1072); 
 
-                            newLeafNode(lv_enforcementKind_10_4, grammarAccess.getEnforcementAccess().getEnforcementKindProcessKeyword_10_0_3());
+                            newLeafNode(lv_type_10_4, grammarAccess.getEnforcementAccess().getTypeProcessKeyword_10_0_3());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getEnforcementRule());
                     	        }
-                           		setWithLastConsumed(current, "enforcementKind", lv_enforcementKind_10_4, null);
+                           		setWithLastConsumed(current, "type", lv_type_10_4, null);
                     	    
 
                     }
                     break;
                 case 5 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:566:8: lv_enforcementKind_10_5= 'Tool'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:566:8: lv_type_10_5= 'Tool'
                     {
-                    lv_enforcementKind_10_5=(Token)match(input,26,FOLLOW_26_in_ruleEnforcement1101); 
+                    lv_type_10_5=(Token)match(input,26,FOLLOW_26_in_ruleEnforcement1101); 
 
-                            newLeafNode(lv_enforcementKind_10_5, grammarAccess.getEnforcementAccess().getEnforcementKindToolKeyword_10_0_4());
+                            newLeafNode(lv_type_10_5, grammarAccess.getEnforcementAccess().getTypeToolKeyword_10_0_4());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getEnforcementRule());
                     	        }
-                           		setWithLastConsumed(current, "enforcementKind", lv_enforcementKind_10_5, null);
+                           		setWithLastConsumed(current, "type", lv_type_10_5, null);
                     	    
 
                     }
@@ -1454,7 +1454,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleService"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:602:1: ruleService returns [EObject current=null] : (otherlv_0= 'Service' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_servicename_4_0= RULE_STRING ) ) otherlv_5= ',' (otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' )? (otherlv_9= 'RefersTo PrivateData' ( (lv_refprivatedata_10_0= ruleRefPrivateData ) )* otherlv_11= ',' )? (otherlv_12= 'Service_Part' ( (lv_servicepartof_13_0= ruleServicePartof ) )* )? otherlv_14= '};' ) ;
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:602:1: ruleService returns [EObject current=null] : (otherlv_0= 'Service' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_serviceName_4_0= RULE_STRING ) ) otherlv_5= ',' (otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' )? (otherlv_9= 'RefersTo PrivateData' ( (lv_refPrivateData_10_0= ruleRefPrivateData ) )* otherlv_11= ',' )? (otherlv_12= 'Service_Part' ( (lv_servicePart_13_0= ruleServicePart ) )* )? otherlv_14= '};' ) ;
     public final EObject ruleService() throws RecognitionException {
         EObject current = null;
 
@@ -1462,7 +1462,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         Token lv_name_1_0=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
-        Token lv_servicename_4_0=null;
+        Token lv_serviceName_4_0=null;
         Token otherlv_5=null;
         Token otherlv_6=null;
         Token lv_description_7_0=null;
@@ -1471,19 +1471,19 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         Token otherlv_11=null;
         Token otherlv_12=null;
         Token otherlv_14=null;
-        EObject lv_refprivatedata_10_0 = null;
+        EObject lv_refPrivateData_10_0 = null;
 
-        EObject lv_servicepartof_13_0 = null;
+        EObject lv_servicePart_13_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:605:28: ( (otherlv_0= 'Service' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_servicename_4_0= RULE_STRING ) ) otherlv_5= ',' (otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' )? (otherlv_9= 'RefersTo PrivateData' ( (lv_refprivatedata_10_0= ruleRefPrivateData ) )* otherlv_11= ',' )? (otherlv_12= 'Service_Part' ( (lv_servicepartof_13_0= ruleServicePartof ) )* )? otherlv_14= '};' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:606:1: (otherlv_0= 'Service' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_servicename_4_0= RULE_STRING ) ) otherlv_5= ',' (otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' )? (otherlv_9= 'RefersTo PrivateData' ( (lv_refprivatedata_10_0= ruleRefPrivateData ) )* otherlv_11= ',' )? (otherlv_12= 'Service_Part' ( (lv_servicepartof_13_0= ruleServicePartof ) )* )? otherlv_14= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:605:28: ( (otherlv_0= 'Service' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_serviceName_4_0= RULE_STRING ) ) otherlv_5= ',' (otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' )? (otherlv_9= 'RefersTo PrivateData' ( (lv_refPrivateData_10_0= ruleRefPrivateData ) )* otherlv_11= ',' )? (otherlv_12= 'Service_Part' ( (lv_servicePart_13_0= ruleServicePart ) )* )? otherlv_14= '};' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:606:1: (otherlv_0= 'Service' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_serviceName_4_0= RULE_STRING ) ) otherlv_5= ',' (otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' )? (otherlv_9= 'RefersTo PrivateData' ( (lv_refPrivateData_10_0= ruleRefPrivateData ) )* otherlv_11= ',' )? (otherlv_12= 'Service_Part' ( (lv_servicePart_13_0= ruleServicePart ) )* )? otherlv_14= '};' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:606:1: (otherlv_0= 'Service' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_servicename_4_0= RULE_STRING ) ) otherlv_5= ',' (otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' )? (otherlv_9= 'RefersTo PrivateData' ( (lv_refprivatedata_10_0= ruleRefPrivateData ) )* otherlv_11= ',' )? (otherlv_12= 'Service_Part' ( (lv_servicepartof_13_0= ruleServicePartof ) )* )? otherlv_14= '};' )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:606:3: otherlv_0= 'Service' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_servicename_4_0= RULE_STRING ) ) otherlv_5= ',' (otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' )? (otherlv_9= 'RefersTo PrivateData' ( (lv_refprivatedata_10_0= ruleRefPrivateData ) )* otherlv_11= ',' )? (otherlv_12= 'Service_Part' ( (lv_servicepartof_13_0= ruleServicePartof ) )* )? otherlv_14= '};'
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:606:1: (otherlv_0= 'Service' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_serviceName_4_0= RULE_STRING ) ) otherlv_5= ',' (otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' )? (otherlv_9= 'RefersTo PrivateData' ( (lv_refPrivateData_10_0= ruleRefPrivateData ) )* otherlv_11= ',' )? (otherlv_12= 'Service_Part' ( (lv_servicePart_13_0= ruleServicePart ) )* )? otherlv_14= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:606:3: otherlv_0= 'Service' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_serviceName_4_0= RULE_STRING ) ) otherlv_5= ',' (otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' )? (otherlv_9= 'RefersTo PrivateData' ( (lv_refPrivateData_10_0= ruleRefPrivateData ) )* otherlv_11= ',' )? (otherlv_12= 'Service_Part' ( (lv_servicePart_13_0= ruleServicePart ) )* )? otherlv_14= '};'
             {
             otherlv_0=(Token)match(input,27,FOLLOW_27_in_ruleService1212); 
 
@@ -1523,15 +1523,15 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_3, grammarAccess.getServiceAccess().getNameKeyword_3());
                 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:636:1: ( (lv_servicename_4_0= RULE_STRING ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:637:1: (lv_servicename_4_0= RULE_STRING )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:636:1: ( (lv_serviceName_4_0= RULE_STRING ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:637:1: (lv_serviceName_4_0= RULE_STRING )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:637:1: (lv_servicename_4_0= RULE_STRING )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:638:3: lv_servicename_4_0= RULE_STRING
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:637:1: (lv_serviceName_4_0= RULE_STRING )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:638:3: lv_serviceName_4_0= RULE_STRING
             {
-            lv_servicename_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleService1275); 
+            lv_serviceName_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleService1275); 
 
-            			newLeafNode(lv_servicename_4_0, grammarAccess.getServiceAccess().getServicenameSTRINGTerminalRuleCall_4_0()); 
+            			newLeafNode(lv_serviceName_4_0, grammarAccess.getServiceAccess().getServiceNameSTRINGTerminalRuleCall_4_0()); 
             		
 
             	        if (current==null) {
@@ -1539,8 +1539,8 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             	        }
                    		setWithLastConsumed(
                    			current, 
-                   			"servicename",
-                    		lv_servicename_4_0, 
+                   			"serviceName",
+                    		lv_serviceName_4_0, 
                     		"STRING");
             	    
 
@@ -1604,7 +1604,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:684:3: (otherlv_9= 'RefersTo PrivateData' ( (lv_refprivatedata_10_0= ruleRefPrivateData ) )* otherlv_11= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:684:3: (otherlv_9= 'RefersTo PrivateData' ( (lv_refPrivateData_10_0= ruleRefPrivateData ) )* otherlv_11= ',' )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -1613,13 +1613,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt16) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:684:5: otherlv_9= 'RefersTo PrivateData' ( (lv_refprivatedata_10_0= ruleRefPrivateData ) )* otherlv_11= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:684:5: otherlv_9= 'RefersTo PrivateData' ( (lv_refPrivateData_10_0= ruleRefPrivateData ) )* otherlv_11= ','
                     {
                     otherlv_9=(Token)match(input,28,FOLLOW_28_in_ruleService1354); 
 
                         	newLeafNode(otherlv_9, grammarAccess.getServiceAccess().getRefersToPrivateDataKeyword_7_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:688:1: ( (lv_refprivatedata_10_0= ruleRefPrivateData ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:688:1: ( (lv_refPrivateData_10_0= ruleRefPrivateData ) )*
                     loop15:
                     do {
                         int alt15=2;
@@ -1632,16 +1632,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt15) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:689:1: (lv_refprivatedata_10_0= ruleRefPrivateData )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:689:1: (lv_refPrivateData_10_0= ruleRefPrivateData )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:689:1: (lv_refprivatedata_10_0= ruleRefPrivateData )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:690:3: lv_refprivatedata_10_0= ruleRefPrivateData
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:689:1: (lv_refPrivateData_10_0= ruleRefPrivateData )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:690:3: lv_refPrivateData_10_0= ruleRefPrivateData
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getServiceAccess().getRefprivatedataRefPrivateDataParserRuleCall_7_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getServiceAccess().getRefPrivateDataRefPrivateDataParserRuleCall_7_1_0()); 
                     	    	    
                     	    pushFollow(FOLLOW_ruleRefPrivateData_in_ruleService1375);
-                    	    lv_refprivatedata_10_0=ruleRefPrivateData();
+                    	    lv_refPrivateData_10_0=ruleRefPrivateData();
 
                     	    state._fsp--;
 
@@ -1651,8 +1651,8 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"refprivatedata",
-                    	            		lv_refprivatedata_10_0, 
+                    	           			"refPrivateData",
+                    	            		lv_refPrivateData_10_0, 
                     	            		"RefPrivateData");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
@@ -1678,7 +1678,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:710:3: (otherlv_12= 'Service_Part' ( (lv_servicepartof_13_0= ruleServicePartof ) )* )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:710:3: (otherlv_12= 'Service_Part' ( (lv_servicePart_13_0= ruleServicePart ) )* )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -1687,13 +1687,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt18) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:710:5: otherlv_12= 'Service_Part' ( (lv_servicepartof_13_0= ruleServicePartof ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:710:5: otherlv_12= 'Service_Part' ( (lv_servicePart_13_0= ruleServicePart ) )*
                     {
                     otherlv_12=(Token)match(input,29,FOLLOW_29_in_ruleService1403); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getServiceAccess().getService_PartKeyword_8_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:714:1: ( (lv_servicepartof_13_0= ruleServicePartof ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:714:1: ( (lv_servicePart_13_0= ruleServicePart ) )*
                     loop17:
                     do {
                         int alt17=2;
@@ -1706,16 +1706,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt17) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:715:1: (lv_servicepartof_13_0= ruleServicePartof )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:715:1: (lv_servicePart_13_0= ruleServicePart )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:715:1: (lv_servicepartof_13_0= ruleServicePartof )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:716:3: lv_servicepartof_13_0= ruleServicePartof
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:715:1: (lv_servicePart_13_0= ruleServicePart )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:716:3: lv_servicePart_13_0= ruleServicePart
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getServiceAccess().getServicepartofServicePartofParserRuleCall_8_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getServiceAccess().getServicePartServicePartParserRuleCall_8_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleServicePartof_in_ruleService1424);
-                    	    lv_servicepartof_13_0=ruleServicePartof();
+                    	    pushFollow(FOLLOW_ruleServicePart_in_ruleService1424);
+                    	    lv_servicePart_13_0=ruleServicePart();
 
                     	    state._fsp--;
 
@@ -1725,9 +1725,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"servicepartof",
-                    	            		lv_servicepartof_13_0, 
-                    	            		"ServicePartof");
+                    	           			"servicePart",
+                    	            		lv_servicePart_13_0, 
+                    	            		"ServicePart");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -1809,7 +1809,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRecipient"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:753:1: ruleRecipient returns [EObject current=null] : (otherlv_0= 'Recipient' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_recipientname_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'Recipient_Part' ( (lv_partof_10_0= rulePartof ) )* otherlv_11= ',' )? otherlv_12= 'Scope' ( ( (lv_RecipientScopeKind_13_1= 'Internal' | lv_RecipientScopeKind_13_2= 'External' | lv_RecipientScopeKind_13_3= 'Internal/External' ) ) ) otherlv_14= ',' otherlv_15= 'Type' ( ( (lv_RecipientTypeKind_16_1= 'Individual' | lv_RecipientTypeKind_16_2= 'Organization' | lv_RecipientTypeKind_16_3= 'Individual/Organization' ) ) ) otherlv_17= '};' ) ;
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:753:1: ruleRecipient returns [EObject current=null] : (otherlv_0= 'Recipient' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_recipientName_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'Recipient_Part' ( (lv_recipientPart_10_0= ruleRecipientPart ) )* otherlv_11= ',' )? otherlv_12= 'Scope' ( ( (lv_scope_13_1= 'Internal' | lv_scope_13_2= 'External' | lv_scope_13_3= 'Internal/External' ) ) ) otherlv_14= ',' otherlv_15= 'Type' ( ( (lv_type_16_1= 'Individual' | lv_type_16_2= 'Organization' | lv_type_16_3= 'Individual/Organization' ) ) ) otherlv_17= '};' ) ;
     public final EObject ruleRecipient() throws RecognitionException {
         EObject current = null;
 
@@ -1817,7 +1817,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         Token lv_name_1_0=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
-        Token lv_recipientname_4_0=null;
+        Token lv_recipientName_4_0=null;
         Token otherlv_5=null;
         Token otherlv_6=null;
         Token lv_description_7_0=null;
@@ -1825,26 +1825,26 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         Token otherlv_9=null;
         Token otherlv_11=null;
         Token otherlv_12=null;
-        Token lv_RecipientScopeKind_13_1=null;
-        Token lv_RecipientScopeKind_13_2=null;
-        Token lv_RecipientScopeKind_13_3=null;
+        Token lv_scope_13_1=null;
+        Token lv_scope_13_2=null;
+        Token lv_scope_13_3=null;
         Token otherlv_14=null;
         Token otherlv_15=null;
-        Token lv_RecipientTypeKind_16_1=null;
-        Token lv_RecipientTypeKind_16_2=null;
-        Token lv_RecipientTypeKind_16_3=null;
+        Token lv_type_16_1=null;
+        Token lv_type_16_2=null;
+        Token lv_type_16_3=null;
         Token otherlv_17=null;
-        EObject lv_partof_10_0 = null;
+        EObject lv_recipientPart_10_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:756:28: ( (otherlv_0= 'Recipient' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_recipientname_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'Recipient_Part' ( (lv_partof_10_0= rulePartof ) )* otherlv_11= ',' )? otherlv_12= 'Scope' ( ( (lv_RecipientScopeKind_13_1= 'Internal' | lv_RecipientScopeKind_13_2= 'External' | lv_RecipientScopeKind_13_3= 'Internal/External' ) ) ) otherlv_14= ',' otherlv_15= 'Type' ( ( (lv_RecipientTypeKind_16_1= 'Individual' | lv_RecipientTypeKind_16_2= 'Organization' | lv_RecipientTypeKind_16_3= 'Individual/Organization' ) ) ) otherlv_17= '};' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:757:1: (otherlv_0= 'Recipient' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_recipientname_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'Recipient_Part' ( (lv_partof_10_0= rulePartof ) )* otherlv_11= ',' )? otherlv_12= 'Scope' ( ( (lv_RecipientScopeKind_13_1= 'Internal' | lv_RecipientScopeKind_13_2= 'External' | lv_RecipientScopeKind_13_3= 'Internal/External' ) ) ) otherlv_14= ',' otherlv_15= 'Type' ( ( (lv_RecipientTypeKind_16_1= 'Individual' | lv_RecipientTypeKind_16_2= 'Organization' | lv_RecipientTypeKind_16_3= 'Individual/Organization' ) ) ) otherlv_17= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:756:28: ( (otherlv_0= 'Recipient' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_recipientName_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'Recipient_Part' ( (lv_recipientPart_10_0= ruleRecipientPart ) )* otherlv_11= ',' )? otherlv_12= 'Scope' ( ( (lv_scope_13_1= 'Internal' | lv_scope_13_2= 'External' | lv_scope_13_3= 'Internal/External' ) ) ) otherlv_14= ',' otherlv_15= 'Type' ( ( (lv_type_16_1= 'Individual' | lv_type_16_2= 'Organization' | lv_type_16_3= 'Individual/Organization' ) ) ) otherlv_17= '};' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:757:1: (otherlv_0= 'Recipient' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_recipientName_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'Recipient_Part' ( (lv_recipientPart_10_0= ruleRecipientPart ) )* otherlv_11= ',' )? otherlv_12= 'Scope' ( ( (lv_scope_13_1= 'Internal' | lv_scope_13_2= 'External' | lv_scope_13_3= 'Internal/External' ) ) ) otherlv_14= ',' otherlv_15= 'Type' ( ( (lv_type_16_1= 'Individual' | lv_type_16_2= 'Organization' | lv_type_16_3= 'Individual/Organization' ) ) ) otherlv_17= '};' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:757:1: (otherlv_0= 'Recipient' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_recipientname_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'Recipient_Part' ( (lv_partof_10_0= rulePartof ) )* otherlv_11= ',' )? otherlv_12= 'Scope' ( ( (lv_RecipientScopeKind_13_1= 'Internal' | lv_RecipientScopeKind_13_2= 'External' | lv_RecipientScopeKind_13_3= 'Internal/External' ) ) ) otherlv_14= ',' otherlv_15= 'Type' ( ( (lv_RecipientTypeKind_16_1= 'Individual' | lv_RecipientTypeKind_16_2= 'Organization' | lv_RecipientTypeKind_16_3= 'Individual/Organization' ) ) ) otherlv_17= '};' )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:757:3: otherlv_0= 'Recipient' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_recipientname_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'Recipient_Part' ( (lv_partof_10_0= rulePartof ) )* otherlv_11= ',' )? otherlv_12= 'Scope' ( ( (lv_RecipientScopeKind_13_1= 'Internal' | lv_RecipientScopeKind_13_2= 'External' | lv_RecipientScopeKind_13_3= 'Internal/External' ) ) ) otherlv_14= ',' otherlv_15= 'Type' ( ( (lv_RecipientTypeKind_16_1= 'Individual' | lv_RecipientTypeKind_16_2= 'Organization' | lv_RecipientTypeKind_16_3= 'Individual/Organization' ) ) ) otherlv_17= '};'
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:757:1: (otherlv_0= 'Recipient' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_recipientName_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'Recipient_Part' ( (lv_recipientPart_10_0= ruleRecipientPart ) )* otherlv_11= ',' )? otherlv_12= 'Scope' ( ( (lv_scope_13_1= 'Internal' | lv_scope_13_2= 'External' | lv_scope_13_3= 'Internal/External' ) ) ) otherlv_14= ',' otherlv_15= 'Type' ( ( (lv_type_16_1= 'Individual' | lv_type_16_2= 'Organization' | lv_type_16_3= 'Individual/Organization' ) ) ) otherlv_17= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:757:3: otherlv_0= 'Recipient' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Name' ( (lv_recipientName_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Description' ( (lv_description_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'Recipient_Part' ( (lv_recipientPart_10_0= ruleRecipientPart ) )* otherlv_11= ',' )? otherlv_12= 'Scope' ( ( (lv_scope_13_1= 'Internal' | lv_scope_13_2= 'External' | lv_scope_13_3= 'Internal/External' ) ) ) otherlv_14= ',' otherlv_15= 'Type' ( ( (lv_type_16_1= 'Individual' | lv_type_16_2= 'Organization' | lv_type_16_3= 'Individual/Organization' ) ) ) otherlv_17= '};'
             {
             otherlv_0=(Token)match(input,30,FOLLOW_30_in_ruleRecipient1522); 
 
@@ -1884,15 +1884,15 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_3, grammarAccess.getRecipientAccess().getNameKeyword_3());
                 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:787:1: ( (lv_recipientname_4_0= RULE_STRING ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:788:1: (lv_recipientname_4_0= RULE_STRING )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:787:1: ( (lv_recipientName_4_0= RULE_STRING ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:788:1: (lv_recipientName_4_0= RULE_STRING )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:788:1: (lv_recipientname_4_0= RULE_STRING )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:789:3: lv_recipientname_4_0= RULE_STRING
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:788:1: (lv_recipientName_4_0= RULE_STRING )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:789:3: lv_recipientName_4_0= RULE_STRING
             {
-            lv_recipientname_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleRecipient1585); 
+            lv_recipientName_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleRecipient1585); 
 
-            			newLeafNode(lv_recipientname_4_0, grammarAccess.getRecipientAccess().getRecipientnameSTRINGTerminalRuleCall_4_0()); 
+            			newLeafNode(lv_recipientName_4_0, grammarAccess.getRecipientAccess().getRecipientNameSTRINGTerminalRuleCall_4_0()); 
             		
 
             	        if (current==null) {
@@ -1900,8 +1900,8 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             	        }
                    		setWithLastConsumed(
                    			current, 
-                   			"recipientname",
-                    		lv_recipientname_4_0, 
+                   			"recipientName",
+                    		lv_recipientName_4_0, 
                     		"STRING");
             	    
 
@@ -1948,7 +1948,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_8, grammarAccess.getRecipientAccess().getCommaKeyword_8());
                 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:835:1: (otherlv_9= 'Recipient_Part' ( (lv_partof_10_0= rulePartof ) )* otherlv_11= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:835:1: (otherlv_9= 'Recipient_Part' ( (lv_recipientPart_10_0= ruleRecipientPart ) )* otherlv_11= ',' )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -1957,13 +1957,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt20) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:835:3: otherlv_9= 'Recipient_Part' ( (lv_partof_10_0= rulePartof ) )* otherlv_11= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:835:3: otherlv_9= 'Recipient_Part' ( (lv_recipientPart_10_0= ruleRecipientPart ) )* otherlv_11= ','
                     {
                     otherlv_9=(Token)match(input,31,FOLLOW_31_in_ruleRecipient1661); 
 
                         	newLeafNode(otherlv_9, grammarAccess.getRecipientAccess().getRecipient_PartKeyword_9_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:839:1: ( (lv_partof_10_0= rulePartof ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:839:1: ( (lv_recipientPart_10_0= ruleRecipientPart ) )*
                     loop19:
                     do {
                         int alt19=2;
@@ -1976,16 +1976,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt19) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:840:1: (lv_partof_10_0= rulePartof )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:840:1: (lv_recipientPart_10_0= ruleRecipientPart )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:840:1: (lv_partof_10_0= rulePartof )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:841:3: lv_partof_10_0= rulePartof
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:840:1: (lv_recipientPart_10_0= ruleRecipientPart )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:841:3: lv_recipientPart_10_0= ruleRecipientPart
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getRecipientAccess().getPartofPartofParserRuleCall_9_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getRecipientAccess().getRecipientPartRecipientPartParserRuleCall_9_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_rulePartof_in_ruleRecipient1682);
-                    	    lv_partof_10_0=rulePartof();
+                    	    pushFollow(FOLLOW_ruleRecipientPart_in_ruleRecipient1682);
+                    	    lv_recipientPart_10_0=ruleRecipientPart();
 
                     	    state._fsp--;
 
@@ -1995,9 +1995,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"partof",
-                    	            		lv_partof_10_0, 
-                    	            		"Partof");
+                    	           			"recipientPart",
+                    	            		lv_recipientPart_10_0, 
+                    	            		"RecipientPart");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -2026,13 +2026,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_12, grammarAccess.getRecipientAccess().getScopeKeyword_10());
                 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:865:1: ( ( (lv_RecipientScopeKind_13_1= 'Internal' | lv_RecipientScopeKind_13_2= 'External' | lv_RecipientScopeKind_13_3= 'Internal/External' ) ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:866:1: ( (lv_RecipientScopeKind_13_1= 'Internal' | lv_RecipientScopeKind_13_2= 'External' | lv_RecipientScopeKind_13_3= 'Internal/External' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:865:1: ( ( (lv_scope_13_1= 'Internal' | lv_scope_13_2= 'External' | lv_scope_13_3= 'Internal/External' ) ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:866:1: ( (lv_scope_13_1= 'Internal' | lv_scope_13_2= 'External' | lv_scope_13_3= 'Internal/External' ) )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:866:1: ( (lv_RecipientScopeKind_13_1= 'Internal' | lv_RecipientScopeKind_13_2= 'External' | lv_RecipientScopeKind_13_3= 'Internal/External' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:867:1: (lv_RecipientScopeKind_13_1= 'Internal' | lv_RecipientScopeKind_13_2= 'External' | lv_RecipientScopeKind_13_3= 'Internal/External' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:866:1: ( (lv_scope_13_1= 'Internal' | lv_scope_13_2= 'External' | lv_scope_13_3= 'Internal/External' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:867:1: (lv_scope_13_1= 'Internal' | lv_scope_13_2= 'External' | lv_scope_13_3= 'Internal/External' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:867:1: (lv_RecipientScopeKind_13_1= 'Internal' | lv_RecipientScopeKind_13_2= 'External' | lv_RecipientScopeKind_13_3= 'Internal/External' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:867:1: (lv_scope_13_1= 'Internal' | lv_scope_13_2= 'External' | lv_scope_13_3= 'Internal/External' )
             int alt21=3;
             switch ( input.LA(1) ) {
             case 33:
@@ -2059,49 +2059,49 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             switch (alt21) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:868:3: lv_RecipientScopeKind_13_1= 'Internal'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:868:3: lv_scope_13_1= 'Internal'
                     {
-                    lv_RecipientScopeKind_13_1=(Token)match(input,33,FOLLOW_33_in_ruleRecipient1729); 
+                    lv_scope_13_1=(Token)match(input,33,FOLLOW_33_in_ruleRecipient1729); 
 
-                            newLeafNode(lv_RecipientScopeKind_13_1, grammarAccess.getRecipientAccess().getRecipientScopeKindInternalKeyword_11_0_0());
+                            newLeafNode(lv_scope_13_1, grammarAccess.getRecipientAccess().getScopeInternalKeyword_11_0_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getRecipientRule());
                     	        }
-                           		setWithLastConsumed(current, "RecipientScopeKind", lv_RecipientScopeKind_13_1, null);
+                           		setWithLastConsumed(current, "scope", lv_scope_13_1, null);
                     	    
 
                     }
                     break;
                 case 2 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:880:8: lv_RecipientScopeKind_13_2= 'External'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:880:8: lv_scope_13_2= 'External'
                     {
-                    lv_RecipientScopeKind_13_2=(Token)match(input,34,FOLLOW_34_in_ruleRecipient1758); 
+                    lv_scope_13_2=(Token)match(input,34,FOLLOW_34_in_ruleRecipient1758); 
 
-                            newLeafNode(lv_RecipientScopeKind_13_2, grammarAccess.getRecipientAccess().getRecipientScopeKindExternalKeyword_11_0_1());
+                            newLeafNode(lv_scope_13_2, grammarAccess.getRecipientAccess().getScopeExternalKeyword_11_0_1());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getRecipientRule());
                     	        }
-                           		setWithLastConsumed(current, "RecipientScopeKind", lv_RecipientScopeKind_13_2, null);
+                           		setWithLastConsumed(current, "scope", lv_scope_13_2, null);
                     	    
 
                     }
                     break;
                 case 3 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:892:8: lv_RecipientScopeKind_13_3= 'Internal/External'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:892:8: lv_scope_13_3= 'Internal/External'
                     {
-                    lv_RecipientScopeKind_13_3=(Token)match(input,35,FOLLOW_35_in_ruleRecipient1787); 
+                    lv_scope_13_3=(Token)match(input,35,FOLLOW_35_in_ruleRecipient1787); 
 
-                            newLeafNode(lv_RecipientScopeKind_13_3, grammarAccess.getRecipientAccess().getRecipientScopeKindInternalExternalKeyword_11_0_2());
+                            newLeafNode(lv_scope_13_3, grammarAccess.getRecipientAccess().getScopeInternalExternalKeyword_11_0_2());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getRecipientRule());
                     	        }
-                           		setWithLastConsumed(current, "RecipientScopeKind", lv_RecipientScopeKind_13_3, null);
+                           		setWithLastConsumed(current, "scope", lv_scope_13_3, null);
                     	    
 
                     }
@@ -2123,13 +2123,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_15, grammarAccess.getRecipientAccess().getTypeKeyword_13());
                 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:915:1: ( ( (lv_RecipientTypeKind_16_1= 'Individual' | lv_RecipientTypeKind_16_2= 'Organization' | lv_RecipientTypeKind_16_3= 'Individual/Organization' ) ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:916:1: ( (lv_RecipientTypeKind_16_1= 'Individual' | lv_RecipientTypeKind_16_2= 'Organization' | lv_RecipientTypeKind_16_3= 'Individual/Organization' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:915:1: ( ( (lv_type_16_1= 'Individual' | lv_type_16_2= 'Organization' | lv_type_16_3= 'Individual/Organization' ) ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:916:1: ( (lv_type_16_1= 'Individual' | lv_type_16_2= 'Organization' | lv_type_16_3= 'Individual/Organization' ) )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:916:1: ( (lv_RecipientTypeKind_16_1= 'Individual' | lv_RecipientTypeKind_16_2= 'Organization' | lv_RecipientTypeKind_16_3= 'Individual/Organization' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:917:1: (lv_RecipientTypeKind_16_1= 'Individual' | lv_RecipientTypeKind_16_2= 'Organization' | lv_RecipientTypeKind_16_3= 'Individual/Organization' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:916:1: ( (lv_type_16_1= 'Individual' | lv_type_16_2= 'Organization' | lv_type_16_3= 'Individual/Organization' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:917:1: (lv_type_16_1= 'Individual' | lv_type_16_2= 'Organization' | lv_type_16_3= 'Individual/Organization' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:917:1: (lv_RecipientTypeKind_16_1= 'Individual' | lv_RecipientTypeKind_16_2= 'Organization' | lv_RecipientTypeKind_16_3= 'Individual/Organization' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:917:1: (lv_type_16_1= 'Individual' | lv_type_16_2= 'Organization' | lv_type_16_3= 'Individual/Organization' )
             int alt22=3;
             switch ( input.LA(1) ) {
             case 36:
@@ -2156,49 +2156,49 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             switch (alt22) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:918:3: lv_RecipientTypeKind_16_1= 'Individual'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:918:3: lv_type_16_1= 'Individual'
                     {
-                    lv_RecipientTypeKind_16_1=(Token)match(input,36,FOLLOW_36_in_ruleRecipient1847); 
+                    lv_type_16_1=(Token)match(input,36,FOLLOW_36_in_ruleRecipient1847); 
 
-                            newLeafNode(lv_RecipientTypeKind_16_1, grammarAccess.getRecipientAccess().getRecipientTypeKindIndividualKeyword_14_0_0());
+                            newLeafNode(lv_type_16_1, grammarAccess.getRecipientAccess().getTypeIndividualKeyword_14_0_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getRecipientRule());
                     	        }
-                           		setWithLastConsumed(current, "RecipientTypeKind", lv_RecipientTypeKind_16_1, null);
+                           		setWithLastConsumed(current, "type", lv_type_16_1, null);
                     	    
 
                     }
                     break;
                 case 2 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:930:8: lv_RecipientTypeKind_16_2= 'Organization'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:930:8: lv_type_16_2= 'Organization'
                     {
-                    lv_RecipientTypeKind_16_2=(Token)match(input,37,FOLLOW_37_in_ruleRecipient1876); 
+                    lv_type_16_2=(Token)match(input,37,FOLLOW_37_in_ruleRecipient1876); 
 
-                            newLeafNode(lv_RecipientTypeKind_16_2, grammarAccess.getRecipientAccess().getRecipientTypeKindOrganizationKeyword_14_0_1());
+                            newLeafNode(lv_type_16_2, grammarAccess.getRecipientAccess().getTypeOrganizationKeyword_14_0_1());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getRecipientRule());
                     	        }
-                           		setWithLastConsumed(current, "RecipientTypeKind", lv_RecipientTypeKind_16_2, null);
+                           		setWithLastConsumed(current, "type", lv_type_16_2, null);
                     	    
 
                     }
                     break;
                 case 3 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:942:8: lv_RecipientTypeKind_16_3= 'Individual/Organization'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:942:8: lv_type_16_3= 'Individual/Organization'
                     {
-                    lv_RecipientTypeKind_16_3=(Token)match(input,38,FOLLOW_38_in_ruleRecipient1905); 
+                    lv_type_16_3=(Token)match(input,38,FOLLOW_38_in_ruleRecipient1905); 
 
-                            newLeafNode(lv_RecipientTypeKind_16_3, grammarAccess.getRecipientAccess().getRecipientTypeKindIndividualOrganizationKeyword_14_0_2());
+                            newLeafNode(lv_type_16_3, grammarAccess.getRecipientAccess().getTypeIndividualOrganizationKeyword_14_0_2());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getRecipientRule());
                     	        }
-                           		setWithLastConsumed(current, "RecipientTypeKind", lv_RecipientTypeKind_16_3, null);
+                           		setWithLastConsumed(current, "type", lv_type_16_3, null);
                     	    
 
                     }
@@ -2273,7 +2273,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePrivateData"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:978:1: rulePrivateData returns [EObject current=null] : (otherlv_0= 'PrivateData' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_privatedata_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Type' ( ( (lv_PrivateDataKind_7_1= 'PersonalInformation' | lv_PrivateDataKind_7_2= 'UsageInformation' ) ) ) otherlv_8= ',' ( (lv_attribute_9_0= ruleAttribute ) )* otherlv_10= '};' ) ;
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:978:1: rulePrivateData returns [EObject current=null] : (otherlv_0= 'PrivateData' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Type' ( ( (lv_type_7_1= 'PersonalInformation' | lv_type_7_2= 'UsageInformation' ) ) ) otherlv_8= ',' ( (lv_attribute_9_0= ruleAttribute ) )* otherlv_10= '};' ) ;
     public final EObject rulePrivateData() throws RecognitionException {
         EObject current = null;
 
@@ -2281,11 +2281,11 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         Token lv_name_1_0=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
-        Token lv_privatedata_4_0=null;
+        Token lv_description_4_0=null;
         Token otherlv_5=null;
         Token otherlv_6=null;
-        Token lv_PrivateDataKind_7_1=null;
-        Token lv_PrivateDataKind_7_2=null;
+        Token lv_type_7_1=null;
+        Token lv_type_7_2=null;
         Token otherlv_8=null;
         Token otherlv_10=null;
         EObject lv_attribute_9_0 = null;
@@ -2294,11 +2294,11 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:981:28: ( (otherlv_0= 'PrivateData' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_privatedata_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Type' ( ( (lv_PrivateDataKind_7_1= 'PersonalInformation' | lv_PrivateDataKind_7_2= 'UsageInformation' ) ) ) otherlv_8= ',' ( (lv_attribute_9_0= ruleAttribute ) )* otherlv_10= '};' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:982:1: (otherlv_0= 'PrivateData' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_privatedata_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Type' ( ( (lv_PrivateDataKind_7_1= 'PersonalInformation' | lv_PrivateDataKind_7_2= 'UsageInformation' ) ) ) otherlv_8= ',' ( (lv_attribute_9_0= ruleAttribute ) )* otherlv_10= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:981:28: ( (otherlv_0= 'PrivateData' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Type' ( ( (lv_type_7_1= 'PersonalInformation' | lv_type_7_2= 'UsageInformation' ) ) ) otherlv_8= ',' ( (lv_attribute_9_0= ruleAttribute ) )* otherlv_10= '};' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:982:1: (otherlv_0= 'PrivateData' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Type' ( ( (lv_type_7_1= 'PersonalInformation' | lv_type_7_2= 'UsageInformation' ) ) ) otherlv_8= ',' ( (lv_attribute_9_0= ruleAttribute ) )* otherlv_10= '};' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:982:1: (otherlv_0= 'PrivateData' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_privatedata_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Type' ( ( (lv_PrivateDataKind_7_1= 'PersonalInformation' | lv_PrivateDataKind_7_2= 'UsageInformation' ) ) ) otherlv_8= ',' ( (lv_attribute_9_0= ruleAttribute ) )* otherlv_10= '};' )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:982:3: otherlv_0= 'PrivateData' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_privatedata_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Type' ( ( (lv_PrivateDataKind_7_1= 'PersonalInformation' | lv_PrivateDataKind_7_2= 'UsageInformation' ) ) ) otherlv_8= ',' ( (lv_attribute_9_0= ruleAttribute ) )* otherlv_10= '};'
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:982:1: (otherlv_0= 'PrivateData' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Type' ( ( (lv_type_7_1= 'PersonalInformation' | lv_type_7_2= 'UsageInformation' ) ) ) otherlv_8= ',' ( (lv_attribute_9_0= ruleAttribute ) )* otherlv_10= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:982:3: otherlv_0= 'PrivateData' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Type' ( ( (lv_type_7_1= 'PersonalInformation' | lv_type_7_2= 'UsageInformation' ) ) ) otherlv_8= ',' ( (lv_attribute_9_0= ruleAttribute ) )* otherlv_10= '};'
             {
             otherlv_0=(Token)match(input,39,FOLLOW_39_in_rulePrivateData2016); 
 
@@ -2338,15 +2338,15 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_3, grammarAccess.getPrivateDataAccess().getDescriptionKeyword_3());
                 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1012:1: ( (lv_privatedata_4_0= RULE_STRING ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1013:1: (lv_privatedata_4_0= RULE_STRING )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1012:1: ( (lv_description_4_0= RULE_STRING ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1013:1: (lv_description_4_0= RULE_STRING )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1013:1: (lv_privatedata_4_0= RULE_STRING )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1014:3: lv_privatedata_4_0= RULE_STRING
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1013:1: (lv_description_4_0= RULE_STRING )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1014:3: lv_description_4_0= RULE_STRING
             {
-            lv_privatedata_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePrivateData2079); 
+            lv_description_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePrivateData2079); 
 
-            			newLeafNode(lv_privatedata_4_0, grammarAccess.getPrivateDataAccess().getPrivatedataSTRINGTerminalRuleCall_4_0()); 
+            			newLeafNode(lv_description_4_0, grammarAccess.getPrivateDataAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
             		
 
             	        if (current==null) {
@@ -2354,8 +2354,8 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             	        }
                    		setWithLastConsumed(
                    			current, 
-                   			"privatedata",
-                    		lv_privatedata_4_0, 
+                   			"description",
+                    		lv_description_4_0, 
                     		"STRING");
             	    
 
@@ -2372,13 +2372,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_6, grammarAccess.getPrivateDataAccess().getTypeKeyword_6());
                 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1038:1: ( ( (lv_PrivateDataKind_7_1= 'PersonalInformation' | lv_PrivateDataKind_7_2= 'UsageInformation' ) ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1039:1: ( (lv_PrivateDataKind_7_1= 'PersonalInformation' | lv_PrivateDataKind_7_2= 'UsageInformation' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1038:1: ( ( (lv_type_7_1= 'PersonalInformation' | lv_type_7_2= 'UsageInformation' ) ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1039:1: ( (lv_type_7_1= 'PersonalInformation' | lv_type_7_2= 'UsageInformation' ) )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1039:1: ( (lv_PrivateDataKind_7_1= 'PersonalInformation' | lv_PrivateDataKind_7_2= 'UsageInformation' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1040:1: (lv_PrivateDataKind_7_1= 'PersonalInformation' | lv_PrivateDataKind_7_2= 'UsageInformation' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1039:1: ( (lv_type_7_1= 'PersonalInformation' | lv_type_7_2= 'UsageInformation' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1040:1: (lv_type_7_1= 'PersonalInformation' | lv_type_7_2= 'UsageInformation' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1040:1: (lv_PrivateDataKind_7_1= 'PersonalInformation' | lv_PrivateDataKind_7_2= 'UsageInformation' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1040:1: (lv_type_7_1= 'PersonalInformation' | lv_type_7_2= 'UsageInformation' )
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -2396,33 +2396,33 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt23) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1041:3: lv_PrivateDataKind_7_1= 'PersonalInformation'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1041:3: lv_type_7_1= 'PersonalInformation'
                     {
-                    lv_PrivateDataKind_7_1=(Token)match(input,40,FOLLOW_40_in_rulePrivateData2128); 
+                    lv_type_7_1=(Token)match(input,40,FOLLOW_40_in_rulePrivateData2128); 
 
-                            newLeafNode(lv_PrivateDataKind_7_1, grammarAccess.getPrivateDataAccess().getPrivateDataKindPersonalInformationKeyword_7_0_0());
+                            newLeafNode(lv_type_7_1, grammarAccess.getPrivateDataAccess().getTypePersonalInformationKeyword_7_0_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getPrivateDataRule());
                     	        }
-                           		setWithLastConsumed(current, "PrivateDataKind", lv_PrivateDataKind_7_1, null);
+                           		setWithLastConsumed(current, "type", lv_type_7_1, null);
                     	    
 
                     }
                     break;
                 case 2 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1053:8: lv_PrivateDataKind_7_2= 'UsageInformation'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1053:8: lv_type_7_2= 'UsageInformation'
                     {
-                    lv_PrivateDataKind_7_2=(Token)match(input,41,FOLLOW_41_in_rulePrivateData2157); 
+                    lv_type_7_2=(Token)match(input,41,FOLLOW_41_in_rulePrivateData2157); 
 
-                            newLeafNode(lv_PrivateDataKind_7_2, grammarAccess.getPrivateDataAccess().getPrivateDataKindUsageInformationKeyword_7_0_1());
+                            newLeafNode(lv_type_7_2, grammarAccess.getPrivateDataAccess().getTypeUsageInformationKeyword_7_0_1());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getPrivateDataRule());
                     	        }
-                           		setWithLastConsumed(current, "PrivateDataKind", lv_PrivateDataKind_7_2, null);
+                           		setWithLastConsumed(current, "type", lv_type_7_2, null);
                     	    
 
                     }
@@ -2550,24 +2550,24 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAttribute"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1111:1: ruleAttribute returns [EObject current=null] : (otherlv_0= 'Attribute' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= 'Description' ( (lv_attributeName_3_0= RULE_STRING ) ) (otherlv_4= ',' )? ) ;
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1111:1: ruleAttribute returns [EObject current=null] : (otherlv_0= 'Attribute' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= 'Description' ( (lv_description_3_0= RULE_STRING ) ) (otherlv_4= ',' )? ) ;
     public final EObject ruleAttribute() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_name_1_0=null;
         Token otherlv_2=null;
-        Token lv_attributeName_3_0=null;
+        Token lv_description_3_0=null;
         Token otherlv_4=null;
 
          enterRule(); 
             
         try {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1114:28: ( (otherlv_0= 'Attribute' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= 'Description' ( (lv_attributeName_3_0= RULE_STRING ) ) (otherlv_4= ',' )? ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1115:1: (otherlv_0= 'Attribute' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= 'Description' ( (lv_attributeName_3_0= RULE_STRING ) ) (otherlv_4= ',' )? )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1114:28: ( (otherlv_0= 'Attribute' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= 'Description' ( (lv_description_3_0= RULE_STRING ) ) (otherlv_4= ',' )? ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1115:1: (otherlv_0= 'Attribute' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= 'Description' ( (lv_description_3_0= RULE_STRING ) ) (otherlv_4= ',' )? )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1115:1: (otherlv_0= 'Attribute' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= 'Description' ( (lv_attributeName_3_0= RULE_STRING ) ) (otherlv_4= ',' )? )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1115:3: otherlv_0= 'Attribute' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= 'Description' ( (lv_attributeName_3_0= RULE_STRING ) ) (otherlv_4= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1115:1: (otherlv_0= 'Attribute' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= 'Description' ( (lv_description_3_0= RULE_STRING ) ) (otherlv_4= ',' )? )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1115:3: otherlv_0= 'Attribute' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= 'Description' ( (lv_description_3_0= RULE_STRING ) ) (otherlv_4= ',' )?
             {
             otherlv_0=(Token)match(input,42,FOLLOW_42_in_ruleAttribute2302); 
 
@@ -2603,15 +2603,15 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_2, grammarAccess.getAttributeAccess().getDescriptionKeyword_2());
                 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1141:1: ( (lv_attributeName_3_0= RULE_STRING ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1142:1: (lv_attributeName_3_0= RULE_STRING )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1141:1: ( (lv_description_3_0= RULE_STRING ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1142:1: (lv_description_3_0= RULE_STRING )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1142:1: (lv_attributeName_3_0= RULE_STRING )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1143:3: lv_attributeName_3_0= RULE_STRING
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1142:1: (lv_description_3_0= RULE_STRING )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1143:3: lv_description_3_0= RULE_STRING
             {
-            lv_attributeName_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleAttribute2353); 
+            lv_description_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleAttribute2353); 
 
-            			newLeafNode(lv_attributeName_3_0, grammarAccess.getAttributeAccess().getAttributeNameSTRINGTerminalRuleCall_3_0()); 
+            			newLeafNode(lv_description_3_0, grammarAccess.getAttributeAccess().getDescriptionSTRINGTerminalRuleCall_3_0()); 
             		
 
             	        if (current==null) {
@@ -2619,8 +2619,8 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             	        }
                    		setWithLastConsumed(
                    			current, 
-                   			"attributeName",
-                    		lv_attributeName_3_0, 
+                   			"description",
+                    		lv_description_3_0, 
                     		"STRING");
             	    
 
@@ -2707,7 +2707,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCollection"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1180:1: ruleCollection returns [EObject current=null] : (otherlv_0= 'Collection' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Collection' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) ) otherlv_23= '};' ) ;
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1180:1: ruleCollection returns [EObject current=null] : (otherlv_0= 'Collection' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Collection' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) ) otherlv_23= '};' ) ;
     public final EObject ruleCollection() throws RecognitionException {
         EObject current = null;
 
@@ -2730,25 +2730,25 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         Token otherlv_18=null;
         Token otherlv_20=null;
         Token otherlv_21=null;
-        Token lv_modalitykind_22_1=null;
-        Token lv_modalitykind_22_2=null;
-        Token lv_modalitykind_22_3=null;
+        Token lv_modality_22_1=null;
+        Token lv_modality_22_2=null;
+        Token lv_modality_22_3=null;
         Token otherlv_23=null;
-        EObject lv_refprivatedata_13_0 = null;
+        EObject lv_refPrivateData_13_0 = null;
 
-        EObject lv_refertoservice_16_0 = null;
+        EObject lv_refService_16_0 = null;
 
-        EObject lv_refertoEnforcement_19_0 = null;
+        EObject lv_refEnforcement_19_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1183:28: ( (otherlv_0= 'Collection' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Collection' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) ) otherlv_23= '};' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1184:1: (otherlv_0= 'Collection' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Collection' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) ) otherlv_23= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1183:28: ( (otherlv_0= 'Collection' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Collection' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) ) otherlv_23= '};' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1184:1: (otherlv_0= 'Collection' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Collection' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) ) otherlv_23= '};' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1184:1: (otherlv_0= 'Collection' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Collection' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) ) otherlv_23= '};' )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1184:3: otherlv_0= 'Collection' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Collection' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) ) otherlv_23= '};'
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1184:1: (otherlv_0= 'Collection' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Collection' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) ) otherlv_23= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1184:3: otherlv_0= 'Collection' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Collection' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) ) otherlv_23= '};'
             {
             otherlv_0=(Token)match(input,43,FOLLOW_43_in_ruleCollection2456); 
 
@@ -2880,7 +2880,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                             
                     otherlv_10=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCollection2615); 
 
-                    		newLeafNode(otherlv_10, grammarAccess.getCollectionAccess().getPartofCollectionCrossReference_9_1_0()); 
+                    		newLeafNode(otherlv_10, grammarAccess.getCollectionAccess().getPartCollectionCollectionCrossReference_9_1_0()); 
                     	
 
                     }
@@ -2898,7 +2898,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1283:3: (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1283:3: (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )?
             int alt28=2;
             int LA28_0 = input.LA(1);
 
@@ -2907,13 +2907,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt28) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1283:5: otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1283:5: otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ','
                     {
                     otherlv_12=(Token)match(input,28,FOLLOW_28_in_ruleCollection2642); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getCollectionAccess().getRefersToPrivateDataKeyword_10_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1287:1: ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1287:1: ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )*
                     loop27:
                     do {
                         int alt27=2;
@@ -2926,16 +2926,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt27) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1288:1: (lv_refprivatedata_13_0= ruleRefPrivateData )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1288:1: (lv_refPrivateData_13_0= ruleRefPrivateData )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1288:1: (lv_refprivatedata_13_0= ruleRefPrivateData )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1289:3: lv_refprivatedata_13_0= ruleRefPrivateData
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1288:1: (lv_refPrivateData_13_0= ruleRefPrivateData )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1289:3: lv_refPrivateData_13_0= ruleRefPrivateData
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getCollectionAccess().getRefprivatedataRefPrivateDataParserRuleCall_10_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getCollectionAccess().getRefPrivateDataRefPrivateDataParserRuleCall_10_1_0()); 
                     	    	    
                     	    pushFollow(FOLLOW_ruleRefPrivateData_in_ruleCollection2663);
-                    	    lv_refprivatedata_13_0=ruleRefPrivateData();
+                    	    lv_refPrivateData_13_0=ruleRefPrivateData();
 
                     	    state._fsp--;
 
@@ -2945,8 +2945,8 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"refprivatedata",
-                    	            		lv_refprivatedata_13_0, 
+                    	           			"refPrivateData",
+                    	            		lv_refPrivateData_13_0, 
                     	            		"RefPrivateData");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
@@ -2972,7 +2972,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1309:3: (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1309:3: (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )?
             int alt30=2;
             int LA30_0 = input.LA(1);
 
@@ -2981,13 +2981,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt30) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1309:5: otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1309:5: otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ','
                     {
                     otherlv_15=(Token)match(input,46,FOLLOW_46_in_ruleCollection2691); 
 
                         	newLeafNode(otherlv_15, grammarAccess.getCollectionAccess().getRefersToServiceKeyword_11_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1313:1: ( (lv_refertoservice_16_0= ruleReferToService ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1313:1: ( (lv_refService_16_0= ruleRefService ) )*
                     loop29:
                     do {
                         int alt29=2;
@@ -3000,16 +3000,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt29) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1314:1: (lv_refertoservice_16_0= ruleReferToService )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1314:1: (lv_refService_16_0= ruleRefService )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1314:1: (lv_refertoservice_16_0= ruleReferToService )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1315:3: lv_refertoservice_16_0= ruleReferToService
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1314:1: (lv_refService_16_0= ruleRefService )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1315:3: lv_refService_16_0= ruleRefService
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getCollectionAccess().getRefertoserviceReferToServiceParserRuleCall_11_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getCollectionAccess().getRefServiceRefServiceParserRuleCall_11_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleReferToService_in_ruleCollection2712);
-                    	    lv_refertoservice_16_0=ruleReferToService();
+                    	    pushFollow(FOLLOW_ruleRefService_in_ruleCollection2712);
+                    	    lv_refService_16_0=ruleRefService();
 
                     	    state._fsp--;
 
@@ -3019,9 +3019,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"refertoservice",
-                    	            		lv_refertoservice_16_0, 
-                    	            		"ReferToService");
+                    	           			"refService",
+                    	            		lv_refService_16_0, 
+                    	            		"RefService");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -3046,7 +3046,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1335:3: (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1335:3: (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )?
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -3055,13 +3055,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt32) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1335:5: otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1335:5: otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ','
                     {
                     otherlv_18=(Token)match(input,47,FOLLOW_47_in_ruleCollection2740); 
 
                         	newLeafNode(otherlv_18, grammarAccess.getCollectionAccess().getRefersToEnforcementKeyword_12_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1339:1: ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1339:1: ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )*
                     loop31:
                     do {
                         int alt31=2;
@@ -3074,16 +3074,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt31) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1340:1: (lv_refertoEnforcement_19_0= ruleRefertoEnforcement )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1340:1: (lv_refEnforcement_19_0= ruleRefEnforcement )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1340:1: (lv_refertoEnforcement_19_0= ruleRefertoEnforcement )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1341:3: lv_refertoEnforcement_19_0= ruleRefertoEnforcement
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1340:1: (lv_refEnforcement_19_0= ruleRefEnforcement )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1341:3: lv_refEnforcement_19_0= ruleRefEnforcement
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getCollectionAccess().getRefertoEnforcementRefertoEnforcementParserRuleCall_12_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getCollectionAccess().getRefEnforcementRefEnforcementParserRuleCall_12_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleRefertoEnforcement_in_ruleCollection2761);
-                    	    lv_refertoEnforcement_19_0=ruleRefertoEnforcement();
+                    	    pushFollow(FOLLOW_ruleRefEnforcement_in_ruleCollection2761);
+                    	    lv_refEnforcement_19_0=ruleRefEnforcement();
 
                     	    state._fsp--;
 
@@ -3093,9 +3093,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"refertoEnforcement",
-                    	            		lv_refertoEnforcement_19_0, 
-                    	            		"RefertoEnforcement");
+                    	           			"refEnforcement",
+                    	            		lv_refEnforcement_19_0, 
+                    	            		"RefEnforcement");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -3124,13 +3124,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_21, grammarAccess.getCollectionAccess().getModalityKeyword_13());
                 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1365:1: ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1366:1: ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1365:1: ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1366:1: ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1366:1: ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1367:1: (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1366:1: ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1367:1: (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1367:1: (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1367:1: (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' )
             int alt33=3;
             switch ( input.LA(1) ) {
             case 49:
@@ -3157,49 +3157,49 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             switch (alt33) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1368:3: lv_modalitykind_22_1= 'Permitted'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1368:3: lv_modality_22_1= 'Permitted'
                     {
-                    lv_modalitykind_22_1=(Token)match(input,49,FOLLOW_49_in_ruleCollection2808); 
+                    lv_modality_22_1=(Token)match(input,49,FOLLOW_49_in_ruleCollection2808); 
 
-                            newLeafNode(lv_modalitykind_22_1, grammarAccess.getCollectionAccess().getModalitykindPermittedKeyword_14_0_0());
+                            newLeafNode(lv_modality_22_1, grammarAccess.getCollectionAccess().getModalityPermittedKeyword_14_0_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getCollectionRule());
                     	        }
-                           		setWithLastConsumed(current, "modalitykind", lv_modalitykind_22_1, null);
+                           		setWithLastConsumed(current, "modality", lv_modality_22_1, null);
                     	    
 
                     }
                     break;
                 case 2 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1380:8: lv_modalitykind_22_2= 'Obligation'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1380:8: lv_modality_22_2= 'Obligation'
                     {
-                    lv_modalitykind_22_2=(Token)match(input,50,FOLLOW_50_in_ruleCollection2837); 
+                    lv_modality_22_2=(Token)match(input,50,FOLLOW_50_in_ruleCollection2837); 
 
-                            newLeafNode(lv_modalitykind_22_2, grammarAccess.getCollectionAccess().getModalitykindObligationKeyword_14_0_1());
+                            newLeafNode(lv_modality_22_2, grammarAccess.getCollectionAccess().getModalityObligationKeyword_14_0_1());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getCollectionRule());
                     	        }
-                           		setWithLastConsumed(current, "modalitykind", lv_modalitykind_22_2, null);
+                           		setWithLastConsumed(current, "modality", lv_modality_22_2, null);
                     	    
 
                     }
                     break;
                 case 3 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1392:8: lv_modalitykind_22_3= 'Forbidden'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1392:8: lv_modality_22_3= 'Forbidden'
                     {
-                    lv_modalitykind_22_3=(Token)match(input,51,FOLLOW_51_in_ruleCollection2866); 
+                    lv_modality_22_3=(Token)match(input,51,FOLLOW_51_in_ruleCollection2866); 
 
-                            newLeafNode(lv_modalitykind_22_3, grammarAccess.getCollectionAccess().getModalitykindForbiddenKeyword_14_0_2());
+                            newLeafNode(lv_modality_22_3, grammarAccess.getCollectionAccess().getModalityForbiddenKeyword_14_0_2());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getCollectionRule());
                     	        }
-                           		setWithLastConsumed(current, "modalitykind", lv_modalitykind_22_3, null);
+                           		setWithLastConsumed(current, "modality", lv_modality_22_3, null);
                     	    
 
                     }
@@ -3274,7 +3274,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDisclosure"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1428:1: ruleDisclosure returns [EObject current=null] : (otherlv_0= 'Disclosure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Disclosure' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo Recipient' ( (lv_referToRecipient_13_0= ruleReferToRecipient ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Recipient-Source' ( (lv_referToRecipientsource_16_0= ruleReferToRecipientSource ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Recipient-Target' ( (lv_referToRecipienttarget_19_0= ruleReferToRecipientTarget ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo PrivateData' ( (lv_refprivatedata_22_0= ruleRefPrivateData ) )* otherlv_23= ',' )? (otherlv_24= 'RefersTo Service' ( (lv_refertoservice_25_0= ruleReferToService ) )* otherlv_26= ',' )? (otherlv_27= 'RefersTo Enforcement' ( (lv_refertoEnforcement_28_0= ruleRefertoEnforcement ) )* otherlv_29= ',' )? otherlv_30= 'Modality' ( ( (lv_modalitykind_31_1= 'Permitted' | lv_modalitykind_31_2= 'Obligation' | lv_modalitykind_31_3= 'Forbidden' ) ) ) otherlv_32= '};' ) ;
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1428:1: ruleDisclosure returns [EObject current=null] : (otherlv_0= 'Disclosure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Disclosure' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo Recipient' ( (lv_refRecipient_13_0= ruleRefRecipient ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Recipient-Source' ( (lv_refRecipientSource_16_0= ruleRefRecipientSource ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Recipient-Target' ( (lv_refRecipientTarget_19_0= ruleRefRecipientTarget ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo PrivateData' ( (lv_refPrivateData_22_0= ruleRefPrivateData ) )* otherlv_23= ',' )? (otherlv_24= 'RefersTo Service' ( (lv_refService_25_0= ruleRefService ) )* otherlv_26= ',' )? (otherlv_27= 'RefersTo Enforcement' ( (lv_refEnforcement_28_0= ruleRefEnforcement ) )* otherlv_29= ',' )? otherlv_30= 'Modality' ( ( (lv_modality_31_1= 'Permitted' | lv_modality_31_2= 'Obligation' | lv_modality_31_3= 'Forbidden' ) ) ) otherlv_32= '};' ) ;
     public final EObject ruleDisclosure() throws RecognitionException {
         EObject current = null;
 
@@ -3303,31 +3303,31 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         Token otherlv_27=null;
         Token otherlv_29=null;
         Token otherlv_30=null;
-        Token lv_modalitykind_31_1=null;
-        Token lv_modalitykind_31_2=null;
-        Token lv_modalitykind_31_3=null;
+        Token lv_modality_31_1=null;
+        Token lv_modality_31_2=null;
+        Token lv_modality_31_3=null;
         Token otherlv_32=null;
-        EObject lv_referToRecipient_13_0 = null;
+        EObject lv_refRecipient_13_0 = null;
 
-        EObject lv_referToRecipientsource_16_0 = null;
+        EObject lv_refRecipientSource_16_0 = null;
 
-        EObject lv_referToRecipienttarget_19_0 = null;
+        EObject lv_refRecipientTarget_19_0 = null;
 
-        EObject lv_refprivatedata_22_0 = null;
+        EObject lv_refPrivateData_22_0 = null;
 
-        EObject lv_refertoservice_25_0 = null;
+        EObject lv_refService_25_0 = null;
 
-        EObject lv_refertoEnforcement_28_0 = null;
+        EObject lv_refEnforcement_28_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1431:28: ( (otherlv_0= 'Disclosure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Disclosure' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo Recipient' ( (lv_referToRecipient_13_0= ruleReferToRecipient ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Recipient-Source' ( (lv_referToRecipientsource_16_0= ruleReferToRecipientSource ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Recipient-Target' ( (lv_referToRecipienttarget_19_0= ruleReferToRecipientTarget ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo PrivateData' ( (lv_refprivatedata_22_0= ruleRefPrivateData ) )* otherlv_23= ',' )? (otherlv_24= 'RefersTo Service' ( (lv_refertoservice_25_0= ruleReferToService ) )* otherlv_26= ',' )? (otherlv_27= 'RefersTo Enforcement' ( (lv_refertoEnforcement_28_0= ruleRefertoEnforcement ) )* otherlv_29= ',' )? otherlv_30= 'Modality' ( ( (lv_modalitykind_31_1= 'Permitted' | lv_modalitykind_31_2= 'Obligation' | lv_modalitykind_31_3= 'Forbidden' ) ) ) otherlv_32= '};' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1432:1: (otherlv_0= 'Disclosure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Disclosure' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo Recipient' ( (lv_referToRecipient_13_0= ruleReferToRecipient ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Recipient-Source' ( (lv_referToRecipientsource_16_0= ruleReferToRecipientSource ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Recipient-Target' ( (lv_referToRecipienttarget_19_0= ruleReferToRecipientTarget ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo PrivateData' ( (lv_refprivatedata_22_0= ruleRefPrivateData ) )* otherlv_23= ',' )? (otherlv_24= 'RefersTo Service' ( (lv_refertoservice_25_0= ruleReferToService ) )* otherlv_26= ',' )? (otherlv_27= 'RefersTo Enforcement' ( (lv_refertoEnforcement_28_0= ruleRefertoEnforcement ) )* otherlv_29= ',' )? otherlv_30= 'Modality' ( ( (lv_modalitykind_31_1= 'Permitted' | lv_modalitykind_31_2= 'Obligation' | lv_modalitykind_31_3= 'Forbidden' ) ) ) otherlv_32= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1431:28: ( (otherlv_0= 'Disclosure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Disclosure' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo Recipient' ( (lv_refRecipient_13_0= ruleRefRecipient ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Recipient-Source' ( (lv_refRecipientSource_16_0= ruleRefRecipientSource ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Recipient-Target' ( (lv_refRecipientTarget_19_0= ruleRefRecipientTarget ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo PrivateData' ( (lv_refPrivateData_22_0= ruleRefPrivateData ) )* otherlv_23= ',' )? (otherlv_24= 'RefersTo Service' ( (lv_refService_25_0= ruleRefService ) )* otherlv_26= ',' )? (otherlv_27= 'RefersTo Enforcement' ( (lv_refEnforcement_28_0= ruleRefEnforcement ) )* otherlv_29= ',' )? otherlv_30= 'Modality' ( ( (lv_modality_31_1= 'Permitted' | lv_modality_31_2= 'Obligation' | lv_modality_31_3= 'Forbidden' ) ) ) otherlv_32= '};' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1432:1: (otherlv_0= 'Disclosure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Disclosure' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo Recipient' ( (lv_refRecipient_13_0= ruleRefRecipient ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Recipient-Source' ( (lv_refRecipientSource_16_0= ruleRefRecipientSource ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Recipient-Target' ( (lv_refRecipientTarget_19_0= ruleRefRecipientTarget ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo PrivateData' ( (lv_refPrivateData_22_0= ruleRefPrivateData ) )* otherlv_23= ',' )? (otherlv_24= 'RefersTo Service' ( (lv_refService_25_0= ruleRefService ) )* otherlv_26= ',' )? (otherlv_27= 'RefersTo Enforcement' ( (lv_refEnforcement_28_0= ruleRefEnforcement ) )* otherlv_29= ',' )? otherlv_30= 'Modality' ( ( (lv_modality_31_1= 'Permitted' | lv_modality_31_2= 'Obligation' | lv_modality_31_3= 'Forbidden' ) ) ) otherlv_32= '};' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1432:1: (otherlv_0= 'Disclosure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Disclosure' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo Recipient' ( (lv_referToRecipient_13_0= ruleReferToRecipient ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Recipient-Source' ( (lv_referToRecipientsource_16_0= ruleReferToRecipientSource ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Recipient-Target' ( (lv_referToRecipienttarget_19_0= ruleReferToRecipientTarget ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo PrivateData' ( (lv_refprivatedata_22_0= ruleRefPrivateData ) )* otherlv_23= ',' )? (otherlv_24= 'RefersTo Service' ( (lv_refertoservice_25_0= ruleReferToService ) )* otherlv_26= ',' )? (otherlv_27= 'RefersTo Enforcement' ( (lv_refertoEnforcement_28_0= ruleRefertoEnforcement ) )* otherlv_29= ',' )? otherlv_30= 'Modality' ( ( (lv_modalitykind_31_1= 'Permitted' | lv_modalitykind_31_2= 'Obligation' | lv_modalitykind_31_3= 'Forbidden' ) ) ) otherlv_32= '};' )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1432:3: otherlv_0= 'Disclosure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Disclosure' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo Recipient' ( (lv_referToRecipient_13_0= ruleReferToRecipient ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Recipient-Source' ( (lv_referToRecipientsource_16_0= ruleReferToRecipientSource ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Recipient-Target' ( (lv_referToRecipienttarget_19_0= ruleReferToRecipientTarget ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo PrivateData' ( (lv_refprivatedata_22_0= ruleRefPrivateData ) )* otherlv_23= ',' )? (otherlv_24= 'RefersTo Service' ( (lv_refertoservice_25_0= ruleReferToService ) )* otherlv_26= ',' )? (otherlv_27= 'RefersTo Enforcement' ( (lv_refertoEnforcement_28_0= ruleRefertoEnforcement ) )* otherlv_29= ',' )? otherlv_30= 'Modality' ( ( (lv_modalitykind_31_1= 'Permitted' | lv_modalitykind_31_2= 'Obligation' | lv_modalitykind_31_3= 'Forbidden' ) ) ) otherlv_32= '};'
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1432:1: (otherlv_0= 'Disclosure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Disclosure' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo Recipient' ( (lv_refRecipient_13_0= ruleRefRecipient ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Recipient-Source' ( (lv_refRecipientSource_16_0= ruleRefRecipientSource ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Recipient-Target' ( (lv_refRecipientTarget_19_0= ruleRefRecipientTarget ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo PrivateData' ( (lv_refPrivateData_22_0= ruleRefPrivateData ) )* otherlv_23= ',' )? (otherlv_24= 'RefersTo Service' ( (lv_refService_25_0= ruleRefService ) )* otherlv_26= ',' )? (otherlv_27= 'RefersTo Enforcement' ( (lv_refEnforcement_28_0= ruleRefEnforcement ) )* otherlv_29= ',' )? otherlv_30= 'Modality' ( ( (lv_modality_31_1= 'Permitted' | lv_modality_31_2= 'Obligation' | lv_modality_31_3= 'Forbidden' ) ) ) otherlv_32= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1432:3: otherlv_0= 'Disclosure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Disclosure' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo Recipient' ( (lv_refRecipient_13_0= ruleRefRecipient ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Recipient-Source' ( (lv_refRecipientSource_16_0= ruleRefRecipientSource ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Recipient-Target' ( (lv_refRecipientTarget_19_0= ruleRefRecipientTarget ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo PrivateData' ( (lv_refPrivateData_22_0= ruleRefPrivateData ) )* otherlv_23= ',' )? (otherlv_24= 'RefersTo Service' ( (lv_refService_25_0= ruleRefService ) )* otherlv_26= ',' )? (otherlv_27= 'RefersTo Enforcement' ( (lv_refEnforcement_28_0= ruleRefEnforcement ) )* otherlv_29= ',' )? otherlv_30= 'Modality' ( ( (lv_modality_31_1= 'Permitted' | lv_modality_31_2= 'Obligation' | lv_modality_31_3= 'Forbidden' ) ) ) otherlv_32= '};'
             {
             otherlv_0=(Token)match(input,52,FOLLOW_52_in_ruleDisclosure2977); 
 
@@ -3459,7 +3459,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                             
                     otherlv_10=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDisclosure3136); 
 
-                    		newLeafNode(otherlv_10, grammarAccess.getDisclosureAccess().getPartofDisclosureCrossReference_9_1_0()); 
+                    		newLeafNode(otherlv_10, grammarAccess.getDisclosureAccess().getPartDisclosureDisclosureCrossReference_9_1_0()); 
                     	
 
                     }
@@ -3477,7 +3477,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1531:3: (otherlv_12= 'RefersTo Recipient' ( (lv_referToRecipient_13_0= ruleReferToRecipient ) )* otherlv_14= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1531:3: (otherlv_12= 'RefersTo Recipient' ( (lv_refRecipient_13_0= ruleRefRecipient ) )* otherlv_14= ',' )?
             int alt36=2;
             int LA36_0 = input.LA(1);
 
@@ -3486,13 +3486,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt36) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1531:5: otherlv_12= 'RefersTo Recipient' ( (lv_referToRecipient_13_0= ruleReferToRecipient ) )* otherlv_14= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1531:5: otherlv_12= 'RefersTo Recipient' ( (lv_refRecipient_13_0= ruleRefRecipient ) )* otherlv_14= ','
                     {
                     otherlv_12=(Token)match(input,54,FOLLOW_54_in_ruleDisclosure3163); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getDisclosureAccess().getRefersToRecipientKeyword_10_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1535:1: ( (lv_referToRecipient_13_0= ruleReferToRecipient ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1535:1: ( (lv_refRecipient_13_0= ruleRefRecipient ) )*
                     loop35:
                     do {
                         int alt35=2;
@@ -3505,16 +3505,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt35) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1536:1: (lv_referToRecipient_13_0= ruleReferToRecipient )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1536:1: (lv_refRecipient_13_0= ruleRefRecipient )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1536:1: (lv_referToRecipient_13_0= ruleReferToRecipient )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1537:3: lv_referToRecipient_13_0= ruleReferToRecipient
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1536:1: (lv_refRecipient_13_0= ruleRefRecipient )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1537:3: lv_refRecipient_13_0= ruleRefRecipient
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getDisclosureAccess().getReferToRecipientReferToRecipientParserRuleCall_10_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getDisclosureAccess().getRefRecipientRefRecipientParserRuleCall_10_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleReferToRecipient_in_ruleDisclosure3184);
-                    	    lv_referToRecipient_13_0=ruleReferToRecipient();
+                    	    pushFollow(FOLLOW_ruleRefRecipient_in_ruleDisclosure3184);
+                    	    lv_refRecipient_13_0=ruleRefRecipient();
 
                     	    state._fsp--;
 
@@ -3524,9 +3524,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"referToRecipient",
-                    	            		lv_referToRecipient_13_0, 
-                    	            		"ReferToRecipient");
+                    	           			"refRecipient",
+                    	            		lv_refRecipient_13_0, 
+                    	            		"RefRecipient");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -3551,7 +3551,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1557:3: (otherlv_15= 'RefersTo Recipient-Source' ( (lv_referToRecipientsource_16_0= ruleReferToRecipientSource ) )* otherlv_17= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1557:3: (otherlv_15= 'RefersTo Recipient-Source' ( (lv_refRecipientSource_16_0= ruleRefRecipientSource ) )* otherlv_17= ',' )?
             int alt38=2;
             int LA38_0 = input.LA(1);
 
@@ -3560,13 +3560,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt38) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1557:5: otherlv_15= 'RefersTo Recipient-Source' ( (lv_referToRecipientsource_16_0= ruleReferToRecipientSource ) )* otherlv_17= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1557:5: otherlv_15= 'RefersTo Recipient-Source' ( (lv_refRecipientSource_16_0= ruleRefRecipientSource ) )* otherlv_17= ','
                     {
                     otherlv_15=(Token)match(input,55,FOLLOW_55_in_ruleDisclosure3212); 
 
                         	newLeafNode(otherlv_15, grammarAccess.getDisclosureAccess().getRefersToRecipientSourceKeyword_11_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1561:1: ( (lv_referToRecipientsource_16_0= ruleReferToRecipientSource ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1561:1: ( (lv_refRecipientSource_16_0= ruleRefRecipientSource ) )*
                     loop37:
                     do {
                         int alt37=2;
@@ -3579,16 +3579,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt37) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1562:1: (lv_referToRecipientsource_16_0= ruleReferToRecipientSource )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1562:1: (lv_refRecipientSource_16_0= ruleRefRecipientSource )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1562:1: (lv_referToRecipientsource_16_0= ruleReferToRecipientSource )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1563:3: lv_referToRecipientsource_16_0= ruleReferToRecipientSource
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1562:1: (lv_refRecipientSource_16_0= ruleRefRecipientSource )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1563:3: lv_refRecipientSource_16_0= ruleRefRecipientSource
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getDisclosureAccess().getReferToRecipientsourceReferToRecipientSourceParserRuleCall_11_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getDisclosureAccess().getRefRecipientSourceRefRecipientSourceParserRuleCall_11_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleReferToRecipientSource_in_ruleDisclosure3233);
-                    	    lv_referToRecipientsource_16_0=ruleReferToRecipientSource();
+                    	    pushFollow(FOLLOW_ruleRefRecipientSource_in_ruleDisclosure3233);
+                    	    lv_refRecipientSource_16_0=ruleRefRecipientSource();
 
                     	    state._fsp--;
 
@@ -3598,9 +3598,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"referToRecipientsource",
-                    	            		lv_referToRecipientsource_16_0, 
-                    	            		"ReferToRecipientSource");
+                    	           			"refRecipientSource",
+                    	            		lv_refRecipientSource_16_0, 
+                    	            		"RefRecipientSource");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -3625,7 +3625,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1583:3: (otherlv_18= 'RefersTo Recipient-Target' ( (lv_referToRecipienttarget_19_0= ruleReferToRecipientTarget ) )* otherlv_20= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1583:3: (otherlv_18= 'RefersTo Recipient-Target' ( (lv_refRecipientTarget_19_0= ruleRefRecipientTarget ) )* otherlv_20= ',' )?
             int alt40=2;
             int LA40_0 = input.LA(1);
 
@@ -3634,13 +3634,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt40) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1583:5: otherlv_18= 'RefersTo Recipient-Target' ( (lv_referToRecipienttarget_19_0= ruleReferToRecipientTarget ) )* otherlv_20= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1583:5: otherlv_18= 'RefersTo Recipient-Target' ( (lv_refRecipientTarget_19_0= ruleRefRecipientTarget ) )* otherlv_20= ','
                     {
                     otherlv_18=(Token)match(input,56,FOLLOW_56_in_ruleDisclosure3261); 
 
                         	newLeafNode(otherlv_18, grammarAccess.getDisclosureAccess().getRefersToRecipientTargetKeyword_12_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1587:1: ( (lv_referToRecipienttarget_19_0= ruleReferToRecipientTarget ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1587:1: ( (lv_refRecipientTarget_19_0= ruleRefRecipientTarget ) )*
                     loop39:
                     do {
                         int alt39=2;
@@ -3653,16 +3653,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt39) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1588:1: (lv_referToRecipienttarget_19_0= ruleReferToRecipientTarget )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1588:1: (lv_refRecipientTarget_19_0= ruleRefRecipientTarget )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1588:1: (lv_referToRecipienttarget_19_0= ruleReferToRecipientTarget )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1589:3: lv_referToRecipienttarget_19_0= ruleReferToRecipientTarget
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1588:1: (lv_refRecipientTarget_19_0= ruleRefRecipientTarget )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1589:3: lv_refRecipientTarget_19_0= ruleRefRecipientTarget
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getDisclosureAccess().getReferToRecipienttargetReferToRecipientTargetParserRuleCall_12_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getDisclosureAccess().getRefRecipientTargetRefRecipientTargetParserRuleCall_12_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleReferToRecipientTarget_in_ruleDisclosure3282);
-                    	    lv_referToRecipienttarget_19_0=ruleReferToRecipientTarget();
+                    	    pushFollow(FOLLOW_ruleRefRecipientTarget_in_ruleDisclosure3282);
+                    	    lv_refRecipientTarget_19_0=ruleRefRecipientTarget();
 
                     	    state._fsp--;
 
@@ -3672,9 +3672,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"referToRecipienttarget",
-                    	            		lv_referToRecipienttarget_19_0, 
-                    	            		"ReferToRecipientTarget");
+                    	           			"refRecipientTarget",
+                    	            		lv_refRecipientTarget_19_0, 
+                    	            		"RefRecipientTarget");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -3699,7 +3699,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1609:3: (otherlv_21= 'RefersTo PrivateData' ( (lv_refprivatedata_22_0= ruleRefPrivateData ) )* otherlv_23= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1609:3: (otherlv_21= 'RefersTo PrivateData' ( (lv_refPrivateData_22_0= ruleRefPrivateData ) )* otherlv_23= ',' )?
             int alt42=2;
             int LA42_0 = input.LA(1);
 
@@ -3708,13 +3708,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt42) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1609:5: otherlv_21= 'RefersTo PrivateData' ( (lv_refprivatedata_22_0= ruleRefPrivateData ) )* otherlv_23= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1609:5: otherlv_21= 'RefersTo PrivateData' ( (lv_refPrivateData_22_0= ruleRefPrivateData ) )* otherlv_23= ','
                     {
                     otherlv_21=(Token)match(input,28,FOLLOW_28_in_ruleDisclosure3310); 
 
                         	newLeafNode(otherlv_21, grammarAccess.getDisclosureAccess().getRefersToPrivateDataKeyword_13_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1613:1: ( (lv_refprivatedata_22_0= ruleRefPrivateData ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1613:1: ( (lv_refPrivateData_22_0= ruleRefPrivateData ) )*
                     loop41:
                     do {
                         int alt41=2;
@@ -3727,16 +3727,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt41) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1614:1: (lv_refprivatedata_22_0= ruleRefPrivateData )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1614:1: (lv_refPrivateData_22_0= ruleRefPrivateData )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1614:1: (lv_refprivatedata_22_0= ruleRefPrivateData )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1615:3: lv_refprivatedata_22_0= ruleRefPrivateData
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1614:1: (lv_refPrivateData_22_0= ruleRefPrivateData )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1615:3: lv_refPrivateData_22_0= ruleRefPrivateData
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getDisclosureAccess().getRefprivatedataRefPrivateDataParserRuleCall_13_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getDisclosureAccess().getRefPrivateDataRefPrivateDataParserRuleCall_13_1_0()); 
                     	    	    
                     	    pushFollow(FOLLOW_ruleRefPrivateData_in_ruleDisclosure3331);
-                    	    lv_refprivatedata_22_0=ruleRefPrivateData();
+                    	    lv_refPrivateData_22_0=ruleRefPrivateData();
 
                     	    state._fsp--;
 
@@ -3746,8 +3746,8 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"refprivatedata",
-                    	            		lv_refprivatedata_22_0, 
+                    	           			"refPrivateData",
+                    	            		lv_refPrivateData_22_0, 
                     	            		"RefPrivateData");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
@@ -3773,7 +3773,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1635:3: (otherlv_24= 'RefersTo Service' ( (lv_refertoservice_25_0= ruleReferToService ) )* otherlv_26= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1635:3: (otherlv_24= 'RefersTo Service' ( (lv_refService_25_0= ruleRefService ) )* otherlv_26= ',' )?
             int alt44=2;
             int LA44_0 = input.LA(1);
 
@@ -3782,13 +3782,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt44) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1635:5: otherlv_24= 'RefersTo Service' ( (lv_refertoservice_25_0= ruleReferToService ) )* otherlv_26= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1635:5: otherlv_24= 'RefersTo Service' ( (lv_refService_25_0= ruleRefService ) )* otherlv_26= ','
                     {
                     otherlv_24=(Token)match(input,46,FOLLOW_46_in_ruleDisclosure3359); 
 
                         	newLeafNode(otherlv_24, grammarAccess.getDisclosureAccess().getRefersToServiceKeyword_14_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1639:1: ( (lv_refertoservice_25_0= ruleReferToService ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1639:1: ( (lv_refService_25_0= ruleRefService ) )*
                     loop43:
                     do {
                         int alt43=2;
@@ -3801,16 +3801,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt43) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1640:1: (lv_refertoservice_25_0= ruleReferToService )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1640:1: (lv_refService_25_0= ruleRefService )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1640:1: (lv_refertoservice_25_0= ruleReferToService )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1641:3: lv_refertoservice_25_0= ruleReferToService
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1640:1: (lv_refService_25_0= ruleRefService )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1641:3: lv_refService_25_0= ruleRefService
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getDisclosureAccess().getRefertoserviceReferToServiceParserRuleCall_14_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getDisclosureAccess().getRefServiceRefServiceParserRuleCall_14_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleReferToService_in_ruleDisclosure3380);
-                    	    lv_refertoservice_25_0=ruleReferToService();
+                    	    pushFollow(FOLLOW_ruleRefService_in_ruleDisclosure3380);
+                    	    lv_refService_25_0=ruleRefService();
 
                     	    state._fsp--;
 
@@ -3820,9 +3820,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"refertoservice",
-                    	            		lv_refertoservice_25_0, 
-                    	            		"ReferToService");
+                    	           			"refService",
+                    	            		lv_refService_25_0, 
+                    	            		"RefService");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -3847,7 +3847,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1661:3: (otherlv_27= 'RefersTo Enforcement' ( (lv_refertoEnforcement_28_0= ruleRefertoEnforcement ) )* otherlv_29= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1661:3: (otherlv_27= 'RefersTo Enforcement' ( (lv_refEnforcement_28_0= ruleRefEnforcement ) )* otherlv_29= ',' )?
             int alt46=2;
             int LA46_0 = input.LA(1);
 
@@ -3856,13 +3856,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt46) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1661:5: otherlv_27= 'RefersTo Enforcement' ( (lv_refertoEnforcement_28_0= ruleRefertoEnforcement ) )* otherlv_29= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1661:5: otherlv_27= 'RefersTo Enforcement' ( (lv_refEnforcement_28_0= ruleRefEnforcement ) )* otherlv_29= ','
                     {
                     otherlv_27=(Token)match(input,47,FOLLOW_47_in_ruleDisclosure3408); 
 
                         	newLeafNode(otherlv_27, grammarAccess.getDisclosureAccess().getRefersToEnforcementKeyword_15_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1665:1: ( (lv_refertoEnforcement_28_0= ruleRefertoEnforcement ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1665:1: ( (lv_refEnforcement_28_0= ruleRefEnforcement ) )*
                     loop45:
                     do {
                         int alt45=2;
@@ -3875,16 +3875,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt45) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1666:1: (lv_refertoEnforcement_28_0= ruleRefertoEnforcement )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1666:1: (lv_refEnforcement_28_0= ruleRefEnforcement )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1666:1: (lv_refertoEnforcement_28_0= ruleRefertoEnforcement )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1667:3: lv_refertoEnforcement_28_0= ruleRefertoEnforcement
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1666:1: (lv_refEnforcement_28_0= ruleRefEnforcement )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1667:3: lv_refEnforcement_28_0= ruleRefEnforcement
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getDisclosureAccess().getRefertoEnforcementRefertoEnforcementParserRuleCall_15_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getDisclosureAccess().getRefEnforcementRefEnforcementParserRuleCall_15_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleRefertoEnforcement_in_ruleDisclosure3429);
-                    	    lv_refertoEnforcement_28_0=ruleRefertoEnforcement();
+                    	    pushFollow(FOLLOW_ruleRefEnforcement_in_ruleDisclosure3429);
+                    	    lv_refEnforcement_28_0=ruleRefEnforcement();
 
                     	    state._fsp--;
 
@@ -3894,9 +3894,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"refertoEnforcement",
-                    	            		lv_refertoEnforcement_28_0, 
-                    	            		"RefertoEnforcement");
+                    	           			"refEnforcement",
+                    	            		lv_refEnforcement_28_0, 
+                    	            		"RefEnforcement");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -3925,13 +3925,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_30, grammarAccess.getDisclosureAccess().getModalityKeyword_16());
                 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1691:1: ( ( (lv_modalitykind_31_1= 'Permitted' | lv_modalitykind_31_2= 'Obligation' | lv_modalitykind_31_3= 'Forbidden' ) ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1692:1: ( (lv_modalitykind_31_1= 'Permitted' | lv_modalitykind_31_2= 'Obligation' | lv_modalitykind_31_3= 'Forbidden' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1691:1: ( ( (lv_modality_31_1= 'Permitted' | lv_modality_31_2= 'Obligation' | lv_modality_31_3= 'Forbidden' ) ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1692:1: ( (lv_modality_31_1= 'Permitted' | lv_modality_31_2= 'Obligation' | lv_modality_31_3= 'Forbidden' ) )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1692:1: ( (lv_modalitykind_31_1= 'Permitted' | lv_modalitykind_31_2= 'Obligation' | lv_modalitykind_31_3= 'Forbidden' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1693:1: (lv_modalitykind_31_1= 'Permitted' | lv_modalitykind_31_2= 'Obligation' | lv_modalitykind_31_3= 'Forbidden' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1692:1: ( (lv_modality_31_1= 'Permitted' | lv_modality_31_2= 'Obligation' | lv_modality_31_3= 'Forbidden' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1693:1: (lv_modality_31_1= 'Permitted' | lv_modality_31_2= 'Obligation' | lv_modality_31_3= 'Forbidden' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1693:1: (lv_modalitykind_31_1= 'Permitted' | lv_modalitykind_31_2= 'Obligation' | lv_modalitykind_31_3= 'Forbidden' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1693:1: (lv_modality_31_1= 'Permitted' | lv_modality_31_2= 'Obligation' | lv_modality_31_3= 'Forbidden' )
             int alt47=3;
             switch ( input.LA(1) ) {
             case 49:
@@ -3958,49 +3958,49 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             switch (alt47) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1694:3: lv_modalitykind_31_1= 'Permitted'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1694:3: lv_modality_31_1= 'Permitted'
                     {
-                    lv_modalitykind_31_1=(Token)match(input,49,FOLLOW_49_in_ruleDisclosure3476); 
+                    lv_modality_31_1=(Token)match(input,49,FOLLOW_49_in_ruleDisclosure3476); 
 
-                            newLeafNode(lv_modalitykind_31_1, grammarAccess.getDisclosureAccess().getModalitykindPermittedKeyword_17_0_0());
+                            newLeafNode(lv_modality_31_1, grammarAccess.getDisclosureAccess().getModalityPermittedKeyword_17_0_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getDisclosureRule());
                     	        }
-                           		setWithLastConsumed(current, "modalitykind", lv_modalitykind_31_1, null);
+                           		setWithLastConsumed(current, "modality", lv_modality_31_1, null);
                     	    
 
                     }
                     break;
                 case 2 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1706:8: lv_modalitykind_31_2= 'Obligation'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1706:8: lv_modality_31_2= 'Obligation'
                     {
-                    lv_modalitykind_31_2=(Token)match(input,50,FOLLOW_50_in_ruleDisclosure3505); 
+                    lv_modality_31_2=(Token)match(input,50,FOLLOW_50_in_ruleDisclosure3505); 
 
-                            newLeafNode(lv_modalitykind_31_2, grammarAccess.getDisclosureAccess().getModalitykindObligationKeyword_17_0_1());
+                            newLeafNode(lv_modality_31_2, grammarAccess.getDisclosureAccess().getModalityObligationKeyword_17_0_1());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getDisclosureRule());
                     	        }
-                           		setWithLastConsumed(current, "modalitykind", lv_modalitykind_31_2, null);
+                           		setWithLastConsumed(current, "modality", lv_modality_31_2, null);
                     	    
 
                     }
                     break;
                 case 3 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1718:8: lv_modalitykind_31_3= 'Forbidden'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1718:8: lv_modality_31_3= 'Forbidden'
                     {
-                    lv_modalitykind_31_3=(Token)match(input,51,FOLLOW_51_in_ruleDisclosure3534); 
+                    lv_modality_31_3=(Token)match(input,51,FOLLOW_51_in_ruleDisclosure3534); 
 
-                            newLeafNode(lv_modalitykind_31_3, grammarAccess.getDisclosureAccess().getModalitykindForbiddenKeyword_17_0_2());
+                            newLeafNode(lv_modality_31_3, grammarAccess.getDisclosureAccess().getModalityForbiddenKeyword_17_0_2());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getDisclosureRule());
                     	        }
-                           		setWithLastConsumed(current, "modalitykind", lv_modalitykind_31_3, null);
+                           		setWithLastConsumed(current, "modality", lv_modality_31_3, null);
                     	    
 
                     }
@@ -4075,7 +4075,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRetention"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1754:1: ruleRetention returns [EObject current=null] : (otherlv_0= 'Retention' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Retention' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? otherlv_12= 'Period' ( (lv_period_13_0= RULE_STRING ) ) otherlv_14= ',' (otherlv_15= 'RefersTo PrivateData' ( (lv_refprivatedata_16_0= ruleRefPrivateData ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Service' ( (lv_refertoservice_19_0= ruleReferToService ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo Enforcement' ( (lv_refertoEnforcement_22_0= ruleRefertoEnforcement ) )* otherlv_23= ',' )? otherlv_24= 'Modality' ( ( (lv_modalitykind_25_1= 'Permitted' | lv_modalitykind_25_2= 'Obligation' | lv_modalitykind_25_3= 'Forbidden' ) ) ) otherlv_26= '};' ) ;
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1754:1: ruleRetention returns [EObject current=null] : (otherlv_0= 'Retention' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Retention' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? otherlv_12= 'Period' ( (lv_period_13_0= RULE_STRING ) ) otherlv_14= ',' (otherlv_15= 'RefersTo PrivateData' ( (lv_refPrivateData_16_0= ruleRefPrivateData ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Service' ( (lv_refService_19_0= ruleRefService ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo Enforcement' ( (lv_refEnforcement_22_0= ruleRefEnforcement ) )* otherlv_23= ',' )? otherlv_24= 'Modality' ( ( (lv_modality_25_1= 'Permitted' | lv_modality_25_2= 'Obligation' | lv_modality_25_3= 'Forbidden' ) ) ) otherlv_26= '};' ) ;
     public final EObject ruleRetention() throws RecognitionException {
         EObject current = null;
 
@@ -4101,25 +4101,25 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         Token otherlv_21=null;
         Token otherlv_23=null;
         Token otherlv_24=null;
-        Token lv_modalitykind_25_1=null;
-        Token lv_modalitykind_25_2=null;
-        Token lv_modalitykind_25_3=null;
+        Token lv_modality_25_1=null;
+        Token lv_modality_25_2=null;
+        Token lv_modality_25_3=null;
         Token otherlv_26=null;
-        EObject lv_refprivatedata_16_0 = null;
+        EObject lv_refPrivateData_16_0 = null;
 
-        EObject lv_refertoservice_19_0 = null;
+        EObject lv_refService_19_0 = null;
 
-        EObject lv_refertoEnforcement_22_0 = null;
+        EObject lv_refEnforcement_22_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1757:28: ( (otherlv_0= 'Retention' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Retention' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? otherlv_12= 'Period' ( (lv_period_13_0= RULE_STRING ) ) otherlv_14= ',' (otherlv_15= 'RefersTo PrivateData' ( (lv_refprivatedata_16_0= ruleRefPrivateData ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Service' ( (lv_refertoservice_19_0= ruleReferToService ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo Enforcement' ( (lv_refertoEnforcement_22_0= ruleRefertoEnforcement ) )* otherlv_23= ',' )? otherlv_24= 'Modality' ( ( (lv_modalitykind_25_1= 'Permitted' | lv_modalitykind_25_2= 'Obligation' | lv_modalitykind_25_3= 'Forbidden' ) ) ) otherlv_26= '};' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1758:1: (otherlv_0= 'Retention' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Retention' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? otherlv_12= 'Period' ( (lv_period_13_0= RULE_STRING ) ) otherlv_14= ',' (otherlv_15= 'RefersTo PrivateData' ( (lv_refprivatedata_16_0= ruleRefPrivateData ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Service' ( (lv_refertoservice_19_0= ruleReferToService ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo Enforcement' ( (lv_refertoEnforcement_22_0= ruleRefertoEnforcement ) )* otherlv_23= ',' )? otherlv_24= 'Modality' ( ( (lv_modalitykind_25_1= 'Permitted' | lv_modalitykind_25_2= 'Obligation' | lv_modalitykind_25_3= 'Forbidden' ) ) ) otherlv_26= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1757:28: ( (otherlv_0= 'Retention' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Retention' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? otherlv_12= 'Period' ( (lv_period_13_0= RULE_STRING ) ) otherlv_14= ',' (otherlv_15= 'RefersTo PrivateData' ( (lv_refPrivateData_16_0= ruleRefPrivateData ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Service' ( (lv_refService_19_0= ruleRefService ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo Enforcement' ( (lv_refEnforcement_22_0= ruleRefEnforcement ) )* otherlv_23= ',' )? otherlv_24= 'Modality' ( ( (lv_modality_25_1= 'Permitted' | lv_modality_25_2= 'Obligation' | lv_modality_25_3= 'Forbidden' ) ) ) otherlv_26= '};' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1758:1: (otherlv_0= 'Retention' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Retention' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? otherlv_12= 'Period' ( (lv_period_13_0= RULE_STRING ) ) otherlv_14= ',' (otherlv_15= 'RefersTo PrivateData' ( (lv_refPrivateData_16_0= ruleRefPrivateData ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Service' ( (lv_refService_19_0= ruleRefService ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo Enforcement' ( (lv_refEnforcement_22_0= ruleRefEnforcement ) )* otherlv_23= ',' )? otherlv_24= 'Modality' ( ( (lv_modality_25_1= 'Permitted' | lv_modality_25_2= 'Obligation' | lv_modality_25_3= 'Forbidden' ) ) ) otherlv_26= '};' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1758:1: (otherlv_0= 'Retention' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Retention' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? otherlv_12= 'Period' ( (lv_period_13_0= RULE_STRING ) ) otherlv_14= ',' (otherlv_15= 'RefersTo PrivateData' ( (lv_refprivatedata_16_0= ruleRefPrivateData ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Service' ( (lv_refertoservice_19_0= ruleReferToService ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo Enforcement' ( (lv_refertoEnforcement_22_0= ruleRefertoEnforcement ) )* otherlv_23= ',' )? otherlv_24= 'Modality' ( ( (lv_modalitykind_25_1= 'Permitted' | lv_modalitykind_25_2= 'Obligation' | lv_modalitykind_25_3= 'Forbidden' ) ) ) otherlv_26= '};' )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1758:3: otherlv_0= 'Retention' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Retention' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? otherlv_12= 'Period' ( (lv_period_13_0= RULE_STRING ) ) otherlv_14= ',' (otherlv_15= 'RefersTo PrivateData' ( (lv_refprivatedata_16_0= ruleRefPrivateData ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Service' ( (lv_refertoservice_19_0= ruleReferToService ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo Enforcement' ( (lv_refertoEnforcement_22_0= ruleRefertoEnforcement ) )* otherlv_23= ',' )? otherlv_24= 'Modality' ( ( (lv_modalitykind_25_1= 'Permitted' | lv_modalitykind_25_2= 'Obligation' | lv_modalitykind_25_3= 'Forbidden' ) ) ) otherlv_26= '};'
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1758:1: (otherlv_0= 'Retention' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Retention' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? otherlv_12= 'Period' ( (lv_period_13_0= RULE_STRING ) ) otherlv_14= ',' (otherlv_15= 'RefersTo PrivateData' ( (lv_refPrivateData_16_0= ruleRefPrivateData ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Service' ( (lv_refService_19_0= ruleRefService ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo Enforcement' ( (lv_refEnforcement_22_0= ruleRefEnforcement ) )* otherlv_23= ',' )? otherlv_24= 'Modality' ( ( (lv_modality_25_1= 'Permitted' | lv_modality_25_2= 'Obligation' | lv_modality_25_3= 'Forbidden' ) ) ) otherlv_26= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1758:3: otherlv_0= 'Retention' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Retention' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? otherlv_12= 'Period' ( (lv_period_13_0= RULE_STRING ) ) otherlv_14= ',' (otherlv_15= 'RefersTo PrivateData' ( (lv_refPrivateData_16_0= ruleRefPrivateData ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Service' ( (lv_refService_19_0= ruleRefService ) )* otherlv_20= ',' )? (otherlv_21= 'RefersTo Enforcement' ( (lv_refEnforcement_22_0= ruleRefEnforcement ) )* otherlv_23= ',' )? otherlv_24= 'Modality' ( ( (lv_modality_25_1= 'Permitted' | lv_modality_25_2= 'Obligation' | lv_modality_25_3= 'Forbidden' ) ) ) otherlv_26= '};'
             {
             otherlv_0=(Token)match(input,57,FOLLOW_57_in_ruleRetention3645); 
 
@@ -4251,7 +4251,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                             
                     otherlv_10=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRetention3804); 
 
-                    		newLeafNode(otherlv_10, grammarAccess.getRetentionAccess().getPartofRetentionCrossReference_9_1_0()); 
+                    		newLeafNode(otherlv_10, grammarAccess.getRetentionAccess().getPartRetentionRetentionCrossReference_9_1_0()); 
                     	
 
                     }
@@ -4303,7 +4303,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_14, grammarAccess.getRetentionAccess().getCommaKeyword_12());
                 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1883:1: (otherlv_15= 'RefersTo PrivateData' ( (lv_refprivatedata_16_0= ruleRefPrivateData ) )* otherlv_17= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1883:1: (otherlv_15= 'RefersTo PrivateData' ( (lv_refPrivateData_16_0= ruleRefPrivateData ) )* otherlv_17= ',' )?
             int alt50=2;
             int LA50_0 = input.LA(1);
 
@@ -4312,13 +4312,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt50) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1883:3: otherlv_15= 'RefersTo PrivateData' ( (lv_refprivatedata_16_0= ruleRefPrivateData ) )* otherlv_17= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1883:3: otherlv_15= 'RefersTo PrivateData' ( (lv_refPrivateData_16_0= ruleRefPrivateData ) )* otherlv_17= ','
                     {
                     otherlv_15=(Token)match(input,28,FOLLOW_28_in_ruleRetention3877); 
 
                         	newLeafNode(otherlv_15, grammarAccess.getRetentionAccess().getRefersToPrivateDataKeyword_13_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1887:1: ( (lv_refprivatedata_16_0= ruleRefPrivateData ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1887:1: ( (lv_refPrivateData_16_0= ruleRefPrivateData ) )*
                     loop49:
                     do {
                         int alt49=2;
@@ -4331,16 +4331,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt49) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1888:1: (lv_refprivatedata_16_0= ruleRefPrivateData )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1888:1: (lv_refPrivateData_16_0= ruleRefPrivateData )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1888:1: (lv_refprivatedata_16_0= ruleRefPrivateData )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1889:3: lv_refprivatedata_16_0= ruleRefPrivateData
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1888:1: (lv_refPrivateData_16_0= ruleRefPrivateData )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1889:3: lv_refPrivateData_16_0= ruleRefPrivateData
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getRetentionAccess().getRefprivatedataRefPrivateDataParserRuleCall_13_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getRetentionAccess().getRefPrivateDataRefPrivateDataParserRuleCall_13_1_0()); 
                     	    	    
                     	    pushFollow(FOLLOW_ruleRefPrivateData_in_ruleRetention3898);
-                    	    lv_refprivatedata_16_0=ruleRefPrivateData();
+                    	    lv_refPrivateData_16_0=ruleRefPrivateData();
 
                     	    state._fsp--;
 
@@ -4350,8 +4350,8 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"refprivatedata",
-                    	            		lv_refprivatedata_16_0, 
+                    	           			"refPrivateData",
+                    	            		lv_refPrivateData_16_0, 
                     	            		"RefPrivateData");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
@@ -4377,7 +4377,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1909:3: (otherlv_18= 'RefersTo Service' ( (lv_refertoservice_19_0= ruleReferToService ) )* otherlv_20= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1909:3: (otherlv_18= 'RefersTo Service' ( (lv_refService_19_0= ruleRefService ) )* otherlv_20= ',' )?
             int alt52=2;
             int LA52_0 = input.LA(1);
 
@@ -4386,13 +4386,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt52) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1909:5: otherlv_18= 'RefersTo Service' ( (lv_refertoservice_19_0= ruleReferToService ) )* otherlv_20= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1909:5: otherlv_18= 'RefersTo Service' ( (lv_refService_19_0= ruleRefService ) )* otherlv_20= ','
                     {
                     otherlv_18=(Token)match(input,46,FOLLOW_46_in_ruleRetention3926); 
 
                         	newLeafNode(otherlv_18, grammarAccess.getRetentionAccess().getRefersToServiceKeyword_14_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1913:1: ( (lv_refertoservice_19_0= ruleReferToService ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1913:1: ( (lv_refService_19_0= ruleRefService ) )*
                     loop51:
                     do {
                         int alt51=2;
@@ -4405,16 +4405,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt51) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1914:1: (lv_refertoservice_19_0= ruleReferToService )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1914:1: (lv_refService_19_0= ruleRefService )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1914:1: (lv_refertoservice_19_0= ruleReferToService )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1915:3: lv_refertoservice_19_0= ruleReferToService
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1914:1: (lv_refService_19_0= ruleRefService )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1915:3: lv_refService_19_0= ruleRefService
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getRetentionAccess().getRefertoserviceReferToServiceParserRuleCall_14_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getRetentionAccess().getRefServiceRefServiceParserRuleCall_14_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleReferToService_in_ruleRetention3947);
-                    	    lv_refertoservice_19_0=ruleReferToService();
+                    	    pushFollow(FOLLOW_ruleRefService_in_ruleRetention3947);
+                    	    lv_refService_19_0=ruleRefService();
 
                     	    state._fsp--;
 
@@ -4424,9 +4424,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"refertoservice",
-                    	            		lv_refertoservice_19_0, 
-                    	            		"ReferToService");
+                    	           			"refService",
+                    	            		lv_refService_19_0, 
+                    	            		"RefService");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -4451,7 +4451,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1935:3: (otherlv_21= 'RefersTo Enforcement' ( (lv_refertoEnforcement_22_0= ruleRefertoEnforcement ) )* otherlv_23= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1935:3: (otherlv_21= 'RefersTo Enforcement' ( (lv_refEnforcement_22_0= ruleRefEnforcement ) )* otherlv_23= ',' )?
             int alt54=2;
             int LA54_0 = input.LA(1);
 
@@ -4460,13 +4460,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt54) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1935:5: otherlv_21= 'RefersTo Enforcement' ( (lv_refertoEnforcement_22_0= ruleRefertoEnforcement ) )* otherlv_23= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1935:5: otherlv_21= 'RefersTo Enforcement' ( (lv_refEnforcement_22_0= ruleRefEnforcement ) )* otherlv_23= ','
                     {
                     otherlv_21=(Token)match(input,47,FOLLOW_47_in_ruleRetention3975); 
 
                         	newLeafNode(otherlv_21, grammarAccess.getRetentionAccess().getRefersToEnforcementKeyword_15_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1939:1: ( (lv_refertoEnforcement_22_0= ruleRefertoEnforcement ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1939:1: ( (lv_refEnforcement_22_0= ruleRefEnforcement ) )*
                     loop53:
                     do {
                         int alt53=2;
@@ -4479,16 +4479,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt53) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1940:1: (lv_refertoEnforcement_22_0= ruleRefertoEnforcement )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1940:1: (lv_refEnforcement_22_0= ruleRefEnforcement )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1940:1: (lv_refertoEnforcement_22_0= ruleRefertoEnforcement )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1941:3: lv_refertoEnforcement_22_0= ruleRefertoEnforcement
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1940:1: (lv_refEnforcement_22_0= ruleRefEnforcement )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1941:3: lv_refEnforcement_22_0= ruleRefEnforcement
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getRetentionAccess().getRefertoEnforcementRefertoEnforcementParserRuleCall_15_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getRetentionAccess().getRefEnforcementRefEnforcementParserRuleCall_15_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleRefertoEnforcement_in_ruleRetention3996);
-                    	    lv_refertoEnforcement_22_0=ruleRefertoEnforcement();
+                    	    pushFollow(FOLLOW_ruleRefEnforcement_in_ruleRetention3996);
+                    	    lv_refEnforcement_22_0=ruleRefEnforcement();
 
                     	    state._fsp--;
 
@@ -4498,9 +4498,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"refertoEnforcement",
-                    	            		lv_refertoEnforcement_22_0, 
-                    	            		"RefertoEnforcement");
+                    	           			"refEnforcement",
+                    	            		lv_refEnforcement_22_0, 
+                    	            		"RefEnforcement");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -4529,13 +4529,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_24, grammarAccess.getRetentionAccess().getModalityKeyword_16());
                 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1965:1: ( ( (lv_modalitykind_25_1= 'Permitted' | lv_modalitykind_25_2= 'Obligation' | lv_modalitykind_25_3= 'Forbidden' ) ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1966:1: ( (lv_modalitykind_25_1= 'Permitted' | lv_modalitykind_25_2= 'Obligation' | lv_modalitykind_25_3= 'Forbidden' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1965:1: ( ( (lv_modality_25_1= 'Permitted' | lv_modality_25_2= 'Obligation' | lv_modality_25_3= 'Forbidden' ) ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1966:1: ( (lv_modality_25_1= 'Permitted' | lv_modality_25_2= 'Obligation' | lv_modality_25_3= 'Forbidden' ) )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1966:1: ( (lv_modalitykind_25_1= 'Permitted' | lv_modalitykind_25_2= 'Obligation' | lv_modalitykind_25_3= 'Forbidden' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1967:1: (lv_modalitykind_25_1= 'Permitted' | lv_modalitykind_25_2= 'Obligation' | lv_modalitykind_25_3= 'Forbidden' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1966:1: ( (lv_modality_25_1= 'Permitted' | lv_modality_25_2= 'Obligation' | lv_modality_25_3= 'Forbidden' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1967:1: (lv_modality_25_1= 'Permitted' | lv_modality_25_2= 'Obligation' | lv_modality_25_3= 'Forbidden' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1967:1: (lv_modalitykind_25_1= 'Permitted' | lv_modalitykind_25_2= 'Obligation' | lv_modalitykind_25_3= 'Forbidden' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1967:1: (lv_modality_25_1= 'Permitted' | lv_modality_25_2= 'Obligation' | lv_modality_25_3= 'Forbidden' )
             int alt55=3;
             switch ( input.LA(1) ) {
             case 49:
@@ -4562,49 +4562,49 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             switch (alt55) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1968:3: lv_modalitykind_25_1= 'Permitted'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1968:3: lv_modality_25_1= 'Permitted'
                     {
-                    lv_modalitykind_25_1=(Token)match(input,49,FOLLOW_49_in_ruleRetention4043); 
+                    lv_modality_25_1=(Token)match(input,49,FOLLOW_49_in_ruleRetention4043); 
 
-                            newLeafNode(lv_modalitykind_25_1, grammarAccess.getRetentionAccess().getModalitykindPermittedKeyword_17_0_0());
+                            newLeafNode(lv_modality_25_1, grammarAccess.getRetentionAccess().getModalityPermittedKeyword_17_0_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getRetentionRule());
                     	        }
-                           		setWithLastConsumed(current, "modalitykind", lv_modalitykind_25_1, null);
+                           		setWithLastConsumed(current, "modality", lv_modality_25_1, null);
                     	    
 
                     }
                     break;
                 case 2 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1980:8: lv_modalitykind_25_2= 'Obligation'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1980:8: lv_modality_25_2= 'Obligation'
                     {
-                    lv_modalitykind_25_2=(Token)match(input,50,FOLLOW_50_in_ruleRetention4072); 
+                    lv_modality_25_2=(Token)match(input,50,FOLLOW_50_in_ruleRetention4072); 
 
-                            newLeafNode(lv_modalitykind_25_2, grammarAccess.getRetentionAccess().getModalitykindObligationKeyword_17_0_1());
+                            newLeafNode(lv_modality_25_2, grammarAccess.getRetentionAccess().getModalityObligationKeyword_17_0_1());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getRetentionRule());
                     	        }
-                           		setWithLastConsumed(current, "modalitykind", lv_modalitykind_25_2, null);
+                           		setWithLastConsumed(current, "modality", lv_modality_25_2, null);
                     	    
 
                     }
                     break;
                 case 3 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1992:8: lv_modalitykind_25_3= 'Forbidden'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:1992:8: lv_modality_25_3= 'Forbidden'
                     {
-                    lv_modalitykind_25_3=(Token)match(input,51,FOLLOW_51_in_ruleRetention4101); 
+                    lv_modality_25_3=(Token)match(input,51,FOLLOW_51_in_ruleRetention4101); 
 
-                            newLeafNode(lv_modalitykind_25_3, grammarAccess.getRetentionAccess().getModalitykindForbiddenKeyword_17_0_2());
+                            newLeafNode(lv_modality_25_3, grammarAccess.getRetentionAccess().getModalityForbiddenKeyword_17_0_2());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getRetentionRule());
                     	        }
-                           		setWithLastConsumed(current, "modalitykind", lv_modalitykind_25_3, null);
+                           		setWithLastConsumed(current, "modality", lv_modality_25_3, null);
                     	    
 
                     }
@@ -4679,7 +4679,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUsage"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2028:1: ruleUsage returns [EObject current=null] : (otherlv_0= 'Usage' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Usage' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) ) otherlv_23= '};' ) ;
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2028:1: ruleUsage returns [EObject current=null] : (otherlv_0= 'Usage' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Usage' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) ) otherlv_23= '};' ) ;
     public final EObject ruleUsage() throws RecognitionException {
         EObject current = null;
 
@@ -4702,25 +4702,25 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         Token otherlv_18=null;
         Token otherlv_20=null;
         Token otherlv_21=null;
-        Token lv_modalitykind_22_1=null;
-        Token lv_modalitykind_22_2=null;
-        Token lv_modalitykind_22_3=null;
+        Token lv_modality_22_1=null;
+        Token lv_modality_22_2=null;
+        Token lv_modality_22_3=null;
         Token otherlv_23=null;
-        EObject lv_refprivatedata_13_0 = null;
+        EObject lv_refPrivateData_13_0 = null;
 
-        EObject lv_refertoservice_16_0 = null;
+        EObject lv_refService_16_0 = null;
 
-        EObject lv_refertoEnforcement_19_0 = null;
+        EObject lv_refEnforcement_19_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2031:28: ( (otherlv_0= 'Usage' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Usage' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) ) otherlv_23= '};' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2032:1: (otherlv_0= 'Usage' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Usage' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) ) otherlv_23= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2031:28: ( (otherlv_0= 'Usage' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Usage' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) ) otherlv_23= '};' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2032:1: (otherlv_0= 'Usage' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Usage' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) ) otherlv_23= '};' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2032:1: (otherlv_0= 'Usage' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Usage' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) ) otherlv_23= '};' )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2032:3: otherlv_0= 'Usage' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Usage' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) ) otherlv_23= '};'
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2032:1: (otherlv_0= 'Usage' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Usage' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) ) otherlv_23= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2032:3: otherlv_0= 'Usage' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Usage' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) ) otherlv_23= '};'
             {
             otherlv_0=(Token)match(input,60,FOLLOW_60_in_ruleUsage4212); 
 
@@ -4852,7 +4852,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                             
                     otherlv_10=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleUsage4371); 
 
-                    		newLeafNode(otherlv_10, grammarAccess.getUsageAccess().getPartofUsageCrossReference_9_1_0()); 
+                    		newLeafNode(otherlv_10, grammarAccess.getUsageAccess().getPartUsageUsageCrossReference_9_1_0()); 
                     	
 
                     }
@@ -4870,7 +4870,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2131:3: (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2131:3: (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )?
             int alt58=2;
             int LA58_0 = input.LA(1);
 
@@ -4879,13 +4879,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt58) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2131:5: otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2131:5: otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ','
                     {
                     otherlv_12=(Token)match(input,28,FOLLOW_28_in_ruleUsage4398); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getUsageAccess().getRefersToPrivateDataKeyword_10_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2135:1: ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2135:1: ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )*
                     loop57:
                     do {
                         int alt57=2;
@@ -4898,16 +4898,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt57) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2136:1: (lv_refprivatedata_13_0= ruleRefPrivateData )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2136:1: (lv_refPrivateData_13_0= ruleRefPrivateData )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2136:1: (lv_refprivatedata_13_0= ruleRefPrivateData )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2137:3: lv_refprivatedata_13_0= ruleRefPrivateData
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2136:1: (lv_refPrivateData_13_0= ruleRefPrivateData )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2137:3: lv_refPrivateData_13_0= ruleRefPrivateData
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getUsageAccess().getRefprivatedataRefPrivateDataParserRuleCall_10_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getUsageAccess().getRefPrivateDataRefPrivateDataParserRuleCall_10_1_0()); 
                     	    	    
                     	    pushFollow(FOLLOW_ruleRefPrivateData_in_ruleUsage4419);
-                    	    lv_refprivatedata_13_0=ruleRefPrivateData();
+                    	    lv_refPrivateData_13_0=ruleRefPrivateData();
 
                     	    state._fsp--;
 
@@ -4917,8 +4917,8 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"refprivatedata",
-                    	            		lv_refprivatedata_13_0, 
+                    	           			"refPrivateData",
+                    	            		lv_refPrivateData_13_0, 
                     	            		"RefPrivateData");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
@@ -4944,7 +4944,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2157:3: (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2157:3: (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )?
             int alt60=2;
             int LA60_0 = input.LA(1);
 
@@ -4953,13 +4953,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt60) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2157:5: otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2157:5: otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ','
                     {
                     otherlv_15=(Token)match(input,46,FOLLOW_46_in_ruleUsage4447); 
 
                         	newLeafNode(otherlv_15, grammarAccess.getUsageAccess().getRefersToServiceKeyword_11_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2161:1: ( (lv_refertoservice_16_0= ruleReferToService ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2161:1: ( (lv_refService_16_0= ruleRefService ) )*
                     loop59:
                     do {
                         int alt59=2;
@@ -4972,16 +4972,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt59) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2162:1: (lv_refertoservice_16_0= ruleReferToService )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2162:1: (lv_refService_16_0= ruleRefService )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2162:1: (lv_refertoservice_16_0= ruleReferToService )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2163:3: lv_refertoservice_16_0= ruleReferToService
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2162:1: (lv_refService_16_0= ruleRefService )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2163:3: lv_refService_16_0= ruleRefService
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getUsageAccess().getRefertoserviceReferToServiceParserRuleCall_11_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getUsageAccess().getRefServiceRefServiceParserRuleCall_11_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleReferToService_in_ruleUsage4468);
-                    	    lv_refertoservice_16_0=ruleReferToService();
+                    	    pushFollow(FOLLOW_ruleRefService_in_ruleUsage4468);
+                    	    lv_refService_16_0=ruleRefService();
 
                     	    state._fsp--;
 
@@ -4991,9 +4991,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"refertoservice",
-                    	            		lv_refertoservice_16_0, 
-                    	            		"ReferToService");
+                    	           			"refService",
+                    	            		lv_refService_16_0, 
+                    	            		"RefService");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -5018,7 +5018,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2183:3: (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2183:3: (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )?
             int alt62=2;
             int LA62_0 = input.LA(1);
 
@@ -5027,13 +5027,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt62) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2183:5: otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2183:5: otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ','
                     {
                     otherlv_18=(Token)match(input,47,FOLLOW_47_in_ruleUsage4496); 
 
                         	newLeafNode(otherlv_18, grammarAccess.getUsageAccess().getRefersToEnforcementKeyword_12_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2187:1: ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2187:1: ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )*
                     loop61:
                     do {
                         int alt61=2;
@@ -5046,16 +5046,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt61) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2188:1: (lv_refertoEnforcement_19_0= ruleRefertoEnforcement )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2188:1: (lv_refEnforcement_19_0= ruleRefEnforcement )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2188:1: (lv_refertoEnforcement_19_0= ruleRefertoEnforcement )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2189:3: lv_refertoEnforcement_19_0= ruleRefertoEnforcement
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2188:1: (lv_refEnforcement_19_0= ruleRefEnforcement )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2189:3: lv_refEnforcement_19_0= ruleRefEnforcement
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getUsageAccess().getRefertoEnforcementRefertoEnforcementParserRuleCall_12_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getUsageAccess().getRefEnforcementRefEnforcementParserRuleCall_12_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleRefertoEnforcement_in_ruleUsage4517);
-                    	    lv_refertoEnforcement_19_0=ruleRefertoEnforcement();
+                    	    pushFollow(FOLLOW_ruleRefEnforcement_in_ruleUsage4517);
+                    	    lv_refEnforcement_19_0=ruleRefEnforcement();
 
                     	    state._fsp--;
 
@@ -5065,9 +5065,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"refertoEnforcement",
-                    	            		lv_refertoEnforcement_19_0, 
-                    	            		"RefertoEnforcement");
+                    	           			"refEnforcement",
+                    	            		lv_refEnforcement_19_0, 
+                    	            		"RefEnforcement");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -5096,13 +5096,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_21, grammarAccess.getUsageAccess().getModalityKeyword_13());
                 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2213:1: ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2214:1: ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2213:1: ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2214:1: ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2214:1: ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2215:1: (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2214:1: ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2215:1: (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2215:1: (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2215:1: (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' )
             int alt63=3;
             switch ( input.LA(1) ) {
             case 49:
@@ -5129,49 +5129,49 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             switch (alt63) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2216:3: lv_modalitykind_22_1= 'Permitted'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2216:3: lv_modality_22_1= 'Permitted'
                     {
-                    lv_modalitykind_22_1=(Token)match(input,49,FOLLOW_49_in_ruleUsage4564); 
+                    lv_modality_22_1=(Token)match(input,49,FOLLOW_49_in_ruleUsage4564); 
 
-                            newLeafNode(lv_modalitykind_22_1, grammarAccess.getUsageAccess().getModalitykindPermittedKeyword_14_0_0());
+                            newLeafNode(lv_modality_22_1, grammarAccess.getUsageAccess().getModalityPermittedKeyword_14_0_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getUsageRule());
                     	        }
-                           		setWithLastConsumed(current, "modalitykind", lv_modalitykind_22_1, null);
+                           		setWithLastConsumed(current, "modality", lv_modality_22_1, null);
                     	    
 
                     }
                     break;
                 case 2 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2228:8: lv_modalitykind_22_2= 'Obligation'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2228:8: lv_modality_22_2= 'Obligation'
                     {
-                    lv_modalitykind_22_2=(Token)match(input,50,FOLLOW_50_in_ruleUsage4593); 
+                    lv_modality_22_2=(Token)match(input,50,FOLLOW_50_in_ruleUsage4593); 
 
-                            newLeafNode(lv_modalitykind_22_2, grammarAccess.getUsageAccess().getModalitykindObligationKeyword_14_0_1());
+                            newLeafNode(lv_modality_22_2, grammarAccess.getUsageAccess().getModalityObligationKeyword_14_0_1());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getUsageRule());
                     	        }
-                           		setWithLastConsumed(current, "modalitykind", lv_modalitykind_22_2, null);
+                           		setWithLastConsumed(current, "modality", lv_modality_22_2, null);
                     	    
 
                     }
                     break;
                 case 3 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2240:8: lv_modalitykind_22_3= 'Forbidden'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2240:8: lv_modality_22_3= 'Forbidden'
                     {
-                    lv_modalitykind_22_3=(Token)match(input,51,FOLLOW_51_in_ruleUsage4622); 
+                    lv_modality_22_3=(Token)match(input,51,FOLLOW_51_in_ruleUsage4622); 
 
-                            newLeafNode(lv_modalitykind_22_3, grammarAccess.getUsageAccess().getModalitykindForbiddenKeyword_14_0_2());
+                            newLeafNode(lv_modality_22_3, grammarAccess.getUsageAccess().getModalityForbiddenKeyword_14_0_2());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getUsageRule());
                     	        }
-                           		setWithLastConsumed(current, "modalitykind", lv_modalitykind_22_3, null);
+                           		setWithLastConsumed(current, "modality", lv_modality_22_3, null);
                     	    
 
                     }
@@ -5246,7 +5246,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInformative"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2276:1: ruleInformative returns [EObject current=null] : (otherlv_0= 'Informative' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Informative' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) ) otherlv_23= '};' ) ;
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2276:1: ruleInformative returns [EObject current=null] : (otherlv_0= 'Informative' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Informative' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) ) otherlv_23= '};' ) ;
     public final EObject ruleInformative() throws RecognitionException {
         EObject current = null;
 
@@ -5269,25 +5269,25 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         Token otherlv_18=null;
         Token otherlv_20=null;
         Token otherlv_21=null;
-        Token lv_modalitykind_22_1=null;
-        Token lv_modalitykind_22_2=null;
-        Token lv_modalitykind_22_3=null;
+        Token lv_modality_22_1=null;
+        Token lv_modality_22_2=null;
+        Token lv_modality_22_3=null;
         Token otherlv_23=null;
-        EObject lv_refprivatedata_13_0 = null;
+        EObject lv_refPrivateData_13_0 = null;
 
-        EObject lv_refertoservice_16_0 = null;
+        EObject lv_refService_16_0 = null;
 
-        EObject lv_refertoEnforcement_19_0 = null;
+        EObject lv_refEnforcement_19_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2279:28: ( (otherlv_0= 'Informative' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Informative' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) ) otherlv_23= '};' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2280:1: (otherlv_0= 'Informative' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Informative' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) ) otherlv_23= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2279:28: ( (otherlv_0= 'Informative' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Informative' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) ) otherlv_23= '};' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2280:1: (otherlv_0= 'Informative' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Informative' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) ) otherlv_23= '};' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2280:1: (otherlv_0= 'Informative' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Informative' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) ) otherlv_23= '};' )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2280:3: otherlv_0= 'Informative' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Informative' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) ) otherlv_23= '};'
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2280:1: (otherlv_0= 'Informative' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Informative' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) ) otherlv_23= '};' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2280:3: otherlv_0= 'Informative' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ',' otherlv_6= 'Condition' ( (lv_condition_7_0= RULE_STRING ) ) otherlv_8= ',' (otherlv_9= 'PartOf Informative' ( (otherlv_10= RULE_ID ) ) otherlv_11= ',' )? (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )? (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )? (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )? otherlv_21= 'Modality' ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) ) otherlv_23= '};'
             {
             otherlv_0=(Token)match(input,62,FOLLOW_62_in_ruleInformative4733); 
 
@@ -5419,7 +5419,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                             
                     otherlv_10=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleInformative4892); 
 
-                    		newLeafNode(otherlv_10, grammarAccess.getInformativeAccess().getPartofInformativeCrossReference_9_1_0()); 
+                    		newLeafNode(otherlv_10, grammarAccess.getInformativeAccess().getPartInformativeInformativeCrossReference_9_1_0()); 
                     	
 
                     }
@@ -5437,7 +5437,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2379:3: (otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2379:3: (otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ',' )?
             int alt66=2;
             int LA66_0 = input.LA(1);
 
@@ -5446,13 +5446,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt66) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2379:5: otherlv_12= 'RefersTo PrivateData' ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )* otherlv_14= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2379:5: otherlv_12= 'RefersTo PrivateData' ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )* otherlv_14= ','
                     {
                     otherlv_12=(Token)match(input,28,FOLLOW_28_in_ruleInformative4919); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getInformativeAccess().getRefersToPrivateDataKeyword_10_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2383:1: ( (lv_refprivatedata_13_0= ruleRefPrivateData ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2383:1: ( (lv_refPrivateData_13_0= ruleRefPrivateData ) )*
                     loop65:
                     do {
                         int alt65=2;
@@ -5465,16 +5465,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt65) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2384:1: (lv_refprivatedata_13_0= ruleRefPrivateData )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2384:1: (lv_refPrivateData_13_0= ruleRefPrivateData )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2384:1: (lv_refprivatedata_13_0= ruleRefPrivateData )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2385:3: lv_refprivatedata_13_0= ruleRefPrivateData
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2384:1: (lv_refPrivateData_13_0= ruleRefPrivateData )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2385:3: lv_refPrivateData_13_0= ruleRefPrivateData
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getInformativeAccess().getRefprivatedataRefPrivateDataParserRuleCall_10_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getInformativeAccess().getRefPrivateDataRefPrivateDataParserRuleCall_10_1_0()); 
                     	    	    
                     	    pushFollow(FOLLOW_ruleRefPrivateData_in_ruleInformative4940);
-                    	    lv_refprivatedata_13_0=ruleRefPrivateData();
+                    	    lv_refPrivateData_13_0=ruleRefPrivateData();
 
                     	    state._fsp--;
 
@@ -5484,8 +5484,8 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"refprivatedata",
-                    	            		lv_refprivatedata_13_0, 
+                    	           			"refPrivateData",
+                    	            		lv_refPrivateData_13_0, 
                     	            		"RefPrivateData");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
@@ -5511,7 +5511,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2405:3: (otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2405:3: (otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ',' )?
             int alt68=2;
             int LA68_0 = input.LA(1);
 
@@ -5520,13 +5520,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt68) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2405:5: otherlv_15= 'RefersTo Service' ( (lv_refertoservice_16_0= ruleReferToService ) )* otherlv_17= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2405:5: otherlv_15= 'RefersTo Service' ( (lv_refService_16_0= ruleRefService ) )* otherlv_17= ','
                     {
                     otherlv_15=(Token)match(input,46,FOLLOW_46_in_ruleInformative4968); 
 
                         	newLeafNode(otherlv_15, grammarAccess.getInformativeAccess().getRefersToServiceKeyword_11_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2409:1: ( (lv_refertoservice_16_0= ruleReferToService ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2409:1: ( (lv_refService_16_0= ruleRefService ) )*
                     loop67:
                     do {
                         int alt67=2;
@@ -5539,16 +5539,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt67) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2410:1: (lv_refertoservice_16_0= ruleReferToService )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2410:1: (lv_refService_16_0= ruleRefService )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2410:1: (lv_refertoservice_16_0= ruleReferToService )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2411:3: lv_refertoservice_16_0= ruleReferToService
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2410:1: (lv_refService_16_0= ruleRefService )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2411:3: lv_refService_16_0= ruleRefService
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getInformativeAccess().getRefertoserviceReferToServiceParserRuleCall_11_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getInformativeAccess().getRefServiceRefServiceParserRuleCall_11_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleReferToService_in_ruleInformative4989);
-                    	    lv_refertoservice_16_0=ruleReferToService();
+                    	    pushFollow(FOLLOW_ruleRefService_in_ruleInformative4989);
+                    	    lv_refService_16_0=ruleRefService();
 
                     	    state._fsp--;
 
@@ -5558,9 +5558,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"refertoservice",
-                    	            		lv_refertoservice_16_0, 
-                    	            		"ReferToService");
+                    	           			"refService",
+                    	            		lv_refService_16_0, 
+                    	            		"RefService");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -5585,7 +5585,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2431:3: (otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ',' )?
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2431:3: (otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ',' )?
             int alt70=2;
             int LA70_0 = input.LA(1);
 
@@ -5594,13 +5594,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             }
             switch (alt70) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2431:5: otherlv_18= 'RefersTo Enforcement' ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )* otherlv_20= ','
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2431:5: otherlv_18= 'RefersTo Enforcement' ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )* otherlv_20= ','
                     {
                     otherlv_18=(Token)match(input,47,FOLLOW_47_in_ruleInformative5017); 
 
                         	newLeafNode(otherlv_18, grammarAccess.getInformativeAccess().getRefersToEnforcementKeyword_12_0());
                         
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2435:1: ( (lv_refertoEnforcement_19_0= ruleRefertoEnforcement ) )*
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2435:1: ( (lv_refEnforcement_19_0= ruleRefEnforcement ) )*
                     loop69:
                     do {
                         int alt69=2;
@@ -5613,16 +5613,16 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                         switch (alt69) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2436:1: (lv_refertoEnforcement_19_0= ruleRefertoEnforcement )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2436:1: (lv_refEnforcement_19_0= ruleRefEnforcement )
                     	    {
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2436:1: (lv_refertoEnforcement_19_0= ruleRefertoEnforcement )
-                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2437:3: lv_refertoEnforcement_19_0= ruleRefertoEnforcement
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2436:1: (lv_refEnforcement_19_0= ruleRefEnforcement )
+                    	    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2437:3: lv_refEnforcement_19_0= ruleRefEnforcement
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getInformativeAccess().getRefertoEnforcementRefertoEnforcementParserRuleCall_12_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getInformativeAccess().getRefEnforcementRefEnforcementParserRuleCall_12_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleRefertoEnforcement_in_ruleInformative5038);
-                    	    lv_refertoEnforcement_19_0=ruleRefertoEnforcement();
+                    	    pushFollow(FOLLOW_ruleRefEnforcement_in_ruleInformative5038);
+                    	    lv_refEnforcement_19_0=ruleRefEnforcement();
 
                     	    state._fsp--;
 
@@ -5632,9 +5632,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	           		add(
                     	           			current, 
-                    	           			"refertoEnforcement",
-                    	            		lv_refertoEnforcement_19_0, 
-                    	            		"RefertoEnforcement");
+                    	           			"refEnforcement",
+                    	            		lv_refEnforcement_19_0, 
+                    	            		"RefEnforcement");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -5663,13 +5663,13 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_21, grammarAccess.getInformativeAccess().getModalityKeyword_13());
                 
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2461:1: ( ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2462:1: ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2461:1: ( ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2462:1: ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2462:1: ( (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' ) )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2463:1: (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2462:1: ( (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' ) )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2463:1: (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' )
             {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2463:1: (lv_modalitykind_22_1= 'Permitted' | lv_modalitykind_22_2= 'Obligation' | lv_modalitykind_22_3= 'Forbidden' )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2463:1: (lv_modality_22_1= 'Permitted' | lv_modality_22_2= 'Obligation' | lv_modality_22_3= 'Forbidden' )
             int alt71=3;
             switch ( input.LA(1) ) {
             case 49:
@@ -5696,49 +5696,49 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
 
             switch (alt71) {
                 case 1 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2464:3: lv_modalitykind_22_1= 'Permitted'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2464:3: lv_modality_22_1= 'Permitted'
                     {
-                    lv_modalitykind_22_1=(Token)match(input,49,FOLLOW_49_in_ruleInformative5085); 
+                    lv_modality_22_1=(Token)match(input,49,FOLLOW_49_in_ruleInformative5085); 
 
-                            newLeafNode(lv_modalitykind_22_1, grammarAccess.getInformativeAccess().getModalitykindPermittedKeyword_14_0_0());
+                            newLeafNode(lv_modality_22_1, grammarAccess.getInformativeAccess().getModalityPermittedKeyword_14_0_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getInformativeRule());
                     	        }
-                           		setWithLastConsumed(current, "modalitykind", lv_modalitykind_22_1, null);
+                           		setWithLastConsumed(current, "modality", lv_modality_22_1, null);
                     	    
 
                     }
                     break;
                 case 2 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2476:8: lv_modalitykind_22_2= 'Obligation'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2476:8: lv_modality_22_2= 'Obligation'
                     {
-                    lv_modalitykind_22_2=(Token)match(input,50,FOLLOW_50_in_ruleInformative5114); 
+                    lv_modality_22_2=(Token)match(input,50,FOLLOW_50_in_ruleInformative5114); 
 
-                            newLeafNode(lv_modalitykind_22_2, grammarAccess.getInformativeAccess().getModalitykindObligationKeyword_14_0_1());
+                            newLeafNode(lv_modality_22_2, grammarAccess.getInformativeAccess().getModalityObligationKeyword_14_0_1());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getInformativeRule());
                     	        }
-                           		setWithLastConsumed(current, "modalitykind", lv_modalitykind_22_2, null);
+                           		setWithLastConsumed(current, "modality", lv_modality_22_2, null);
                     	    
 
                     }
                     break;
                 case 3 :
-                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2488:8: lv_modalitykind_22_3= 'Forbidden'
+                    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2488:8: lv_modality_22_3= 'Forbidden'
                     {
-                    lv_modalitykind_22_3=(Token)match(input,51,FOLLOW_51_in_ruleInformative5143); 
+                    lv_modality_22_3=(Token)match(input,51,FOLLOW_51_in_ruleInformative5143); 
 
-                            newLeafNode(lv_modalitykind_22_3, grammarAccess.getInformativeAccess().getModalitykindForbiddenKeyword_14_0_2());
+                            newLeafNode(lv_modality_22_3, grammarAccess.getInformativeAccess().getModalityForbiddenKeyword_14_0_2());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getInformativeRule());
                     	        }
-                           		setWithLastConsumed(current, "modalitykind", lv_modalitykind_22_3, null);
+                           		setWithLastConsumed(current, "modality", lv_modality_22_3, null);
                     	    
 
                     }
@@ -5776,26 +5776,26 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleInformative"
 
 
-    // $ANTLR start "entryRulePartof"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2515:1: entryRulePartof returns [EObject current=null] : iv_rulePartof= rulePartof EOF ;
-    public final EObject entryRulePartof() throws RecognitionException {
+    // $ANTLR start "entryRuleRecipientPart"
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2515:1: entryRuleRecipientPart returns [EObject current=null] : iv_ruleRecipientPart= ruleRecipientPart EOF ;
+    public final EObject entryRuleRecipientPart() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_rulePartof = null;
+        EObject iv_ruleRecipientPart = null;
 
 
         try {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2516:2: (iv_rulePartof= rulePartof EOF )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2517:2: iv_rulePartof= rulePartof EOF
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2516:2: (iv_ruleRecipientPart= ruleRecipientPart EOF )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2517:2: iv_ruleRecipientPart= ruleRecipientPart EOF
             {
-             newCompositeNode(grammarAccess.getPartofRule()); 
-            pushFollow(FOLLOW_rulePartof_in_entryRulePartof5207);
-            iv_rulePartof=rulePartof();
+             newCompositeNode(grammarAccess.getRecipientPartRule()); 
+            pushFollow(FOLLOW_ruleRecipientPart_in_entryRuleRecipientPart5207);
+            iv_ruleRecipientPart=ruleRecipientPart();
 
             state._fsp--;
 
-             current =iv_rulePartof; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePartof5217); 
+             current =iv_ruleRecipientPart; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRecipientPart5217); 
 
             }
 
@@ -5809,12 +5809,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRulePartof"
+    // $ANTLR end "entryRuleRecipientPart"
 
 
-    // $ANTLR start "rulePartof"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2524:1: rulePartof returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '-' )? ) ;
-    public final EObject rulePartof() throws RecognitionException {
+    // $ANTLR start "ruleRecipientPart"
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2524:1: ruleRecipientPart returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '-' )? ) ;
+    public final EObject ruleRecipientPart() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -5837,12 +5837,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             {
 
             			if (current==null) {
-            	            current = createModelElement(grammarAccess.getPartofRule());
+            	            current = createModelElement(grammarAccess.getRecipientPartRule());
             	        }
                     
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePartof5262); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRecipientPart5262); 
 
-            		newLeafNode(otherlv_0, grammarAccess.getPartofAccess().getPartofRecipientCrossReference_0_0()); 
+            		newLeafNode(otherlv_0, grammarAccess.getRecipientPartAccess().getRecipientPartRecipientCrossReference_0_0()); 
             	
 
             }
@@ -5861,9 +5861,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2541:4: otherlv_1= '-'
                     {
-                    otherlv_1=(Token)match(input,64,FOLLOW_64_in_rulePartof5275); 
+                    otherlv_1=(Token)match(input,64,FOLLOW_64_in_ruleRecipientPart5275); 
 
-                        	newLeafNode(otherlv_1, grammarAccess.getPartofAccess().getHyphenMinusKeyword_1());
+                        	newLeafNode(otherlv_1, grammarAccess.getRecipientPartAccess().getHyphenMinusKeyword_1());
                         
 
                     }
@@ -5888,29 +5888,29 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "rulePartof"
+    // $ANTLR end "ruleRecipientPart"
 
 
-    // $ANTLR start "entryRuleReferToRecipient"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2553:1: entryRuleReferToRecipient returns [EObject current=null] : iv_ruleReferToRecipient= ruleReferToRecipient EOF ;
-    public final EObject entryRuleReferToRecipient() throws RecognitionException {
+    // $ANTLR start "entryRuleRefRecipient"
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2553:1: entryRuleRefRecipient returns [EObject current=null] : iv_ruleRefRecipient= ruleRefRecipient EOF ;
+    public final EObject entryRuleRefRecipient() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleReferToRecipient = null;
+        EObject iv_ruleRefRecipient = null;
 
 
         try {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2554:2: (iv_ruleReferToRecipient= ruleReferToRecipient EOF )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2555:2: iv_ruleReferToRecipient= ruleReferToRecipient EOF
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2554:2: (iv_ruleRefRecipient= ruleRefRecipient EOF )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2555:2: iv_ruleRefRecipient= ruleRefRecipient EOF
             {
-             newCompositeNode(grammarAccess.getReferToRecipientRule()); 
-            pushFollow(FOLLOW_ruleReferToRecipient_in_entryRuleReferToRecipient5313);
-            iv_ruleReferToRecipient=ruleReferToRecipient();
+             newCompositeNode(grammarAccess.getRefRecipientRule()); 
+            pushFollow(FOLLOW_ruleRefRecipient_in_entryRuleRefRecipient5313);
+            iv_ruleRefRecipient=ruleRefRecipient();
 
             state._fsp--;
 
-             current =iv_ruleReferToRecipient; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleReferToRecipient5323); 
+             current =iv_ruleRefRecipient; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRefRecipient5323); 
 
             }
 
@@ -5924,12 +5924,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleReferToRecipient"
+    // $ANTLR end "entryRuleRefRecipient"
 
 
-    // $ANTLR start "ruleReferToRecipient"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2562:1: ruleReferToRecipient returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '-' )? ) ;
-    public final EObject ruleReferToRecipient() throws RecognitionException {
+    // $ANTLR start "ruleRefRecipient"
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2562:1: ruleRefRecipient returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '-' )? ) ;
+    public final EObject ruleRefRecipient() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -5952,12 +5952,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             {
 
             			if (current==null) {
-            	            current = createModelElement(grammarAccess.getReferToRecipientRule());
+            	            current = createModelElement(grammarAccess.getRefRecipientRule());
             	        }
                     
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleReferToRecipient5368); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRefRecipient5368); 
 
-            		newLeafNode(otherlv_0, grammarAccess.getReferToRecipientAccess().getRefertoreRecipientCrossReference_0_0()); 
+            		newLeafNode(otherlv_0, grammarAccess.getRefRecipientAccess().getRefRecipientRecipientCrossReference_0_0()); 
             	
 
             }
@@ -5976,9 +5976,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2579:4: otherlv_1= '-'
                     {
-                    otherlv_1=(Token)match(input,64,FOLLOW_64_in_ruleReferToRecipient5381); 
+                    otherlv_1=(Token)match(input,64,FOLLOW_64_in_ruleRefRecipient5381); 
 
-                        	newLeafNode(otherlv_1, grammarAccess.getReferToRecipientAccess().getHyphenMinusKeyword_1());
+                        	newLeafNode(otherlv_1, grammarAccess.getRefRecipientAccess().getHyphenMinusKeyword_1());
                         
 
                     }
@@ -6003,29 +6003,29 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleReferToRecipient"
+    // $ANTLR end "ruleRefRecipient"
 
 
-    // $ANTLR start "entryRuleReferToRecipientSource"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2591:1: entryRuleReferToRecipientSource returns [EObject current=null] : iv_ruleReferToRecipientSource= ruleReferToRecipientSource EOF ;
-    public final EObject entryRuleReferToRecipientSource() throws RecognitionException {
+    // $ANTLR start "entryRuleRefRecipientSource"
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2591:1: entryRuleRefRecipientSource returns [EObject current=null] : iv_ruleRefRecipientSource= ruleRefRecipientSource EOF ;
+    public final EObject entryRuleRefRecipientSource() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleReferToRecipientSource = null;
+        EObject iv_ruleRefRecipientSource = null;
 
 
         try {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2592:2: (iv_ruleReferToRecipientSource= ruleReferToRecipientSource EOF )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2593:2: iv_ruleReferToRecipientSource= ruleReferToRecipientSource EOF
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2592:2: (iv_ruleRefRecipientSource= ruleRefRecipientSource EOF )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2593:2: iv_ruleRefRecipientSource= ruleRefRecipientSource EOF
             {
-             newCompositeNode(grammarAccess.getReferToRecipientSourceRule()); 
-            pushFollow(FOLLOW_ruleReferToRecipientSource_in_entryRuleReferToRecipientSource5419);
-            iv_ruleReferToRecipientSource=ruleReferToRecipientSource();
+             newCompositeNode(grammarAccess.getRefRecipientSourceRule()); 
+            pushFollow(FOLLOW_ruleRefRecipientSource_in_entryRuleRefRecipientSource5419);
+            iv_ruleRefRecipientSource=ruleRefRecipientSource();
 
             state._fsp--;
 
-             current =iv_ruleReferToRecipientSource; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleReferToRecipientSource5429); 
+             current =iv_ruleRefRecipientSource; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRefRecipientSource5429); 
 
             }
 
@@ -6039,12 +6039,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleReferToRecipientSource"
+    // $ANTLR end "entryRuleRefRecipientSource"
 
 
-    // $ANTLR start "ruleReferToRecipientSource"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2600:1: ruleReferToRecipientSource returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '-' )? ) ;
-    public final EObject ruleReferToRecipientSource() throws RecognitionException {
+    // $ANTLR start "ruleRefRecipientSource"
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2600:1: ruleRefRecipientSource returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '-' )? ) ;
+    public final EObject ruleRefRecipientSource() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -6067,12 +6067,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             {
 
             			if (current==null) {
-            	            current = createModelElement(grammarAccess.getReferToRecipientSourceRule());
+            	            current = createModelElement(grammarAccess.getRefRecipientSourceRule());
             	        }
                     
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleReferToRecipientSource5474); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRefRecipientSource5474); 
 
-            		newLeafNode(otherlv_0, grammarAccess.getReferToRecipientSourceAccess().getRefertoreRecipientCrossReference_0_0()); 
+            		newLeafNode(otherlv_0, grammarAccess.getRefRecipientSourceAccess().getRefRecipientSourceRecipientCrossReference_0_0()); 
             	
 
             }
@@ -6091,9 +6091,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2617:4: otherlv_1= '-'
                     {
-                    otherlv_1=(Token)match(input,64,FOLLOW_64_in_ruleReferToRecipientSource5487); 
+                    otherlv_1=(Token)match(input,64,FOLLOW_64_in_ruleRefRecipientSource5487); 
 
-                        	newLeafNode(otherlv_1, grammarAccess.getReferToRecipientSourceAccess().getHyphenMinusKeyword_1());
+                        	newLeafNode(otherlv_1, grammarAccess.getRefRecipientSourceAccess().getHyphenMinusKeyword_1());
                         
 
                     }
@@ -6118,29 +6118,29 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleReferToRecipientSource"
+    // $ANTLR end "ruleRefRecipientSource"
 
 
-    // $ANTLR start "entryRuleReferToRecipientTarget"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2629:1: entryRuleReferToRecipientTarget returns [EObject current=null] : iv_ruleReferToRecipientTarget= ruleReferToRecipientTarget EOF ;
-    public final EObject entryRuleReferToRecipientTarget() throws RecognitionException {
+    // $ANTLR start "entryRuleRefRecipientTarget"
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2629:1: entryRuleRefRecipientTarget returns [EObject current=null] : iv_ruleRefRecipientTarget= ruleRefRecipientTarget EOF ;
+    public final EObject entryRuleRefRecipientTarget() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleReferToRecipientTarget = null;
+        EObject iv_ruleRefRecipientTarget = null;
 
 
         try {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2630:2: (iv_ruleReferToRecipientTarget= ruleReferToRecipientTarget EOF )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2631:2: iv_ruleReferToRecipientTarget= ruleReferToRecipientTarget EOF
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2630:2: (iv_ruleRefRecipientTarget= ruleRefRecipientTarget EOF )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2631:2: iv_ruleRefRecipientTarget= ruleRefRecipientTarget EOF
             {
-             newCompositeNode(grammarAccess.getReferToRecipientTargetRule()); 
-            pushFollow(FOLLOW_ruleReferToRecipientTarget_in_entryRuleReferToRecipientTarget5525);
-            iv_ruleReferToRecipientTarget=ruleReferToRecipientTarget();
+             newCompositeNode(grammarAccess.getRefRecipientTargetRule()); 
+            pushFollow(FOLLOW_ruleRefRecipientTarget_in_entryRuleRefRecipientTarget5525);
+            iv_ruleRefRecipientTarget=ruleRefRecipientTarget();
 
             state._fsp--;
 
-             current =iv_ruleReferToRecipientTarget; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleReferToRecipientTarget5535); 
+             current =iv_ruleRefRecipientTarget; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRefRecipientTarget5535); 
 
             }
 
@@ -6154,12 +6154,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleReferToRecipientTarget"
+    // $ANTLR end "entryRuleRefRecipientTarget"
 
 
-    // $ANTLR start "ruleReferToRecipientTarget"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2638:1: ruleReferToRecipientTarget returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '-' )? ) ;
-    public final EObject ruleReferToRecipientTarget() throws RecognitionException {
+    // $ANTLR start "ruleRefRecipientTarget"
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2638:1: ruleRefRecipientTarget returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '-' )? ) ;
+    public final EObject ruleRefRecipientTarget() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -6182,12 +6182,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             {
 
             			if (current==null) {
-            	            current = createModelElement(grammarAccess.getReferToRecipientTargetRule());
+            	            current = createModelElement(grammarAccess.getRefRecipientTargetRule());
             	        }
                     
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleReferToRecipientTarget5580); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRefRecipientTarget5580); 
 
-            		newLeafNode(otherlv_0, grammarAccess.getReferToRecipientTargetAccess().getRefertoreRecipientCrossReference_0_0()); 
+            		newLeafNode(otherlv_0, grammarAccess.getRefRecipientTargetAccess().getRefRecipientTargetRecipientCrossReference_0_0()); 
             	
 
             }
@@ -6206,9 +6206,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2655:4: otherlv_1= '-'
                     {
-                    otherlv_1=(Token)match(input,64,FOLLOW_64_in_ruleReferToRecipientTarget5593); 
+                    otherlv_1=(Token)match(input,64,FOLLOW_64_in_ruleRefRecipientTarget5593); 
 
-                        	newLeafNode(otherlv_1, grammarAccess.getReferToRecipientTargetAccess().getHyphenMinusKeyword_1());
+                        	newLeafNode(otherlv_1, grammarAccess.getRefRecipientTargetAccess().getHyphenMinusKeyword_1());
                         
 
                     }
@@ -6233,29 +6233,29 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleReferToRecipientTarget"
+    // $ANTLR end "ruleRefRecipientTarget"
 
 
-    // $ANTLR start "entryRuleReferToService"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2667:1: entryRuleReferToService returns [EObject current=null] : iv_ruleReferToService= ruleReferToService EOF ;
-    public final EObject entryRuleReferToService() throws RecognitionException {
+    // $ANTLR start "entryRuleRefService"
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2667:1: entryRuleRefService returns [EObject current=null] : iv_ruleRefService= ruleRefService EOF ;
+    public final EObject entryRuleRefService() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleReferToService = null;
+        EObject iv_ruleRefService = null;
 
 
         try {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2668:2: (iv_ruleReferToService= ruleReferToService EOF )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2669:2: iv_ruleReferToService= ruleReferToService EOF
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2668:2: (iv_ruleRefService= ruleRefService EOF )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2669:2: iv_ruleRefService= ruleRefService EOF
             {
-             newCompositeNode(grammarAccess.getReferToServiceRule()); 
-            pushFollow(FOLLOW_ruleReferToService_in_entryRuleReferToService5631);
-            iv_ruleReferToService=ruleReferToService();
+             newCompositeNode(grammarAccess.getRefServiceRule()); 
+            pushFollow(FOLLOW_ruleRefService_in_entryRuleRefService5631);
+            iv_ruleRefService=ruleRefService();
 
             state._fsp--;
 
-             current =iv_ruleReferToService; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleReferToService5641); 
+             current =iv_ruleRefService; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRefService5641); 
 
             }
 
@@ -6269,12 +6269,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleReferToService"
+    // $ANTLR end "entryRuleRefService"
 
 
-    // $ANTLR start "ruleReferToService"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2676:1: ruleReferToService returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '-' )? ) ;
-    public final EObject ruleReferToService() throws RecognitionException {
+    // $ANTLR start "ruleRefService"
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2676:1: ruleRefService returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '-' )? ) ;
+    public final EObject ruleRefService() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -6297,12 +6297,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             {
 
             			if (current==null) {
-            	            current = createModelElement(grammarAccess.getReferToServiceRule());
+            	            current = createModelElement(grammarAccess.getRefServiceRule());
             	        }
                     
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleReferToService5686); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRefService5686); 
 
-            		newLeafNode(otherlv_0, grammarAccess.getReferToServiceAccess().getRefertoseServiceCrossReference_0_0()); 
+            		newLeafNode(otherlv_0, grammarAccess.getRefServiceAccess().getRefServiceServiceCrossReference_0_0()); 
             	
 
             }
@@ -6321,9 +6321,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2693:4: otherlv_1= '-'
                     {
-                    otherlv_1=(Token)match(input,64,FOLLOW_64_in_ruleReferToService5699); 
+                    otherlv_1=(Token)match(input,64,FOLLOW_64_in_ruleRefService5699); 
 
-                        	newLeafNode(otherlv_1, grammarAccess.getReferToServiceAccess().getHyphenMinusKeyword_1());
+                        	newLeafNode(otherlv_1, grammarAccess.getRefServiceAccess().getHyphenMinusKeyword_1());
                         
 
                     }
@@ -6348,29 +6348,29 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleReferToService"
+    // $ANTLR end "ruleRefService"
 
 
-    // $ANTLR start "entryRuleServicePartof"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2705:1: entryRuleServicePartof returns [EObject current=null] : iv_ruleServicePartof= ruleServicePartof EOF ;
-    public final EObject entryRuleServicePartof() throws RecognitionException {
+    // $ANTLR start "entryRuleServicePart"
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2705:1: entryRuleServicePart returns [EObject current=null] : iv_ruleServicePart= ruleServicePart EOF ;
+    public final EObject entryRuleServicePart() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleServicePartof = null;
+        EObject iv_ruleServicePart = null;
 
 
         try {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2706:2: (iv_ruleServicePartof= ruleServicePartof EOF )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2707:2: iv_ruleServicePartof= ruleServicePartof EOF
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2706:2: (iv_ruleServicePart= ruleServicePart EOF )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2707:2: iv_ruleServicePart= ruleServicePart EOF
             {
-             newCompositeNode(grammarAccess.getServicePartofRule()); 
-            pushFollow(FOLLOW_ruleServicePartof_in_entryRuleServicePartof5737);
-            iv_ruleServicePartof=ruleServicePartof();
+             newCompositeNode(grammarAccess.getServicePartRule()); 
+            pushFollow(FOLLOW_ruleServicePart_in_entryRuleServicePart5737);
+            iv_ruleServicePart=ruleServicePart();
 
             state._fsp--;
 
-             current =iv_ruleServicePartof; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleServicePartof5747); 
+             current =iv_ruleServicePart; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleServicePart5747); 
 
             }
 
@@ -6384,12 +6384,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleServicePartof"
+    // $ANTLR end "entryRuleServicePart"
 
 
-    // $ANTLR start "ruleServicePartof"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2714:1: ruleServicePartof returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '-' )? ) ;
-    public final EObject ruleServicePartof() throws RecognitionException {
+    // $ANTLR start "ruleServicePart"
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2714:1: ruleServicePart returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '-' )? ) ;
+    public final EObject ruleServicePart() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -6412,12 +6412,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             {
 
             			if (current==null) {
-            	            current = createModelElement(grammarAccess.getServicePartofRule());
+            	            current = createModelElement(grammarAccess.getServicePartRule());
             	        }
                     
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleServicePartof5792); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleServicePart5792); 
 
-            		newLeafNode(otherlv_0, grammarAccess.getServicePartofAccess().getRefertoserviceServiceCrossReference_0_0()); 
+            		newLeafNode(otherlv_0, grammarAccess.getServicePartAccess().getServicePartServiceCrossReference_0_0()); 
             	
 
             }
@@ -6436,9 +6436,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2731:4: otherlv_1= '-'
                     {
-                    otherlv_1=(Token)match(input,64,FOLLOW_64_in_ruleServicePartof5805); 
+                    otherlv_1=(Token)match(input,64,FOLLOW_64_in_ruleServicePart5805); 
 
-                        	newLeafNode(otherlv_1, grammarAccess.getServicePartofAccess().getHyphenMinusKeyword_1());
+                        	newLeafNode(otherlv_1, grammarAccess.getServicePartAccess().getHyphenMinusKeyword_1());
                         
 
                     }
@@ -6463,7 +6463,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleServicePartof"
+    // $ANTLR end "ruleServicePart"
 
 
     // $ANTLR start "entryRuleRefPrivateData"
@@ -6532,7 +6532,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                     
             otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRefPrivateData5898); 
 
-            		newLeafNode(otherlv_0, grammarAccess.getRefPrivateDataAccess().getRefprPrivateDataCrossReference_0_0()); 
+            		newLeafNode(otherlv_0, grammarAccess.getRefPrivateDataAccess().getRefPrivateDataPrivateDataCrossReference_0_0()); 
             	
 
             }
@@ -6581,26 +6581,26 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleRefPrivateData"
 
 
-    // $ANTLR start "entryRuleRefertoEnforcement"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2781:1: entryRuleRefertoEnforcement returns [EObject current=null] : iv_ruleRefertoEnforcement= ruleRefertoEnforcement EOF ;
-    public final EObject entryRuleRefertoEnforcement() throws RecognitionException {
+    // $ANTLR start "entryRuleRefEnforcement"
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2781:1: entryRuleRefEnforcement returns [EObject current=null] : iv_ruleRefEnforcement= ruleRefEnforcement EOF ;
+    public final EObject entryRuleRefEnforcement() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleRefertoEnforcement = null;
+        EObject iv_ruleRefEnforcement = null;
 
 
         try {
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2782:2: (iv_ruleRefertoEnforcement= ruleRefertoEnforcement EOF )
-            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2783:2: iv_ruleRefertoEnforcement= ruleRefertoEnforcement EOF
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2782:2: (iv_ruleRefEnforcement= ruleRefEnforcement EOF )
+            // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2783:2: iv_ruleRefEnforcement= ruleRefEnforcement EOF
             {
-             newCompositeNode(grammarAccess.getRefertoEnforcementRule()); 
-            pushFollow(FOLLOW_ruleRefertoEnforcement_in_entryRuleRefertoEnforcement5949);
-            iv_ruleRefertoEnforcement=ruleRefertoEnforcement();
+             newCompositeNode(grammarAccess.getRefEnforcementRule()); 
+            pushFollow(FOLLOW_ruleRefEnforcement_in_entryRuleRefEnforcement5949);
+            iv_ruleRefEnforcement=ruleRefEnforcement();
 
             state._fsp--;
 
-             current =iv_ruleRefertoEnforcement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRefertoEnforcement5959); 
+             current =iv_ruleRefEnforcement; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRefEnforcement5959); 
 
             }
 
@@ -6614,12 +6614,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleRefertoEnforcement"
+    // $ANTLR end "entryRuleRefEnforcement"
 
 
-    // $ANTLR start "ruleRefertoEnforcement"
-    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2790:1: ruleRefertoEnforcement returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '-' )? ) ;
-    public final EObject ruleRefertoEnforcement() throws RecognitionException {
+    // $ANTLR start "ruleRefEnforcement"
+    // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2790:1: ruleRefEnforcement returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '-' )? ) ;
+    public final EObject ruleRefEnforcement() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -6642,12 +6642,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
             {
 
             			if (current==null) {
-            	            current = createModelElement(grammarAccess.getRefertoEnforcementRule());
+            	            current = createModelElement(grammarAccess.getRefEnforcementRule());
             	        }
                     
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRefertoEnforcement6004); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRefEnforcement6004); 
 
-            		newLeafNode(otherlv_0, grammarAccess.getRefertoEnforcementAccess().getRefstEnforcementCrossReference_0_0()); 
+            		newLeafNode(otherlv_0, grammarAccess.getRefEnforcementAccess().getRefEnforcementEnforcementCrossReference_0_0()); 
             	
 
             }
@@ -6666,9 +6666,9 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../rslingo.rslil4privacy/src-gen/rslingo/rslil4privacy/parser/antlr/internal/InternalRSLIL4Privacy.g:2807:4: otherlv_1= '-'
                     {
-                    otherlv_1=(Token)match(input,64,FOLLOW_64_in_ruleRefertoEnforcement6017); 
+                    otherlv_1=(Token)match(input,64,FOLLOW_64_in_ruleRefEnforcement6017); 
 
-                        	newLeafNode(otherlv_1, grammarAccess.getRefertoEnforcementAccess().getHyphenMinusKeyword_1());
+                        	newLeafNode(otherlv_1, grammarAccess.getRefEnforcementAccess().getHyphenMinusKeyword_1());
                         
 
                     }
@@ -6693,7 +6693,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleRefertoEnforcement"
+    // $ANTLR end "ruleRefEnforcement"
 
     // Delegated rules
 
@@ -6762,7 +6762,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleRefPrivateData_in_ruleService1375 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleService1388 = new BitSet(new long[]{0x0000000020002000L});
     public static final BitSet FOLLOW_29_in_ruleService1403 = new BitSet(new long[]{0x0000000000002010L});
-    public static final BitSet FOLLOW_ruleServicePartof_in_ruleService1424 = new BitSet(new long[]{0x0000000000002010L});
+    public static final BitSet FOLLOW_ruleServicePart_in_ruleService1424 = new BitSet(new long[]{0x0000000000002010L});
     public static final BitSet FOLLOW_13_in_ruleService1439 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleRecipient_in_entryRuleRecipient1475 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleRecipient1485 = new BitSet(new long[]{0x0000000000000002L});
@@ -6776,7 +6776,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_STRING_in_ruleRecipient1631 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_19_in_ruleRecipient1648 = new BitSet(new long[]{0x0000000180000000L});
     public static final BitSet FOLLOW_31_in_ruleRecipient1661 = new BitSet(new long[]{0x0000000000080010L});
-    public static final BitSet FOLLOW_rulePartof_in_ruleRecipient1682 = new BitSet(new long[]{0x0000000000080010L});
+    public static final BitSet FOLLOW_ruleRecipientPart_in_ruleRecipient1682 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleRecipient1695 = new BitSet(new long[]{0x0000000100000000L});
     public static final BitSet FOLLOW_32_in_ruleRecipient1709 = new BitSet(new long[]{0x0000000E00000000L});
     public static final BitSet FOLLOW_33_in_ruleRecipient1729 = new BitSet(new long[]{0x0000000000080000L});
@@ -6827,10 +6827,10 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleRefPrivateData_in_ruleCollection2663 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleCollection2676 = new BitSet(new long[]{0x0001C00000000000L});
     public static final BitSet FOLLOW_46_in_ruleCollection2691 = new BitSet(new long[]{0x0000000000080010L});
-    public static final BitSet FOLLOW_ruleReferToService_in_ruleCollection2712 = new BitSet(new long[]{0x0000000000080010L});
+    public static final BitSet FOLLOW_ruleRefService_in_ruleCollection2712 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleCollection2725 = new BitSet(new long[]{0x0001800000000000L});
     public static final BitSet FOLLOW_47_in_ruleCollection2740 = new BitSet(new long[]{0x0000000000080010L});
-    public static final BitSet FOLLOW_ruleRefertoEnforcement_in_ruleCollection2761 = new BitSet(new long[]{0x0000000000080010L});
+    public static final BitSet FOLLOW_ruleRefEnforcement_in_ruleCollection2761 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleCollection2774 = new BitSet(new long[]{0x0001000000000000L});
     public static final BitSet FOLLOW_48_in_ruleCollection2788 = new BitSet(new long[]{0x000E000000000000L});
     public static final BitSet FOLLOW_49_in_ruleCollection2808 = new BitSet(new long[]{0x0000000000002000L});
@@ -6852,22 +6852,22 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_ID_in_ruleDisclosure3136 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_19_in_ruleDisclosure3148 = new BitSet(new long[]{0x01C1C00010000000L});
     public static final BitSet FOLLOW_54_in_ruleDisclosure3163 = new BitSet(new long[]{0x0000000000080010L});
-    public static final BitSet FOLLOW_ruleReferToRecipient_in_ruleDisclosure3184 = new BitSet(new long[]{0x0000000000080010L});
+    public static final BitSet FOLLOW_ruleRefRecipient_in_ruleDisclosure3184 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleDisclosure3197 = new BitSet(new long[]{0x0181C00010000000L});
     public static final BitSet FOLLOW_55_in_ruleDisclosure3212 = new BitSet(new long[]{0x0000000000080010L});
-    public static final BitSet FOLLOW_ruleReferToRecipientSource_in_ruleDisclosure3233 = new BitSet(new long[]{0x0000000000080010L});
+    public static final BitSet FOLLOW_ruleRefRecipientSource_in_ruleDisclosure3233 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleDisclosure3246 = new BitSet(new long[]{0x0101C00010000000L});
     public static final BitSet FOLLOW_56_in_ruleDisclosure3261 = new BitSet(new long[]{0x0000000000080010L});
-    public static final BitSet FOLLOW_ruleReferToRecipientTarget_in_ruleDisclosure3282 = new BitSet(new long[]{0x0000000000080010L});
+    public static final BitSet FOLLOW_ruleRefRecipientTarget_in_ruleDisclosure3282 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleDisclosure3295 = new BitSet(new long[]{0x0001C00010000000L});
     public static final BitSet FOLLOW_28_in_ruleDisclosure3310 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_ruleRefPrivateData_in_ruleDisclosure3331 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleDisclosure3344 = new BitSet(new long[]{0x0001C00000000000L});
     public static final BitSet FOLLOW_46_in_ruleDisclosure3359 = new BitSet(new long[]{0x0000000000080010L});
-    public static final BitSet FOLLOW_ruleReferToService_in_ruleDisclosure3380 = new BitSet(new long[]{0x0000000000080010L});
+    public static final BitSet FOLLOW_ruleRefService_in_ruleDisclosure3380 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleDisclosure3393 = new BitSet(new long[]{0x0001800000000000L});
     public static final BitSet FOLLOW_47_in_ruleDisclosure3408 = new BitSet(new long[]{0x0000000000080010L});
-    public static final BitSet FOLLOW_ruleRefertoEnforcement_in_ruleDisclosure3429 = new BitSet(new long[]{0x0000000000080010L});
+    public static final BitSet FOLLOW_ruleRefEnforcement_in_ruleDisclosure3429 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleDisclosure3442 = new BitSet(new long[]{0x0001000000000000L});
     public static final BitSet FOLLOW_48_in_ruleDisclosure3456 = new BitSet(new long[]{0x000E000000000000L});
     public static final BitSet FOLLOW_49_in_ruleDisclosure3476 = new BitSet(new long[]{0x0000000000002000L});
@@ -6895,10 +6895,10 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleRefPrivateData_in_ruleRetention3898 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleRetention3911 = new BitSet(new long[]{0x0001C00000000000L});
     public static final BitSet FOLLOW_46_in_ruleRetention3926 = new BitSet(new long[]{0x0000000000080010L});
-    public static final BitSet FOLLOW_ruleReferToService_in_ruleRetention3947 = new BitSet(new long[]{0x0000000000080010L});
+    public static final BitSet FOLLOW_ruleRefService_in_ruleRetention3947 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleRetention3960 = new BitSet(new long[]{0x0001800000000000L});
     public static final BitSet FOLLOW_47_in_ruleRetention3975 = new BitSet(new long[]{0x0000000000080010L});
-    public static final BitSet FOLLOW_ruleRefertoEnforcement_in_ruleRetention3996 = new BitSet(new long[]{0x0000000000080010L});
+    public static final BitSet FOLLOW_ruleRefEnforcement_in_ruleRetention3996 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleRetention4009 = new BitSet(new long[]{0x0001000000000000L});
     public static final BitSet FOLLOW_48_in_ruleRetention4023 = new BitSet(new long[]{0x000E000000000000L});
     public static final BitSet FOLLOW_49_in_ruleRetention4043 = new BitSet(new long[]{0x0000000000002000L});
@@ -6923,10 +6923,10 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleRefPrivateData_in_ruleUsage4419 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleUsage4432 = new BitSet(new long[]{0x0001C00000000000L});
     public static final BitSet FOLLOW_46_in_ruleUsage4447 = new BitSet(new long[]{0x0000000000080010L});
-    public static final BitSet FOLLOW_ruleReferToService_in_ruleUsage4468 = new BitSet(new long[]{0x0000000000080010L});
+    public static final BitSet FOLLOW_ruleRefService_in_ruleUsage4468 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleUsage4481 = new BitSet(new long[]{0x0001800000000000L});
     public static final BitSet FOLLOW_47_in_ruleUsage4496 = new BitSet(new long[]{0x0000000000080010L});
-    public static final BitSet FOLLOW_ruleRefertoEnforcement_in_ruleUsage4517 = new BitSet(new long[]{0x0000000000080010L});
+    public static final BitSet FOLLOW_ruleRefEnforcement_in_ruleUsage4517 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleUsage4530 = new BitSet(new long[]{0x0001000000000000L});
     public static final BitSet FOLLOW_48_in_ruleUsage4544 = new BitSet(new long[]{0x000E000000000000L});
     public static final BitSet FOLLOW_49_in_ruleUsage4564 = new BitSet(new long[]{0x0000000000002000L});
@@ -6951,47 +6951,47 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleRefPrivateData_in_ruleInformative4940 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleInformative4953 = new BitSet(new long[]{0x0001C00000000000L});
     public static final BitSet FOLLOW_46_in_ruleInformative4968 = new BitSet(new long[]{0x0000000000080010L});
-    public static final BitSet FOLLOW_ruleReferToService_in_ruleInformative4989 = new BitSet(new long[]{0x0000000000080010L});
+    public static final BitSet FOLLOW_ruleRefService_in_ruleInformative4989 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleInformative5002 = new BitSet(new long[]{0x0001800000000000L});
     public static final BitSet FOLLOW_47_in_ruleInformative5017 = new BitSet(new long[]{0x0000000000080010L});
-    public static final BitSet FOLLOW_ruleRefertoEnforcement_in_ruleInformative5038 = new BitSet(new long[]{0x0000000000080010L});
+    public static final BitSet FOLLOW_ruleRefEnforcement_in_ruleInformative5038 = new BitSet(new long[]{0x0000000000080010L});
     public static final BitSet FOLLOW_19_in_ruleInformative5051 = new BitSet(new long[]{0x0001000000000000L});
     public static final BitSet FOLLOW_48_in_ruleInformative5065 = new BitSet(new long[]{0x000E000000000000L});
     public static final BitSet FOLLOW_49_in_ruleInformative5085 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_50_in_ruleInformative5114 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_51_in_ruleInformative5143 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_13_in_ruleInformative5171 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePartof_in_entryRulePartof5207 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePartof5217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePartof5262 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_64_in_rulePartof5275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReferToRecipient_in_entryRuleReferToRecipient5313 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleReferToRecipient5323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleReferToRecipient5368 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_64_in_ruleReferToRecipient5381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReferToRecipientSource_in_entryRuleReferToRecipientSource5419 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleReferToRecipientSource5429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleReferToRecipientSource5474 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_64_in_ruleReferToRecipientSource5487 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReferToRecipientTarget_in_entryRuleReferToRecipientTarget5525 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleReferToRecipientTarget5535 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleReferToRecipientTarget5580 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_64_in_ruleReferToRecipientTarget5593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReferToService_in_entryRuleReferToService5631 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleReferToService5641 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleReferToService5686 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_64_in_ruleReferToService5699 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleServicePartof_in_entryRuleServicePartof5737 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleServicePartof5747 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleServicePartof5792 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_64_in_ruleServicePartof5805 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRecipientPart_in_entryRuleRecipientPart5207 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRecipientPart5217 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRecipientPart5262 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_64_in_ruleRecipientPart5275 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefRecipient_in_entryRuleRefRecipient5313 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRefRecipient5323 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRefRecipient5368 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_64_in_ruleRefRecipient5381 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefRecipientSource_in_entryRuleRefRecipientSource5419 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRefRecipientSource5429 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRefRecipientSource5474 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_64_in_ruleRefRecipientSource5487 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefRecipientTarget_in_entryRuleRefRecipientTarget5525 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRefRecipientTarget5535 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRefRecipientTarget5580 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_64_in_ruleRefRecipientTarget5593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefService_in_entryRuleRefService5631 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRefService5641 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRefService5686 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_64_in_ruleRefService5699 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleServicePart_in_entryRuleServicePart5737 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleServicePart5747 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleServicePart5792 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_64_in_ruleServicePart5805 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleRefPrivateData_in_entryRuleRefPrivateData5843 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleRefPrivateData5853 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleRefPrivateData5898 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
     public static final BitSet FOLLOW_64_in_ruleRefPrivateData5911 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefertoEnforcement_in_entryRuleRefertoEnforcement5949 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRefertoEnforcement5959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRefertoEnforcement6004 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_64_in_ruleRefertoEnforcement6017 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefEnforcement_in_entryRuleRefEnforcement5949 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRefEnforcement5959 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRefEnforcement6004 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_64_in_ruleRefEnforcement6017 = new BitSet(new long[]{0x0000000000000002L});
 
 }

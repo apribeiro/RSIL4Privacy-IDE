@@ -15,21 +15,21 @@ import rslingo.rslil4privacy.rSLIL4Privacy.Disclosure;
 import rslingo.rslil4privacy.rSLIL4Privacy.Enforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.Import;
 import rslingo.rslil4privacy.rSLIL4Privacy.Informative;
-import rslingo.rslil4privacy.rSLIL4Privacy.Partof;
 import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
 import rslingo.rslil4privacy.rSLIL4Privacy.PrivateData;
 import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyFactory;
 import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
 import rslingo.rslil4privacy.rSLIL4Privacy.Recipient;
+import rslingo.rslil4privacy.rSLIL4Privacy.RecipientPart;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipient;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipientSource;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipientTarget;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToService;
-import rslingo.rslil4privacy.rSLIL4Privacy.RefertoEnforcement;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefRecipient;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientSource;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientTarget;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefService;
 import rslingo.rslil4privacy.rSLIL4Privacy.Retention;
 import rslingo.rslil4privacy.rSLIL4Privacy.Service;
-import rslingo.rslil4privacy.rSLIL4Privacy.ServicePartof;
+import rslingo.rslil4privacy.rSLIL4Privacy.ServicePart;
 import rslingo.rslil4privacy.rSLIL4Privacy.Usage;
 
 /**
@@ -129,42 +129,42 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass partofEClass = null;
+  private EClass recipientPartEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass referToRecipientEClass = null;
+  private EClass refRecipientEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass referToRecipientSourceEClass = null;
+  private EClass refRecipientSourceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass referToRecipientTargetEClass = null;
+  private EClass refRecipientTargetEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass referToServiceEClass = null;
+  private EClass refServiceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass servicePartofEClass = null;
+  private EClass servicePartEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -178,7 +178,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass refertoEnforcementEClass = null;
+  private EClass refEnforcementEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -418,7 +418,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEnforcement_EnforcementDescription()
+  public EAttribute getEnforcement_Description()
   {
     return (EAttribute)enforcementEClass.getEStructuralFeatures().get(2);
   }
@@ -428,7 +428,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEnforcement_EnforcementKind()
+  public EAttribute getEnforcement_Type()
   {
     return (EAttribute)enforcementEClass.getEStructuralFeatures().get(3);
   }
@@ -458,7 +458,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getService_Servicename()
+  public EAttribute getService_ServiceName()
   {
     return (EAttribute)serviceEClass.getEStructuralFeatures().get(1);
   }
@@ -478,7 +478,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getService_Refprivatedata()
+  public EReference getService_RefPrivateData()
   {
     return (EReference)serviceEClass.getEStructuralFeatures().get(3);
   }
@@ -488,7 +488,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getService_Servicepartof()
+  public EReference getService_ServicePart()
   {
     return (EReference)serviceEClass.getEStructuralFeatures().get(4);
   }
@@ -518,7 +518,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRecipient_Recipientname()
+  public EAttribute getRecipient_RecipientName()
   {
     return (EAttribute)recipientEClass.getEStructuralFeatures().get(1);
   }
@@ -538,7 +538,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRecipient_Partof()
+  public EReference getRecipient_RecipientPart()
   {
     return (EReference)recipientEClass.getEStructuralFeatures().get(3);
   }
@@ -548,7 +548,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRecipient_RecipientScopeKind()
+  public EAttribute getRecipient_Scope()
   {
     return (EAttribute)recipientEClass.getEStructuralFeatures().get(4);
   }
@@ -558,7 +558,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRecipient_RecipientTypeKind()
+  public EAttribute getRecipient_Type()
   {
     return (EAttribute)recipientEClass.getEStructuralFeatures().get(5);
   }
@@ -588,7 +588,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getPrivateData_Privatedata()
+  public EAttribute getPrivateData_Description()
   {
     return (EAttribute)privateDataEClass.getEStructuralFeatures().get(1);
   }
@@ -598,7 +598,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getPrivateData_PrivateDataKind()
+  public EAttribute getPrivateData_Type()
   {
     return (EAttribute)privateDataEClass.getEStructuralFeatures().get(2);
   }
@@ -638,7 +638,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getAttribute_AttributeName()
+  public EAttribute getAttribute_Description()
   {
     return (EAttribute)attributeEClass.getEStructuralFeatures().get(1);
   }
@@ -688,7 +688,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getCollection_Partof()
+  public EReference getCollection_PartCollection()
   {
     return (EReference)collectionEClass.getEStructuralFeatures().get(3);
   }
@@ -698,7 +698,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getCollection_Refprivatedata()
+  public EReference getCollection_RefPrivateData()
   {
     return (EReference)collectionEClass.getEStructuralFeatures().get(4);
   }
@@ -708,7 +708,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getCollection_Refertoservice()
+  public EReference getCollection_RefService()
   {
     return (EReference)collectionEClass.getEStructuralFeatures().get(5);
   }
@@ -718,7 +718,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getCollection_RefertoEnforcement()
+  public EReference getCollection_RefEnforcement()
   {
     return (EReference)collectionEClass.getEStructuralFeatures().get(6);
   }
@@ -728,7 +728,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getCollection_Modalitykind()
+  public EAttribute getCollection_Modality()
   {
     return (EAttribute)collectionEClass.getEStructuralFeatures().get(7);
   }
@@ -778,7 +778,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDisclosure_Partof()
+  public EReference getDisclosure_PartDisclosure()
   {
     return (EReference)disclosureEClass.getEStructuralFeatures().get(3);
   }
@@ -788,7 +788,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDisclosure_ReferToRecipient()
+  public EReference getDisclosure_RefRecipient()
   {
     return (EReference)disclosureEClass.getEStructuralFeatures().get(4);
   }
@@ -798,7 +798,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDisclosure_ReferToRecipientsource()
+  public EReference getDisclosure_RefRecipientSource()
   {
     return (EReference)disclosureEClass.getEStructuralFeatures().get(5);
   }
@@ -808,7 +808,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDisclosure_ReferToRecipienttarget()
+  public EReference getDisclosure_RefRecipientTarget()
   {
     return (EReference)disclosureEClass.getEStructuralFeatures().get(6);
   }
@@ -818,7 +818,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDisclosure_Refprivatedata()
+  public EReference getDisclosure_RefPrivateData()
   {
     return (EReference)disclosureEClass.getEStructuralFeatures().get(7);
   }
@@ -828,7 +828,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDisclosure_Refertoservice()
+  public EReference getDisclosure_RefService()
   {
     return (EReference)disclosureEClass.getEStructuralFeatures().get(8);
   }
@@ -838,7 +838,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDisclosure_RefertoEnforcement()
+  public EReference getDisclosure_RefEnforcement()
   {
     return (EReference)disclosureEClass.getEStructuralFeatures().get(9);
   }
@@ -848,7 +848,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDisclosure_Modalitykind()
+  public EAttribute getDisclosure_Modality()
   {
     return (EAttribute)disclosureEClass.getEStructuralFeatures().get(10);
   }
@@ -898,7 +898,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRetention_Partof()
+  public EReference getRetention_PartRetention()
   {
     return (EReference)retentionEClass.getEStructuralFeatures().get(3);
   }
@@ -918,7 +918,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRetention_Refprivatedata()
+  public EReference getRetention_RefPrivateData()
   {
     return (EReference)retentionEClass.getEStructuralFeatures().get(5);
   }
@@ -928,7 +928,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRetention_Refertoservice()
+  public EReference getRetention_RefService()
   {
     return (EReference)retentionEClass.getEStructuralFeatures().get(6);
   }
@@ -938,7 +938,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRetention_RefertoEnforcement()
+  public EReference getRetention_RefEnforcement()
   {
     return (EReference)retentionEClass.getEStructuralFeatures().get(7);
   }
@@ -948,7 +948,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRetention_Modalitykind()
+  public EAttribute getRetention_Modality()
   {
     return (EAttribute)retentionEClass.getEStructuralFeatures().get(8);
   }
@@ -998,7 +998,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getUsage_Partof()
+  public EReference getUsage_PartUsage()
   {
     return (EReference)usageEClass.getEStructuralFeatures().get(3);
   }
@@ -1008,7 +1008,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getUsage_Refprivatedata()
+  public EReference getUsage_RefPrivateData()
   {
     return (EReference)usageEClass.getEStructuralFeatures().get(4);
   }
@@ -1018,7 +1018,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getUsage_Refertoservice()
+  public EReference getUsage_RefService()
   {
     return (EReference)usageEClass.getEStructuralFeatures().get(5);
   }
@@ -1028,7 +1028,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getUsage_RefertoEnforcement()
+  public EReference getUsage_RefEnforcement()
   {
     return (EReference)usageEClass.getEStructuralFeatures().get(6);
   }
@@ -1038,7 +1038,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getUsage_Modalitykind()
+  public EAttribute getUsage_Modality()
   {
     return (EAttribute)usageEClass.getEStructuralFeatures().get(7);
   }
@@ -1088,7 +1088,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getInformative_Partof()
+  public EReference getInformative_PartInformative()
   {
     return (EReference)informativeEClass.getEStructuralFeatures().get(3);
   }
@@ -1098,7 +1098,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getInformative_Refprivatedata()
+  public EReference getInformative_RefPrivateData()
   {
     return (EReference)informativeEClass.getEStructuralFeatures().get(4);
   }
@@ -1108,7 +1108,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getInformative_Refertoservice()
+  public EReference getInformative_RefService()
   {
     return (EReference)informativeEClass.getEStructuralFeatures().get(5);
   }
@@ -1118,7 +1118,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getInformative_RefertoEnforcement()
+  public EReference getInformative_RefEnforcement()
   {
     return (EReference)informativeEClass.getEStructuralFeatures().get(6);
   }
@@ -1128,7 +1128,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getInformative_Modalitykind()
+  public EAttribute getInformative_Modality()
   {
     return (EAttribute)informativeEClass.getEStructuralFeatures().get(7);
   }
@@ -1138,9 +1138,9 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getPartof()
+  public EClass getRecipientPart()
   {
-    return partofEClass;
+    return recipientPartEClass;
   }
 
   /**
@@ -1148,9 +1148,9 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPartof_Partof()
+  public EReference getRecipientPart_RecipientPart()
   {
-    return (EReference)partofEClass.getEStructuralFeatures().get(0);
+    return (EReference)recipientPartEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1158,9 +1158,9 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getReferToRecipient()
+  public EClass getRefRecipient()
   {
-    return referToRecipientEClass;
+    return refRecipientEClass;
   }
 
   /**
@@ -1168,9 +1168,9 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getReferToRecipient_Refertore()
+  public EReference getRefRecipient_RefRecipient()
   {
-    return (EReference)referToRecipientEClass.getEStructuralFeatures().get(0);
+    return (EReference)refRecipientEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1178,9 +1178,9 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getReferToRecipientSource()
+  public EClass getRefRecipientSource()
   {
-    return referToRecipientSourceEClass;
+    return refRecipientSourceEClass;
   }
 
   /**
@@ -1188,9 +1188,9 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getReferToRecipientSource_Refertore()
+  public EReference getRefRecipientSource_RefRecipientSource()
   {
-    return (EReference)referToRecipientSourceEClass.getEStructuralFeatures().get(0);
+    return (EReference)refRecipientSourceEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1198,9 +1198,9 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getReferToRecipientTarget()
+  public EClass getRefRecipientTarget()
   {
-    return referToRecipientTargetEClass;
+    return refRecipientTargetEClass;
   }
 
   /**
@@ -1208,9 +1208,9 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getReferToRecipientTarget_Refertore()
+  public EReference getRefRecipientTarget_RefRecipientTarget()
   {
-    return (EReference)referToRecipientTargetEClass.getEStructuralFeatures().get(0);
+    return (EReference)refRecipientTargetEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1218,9 +1218,9 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getReferToService()
+  public EClass getRefService()
   {
-    return referToServiceEClass;
+    return refServiceEClass;
   }
 
   /**
@@ -1228,9 +1228,9 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getReferToService_Refertose()
+  public EReference getRefService_RefService()
   {
-    return (EReference)referToServiceEClass.getEStructuralFeatures().get(0);
+    return (EReference)refServiceEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1238,9 +1238,9 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getServicePartof()
+  public EClass getServicePart()
   {
-    return servicePartofEClass;
+    return servicePartEClass;
   }
 
   /**
@@ -1248,9 +1248,9 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getServicePartof_Refertoservice()
+  public EReference getServicePart_ServicePart()
   {
-    return (EReference)servicePartofEClass.getEStructuralFeatures().get(0);
+    return (EReference)servicePartEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1268,7 +1268,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRefPrivateData_Refpr()
+  public EReference getRefPrivateData_RefPrivateData()
   {
     return (EReference)refPrivateDataEClass.getEStructuralFeatures().get(0);
   }
@@ -1278,9 +1278,9 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getRefertoEnforcement()
+  public EClass getRefEnforcement()
   {
-    return refertoEnforcementEClass;
+    return refEnforcementEClass;
   }
 
   /**
@@ -1288,9 +1288,9 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRefertoEnforcement_Refst()
+  public EReference getRefEnforcement_RefEnforcement()
   {
-    return (EReference)refertoEnforcementEClass.getEStructuralFeatures().get(0);
+    return (EReference)refEnforcementEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1342,111 +1342,111 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
     enforcementEClass = createEClass(ENFORCEMENT);
     createEAttribute(enforcementEClass, ENFORCEMENT__NAME);
     createEAttribute(enforcementEClass, ENFORCEMENT__ENFORCEMENT_NAME);
-    createEAttribute(enforcementEClass, ENFORCEMENT__ENFORCEMENT_DESCRIPTION);
-    createEAttribute(enforcementEClass, ENFORCEMENT__ENFORCEMENT_KIND);
+    createEAttribute(enforcementEClass, ENFORCEMENT__DESCRIPTION);
+    createEAttribute(enforcementEClass, ENFORCEMENT__TYPE);
 
     serviceEClass = createEClass(SERVICE);
     createEAttribute(serviceEClass, SERVICE__NAME);
-    createEAttribute(serviceEClass, SERVICE__SERVICENAME);
+    createEAttribute(serviceEClass, SERVICE__SERVICE_NAME);
     createEAttribute(serviceEClass, SERVICE__DESCRIPTION);
-    createEReference(serviceEClass, SERVICE__REFPRIVATEDATA);
-    createEReference(serviceEClass, SERVICE__SERVICEPARTOF);
+    createEReference(serviceEClass, SERVICE__REF_PRIVATE_DATA);
+    createEReference(serviceEClass, SERVICE__SERVICE_PART);
 
     recipientEClass = createEClass(RECIPIENT);
     createEAttribute(recipientEClass, RECIPIENT__NAME);
-    createEAttribute(recipientEClass, RECIPIENT__RECIPIENTNAME);
+    createEAttribute(recipientEClass, RECIPIENT__RECIPIENT_NAME);
     createEAttribute(recipientEClass, RECIPIENT__DESCRIPTION);
-    createEReference(recipientEClass, RECIPIENT__PARTOF);
-    createEAttribute(recipientEClass, RECIPIENT__RECIPIENT_SCOPE_KIND);
-    createEAttribute(recipientEClass, RECIPIENT__RECIPIENT_TYPE_KIND);
+    createEReference(recipientEClass, RECIPIENT__RECIPIENT_PART);
+    createEAttribute(recipientEClass, RECIPIENT__SCOPE);
+    createEAttribute(recipientEClass, RECIPIENT__TYPE);
 
     privateDataEClass = createEClass(PRIVATE_DATA);
     createEAttribute(privateDataEClass, PRIVATE_DATA__NAME);
-    createEAttribute(privateDataEClass, PRIVATE_DATA__PRIVATEDATA);
-    createEAttribute(privateDataEClass, PRIVATE_DATA__PRIVATE_DATA_KIND);
+    createEAttribute(privateDataEClass, PRIVATE_DATA__DESCRIPTION);
+    createEAttribute(privateDataEClass, PRIVATE_DATA__TYPE);
     createEReference(privateDataEClass, PRIVATE_DATA__ATTRIBUTE);
 
     attributeEClass = createEClass(ATTRIBUTE);
     createEAttribute(attributeEClass, ATTRIBUTE__NAME);
-    createEAttribute(attributeEClass, ATTRIBUTE__ATTRIBUTE_NAME);
+    createEAttribute(attributeEClass, ATTRIBUTE__DESCRIPTION);
 
     collectionEClass = createEClass(COLLECTION);
     createEAttribute(collectionEClass, COLLECTION__NAME);
     createEAttribute(collectionEClass, COLLECTION__DESCRIPTION);
     createEAttribute(collectionEClass, COLLECTION__CONDITION);
-    createEReference(collectionEClass, COLLECTION__PARTOF);
-    createEReference(collectionEClass, COLLECTION__REFPRIVATEDATA);
-    createEReference(collectionEClass, COLLECTION__REFERTOSERVICE);
-    createEReference(collectionEClass, COLLECTION__REFERTO_ENFORCEMENT);
-    createEAttribute(collectionEClass, COLLECTION__MODALITYKIND);
+    createEReference(collectionEClass, COLLECTION__PART_COLLECTION);
+    createEReference(collectionEClass, COLLECTION__REF_PRIVATE_DATA);
+    createEReference(collectionEClass, COLLECTION__REF_SERVICE);
+    createEReference(collectionEClass, COLLECTION__REF_ENFORCEMENT);
+    createEAttribute(collectionEClass, COLLECTION__MODALITY);
 
     disclosureEClass = createEClass(DISCLOSURE);
     createEAttribute(disclosureEClass, DISCLOSURE__NAME);
     createEAttribute(disclosureEClass, DISCLOSURE__DESCRIPTION);
     createEAttribute(disclosureEClass, DISCLOSURE__CONDITION);
-    createEReference(disclosureEClass, DISCLOSURE__PARTOF);
-    createEReference(disclosureEClass, DISCLOSURE__REFER_TO_RECIPIENT);
-    createEReference(disclosureEClass, DISCLOSURE__REFER_TO_RECIPIENTSOURCE);
-    createEReference(disclosureEClass, DISCLOSURE__REFER_TO_RECIPIENTTARGET);
-    createEReference(disclosureEClass, DISCLOSURE__REFPRIVATEDATA);
-    createEReference(disclosureEClass, DISCLOSURE__REFERTOSERVICE);
-    createEReference(disclosureEClass, DISCLOSURE__REFERTO_ENFORCEMENT);
-    createEAttribute(disclosureEClass, DISCLOSURE__MODALITYKIND);
+    createEReference(disclosureEClass, DISCLOSURE__PART_DISCLOSURE);
+    createEReference(disclosureEClass, DISCLOSURE__REF_RECIPIENT);
+    createEReference(disclosureEClass, DISCLOSURE__REF_RECIPIENT_SOURCE);
+    createEReference(disclosureEClass, DISCLOSURE__REF_RECIPIENT_TARGET);
+    createEReference(disclosureEClass, DISCLOSURE__REF_PRIVATE_DATA);
+    createEReference(disclosureEClass, DISCLOSURE__REF_SERVICE);
+    createEReference(disclosureEClass, DISCLOSURE__REF_ENFORCEMENT);
+    createEAttribute(disclosureEClass, DISCLOSURE__MODALITY);
 
     retentionEClass = createEClass(RETENTION);
     createEAttribute(retentionEClass, RETENTION__NAME);
     createEAttribute(retentionEClass, RETENTION__DESCRIPTION);
     createEAttribute(retentionEClass, RETENTION__CONDITION);
-    createEReference(retentionEClass, RETENTION__PARTOF);
+    createEReference(retentionEClass, RETENTION__PART_RETENTION);
     createEAttribute(retentionEClass, RETENTION__PERIOD);
-    createEReference(retentionEClass, RETENTION__REFPRIVATEDATA);
-    createEReference(retentionEClass, RETENTION__REFERTOSERVICE);
-    createEReference(retentionEClass, RETENTION__REFERTO_ENFORCEMENT);
-    createEAttribute(retentionEClass, RETENTION__MODALITYKIND);
+    createEReference(retentionEClass, RETENTION__REF_PRIVATE_DATA);
+    createEReference(retentionEClass, RETENTION__REF_SERVICE);
+    createEReference(retentionEClass, RETENTION__REF_ENFORCEMENT);
+    createEAttribute(retentionEClass, RETENTION__MODALITY);
 
     usageEClass = createEClass(USAGE);
     createEAttribute(usageEClass, USAGE__NAME);
     createEAttribute(usageEClass, USAGE__DESCRIPTION);
     createEAttribute(usageEClass, USAGE__CONDITION);
-    createEReference(usageEClass, USAGE__PARTOF);
-    createEReference(usageEClass, USAGE__REFPRIVATEDATA);
-    createEReference(usageEClass, USAGE__REFERTOSERVICE);
-    createEReference(usageEClass, USAGE__REFERTO_ENFORCEMENT);
-    createEAttribute(usageEClass, USAGE__MODALITYKIND);
+    createEReference(usageEClass, USAGE__PART_USAGE);
+    createEReference(usageEClass, USAGE__REF_PRIVATE_DATA);
+    createEReference(usageEClass, USAGE__REF_SERVICE);
+    createEReference(usageEClass, USAGE__REF_ENFORCEMENT);
+    createEAttribute(usageEClass, USAGE__MODALITY);
 
     informativeEClass = createEClass(INFORMATIVE);
     createEAttribute(informativeEClass, INFORMATIVE__NAME);
     createEAttribute(informativeEClass, INFORMATIVE__DESCRIPTION);
     createEAttribute(informativeEClass, INFORMATIVE__CONDITION);
-    createEReference(informativeEClass, INFORMATIVE__PARTOF);
-    createEReference(informativeEClass, INFORMATIVE__REFPRIVATEDATA);
-    createEReference(informativeEClass, INFORMATIVE__REFERTOSERVICE);
-    createEReference(informativeEClass, INFORMATIVE__REFERTO_ENFORCEMENT);
-    createEAttribute(informativeEClass, INFORMATIVE__MODALITYKIND);
+    createEReference(informativeEClass, INFORMATIVE__PART_INFORMATIVE);
+    createEReference(informativeEClass, INFORMATIVE__REF_PRIVATE_DATA);
+    createEReference(informativeEClass, INFORMATIVE__REF_SERVICE);
+    createEReference(informativeEClass, INFORMATIVE__REF_ENFORCEMENT);
+    createEAttribute(informativeEClass, INFORMATIVE__MODALITY);
 
-    partofEClass = createEClass(PARTOF);
-    createEReference(partofEClass, PARTOF__PARTOF);
+    recipientPartEClass = createEClass(RECIPIENT_PART);
+    createEReference(recipientPartEClass, RECIPIENT_PART__RECIPIENT_PART);
 
-    referToRecipientEClass = createEClass(REFER_TO_RECIPIENT);
-    createEReference(referToRecipientEClass, REFER_TO_RECIPIENT__REFERTORE);
+    refRecipientEClass = createEClass(REF_RECIPIENT);
+    createEReference(refRecipientEClass, REF_RECIPIENT__REF_RECIPIENT);
 
-    referToRecipientSourceEClass = createEClass(REFER_TO_RECIPIENT_SOURCE);
-    createEReference(referToRecipientSourceEClass, REFER_TO_RECIPIENT_SOURCE__REFERTORE);
+    refRecipientSourceEClass = createEClass(REF_RECIPIENT_SOURCE);
+    createEReference(refRecipientSourceEClass, REF_RECIPIENT_SOURCE__REF_RECIPIENT_SOURCE);
 
-    referToRecipientTargetEClass = createEClass(REFER_TO_RECIPIENT_TARGET);
-    createEReference(referToRecipientTargetEClass, REFER_TO_RECIPIENT_TARGET__REFERTORE);
+    refRecipientTargetEClass = createEClass(REF_RECIPIENT_TARGET);
+    createEReference(refRecipientTargetEClass, REF_RECIPIENT_TARGET__REF_RECIPIENT_TARGET);
 
-    referToServiceEClass = createEClass(REFER_TO_SERVICE);
-    createEReference(referToServiceEClass, REFER_TO_SERVICE__REFERTOSE);
+    refServiceEClass = createEClass(REF_SERVICE);
+    createEReference(refServiceEClass, REF_SERVICE__REF_SERVICE);
 
-    servicePartofEClass = createEClass(SERVICE_PARTOF);
-    createEReference(servicePartofEClass, SERVICE_PARTOF__REFERTOSERVICE);
+    servicePartEClass = createEClass(SERVICE_PART);
+    createEReference(servicePartEClass, SERVICE_PART__SERVICE_PART);
 
     refPrivateDataEClass = createEClass(REF_PRIVATE_DATA);
-    createEReference(refPrivateDataEClass, REF_PRIVATE_DATA__REFPR);
+    createEReference(refPrivateDataEClass, REF_PRIVATE_DATA__REF_PRIVATE_DATA);
 
-    refertoEnforcementEClass = createEClass(REFERTO_ENFORCEMENT);
-    createEReference(refertoEnforcementEClass, REFERTO_ENFORCEMENT__REFST);
+    refEnforcementEClass = createEClass(REF_ENFORCEMENT);
+    createEReference(refEnforcementEClass, REF_ENFORCEMENT__REF_ENFORCEMENT);
   }
 
   /**
@@ -1499,111 +1499,111 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
     initEClass(enforcementEClass, Enforcement.class, "Enforcement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEnforcement_Name(), ecorePackage.getEString(), "name", null, 0, 1, Enforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEnforcement_EnforcementName(), ecorePackage.getEString(), "enforcementName", null, 0, 1, Enforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEnforcement_EnforcementDescription(), ecorePackage.getEString(), "enforcementDescription", null, 0, 1, Enforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEnforcement_EnforcementKind(), ecorePackage.getEString(), "enforcementKind", null, 0, 1, Enforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEnforcement_Description(), ecorePackage.getEString(), "description", null, 0, 1, Enforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEnforcement_Type(), ecorePackage.getEString(), "type", null, 0, 1, Enforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getService_Name(), ecorePackage.getEString(), "name", null, 0, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getService_Servicename(), ecorePackage.getEString(), "servicename", null, 0, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getService_ServiceName(), ecorePackage.getEString(), "serviceName", null, 0, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getService_Description(), ecorePackage.getEString(), "description", null, 0, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getService_Refprivatedata(), this.getRefPrivateData(), null, "refprivatedata", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getService_Servicepartof(), this.getServicePartof(), null, "servicepartof", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getService_RefPrivateData(), this.getRefPrivateData(), null, "refPrivateData", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getService_ServicePart(), this.getServicePart(), null, "servicePart", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(recipientEClass, Recipient.class, "Recipient", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getRecipient_Name(), ecorePackage.getEString(), "name", null, 0, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRecipient_Recipientname(), ecorePackage.getEString(), "recipientname", null, 0, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRecipient_RecipientName(), ecorePackage.getEString(), "recipientName", null, 0, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRecipient_Description(), ecorePackage.getEString(), "description", null, 0, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRecipient_Partof(), this.getPartof(), null, "partof", null, 0, -1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRecipient_RecipientScopeKind(), ecorePackage.getEString(), "RecipientScopeKind", null, 0, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRecipient_RecipientTypeKind(), ecorePackage.getEString(), "RecipientTypeKind", null, 0, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRecipient_RecipientPart(), this.getRecipientPart(), null, "recipientPart", null, 0, -1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRecipient_Scope(), ecorePackage.getEString(), "scope", null, 0, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRecipient_Type(), ecorePackage.getEString(), "type", null, 0, 1, Recipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(privateDataEClass, PrivateData.class, "PrivateData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPrivateData_Name(), ecorePackage.getEString(), "name", null, 0, 1, PrivateData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPrivateData_Privatedata(), ecorePackage.getEString(), "privatedata", null, 0, 1, PrivateData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPrivateData_PrivateDataKind(), ecorePackage.getEString(), "PrivateDataKind", null, 0, 1, PrivateData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrivateData_Description(), ecorePackage.getEString(), "description", null, 0, 1, PrivateData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrivateData_Type(), ecorePackage.getEString(), "type", null, 0, 1, PrivateData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPrivateData_Attribute(), this.getAttribute(), null, "attribute", null, 0, -1, PrivateData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAttribute_AttributeName(), ecorePackage.getEString(), "attributeName", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAttribute_Description(), ecorePackage.getEString(), "description", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(collectionEClass, Collection.class, "Collection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCollection_Name(), ecorePackage.getEString(), "name", null, 0, 1, Collection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getCollection_Description(), ecorePackage.getEString(), "description", null, 0, 1, Collection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getCollection_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, Collection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCollection_Partof(), this.getCollection(), null, "partof", null, 0, 1, Collection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCollection_Refprivatedata(), this.getRefPrivateData(), null, "refprivatedata", null, 0, -1, Collection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCollection_Refertoservice(), this.getReferToService(), null, "refertoservice", null, 0, -1, Collection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCollection_RefertoEnforcement(), this.getRefertoEnforcement(), null, "refertoEnforcement", null, 0, -1, Collection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCollection_Modalitykind(), ecorePackage.getEString(), "modalitykind", null, 0, 1, Collection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCollection_PartCollection(), this.getCollection(), null, "partCollection", null, 0, 1, Collection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCollection_RefPrivateData(), this.getRefPrivateData(), null, "refPrivateData", null, 0, -1, Collection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCollection_RefService(), this.getRefService(), null, "refService", null, 0, -1, Collection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCollection_RefEnforcement(), this.getRefEnforcement(), null, "refEnforcement", null, 0, -1, Collection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCollection_Modality(), ecorePackage.getEString(), "modality", null, 0, 1, Collection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(disclosureEClass, Disclosure.class, "Disclosure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDisclosure_Name(), ecorePackage.getEString(), "name", null, 0, 1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDisclosure_Description(), ecorePackage.getEString(), "description", null, 0, 1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDisclosure_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDisclosure_Partof(), this.getDisclosure(), null, "partof", null, 0, 1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDisclosure_ReferToRecipient(), this.getReferToRecipient(), null, "referToRecipient", null, 0, -1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDisclosure_ReferToRecipientsource(), this.getReferToRecipientSource(), null, "referToRecipientsource", null, 0, -1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDisclosure_ReferToRecipienttarget(), this.getReferToRecipientTarget(), null, "referToRecipienttarget", null, 0, -1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDisclosure_Refprivatedata(), this.getRefPrivateData(), null, "refprivatedata", null, 0, -1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDisclosure_Refertoservice(), this.getReferToService(), null, "refertoservice", null, 0, -1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDisclosure_RefertoEnforcement(), this.getRefertoEnforcement(), null, "refertoEnforcement", null, 0, -1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDisclosure_Modalitykind(), ecorePackage.getEString(), "modalitykind", null, 0, 1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDisclosure_PartDisclosure(), this.getDisclosure(), null, "partDisclosure", null, 0, 1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDisclosure_RefRecipient(), this.getRefRecipient(), null, "refRecipient", null, 0, -1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDisclosure_RefRecipientSource(), this.getRefRecipientSource(), null, "refRecipientSource", null, 0, -1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDisclosure_RefRecipientTarget(), this.getRefRecipientTarget(), null, "refRecipientTarget", null, 0, -1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDisclosure_RefPrivateData(), this.getRefPrivateData(), null, "refPrivateData", null, 0, -1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDisclosure_RefService(), this.getRefService(), null, "refService", null, 0, -1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDisclosure_RefEnforcement(), this.getRefEnforcement(), null, "refEnforcement", null, 0, -1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDisclosure_Modality(), ecorePackage.getEString(), "modality", null, 0, 1, Disclosure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(retentionEClass, Retention.class, "Retention", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getRetention_Name(), ecorePackage.getEString(), "name", null, 0, 1, Retention.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRetention_Description(), ecorePackage.getEString(), "description", null, 0, 1, Retention.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRetention_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, Retention.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRetention_Partof(), this.getRetention(), null, "partof", null, 0, 1, Retention.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRetention_PartRetention(), this.getRetention(), null, "partRetention", null, 0, 1, Retention.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRetention_Period(), ecorePackage.getEString(), "period", null, 0, 1, Retention.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRetention_Refprivatedata(), this.getRefPrivateData(), null, "refprivatedata", null, 0, -1, Retention.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRetention_Refertoservice(), this.getReferToService(), null, "refertoservice", null, 0, -1, Retention.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRetention_RefertoEnforcement(), this.getRefertoEnforcement(), null, "refertoEnforcement", null, 0, -1, Retention.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRetention_Modalitykind(), ecorePackage.getEString(), "modalitykind", null, 0, 1, Retention.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRetention_RefPrivateData(), this.getRefPrivateData(), null, "refPrivateData", null, 0, -1, Retention.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRetention_RefService(), this.getRefService(), null, "refService", null, 0, -1, Retention.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRetention_RefEnforcement(), this.getRefEnforcement(), null, "refEnforcement", null, 0, -1, Retention.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRetention_Modality(), ecorePackage.getEString(), "modality", null, 0, 1, Retention.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(usageEClass, Usage.class, "Usage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getUsage_Name(), ecorePackage.getEString(), "name", null, 0, 1, Usage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getUsage_Description(), ecorePackage.getEString(), "description", null, 0, 1, Usage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getUsage_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, Usage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getUsage_Partof(), this.getUsage(), null, "partof", null, 0, 1, Usage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getUsage_Refprivatedata(), this.getRefPrivateData(), null, "refprivatedata", null, 0, -1, Usage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getUsage_Refertoservice(), this.getReferToService(), null, "refertoservice", null, 0, -1, Usage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getUsage_RefertoEnforcement(), this.getRefertoEnforcement(), null, "refertoEnforcement", null, 0, -1, Usage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getUsage_Modalitykind(), ecorePackage.getEString(), "modalitykind", null, 0, 1, Usage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getUsage_PartUsage(), this.getUsage(), null, "partUsage", null, 0, 1, Usage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getUsage_RefPrivateData(), this.getRefPrivateData(), null, "refPrivateData", null, 0, -1, Usage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getUsage_RefService(), this.getRefService(), null, "refService", null, 0, -1, Usage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getUsage_RefEnforcement(), this.getRefEnforcement(), null, "refEnforcement", null, 0, -1, Usage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getUsage_Modality(), ecorePackage.getEString(), "modality", null, 0, 1, Usage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(informativeEClass, Informative.class, "Informative", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getInformative_Name(), ecorePackage.getEString(), "name", null, 0, 1, Informative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getInformative_Description(), ecorePackage.getEString(), "description", null, 0, 1, Informative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getInformative_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, Informative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInformative_Partof(), this.getInformative(), null, "partof", null, 0, 1, Informative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInformative_Refprivatedata(), this.getRefPrivateData(), null, "refprivatedata", null, 0, -1, Informative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInformative_Refertoservice(), this.getReferToService(), null, "refertoservice", null, 0, -1, Informative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInformative_RefertoEnforcement(), this.getRefertoEnforcement(), null, "refertoEnforcement", null, 0, -1, Informative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getInformative_Modalitykind(), ecorePackage.getEString(), "modalitykind", null, 0, 1, Informative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInformative_PartInformative(), this.getInformative(), null, "partInformative", null, 0, 1, Informative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInformative_RefPrivateData(), this.getRefPrivateData(), null, "refPrivateData", null, 0, -1, Informative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInformative_RefService(), this.getRefService(), null, "refService", null, 0, -1, Informative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInformative_RefEnforcement(), this.getRefEnforcement(), null, "refEnforcement", null, 0, -1, Informative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getInformative_Modality(), ecorePackage.getEString(), "modality", null, 0, 1, Informative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(partofEClass, Partof.class, "Partof", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPartof_Partof(), this.getRecipient(), null, "partof", null, 0, 1, Partof.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(recipientPartEClass, RecipientPart.class, "RecipientPart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRecipientPart_RecipientPart(), this.getRecipient(), null, "recipientPart", null, 0, 1, RecipientPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(referToRecipientEClass, ReferToRecipient.class, "ReferToRecipient", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getReferToRecipient_Refertore(), this.getRecipient(), null, "refertore", null, 0, 1, ReferToRecipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(refRecipientEClass, RefRecipient.class, "RefRecipient", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRefRecipient_RefRecipient(), this.getRecipient(), null, "refRecipient", null, 0, 1, RefRecipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(referToRecipientSourceEClass, ReferToRecipientSource.class, "ReferToRecipientSource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getReferToRecipientSource_Refertore(), this.getRecipient(), null, "refertore", null, 0, 1, ReferToRecipientSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(refRecipientSourceEClass, RefRecipientSource.class, "RefRecipientSource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRefRecipientSource_RefRecipientSource(), this.getRecipient(), null, "refRecipientSource", null, 0, 1, RefRecipientSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(referToRecipientTargetEClass, ReferToRecipientTarget.class, "ReferToRecipientTarget", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getReferToRecipientTarget_Refertore(), this.getRecipient(), null, "refertore", null, 0, 1, ReferToRecipientTarget.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(refRecipientTargetEClass, RefRecipientTarget.class, "RefRecipientTarget", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRefRecipientTarget_RefRecipientTarget(), this.getRecipient(), null, "refRecipientTarget", null, 0, 1, RefRecipientTarget.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(referToServiceEClass, ReferToService.class, "ReferToService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getReferToService_Refertose(), this.getService(), null, "refertose", null, 0, 1, ReferToService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(refServiceEClass, RefService.class, "RefService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRefService_RefService(), this.getService(), null, "refService", null, 0, 1, RefService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(servicePartofEClass, ServicePartof.class, "ServicePartof", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getServicePartof_Refertoservice(), this.getService(), null, "refertoservice", null, 0, 1, ServicePartof.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(servicePartEClass, ServicePart.class, "ServicePart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getServicePart_ServicePart(), this.getService(), null, "servicePart", null, 0, 1, ServicePart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(refPrivateDataEClass, RefPrivateData.class, "RefPrivateData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRefPrivateData_Refpr(), this.getPrivateData(), null, "refpr", null, 0, 1, RefPrivateData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRefPrivateData_RefPrivateData(), this.getPrivateData(), null, "refPrivateData", null, 0, 1, RefPrivateData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(refertoEnforcementEClass, RefertoEnforcement.class, "RefertoEnforcement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRefertoEnforcement_Refst(), this.getEnforcement(), null, "refst", null, 0, 1, RefertoEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(refEnforcementEClass, RefEnforcement.class, "RefEnforcement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRefEnforcement_RefEnforcement(), this.getEnforcement(), null, "refEnforcement", null, 0, 1, RefEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

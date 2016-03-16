@@ -135,34 +135,34 @@ public class RSLIL4PrivacyAdapterFactory extends AdapterFactoryImpl
         return createInformativeAdapter();
       }
       @Override
-      public Adapter casePartof(Partof object)
+      public Adapter caseRecipientPart(RecipientPart object)
       {
-        return createPartofAdapter();
+        return createRecipientPartAdapter();
       }
       @Override
-      public Adapter caseReferToRecipient(ReferToRecipient object)
+      public Adapter caseRefRecipient(RefRecipient object)
       {
-        return createReferToRecipientAdapter();
+        return createRefRecipientAdapter();
       }
       @Override
-      public Adapter caseReferToRecipientSource(ReferToRecipientSource object)
+      public Adapter caseRefRecipientSource(RefRecipientSource object)
       {
-        return createReferToRecipientSourceAdapter();
+        return createRefRecipientSourceAdapter();
       }
       @Override
-      public Adapter caseReferToRecipientTarget(ReferToRecipientTarget object)
+      public Adapter caseRefRecipientTarget(RefRecipientTarget object)
       {
-        return createReferToRecipientTargetAdapter();
+        return createRefRecipientTargetAdapter();
       }
       @Override
-      public Adapter caseReferToService(ReferToService object)
+      public Adapter caseRefService(RefService object)
       {
-        return createReferToServiceAdapter();
+        return createRefServiceAdapter();
       }
       @Override
-      public Adapter caseServicePartof(ServicePartof object)
+      public Adapter caseServicePart(ServicePart object)
       {
-        return createServicePartofAdapter();
+        return createServicePartAdapter();
       }
       @Override
       public Adapter caseRefPrivateData(RefPrivateData object)
@@ -170,9 +170,9 @@ public class RSLIL4PrivacyAdapterFactory extends AdapterFactoryImpl
         return createRefPrivateDataAdapter();
       }
       @Override
-      public Adapter caseRefertoEnforcement(RefertoEnforcement object)
+      public Adapter caseRefEnforcement(RefEnforcement object)
       {
-        return createRefertoEnforcementAdapter();
+        return createRefEnforcementAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -377,91 +377,91 @@ public class RSLIL4PrivacyAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link rslingo.rslil4privacy.rSLIL4Privacy.Partof <em>Partof</em>}'.
+   * Creates a new adapter for an object of class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RecipientPart <em>Recipient Part</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.Partof
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RecipientPart
    * @generated
    */
-  public Adapter createPartofAdapter()
+  public Adapter createRecipientPartAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipient <em>Refer To Recipient</em>}'.
+   * Creates a new adapter for an object of class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipient <em>Ref Recipient</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipient
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefRecipient
    * @generated
    */
-  public Adapter createReferToRecipientAdapter()
+  public Adapter createRefRecipientAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipientSource <em>Refer To Recipient Source</em>}'.
+   * Creates a new adapter for an object of class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientSource <em>Ref Recipient Source</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipientSource
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientSource
    * @generated
    */
-  public Adapter createReferToRecipientSourceAdapter()
+  public Adapter createRefRecipientSourceAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipientTarget <em>Refer To Recipient Target</em>}'.
+   * Creates a new adapter for an object of class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientTarget <em>Ref Recipient Target</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipientTarget
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientTarget
    * @generated
    */
-  public Adapter createReferToRecipientTargetAdapter()
+  public Adapter createRefRecipientTargetAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link rslingo.rslil4privacy.rSLIL4Privacy.ReferToService <em>Refer To Service</em>}'.
+   * Creates a new adapter for an object of class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefService <em>Ref Service</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.ReferToService
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefService
    * @generated
    */
-  public Adapter createReferToServiceAdapter()
+  public Adapter createRefServiceAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link rslingo.rslil4privacy.rSLIL4Privacy.ServicePartof <em>Service Partof</em>}'.
+   * Creates a new adapter for an object of class '{@link rslingo.rslil4privacy.rSLIL4Privacy.ServicePart <em>Service Part</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.ServicePartof
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.ServicePart
    * @generated
    */
-  public Adapter createServicePartofAdapter()
+  public Adapter createServicePartAdapter()
   {
     return null;
   }
@@ -482,16 +482,16 @@ public class RSLIL4PrivacyAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefertoEnforcement <em>Referto Enforcement</em>}'.
+   * Creates a new adapter for an object of class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement <em>Ref Enforcement</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefertoEnforcement
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement
    * @generated
    */
-  public Adapter createRefertoEnforcementAdapter()
+  public Adapter createRefEnforcementAdapter()
   {
     return null;
   }

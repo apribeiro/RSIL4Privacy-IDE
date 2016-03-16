@@ -156,45 +156,45 @@ public class RSLIL4PrivacySwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RSLIL4PrivacyPackage.PARTOF:
+      case RSLIL4PrivacyPackage.RECIPIENT_PART:
       {
-        Partof partof = (Partof)theEObject;
-        T result = casePartof(partof);
+        RecipientPart recipientPart = (RecipientPart)theEObject;
+        T result = caseRecipientPart(recipientPart);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RSLIL4PrivacyPackage.REFER_TO_RECIPIENT:
+      case RSLIL4PrivacyPackage.REF_RECIPIENT:
       {
-        ReferToRecipient referToRecipient = (ReferToRecipient)theEObject;
-        T result = caseReferToRecipient(referToRecipient);
+        RefRecipient refRecipient = (RefRecipient)theEObject;
+        T result = caseRefRecipient(refRecipient);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RSLIL4PrivacyPackage.REFER_TO_RECIPIENT_SOURCE:
+      case RSLIL4PrivacyPackage.REF_RECIPIENT_SOURCE:
       {
-        ReferToRecipientSource referToRecipientSource = (ReferToRecipientSource)theEObject;
-        T result = caseReferToRecipientSource(referToRecipientSource);
+        RefRecipientSource refRecipientSource = (RefRecipientSource)theEObject;
+        T result = caseRefRecipientSource(refRecipientSource);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RSLIL4PrivacyPackage.REFER_TO_RECIPIENT_TARGET:
+      case RSLIL4PrivacyPackage.REF_RECIPIENT_TARGET:
       {
-        ReferToRecipientTarget referToRecipientTarget = (ReferToRecipientTarget)theEObject;
-        T result = caseReferToRecipientTarget(referToRecipientTarget);
+        RefRecipientTarget refRecipientTarget = (RefRecipientTarget)theEObject;
+        T result = caseRefRecipientTarget(refRecipientTarget);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RSLIL4PrivacyPackage.REFER_TO_SERVICE:
+      case RSLIL4PrivacyPackage.REF_SERVICE:
       {
-        ReferToService referToService = (ReferToService)theEObject;
-        T result = caseReferToService(referToService);
+        RefService refService = (RefService)theEObject;
+        T result = caseRefService(refService);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RSLIL4PrivacyPackage.SERVICE_PARTOF:
+      case RSLIL4PrivacyPackage.SERVICE_PART:
       {
-        ServicePartof servicePartof = (ServicePartof)theEObject;
-        T result = caseServicePartof(servicePartof);
+        ServicePart servicePart = (ServicePart)theEObject;
+        T result = caseServicePart(servicePart);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -205,10 +205,10 @@ public class RSLIL4PrivacySwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RSLIL4PrivacyPackage.REFERTO_ENFORCEMENT:
+      case RSLIL4PrivacyPackage.REF_ENFORCEMENT:
       {
-        RefertoEnforcement refertoEnforcement = (RefertoEnforcement)theEObject;
-        T result = caseRefertoEnforcement(refertoEnforcement);
+        RefEnforcement refEnforcement = (RefEnforcement)theEObject;
+        T result = caseRefEnforcement(refEnforcement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -409,97 +409,97 @@ public class RSLIL4PrivacySwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Partof</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Recipient Part</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Partof</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Recipient Part</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casePartof(Partof object)
+  public T caseRecipientPart(RecipientPart object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Refer To Recipient</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Ref Recipient</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Refer To Recipient</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Ref Recipient</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseReferToRecipient(ReferToRecipient object)
+  public T caseRefRecipient(RefRecipient object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Refer To Recipient Source</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Ref Recipient Source</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Refer To Recipient Source</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Ref Recipient Source</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseReferToRecipientSource(ReferToRecipientSource object)
+  public T caseRefRecipientSource(RefRecipientSource object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Refer To Recipient Target</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Ref Recipient Target</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Refer To Recipient Target</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Ref Recipient Target</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseReferToRecipientTarget(ReferToRecipientTarget object)
+  public T caseRefRecipientTarget(RefRecipientTarget object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Refer To Service</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Ref Service</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Refer To Service</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Ref Service</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseReferToService(ReferToService object)
+  public T caseRefService(RefService object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Service Partof</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Service Part</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Service Partof</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Service Part</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseServicePartof(ServicePartof object)
+  public T caseServicePart(ServicePart object)
   {
     return null;
   }
@@ -521,17 +521,17 @@ public class RSLIL4PrivacySwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Referto Enforcement</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Ref Enforcement</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Referto Enforcement</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Ref Enforcement</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseRefertoEnforcement(RefertoEnforcement object)
+  public T caseRefEnforcement(RefEnforcement object)
   {
     return null;
   }

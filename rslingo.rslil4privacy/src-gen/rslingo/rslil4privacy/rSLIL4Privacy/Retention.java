@@ -18,12 +18,12 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getName <em>Name</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getDescription <em>Description</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getCondition <em>Condition</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getPartof <em>Partof</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getPartRetention <em>Part Retention</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getPeriod <em>Period</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefprivatedata <em>Refprivatedata</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefertoservice <em>Refertoservice</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefertoEnforcement <em>Referto Enforcement</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getModalitykind <em>Modalitykind</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefPrivateData <em>Ref Private Data</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefService <em>Ref Service</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefEnforcement <em>Ref Enforcement</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getModality <em>Modality</em>}</li>
  * </ul>
  *
  * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRetention()
@@ -111,30 +111,30 @@ public interface Retention extends EObject
   void setCondition(String value);
 
   /**
-   * Returns the value of the '<em><b>Partof</b></em>' reference.
+   * Returns the value of the '<em><b>Part Retention</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Partof</em>' reference isn't clear,
+   * If the meaning of the '<em>Part Retention</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Partof</em>' reference.
-   * @see #setPartof(Retention)
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRetention_Partof()
+   * @return the value of the '<em>Part Retention</em>' reference.
+   * @see #setPartRetention(Retention)
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRetention_PartRetention()
    * @model
    * @generated
    */
-  Retention getPartof();
+  Retention getPartRetention();
 
   /**
-   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getPartof <em>Partof</em>}' reference.
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getPartRetention <em>Part Retention</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Partof</em>' reference.
-   * @see #getPartof()
+   * @param value the new value of the '<em>Part Retention</em>' reference.
+   * @see #getPartRetention()
    * @generated
    */
-  void setPartof(Retention value);
+  void setPartRetention(Retention value);
 
   /**
    * Returns the value of the '<em><b>Period</b></em>' attribute.
@@ -163,77 +163,77 @@ public interface Retention extends EObject
   void setPeriod(String value);
 
   /**
-   * Returns the value of the '<em><b>Refprivatedata</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Ref Private Data</b></em>' containment reference list.
    * The list contents are of type {@link rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Refprivatedata</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Ref Private Data</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Refprivatedata</em>' containment reference list.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRetention_Refprivatedata()
+   * @return the value of the '<em>Ref Private Data</em>' containment reference list.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRetention_RefPrivateData()
    * @model containment="true"
    * @generated
    */
-  EList<RefPrivateData> getRefprivatedata();
+  EList<RefPrivateData> getRefPrivateData();
 
   /**
-   * Returns the value of the '<em><b>Refertoservice</b></em>' containment reference list.
-   * The list contents are of type {@link rslingo.rslil4privacy.rSLIL4Privacy.ReferToService}.
+   * Returns the value of the '<em><b>Ref Service</b></em>' containment reference list.
+   * The list contents are of type {@link rslingo.rslil4privacy.rSLIL4Privacy.RefService}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Refertoservice</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Ref Service</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Refertoservice</em>' containment reference list.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRetention_Refertoservice()
+   * @return the value of the '<em>Ref Service</em>' containment reference list.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRetention_RefService()
    * @model containment="true"
    * @generated
    */
-  EList<ReferToService> getRefertoservice();
+  EList<RefService> getRefService();
 
   /**
-   * Returns the value of the '<em><b>Referto Enforcement</b></em>' containment reference list.
-   * The list contents are of type {@link rslingo.rslil4privacy.rSLIL4Privacy.RefertoEnforcement}.
+   * Returns the value of the '<em><b>Ref Enforcement</b></em>' containment reference list.
+   * The list contents are of type {@link rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Referto Enforcement</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Ref Enforcement</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Referto Enforcement</em>' containment reference list.
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRetention_RefertoEnforcement()
+   * @return the value of the '<em>Ref Enforcement</em>' containment reference list.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRetention_RefEnforcement()
    * @model containment="true"
    * @generated
    */
-  EList<RefertoEnforcement> getRefertoEnforcement();
+  EList<RefEnforcement> getRefEnforcement();
 
   /**
-   * Returns the value of the '<em><b>Modalitykind</b></em>' attribute.
+   * Returns the value of the '<em><b>Modality</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Modalitykind</em>' attribute isn't clear,
+   * If the meaning of the '<em>Modality</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Modalitykind</em>' attribute.
-   * @see #setModalitykind(String)
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRetention_Modalitykind()
+   * @return the value of the '<em>Modality</em>' attribute.
+   * @see #setModality(String)
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRetention_Modality()
    * @model
    * @generated
    */
-  String getModalitykind();
+  String getModality();
 
   /**
-   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getModalitykind <em>Modalitykind</em>}' attribute.
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getModality <em>Modality</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Modalitykind</em>' attribute.
-   * @see #getModalitykind()
+   * @param value the new value of the '<em>Modality</em>' attribute.
+   * @see #getModality()
    * @generated
    */
-  void setModalitykind(String value);
+  void setModality(String value);
 
 } // Retention

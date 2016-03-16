@@ -21,7 +21,7 @@ import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
  * </p>
  * <ul>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.AttributeImpl#getName <em>Name</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.AttributeImpl#getAttributeName <em>Attribute Name</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.AttributeImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,24 +49,24 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getAttributeName() <em>Attribute Name</em>}' attribute.
+   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAttributeName()
+   * @see #getDescription()
    * @generated
    * @ordered
    */
-  protected static final String ATTRIBUTE_NAME_EDEFAULT = null;
+  protected static final String DESCRIPTION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getAttributeName() <em>Attribute Name</em>}' attribute.
+   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAttributeName()
+   * @see #getDescription()
    * @generated
    * @ordered
    */
-  protected String attributeName = ATTRIBUTE_NAME_EDEFAULT;
+  protected String description = DESCRIPTION_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -117,9 +117,9 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getAttributeName()
+  public String getDescription()
   {
-    return attributeName;
+    return description;
   }
 
   /**
@@ -127,12 +127,12 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttributeName(String newAttributeName)
+  public void setDescription(String newDescription)
   {
-    String oldAttributeName = attributeName;
-    attributeName = newAttributeName;
+    String oldDescription = description;
+    description = newDescription;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.ATTRIBUTE__ATTRIBUTE_NAME, oldAttributeName, attributeName));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.ATTRIBUTE__DESCRIPTION, oldDescription, description));
   }
 
   /**
@@ -147,8 +147,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
     {
       case RSLIL4PrivacyPackage.ATTRIBUTE__NAME:
         return getName();
-      case RSLIL4PrivacyPackage.ATTRIBUTE__ATTRIBUTE_NAME:
-        return getAttributeName();
+      case RSLIL4PrivacyPackage.ATTRIBUTE__DESCRIPTION:
+        return getDescription();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -166,8 +166,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
       case RSLIL4PrivacyPackage.ATTRIBUTE__NAME:
         setName((String)newValue);
         return;
-      case RSLIL4PrivacyPackage.ATTRIBUTE__ATTRIBUTE_NAME:
-        setAttributeName((String)newValue);
+      case RSLIL4PrivacyPackage.ATTRIBUTE__DESCRIPTION:
+        setDescription((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -186,8 +186,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
       case RSLIL4PrivacyPackage.ATTRIBUTE__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case RSLIL4PrivacyPackage.ATTRIBUTE__ATTRIBUTE_NAME:
-        setAttributeName(ATTRIBUTE_NAME_EDEFAULT);
+      case RSLIL4PrivacyPackage.ATTRIBUTE__DESCRIPTION:
+        setDescription(DESCRIPTION_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -205,8 +205,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
     {
       case RSLIL4PrivacyPackage.ATTRIBUTE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case RSLIL4PrivacyPackage.ATTRIBUTE__ATTRIBUTE_NAME:
-        return ATTRIBUTE_NAME_EDEFAULT == null ? attributeName != null : !ATTRIBUTE_NAME_EDEFAULT.equals(attributeName);
+      case RSLIL4PrivacyPackage.ATTRIBUTE__DESCRIPTION:
+        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
     }
     return super.eIsSet(featureID);
   }
@@ -224,8 +224,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", attributeName: ");
-    result.append(attributeName);
+    result.append(", description: ");
+    result.append(description);
     result.append(')');
     return result.toString();
   }

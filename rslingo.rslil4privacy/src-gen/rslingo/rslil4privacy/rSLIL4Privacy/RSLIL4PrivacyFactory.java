@@ -131,58 +131,58 @@ public interface RSLIL4PrivacyFactory extends EFactory
   Informative createInformative();
 
   /**
-   * Returns a new object of class '<em>Partof</em>'.
+   * Returns a new object of class '<em>Recipient Part</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Partof</em>'.
+   * @return a new object of class '<em>Recipient Part</em>'.
    * @generated
    */
-  Partof createPartof();
+  RecipientPart createRecipientPart();
 
   /**
-   * Returns a new object of class '<em>Refer To Recipient</em>'.
+   * Returns a new object of class '<em>Ref Recipient</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Refer To Recipient</em>'.
+   * @return a new object of class '<em>Ref Recipient</em>'.
    * @generated
    */
-  ReferToRecipient createReferToRecipient();
+  RefRecipient createRefRecipient();
 
   /**
-   * Returns a new object of class '<em>Refer To Recipient Source</em>'.
+   * Returns a new object of class '<em>Ref Recipient Source</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Refer To Recipient Source</em>'.
+   * @return a new object of class '<em>Ref Recipient Source</em>'.
    * @generated
    */
-  ReferToRecipientSource createReferToRecipientSource();
+  RefRecipientSource createRefRecipientSource();
 
   /**
-   * Returns a new object of class '<em>Refer To Recipient Target</em>'.
+   * Returns a new object of class '<em>Ref Recipient Target</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Refer To Recipient Target</em>'.
+   * @return a new object of class '<em>Ref Recipient Target</em>'.
    * @generated
    */
-  ReferToRecipientTarget createReferToRecipientTarget();
+  RefRecipientTarget createRefRecipientTarget();
 
   /**
-   * Returns a new object of class '<em>Refer To Service</em>'.
+   * Returns a new object of class '<em>Ref Service</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Refer To Service</em>'.
+   * @return a new object of class '<em>Ref Service</em>'.
    * @generated
    */
-  ReferToService createReferToService();
+  RefService createRefService();
 
   /**
-   * Returns a new object of class '<em>Service Partof</em>'.
+   * Returns a new object of class '<em>Service Part</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Service Partof</em>'.
+   * @return a new object of class '<em>Service Part</em>'.
    * @generated
    */
-  ServicePartof createServicePartof();
+  ServicePart createServicePart();
 
   /**
    * Returns a new object of class '<em>Ref Private Data</em>'.
@@ -194,13 +194,13 @@ public interface RSLIL4PrivacyFactory extends EFactory
   RefPrivateData createRefPrivateData();
 
   /**
-   * Returns a new object of class '<em>Referto Enforcement</em>'.
+   * Returns a new object of class '<em>Ref Enforcement</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Referto Enforcement</em>'.
+   * @return a new object of class '<em>Ref Enforcement</em>'.
    * @generated
    */
-  RefertoEnforcement createRefertoEnforcement();
+  RefEnforcement createRefEnforcement();
 
   /**
    * Returns the package supported by this factory.

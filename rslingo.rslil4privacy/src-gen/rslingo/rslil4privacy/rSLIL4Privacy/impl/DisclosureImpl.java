@@ -20,12 +20,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import rslingo.rslil4privacy.rSLIL4Privacy.Disclosure;
 import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipient;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipientSource;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipientTarget;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToService;
-import rslingo.rslil4privacy.rSLIL4Privacy.RefertoEnforcement;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefRecipient;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientSource;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientTarget;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefService;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,14 +38,14 @@ import rslingo.rslil4privacy.rSLIL4Privacy.RefertoEnforcement;
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getName <em>Name</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getCondition <em>Condition</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getPartof <em>Partof</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getReferToRecipient <em>Refer To Recipient</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getReferToRecipientsource <em>Refer To Recipientsource</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getReferToRecipienttarget <em>Refer To Recipienttarget</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefprivatedata <em>Refprivatedata</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefertoservice <em>Refertoservice</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefertoEnforcement <em>Referto Enforcement</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getModalitykind <em>Modalitykind</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getPartDisclosure <em>Part Disclosure</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefRecipient <em>Ref Recipient</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefRecipientSource <em>Ref Recipient Source</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefRecipientTarget <em>Ref Recipient Target</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefPrivateData <em>Ref Private Data</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefService <em>Ref Service</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefEnforcement <em>Ref Enforcement</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getModality <em>Modality</em>}</li>
  * </ul>
  *
  * @generated
@@ -113,94 +113,94 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
   protected String condition = CONDITION_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getPartof() <em>Partof</em>}' reference.
+   * The cached value of the '{@link #getPartDisclosure() <em>Part Disclosure</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPartof()
+   * @see #getPartDisclosure()
    * @generated
    * @ordered
    */
-  protected Disclosure partof;
+  protected Disclosure partDisclosure;
 
   /**
-   * The cached value of the '{@link #getReferToRecipient() <em>Refer To Recipient</em>}' containment reference list.
+   * The cached value of the '{@link #getRefRecipient() <em>Ref Recipient</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getReferToRecipient()
+   * @see #getRefRecipient()
    * @generated
    * @ordered
    */
-  protected EList<ReferToRecipient> referToRecipient;
+  protected EList<RefRecipient> refRecipient;
 
   /**
-   * The cached value of the '{@link #getReferToRecipientsource() <em>Refer To Recipientsource</em>}' containment reference list.
+   * The cached value of the '{@link #getRefRecipientSource() <em>Ref Recipient Source</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getReferToRecipientsource()
+   * @see #getRefRecipientSource()
    * @generated
    * @ordered
    */
-  protected EList<ReferToRecipientSource> referToRecipientsource;
+  protected EList<RefRecipientSource> refRecipientSource;
 
   /**
-   * The cached value of the '{@link #getReferToRecipienttarget() <em>Refer To Recipienttarget</em>}' containment reference list.
+   * The cached value of the '{@link #getRefRecipientTarget() <em>Ref Recipient Target</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getReferToRecipienttarget()
+   * @see #getRefRecipientTarget()
    * @generated
    * @ordered
    */
-  protected EList<ReferToRecipientTarget> referToRecipienttarget;
+  protected EList<RefRecipientTarget> refRecipientTarget;
 
   /**
-   * The cached value of the '{@link #getRefprivatedata() <em>Refprivatedata</em>}' containment reference list.
+   * The cached value of the '{@link #getRefPrivateData() <em>Ref Private Data</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRefprivatedata()
+   * @see #getRefPrivateData()
    * @generated
    * @ordered
    */
-  protected EList<RefPrivateData> refprivatedata;
+  protected EList<RefPrivateData> refPrivateData;
 
   /**
-   * The cached value of the '{@link #getRefertoservice() <em>Refertoservice</em>}' containment reference list.
+   * The cached value of the '{@link #getRefService() <em>Ref Service</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRefertoservice()
+   * @see #getRefService()
    * @generated
    * @ordered
    */
-  protected EList<ReferToService> refertoservice;
+  protected EList<RefService> refService;
 
   /**
-   * The cached value of the '{@link #getRefertoEnforcement() <em>Referto Enforcement</em>}' containment reference list.
+   * The cached value of the '{@link #getRefEnforcement() <em>Ref Enforcement</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRefertoEnforcement()
+   * @see #getRefEnforcement()
    * @generated
    * @ordered
    */
-  protected EList<RefertoEnforcement> refertoEnforcement;
+  protected EList<RefEnforcement> refEnforcement;
 
   /**
-   * The default value of the '{@link #getModalitykind() <em>Modalitykind</em>}' attribute.
+   * The default value of the '{@link #getModality() <em>Modality</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getModalitykind()
+   * @see #getModality()
    * @generated
    * @ordered
    */
-  protected static final String MODALITYKIND_EDEFAULT = null;
+  protected static final String MODALITY_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getModalitykind() <em>Modalitykind</em>}' attribute.
+   * The cached value of the '{@link #getModality() <em>Modality</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getModalitykind()
+   * @see #getModality()
    * @generated
    * @ordered
    */
-  protected String modalitykind = MODALITYKIND_EDEFAULT;
+  protected String modality = MODALITY_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -297,19 +297,19 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
    * <!-- end-user-doc -->
    * @generated
    */
-  public Disclosure getPartof()
+  public Disclosure getPartDisclosure()
   {
-    if (partof != null && partof.eIsProxy())
+    if (partDisclosure != null && partDisclosure.eIsProxy())
     {
-      InternalEObject oldPartof = (InternalEObject)partof;
-      partof = (Disclosure)eResolveProxy(oldPartof);
-      if (partof != oldPartof)
+      InternalEObject oldPartDisclosure = (InternalEObject)partDisclosure;
+      partDisclosure = (Disclosure)eResolveProxy(oldPartDisclosure);
+      if (partDisclosure != oldPartDisclosure)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSLIL4PrivacyPackage.DISCLOSURE__PARTOF, oldPartof, partof));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSLIL4PrivacyPackage.DISCLOSURE__PART_DISCLOSURE, oldPartDisclosure, partDisclosure));
       }
     }
-    return partof;
+    return partDisclosure;
   }
 
   /**
@@ -317,9 +317,9 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
    * <!-- end-user-doc -->
    * @generated
    */
-  public Disclosure basicGetPartof()
+  public Disclosure basicGetPartDisclosure()
   {
-    return partof;
+    return partDisclosure;
   }
 
   /**
@@ -327,12 +327,12 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPartof(Disclosure newPartof)
+  public void setPartDisclosure(Disclosure newPartDisclosure)
   {
-    Disclosure oldPartof = partof;
-    partof = newPartof;
+    Disclosure oldPartDisclosure = partDisclosure;
+    partDisclosure = newPartDisclosure;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.DISCLOSURE__PARTOF, oldPartof, partof));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.DISCLOSURE__PART_DISCLOSURE, oldPartDisclosure, partDisclosure));
   }
 
   /**
@@ -340,13 +340,13 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ReferToRecipient> getReferToRecipient()
+  public EList<RefRecipient> getRefRecipient()
   {
-    if (referToRecipient == null)
+    if (refRecipient == null)
     {
-      referToRecipient = new EObjectContainmentEList<ReferToRecipient>(ReferToRecipient.class, this, RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENT);
+      refRecipient = new EObjectContainmentEList<RefRecipient>(RefRecipient.class, this, RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT);
     }
-    return referToRecipient;
+    return refRecipient;
   }
 
   /**
@@ -354,13 +354,13 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ReferToRecipientSource> getReferToRecipientsource()
+  public EList<RefRecipientSource> getRefRecipientSource()
   {
-    if (referToRecipientsource == null)
+    if (refRecipientSource == null)
     {
-      referToRecipientsource = new EObjectContainmentEList<ReferToRecipientSource>(ReferToRecipientSource.class, this, RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENTSOURCE);
+      refRecipientSource = new EObjectContainmentEList<RefRecipientSource>(RefRecipientSource.class, this, RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_SOURCE);
     }
-    return referToRecipientsource;
+    return refRecipientSource;
   }
 
   /**
@@ -368,13 +368,13 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ReferToRecipientTarget> getReferToRecipienttarget()
+  public EList<RefRecipientTarget> getRefRecipientTarget()
   {
-    if (referToRecipienttarget == null)
+    if (refRecipientTarget == null)
     {
-      referToRecipienttarget = new EObjectContainmentEList<ReferToRecipientTarget>(ReferToRecipientTarget.class, this, RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENTTARGET);
+      refRecipientTarget = new EObjectContainmentEList<RefRecipientTarget>(RefRecipientTarget.class, this, RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_TARGET);
     }
-    return referToRecipienttarget;
+    return refRecipientTarget;
   }
 
   /**
@@ -382,13 +382,13 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<RefPrivateData> getRefprivatedata()
+  public EList<RefPrivateData> getRefPrivateData()
   {
-    if (refprivatedata == null)
+    if (refPrivateData == null)
     {
-      refprivatedata = new EObjectContainmentEList<RefPrivateData>(RefPrivateData.class, this, RSLIL4PrivacyPackage.DISCLOSURE__REFPRIVATEDATA);
+      refPrivateData = new EObjectContainmentEList<RefPrivateData>(RefPrivateData.class, this, RSLIL4PrivacyPackage.DISCLOSURE__REF_PRIVATE_DATA);
     }
-    return refprivatedata;
+    return refPrivateData;
   }
 
   /**
@@ -396,13 +396,13 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ReferToService> getRefertoservice()
+  public EList<RefService> getRefService()
   {
-    if (refertoservice == null)
+    if (refService == null)
     {
-      refertoservice = new EObjectContainmentEList<ReferToService>(ReferToService.class, this, RSLIL4PrivacyPackage.DISCLOSURE__REFERTOSERVICE);
+      refService = new EObjectContainmentEList<RefService>(RefService.class, this, RSLIL4PrivacyPackage.DISCLOSURE__REF_SERVICE);
     }
-    return refertoservice;
+    return refService;
   }
 
   /**
@@ -410,13 +410,13 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<RefertoEnforcement> getRefertoEnforcement()
+  public EList<RefEnforcement> getRefEnforcement()
   {
-    if (refertoEnforcement == null)
+    if (refEnforcement == null)
     {
-      refertoEnforcement = new EObjectContainmentEList<RefertoEnforcement>(RefertoEnforcement.class, this, RSLIL4PrivacyPackage.DISCLOSURE__REFERTO_ENFORCEMENT);
+      refEnforcement = new EObjectContainmentEList<RefEnforcement>(RefEnforcement.class, this, RSLIL4PrivacyPackage.DISCLOSURE__REF_ENFORCEMENT);
     }
-    return refertoEnforcement;
+    return refEnforcement;
   }
 
   /**
@@ -424,9 +424,9 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getModalitykind()
+  public String getModality()
   {
-    return modalitykind;
+    return modality;
   }
 
   /**
@@ -434,12 +434,12 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setModalitykind(String newModalitykind)
+  public void setModality(String newModality)
   {
-    String oldModalitykind = modalitykind;
-    modalitykind = newModalitykind;
+    String oldModality = modality;
+    modality = newModality;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.DISCLOSURE__MODALITYKIND, oldModalitykind, modalitykind));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.DISCLOSURE__MODALITY, oldModality, modality));
   }
 
   /**
@@ -452,18 +452,18 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENT:
-        return ((InternalEList<?>)getReferToRecipient()).basicRemove(otherEnd, msgs);
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENTSOURCE:
-        return ((InternalEList<?>)getReferToRecipientsource()).basicRemove(otherEnd, msgs);
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENTTARGET:
-        return ((InternalEList<?>)getReferToRecipienttarget()).basicRemove(otherEnd, msgs);
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFPRIVATEDATA:
-        return ((InternalEList<?>)getRefprivatedata()).basicRemove(otherEnd, msgs);
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFERTOSERVICE:
-        return ((InternalEList<?>)getRefertoservice()).basicRemove(otherEnd, msgs);
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFERTO_ENFORCEMENT:
-        return ((InternalEList<?>)getRefertoEnforcement()).basicRemove(otherEnd, msgs);
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT:
+        return ((InternalEList<?>)getRefRecipient()).basicRemove(otherEnd, msgs);
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_SOURCE:
+        return ((InternalEList<?>)getRefRecipientSource()).basicRemove(otherEnd, msgs);
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_TARGET:
+        return ((InternalEList<?>)getRefRecipientTarget()).basicRemove(otherEnd, msgs);
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_PRIVATE_DATA:
+        return ((InternalEList<?>)getRefPrivateData()).basicRemove(otherEnd, msgs);
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_SERVICE:
+        return ((InternalEList<?>)getRefService()).basicRemove(otherEnd, msgs);
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_ENFORCEMENT:
+        return ((InternalEList<?>)getRefEnforcement()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -484,23 +484,23 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
         return getDescription();
       case RSLIL4PrivacyPackage.DISCLOSURE__CONDITION:
         return getCondition();
-      case RSLIL4PrivacyPackage.DISCLOSURE__PARTOF:
-        if (resolve) return getPartof();
-        return basicGetPartof();
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENT:
-        return getReferToRecipient();
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENTSOURCE:
-        return getReferToRecipientsource();
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENTTARGET:
-        return getReferToRecipienttarget();
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFPRIVATEDATA:
-        return getRefprivatedata();
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFERTOSERVICE:
-        return getRefertoservice();
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFERTO_ENFORCEMENT:
-        return getRefertoEnforcement();
-      case RSLIL4PrivacyPackage.DISCLOSURE__MODALITYKIND:
-        return getModalitykind();
+      case RSLIL4PrivacyPackage.DISCLOSURE__PART_DISCLOSURE:
+        if (resolve) return getPartDisclosure();
+        return basicGetPartDisclosure();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT:
+        return getRefRecipient();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_SOURCE:
+        return getRefRecipientSource();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_TARGET:
+        return getRefRecipientTarget();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_PRIVATE_DATA:
+        return getRefPrivateData();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_SERVICE:
+        return getRefService();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_ENFORCEMENT:
+        return getRefEnforcement();
+      case RSLIL4PrivacyPackage.DISCLOSURE__MODALITY:
+        return getModality();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -525,35 +525,35 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
       case RSLIL4PrivacyPackage.DISCLOSURE__CONDITION:
         setCondition((String)newValue);
         return;
-      case RSLIL4PrivacyPackage.DISCLOSURE__PARTOF:
-        setPartof((Disclosure)newValue);
+      case RSLIL4PrivacyPackage.DISCLOSURE__PART_DISCLOSURE:
+        setPartDisclosure((Disclosure)newValue);
         return;
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENT:
-        getReferToRecipient().clear();
-        getReferToRecipient().addAll((Collection<? extends ReferToRecipient>)newValue);
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT:
+        getRefRecipient().clear();
+        getRefRecipient().addAll((Collection<? extends RefRecipient>)newValue);
         return;
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENTSOURCE:
-        getReferToRecipientsource().clear();
-        getReferToRecipientsource().addAll((Collection<? extends ReferToRecipientSource>)newValue);
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_SOURCE:
+        getRefRecipientSource().clear();
+        getRefRecipientSource().addAll((Collection<? extends RefRecipientSource>)newValue);
         return;
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENTTARGET:
-        getReferToRecipienttarget().clear();
-        getReferToRecipienttarget().addAll((Collection<? extends ReferToRecipientTarget>)newValue);
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_TARGET:
+        getRefRecipientTarget().clear();
+        getRefRecipientTarget().addAll((Collection<? extends RefRecipientTarget>)newValue);
         return;
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFPRIVATEDATA:
-        getRefprivatedata().clear();
-        getRefprivatedata().addAll((Collection<? extends RefPrivateData>)newValue);
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_PRIVATE_DATA:
+        getRefPrivateData().clear();
+        getRefPrivateData().addAll((Collection<? extends RefPrivateData>)newValue);
         return;
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFERTOSERVICE:
-        getRefertoservice().clear();
-        getRefertoservice().addAll((Collection<? extends ReferToService>)newValue);
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_SERVICE:
+        getRefService().clear();
+        getRefService().addAll((Collection<? extends RefService>)newValue);
         return;
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFERTO_ENFORCEMENT:
-        getRefertoEnforcement().clear();
-        getRefertoEnforcement().addAll((Collection<? extends RefertoEnforcement>)newValue);
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_ENFORCEMENT:
+        getRefEnforcement().clear();
+        getRefEnforcement().addAll((Collection<? extends RefEnforcement>)newValue);
         return;
-      case RSLIL4PrivacyPackage.DISCLOSURE__MODALITYKIND:
-        setModalitykind((String)newValue);
+      case RSLIL4PrivacyPackage.DISCLOSURE__MODALITY:
+        setModality((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -578,29 +578,29 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
       case RSLIL4PrivacyPackage.DISCLOSURE__CONDITION:
         setCondition(CONDITION_EDEFAULT);
         return;
-      case RSLIL4PrivacyPackage.DISCLOSURE__PARTOF:
-        setPartof((Disclosure)null);
+      case RSLIL4PrivacyPackage.DISCLOSURE__PART_DISCLOSURE:
+        setPartDisclosure((Disclosure)null);
         return;
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENT:
-        getReferToRecipient().clear();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT:
+        getRefRecipient().clear();
         return;
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENTSOURCE:
-        getReferToRecipientsource().clear();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_SOURCE:
+        getRefRecipientSource().clear();
         return;
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENTTARGET:
-        getReferToRecipienttarget().clear();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_TARGET:
+        getRefRecipientTarget().clear();
         return;
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFPRIVATEDATA:
-        getRefprivatedata().clear();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_PRIVATE_DATA:
+        getRefPrivateData().clear();
         return;
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFERTOSERVICE:
-        getRefertoservice().clear();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_SERVICE:
+        getRefService().clear();
         return;
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFERTO_ENFORCEMENT:
-        getRefertoEnforcement().clear();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_ENFORCEMENT:
+        getRefEnforcement().clear();
         return;
-      case RSLIL4PrivacyPackage.DISCLOSURE__MODALITYKIND:
-        setModalitykind(MODALITYKIND_EDEFAULT);
+      case RSLIL4PrivacyPackage.DISCLOSURE__MODALITY:
+        setModality(MODALITY_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -622,22 +622,22 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
       case RSLIL4PrivacyPackage.DISCLOSURE__CONDITION:
         return CONDITION_EDEFAULT == null ? condition != null : !CONDITION_EDEFAULT.equals(condition);
-      case RSLIL4PrivacyPackage.DISCLOSURE__PARTOF:
-        return partof != null;
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENT:
-        return referToRecipient != null && !referToRecipient.isEmpty();
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENTSOURCE:
-        return referToRecipientsource != null && !referToRecipientsource.isEmpty();
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFER_TO_RECIPIENTTARGET:
-        return referToRecipienttarget != null && !referToRecipienttarget.isEmpty();
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFPRIVATEDATA:
-        return refprivatedata != null && !refprivatedata.isEmpty();
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFERTOSERVICE:
-        return refertoservice != null && !refertoservice.isEmpty();
-      case RSLIL4PrivacyPackage.DISCLOSURE__REFERTO_ENFORCEMENT:
-        return refertoEnforcement != null && !refertoEnforcement.isEmpty();
-      case RSLIL4PrivacyPackage.DISCLOSURE__MODALITYKIND:
-        return MODALITYKIND_EDEFAULT == null ? modalitykind != null : !MODALITYKIND_EDEFAULT.equals(modalitykind);
+      case RSLIL4PrivacyPackage.DISCLOSURE__PART_DISCLOSURE:
+        return partDisclosure != null;
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT:
+        return refRecipient != null && !refRecipient.isEmpty();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_SOURCE:
+        return refRecipientSource != null && !refRecipientSource.isEmpty();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_TARGET:
+        return refRecipientTarget != null && !refRecipientTarget.isEmpty();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_PRIVATE_DATA:
+        return refPrivateData != null && !refPrivateData.isEmpty();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_SERVICE:
+        return refService != null && !refService.isEmpty();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_ENFORCEMENT:
+        return refEnforcement != null && !refEnforcement.isEmpty();
+      case RSLIL4PrivacyPackage.DISCLOSURE__MODALITY:
+        return MODALITY_EDEFAULT == null ? modality != null : !MODALITY_EDEFAULT.equals(modality);
     }
     return super.eIsSet(featureID);
   }
@@ -659,8 +659,8 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
     result.append(description);
     result.append(", condition: ");
     result.append(condition);
-    result.append(", modalitykind: ");
-    result.append(modalitykind);
+    result.append(", modality: ");
+    result.append(modality);
     result.append(')');
     return result.toString();
   }

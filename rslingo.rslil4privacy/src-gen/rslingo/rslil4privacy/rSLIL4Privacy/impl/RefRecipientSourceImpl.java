@@ -10,41 +10,41 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import rslingo.rslil4privacy.rSLIL4Privacy.Partof;
 import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
 import rslingo.rslil4privacy.rSLIL4Privacy.Recipient;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientSource;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Partof</b></em>'.
+ * An implementation of the model object '<em><b>Ref Recipient Source</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.PartofImpl#getPartof <em>Partof</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientSourceImpl#getRefRecipientSource <em>Ref Recipient Source</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PartofImpl extends MinimalEObjectImpl.Container implements Partof
+public class RefRecipientSourceImpl extends MinimalEObjectImpl.Container implements RefRecipientSource
 {
   /**
-   * The cached value of the '{@link #getPartof() <em>Partof</em>}' reference.
+   * The cached value of the '{@link #getRefRecipientSource() <em>Ref Recipient Source</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPartof()
+   * @see #getRefRecipientSource()
    * @generated
    * @ordered
    */
-  protected Recipient partof;
+  protected Recipient refRecipientSource;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected PartofImpl()
+  protected RefRecipientSourceImpl()
   {
     super();
   }
@@ -57,7 +57,7 @@ public class PartofImpl extends MinimalEObjectImpl.Container implements Partof
   @Override
   protected EClass eStaticClass()
   {
-    return RSLIL4PrivacyPackage.Literals.PARTOF;
+    return RSLIL4PrivacyPackage.Literals.REF_RECIPIENT_SOURCE;
   }
 
   /**
@@ -65,19 +65,19 @@ public class PartofImpl extends MinimalEObjectImpl.Container implements Partof
    * <!-- end-user-doc -->
    * @generated
    */
-  public Recipient getPartof()
+  public Recipient getRefRecipientSource()
   {
-    if (partof != null && partof.eIsProxy())
+    if (refRecipientSource != null && refRecipientSource.eIsProxy())
     {
-      InternalEObject oldPartof = (InternalEObject)partof;
-      partof = (Recipient)eResolveProxy(oldPartof);
-      if (partof != oldPartof)
+      InternalEObject oldRefRecipientSource = (InternalEObject)refRecipientSource;
+      refRecipientSource = (Recipient)eResolveProxy(oldRefRecipientSource);
+      if (refRecipientSource != oldRefRecipientSource)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSLIL4PrivacyPackage.PARTOF__PARTOF, oldPartof, partof));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, RSLIL4PrivacyPackage.REF_RECIPIENT_SOURCE__REF_RECIPIENT_SOURCE, oldRefRecipientSource, refRecipientSource));
       }
     }
-    return partof;
+    return refRecipientSource;
   }
 
   /**
@@ -85,9 +85,9 @@ public class PartofImpl extends MinimalEObjectImpl.Container implements Partof
    * <!-- end-user-doc -->
    * @generated
    */
-  public Recipient basicGetPartof()
+  public Recipient basicGetRefRecipientSource()
   {
-    return partof;
+    return refRecipientSource;
   }
 
   /**
@@ -95,12 +95,12 @@ public class PartofImpl extends MinimalEObjectImpl.Container implements Partof
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPartof(Recipient newPartof)
+  public void setRefRecipientSource(Recipient newRefRecipientSource)
   {
-    Recipient oldPartof = partof;
-    partof = newPartof;
+    Recipient oldRefRecipientSource = refRecipientSource;
+    refRecipientSource = newRefRecipientSource;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.PARTOF__PARTOF, oldPartof, partof));
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.REF_RECIPIENT_SOURCE__REF_RECIPIENT_SOURCE, oldRefRecipientSource, refRecipientSource));
   }
 
   /**
@@ -113,9 +113,9 @@ public class PartofImpl extends MinimalEObjectImpl.Container implements Partof
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.PARTOF__PARTOF:
-        if (resolve) return getPartof();
-        return basicGetPartof();
+      case RSLIL4PrivacyPackage.REF_RECIPIENT_SOURCE__REF_RECIPIENT_SOURCE:
+        if (resolve) return getRefRecipientSource();
+        return basicGetRefRecipientSource();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -130,8 +130,8 @@ public class PartofImpl extends MinimalEObjectImpl.Container implements Partof
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.PARTOF__PARTOF:
-        setPartof((Recipient)newValue);
+      case RSLIL4PrivacyPackage.REF_RECIPIENT_SOURCE__REF_RECIPIENT_SOURCE:
+        setRefRecipientSource((Recipient)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -147,8 +147,8 @@ public class PartofImpl extends MinimalEObjectImpl.Container implements Partof
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.PARTOF__PARTOF:
-        setPartof((Recipient)null);
+      case RSLIL4PrivacyPackage.REF_RECIPIENT_SOURCE__REF_RECIPIENT_SOURCE:
+        setRefRecipientSource((Recipient)null);
         return;
     }
     super.eUnset(featureID);
@@ -164,10 +164,10 @@ public class PartofImpl extends MinimalEObjectImpl.Container implements Partof
   {
     switch (featureID)
     {
-      case RSLIL4PrivacyPackage.PARTOF__PARTOF:
-        return partof != null;
+      case RSLIL4PrivacyPackage.REF_RECIPIENT_SOURCE__REF_RECIPIENT_SOURCE:
+        return refRecipientSource != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //PartofImpl
+} //RefRecipientSourceImpl

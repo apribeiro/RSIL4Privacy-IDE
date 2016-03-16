@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getName <em>Name</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getPrivatedata <em>Privatedata</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getPrivateDataKind <em>Private Data Kind</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getDescription <em>Description</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getType <em>Type</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getAttribute <em>Attribute</em>}</li>
  * </ul>
  *
@@ -54,56 +54,56 @@ public interface PrivateData extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Privatedata</b></em>' attribute.
+   * Returns the value of the '<em><b>Description</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Privatedata</em>' attribute isn't clear,
+   * If the meaning of the '<em>Description</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Privatedata</em>' attribute.
-   * @see #setPrivatedata(String)
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getPrivateData_Privatedata()
+   * @return the value of the '<em>Description</em>' attribute.
+   * @see #setDescription(String)
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getPrivateData_Description()
    * @model
    * @generated
    */
-  String getPrivatedata();
+  String getDescription();
 
   /**
-   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getPrivatedata <em>Privatedata</em>}' attribute.
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getDescription <em>Description</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Privatedata</em>' attribute.
-   * @see #getPrivatedata()
+   * @param value the new value of the '<em>Description</em>' attribute.
+   * @see #getDescription()
    * @generated
    */
-  void setPrivatedata(String value);
+  void setDescription(String value);
 
   /**
-   * Returns the value of the '<em><b>Private Data Kind</b></em>' attribute.
+   * Returns the value of the '<em><b>Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Private Data Kind</em>' attribute isn't clear,
+   * If the meaning of the '<em>Type</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Private Data Kind</em>' attribute.
-   * @see #setPrivateDataKind(String)
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getPrivateData_PrivateDataKind()
+   * @return the value of the '<em>Type</em>' attribute.
+   * @see #setType(String)
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getPrivateData_Type()
    * @model
    * @generated
    */
-  String getPrivateDataKind();
+  String getType();
 
   /**
-   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getPrivateDataKind <em>Private Data Kind</em>}' attribute.
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getType <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Private Data Kind</em>' attribute.
-   * @see #getPrivateDataKind()
+   * @param value the new value of the '<em>Type</em>' attribute.
+   * @see #getType()
    * @generated
    */
-  void setPrivateDataKind(String value);
+  void setType(String value);
 
   /**
    * Returns the value of the '<em><b>Attribute</b></em>' containment reference list.

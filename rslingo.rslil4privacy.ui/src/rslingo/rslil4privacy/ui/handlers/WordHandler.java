@@ -30,29 +30,30 @@ import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
+
+import com.google.common.collect.Lists;
+import com.google.inject.Injector;
+
 import rslingo.rslil4privacy.RSLIL4PrivacyStandaloneSetup;
 import rslingo.rslil4privacy.rSLIL4Privacy.Attribute;
 import rslingo.rslil4privacy.rSLIL4Privacy.Collection;
 import rslingo.rslil4privacy.rSLIL4Privacy.Disclosure;
 import rslingo.rslil4privacy.rSLIL4Privacy.Enforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.Informative;
-import rslingo.rslil4privacy.rSLIL4Privacy.Partof;
+import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
 import rslingo.rslil4privacy.rSLIL4Privacy.PrivateData;
 import rslingo.rslil4privacy.rSLIL4Privacy.Recipient;
+import rslingo.rslil4privacy.rSLIL4Privacy.RecipientPart;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToRecipient;
-import rslingo.rslil4privacy.rSLIL4Privacy.ReferToService;
-import rslingo.rslil4privacy.rSLIL4Privacy.RefertoEnforcement;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefRecipient;
+import rslingo.rslil4privacy.rSLIL4Privacy.RefService;
 import rslingo.rslil4privacy.rSLIL4Privacy.Retention;
 import rslingo.rslil4privacy.rSLIL4Privacy.Service;
-import rslingo.rslil4privacy.rSLIL4Privacy.ServicePartof;
+import rslingo.rslil4privacy.rSLIL4Privacy.ServicePart;
 import rslingo.rslil4privacy.rSLIL4Privacy.Usage;
-import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
 import rslingo.rslil4privacy.ui.windows.MenuCommand;
 import rslingo.rslil4privacy.ui.windows.MenuCommandWindow;
-
-import com.google.common.collect.Lists;
-import com.google.inject.Injector;
 
 public class WordHandler extends AbstractHandler {
 
@@ -169,20 +170,20 @@ public class WordHandler extends AbstractHandler {
 			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@PDName");
 			XWPFParagraph nName = document.insertNewParagraph(cursor);
 			DocumentHelper.cloneParagraph(nName, tName);
-			DocumentHelper.replaceText(nName, "@PDName", data.getPrivatedata()
+			DocumentHelper.replaceText(nName, "@PDName", data.getDescription()
 					+ " (" + data.getName() + ")");
 
 			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@PDType");
 			cursor = tEnd.getCTP().newCursor();
 			XWPFParagraph nType = document.insertNewParagraph(cursor);
 			DocumentHelper.cloneParagraph(nType, tType);
-			DocumentHelper.replaceText(nType, "@PDType", data.getPrivateDataKind());
+			DocumentHelper.replaceText(nType, "@PDType", data.getType());
 
 			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@PDDescription");
 			cursor = tEnd.getCTP().newCursor();
 			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
 			DocumentHelper.cloneParagraph(nDesc, tDesc);
-			DocumentHelper.replaceText(nDesc, "@PDDescription", data.getPrivatedata());
+			DocumentHelper.replaceText(nDesc, "@PDDescription", data.getDescription());
 
 			// Copy Attributes Section
 			XWPFParagraph tAttrSection = DocumentHelper.getParagraph(document, "@PDAttrName");
@@ -200,7 +201,7 @@ public class WordHandler extends AbstractHandler {
 				nAttr = document.insertNewParagraph(cursor);
 				DocumentHelper.cloneParagraph(nAttr, tAttr);
 				DocumentHelper.replaceText(nAttr, "@PDAttrName", attr.getName());
-				DocumentHelper.replaceText(nAttr, "@PDAttrDescription", attr.getAttributeName());
+				DocumentHelper.replaceText(nAttr, "@PDAttrDescription", attr.getDescription());
 			}
 
 			// Add a newline to the last paragraph
@@ -225,9 +226,9 @@ public class WordHandler extends AbstractHandler {
 		HashMap<Service, ArrayList<Service>> servicesMap = new HashMap<Service, ArrayList<Service>>();
 		
 		for (Service service : Lists.reverse(policy.getService())) {
-			if (service.getServicepartof().size() > 0) {
-				for (ServicePartof sub : service.getServicepartof()) {
-					Service subService = sub.getRefertoservice();
+			if (service.getServicePart().size() > 0) {
+				for (ServicePart sub : service.getServicePart()) {
+					Service subService = sub.getServicePart();
 					
 					if (!servicesMap.containsKey(subService)) {
 						servicesMap.put(subService, new ArrayList<Service>());
@@ -254,7 +255,7 @@ public class WordHandler extends AbstractHandler {
 			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@SName");
 			XWPFParagraph nName = document.insertNewParagraph(cursor);
 			DocumentHelper.cloneParagraph(nName, tName);
-			DocumentHelper.replaceText(nName, "@SName", service.getServicename()
+			DocumentHelper.replaceText(nName, "@SName", service.getServiceName()
 					+ " (" + service.getName() + ")");
 
 			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@SDescription");
@@ -279,7 +280,7 @@ public class WordHandler extends AbstractHandler {
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nSSName = document.insertNewParagraph(cursor);
 					DocumentHelper.cloneParagraph(nSSName, tSSName);
-					DocumentHelper.replaceText(nSSName, "@SSName", subService.getServicename()
+					DocumentHelper.replaceText(nSSName, "@SSName", subService.getServiceName()
 							+ " (" + subService.getName() + ")");
 					
 					XWPFParagraph tSSDescription = DocumentHelper.getParagraph(document, "@SSDescription");
@@ -300,13 +301,13 @@ public class WordHandler extends AbstractHandler {
 			
 			XWPFParagraph nSPDName = null;
 
-			for (RefPrivateData refPD : service.getRefprivatedata()) {
-				PrivateData data = refPD.getRefpr();
+			for (RefPrivateData refPD : service.getRefPrivateData()) {
+				PrivateData data = refPD.getRefPrivateData();
 				XWPFParagraph tSPDName = DocumentHelper.getParagraph(document, "@SPDName");
 				cursor = tEnd.getCTP().newCursor();
 				nSPDName = document.insertNewParagraph(cursor);
 				DocumentHelper.cloneParagraph(nSPDName, tSPDName);
-				DocumentHelper.replaceText(nSPDName, "@SPDName", data.getPrivatedata()
+				DocumentHelper.replaceText(nSPDName, "@SPDName", data.getDescription()
 						+ " (" + data.getName() + ")");
 			}
 
@@ -332,9 +333,9 @@ public class WordHandler extends AbstractHandler {
 		HashMap<Recipient, ArrayList<Recipient>> recipientsMap = new HashMap<Recipient, ArrayList<Recipient>>();
 		
 		for (Recipient recipient : Lists.reverse(policy.getRecipient())) {
-			if (recipient.getPartof().size() > 0) {
-				for (Partof sub : recipient.getPartof()) {
-					Recipient subRecipient = sub.getPartof();
+			if (recipient.getRecipientPart().size() > 0) {
+				for (RecipientPart sub : recipient.getRecipientPart()) {
+					Recipient subRecipient = sub.getRecipientPart();
 					
 					if (!recipientsMap.containsKey(subRecipient)) {
 						recipientsMap.put(subRecipient, new ArrayList<Recipient>());
@@ -360,7 +361,7 @@ public class WordHandler extends AbstractHandler {
 			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@RName");
 			XWPFParagraph nName = document.insertNewParagraph(cursor);
 			DocumentHelper.cloneParagraph(nName, tName);
-			DocumentHelper.replaceText(nName, "@RName", recipient.getRecipientname()
+			DocumentHelper.replaceText(nName, "@RName", recipient.getRecipientName()
 					+ " (" + recipient.getName() + ")");
 
 			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@RDescription");
@@ -373,13 +374,13 @@ public class WordHandler extends AbstractHandler {
 			cursor = tEnd.getCTP().newCursor();
 			XWPFParagraph nScope = document.insertNewParagraph(cursor);
 			DocumentHelper.cloneParagraph(nScope, tScope);
-			DocumentHelper.replaceText(nScope, "@RScope", recipient.getRecipientScopeKind());
+			DocumentHelper.replaceText(nScope, "@RScope", recipient.getScope());
 			
 			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@RType");
 			cursor = tEnd.getCTP().newCursor();
 			XWPFParagraph nType = document.insertNewParagraph(cursor);
 			DocumentHelper.cloneParagraph(nType, tType);
-			DocumentHelper.replaceText(nType, "@RType", recipient.getRecipientTypeKind());
+			DocumentHelper.replaceText(nType, "@RType", recipient.getType());
 
 			List<Recipient> subRecipients = Lists.reverse(recipientsMap.get(recipient));
 			
@@ -399,7 +400,7 @@ public class WordHandler extends AbstractHandler {
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nSRName = document.insertNewParagraph(cursor);
 					DocumentHelper.cloneParagraph(nSRName, tSRName);
-					DocumentHelper.replaceText(nSRName, "@SRName", subRecipient.getRecipientname()
+					DocumentHelper.replaceText(nSRName, "@SRName", subRecipient.getRecipientName()
 							+ " (" + subRecipient.getName() + ")");
 					
 					XWPFParagraph tSRDescription = DocumentHelper.getParagraph(document, "@SRDescription");
@@ -448,13 +449,13 @@ public class WordHandler extends AbstractHandler {
 			cursor = tEnd.getCTP().newCursor();
 			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
 			DocumentHelper.cloneParagraph(nDesc, tDesc);
-			DocumentHelper.replaceText(nDesc, "@EDescription", enforcement.getEnforcementDescription());
+			DocumentHelper.replaceText(nDesc, "@EDescription", enforcement.getDescription());
 			
 			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@EType");
 			cursor = tEnd.getCTP().newCursor();
 			XWPFParagraph nType = document.insertNewParagraph(cursor);
 			DocumentHelper.cloneParagraph(nType, tType);
-			DocumentHelper.replaceText(nType, "@EType", enforcement.getEnforcementKind());
+			DocumentHelper.replaceText(nType, "@EType", enforcement.getType());
 
 			// Add a newline to the last paragraph
 			DocumentHelper.addLineBreakToParagraph(nType);
@@ -520,12 +521,12 @@ public class WordHandler extends AbstractHandler {
 			cursor = tEnd.getCTP().newCursor();
 			XWPFParagraph nModality = document.insertNewParagraph(cursor);
 			DocumentHelper.cloneParagraph(nModality, tModality);
-			DocumentHelper.replaceText(nModality, "@StModality", informative.getModalitykind());
+			DocumentHelper.replaceText(nModality, "@StModality", informative.getModality());
 			
 			XWPFParagraph last = nModality;
 			
 			// Add Private Data Section
-			EList<RefPrivateData> refPrivateData = informative.getRefprivatedata();
+			EList<RefPrivateData> refPrivateData = informative.getRefPrivateData();
 			
 			if (refPrivateData.size() > 0) {
 				XWPFParagraph tPDSection = DocumentHelper.getParagraph(document, "@StPDName");
@@ -536,19 +537,19 @@ public class WordHandler extends AbstractHandler {
 				DocumentHelper.cloneParagraph(nPDSection, tPDSection);
 
 				for (RefPrivateData refPD : refPrivateData) {
-					PrivateData data = refPD.getRefpr();
+					PrivateData data = refPD.getRefPrivateData();
 					XWPFParagraph tStPDName = DocumentHelper.getParagraph(document, "@StPDName");
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nStPDName = document.insertNewParagraph(cursor);
 					DocumentHelper.cloneParagraph(nStPDName, tStPDName);
-					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getPrivatedata()
+					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getDescription()
 							+ " (" + data.getName() + ")");
 					last = nStPDName;
 				}
 			}
 			
 			// Add Services Section
-			EList<ReferToService> referToService = informative.getRefertoservice();
+			EList<RefService> referToService = informative.getRefService();
 			
 			if (referToService.size() > 0) {
 				XWPFParagraph tSSection = DocumentHelper.getParagraph(document, "@StSName");
@@ -558,20 +559,20 @@ public class WordHandler extends AbstractHandler {
 				XWPFParagraph nSSection = document.insertNewParagraph(cursor);
 				DocumentHelper.cloneParagraph(nSSection, tSSection);
 
-				for (ReferToService refService : referToService) {
-					Service service = refService.getRefertose();
+				for (RefService refService : referToService) {
+					Service service = refService.getRefService();
 					XWPFParagraph tStSName = DocumentHelper.getParagraph(document, "@StSName");
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nStSName = document.insertNewParagraph(cursor);
 					DocumentHelper.cloneParagraph(nStSName, tStSName);
-					DocumentHelper.replaceText(nStSName, "@StSName", service.getServicename()
+					DocumentHelper.replaceText(nStSName, "@StSName", service.getServiceName()
 							+ " (" + service.getName() + ")");
 					last = nStSName;
 				}
 			}
 			
 			// Add Enforcements Section
-			EList<RefertoEnforcement> referToEnf = informative.getRefertoEnforcement();
+			EList<RefEnforcement> referToEnf = informative.getRefEnforcement();
 			
 			if (referToEnf.size() > 0) {
 				XWPFParagraph tESection = DocumentHelper.getParagraph(document, "@StEName");
@@ -581,8 +582,8 @@ public class WordHandler extends AbstractHandler {
 				XWPFParagraph nESection = document.insertNewParagraph(cursor);
 				DocumentHelper.cloneParagraph(nESection, tESection);
 
-				for (RefertoEnforcement refEnf : referToEnf) {
-					Enforcement enforcement = refEnf.getRefst();
+				for (RefEnforcement refEnf : referToEnf) {
+					Enforcement enforcement = refEnf.getRefEnforcement();
 					XWPFParagraph tStEName = DocumentHelper.getParagraph(document, "@StEName");
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nStEName = document.insertNewParagraph(cursor);
@@ -627,12 +628,12 @@ public class WordHandler extends AbstractHandler {
 			cursor = tEnd.getCTP().newCursor();
 			XWPFParagraph nModality = document.insertNewParagraph(cursor);
 			DocumentHelper.cloneParagraph(nModality, tModality);
-			DocumentHelper.replaceText(nModality, "@StModality", usage.getModalitykind());
+			DocumentHelper.replaceText(nModality, "@StModality", usage.getModality());
 			
 			XWPFParagraph last = nModality;
 			
 			// Add Private Data Section
-			EList<RefPrivateData> refPrivateData = usage.getRefprivatedata();
+			EList<RefPrivateData> refPrivateData = usage.getRefPrivateData();
 			
 			if (refPrivateData.size() > 0) {
 				XWPFParagraph tPDSection = DocumentHelper.getParagraph(document, "@StPDName");
@@ -643,19 +644,19 @@ public class WordHandler extends AbstractHandler {
 				DocumentHelper.cloneParagraph(nPDSection, tPDSection);
 
 				for (RefPrivateData refPD : refPrivateData) {
-					PrivateData data = refPD.getRefpr();
+					PrivateData data = refPD.getRefPrivateData();
 					XWPFParagraph tStPDName = DocumentHelper.getParagraph(document, "@StPDName");
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nStPDName = document.insertNewParagraph(cursor);
 					DocumentHelper.cloneParagraph(nStPDName, tStPDName);
-					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getPrivatedata()
+					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getDescription()
 							+ " (" + data.getName() + ")");
 					last = nStPDName;
 				}
 			}
 			
 			// Add Services Section
-			EList<ReferToService> referToService = usage.getRefertoservice();
+			EList<RefService> referToService = usage.getRefService();
 			
 			if (referToService.size() > 0) {
 				XWPFParagraph tSSection = DocumentHelper.getParagraph(document, "@StSName");
@@ -665,20 +666,20 @@ public class WordHandler extends AbstractHandler {
 				XWPFParagraph nSSection = document.insertNewParagraph(cursor);
 				DocumentHelper.cloneParagraph(nSSection, tSSection);
 
-				for (ReferToService refService : referToService) {
-					Service service = refService.getRefertose();
+				for (RefService refService : referToService) {
+					Service service = refService.getRefService();
 					XWPFParagraph tStSName = DocumentHelper.getParagraph(document, "@StSName");
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nStSName = document.insertNewParagraph(cursor);
 					DocumentHelper.cloneParagraph(nStSName, tStSName);
-					DocumentHelper.replaceText(nStSName, "@StSName", service.getServicename()
+					DocumentHelper.replaceText(nStSName, "@StSName", service.getServiceName()
 							+ " (" + service.getName() + ")");
 					last = nStSName;
 				}
 			}
 			
 			// Add Enforcements Section
-			EList<RefertoEnforcement> referToEnf = usage.getRefertoEnforcement();
+			EList<RefEnforcement> referToEnf = usage.getRefEnforcement();
 			
 			if (referToEnf.size() > 0) {
 				XWPFParagraph tESection = DocumentHelper.getParagraph(document, "@StEName");
@@ -688,8 +689,8 @@ public class WordHandler extends AbstractHandler {
 				XWPFParagraph nESection = document.insertNewParagraph(cursor);
 				DocumentHelper.cloneParagraph(nESection, tESection);
 
-				for (RefertoEnforcement refEnf : referToEnf) {
-					Enforcement enforcement = refEnf.getRefst();
+				for (RefEnforcement refEnf : referToEnf) {
+					Enforcement enforcement = refEnf.getRefEnforcement();
 					XWPFParagraph tStEName = DocumentHelper.getParagraph(document, "@StEName");
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nStEName = document.insertNewParagraph(cursor);
@@ -734,10 +735,10 @@ public class WordHandler extends AbstractHandler {
 			cursor = tEnd.getCTP().newCursor();
 			XWPFParagraph nModality = document.insertNewParagraph(cursor);
 			DocumentHelper.cloneParagraph(nModality, tModality);
-			DocumentHelper.replaceText(nModality, "@StModality", retention.getModalitykind());
+			DocumentHelper.replaceText(nModality, "@StModality", retention.getModality());
 			
 			// Add Private Data Section
-			EList<RefPrivateData> refPrivateData = retention.getRefprivatedata();
+			EList<RefPrivateData> refPrivateData = retention.getRefPrivateData();
 			
 			if (refPrivateData.size() > 0) {
 				XWPFParagraph tPDSection = DocumentHelper.getParagraph(document, "@StPDName");
@@ -748,18 +749,18 @@ public class WordHandler extends AbstractHandler {
 				DocumentHelper.cloneParagraph(nPDSection, tPDSection);
 
 				for (RefPrivateData refPD : refPrivateData) {
-					PrivateData data = refPD.getRefpr();
+					PrivateData data = refPD.getRefPrivateData();
 					XWPFParagraph tStPDName = DocumentHelper.getParagraph(document, "@StPDName");
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nStPDName = document.insertNewParagraph(cursor);
 					DocumentHelper.cloneParagraph(nStPDName, tStPDName);
-					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getPrivatedata()
+					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getDescription()
 							+ " (" + data.getName() + ")");
 				}
 			}
 			
 			// Add Services Section
-			EList<ReferToService> referToService = retention.getRefertoservice();
+			EList<RefService> referToService = retention.getRefService();
 			
 			if (referToService.size() > 0) {
 				XWPFParagraph tSSection = DocumentHelper.getParagraph(document, "@StSName");
@@ -769,19 +770,19 @@ public class WordHandler extends AbstractHandler {
 				XWPFParagraph nSSection = document.insertNewParagraph(cursor);
 				DocumentHelper.cloneParagraph(nSSection, tSSection);
 
-				for (ReferToService refService : referToService) {
-					Service service = refService.getRefertose();
+				for (RefService refService : referToService) {
+					Service service = refService.getRefService();
 					XWPFParagraph tStSName = DocumentHelper.getParagraph(document, "@StSName");
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nStSName = document.insertNewParagraph(cursor);
 					DocumentHelper.cloneParagraph(nStSName, tStSName);
-					DocumentHelper.replaceText(nStSName, "@StSName", service.getServicename()
+					DocumentHelper.replaceText(nStSName, "@StSName", service.getServiceName()
 							+ " (" + service.getName() + ")");
 				}
 			}
 			
 			// Add Enforcements Section
-			EList<RefertoEnforcement> referToEnf = retention.getRefertoEnforcement();
+			EList<RefEnforcement> referToEnf = retention.getRefEnforcement();
 			
 			if (referToEnf.size() > 0) {
 				XWPFParagraph tESection = DocumentHelper.getParagraph(document, "@StEName");
@@ -791,8 +792,8 @@ public class WordHandler extends AbstractHandler {
 				XWPFParagraph nESection = document.insertNewParagraph(cursor);
 				DocumentHelper.cloneParagraph(nESection, tESection);
 
-				for (RefertoEnforcement refEnf : referToEnf) {
-					Enforcement enforcement = refEnf.getRefst();
+				for (RefEnforcement refEnf : referToEnf) {
+					Enforcement enforcement = refEnf.getRefEnforcement();
 					XWPFParagraph tStEName = DocumentHelper.getParagraph(document, "@StEName");
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nStEName = document.insertNewParagraph(cursor);
@@ -842,12 +843,12 @@ public class WordHandler extends AbstractHandler {
 			cursor = tEnd.getCTP().newCursor();
 			XWPFParagraph nModality = document.insertNewParagraph(cursor);
 			DocumentHelper.cloneParagraph(nModality, tModality);
-			DocumentHelper.replaceText(nModality, "@StModality", disclosure.getModalitykind());
+			DocumentHelper.replaceText(nModality, "@StModality", disclosure.getModality());
 			
 			XWPFParagraph last = nModality;
 			
 			// Add Private Data Section
-			EList<RefPrivateData> refPrivateData = disclosure.getRefprivatedata();
+			EList<RefPrivateData> refPrivateData = disclosure.getRefPrivateData();
 			
 			if (refPrivateData.size() > 0) {
 				XWPFParagraph tPDSection = DocumentHelper.getParagraph(document, "@StPDName");
@@ -858,19 +859,19 @@ public class WordHandler extends AbstractHandler {
 				DocumentHelper.cloneParagraph(nPDSection, tPDSection);
 
 				for (RefPrivateData refPD : refPrivateData) {
-					PrivateData data = refPD.getRefpr();
+					PrivateData data = refPD.getRefPrivateData();
 					XWPFParagraph tStPDName = DocumentHelper.getParagraph(document, "@StPDName");
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nStPDName = document.insertNewParagraph(cursor);
 					DocumentHelper.cloneParagraph(nStPDName, tStPDName);
-					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getPrivatedata()
+					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getDescription()
 							+ " (" + data.getName() + ")");
 					last = nStPDName;
 				}
 			}
 			
 			// Add Recipients Section
-			EList<ReferToRecipient> refToRecipient =  disclosure.getReferToRecipient();
+			EList<RefRecipient> refToRecipient =  disclosure.getRefRecipient();
 			
 			if (refToRecipient.size() > 0) {
 				XWPFParagraph tRSection = DocumentHelper.getParagraph(document, "@StRName");
@@ -880,20 +881,20 @@ public class WordHandler extends AbstractHandler {
 				XWPFParagraph nRSection = document.insertNewParagraph(cursor);
 				DocumentHelper.cloneParagraph(nRSection, tRSection);
 
-				for (ReferToRecipient refRec : refToRecipient) {
-					Recipient recipient = refRec.getRefertore();
+				for (RefRecipient refRec : refToRecipient) {
+					Recipient recipient = refRec.getRefRecipient();
 					XWPFParagraph tStRName = DocumentHelper.getParagraph(document, "@StRName");
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nStRName = document.insertNewParagraph(cursor);
 					DocumentHelper.cloneParagraph(nStRName, tStRName);
-					DocumentHelper.replaceText(nStRName, "@StRName", recipient.getRecipientname()
+					DocumentHelper.replaceText(nStRName, "@StRName", recipient.getRecipientName()
 							+ " (" + recipient.getName() + ")");
 					last = nStRName;
 				}
 			}
 			
 			// Add Services Section
-			EList<ReferToService> referToService = disclosure.getRefertoservice();
+			EList<RefService> referToService = disclosure.getRefService();
 			
 			if (referToService.size() > 0) {
 				XWPFParagraph tSSection = DocumentHelper.getParagraph(document, "@StSName");
@@ -903,20 +904,20 @@ public class WordHandler extends AbstractHandler {
 				XWPFParagraph nSSection = document.insertNewParagraph(cursor);
 				DocumentHelper.cloneParagraph(nSSection, tSSection);
 
-				for (ReferToService refService : referToService) {
-					Service service = refService.getRefertose();
+				for (RefService refService : referToService) {
+					Service service = refService.getRefService();
 					XWPFParagraph tStSName = DocumentHelper.getParagraph(document, "@StSName");
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nStSName = document.insertNewParagraph(cursor);
 					DocumentHelper.cloneParagraph(nStSName, tStSName);
-					DocumentHelper.replaceText(nStSName, "@StSName", service.getServicename()
+					DocumentHelper.replaceText(nStSName, "@StSName", service.getServiceName()
 							+ " (" + service.getName() + ")");
 					last = nStSName;
 				}
 			}
 			
 			// Add Enforcements Section
-			EList<RefertoEnforcement> referToEnf = disclosure.getRefertoEnforcement();
+			EList<RefEnforcement> referToEnf = disclosure.getRefEnforcement();
 			
 			if (referToEnf.size() > 0) {
 				XWPFParagraph tESection = DocumentHelper.getParagraph(document, "@StEName");
@@ -926,8 +927,8 @@ public class WordHandler extends AbstractHandler {
 				XWPFParagraph nESection = document.insertNewParagraph(cursor);
 				DocumentHelper.cloneParagraph(nESection, tESection);
 
-				for (RefertoEnforcement refEnf : referToEnf) {
-					Enforcement enforcement = refEnf.getRefst();
+				for (RefEnforcement refEnf : referToEnf) {
+					Enforcement enforcement = refEnf.getRefEnforcement();
 					XWPFParagraph tStEName = DocumentHelper.getParagraph(document, "@StEName");
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nStEName = document.insertNewParagraph(cursor);
@@ -972,12 +973,12 @@ public class WordHandler extends AbstractHandler {
 			cursor = tEnd.getCTP().newCursor();
 			XWPFParagraph nModality = document.insertNewParagraph(cursor);
 			DocumentHelper.cloneParagraph(nModality, tModality);
-			DocumentHelper.replaceText(nModality, "@StModality", collection.getModalitykind());
+			DocumentHelper.replaceText(nModality, "@StModality", collection.getModality());
 			
 			XWPFParagraph last = nModality;
 			
 			// Add Private Data Section
-			EList<RefPrivateData> refPrivateData = collection.getRefprivatedata();
+			EList<RefPrivateData> refPrivateData = collection.getRefPrivateData();
 			
 			if (refPrivateData.size() > 0) {
 				XWPFParagraph tPDSection = DocumentHelper.getParagraph(document, "@StPDName");
@@ -988,19 +989,19 @@ public class WordHandler extends AbstractHandler {
 				DocumentHelper.cloneParagraph(nPDSection, tPDSection);
 
 				for (RefPrivateData refPD : refPrivateData) {
-					PrivateData data = refPD.getRefpr();
+					PrivateData data = refPD.getRefPrivateData();
 					XWPFParagraph tStPDName = DocumentHelper.getParagraph(document, "@StPDName");
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nStPDName = document.insertNewParagraph(cursor);
 					DocumentHelper.cloneParagraph(nStPDName, tStPDName);
-					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getPrivatedata()
+					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getDescription()
 							+ " (" + data.getName() + ")");
 					last = nStPDName;
 				}
 			}
 			
 			// Add Services Section
-			EList<ReferToService> referToService = collection.getRefertoservice();
+			EList<RefService> referToService = collection.getRefService();
 			
 			if (referToService.size() > 0) {
 				XWPFParagraph tSSection = DocumentHelper.getParagraph(document, "@StSName");
@@ -1010,20 +1011,20 @@ public class WordHandler extends AbstractHandler {
 				XWPFParagraph nSSection = document.insertNewParagraph(cursor);
 				DocumentHelper.cloneParagraph(nSSection, tSSection);
 
-				for (ReferToService refService : referToService) {
-					Service service = refService.getRefertose();
+				for (RefService refService : referToService) {
+					Service service = refService.getRefService();
 					XWPFParagraph tStSName = DocumentHelper.getParagraph(document, "@StSName");
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nStSName = document.insertNewParagraph(cursor);
 					DocumentHelper.cloneParagraph(nStSName, tStSName);
-					DocumentHelper.replaceText(nStSName, "@StSName", service.getServicename()
+					DocumentHelper.replaceText(nStSName, "@StSName", service.getServiceName()
 							+ " (" + service.getName() + ")");
 					last = nStSName;
 				}
 			}
 			
 			// Add Enforcements Section
-			EList<RefertoEnforcement> referToEnf = collection.getRefertoEnforcement();
+			EList<RefEnforcement> referToEnf = collection.getRefEnforcement();
 			
 			if (referToEnf.size() > 0) {
 				XWPFParagraph tESection = DocumentHelper.getParagraph(document, "@StEName");
@@ -1033,8 +1034,8 @@ public class WordHandler extends AbstractHandler {
 				XWPFParagraph nESection = document.insertNewParagraph(cursor);
 				DocumentHelper.cloneParagraph(nESection, tESection);
 
-				for (RefertoEnforcement refEnf : referToEnf) {
-					Enforcement enforcement = refEnf.getRefst();
+				for (RefEnforcement refEnf : referToEnf) {
+					Enforcement enforcement = refEnf.getRefEnforcement();
 					XWPFParagraph tStEName = DocumentHelper.getParagraph(document, "@StEName");
 					cursor = tEnd.getCTP().newCursor();
 					XWPFParagraph nStEName = document.insertNewParagraph(cursor);

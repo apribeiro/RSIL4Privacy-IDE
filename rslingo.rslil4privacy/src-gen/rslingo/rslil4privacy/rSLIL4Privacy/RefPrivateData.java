@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData#getRefpr <em>Refpr</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData#getRefPrivateData <em>Ref Private Data</em>}</li>
  * </ul>
  *
  * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRefPrivateData()
@@ -23,29 +23,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface RefPrivateData extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Refpr</b></em>' reference.
+   * Returns the value of the '<em><b>Ref Private Data</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Refpr</em>' reference isn't clear,
+   * If the meaning of the '<em>Ref Private Data</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Refpr</em>' reference.
-   * @see #setRefpr(PrivateData)
-   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRefPrivateData_Refpr()
+   * @return the value of the '<em>Ref Private Data</em>' reference.
+   * @see #setRefPrivateData(PrivateData)
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getRefPrivateData_RefPrivateData()
    * @model
    * @generated
    */
-  PrivateData getRefpr();
+  PrivateData getRefPrivateData();
 
   /**
-   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData#getRefpr <em>Refpr</em>}' reference.
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData#getRefPrivateData <em>Ref Private Data</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Refpr</em>' reference.
-   * @see #getRefpr()
+   * @param value the new value of the '<em>Ref Private Data</em>' reference.
+   * @see #getRefPrivateData()
    * @generated
    */
-  void setRefpr(PrivateData value);
+  void setRefPrivateData(PrivateData value);
 
 } // RefPrivateData

@@ -26,111 +26,111 @@
     <genClasses ecoreClass="RSLIL4Privacy.ecore#//Enforcement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Enforcement/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Enforcement/enforcementName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Enforcement/enforcementDescription"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Enforcement/enforcementKind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Enforcement/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Enforcement/type"/>
     </genClasses>
     <genClasses ecoreClass="RSLIL4Privacy.ecore#//Service">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Service/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Service/servicename"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Service/serviceName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Service/description"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Service/refprivatedata"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Service/servicepartof"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Service/refPrivateData"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Service/servicePart"/>
     </genClasses>
     <genClasses ecoreClass="RSLIL4Privacy.ecore#//Recipient">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Recipient/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Recipient/recipientname"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Recipient/recipientName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Recipient/description"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Recipient/partof"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Recipient/RecipientScopeKind"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Recipient/RecipientTypeKind"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Recipient/recipientPart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Recipient/scope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Recipient/type"/>
     </genClasses>
     <genClasses ecoreClass="RSLIL4Privacy.ecore#//PrivateData">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//PrivateData/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//PrivateData/privatedata"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//PrivateData/PrivateDataKind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//PrivateData/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//PrivateData/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//PrivateData/attribute"/>
     </genClasses>
     <genClasses ecoreClass="RSLIL4Privacy.ecore#//Attribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Attribute/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Attribute/attributeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Attribute/description"/>
     </genClasses>
     <genClasses ecoreClass="RSLIL4Privacy.ecore#//Collection">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Collection/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Collection/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Collection/condition"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Collection/partof"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Collection/refprivatedata"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Collection/refertoservice"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Collection/refertoEnforcement"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Collection/modalitykind"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Collection/partCollection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Collection/refPrivateData"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Collection/refService"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Collection/refEnforcement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Collection/modality"/>
     </genClasses>
     <genClasses ecoreClass="RSLIL4Privacy.ecore#//Disclosure">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Disclosure/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Disclosure/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Disclosure/condition"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Disclosure/partof"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Disclosure/referToRecipient"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Disclosure/referToRecipientsource"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Disclosure/referToRecipienttarget"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Disclosure/refprivatedata"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Disclosure/refertoservice"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Disclosure/refertoEnforcement"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Disclosure/modalitykind"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Disclosure/partDisclosure"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Disclosure/refRecipient"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Disclosure/refRecipientSource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Disclosure/refRecipientTarget"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Disclosure/refPrivateData"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Disclosure/refService"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Disclosure/refEnforcement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Disclosure/modality"/>
     </genClasses>
     <genClasses ecoreClass="RSLIL4Privacy.ecore#//Retention">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Retention/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Retention/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Retention/condition"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Retention/partof"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Retention/partRetention"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Retention/period"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Retention/refprivatedata"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Retention/refertoservice"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Retention/refertoEnforcement"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Retention/modalitykind"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Retention/refPrivateData"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Retention/refService"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Retention/refEnforcement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Retention/modality"/>
     </genClasses>
     <genClasses ecoreClass="RSLIL4Privacy.ecore#//Usage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Usage/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Usage/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Usage/condition"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Usage/partof"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Usage/refprivatedata"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Usage/refertoservice"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Usage/refertoEnforcement"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Usage/modalitykind"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Usage/partUsage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Usage/refPrivateData"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Usage/refService"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Usage/refEnforcement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Usage/modality"/>
     </genClasses>
     <genClasses ecoreClass="RSLIL4Privacy.ecore#//Informative">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Informative/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Informative/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Informative/condition"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Informative/partof"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Informative/refprivatedata"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Informative/refertoservice"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Informative/refertoEnforcement"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Informative/modalitykind"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Informative/partInformative"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Informative/refPrivateData"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Informative/refService"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Informative/refEnforcement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Informative/modality"/>
     </genClasses>
-    <genClasses ecoreClass="RSLIL4Privacy.ecore#//Partof">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Partof/partof"/>
+    <genClasses ecoreClass="RSLIL4Privacy.ecore#//RecipientPart">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//RecipientPart/recipientPart"/>
     </genClasses>
-    <genClasses ecoreClass="RSLIL4Privacy.ecore#//ReferToRecipient">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//ReferToRecipient/refertore"/>
+    <genClasses ecoreClass="RSLIL4Privacy.ecore#//RefRecipient">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//RefRecipient/refRecipient"/>
     </genClasses>
-    <genClasses ecoreClass="RSLIL4Privacy.ecore#//ReferToRecipientSource">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//ReferToRecipientSource/refertore"/>
+    <genClasses ecoreClass="RSLIL4Privacy.ecore#//RefRecipientSource">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//RefRecipientSource/refRecipientSource"/>
     </genClasses>
-    <genClasses ecoreClass="RSLIL4Privacy.ecore#//ReferToRecipientTarget">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//ReferToRecipientTarget/refertore"/>
+    <genClasses ecoreClass="RSLIL4Privacy.ecore#//RefRecipientTarget">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//RefRecipientTarget/refRecipientTarget"/>
     </genClasses>
-    <genClasses ecoreClass="RSLIL4Privacy.ecore#//ReferToService">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//ReferToService/refertose"/>
+    <genClasses ecoreClass="RSLIL4Privacy.ecore#//RefService">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//RefService/refService"/>
     </genClasses>
-    <genClasses ecoreClass="RSLIL4Privacy.ecore#//ServicePartof">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//ServicePartof/refertoservice"/>
+    <genClasses ecoreClass="RSLIL4Privacy.ecore#//ServicePart">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//ServicePart/servicePart"/>
     </genClasses>
     <genClasses ecoreClass="RSLIL4Privacy.ecore#//RefPrivateData">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//RefPrivateData/refpr"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//RefPrivateData/refPrivateData"/>
     </genClasses>
-    <genClasses ecoreClass="RSLIL4Privacy.ecore#//RefertoEnforcement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//RefertoEnforcement/refst"/>
+    <genClasses ecoreClass="RSLIL4Privacy.ecore#//RefEnforcement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//RefEnforcement/refEnforcement"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
