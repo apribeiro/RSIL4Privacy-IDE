@@ -452,9 +452,19 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getMetadata_Description()
+  {
+    return (EAttribute)metadataEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getMetadata_Date()
   {
-    return (EReference)metadataEClass.getEStructuralFeatures().get(2);
+    return (EReference)metadataEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -464,7 +474,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    */
   public EAttribute getMetadata_Version()
   {
-    return (EAttribute)metadataEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)metadataEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1487,6 +1497,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
     metadataEClass = createEClass(METADATA);
     createEAttribute(metadataEClass, METADATA__AUTHORS);
     createEAttribute(metadataEClass, METADATA__ORGANIZATIONS);
+    createEAttribute(metadataEClass, METADATA__DESCRIPTION);
     createEReference(metadataEClass, METADATA__DATE);
     createEAttribute(metadataEClass, METADATA__VERSION);
 
@@ -1659,6 +1670,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
     initEClass(metadataEClass, Metadata.class, "Metadata", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMetadata_Authors(), ecorePackage.getEString(), "authors", null, 0, 1, Metadata.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMetadata_Organizations(), ecorePackage.getEString(), "organizations", null, 0, 1, Metadata.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMetadata_Description(), ecorePackage.getEString(), "description", null, 0, 1, Metadata.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMetadata_Date(), this.getDate(), null, "date", null, 0, 1, Metadata.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMetadata_Version(), ecorePackage.getEString(), "version", null, 0, 1, Metadata.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

@@ -33,6 +33,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Metadata">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="authors" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="organizations" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="date" eType="#//Date" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

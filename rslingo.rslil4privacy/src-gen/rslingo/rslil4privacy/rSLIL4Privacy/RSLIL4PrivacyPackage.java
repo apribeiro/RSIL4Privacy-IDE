@@ -240,13 +240,22 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int METADATA__ORGANIZATIONS = 1;
 
   /**
+   * The feature id for the '<em><b>Description</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int METADATA__DESCRIPTION = 2;
+
+  /**
    * The feature id for the '<em><b>Date</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int METADATA__DATE = 2;
+  int METADATA__DATE = 3;
 
   /**
    * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -255,7 +264,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    * @ordered
    */
-  int METADATA__VERSION = 3;
+  int METADATA__VERSION = 4;
 
   /**
    * The number of structural features of the '<em>Metadata</em>' class.
@@ -264,7 +273,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    * @ordered
    */
-  int METADATA_FEATURE_COUNT = 4;
+  int METADATA_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DateImpl <em>Date</em>}' class.
@@ -1536,6 +1545,17 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getMetadata_Organizations();
 
   /**
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.Metadata#getDescription <em>Description</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Description</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.Metadata#getDescription()
+   * @see #getMetadata()
+   * @generated
+   */
+  EAttribute getMetadata_Description();
+
+  /**
    * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Metadata#getDate <em>Date</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2776,6 +2796,14 @@ public interface RSLIL4PrivacyPackage extends EPackage
      * @generated
      */
     EAttribute METADATA__ORGANIZATIONS = eINSTANCE.getMetadata_Organizations();
+
+    /**
+     * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute METADATA__DESCRIPTION = eINSTANCE.getMetadata_Description();
 
     /**
      * The meta object literal for the '<em><b>Date</b></em>' containment reference feature.

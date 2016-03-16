@@ -226,22 +226,26 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cOrganizationsAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cOrganizationsSTRINGTerminalRuleCall_5_0 = (RuleCall)cOrganizationsAssignment_5.eContents().get(0);
 		private final Keyword cCommaKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Keyword cDateKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cDateAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cDateDateParserRuleCall_8_0 = (RuleCall)cDateAssignment_8.eContents().get(0);
+		private final Keyword cDescriptionKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cDescriptionAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cDescriptionSTRINGTerminalRuleCall_8_0 = (RuleCall)cDescriptionAssignment_8.eContents().get(0);
 		private final Keyword cCommaKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Keyword cVersionKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final Assignment cVersionAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cVersionSTRINGTerminalRuleCall_11_0 = (RuleCall)cVersionAssignment_11.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
+		private final Keyword cDateKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Assignment cDateAssignment_11 = (Assignment)cGroup.eContents().get(11);
+		private final RuleCall cDateDateParserRuleCall_11_0 = (RuleCall)cDateAssignment_11.eContents().get(0);
+		private final Keyword cCommaKeyword_12 = (Keyword)cGroup.eContents().get(12);
+		private final Keyword cVersionKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Assignment cVersionAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cVersionSTRINGTerminalRuleCall_14_0 = (RuleCall)cVersionAssignment_14.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		
 		//Metadata:
-		//	"PolicyMetadata {" "Author(s)" authors=STRING "," "Organization(s)" organizations=STRING "," "Date" date=Date ","
-		//	"Version" version=STRING "}";
+		//	"PolicyMetadata {" "Author(s)" authors=STRING "," "Organization(s)" organizations=STRING "," "Description"
+		//	description=STRING "," "Date" date=Date "," "Version" version=STRING "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"PolicyMetadata {" "Author(s)" authors=STRING "," "Organization(s)" organizations=STRING "," "Date" date=Date ","
-		//"Version" version=STRING "}"
+		//"PolicyMetadata {" "Author(s)" authors=STRING "," "Organization(s)" organizations=STRING "," "Description"
+		//description=STRING "," "Date" date=Date "," "Version" version=STRING "}"
 		public Group getGroup() { return cGroup; }
 
 		//"PolicyMetadata {"
@@ -271,29 +275,41 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//","
 		public Keyword getCommaKeyword_6() { return cCommaKeyword_6; }
 
-		//"Date"
-		public Keyword getDateKeyword_7() { return cDateKeyword_7; }
+		//"Description"
+		public Keyword getDescriptionKeyword_7() { return cDescriptionKeyword_7; }
 
-		//date=Date
-		public Assignment getDateAssignment_8() { return cDateAssignment_8; }
+		//description=STRING
+		public Assignment getDescriptionAssignment_8() { return cDescriptionAssignment_8; }
 
-		//Date
-		public RuleCall getDateDateParserRuleCall_8_0() { return cDateDateParserRuleCall_8_0; }
+		//STRING
+		public RuleCall getDescriptionSTRINGTerminalRuleCall_8_0() { return cDescriptionSTRINGTerminalRuleCall_8_0; }
 
 		//","
 		public Keyword getCommaKeyword_9() { return cCommaKeyword_9; }
 
+		//"Date"
+		public Keyword getDateKeyword_10() { return cDateKeyword_10; }
+
+		//date=Date
+		public Assignment getDateAssignment_11() { return cDateAssignment_11; }
+
+		//Date
+		public RuleCall getDateDateParserRuleCall_11_0() { return cDateDateParserRuleCall_11_0; }
+
+		//","
+		public Keyword getCommaKeyword_12() { return cCommaKeyword_12; }
+
 		//"Version"
-		public Keyword getVersionKeyword_10() { return cVersionKeyword_10; }
+		public Keyword getVersionKeyword_13() { return cVersionKeyword_13; }
 
 		//version=STRING
-		public Assignment getVersionAssignment_11() { return cVersionAssignment_11; }
+		public Assignment getVersionAssignment_14() { return cVersionAssignment_14; }
 
 		//STRING
-		public RuleCall getVersionSTRINGTerminalRuleCall_11_0() { return cVersionSTRINGTerminalRuleCall_11_0; }
+		public RuleCall getVersionSTRINGTerminalRuleCall_14_0() { return cVersionSTRINGTerminalRuleCall_14_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
+		public Keyword getRightCurlyBracketKeyword_15() { return cRightCurlyBracketKeyword_15; }
 	}
 
 	public class DateElements extends AbstractParserRuleElementFinder {
@@ -2205,8 +2221,8 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Metadata:
-	//	"PolicyMetadata {" "Author(s)" authors=STRING "," "Organization(s)" organizations=STRING "," "Date" date=Date ","
-	//	"Version" version=STRING "}";
+	//	"PolicyMetadata {" "Author(s)" authors=STRING "," "Organization(s)" organizations=STRING "," "Description"
+	//	description=STRING "," "Date" date=Date "," "Version" version=STRING "}";
 	public MetadataElements getMetadataAccess() {
 		return pMetadata;
 	}

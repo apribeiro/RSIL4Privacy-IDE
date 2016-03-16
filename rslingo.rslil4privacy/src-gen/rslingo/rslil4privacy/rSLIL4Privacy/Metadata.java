@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Metadata#getAuthors <em>Authors</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Metadata#getOrganizations <em>Organizations</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Metadata#getDescription <em>Description</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Metadata#getDate <em>Date</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Metadata#getVersion <em>Version</em>}</li>
  * </ul>
@@ -76,6 +77,32 @@ public interface Metadata extends EObject
    * @generated
    */
   void setOrganizations(String value);
+
+  /**
+   * Returns the value of the '<em><b>Description</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Description</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Description</em>' attribute.
+   * @see #setDescription(String)
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getMetadata_Description()
+   * @model
+   * @generated
+   */
+  String getDescription();
+
+  /**
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Metadata#getDescription <em>Description</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Description</em>' attribute.
+   * @see #getDescription()
+   * @generated
+   */
+  void setDescription(String value);
 
   /**
    * Returns the value of the '<em><b>Date</b></em>' containment reference.

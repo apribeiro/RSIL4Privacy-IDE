@@ -37,9 +37,11 @@ import com.google.inject.Injector;
 import rslingo.rslil4privacy.RSLIL4PrivacyStandaloneSetup;
 import rslingo.rslil4privacy.rSLIL4Privacy.Attribute;
 import rslingo.rslil4privacy.rSLIL4Privacy.Collection;
+import rslingo.rslil4privacy.rSLIL4Privacy.Date;
 import rslingo.rslil4privacy.rSLIL4Privacy.Disclosure;
 import rslingo.rslil4privacy.rSLIL4Privacy.Enforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.Informative;
+import rslingo.rslil4privacy.rSLIL4Privacy.Metadata;
 import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
 import rslingo.rslil4privacy.rSLIL4Privacy.PrivateData;
 import rslingo.rslil4privacy.rSLIL4Privacy.Recipient;
@@ -132,6 +134,7 @@ public class WordHandler extends AbstractHandler {
 					InputStream from = new FileInputStream(PLUGIN_PATH + DEF_WORD_PATH);
 					XWPFDocument document = new XWPFDocument(from);
 
+					writePolicyMetadata(policy.getMetadata(), document);
 					writePrivateData(policy, document);
 					writeServices(policy, document);
 					writeRecipients(policy, document);
@@ -157,6 +160,27 @@ public class WordHandler extends AbstractHandler {
 			}
 		};
 		new Thread(runnable).start();
+	}
+
+	private void writePolicyMetadata(Metadata metadata, XWPFDocument document) {
+		if (metadata != null) {
+			XWPFParagraph tAuthor = DocumentHelper.getParagraph(document, "@Author");
+			DocumentHelper.replaceText(tAuthor, "@Author", metadata.getAuthors());
+
+			XWPFParagraph tOrg = DocumentHelper.getParagraph(document, "@Organization");
+			DocumentHelper.replaceText(tOrg, "@Organization", metadata.getOrganizations());
+
+			XWPFParagraph tDate = DocumentHelper.getParagraph(document, "@Date");
+			Date date = metadata.getDate();
+			DocumentHelper.replaceText(tDate, "@Date",
+					date.getDay() + "-" + date.getMonth().getName() + "-" + date.getYear());
+
+			XWPFParagraph tVersion = DocumentHelper.getParagraph(document, "@Version");
+			DocumentHelper.replaceText(tVersion, "@Version", metadata.getVersion());
+			
+			XWPFParagraph tIntro = DocumentHelper.getParagraph(document, "@Introduction");
+			DocumentHelper.replaceText(tIntro, "@Introduction", metadata.getDescription());
+		}
 	}
 
 	private void writePrivateData(Policy policy, XWPFDocument document) {

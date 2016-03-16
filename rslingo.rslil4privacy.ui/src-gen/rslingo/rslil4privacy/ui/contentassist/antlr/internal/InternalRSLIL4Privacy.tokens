@@ -1,5 +1,5 @@
 ','=47
-'-'=52
+'-'=53
 '.'=42
 '.*'=44
 'Action'=23
@@ -11,11 +11,11 @@
 'Collection'=65
 'Condition'=66
 'Config'=25
-'Date'=49
+'Date'=50
 'Dec'=22
-'Description'=55
+'Description'=49
 'Disclosure'=71
-'Enforcement'=53
+'Enforcement'=54
 'External'=29
 'Feb'=12
 'Forbidden'=38
@@ -30,7 +30,7 @@
 'Mar'=13
 'May'=15
 'Modality'=67
-'Name'=54
+'Name'=55
 'Nov'=21
 'Obligation'=37
 'Oct'=20
@@ -65,10 +65,10 @@
 'Type'=56
 'Usage'=79
 'UsageInformation'=35
-'Version'=50
+'Version'=51
 'import'=43
 '{'=40
-'}'=51
+'}'=52
 '};'=41
 RULE_ANY_OTHER=10
 RULE_ID=4
