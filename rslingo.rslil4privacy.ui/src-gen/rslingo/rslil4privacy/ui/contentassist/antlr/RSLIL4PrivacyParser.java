@@ -128,7 +128,7 @@ public class RSLIL4PrivacyParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPrivateDataAccess().getTypeAssignment_7(), "rule__PrivateData__TypeAssignment_7");
 					put(grammarAccess.getPrivateDataAccess().getAttributeAssignment_9(), "rule__PrivateData__AttributeAssignment_9");
 					put(grammarAccess.getAttributeAccess().getNameAssignment_1(), "rule__Attribute__NameAssignment_1");
-					put(grammarAccess.getAttributeAccess().getDescriptionAssignment_3(), "rule__Attribute__DescriptionAssignment_3");
+					put(grammarAccess.getAttributeAccess().getDescriptionAssignment_4(), "rule__Attribute__DescriptionAssignment_4");
 					put(grammarAccess.getCollectionAccess().getNameAssignment_1(), "rule__Collection__NameAssignment_1");
 					put(grammarAccess.getCollectionAccess().getDescriptionAssignment_4(), "rule__Collection__DescriptionAssignment_4");
 					put(grammarAccess.getCollectionAccess().getConditionAssignment_7(), "rule__Collection__ConditionAssignment_7");

@@ -432,7 +432,10 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		
 	    		for (String a : attributes.split(",\n")) {
 	    			a = a.substring(0, 1).toUpperCase() + a.substring(1);
-	    			sb.append("\tAttribute \"" + a + "\" Description \"" + a + "\",");
+	    			sb.append("\tAttribute \"" + a + "\" {");
+	    			sb.append("\n");
+	    			sb.append("\t\tDescription \"" + a + "\"");
+	    			sb.append("\n\t},");
 	    			sb.append("\n");
 				}
 	    		// Delete last ',\n'

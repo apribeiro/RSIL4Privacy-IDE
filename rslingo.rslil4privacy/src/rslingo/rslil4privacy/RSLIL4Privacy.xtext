@@ -50,8 +50,11 @@ PrivateData:
 	'PrivateData' name=ID '{' 
 	'Description' description=STRING ','
 	'Type' type=('PersonalInformation'| 'UsageInformation')',' attribute+=Attribute* '};'; 	
- Attribute:
- 	'Attribute' name=STRING 'Description' description=STRING (',')?;
+
+Attribute:
+ 	'Attribute' name=STRING '{'
+ 		'Description' description=STRING
+	'}' (',')?;
 
 Collection:
 	'Collection' name=ID '{'

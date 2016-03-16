@@ -638,16 +638,18 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cAttributeKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameSTRINGTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cDescriptionKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cDescriptionAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cDescriptionSTRINGTerminalRuleCall_3_0 = (RuleCall)cDescriptionAssignment_3.eContents().get(0);
-		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cDescriptionKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cDescriptionAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cDescriptionSTRINGTerminalRuleCall_4_0 = (RuleCall)cDescriptionAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cCommaKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Attribute:
-		//	"Attribute" name=STRING "Description" description=STRING ","?;
+		//	"Attribute" name=STRING "{" "Description" description=STRING "}" ","?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"Attribute" name=STRING "Description" description=STRING ","?
+		//"Attribute" name=STRING "{" "Description" description=STRING "}" ","?
 		public Group getGroup() { return cGroup; }
 
 		//"Attribute"
@@ -659,17 +661,23 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getNameSTRINGTerminalRuleCall_1_0() { return cNameSTRINGTerminalRuleCall_1_0; }
 
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
 		//"Description"
-		public Keyword getDescriptionKeyword_2() { return cDescriptionKeyword_2; }
+		public Keyword getDescriptionKeyword_3() { return cDescriptionKeyword_3; }
 
 		//description=STRING
-		public Assignment getDescriptionAssignment_3() { return cDescriptionAssignment_3; }
+		public Assignment getDescriptionAssignment_4() { return cDescriptionAssignment_4; }
 
 		//STRING
-		public RuleCall getDescriptionSTRINGTerminalRuleCall_3_0() { return cDescriptionSTRINGTerminalRuleCall_3_0; }
+		public RuleCall getDescriptionSTRINGTerminalRuleCall_4_0() { return cDescriptionSTRINGTerminalRuleCall_4_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 
 		//","?
-		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		public Keyword getCommaKeyword_6() { return cCommaKeyword_6; }
 	}
 
 	public class CollectionElements extends AbstractParserRuleElementFinder {
@@ -2038,7 +2046,7 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Attribute:
-	//	"Attribute" name=STRING "Description" description=STRING ","?;
+	//	"Attribute" name=STRING "{" "Description" description=STRING "}" ","?;
 	public AttributeElements getAttributeAccess() {
 		return pAttribute;
 	}

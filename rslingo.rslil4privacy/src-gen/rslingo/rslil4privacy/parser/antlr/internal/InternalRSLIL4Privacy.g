@@ -1134,15 +1134,19 @@ ruleAttribute returns [EObject current=null]
 	    }
 
 )
-)	otherlv_2='Description' 
+)	otherlv_2='{' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getAttributeAccess().getDescriptionKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getAttributeAccess().getLeftCurlyBracketKeyword_2());
+    }
+	otherlv_3='Description' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getAttributeAccess().getDescriptionKeyword_3());
     }
 (
 (
-		lv_description_3_0=RULE_STRING
+		lv_description_4_0=RULE_STRING
 		{
-			newLeafNode(lv_description_3_0, grammarAccess.getAttributeAccess().getDescriptionSTRINGTerminalRuleCall_3_0()); 
+			newLeafNode(lv_description_4_0, grammarAccess.getAttributeAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1151,14 +1155,18 @@ ruleAttribute returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"description",
-        		lv_description_3_0, 
+        		lv_description_4_0, 
         		"STRING");
 	    }
 
 )
-)(	otherlv_4=',' 
+)	otherlv_5='}' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getAttributeAccess().getCommaKeyword_4());
+    	newLeafNode(otherlv_5, grammarAccess.getAttributeAccess().getRightCurlyBracketKeyword_5());
+    }
+(	otherlv_6=',' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getAttributeAccess().getCommaKeyword_6());
     }
 )?)
 ;

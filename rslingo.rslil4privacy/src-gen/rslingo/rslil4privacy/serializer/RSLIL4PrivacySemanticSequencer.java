@@ -126,7 +126,7 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getAttributeAccess().getNameSTRINGTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getAttributeAccess().getDescriptionSTRINGTerminalRuleCall_3_0(), semanticObject.getDescription());
+		feeder.accept(grammarAccess.getAttributeAccess().getDescriptionSTRINGTerminalRuleCall_4_0(), semanticObject.getDescription());
 		feeder.finish();
 	}
 	

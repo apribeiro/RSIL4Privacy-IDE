@@ -21,7 +21,7 @@ import rslingo.rslil4privacy.services.RSLIL4PrivacyGrammarAccess;
 public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected RSLIL4PrivacyGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Attribute_CommaKeyword_4_q;
+	protected AbstractElementAlias match_Attribute_CommaKeyword_6_q;
 	protected AbstractElementAlias match_Collection___RefersToEnforcementKeyword_12_0_CommaKeyword_12_2__q;
 	protected AbstractElementAlias match_Collection___RefersToPrivateDataKeyword_10_0_CommaKeyword_10_2__q;
 	protected AbstractElementAlias match_Collection___RefersToServiceKeyword_11_0_CommaKeyword_11_2__q;
@@ -55,7 +55,7 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (RSLIL4PrivacyGrammarAccess) access;
-		match_Attribute_CommaKeyword_4_q = new TokenAlias(false, true, grammarAccess.getAttributeAccess().getCommaKeyword_4());
+		match_Attribute_CommaKeyword_6_q = new TokenAlias(false, true, grammarAccess.getAttributeAccess().getCommaKeyword_6());
 		match_Collection___RefersToEnforcementKeyword_12_0_CommaKeyword_12_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getCollectionAccess().getRefersToEnforcementKeyword_12_0()), new TokenAlias(false, false, grammarAccess.getCollectionAccess().getCommaKeyword_12_2()));
 		match_Collection___RefersToPrivateDataKeyword_10_0_CommaKeyword_10_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getCollectionAccess().getRefersToPrivateDataKeyword_10_0()), new TokenAlias(false, false, grammarAccess.getCollectionAccess().getCommaKeyword_10_2()));
 		match_Collection___RefersToServiceKeyword_11_0_CommaKeyword_11_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getCollectionAccess().getRefersToServiceKeyword_11_0()), new TokenAlias(false, false, grammarAccess.getCollectionAccess().getCommaKeyword_11_2()));
@@ -99,8 +99,8 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_Attribute_CommaKeyword_4_q.equals(syntax))
-				emit_Attribute_CommaKeyword_4_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			if(match_Attribute_CommaKeyword_6_q.equals(syntax))
+				emit_Attribute_CommaKeyword_6_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Collection___RefersToEnforcementKeyword_12_0_CommaKeyword_12_2__q.equals(syntax))
 				emit_Collection___RefersToEnforcementKeyword_12_0_CommaKeyword_12_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Collection___RefersToPrivateDataKeyword_10_0_CommaKeyword_10_2__q.equals(syntax))
@@ -168,9 +168,9 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     description=STRING (ambiguity) (rule end)
+	 *     description=STRING '}' (ambiguity) (rule end)
 	 */
-	protected void emit_Attribute_CommaKeyword_4_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Attribute_CommaKeyword_6_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
