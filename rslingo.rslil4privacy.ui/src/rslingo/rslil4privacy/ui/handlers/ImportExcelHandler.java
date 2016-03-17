@@ -87,6 +87,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		if (importMode.equals(ImportWindow.SINGLE)) {
 			generateSingleFile(srcGenFolder, filePath, fileName);
 		} else {
+			generateMainFile(srcGenFolder, filePath, fileName);
 			generateStatementsFile(srcGenFolder, filePath, fileName);
 			generatePrivateDataFile(srcGenFolder, filePath, fileName);
 			generateServicesFile(srcGenFolder, filePath, fileName);
@@ -134,6 +135,41 @@ public class ImportExcelHandler extends AbstractHandler {
 		} else {
 			file.setContents(source, IResource.FORCE, null);
 		}
+	}
+	
+	private void generateMainFile(IFolder srcGenFolder, String filePath, String fileName)
+		throws Exception {
+			StringBuilder sb = new StringBuilder();
+			InputStream inp = new FileInputStream(filePath);
+			Workbook wb = WorkbookFactory.create(inp);
+			sb.append("Package " + fileName + ".Main.RSLingo4Privacy {");
+			sb.append("\n");
+			sb.append("\n");
+			sb.append("import " + fileName + ".Statements.RSLingo4Privacy.*");
+			sb.append("\n");
+			sb.append("import " + fileName + ".Privatedata.RSLingo4Privacy.*");
+			sb.append("\n");
+			sb.append("import " + fileName + ".Recipients.RSLingo4Privacy.*");
+			sb.append("\n");
+			sb.append("import " + fileName + ".Enforcements.RSLingo4Privacy.*");
+			sb.append("\n");
+			sb.append("import " + fileName + ".Services.RSLingo4Privacy.*");
+			sb.append("\n");
+			sb.append("\n");
+			
+			generateMetadataRegion(wb, sb);
+	    	
+	    	sb.deleteCharAt(sb.length() - 1);
+	    	sb.append("};");
+			
+			IFile file = srcGenFolder.getFile(fileName + ".Main.rslil");
+			InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
+			
+			if (!file.exists()) {
+				file.create(source, IResource.FORCE, null);
+			} else {
+				file.setContents(source, IResource.FORCE, null);
+			}
 	}
 	
 	private void generateStatementsFile(IFolder srcGenFolder, String filePath, String fileName)

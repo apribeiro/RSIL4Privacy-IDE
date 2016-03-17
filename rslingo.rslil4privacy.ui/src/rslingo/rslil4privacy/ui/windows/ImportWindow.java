@@ -12,7 +12,7 @@ import org.eclipse.swt.widgets.Button;
 public class ImportWindow {
 
 	public static final String SINGLE = "Single File";
-	public static final String MASTER = "Master File";
+	public static final String MAIN = "Main File";
 	
 	private String importMode;
 	protected Shell shell;
@@ -60,7 +60,7 @@ public class ImportWindow {
 		
 		Combo combo = new Combo(shell, SWT.NONE | SWT.READ_ONLY);
 		combo.setBounds(223, 10, 165, 23);
-		combo.setItems(new String[] { SINGLE, MASTER });
+		combo.setItems(new String[] { SINGLE, MAIN });
 		combo.select(0);
 		
 		Button btnOk = new Button(shell, SWT.NONE);
