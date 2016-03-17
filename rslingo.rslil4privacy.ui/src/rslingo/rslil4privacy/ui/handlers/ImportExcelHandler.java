@@ -396,7 +396,9 @@ public class ImportExcelHandler extends AbstractHandler {
 					} else if (cellRecipient.getCellType() == Cell.CELL_TYPE_STRING) {
 						String recipient = cellRecipient.getStringCellValue();
 						
-						if (!recipient.equals("All")) {
+						if (recipient.equals("All")) {
+							sb.append("\tRefersTo Recipient All,");
+						} else {
 							sb.append("\tRefersTo Recipient ");
 				    		
 			    			for (String s : recipient.split(", ")) {
@@ -405,8 +407,8 @@ public class ImportExcelHandler extends AbstractHandler {
 			    			// Delete last '-'
 			    			sb.deleteCharAt(sb.length() - 1);
 			    			sb.append(",");
-			    			sb.append("\n");
 						}
+						sb.append("\n");
 					}
 				}
 	    		
@@ -417,7 +419,9 @@ public class ImportExcelHandler extends AbstractHandler {
 				} else if (cellPrivateData.getCellType() == Cell.CELL_TYPE_STRING) {
 					String privateData = cellPrivateData.getStringCellValue();
 					
-					if (!privateData.equals("All")) {
+					if (privateData.equals("All")) {
+						sb.append("\tRefersTo PrivateData All,");
+					} else{
 						sb.append("\tRefersTo PrivateData ");
 			    		
 		    			for (String s : privateData.split(", ")) {
@@ -426,8 +430,8 @@ public class ImportExcelHandler extends AbstractHandler {
 		    			// Delete last '-'
 		    			sb.deleteCharAt(sb.length() - 1);
 		    			sb.append(",");
-		    			sb.append("\n");
 					}
+					sb.append("\n");
 				}
 	    		
 	    		if (cellService.getCellType() == Cell.CELL_TYPE_NUMERIC) {
@@ -437,7 +441,9 @@ public class ImportExcelHandler extends AbstractHandler {
 				} else if (cellService.getCellType() == Cell.CELL_TYPE_STRING) {
 					String service = cellService.getStringCellValue();
 					
-					if (!service.equals("All")) {
+					if (service.equals("All")) {
+						sb.append("\tRefersTo Service All,");
+					} else {
 						sb.append("\tRefersTo Service ");
 			    		
 		    			for (String s : service.split(", ")) {
@@ -446,8 +452,8 @@ public class ImportExcelHandler extends AbstractHandler {
 		    			// Delete last '-'
 		    			sb.deleteCharAt(sb.length() - 1);
 		    			sb.append(",");
-		    			sb.append("\n");
 					}
+					sb.append("\n");
 				}
 	    		
 	    		if (cellEnforcement.getCellType() == Cell.CELL_TYPE_NUMERIC) {
@@ -457,7 +463,9 @@ public class ImportExcelHandler extends AbstractHandler {
 				} else if (cellEnforcement.getCellType() == Cell.CELL_TYPE_STRING) {
 					String enforcement = cellEnforcement.getStringCellValue();
 					
-					if (!enforcement.equals("All")) {
+					if (enforcement.equals("All")) {
+						sb.append("\tRefersTo Enforcement All,");
+					} else {
 						sb.append("\tRefersTo Enforcement ");
 			    		
 		    			for (String s : enforcement.split(", ")) {
@@ -466,8 +474,8 @@ public class ImportExcelHandler extends AbstractHandler {
 		    			// Delete last '-'
 		    			sb.deleteCharAt(sb.length() - 1);
 		    			sb.append(",");
-		    			sb.append("\n");
 					}
+					sb.append("\n");
 				}
 	    		
 	    		sb.append("\tModality " + modality);
@@ -557,7 +565,9 @@ public class ImportExcelHandler extends AbstractHandler {
 				} else if (cellPrivateData.getCellType() == Cell.CELL_TYPE_STRING) {
 					String privateData = cellPrivateData.getStringCellValue();
 					
-					if (!privateData.equals("All")) {
+					if (privateData.equals("All")) {
+						sb.append("\tRefersTo PrivateData All,");
+					} else {
 						sb.append("\tRefersTo PrivateData ");
 			    		
 		    			for (String s : privateData.split(", ")) {
@@ -566,8 +576,8 @@ public class ImportExcelHandler extends AbstractHandler {
 		    			// Delete last '-'
 		    			sb.deleteCharAt(sb.length() - 1);
 		    			sb.append(",");
-		    			sb.append("\n");
 					}
+					sb.append("\n");
 				}
 	    		
 	    		if (cellPartOf.getCellType() == Cell.CELL_TYPE_NUMERIC) {
