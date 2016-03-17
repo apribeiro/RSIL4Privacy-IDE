@@ -103,13 +103,17 @@ public class RSLIL4PrivacyValidator extends AbstractRSLIL4PrivacyValidator {
           _or_1 = _equals_4;
         }
         if (_or_1) {
-          Month _month_5 = date.getMonth();
-          String _name_5 = _month_5.getName();
-          String _plus_4 = (_name_5 + " ");
-          int _year_4 = date.getYear();
-          String _plus_5 = (_plus_4 + Integer.valueOf(_year_4));
-          String _plus_6 = (_plus_5 + "only has 30 days");
-          this.error(_plus_6, RSLIL4PrivacyPackage.Literals.DATE__DAY);
+          int _day_4 = date.getDay();
+          boolean _greaterThan_3 = (_day_4 > 30);
+          if (_greaterThan_3) {
+            Month _month_5 = date.getMonth();
+            String _name_5 = _month_5.getName();
+            String _plus_4 = (_name_5 + " ");
+            int _year_4 = date.getYear();
+            String _plus_5 = (_plus_4 + Integer.valueOf(_year_4));
+            String _plus_6 = (_plus_5 + " only has 30 days");
+            this.error(_plus_6, RSLIL4PrivacyPackage.Literals.DATE__DAY);
+          }
         }
       }
     }

@@ -28,7 +28,9 @@ class RSLIL4PrivacyValidator extends AbstractRSLIL4PrivacyValidator {
 			}
 		} else if (date.month.name.equals("Apr") || date.month.name.equals("Jun")
 					|| date.month.name.equals("Sep") || date.month.name.equals("Nov")) {
-			error(date.month.name + ' ' + date.year + 'only has 30 days', RSLIL4PrivacyPackage.Literals.DATE__DAY)
+			if (date.day > 30) {
+				error(date.month.name + ' ' + date.year + ' only has 30 days', RSLIL4PrivacyPackage.Literals.DATE__DAY)	
+			}
 		}
 	}
 	
