@@ -1,5 +1,8 @@
 package rslingo.rslil4privacy.ui.handlers;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -334,6 +337,15 @@ public class DocumentHelper {
 			return true;
 		} catch (NumberFormatException e) {
 			return false;
+		}
+	}
+	
+	public static Date parseDate(String value) {
+		try {
+			DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+			return df.parse(value);
+		} catch (ParseException e) {
+			return null;
 		}
 	}
 }

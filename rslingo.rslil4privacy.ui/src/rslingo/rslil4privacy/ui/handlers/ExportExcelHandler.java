@@ -5,6 +5,9 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFCellStyle;
+import org.apache.poi.xssf.usermodel.XSSFCreationHelper;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -166,11 +169,19 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(rowAuthors, "HAuthors", metadata.getAuthors());
 			XSSFRow rowOrgs = (XSSFRow) DocumentHelper.getCell(sheet, "HOrganizations").getRow();
 			DocumentHelper.replaceText(rowOrgs, "HOrganizations", metadata.getOrganizations());
-			XSSFRow rowDate = (XSSFRow) DocumentHelper.getCell(sheet, "HDate").getRow();
+
+			// Set Date cell and apply style
+			Cell cellDate = DocumentHelper.getCell(sheet, "HDate");
 			Date date = metadata.getDate();
-			DocumentHelper.replaceText(rowDate, "HDate", date.getDay() + "-"
-				+ DocumentHelper.getNumberOfRSLILMonth(date.getMonth().getName())
-				+ "-" + date.getYear());
+			String dateVal = date.getDay() + "-"
+					+ DocumentHelper.getNumberOfRSLILMonth(date.getMonth().getName())
+					+ "-" + date.getYear();
+			XSSFCreationHelper createHelper = workbook.getCreationHelper();
+			XSSFCellStyle cellStyle = workbook.createCellStyle();
+			cellStyle.setDataFormat(createHelper.createDataFormat().getFormat("dd-mmm-yyyy"));
+			cellDate.setCellValue(DocumentHelper.parseDate(dateVal));
+			cellDate.setCellStyle(cellStyle);
+			
 			XSSFRow rowVersion = (XSSFRow) DocumentHelper.getCell(sheet, "HVersion").getRow();
 			DocumentHelper.replaceText(rowVersion, "HVersion", metadata.getVersion());
 		}
