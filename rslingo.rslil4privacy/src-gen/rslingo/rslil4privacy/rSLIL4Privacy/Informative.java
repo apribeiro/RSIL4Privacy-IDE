@@ -20,8 +20,11 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getCondition <em>Condition</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getPartInformative <em>Part Informative</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefPrivateData <em>Ref Private Data</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefPDAll <em>Ref PD All</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefService <em>Ref Service</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefSAll <em>Ref SAll</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefEnforcement <em>Ref Enforcement</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefEAll <em>Ref EAll</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getModality <em>Modality</em>}</li>
  * </ul>
  *
@@ -152,6 +155,32 @@ public interface Informative extends EObject
   EList<RefPrivateData> getRefPrivateData();
 
   /**
+   * Returns the value of the '<em><b>Ref PD All</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Ref PD All</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Ref PD All</em>' attribute.
+   * @see #setRefPDAll(String)
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getInformative_RefPDAll()
+   * @model
+   * @generated
+   */
+  String getRefPDAll();
+
+  /**
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefPDAll <em>Ref PD All</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Ref PD All</em>' attribute.
+   * @see #getRefPDAll()
+   * @generated
+   */
+  void setRefPDAll(String value);
+
+  /**
    * Returns the value of the '<em><b>Ref Service</b></em>' containment reference list.
    * The list contents are of type {@link rslingo.rslil4privacy.rSLIL4Privacy.RefService}.
    * <!-- begin-user-doc -->
@@ -168,6 +197,32 @@ public interface Informative extends EObject
   EList<RefService> getRefService();
 
   /**
+   * Returns the value of the '<em><b>Ref SAll</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Ref SAll</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Ref SAll</em>' attribute.
+   * @see #setRefSAll(String)
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getInformative_RefSAll()
+   * @model
+   * @generated
+   */
+  String getRefSAll();
+
+  /**
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefSAll <em>Ref SAll</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Ref SAll</em>' attribute.
+   * @see #getRefSAll()
+   * @generated
+   */
+  void setRefSAll(String value);
+
+  /**
    * Returns the value of the '<em><b>Ref Enforcement</b></em>' containment reference list.
    * The list contents are of type {@link rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement}.
    * <!-- begin-user-doc -->
@@ -182,6 +237,32 @@ public interface Informative extends EObject
    * @generated
    */
   EList<RefEnforcement> getRefEnforcement();
+
+  /**
+   * Returns the value of the '<em><b>Ref EAll</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Ref EAll</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Ref EAll</em>' attribute.
+   * @see #setRefEAll(String)
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getInformative_RefEAll()
+   * @model
+   * @generated
+   */
+  String getRefEAll();
+
+  /**
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefEAll <em>Ref EAll</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Ref EAll</em>' attribute.
+   * @see #getRefEAll()
+   * @generated
+   */
+  void setRefEAll(String value);
 
   /**
    * Returns the value of the '<em><b>Modality</b></em>' attribute.

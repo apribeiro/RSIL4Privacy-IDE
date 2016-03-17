@@ -52,7 +52,7 @@ Service:
 	'Service' name=ID '{'
 	'Name' serviceName=STRING ','
 	('Description' description=STRING ',')?
-	('RefersTo PrivateData' refPrivateData+=RefPrivateData* ',')?
+	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All') ',')?
 	('Service_Part' servicePart+=ServicePart*)? '};';
 	
 Recipient:
@@ -78,9 +78,9 @@ Collection:
 	'Description' description=STRING ','
 	'Condition' condition = STRING ','
 	('PartOf Collection' partCollection=[Collection] ',')?
-	('RefersTo PrivateData' refPrivateData+=RefPrivateData* ',')?
-	('RefersTo Service' refService+=RefService* ',')?
-	('RefersTo Enforcement' refEnforcement+=RefEnforcement* ',')?
+	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All') ',')?
+	('RefersTo Service' (refService+=RefService* | refSAll='All') ',')?
+	('RefersTo Enforcement' (refEnforcement+=RefEnforcement* | refEAll='All') ',')?
 	'Modality' modality=('Permitted'|'Obligation'|'Forbidden') '};';
 	
 Disclosure:
@@ -88,12 +88,12 @@ Disclosure:
 	'Description' description=STRING ','
 	'Condition' condition=STRING ','
 	('PartOf Disclosure' partDisclosure=[Disclosure] ',')?
-	('RefersTo Recipient' refRecipient+=RefRecipient* ',')?
-	('RefersTo Recipient-Source' refRecipientSource+=RefRecipientSource* ',')?
-	('RefersTo Recipient-Target' refRecipientTarget+=RefRecipientTarget* ',')?
-	('RefersTo PrivateData' refPrivateData+=RefPrivateData* ',')?
-	('RefersTo Service' refService+=RefService* ',')?
-	('RefersTo Enforcement' refEnforcement+=RefEnforcement* ',')?
+	('RefersTo Recipient' (refRecipient+=RefRecipient* | refRAll='All') ',')?
+	('RefersTo Recipient-Source' (refRecipientSource+=RefRecipientSource* | refRSAll='All') ',')?
+	('RefersTo Recipient-Target' (refRecipientTarget+=RefRecipientTarget* | refRTAll='All') ',')?
+	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All') ',')?
+	('RefersTo Service' (refService+=RefService* | refSAll='All') ',')?
+	('RefersTo Enforcement' (refEnforcement+=RefEnforcement* | refEAll='All') ',')?
 	'Modality' modality=('Permitted'|'Obligation'|'Forbidden') '};';
 	
 Retention:
@@ -102,9 +102,9 @@ Retention:
 	'Condition' condition=STRING ','
 	('PartOf Retention' partRetention=[Retention] ',')?
 	'Period' period=STRING ','
-	('RefersTo PrivateData' refPrivateData+=RefPrivateData*',')?
-	('RefersTo Service' refService+=RefService* ',')?
-	('RefersTo Enforcement' refEnforcement+=RefEnforcement* ',')?
+	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All') ',')?
+	('RefersTo Service' (refService+=RefService* | refSAll='All') ',')?
+	('RefersTo Enforcement' (refEnforcement+=RefEnforcement* | refEAll='All') ',')?
 	'Modality' modality=('Permitted'|'Obligation'|'Forbidden') '};';
 	
 Usage:
@@ -112,9 +112,9 @@ Usage:
 	'Description' description=STRING ','
 	'Condition' condition=STRING ','
 	('PartOf Usage' partUsage=[Usage] ',')?
-	('RefersTo PrivateData' refPrivateData+=RefPrivateData* ',')?
-	('RefersTo Service' refService+=RefService* ',')?
-	('RefersTo Enforcement' refEnforcement+=RefEnforcement* ',')?
+	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All') ',')?
+	('RefersTo Service' (refService+=RefService* | refSAll='All') ',')?
+	('RefersTo Enforcement' (refEnforcement+=RefEnforcement* | refEAll='All') ',')?
 	'Modality' modality=('Permitted'|'Obligation'|'Forbidden') '};';
 	
 Informative:
@@ -122,9 +122,9 @@ Informative:
 	'Description' description=STRING ','
 	'Condition' condition=STRING ','
 	('PartOf Informative' partInformative=[Informative] ',')?
-	('RefersTo PrivateData' refPrivateData+=RefPrivateData* ',')?
-	('RefersTo Service' refService+=RefService* ',')?
-	('RefersTo Enforcement' refEnforcement+=RefEnforcement* ',')?
+	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All') ',')?
+	('RefersTo Service' (refService+=RefService* | refSAll='All') ',')?
+	('RefersTo Enforcement' (refEnforcement+=RefEnforcement* | refEAll='All') ',')?
 	'Modality' modality=('Permitted'|'Obligation'|'Forbidden') '};';
 	
 RecipientPart:

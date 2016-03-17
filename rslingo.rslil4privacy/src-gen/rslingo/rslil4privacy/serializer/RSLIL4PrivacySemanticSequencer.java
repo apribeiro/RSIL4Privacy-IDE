@@ -150,9 +150,9 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 	 *         description=STRING 
 	 *         condition=STRING 
 	 *         partCollection=[Collection|ID]? 
-	 *         refPrivateData+=RefPrivateData* 
-	 *         refService+=RefService* 
-	 *         refEnforcement+=RefEnforcement* 
+	 *         (refPrivateData+=RefPrivateData* | refPDAll='All')? 
+	 *         (refService+=RefService* | refSAll='All')? 
+	 *         (refEnforcement+=RefEnforcement* | refEAll='All')? 
 	 *         (modality='Permitted' | modality='Obligation' | modality='Forbidden')
 	 *     )
 	 */
@@ -190,12 +190,12 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 	 *         description=STRING 
 	 *         condition=STRING 
 	 *         partDisclosure=[Disclosure|ID]? 
-	 *         refRecipient+=RefRecipient* 
-	 *         refRecipientSource+=RefRecipientSource* 
-	 *         refRecipientTarget+=RefRecipientTarget* 
-	 *         refPrivateData+=RefPrivateData* 
-	 *         refService+=RefService* 
-	 *         refEnforcement+=RefEnforcement* 
+	 *         (refRecipient+=RefRecipient* | refRAll='All')? 
+	 *         (refRecipientSource+=RefRecipientSource* | refRSAll='All')? 
+	 *         (refRecipientTarget+=RefRecipientTarget* | refRTAll='All')? 
+	 *         (refPrivateData+=RefPrivateData* | refPDAll='All')? 
+	 *         (refService+=RefService* | refSAll='All')? 
+	 *         (refEnforcement+=RefEnforcement* | refEAll='All')? 
 	 *         (modality='Permitted' | modality='Obligation' | modality='Forbidden')
 	 *     )
 	 */
@@ -236,9 +236,9 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 	 *         description=STRING 
 	 *         condition=STRING 
 	 *         partInformative=[Informative|ID]? 
-	 *         refPrivateData+=RefPrivateData* 
-	 *         refService+=RefService* 
-	 *         refEnforcement+=RefEnforcement* 
+	 *         (refPrivateData+=RefPrivateData* | refPDAll='All')? 
+	 *         (refService+=RefService* | refSAll='All')? 
+	 *         (refEnforcement+=RefEnforcement* | refEAll='All')? 
 	 *         (modality='Permitted' | modality='Obligation' | modality='Forbidden')
 	 *     )
 	 */
@@ -474,9 +474,9 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 	 *         condition=STRING 
 	 *         partRetention=[Retention|ID]? 
 	 *         period=STRING 
-	 *         refPrivateData+=RefPrivateData* 
-	 *         refService+=RefService* 
-	 *         refEnforcement+=RefEnforcement* 
+	 *         (refPrivateData+=RefPrivateData* | refPDAll='All')? 
+	 *         (refService+=RefService* | refSAll='All')? 
+	 *         (refEnforcement+=RefEnforcement* | refEAll='All')? 
 	 *         (modality='Permitted' | modality='Obligation' | modality='Forbidden')
 	 *     )
 	 */
@@ -503,7 +503,7 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (name=ID serviceName=STRING description=STRING? refPrivateData+=RefPrivateData* servicePart+=ServicePart*)
+	 *     (name=ID serviceName=STRING description=STRING? (refPrivateData+=RefPrivateData* | refPDAll='All')? servicePart+=ServicePart*)
 	 */
 	protected void sequence_Service(EObject context, Service semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -517,9 +517,9 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 	 *         description=STRING 
 	 *         condition=STRING 
 	 *         partUsage=[Usage|ID]? 
-	 *         refPrivateData+=RefPrivateData* 
-	 *         refService+=RefService* 
-	 *         refEnforcement+=RefEnforcement* 
+	 *         (refPrivateData+=RefPrivateData* | refPDAll='All')? 
+	 *         (refService+=RefService* | refSAll='All')? 
+	 *         (refEnforcement+=RefEnforcement* | refEAll='All')? 
 	 *         (modality='Permitted' | modality='Obligation' | modality='Forbidden')
 	 *     )
 	 */

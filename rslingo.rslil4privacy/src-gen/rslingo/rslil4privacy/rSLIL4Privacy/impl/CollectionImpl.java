@@ -35,8 +35,11 @@ import rslingo.rslil4privacy.rSLIL4Privacy.RefService;
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getCondition <em>Condition</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getPartCollection <em>Part Collection</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getRefPrivateData <em>Ref Private Data</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getRefPDAll <em>Ref PD All</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getRefService <em>Ref Service</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getRefSAll <em>Ref SAll</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getRefEnforcement <em>Ref Enforcement</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getRefEAll <em>Ref EAll</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.CollectionImpl#getModality <em>Modality</em>}</li>
  * </ul>
  *
@@ -125,6 +128,26 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
   protected EList<RefPrivateData> refPrivateData;
 
   /**
+   * The default value of the '{@link #getRefPDAll() <em>Ref PD All</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefPDAll()
+   * @generated
+   * @ordered
+   */
+  protected static final String REF_PD_ALL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRefPDAll() <em>Ref PD All</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefPDAll()
+   * @generated
+   * @ordered
+   */
+  protected String refPDAll = REF_PD_ALL_EDEFAULT;
+
+  /**
    * The cached value of the '{@link #getRefService() <em>Ref Service</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -135,6 +158,26 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
   protected EList<RefService> refService;
 
   /**
+   * The default value of the '{@link #getRefSAll() <em>Ref SAll</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefSAll()
+   * @generated
+   * @ordered
+   */
+  protected static final String REF_SALL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRefSAll() <em>Ref SAll</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefSAll()
+   * @generated
+   * @ordered
+   */
+  protected String refSAll = REF_SALL_EDEFAULT;
+
+  /**
    * The cached value of the '{@link #getRefEnforcement() <em>Ref Enforcement</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -143,6 +186,26 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
    * @ordered
    */
   protected EList<RefEnforcement> refEnforcement;
+
+  /**
+   * The default value of the '{@link #getRefEAll() <em>Ref EAll</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefEAll()
+   * @generated
+   * @ordered
+   */
+  protected static final String REF_EALL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRefEAll() <em>Ref EAll</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefEAll()
+   * @generated
+   * @ordered
+   */
+  protected String refEAll = REF_EALL_EDEFAULT;
 
   /**
    * The default value of the '{@link #getModality() <em>Modality</em>}' attribute.
@@ -316,6 +379,29 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getRefPDAll()
+  {
+    return refPDAll;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRefPDAll(String newRefPDAll)
+  {
+    String oldRefPDAll = refPDAll;
+    refPDAll = newRefPDAll;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.COLLECTION__REF_PD_ALL, oldRefPDAll, refPDAll));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<RefService> getRefService()
   {
     if (refService == null)
@@ -330,6 +416,29 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getRefSAll()
+  {
+    return refSAll;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRefSAll(String newRefSAll)
+  {
+    String oldRefSAll = refSAll;
+    refSAll = newRefSAll;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.COLLECTION__REF_SALL, oldRefSAll, refSAll));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<RefEnforcement> getRefEnforcement()
   {
     if (refEnforcement == null)
@@ -337,6 +446,29 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
       refEnforcement = new EObjectContainmentEList<RefEnforcement>(RefEnforcement.class, this, RSLIL4PrivacyPackage.COLLECTION__REF_ENFORCEMENT);
     }
     return refEnforcement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getRefEAll()
+  {
+    return refEAll;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRefEAll(String newRefEAll)
+  {
+    String oldRefEAll = refEAll;
+    refEAll = newRefEAll;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.COLLECTION__REF_EALL, oldRefEAll, refEAll));
   }
 
   /**
@@ -403,10 +535,16 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
         return basicGetPartCollection();
       case RSLIL4PrivacyPackage.COLLECTION__REF_PRIVATE_DATA:
         return getRefPrivateData();
+      case RSLIL4PrivacyPackage.COLLECTION__REF_PD_ALL:
+        return getRefPDAll();
       case RSLIL4PrivacyPackage.COLLECTION__REF_SERVICE:
         return getRefService();
+      case RSLIL4PrivacyPackage.COLLECTION__REF_SALL:
+        return getRefSAll();
       case RSLIL4PrivacyPackage.COLLECTION__REF_ENFORCEMENT:
         return getRefEnforcement();
+      case RSLIL4PrivacyPackage.COLLECTION__REF_EALL:
+        return getRefEAll();
       case RSLIL4PrivacyPackage.COLLECTION__MODALITY:
         return getModality();
     }
@@ -440,13 +578,22 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
         getRefPrivateData().clear();
         getRefPrivateData().addAll((java.util.Collection<? extends RefPrivateData>)newValue);
         return;
+      case RSLIL4PrivacyPackage.COLLECTION__REF_PD_ALL:
+        setRefPDAll((String)newValue);
+        return;
       case RSLIL4PrivacyPackage.COLLECTION__REF_SERVICE:
         getRefService().clear();
         getRefService().addAll((java.util.Collection<? extends RefService>)newValue);
         return;
+      case RSLIL4PrivacyPackage.COLLECTION__REF_SALL:
+        setRefSAll((String)newValue);
+        return;
       case RSLIL4PrivacyPackage.COLLECTION__REF_ENFORCEMENT:
         getRefEnforcement().clear();
         getRefEnforcement().addAll((java.util.Collection<? extends RefEnforcement>)newValue);
+        return;
+      case RSLIL4PrivacyPackage.COLLECTION__REF_EALL:
+        setRefEAll((String)newValue);
         return;
       case RSLIL4PrivacyPackage.COLLECTION__MODALITY:
         setModality((String)newValue);
@@ -480,11 +627,20 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
       case RSLIL4PrivacyPackage.COLLECTION__REF_PRIVATE_DATA:
         getRefPrivateData().clear();
         return;
+      case RSLIL4PrivacyPackage.COLLECTION__REF_PD_ALL:
+        setRefPDAll(REF_PD_ALL_EDEFAULT);
+        return;
       case RSLIL4PrivacyPackage.COLLECTION__REF_SERVICE:
         getRefService().clear();
         return;
+      case RSLIL4PrivacyPackage.COLLECTION__REF_SALL:
+        setRefSAll(REF_SALL_EDEFAULT);
+        return;
       case RSLIL4PrivacyPackage.COLLECTION__REF_ENFORCEMENT:
         getRefEnforcement().clear();
+        return;
+      case RSLIL4PrivacyPackage.COLLECTION__REF_EALL:
+        setRefEAll(REF_EALL_EDEFAULT);
         return;
       case RSLIL4PrivacyPackage.COLLECTION__MODALITY:
         setModality(MODALITY_EDEFAULT);
@@ -513,10 +669,16 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
         return partCollection != null;
       case RSLIL4PrivacyPackage.COLLECTION__REF_PRIVATE_DATA:
         return refPrivateData != null && !refPrivateData.isEmpty();
+      case RSLIL4PrivacyPackage.COLLECTION__REF_PD_ALL:
+        return REF_PD_ALL_EDEFAULT == null ? refPDAll != null : !REF_PD_ALL_EDEFAULT.equals(refPDAll);
       case RSLIL4PrivacyPackage.COLLECTION__REF_SERVICE:
         return refService != null && !refService.isEmpty();
+      case RSLIL4PrivacyPackage.COLLECTION__REF_SALL:
+        return REF_SALL_EDEFAULT == null ? refSAll != null : !REF_SALL_EDEFAULT.equals(refSAll);
       case RSLIL4PrivacyPackage.COLLECTION__REF_ENFORCEMENT:
         return refEnforcement != null && !refEnforcement.isEmpty();
+      case RSLIL4PrivacyPackage.COLLECTION__REF_EALL:
+        return REF_EALL_EDEFAULT == null ? refEAll != null : !REF_EALL_EDEFAULT.equals(refEAll);
       case RSLIL4PrivacyPackage.COLLECTION__MODALITY:
         return MODALITY_EDEFAULT == null ? modality != null : !MODALITY_EDEFAULT.equals(modality);
     }
@@ -540,6 +702,12 @@ public class CollectionImpl extends MinimalEObjectImpl.Container implements Coll
     result.append(description);
     result.append(", condition: ");
     result.append(condition);
+    result.append(", refPDAll: ");
+    result.append(refPDAll);
+    result.append(", refSAll: ");
+    result.append(refSAll);
+    result.append(", refEAll: ");
+    result.append(refEAll);
     result.append(", modality: ");
     result.append(modality);
     result.append(')');

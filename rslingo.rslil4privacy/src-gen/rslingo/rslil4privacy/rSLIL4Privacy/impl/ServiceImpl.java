@@ -35,6 +35,7 @@ import rslingo.rslil4privacy.rSLIL4Privacy.ServicePart;
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServiceImpl#getServiceName <em>Service Name</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServiceImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServiceImpl#getRefPrivateData <em>Ref Private Data</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServiceImpl#getRefPDAll <em>Ref PD All</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServiceImpl#getServicePart <em>Service Part</em>}</li>
  * </ul>
  *
@@ -111,6 +112,26 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
    * @ordered
    */
   protected EList<RefPrivateData> refPrivateData;
+
+  /**
+   * The default value of the '{@link #getRefPDAll() <em>Ref PD All</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefPDAll()
+   * @generated
+   * @ordered
+   */
+  protected static final String REF_PD_ALL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRefPDAll() <em>Ref PD All</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefPDAll()
+   * @generated
+   * @ordered
+   */
+  protected String refPDAll = REF_PD_ALL_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getServicePart() <em>Service Part</em>}' containment reference list.
@@ -231,6 +252,29 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getRefPDAll()
+  {
+    return refPDAll;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRefPDAll(String newRefPDAll)
+  {
+    String oldRefPDAll = refPDAll;
+    refPDAll = newRefPDAll;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.SERVICE__REF_PD_ALL, oldRefPDAll, refPDAll));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<ServicePart> getServicePart()
   {
     if (servicePart == null)
@@ -276,6 +320,8 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
         return getDescription();
       case RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA:
         return getRefPrivateData();
+      case RSLIL4PrivacyPackage.SERVICE__REF_PD_ALL:
+        return getRefPDAll();
       case RSLIL4PrivacyPackage.SERVICE__SERVICE_PART:
         return getServicePart();
     }
@@ -305,6 +351,9 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
       case RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA:
         getRefPrivateData().clear();
         getRefPrivateData().addAll((Collection<? extends RefPrivateData>)newValue);
+        return;
+      case RSLIL4PrivacyPackage.SERVICE__REF_PD_ALL:
+        setRefPDAll((String)newValue);
         return;
       case RSLIL4PrivacyPackage.SERVICE__SERVICE_PART:
         getServicePart().clear();
@@ -336,6 +385,9 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
       case RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA:
         getRefPrivateData().clear();
         return;
+      case RSLIL4PrivacyPackage.SERVICE__REF_PD_ALL:
+        setRefPDAll(REF_PD_ALL_EDEFAULT);
+        return;
       case RSLIL4PrivacyPackage.SERVICE__SERVICE_PART:
         getServicePart().clear();
         return;
@@ -361,6 +413,8 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
       case RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA:
         return refPrivateData != null && !refPrivateData.isEmpty();
+      case RSLIL4PrivacyPackage.SERVICE__REF_PD_ALL:
+        return REF_PD_ALL_EDEFAULT == null ? refPDAll != null : !REF_PD_ALL_EDEFAULT.equals(refPDAll);
       case RSLIL4PrivacyPackage.SERVICE__SERVICE_PART:
         return servicePart != null && !servicePart.isEmpty();
     }
@@ -384,6 +438,8 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
     result.append(serviceName);
     result.append(", description: ");
     result.append(description);
+    result.append(", refPDAll: ");
+    result.append(refPDAll);
     result.append(')');
     return result.toString();
   }

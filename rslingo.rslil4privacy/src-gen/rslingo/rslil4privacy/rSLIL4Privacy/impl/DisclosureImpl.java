@@ -40,11 +40,17 @@ import rslingo.rslil4privacy.rSLIL4Privacy.RefService;
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getCondition <em>Condition</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getPartDisclosure <em>Part Disclosure</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefRecipient <em>Ref Recipient</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefRAll <em>Ref RAll</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefRecipientSource <em>Ref Recipient Source</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefRSAll <em>Ref RS All</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefRecipientTarget <em>Ref Recipient Target</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefRTAll <em>Ref RT All</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefPrivateData <em>Ref Private Data</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefPDAll <em>Ref PD All</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefService <em>Ref Service</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefSAll <em>Ref SAll</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefEnforcement <em>Ref Enforcement</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getRefEAll <em>Ref EAll</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.DisclosureImpl#getModality <em>Modality</em>}</li>
  * </ul>
  *
@@ -133,6 +139,26 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
   protected EList<RefRecipient> refRecipient;
 
   /**
+   * The default value of the '{@link #getRefRAll() <em>Ref RAll</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefRAll()
+   * @generated
+   * @ordered
+   */
+  protected static final String REF_RALL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRefRAll() <em>Ref RAll</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefRAll()
+   * @generated
+   * @ordered
+   */
+  protected String refRAll = REF_RALL_EDEFAULT;
+
+  /**
    * The cached value of the '{@link #getRefRecipientSource() <em>Ref Recipient Source</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -141,6 +167,26 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
    * @ordered
    */
   protected EList<RefRecipientSource> refRecipientSource;
+
+  /**
+   * The default value of the '{@link #getRefRSAll() <em>Ref RS All</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefRSAll()
+   * @generated
+   * @ordered
+   */
+  protected static final String REF_RS_ALL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRefRSAll() <em>Ref RS All</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefRSAll()
+   * @generated
+   * @ordered
+   */
+  protected String refRSAll = REF_RS_ALL_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getRefRecipientTarget() <em>Ref Recipient Target</em>}' containment reference list.
@@ -153,6 +199,26 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
   protected EList<RefRecipientTarget> refRecipientTarget;
 
   /**
+   * The default value of the '{@link #getRefRTAll() <em>Ref RT All</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefRTAll()
+   * @generated
+   * @ordered
+   */
+  protected static final String REF_RT_ALL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRefRTAll() <em>Ref RT All</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefRTAll()
+   * @generated
+   * @ordered
+   */
+  protected String refRTAll = REF_RT_ALL_EDEFAULT;
+
+  /**
    * The cached value of the '{@link #getRefPrivateData() <em>Ref Private Data</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -161,6 +227,26 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
    * @ordered
    */
   protected EList<RefPrivateData> refPrivateData;
+
+  /**
+   * The default value of the '{@link #getRefPDAll() <em>Ref PD All</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefPDAll()
+   * @generated
+   * @ordered
+   */
+  protected static final String REF_PD_ALL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRefPDAll() <em>Ref PD All</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefPDAll()
+   * @generated
+   * @ordered
+   */
+  protected String refPDAll = REF_PD_ALL_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getRefService() <em>Ref Service</em>}' containment reference list.
@@ -173,6 +259,26 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
   protected EList<RefService> refService;
 
   /**
+   * The default value of the '{@link #getRefSAll() <em>Ref SAll</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefSAll()
+   * @generated
+   * @ordered
+   */
+  protected static final String REF_SALL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRefSAll() <em>Ref SAll</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefSAll()
+   * @generated
+   * @ordered
+   */
+  protected String refSAll = REF_SALL_EDEFAULT;
+
+  /**
    * The cached value of the '{@link #getRefEnforcement() <em>Ref Enforcement</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -181,6 +287,26 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
    * @ordered
    */
   protected EList<RefEnforcement> refEnforcement;
+
+  /**
+   * The default value of the '{@link #getRefEAll() <em>Ref EAll</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefEAll()
+   * @generated
+   * @ordered
+   */
+  protected static final String REF_EALL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRefEAll() <em>Ref EAll</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefEAll()
+   * @generated
+   * @ordered
+   */
+  protected String refEAll = REF_EALL_EDEFAULT;
 
   /**
    * The default value of the '{@link #getModality() <em>Modality</em>}' attribute.
@@ -354,6 +480,29 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getRefRAll()
+  {
+    return refRAll;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRefRAll(String newRefRAll)
+  {
+    String oldRefRAll = refRAll;
+    refRAll = newRefRAll;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.DISCLOSURE__REF_RALL, oldRefRAll, refRAll));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<RefRecipientSource> getRefRecipientSource()
   {
     if (refRecipientSource == null)
@@ -361,6 +510,29 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
       refRecipientSource = new EObjectContainmentEList<RefRecipientSource>(RefRecipientSource.class, this, RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_SOURCE);
     }
     return refRecipientSource;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getRefRSAll()
+  {
+    return refRSAll;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRefRSAll(String newRefRSAll)
+  {
+    String oldRefRSAll = refRSAll;
+    refRSAll = newRefRSAll;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.DISCLOSURE__REF_RS_ALL, oldRefRSAll, refRSAll));
   }
 
   /**
@@ -382,6 +554,29 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getRefRTAll()
+  {
+    return refRTAll;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRefRTAll(String newRefRTAll)
+  {
+    String oldRefRTAll = refRTAll;
+    refRTAll = newRefRTAll;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.DISCLOSURE__REF_RT_ALL, oldRefRTAll, refRTAll));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<RefPrivateData> getRefPrivateData()
   {
     if (refPrivateData == null)
@@ -389,6 +584,29 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
       refPrivateData = new EObjectContainmentEList<RefPrivateData>(RefPrivateData.class, this, RSLIL4PrivacyPackage.DISCLOSURE__REF_PRIVATE_DATA);
     }
     return refPrivateData;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getRefPDAll()
+  {
+    return refPDAll;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRefPDAll(String newRefPDAll)
+  {
+    String oldRefPDAll = refPDAll;
+    refPDAll = newRefPDAll;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.DISCLOSURE__REF_PD_ALL, oldRefPDAll, refPDAll));
   }
 
   /**
@@ -410,6 +628,29 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getRefSAll()
+  {
+    return refSAll;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRefSAll(String newRefSAll)
+  {
+    String oldRefSAll = refSAll;
+    refSAll = newRefSAll;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.DISCLOSURE__REF_SALL, oldRefSAll, refSAll));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<RefEnforcement> getRefEnforcement()
   {
     if (refEnforcement == null)
@@ -417,6 +658,29 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
       refEnforcement = new EObjectContainmentEList<RefEnforcement>(RefEnforcement.class, this, RSLIL4PrivacyPackage.DISCLOSURE__REF_ENFORCEMENT);
     }
     return refEnforcement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getRefEAll()
+  {
+    return refEAll;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRefEAll(String newRefEAll)
+  {
+    String oldRefEAll = refEAll;
+    refEAll = newRefEAll;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.DISCLOSURE__REF_EALL, oldRefEAll, refEAll));
   }
 
   /**
@@ -489,16 +753,28 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
         return basicGetPartDisclosure();
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT:
         return getRefRecipient();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RALL:
+        return getRefRAll();
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_SOURCE:
         return getRefRecipientSource();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RS_ALL:
+        return getRefRSAll();
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_TARGET:
         return getRefRecipientTarget();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RT_ALL:
+        return getRefRTAll();
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_PRIVATE_DATA:
         return getRefPrivateData();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_PD_ALL:
+        return getRefPDAll();
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_SERVICE:
         return getRefService();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_SALL:
+        return getRefSAll();
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_ENFORCEMENT:
         return getRefEnforcement();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_EALL:
+        return getRefEAll();
       case RSLIL4PrivacyPackage.DISCLOSURE__MODALITY:
         return getModality();
     }
@@ -532,25 +808,43 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
         getRefRecipient().clear();
         getRefRecipient().addAll((Collection<? extends RefRecipient>)newValue);
         return;
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RALL:
+        setRefRAll((String)newValue);
+        return;
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_SOURCE:
         getRefRecipientSource().clear();
         getRefRecipientSource().addAll((Collection<? extends RefRecipientSource>)newValue);
+        return;
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RS_ALL:
+        setRefRSAll((String)newValue);
         return;
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_TARGET:
         getRefRecipientTarget().clear();
         getRefRecipientTarget().addAll((Collection<? extends RefRecipientTarget>)newValue);
         return;
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RT_ALL:
+        setRefRTAll((String)newValue);
+        return;
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_PRIVATE_DATA:
         getRefPrivateData().clear();
         getRefPrivateData().addAll((Collection<? extends RefPrivateData>)newValue);
+        return;
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_PD_ALL:
+        setRefPDAll((String)newValue);
         return;
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_SERVICE:
         getRefService().clear();
         getRefService().addAll((Collection<? extends RefService>)newValue);
         return;
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_SALL:
+        setRefSAll((String)newValue);
+        return;
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_ENFORCEMENT:
         getRefEnforcement().clear();
         getRefEnforcement().addAll((Collection<? extends RefEnforcement>)newValue);
+        return;
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_EALL:
+        setRefEAll((String)newValue);
         return;
       case RSLIL4PrivacyPackage.DISCLOSURE__MODALITY:
         setModality((String)newValue);
@@ -584,20 +878,38 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT:
         getRefRecipient().clear();
         return;
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RALL:
+        setRefRAll(REF_RALL_EDEFAULT);
+        return;
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_SOURCE:
         getRefRecipientSource().clear();
+        return;
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RS_ALL:
+        setRefRSAll(REF_RS_ALL_EDEFAULT);
         return;
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_TARGET:
         getRefRecipientTarget().clear();
         return;
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RT_ALL:
+        setRefRTAll(REF_RT_ALL_EDEFAULT);
+        return;
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_PRIVATE_DATA:
         getRefPrivateData().clear();
+        return;
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_PD_ALL:
+        setRefPDAll(REF_PD_ALL_EDEFAULT);
         return;
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_SERVICE:
         getRefService().clear();
         return;
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_SALL:
+        setRefSAll(REF_SALL_EDEFAULT);
+        return;
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_ENFORCEMENT:
         getRefEnforcement().clear();
+        return;
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_EALL:
+        setRefEAll(REF_EALL_EDEFAULT);
         return;
       case RSLIL4PrivacyPackage.DISCLOSURE__MODALITY:
         setModality(MODALITY_EDEFAULT);
@@ -626,16 +938,28 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
         return partDisclosure != null;
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT:
         return refRecipient != null && !refRecipient.isEmpty();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RALL:
+        return REF_RALL_EDEFAULT == null ? refRAll != null : !REF_RALL_EDEFAULT.equals(refRAll);
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_SOURCE:
         return refRecipientSource != null && !refRecipientSource.isEmpty();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RS_ALL:
+        return REF_RS_ALL_EDEFAULT == null ? refRSAll != null : !REF_RS_ALL_EDEFAULT.equals(refRSAll);
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_RECIPIENT_TARGET:
         return refRecipientTarget != null && !refRecipientTarget.isEmpty();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_RT_ALL:
+        return REF_RT_ALL_EDEFAULT == null ? refRTAll != null : !REF_RT_ALL_EDEFAULT.equals(refRTAll);
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_PRIVATE_DATA:
         return refPrivateData != null && !refPrivateData.isEmpty();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_PD_ALL:
+        return REF_PD_ALL_EDEFAULT == null ? refPDAll != null : !REF_PD_ALL_EDEFAULT.equals(refPDAll);
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_SERVICE:
         return refService != null && !refService.isEmpty();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_SALL:
+        return REF_SALL_EDEFAULT == null ? refSAll != null : !REF_SALL_EDEFAULT.equals(refSAll);
       case RSLIL4PrivacyPackage.DISCLOSURE__REF_ENFORCEMENT:
         return refEnforcement != null && !refEnforcement.isEmpty();
+      case RSLIL4PrivacyPackage.DISCLOSURE__REF_EALL:
+        return REF_EALL_EDEFAULT == null ? refEAll != null : !REF_EALL_EDEFAULT.equals(refEAll);
       case RSLIL4PrivacyPackage.DISCLOSURE__MODALITY:
         return MODALITY_EDEFAULT == null ? modality != null : !MODALITY_EDEFAULT.equals(modality);
     }
@@ -659,6 +983,18 @@ public class DisclosureImpl extends MinimalEObjectImpl.Container implements Disc
     result.append(description);
     result.append(", condition: ");
     result.append(condition);
+    result.append(", refRAll: ");
+    result.append(refRAll);
+    result.append(", refRSAll: ");
+    result.append(refRSAll);
+    result.append(", refRTAll: ");
+    result.append(refRTAll);
+    result.append(", refPDAll: ");
+    result.append(refPDAll);
+    result.append(", refSAll: ");
+    result.append(refSAll);
+    result.append(", refEAll: ");
+    result.append(refEAll);
     result.append(", modality: ");
     result.append(modality);
     result.append(')');

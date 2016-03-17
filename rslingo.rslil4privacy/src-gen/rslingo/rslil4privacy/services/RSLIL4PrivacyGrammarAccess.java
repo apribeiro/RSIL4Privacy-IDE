@@ -552,8 +552,11 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_6_2 = (Keyword)cGroup_6.eContents().get(2);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Keyword cRefersToPrivateDataKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cRefPrivateDataAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cRefPrivateDataRefPrivateDataParserRuleCall_7_1_0 = (RuleCall)cRefPrivateDataAssignment_7_1.eContents().get(0);
+		private final Alternatives cAlternatives_7_1 = (Alternatives)cGroup_7.eContents().get(1);
+		private final Assignment cRefPrivateDataAssignment_7_1_0 = (Assignment)cAlternatives_7_1.eContents().get(0);
+		private final RuleCall cRefPrivateDataRefPrivateDataParserRuleCall_7_1_0_0 = (RuleCall)cRefPrivateDataAssignment_7_1_0.eContents().get(0);
+		private final Assignment cRefPDAllAssignment_7_1_1 = (Assignment)cAlternatives_7_1.eContents().get(1);
+		private final Keyword cRefPDAllAllKeyword_7_1_1_0 = (Keyword)cRefPDAllAssignment_7_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_7_2 = (Keyword)cGroup_7.eContents().get(2);
 		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
 		private final Keyword cService_PartKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
@@ -563,11 +566,11 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Service:
 		//	"Service" name=ID "{" "Name" serviceName=STRING "," ("Description" description=STRING ",")? ("RefersTo PrivateData"
-		//	refPrivateData+=RefPrivateData* ",")? ("Service_Part" servicePart+=ServicePart*)? "};";
+		//	(refPrivateData+=RefPrivateData* | refPDAll="All") ",")? ("Service_Part" servicePart+=ServicePart*)? "};";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"Service" name=ID "{" "Name" serviceName=STRING "," ("Description" description=STRING ",")? ("RefersTo PrivateData"
-		//refPrivateData+=RefPrivateData* ",")? ("Service_Part" servicePart+=ServicePart*)? "};"
+		//(refPrivateData+=RefPrivateData* | refPDAll="All") ",")? ("Service_Part" servicePart+=ServicePart*)? "};"
 		public Group getGroup() { return cGroup; }
 
 		//"Service"
@@ -609,17 +612,26 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//","
 		public Keyword getCommaKeyword_6_2() { return cCommaKeyword_6_2; }
 
-		//("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")?
+		//("RefersTo PrivateData" (refPrivateData+=RefPrivateData* | refPDAll="All") ",")?
 		public Group getGroup_7() { return cGroup_7; }
 
 		//"RefersTo PrivateData"
 		public Keyword getRefersToPrivateDataKeyword_7_0() { return cRefersToPrivateDataKeyword_7_0; }
 
+		//refPrivateData+=RefPrivateData* | refPDAll="All"
+		public Alternatives getAlternatives_7_1() { return cAlternatives_7_1; }
+
 		//refPrivateData+=RefPrivateData*
-		public Assignment getRefPrivateDataAssignment_7_1() { return cRefPrivateDataAssignment_7_1; }
+		public Assignment getRefPrivateDataAssignment_7_1_0() { return cRefPrivateDataAssignment_7_1_0; }
 
 		//RefPrivateData
-		public RuleCall getRefPrivateDataRefPrivateDataParserRuleCall_7_1_0() { return cRefPrivateDataRefPrivateDataParserRuleCall_7_1_0; }
+		public RuleCall getRefPrivateDataRefPrivateDataParserRuleCall_7_1_0_0() { return cRefPrivateDataRefPrivateDataParserRuleCall_7_1_0_0; }
+
+		//refPDAll="All"
+		public Assignment getRefPDAllAssignment_7_1_1() { return cRefPDAllAssignment_7_1_1; }
+
+		//"All"
+		public Keyword getRefPDAllAllKeyword_7_1_1_0() { return cRefPDAllAllKeyword_7_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_7_2() { return cCommaKeyword_7_2; }
@@ -933,18 +945,27 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_9_2 = (Keyword)cGroup_9.eContents().get(2);
 		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
 		private final Keyword cRefersToPrivateDataKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Assignment cRefPrivateDataAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
-		private final RuleCall cRefPrivateDataRefPrivateDataParserRuleCall_10_1_0 = (RuleCall)cRefPrivateDataAssignment_10_1.eContents().get(0);
+		private final Alternatives cAlternatives_10_1 = (Alternatives)cGroup_10.eContents().get(1);
+		private final Assignment cRefPrivateDataAssignment_10_1_0 = (Assignment)cAlternatives_10_1.eContents().get(0);
+		private final RuleCall cRefPrivateDataRefPrivateDataParserRuleCall_10_1_0_0 = (RuleCall)cRefPrivateDataAssignment_10_1_0.eContents().get(0);
+		private final Assignment cRefPDAllAssignment_10_1_1 = (Assignment)cAlternatives_10_1.eContents().get(1);
+		private final Keyword cRefPDAllAllKeyword_10_1_1_0 = (Keyword)cRefPDAllAssignment_10_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_10_2 = (Keyword)cGroup_10.eContents().get(2);
 		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
 		private final Keyword cRefersToServiceKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
-		private final Assignment cRefServiceAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
-		private final RuleCall cRefServiceRefServiceParserRuleCall_11_1_0 = (RuleCall)cRefServiceAssignment_11_1.eContents().get(0);
+		private final Alternatives cAlternatives_11_1 = (Alternatives)cGroup_11.eContents().get(1);
+		private final Assignment cRefServiceAssignment_11_1_0 = (Assignment)cAlternatives_11_1.eContents().get(0);
+		private final RuleCall cRefServiceRefServiceParserRuleCall_11_1_0_0 = (RuleCall)cRefServiceAssignment_11_1_0.eContents().get(0);
+		private final Assignment cRefSAllAssignment_11_1_1 = (Assignment)cAlternatives_11_1.eContents().get(1);
+		private final Keyword cRefSAllAllKeyword_11_1_1_0 = (Keyword)cRefSAllAssignment_11_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_11_2 = (Keyword)cGroup_11.eContents().get(2);
 		private final Group cGroup_12 = (Group)cGroup.eContents().get(12);
 		private final Keyword cRefersToEnforcementKeyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
-		private final Assignment cRefEnforcementAssignment_12_1 = (Assignment)cGroup_12.eContents().get(1);
-		private final RuleCall cRefEnforcementRefEnforcementParserRuleCall_12_1_0 = (RuleCall)cRefEnforcementAssignment_12_1.eContents().get(0);
+		private final Alternatives cAlternatives_12_1 = (Alternatives)cGroup_12.eContents().get(1);
+		private final Assignment cRefEnforcementAssignment_12_1_0 = (Assignment)cAlternatives_12_1.eContents().get(0);
+		private final RuleCall cRefEnforcementRefEnforcementParserRuleCall_12_1_0_0 = (RuleCall)cRefEnforcementAssignment_12_1_0.eContents().get(0);
+		private final Assignment cRefEAllAssignment_12_1_1 = (Assignment)cAlternatives_12_1.eContents().get(1);
+		private final Keyword cRefEAllAllKeyword_12_1_1_0 = (Keyword)cRefEAllAssignment_12_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_12_2 = (Keyword)cGroup_12.eContents().get(2);
 		private final Keyword cModalityKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Assignment cModalityAssignment_14 = (Assignment)cGroup.eContents().get(14);
@@ -956,15 +977,17 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Collection:
 		//	"Collection" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Collection"
-		//	partCollection=[Collection] ",")? ("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")? ("RefersTo Service"
-		//	refService+=RefService* ",")? ("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")? "Modality"
-		//	modality=("Permitted" | "Obligation" | "Forbidden") "};";
+		//	partCollection=[Collection] ",")? ("RefersTo PrivateData" (refPrivateData+=RefPrivateData* | refPDAll="All") ",")?
+		//	("RefersTo Service" (refService+=RefService* | refSAll="All") ",")? ("RefersTo Enforcement"
+		//	(refEnforcement+=RefEnforcement* | refEAll="All") ",")? "Modality" modality=("Permitted" | "Obligation" |
+		//	"Forbidden") "};";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"Collection" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Collection"
-		//partCollection=[Collection] ",")? ("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")? ("RefersTo Service"
-		//refService+=RefService* ",")? ("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")? "Modality"
-		//modality=("Permitted" | "Obligation" | "Forbidden") "};"
+		//partCollection=[Collection] ",")? ("RefersTo PrivateData" (refPrivateData+=RefPrivateData* | refPDAll="All") ",")?
+		//("RefersTo Service" (refService+=RefService* | refSAll="All") ",")? ("RefersTo Enforcement"
+		//(refEnforcement+=RefEnforcement* | refEAll="All") ",")? "Modality" modality=("Permitted" | "Obligation" | "Forbidden")
+		//"};"
 		public Group getGroup() { return cGroup; }
 
 		//"Collection"
@@ -1021,47 +1044,74 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//","
 		public Keyword getCommaKeyword_9_2() { return cCommaKeyword_9_2; }
 
-		//("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")?
+		//("RefersTo PrivateData" (refPrivateData+=RefPrivateData* | refPDAll="All") ",")?
 		public Group getGroup_10() { return cGroup_10; }
 
 		//"RefersTo PrivateData"
 		public Keyword getRefersToPrivateDataKeyword_10_0() { return cRefersToPrivateDataKeyword_10_0; }
 
+		//refPrivateData+=RefPrivateData* | refPDAll="All"
+		public Alternatives getAlternatives_10_1() { return cAlternatives_10_1; }
+
 		//refPrivateData+=RefPrivateData*
-		public Assignment getRefPrivateDataAssignment_10_1() { return cRefPrivateDataAssignment_10_1; }
+		public Assignment getRefPrivateDataAssignment_10_1_0() { return cRefPrivateDataAssignment_10_1_0; }
 
 		//RefPrivateData
-		public RuleCall getRefPrivateDataRefPrivateDataParserRuleCall_10_1_0() { return cRefPrivateDataRefPrivateDataParserRuleCall_10_1_0; }
+		public RuleCall getRefPrivateDataRefPrivateDataParserRuleCall_10_1_0_0() { return cRefPrivateDataRefPrivateDataParserRuleCall_10_1_0_0; }
+
+		//refPDAll="All"
+		public Assignment getRefPDAllAssignment_10_1_1() { return cRefPDAllAssignment_10_1_1; }
+
+		//"All"
+		public Keyword getRefPDAllAllKeyword_10_1_1_0() { return cRefPDAllAllKeyword_10_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_10_2() { return cCommaKeyword_10_2; }
 
-		//("RefersTo Service" refService+=RefService* ",")?
+		//("RefersTo Service" (refService+=RefService* | refSAll="All") ",")?
 		public Group getGroup_11() { return cGroup_11; }
 
 		//"RefersTo Service"
 		public Keyword getRefersToServiceKeyword_11_0() { return cRefersToServiceKeyword_11_0; }
 
+		//refService+=RefService* | refSAll="All"
+		public Alternatives getAlternatives_11_1() { return cAlternatives_11_1; }
+
 		//refService+=RefService*
-		public Assignment getRefServiceAssignment_11_1() { return cRefServiceAssignment_11_1; }
+		public Assignment getRefServiceAssignment_11_1_0() { return cRefServiceAssignment_11_1_0; }
 
 		//RefService
-		public RuleCall getRefServiceRefServiceParserRuleCall_11_1_0() { return cRefServiceRefServiceParserRuleCall_11_1_0; }
+		public RuleCall getRefServiceRefServiceParserRuleCall_11_1_0_0() { return cRefServiceRefServiceParserRuleCall_11_1_0_0; }
+
+		//refSAll="All"
+		public Assignment getRefSAllAssignment_11_1_1() { return cRefSAllAssignment_11_1_1; }
+
+		//"All"
+		public Keyword getRefSAllAllKeyword_11_1_1_0() { return cRefSAllAllKeyword_11_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_11_2() { return cCommaKeyword_11_2; }
 
-		//("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")?
+		//("RefersTo Enforcement" (refEnforcement+=RefEnforcement* | refEAll="All") ",")?
 		public Group getGroup_12() { return cGroup_12; }
 
 		//"RefersTo Enforcement"
 		public Keyword getRefersToEnforcementKeyword_12_0() { return cRefersToEnforcementKeyword_12_0; }
 
+		//refEnforcement+=RefEnforcement* | refEAll="All"
+		public Alternatives getAlternatives_12_1() { return cAlternatives_12_1; }
+
 		//refEnforcement+=RefEnforcement*
-		public Assignment getRefEnforcementAssignment_12_1() { return cRefEnforcementAssignment_12_1; }
+		public Assignment getRefEnforcementAssignment_12_1_0() { return cRefEnforcementAssignment_12_1_0; }
 
 		//RefEnforcement
-		public RuleCall getRefEnforcementRefEnforcementParserRuleCall_12_1_0() { return cRefEnforcementRefEnforcementParserRuleCall_12_1_0; }
+		public RuleCall getRefEnforcementRefEnforcementParserRuleCall_12_1_0_0() { return cRefEnforcementRefEnforcementParserRuleCall_12_1_0_0; }
+
+		//refEAll="All"
+		public Assignment getRefEAllAssignment_12_1_1() { return cRefEAllAssignment_12_1_1; }
+
+		//"All"
+		public Keyword getRefEAllAllKeyword_12_1_1_0() { return cRefEAllAllKeyword_12_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_12_2() { return cCommaKeyword_12_2; }
@@ -1111,33 +1161,51 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_9_2 = (Keyword)cGroup_9.eContents().get(2);
 		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
 		private final Keyword cRefersToRecipientKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Assignment cRefRecipientAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
-		private final RuleCall cRefRecipientRefRecipientParserRuleCall_10_1_0 = (RuleCall)cRefRecipientAssignment_10_1.eContents().get(0);
+		private final Alternatives cAlternatives_10_1 = (Alternatives)cGroup_10.eContents().get(1);
+		private final Assignment cRefRecipientAssignment_10_1_0 = (Assignment)cAlternatives_10_1.eContents().get(0);
+		private final RuleCall cRefRecipientRefRecipientParserRuleCall_10_1_0_0 = (RuleCall)cRefRecipientAssignment_10_1_0.eContents().get(0);
+		private final Assignment cRefRAllAssignment_10_1_1 = (Assignment)cAlternatives_10_1.eContents().get(1);
+		private final Keyword cRefRAllAllKeyword_10_1_1_0 = (Keyword)cRefRAllAssignment_10_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_10_2 = (Keyword)cGroup_10.eContents().get(2);
 		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
 		private final Keyword cRefersToRecipientSourceKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
-		private final Assignment cRefRecipientSourceAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
-		private final RuleCall cRefRecipientSourceRefRecipientSourceParserRuleCall_11_1_0 = (RuleCall)cRefRecipientSourceAssignment_11_1.eContents().get(0);
+		private final Alternatives cAlternatives_11_1 = (Alternatives)cGroup_11.eContents().get(1);
+		private final Assignment cRefRecipientSourceAssignment_11_1_0 = (Assignment)cAlternatives_11_1.eContents().get(0);
+		private final RuleCall cRefRecipientSourceRefRecipientSourceParserRuleCall_11_1_0_0 = (RuleCall)cRefRecipientSourceAssignment_11_1_0.eContents().get(0);
+		private final Assignment cRefRSAllAssignment_11_1_1 = (Assignment)cAlternatives_11_1.eContents().get(1);
+		private final Keyword cRefRSAllAllKeyword_11_1_1_0 = (Keyword)cRefRSAllAssignment_11_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_11_2 = (Keyword)cGroup_11.eContents().get(2);
 		private final Group cGroup_12 = (Group)cGroup.eContents().get(12);
 		private final Keyword cRefersToRecipientTargetKeyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
-		private final Assignment cRefRecipientTargetAssignment_12_1 = (Assignment)cGroup_12.eContents().get(1);
-		private final RuleCall cRefRecipientTargetRefRecipientTargetParserRuleCall_12_1_0 = (RuleCall)cRefRecipientTargetAssignment_12_1.eContents().get(0);
+		private final Alternatives cAlternatives_12_1 = (Alternatives)cGroup_12.eContents().get(1);
+		private final Assignment cRefRecipientTargetAssignment_12_1_0 = (Assignment)cAlternatives_12_1.eContents().get(0);
+		private final RuleCall cRefRecipientTargetRefRecipientTargetParserRuleCall_12_1_0_0 = (RuleCall)cRefRecipientTargetAssignment_12_1_0.eContents().get(0);
+		private final Assignment cRefRTAllAssignment_12_1_1 = (Assignment)cAlternatives_12_1.eContents().get(1);
+		private final Keyword cRefRTAllAllKeyword_12_1_1_0 = (Keyword)cRefRTAllAssignment_12_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_12_2 = (Keyword)cGroup_12.eContents().get(2);
 		private final Group cGroup_13 = (Group)cGroup.eContents().get(13);
 		private final Keyword cRefersToPrivateDataKeyword_13_0 = (Keyword)cGroup_13.eContents().get(0);
-		private final Assignment cRefPrivateDataAssignment_13_1 = (Assignment)cGroup_13.eContents().get(1);
-		private final RuleCall cRefPrivateDataRefPrivateDataParserRuleCall_13_1_0 = (RuleCall)cRefPrivateDataAssignment_13_1.eContents().get(0);
+		private final Alternatives cAlternatives_13_1 = (Alternatives)cGroup_13.eContents().get(1);
+		private final Assignment cRefPrivateDataAssignment_13_1_0 = (Assignment)cAlternatives_13_1.eContents().get(0);
+		private final RuleCall cRefPrivateDataRefPrivateDataParserRuleCall_13_1_0_0 = (RuleCall)cRefPrivateDataAssignment_13_1_0.eContents().get(0);
+		private final Assignment cRefPDAllAssignment_13_1_1 = (Assignment)cAlternatives_13_1.eContents().get(1);
+		private final Keyword cRefPDAllAllKeyword_13_1_1_0 = (Keyword)cRefPDAllAssignment_13_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_13_2 = (Keyword)cGroup_13.eContents().get(2);
 		private final Group cGroup_14 = (Group)cGroup.eContents().get(14);
 		private final Keyword cRefersToServiceKeyword_14_0 = (Keyword)cGroup_14.eContents().get(0);
-		private final Assignment cRefServiceAssignment_14_1 = (Assignment)cGroup_14.eContents().get(1);
-		private final RuleCall cRefServiceRefServiceParserRuleCall_14_1_0 = (RuleCall)cRefServiceAssignment_14_1.eContents().get(0);
+		private final Alternatives cAlternatives_14_1 = (Alternatives)cGroup_14.eContents().get(1);
+		private final Assignment cRefServiceAssignment_14_1_0 = (Assignment)cAlternatives_14_1.eContents().get(0);
+		private final RuleCall cRefServiceRefServiceParserRuleCall_14_1_0_0 = (RuleCall)cRefServiceAssignment_14_1_0.eContents().get(0);
+		private final Assignment cRefSAllAssignment_14_1_1 = (Assignment)cAlternatives_14_1.eContents().get(1);
+		private final Keyword cRefSAllAllKeyword_14_1_1_0 = (Keyword)cRefSAllAssignment_14_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_14_2 = (Keyword)cGroup_14.eContents().get(2);
 		private final Group cGroup_15 = (Group)cGroup.eContents().get(15);
 		private final Keyword cRefersToEnforcementKeyword_15_0 = (Keyword)cGroup_15.eContents().get(0);
-		private final Assignment cRefEnforcementAssignment_15_1 = (Assignment)cGroup_15.eContents().get(1);
-		private final RuleCall cRefEnforcementRefEnforcementParserRuleCall_15_1_0 = (RuleCall)cRefEnforcementAssignment_15_1.eContents().get(0);
+		private final Alternatives cAlternatives_15_1 = (Alternatives)cGroup_15.eContents().get(1);
+		private final Assignment cRefEnforcementAssignment_15_1_0 = (Assignment)cAlternatives_15_1.eContents().get(0);
+		private final RuleCall cRefEnforcementRefEnforcementParserRuleCall_15_1_0_0 = (RuleCall)cRefEnforcementAssignment_15_1_0.eContents().get(0);
+		private final Assignment cRefEAllAssignment_15_1_1 = (Assignment)cAlternatives_15_1.eContents().get(1);
+		private final Keyword cRefEAllAllKeyword_15_1_1_0 = (Keyword)cRefEAllAssignment_15_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_15_2 = (Keyword)cGroup_15.eContents().get(2);
 		private final Keyword cModalityKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		private final Assignment cModalityAssignment_17 = (Assignment)cGroup.eContents().get(17);
@@ -1149,19 +1217,21 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Disclosure:
 		//	"Disclosure" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Disclosure"
-		//	partDisclosure=[Disclosure] ",")? ("RefersTo Recipient" refRecipient+=RefRecipient* ",")?
-		//	("RefersTo Recipient-Source" refRecipientSource+=RefRecipientSource* ",")? ("RefersTo Recipient-Target"
-		//	refRecipientTarget+=RefRecipientTarget* ",")? ("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")?
-		//	("RefersTo Service" refService+=RefService* ",")? ("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")?
-		//	"Modality" modality=("Permitted" | "Obligation" | "Forbidden") "};";
+		//	partDisclosure=[Disclosure] ",")? ("RefersTo Recipient" (refRecipient+=RefRecipient* | refRAll="All") ",")?
+		//	("RefersTo Recipient-Source" (refRecipientSource+=RefRecipientSource* | refRSAll="All") ",")?
+		//	("RefersTo Recipient-Target" (refRecipientTarget+=RefRecipientTarget* | refRTAll="All") ",")? ("RefersTo PrivateData"
+		//	(refPrivateData+=RefPrivateData* | refPDAll="All") ",")? ("RefersTo Service" (refService+=RefService* |
+		//	refSAll="All") ",")? ("RefersTo Enforcement" (refEnforcement+=RefEnforcement* | refEAll="All") ",")? "Modality"
+		//	modality=("Permitted" | "Obligation" | "Forbidden") "};";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"Disclosure" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Disclosure"
-		//partDisclosure=[Disclosure] ",")? ("RefersTo Recipient" refRecipient+=RefRecipient* ",")? ("RefersTo Recipient-Source"
-		//refRecipientSource+=RefRecipientSource* ",")? ("RefersTo Recipient-Target" refRecipientTarget+=RefRecipientTarget*
-		//",")? ("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")? ("RefersTo Service" refService+=RefService* ",")?
-		//("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")? "Modality" modality=("Permitted" | "Obligation" |
-		//"Forbidden") "};"
+		//partDisclosure=[Disclosure] ",")? ("RefersTo Recipient" (refRecipient+=RefRecipient* | refRAll="All") ",")?
+		//("RefersTo Recipient-Source" (refRecipientSource+=RefRecipientSource* | refRSAll="All") ",")?
+		//("RefersTo Recipient-Target" (refRecipientTarget+=RefRecipientTarget* | refRTAll="All") ",")? ("RefersTo PrivateData"
+		//(refPrivateData+=RefPrivateData* | refPDAll="All") ",")? ("RefersTo Service" (refService+=RefService* | refSAll="All")
+		//",")? ("RefersTo Enforcement" (refEnforcement+=RefEnforcement* | refEAll="All") ",")? "Modality" modality=("Permitted"
+		//| "Obligation" | "Forbidden") "};"
 		public Group getGroup() { return cGroup; }
 
 		//"Disclosure"
@@ -1218,92 +1288,146 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//","
 		public Keyword getCommaKeyword_9_2() { return cCommaKeyword_9_2; }
 
-		//("RefersTo Recipient" refRecipient+=RefRecipient* ",")?
+		//("RefersTo Recipient" (refRecipient+=RefRecipient* | refRAll="All") ",")?
 		public Group getGroup_10() { return cGroup_10; }
 
 		//"RefersTo Recipient"
 		public Keyword getRefersToRecipientKeyword_10_0() { return cRefersToRecipientKeyword_10_0; }
 
+		//refRecipient+=RefRecipient* | refRAll="All"
+		public Alternatives getAlternatives_10_1() { return cAlternatives_10_1; }
+
 		//refRecipient+=RefRecipient*
-		public Assignment getRefRecipientAssignment_10_1() { return cRefRecipientAssignment_10_1; }
+		public Assignment getRefRecipientAssignment_10_1_0() { return cRefRecipientAssignment_10_1_0; }
 
 		//RefRecipient
-		public RuleCall getRefRecipientRefRecipientParserRuleCall_10_1_0() { return cRefRecipientRefRecipientParserRuleCall_10_1_0; }
+		public RuleCall getRefRecipientRefRecipientParserRuleCall_10_1_0_0() { return cRefRecipientRefRecipientParserRuleCall_10_1_0_0; }
+
+		//refRAll="All"
+		public Assignment getRefRAllAssignment_10_1_1() { return cRefRAllAssignment_10_1_1; }
+
+		//"All"
+		public Keyword getRefRAllAllKeyword_10_1_1_0() { return cRefRAllAllKeyword_10_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_10_2() { return cCommaKeyword_10_2; }
 
-		//("RefersTo Recipient-Source" refRecipientSource+=RefRecipientSource* ",")?
+		//("RefersTo Recipient-Source" (refRecipientSource+=RefRecipientSource* | refRSAll="All") ",")?
 		public Group getGroup_11() { return cGroup_11; }
 
 		//"RefersTo Recipient-Source"
 		public Keyword getRefersToRecipientSourceKeyword_11_0() { return cRefersToRecipientSourceKeyword_11_0; }
 
+		//refRecipientSource+=RefRecipientSource* | refRSAll="All"
+		public Alternatives getAlternatives_11_1() { return cAlternatives_11_1; }
+
 		//refRecipientSource+=RefRecipientSource*
-		public Assignment getRefRecipientSourceAssignment_11_1() { return cRefRecipientSourceAssignment_11_1; }
+		public Assignment getRefRecipientSourceAssignment_11_1_0() { return cRefRecipientSourceAssignment_11_1_0; }
 
 		//RefRecipientSource
-		public RuleCall getRefRecipientSourceRefRecipientSourceParserRuleCall_11_1_0() { return cRefRecipientSourceRefRecipientSourceParserRuleCall_11_1_0; }
+		public RuleCall getRefRecipientSourceRefRecipientSourceParserRuleCall_11_1_0_0() { return cRefRecipientSourceRefRecipientSourceParserRuleCall_11_1_0_0; }
+
+		//refRSAll="All"
+		public Assignment getRefRSAllAssignment_11_1_1() { return cRefRSAllAssignment_11_1_1; }
+
+		//"All"
+		public Keyword getRefRSAllAllKeyword_11_1_1_0() { return cRefRSAllAllKeyword_11_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_11_2() { return cCommaKeyword_11_2; }
 
-		//("RefersTo Recipient-Target" refRecipientTarget+=RefRecipientTarget* ",")?
+		//("RefersTo Recipient-Target" (refRecipientTarget+=RefRecipientTarget* | refRTAll="All") ",")?
 		public Group getGroup_12() { return cGroup_12; }
 
 		//"RefersTo Recipient-Target"
 		public Keyword getRefersToRecipientTargetKeyword_12_0() { return cRefersToRecipientTargetKeyword_12_0; }
 
+		//refRecipientTarget+=RefRecipientTarget* | refRTAll="All"
+		public Alternatives getAlternatives_12_1() { return cAlternatives_12_1; }
+
 		//refRecipientTarget+=RefRecipientTarget*
-		public Assignment getRefRecipientTargetAssignment_12_1() { return cRefRecipientTargetAssignment_12_1; }
+		public Assignment getRefRecipientTargetAssignment_12_1_0() { return cRefRecipientTargetAssignment_12_1_0; }
 
 		//RefRecipientTarget
-		public RuleCall getRefRecipientTargetRefRecipientTargetParserRuleCall_12_1_0() { return cRefRecipientTargetRefRecipientTargetParserRuleCall_12_1_0; }
+		public RuleCall getRefRecipientTargetRefRecipientTargetParserRuleCall_12_1_0_0() { return cRefRecipientTargetRefRecipientTargetParserRuleCall_12_1_0_0; }
+
+		//refRTAll="All"
+		public Assignment getRefRTAllAssignment_12_1_1() { return cRefRTAllAssignment_12_1_1; }
+
+		//"All"
+		public Keyword getRefRTAllAllKeyword_12_1_1_0() { return cRefRTAllAllKeyword_12_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_12_2() { return cCommaKeyword_12_2; }
 
-		//("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")?
+		//("RefersTo PrivateData" (refPrivateData+=RefPrivateData* | refPDAll="All") ",")?
 		public Group getGroup_13() { return cGroup_13; }
 
 		//"RefersTo PrivateData"
 		public Keyword getRefersToPrivateDataKeyword_13_0() { return cRefersToPrivateDataKeyword_13_0; }
 
+		//refPrivateData+=RefPrivateData* | refPDAll="All"
+		public Alternatives getAlternatives_13_1() { return cAlternatives_13_1; }
+
 		//refPrivateData+=RefPrivateData*
-		public Assignment getRefPrivateDataAssignment_13_1() { return cRefPrivateDataAssignment_13_1; }
+		public Assignment getRefPrivateDataAssignment_13_1_0() { return cRefPrivateDataAssignment_13_1_0; }
 
 		//RefPrivateData
-		public RuleCall getRefPrivateDataRefPrivateDataParserRuleCall_13_1_0() { return cRefPrivateDataRefPrivateDataParserRuleCall_13_1_0; }
+		public RuleCall getRefPrivateDataRefPrivateDataParserRuleCall_13_1_0_0() { return cRefPrivateDataRefPrivateDataParserRuleCall_13_1_0_0; }
+
+		//refPDAll="All"
+		public Assignment getRefPDAllAssignment_13_1_1() { return cRefPDAllAssignment_13_1_1; }
+
+		//"All"
+		public Keyword getRefPDAllAllKeyword_13_1_1_0() { return cRefPDAllAllKeyword_13_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_13_2() { return cCommaKeyword_13_2; }
 
-		//("RefersTo Service" refService+=RefService* ",")?
+		//("RefersTo Service" (refService+=RefService* | refSAll="All") ",")?
 		public Group getGroup_14() { return cGroup_14; }
 
 		//"RefersTo Service"
 		public Keyword getRefersToServiceKeyword_14_0() { return cRefersToServiceKeyword_14_0; }
 
+		//refService+=RefService* | refSAll="All"
+		public Alternatives getAlternatives_14_1() { return cAlternatives_14_1; }
+
 		//refService+=RefService*
-		public Assignment getRefServiceAssignment_14_1() { return cRefServiceAssignment_14_1; }
+		public Assignment getRefServiceAssignment_14_1_0() { return cRefServiceAssignment_14_1_0; }
 
 		//RefService
-		public RuleCall getRefServiceRefServiceParserRuleCall_14_1_0() { return cRefServiceRefServiceParserRuleCall_14_1_0; }
+		public RuleCall getRefServiceRefServiceParserRuleCall_14_1_0_0() { return cRefServiceRefServiceParserRuleCall_14_1_0_0; }
+
+		//refSAll="All"
+		public Assignment getRefSAllAssignment_14_1_1() { return cRefSAllAssignment_14_1_1; }
+
+		//"All"
+		public Keyword getRefSAllAllKeyword_14_1_1_0() { return cRefSAllAllKeyword_14_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_14_2() { return cCommaKeyword_14_2; }
 
-		//("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")?
+		//("RefersTo Enforcement" (refEnforcement+=RefEnforcement* | refEAll="All") ",")?
 		public Group getGroup_15() { return cGroup_15; }
 
 		//"RefersTo Enforcement"
 		public Keyword getRefersToEnforcementKeyword_15_0() { return cRefersToEnforcementKeyword_15_0; }
 
+		//refEnforcement+=RefEnforcement* | refEAll="All"
+		public Alternatives getAlternatives_15_1() { return cAlternatives_15_1; }
+
 		//refEnforcement+=RefEnforcement*
-		public Assignment getRefEnforcementAssignment_15_1() { return cRefEnforcementAssignment_15_1; }
+		public Assignment getRefEnforcementAssignment_15_1_0() { return cRefEnforcementAssignment_15_1_0; }
 
 		//RefEnforcement
-		public RuleCall getRefEnforcementRefEnforcementParserRuleCall_15_1_0() { return cRefEnforcementRefEnforcementParserRuleCall_15_1_0; }
+		public RuleCall getRefEnforcementRefEnforcementParserRuleCall_15_1_0_0() { return cRefEnforcementRefEnforcementParserRuleCall_15_1_0_0; }
+
+		//refEAll="All"
+		public Assignment getRefEAllAssignment_15_1_1() { return cRefEAllAssignment_15_1_1; }
+
+		//"All"
+		public Keyword getRefEAllAllKeyword_15_1_1_0() { return cRefEAllAllKeyword_15_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_15_2() { return cCommaKeyword_15_2; }
@@ -1357,18 +1481,27 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		private final Group cGroup_13 = (Group)cGroup.eContents().get(13);
 		private final Keyword cRefersToPrivateDataKeyword_13_0 = (Keyword)cGroup_13.eContents().get(0);
-		private final Assignment cRefPrivateDataAssignment_13_1 = (Assignment)cGroup_13.eContents().get(1);
-		private final RuleCall cRefPrivateDataRefPrivateDataParserRuleCall_13_1_0 = (RuleCall)cRefPrivateDataAssignment_13_1.eContents().get(0);
+		private final Alternatives cAlternatives_13_1 = (Alternatives)cGroup_13.eContents().get(1);
+		private final Assignment cRefPrivateDataAssignment_13_1_0 = (Assignment)cAlternatives_13_1.eContents().get(0);
+		private final RuleCall cRefPrivateDataRefPrivateDataParserRuleCall_13_1_0_0 = (RuleCall)cRefPrivateDataAssignment_13_1_0.eContents().get(0);
+		private final Assignment cRefPDAllAssignment_13_1_1 = (Assignment)cAlternatives_13_1.eContents().get(1);
+		private final Keyword cRefPDAllAllKeyword_13_1_1_0 = (Keyword)cRefPDAllAssignment_13_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_13_2 = (Keyword)cGroup_13.eContents().get(2);
 		private final Group cGroup_14 = (Group)cGroup.eContents().get(14);
 		private final Keyword cRefersToServiceKeyword_14_0 = (Keyword)cGroup_14.eContents().get(0);
-		private final Assignment cRefServiceAssignment_14_1 = (Assignment)cGroup_14.eContents().get(1);
-		private final RuleCall cRefServiceRefServiceParserRuleCall_14_1_0 = (RuleCall)cRefServiceAssignment_14_1.eContents().get(0);
+		private final Alternatives cAlternatives_14_1 = (Alternatives)cGroup_14.eContents().get(1);
+		private final Assignment cRefServiceAssignment_14_1_0 = (Assignment)cAlternatives_14_1.eContents().get(0);
+		private final RuleCall cRefServiceRefServiceParserRuleCall_14_1_0_0 = (RuleCall)cRefServiceAssignment_14_1_0.eContents().get(0);
+		private final Assignment cRefSAllAssignment_14_1_1 = (Assignment)cAlternatives_14_1.eContents().get(1);
+		private final Keyword cRefSAllAllKeyword_14_1_1_0 = (Keyword)cRefSAllAssignment_14_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_14_2 = (Keyword)cGroup_14.eContents().get(2);
 		private final Group cGroup_15 = (Group)cGroup.eContents().get(15);
 		private final Keyword cRefersToEnforcementKeyword_15_0 = (Keyword)cGroup_15.eContents().get(0);
-		private final Assignment cRefEnforcementAssignment_15_1 = (Assignment)cGroup_15.eContents().get(1);
-		private final RuleCall cRefEnforcementRefEnforcementParserRuleCall_15_1_0 = (RuleCall)cRefEnforcementAssignment_15_1.eContents().get(0);
+		private final Alternatives cAlternatives_15_1 = (Alternatives)cGroup_15.eContents().get(1);
+		private final Assignment cRefEnforcementAssignment_15_1_0 = (Assignment)cAlternatives_15_1.eContents().get(0);
+		private final RuleCall cRefEnforcementRefEnforcementParserRuleCall_15_1_0_0 = (RuleCall)cRefEnforcementAssignment_15_1_0.eContents().get(0);
+		private final Assignment cRefEAllAssignment_15_1_1 = (Assignment)cAlternatives_15_1.eContents().get(1);
+		private final Keyword cRefEAllAllKeyword_15_1_1_0 = (Keyword)cRefEAllAssignment_15_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_15_2 = (Keyword)cGroup_15.eContents().get(2);
 		private final Keyword cModalityKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		private final Assignment cModalityAssignment_17 = (Assignment)cGroup.eContents().get(17);
@@ -1380,15 +1513,17 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Retention:
 		//	"Retention" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Retention"
-		//	partRetention=[Retention] ",")? "Period" period=STRING "," ("RefersTo PrivateData" refPrivateData+=RefPrivateData*
-		//	",")? ("RefersTo Service" refService+=RefService* ",")? ("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")?
-		//	"Modality" modality=("Permitted" | "Obligation" | "Forbidden") "};";
+		//	partRetention=[Retention] ",")? "Period" period=STRING "," ("RefersTo PrivateData" (refPrivateData+=RefPrivateData* |
+		//	refPDAll="All") ",")? ("RefersTo Service" (refService+=RefService* | refSAll="All") ",")? ("RefersTo Enforcement"
+		//	(refEnforcement+=RefEnforcement* | refEAll="All") ",")? "Modality" modality=("Permitted" | "Obligation" |
+		//	"Forbidden") "};";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"Retention" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Retention"
-		//partRetention=[Retention] ",")? "Period" period=STRING "," ("RefersTo PrivateData" refPrivateData+=RefPrivateData*
-		//",")? ("RefersTo Service" refService+=RefService* ",")? ("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")?
-		//"Modality" modality=("Permitted" | "Obligation" | "Forbidden") "};"
+		//partRetention=[Retention] ",")? "Period" period=STRING "," ("RefersTo PrivateData" (refPrivateData+=RefPrivateData* |
+		//refPDAll="All") ",")? ("RefersTo Service" (refService+=RefService* | refSAll="All") ",")? ("RefersTo Enforcement"
+		//(refEnforcement+=RefEnforcement* | refEAll="All") ",")? "Modality" modality=("Permitted" | "Obligation" | "Forbidden")
+		//"};"
 		public Group getGroup() { return cGroup; }
 
 		//"Retention"
@@ -1457,47 +1592,74 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//","
 		public Keyword getCommaKeyword_12() { return cCommaKeyword_12; }
 
-		//("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")?
+		//("RefersTo PrivateData" (refPrivateData+=RefPrivateData* | refPDAll="All") ",")?
 		public Group getGroup_13() { return cGroup_13; }
 
 		//"RefersTo PrivateData"
 		public Keyword getRefersToPrivateDataKeyword_13_0() { return cRefersToPrivateDataKeyword_13_0; }
 
+		//refPrivateData+=RefPrivateData* | refPDAll="All"
+		public Alternatives getAlternatives_13_1() { return cAlternatives_13_1; }
+
 		//refPrivateData+=RefPrivateData*
-		public Assignment getRefPrivateDataAssignment_13_1() { return cRefPrivateDataAssignment_13_1; }
+		public Assignment getRefPrivateDataAssignment_13_1_0() { return cRefPrivateDataAssignment_13_1_0; }
 
 		//RefPrivateData
-		public RuleCall getRefPrivateDataRefPrivateDataParserRuleCall_13_1_0() { return cRefPrivateDataRefPrivateDataParserRuleCall_13_1_0; }
+		public RuleCall getRefPrivateDataRefPrivateDataParserRuleCall_13_1_0_0() { return cRefPrivateDataRefPrivateDataParserRuleCall_13_1_0_0; }
+
+		//refPDAll="All"
+		public Assignment getRefPDAllAssignment_13_1_1() { return cRefPDAllAssignment_13_1_1; }
+
+		//"All"
+		public Keyword getRefPDAllAllKeyword_13_1_1_0() { return cRefPDAllAllKeyword_13_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_13_2() { return cCommaKeyword_13_2; }
 
-		//("RefersTo Service" refService+=RefService* ",")?
+		//("RefersTo Service" (refService+=RefService* | refSAll="All") ",")?
 		public Group getGroup_14() { return cGroup_14; }
 
 		//"RefersTo Service"
 		public Keyword getRefersToServiceKeyword_14_0() { return cRefersToServiceKeyword_14_0; }
 
+		//refService+=RefService* | refSAll="All"
+		public Alternatives getAlternatives_14_1() { return cAlternatives_14_1; }
+
 		//refService+=RefService*
-		public Assignment getRefServiceAssignment_14_1() { return cRefServiceAssignment_14_1; }
+		public Assignment getRefServiceAssignment_14_1_0() { return cRefServiceAssignment_14_1_0; }
 
 		//RefService
-		public RuleCall getRefServiceRefServiceParserRuleCall_14_1_0() { return cRefServiceRefServiceParserRuleCall_14_1_0; }
+		public RuleCall getRefServiceRefServiceParserRuleCall_14_1_0_0() { return cRefServiceRefServiceParserRuleCall_14_1_0_0; }
+
+		//refSAll="All"
+		public Assignment getRefSAllAssignment_14_1_1() { return cRefSAllAssignment_14_1_1; }
+
+		//"All"
+		public Keyword getRefSAllAllKeyword_14_1_1_0() { return cRefSAllAllKeyword_14_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_14_2() { return cCommaKeyword_14_2; }
 
-		//("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")?
+		//("RefersTo Enforcement" (refEnforcement+=RefEnforcement* | refEAll="All") ",")?
 		public Group getGroup_15() { return cGroup_15; }
 
 		//"RefersTo Enforcement"
 		public Keyword getRefersToEnforcementKeyword_15_0() { return cRefersToEnforcementKeyword_15_0; }
 
+		//refEnforcement+=RefEnforcement* | refEAll="All"
+		public Alternatives getAlternatives_15_1() { return cAlternatives_15_1; }
+
 		//refEnforcement+=RefEnforcement*
-		public Assignment getRefEnforcementAssignment_15_1() { return cRefEnforcementAssignment_15_1; }
+		public Assignment getRefEnforcementAssignment_15_1_0() { return cRefEnforcementAssignment_15_1_0; }
 
 		//RefEnforcement
-		public RuleCall getRefEnforcementRefEnforcementParserRuleCall_15_1_0() { return cRefEnforcementRefEnforcementParserRuleCall_15_1_0; }
+		public RuleCall getRefEnforcementRefEnforcementParserRuleCall_15_1_0_0() { return cRefEnforcementRefEnforcementParserRuleCall_15_1_0_0; }
+
+		//refEAll="All"
+		public Assignment getRefEAllAssignment_15_1_1() { return cRefEAllAssignment_15_1_1; }
+
+		//"All"
+		public Keyword getRefEAllAllKeyword_15_1_1_0() { return cRefEAllAllKeyword_15_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_15_2() { return cCommaKeyword_15_2; }
@@ -1547,18 +1709,27 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_9_2 = (Keyword)cGroup_9.eContents().get(2);
 		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
 		private final Keyword cRefersToPrivateDataKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Assignment cRefPrivateDataAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
-		private final RuleCall cRefPrivateDataRefPrivateDataParserRuleCall_10_1_0 = (RuleCall)cRefPrivateDataAssignment_10_1.eContents().get(0);
+		private final Alternatives cAlternatives_10_1 = (Alternatives)cGroup_10.eContents().get(1);
+		private final Assignment cRefPrivateDataAssignment_10_1_0 = (Assignment)cAlternatives_10_1.eContents().get(0);
+		private final RuleCall cRefPrivateDataRefPrivateDataParserRuleCall_10_1_0_0 = (RuleCall)cRefPrivateDataAssignment_10_1_0.eContents().get(0);
+		private final Assignment cRefPDAllAssignment_10_1_1 = (Assignment)cAlternatives_10_1.eContents().get(1);
+		private final Keyword cRefPDAllAllKeyword_10_1_1_0 = (Keyword)cRefPDAllAssignment_10_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_10_2 = (Keyword)cGroup_10.eContents().get(2);
 		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
 		private final Keyword cRefersToServiceKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
-		private final Assignment cRefServiceAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
-		private final RuleCall cRefServiceRefServiceParserRuleCall_11_1_0 = (RuleCall)cRefServiceAssignment_11_1.eContents().get(0);
+		private final Alternatives cAlternatives_11_1 = (Alternatives)cGroup_11.eContents().get(1);
+		private final Assignment cRefServiceAssignment_11_1_0 = (Assignment)cAlternatives_11_1.eContents().get(0);
+		private final RuleCall cRefServiceRefServiceParserRuleCall_11_1_0_0 = (RuleCall)cRefServiceAssignment_11_1_0.eContents().get(0);
+		private final Assignment cRefSAllAssignment_11_1_1 = (Assignment)cAlternatives_11_1.eContents().get(1);
+		private final Keyword cRefSAllAllKeyword_11_1_1_0 = (Keyword)cRefSAllAssignment_11_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_11_2 = (Keyword)cGroup_11.eContents().get(2);
 		private final Group cGroup_12 = (Group)cGroup.eContents().get(12);
 		private final Keyword cRefersToEnforcementKeyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
-		private final Assignment cRefEnforcementAssignment_12_1 = (Assignment)cGroup_12.eContents().get(1);
-		private final RuleCall cRefEnforcementRefEnforcementParserRuleCall_12_1_0 = (RuleCall)cRefEnforcementAssignment_12_1.eContents().get(0);
+		private final Alternatives cAlternatives_12_1 = (Alternatives)cGroup_12.eContents().get(1);
+		private final Assignment cRefEnforcementAssignment_12_1_0 = (Assignment)cAlternatives_12_1.eContents().get(0);
+		private final RuleCall cRefEnforcementRefEnforcementParserRuleCall_12_1_0_0 = (RuleCall)cRefEnforcementAssignment_12_1_0.eContents().get(0);
+		private final Assignment cRefEAllAssignment_12_1_1 = (Assignment)cAlternatives_12_1.eContents().get(1);
+		private final Keyword cRefEAllAllKeyword_12_1_1_0 = (Keyword)cRefEAllAssignment_12_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_12_2 = (Keyword)cGroup_12.eContents().get(2);
 		private final Keyword cModalityKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Assignment cModalityAssignment_14 = (Assignment)cGroup.eContents().get(14);
@@ -1570,15 +1741,17 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Usage:
 		//	"Usage" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Usage"
-		//	partUsage=[Usage] ",")? ("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")? ("RefersTo Service"
-		//	refService+=RefService* ",")? ("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")? "Modality"
-		//	modality=("Permitted" | "Obligation" | "Forbidden") "};";
+		//	partUsage=[Usage] ",")? ("RefersTo PrivateData" (refPrivateData+=RefPrivateData* | refPDAll="All") ",")?
+		//	("RefersTo Service" (refService+=RefService* | refSAll="All") ",")? ("RefersTo Enforcement"
+		//	(refEnforcement+=RefEnforcement* | refEAll="All") ",")? "Modality" modality=("Permitted" | "Obligation" |
+		//	"Forbidden") "};";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"Usage" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Usage"
-		//partUsage=[Usage] ",")? ("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")? ("RefersTo Service"
-		//refService+=RefService* ",")? ("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")? "Modality"
-		//modality=("Permitted" | "Obligation" | "Forbidden") "};"
+		//partUsage=[Usage] ",")? ("RefersTo PrivateData" (refPrivateData+=RefPrivateData* | refPDAll="All") ",")?
+		//("RefersTo Service" (refService+=RefService* | refSAll="All") ",")? ("RefersTo Enforcement"
+		//(refEnforcement+=RefEnforcement* | refEAll="All") ",")? "Modality" modality=("Permitted" | "Obligation" | "Forbidden")
+		//"};"
 		public Group getGroup() { return cGroup; }
 
 		//"Usage"
@@ -1635,47 +1808,74 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//","
 		public Keyword getCommaKeyword_9_2() { return cCommaKeyword_9_2; }
 
-		//("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")?
+		//("RefersTo PrivateData" (refPrivateData+=RefPrivateData* | refPDAll="All") ",")?
 		public Group getGroup_10() { return cGroup_10; }
 
 		//"RefersTo PrivateData"
 		public Keyword getRefersToPrivateDataKeyword_10_0() { return cRefersToPrivateDataKeyword_10_0; }
 
+		//refPrivateData+=RefPrivateData* | refPDAll="All"
+		public Alternatives getAlternatives_10_1() { return cAlternatives_10_1; }
+
 		//refPrivateData+=RefPrivateData*
-		public Assignment getRefPrivateDataAssignment_10_1() { return cRefPrivateDataAssignment_10_1; }
+		public Assignment getRefPrivateDataAssignment_10_1_0() { return cRefPrivateDataAssignment_10_1_0; }
 
 		//RefPrivateData
-		public RuleCall getRefPrivateDataRefPrivateDataParserRuleCall_10_1_0() { return cRefPrivateDataRefPrivateDataParserRuleCall_10_1_0; }
+		public RuleCall getRefPrivateDataRefPrivateDataParserRuleCall_10_1_0_0() { return cRefPrivateDataRefPrivateDataParserRuleCall_10_1_0_0; }
+
+		//refPDAll="All"
+		public Assignment getRefPDAllAssignment_10_1_1() { return cRefPDAllAssignment_10_1_1; }
+
+		//"All"
+		public Keyword getRefPDAllAllKeyword_10_1_1_0() { return cRefPDAllAllKeyword_10_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_10_2() { return cCommaKeyword_10_2; }
 
-		//("RefersTo Service" refService+=RefService* ",")?
+		//("RefersTo Service" (refService+=RefService* | refSAll="All") ",")?
 		public Group getGroup_11() { return cGroup_11; }
 
 		//"RefersTo Service"
 		public Keyword getRefersToServiceKeyword_11_0() { return cRefersToServiceKeyword_11_0; }
 
+		//refService+=RefService* | refSAll="All"
+		public Alternatives getAlternatives_11_1() { return cAlternatives_11_1; }
+
 		//refService+=RefService*
-		public Assignment getRefServiceAssignment_11_1() { return cRefServiceAssignment_11_1; }
+		public Assignment getRefServiceAssignment_11_1_0() { return cRefServiceAssignment_11_1_0; }
 
 		//RefService
-		public RuleCall getRefServiceRefServiceParserRuleCall_11_1_0() { return cRefServiceRefServiceParserRuleCall_11_1_0; }
+		public RuleCall getRefServiceRefServiceParserRuleCall_11_1_0_0() { return cRefServiceRefServiceParserRuleCall_11_1_0_0; }
+
+		//refSAll="All"
+		public Assignment getRefSAllAssignment_11_1_1() { return cRefSAllAssignment_11_1_1; }
+
+		//"All"
+		public Keyword getRefSAllAllKeyword_11_1_1_0() { return cRefSAllAllKeyword_11_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_11_2() { return cCommaKeyword_11_2; }
 
-		//("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")?
+		//("RefersTo Enforcement" (refEnforcement+=RefEnforcement* | refEAll="All") ",")?
 		public Group getGroup_12() { return cGroup_12; }
 
 		//"RefersTo Enforcement"
 		public Keyword getRefersToEnforcementKeyword_12_0() { return cRefersToEnforcementKeyword_12_0; }
 
+		//refEnforcement+=RefEnforcement* | refEAll="All"
+		public Alternatives getAlternatives_12_1() { return cAlternatives_12_1; }
+
 		//refEnforcement+=RefEnforcement*
-		public Assignment getRefEnforcementAssignment_12_1() { return cRefEnforcementAssignment_12_1; }
+		public Assignment getRefEnforcementAssignment_12_1_0() { return cRefEnforcementAssignment_12_1_0; }
 
 		//RefEnforcement
-		public RuleCall getRefEnforcementRefEnforcementParserRuleCall_12_1_0() { return cRefEnforcementRefEnforcementParserRuleCall_12_1_0; }
+		public RuleCall getRefEnforcementRefEnforcementParserRuleCall_12_1_0_0() { return cRefEnforcementRefEnforcementParserRuleCall_12_1_0_0; }
+
+		//refEAll="All"
+		public Assignment getRefEAllAssignment_12_1_1() { return cRefEAllAssignment_12_1_1; }
+
+		//"All"
+		public Keyword getRefEAllAllKeyword_12_1_1_0() { return cRefEAllAllKeyword_12_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_12_2() { return cCommaKeyword_12_2; }
@@ -1725,18 +1925,27 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_9_2 = (Keyword)cGroup_9.eContents().get(2);
 		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
 		private final Keyword cRefersToPrivateDataKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Assignment cRefPrivateDataAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
-		private final RuleCall cRefPrivateDataRefPrivateDataParserRuleCall_10_1_0 = (RuleCall)cRefPrivateDataAssignment_10_1.eContents().get(0);
+		private final Alternatives cAlternatives_10_1 = (Alternatives)cGroup_10.eContents().get(1);
+		private final Assignment cRefPrivateDataAssignment_10_1_0 = (Assignment)cAlternatives_10_1.eContents().get(0);
+		private final RuleCall cRefPrivateDataRefPrivateDataParserRuleCall_10_1_0_0 = (RuleCall)cRefPrivateDataAssignment_10_1_0.eContents().get(0);
+		private final Assignment cRefPDAllAssignment_10_1_1 = (Assignment)cAlternatives_10_1.eContents().get(1);
+		private final Keyword cRefPDAllAllKeyword_10_1_1_0 = (Keyword)cRefPDAllAssignment_10_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_10_2 = (Keyword)cGroup_10.eContents().get(2);
 		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
 		private final Keyword cRefersToServiceKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
-		private final Assignment cRefServiceAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
-		private final RuleCall cRefServiceRefServiceParserRuleCall_11_1_0 = (RuleCall)cRefServiceAssignment_11_1.eContents().get(0);
+		private final Alternatives cAlternatives_11_1 = (Alternatives)cGroup_11.eContents().get(1);
+		private final Assignment cRefServiceAssignment_11_1_0 = (Assignment)cAlternatives_11_1.eContents().get(0);
+		private final RuleCall cRefServiceRefServiceParserRuleCall_11_1_0_0 = (RuleCall)cRefServiceAssignment_11_1_0.eContents().get(0);
+		private final Assignment cRefSAllAssignment_11_1_1 = (Assignment)cAlternatives_11_1.eContents().get(1);
+		private final Keyword cRefSAllAllKeyword_11_1_1_0 = (Keyword)cRefSAllAssignment_11_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_11_2 = (Keyword)cGroup_11.eContents().get(2);
 		private final Group cGroup_12 = (Group)cGroup.eContents().get(12);
 		private final Keyword cRefersToEnforcementKeyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
-		private final Assignment cRefEnforcementAssignment_12_1 = (Assignment)cGroup_12.eContents().get(1);
-		private final RuleCall cRefEnforcementRefEnforcementParserRuleCall_12_1_0 = (RuleCall)cRefEnforcementAssignment_12_1.eContents().get(0);
+		private final Alternatives cAlternatives_12_1 = (Alternatives)cGroup_12.eContents().get(1);
+		private final Assignment cRefEnforcementAssignment_12_1_0 = (Assignment)cAlternatives_12_1.eContents().get(0);
+		private final RuleCall cRefEnforcementRefEnforcementParserRuleCall_12_1_0_0 = (RuleCall)cRefEnforcementAssignment_12_1_0.eContents().get(0);
+		private final Assignment cRefEAllAssignment_12_1_1 = (Assignment)cAlternatives_12_1.eContents().get(1);
+		private final Keyword cRefEAllAllKeyword_12_1_1_0 = (Keyword)cRefEAllAssignment_12_1_1.eContents().get(0);
 		private final Keyword cCommaKeyword_12_2 = (Keyword)cGroup_12.eContents().get(2);
 		private final Keyword cModalityKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Assignment cModalityAssignment_14 = (Assignment)cGroup.eContents().get(14);
@@ -1748,15 +1957,17 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Informative:
 		//	"Informative" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Informative"
-		//	partInformative=[Informative] ",")? ("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")? ("RefersTo Service"
-		//	refService+=RefService* ",")? ("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")? "Modality"
-		//	modality=("Permitted" | "Obligation" | "Forbidden") "};";
+		//	partInformative=[Informative] ",")? ("RefersTo PrivateData" (refPrivateData+=RefPrivateData* | refPDAll="All") ",")?
+		//	("RefersTo Service" (refService+=RefService* | refSAll="All") ",")? ("RefersTo Enforcement"
+		//	(refEnforcement+=RefEnforcement* | refEAll="All") ",")? "Modality" modality=("Permitted" | "Obligation" |
+		//	"Forbidden") "};";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"Informative" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Informative"
-		//partInformative=[Informative] ",")? ("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")? ("RefersTo Service"
-		//refService+=RefService* ",")? ("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")? "Modality"
-		//modality=("Permitted" | "Obligation" | "Forbidden") "};"
+		//partInformative=[Informative] ",")? ("RefersTo PrivateData" (refPrivateData+=RefPrivateData* | refPDAll="All") ",")?
+		//("RefersTo Service" (refService+=RefService* | refSAll="All") ",")? ("RefersTo Enforcement"
+		//(refEnforcement+=RefEnforcement* | refEAll="All") ",")? "Modality" modality=("Permitted" | "Obligation" | "Forbidden")
+		//"};"
 		public Group getGroup() { return cGroup; }
 
 		//"Informative"
@@ -1813,47 +2024,74 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//","
 		public Keyword getCommaKeyword_9_2() { return cCommaKeyword_9_2; }
 
-		//("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")?
+		//("RefersTo PrivateData" (refPrivateData+=RefPrivateData* | refPDAll="All") ",")?
 		public Group getGroup_10() { return cGroup_10; }
 
 		//"RefersTo PrivateData"
 		public Keyword getRefersToPrivateDataKeyword_10_0() { return cRefersToPrivateDataKeyword_10_0; }
 
+		//refPrivateData+=RefPrivateData* | refPDAll="All"
+		public Alternatives getAlternatives_10_1() { return cAlternatives_10_1; }
+
 		//refPrivateData+=RefPrivateData*
-		public Assignment getRefPrivateDataAssignment_10_1() { return cRefPrivateDataAssignment_10_1; }
+		public Assignment getRefPrivateDataAssignment_10_1_0() { return cRefPrivateDataAssignment_10_1_0; }
 
 		//RefPrivateData
-		public RuleCall getRefPrivateDataRefPrivateDataParserRuleCall_10_1_0() { return cRefPrivateDataRefPrivateDataParserRuleCall_10_1_0; }
+		public RuleCall getRefPrivateDataRefPrivateDataParserRuleCall_10_1_0_0() { return cRefPrivateDataRefPrivateDataParserRuleCall_10_1_0_0; }
+
+		//refPDAll="All"
+		public Assignment getRefPDAllAssignment_10_1_1() { return cRefPDAllAssignment_10_1_1; }
+
+		//"All"
+		public Keyword getRefPDAllAllKeyword_10_1_1_0() { return cRefPDAllAllKeyword_10_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_10_2() { return cCommaKeyword_10_2; }
 
-		//("RefersTo Service" refService+=RefService* ",")?
+		//("RefersTo Service" (refService+=RefService* | refSAll="All") ",")?
 		public Group getGroup_11() { return cGroup_11; }
 
 		//"RefersTo Service"
 		public Keyword getRefersToServiceKeyword_11_0() { return cRefersToServiceKeyword_11_0; }
 
+		//refService+=RefService* | refSAll="All"
+		public Alternatives getAlternatives_11_1() { return cAlternatives_11_1; }
+
 		//refService+=RefService*
-		public Assignment getRefServiceAssignment_11_1() { return cRefServiceAssignment_11_1; }
+		public Assignment getRefServiceAssignment_11_1_0() { return cRefServiceAssignment_11_1_0; }
 
 		//RefService
-		public RuleCall getRefServiceRefServiceParserRuleCall_11_1_0() { return cRefServiceRefServiceParserRuleCall_11_1_0; }
+		public RuleCall getRefServiceRefServiceParserRuleCall_11_1_0_0() { return cRefServiceRefServiceParserRuleCall_11_1_0_0; }
+
+		//refSAll="All"
+		public Assignment getRefSAllAssignment_11_1_1() { return cRefSAllAssignment_11_1_1; }
+
+		//"All"
+		public Keyword getRefSAllAllKeyword_11_1_1_0() { return cRefSAllAllKeyword_11_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_11_2() { return cCommaKeyword_11_2; }
 
-		//("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")?
+		//("RefersTo Enforcement" (refEnforcement+=RefEnforcement* | refEAll="All") ",")?
 		public Group getGroup_12() { return cGroup_12; }
 
 		//"RefersTo Enforcement"
 		public Keyword getRefersToEnforcementKeyword_12_0() { return cRefersToEnforcementKeyword_12_0; }
 
+		//refEnforcement+=RefEnforcement* | refEAll="All"
+		public Alternatives getAlternatives_12_1() { return cAlternatives_12_1; }
+
 		//refEnforcement+=RefEnforcement*
-		public Assignment getRefEnforcementAssignment_12_1() { return cRefEnforcementAssignment_12_1; }
+		public Assignment getRefEnforcementAssignment_12_1_0() { return cRefEnforcementAssignment_12_1_0; }
 
 		//RefEnforcement
-		public RuleCall getRefEnforcementRefEnforcementParserRuleCall_12_1_0() { return cRefEnforcementRefEnforcementParserRuleCall_12_1_0; }
+		public RuleCall getRefEnforcementRefEnforcementParserRuleCall_12_1_0_0() { return cRefEnforcementRefEnforcementParserRuleCall_12_1_0_0; }
+
+		//refEAll="All"
+		public Assignment getRefEAllAssignment_12_1_1() { return cRefEAllAssignment_12_1_1; }
+
+		//"All"
+		public Keyword getRefEAllAllKeyword_12_1_1_0() { return cRefEAllAllKeyword_12_1_1_0; }
 
 		//","
 		public Keyword getCommaKeyword_12_2() { return cCommaKeyword_12_2; }
@@ -2280,7 +2518,7 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Service:
 	//	"Service" name=ID "{" "Name" serviceName=STRING "," ("Description" description=STRING ",")? ("RefersTo PrivateData"
-	//	refPrivateData+=RefPrivateData* ",")? ("Service_Part" servicePart+=ServicePart*)? "};";
+	//	(refPrivateData+=RefPrivateData* | refPDAll="All") ",")? ("Service_Part" servicePart+=ServicePart*)? "};";
 	public ServiceElements getServiceAccess() {
 		return pService;
 	}
@@ -2324,9 +2562,10 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Collection:
 	//	"Collection" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Collection"
-	//	partCollection=[Collection] ",")? ("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")? ("RefersTo Service"
-	//	refService+=RefService* ",")? ("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")? "Modality"
-	//	modality=("Permitted" | "Obligation" | "Forbidden") "};";
+	//	partCollection=[Collection] ",")? ("RefersTo PrivateData" (refPrivateData+=RefPrivateData* | refPDAll="All") ",")?
+	//	("RefersTo Service" (refService+=RefService* | refSAll="All") ",")? ("RefersTo Enforcement"
+	//	(refEnforcement+=RefEnforcement* | refEAll="All") ",")? "Modality" modality=("Permitted" | "Obligation" |
+	//	"Forbidden") "};";
 	public CollectionElements getCollectionAccess() {
 		return pCollection;
 	}
@@ -2337,11 +2576,12 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Disclosure:
 	//	"Disclosure" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Disclosure"
-	//	partDisclosure=[Disclosure] ",")? ("RefersTo Recipient" refRecipient+=RefRecipient* ",")?
-	//	("RefersTo Recipient-Source" refRecipientSource+=RefRecipientSource* ",")? ("RefersTo Recipient-Target"
-	//	refRecipientTarget+=RefRecipientTarget* ",")? ("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")?
-	//	("RefersTo Service" refService+=RefService* ",")? ("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")?
-	//	"Modality" modality=("Permitted" | "Obligation" | "Forbidden") "};";
+	//	partDisclosure=[Disclosure] ",")? ("RefersTo Recipient" (refRecipient+=RefRecipient* | refRAll="All") ",")?
+	//	("RefersTo Recipient-Source" (refRecipientSource+=RefRecipientSource* | refRSAll="All") ",")?
+	//	("RefersTo Recipient-Target" (refRecipientTarget+=RefRecipientTarget* | refRTAll="All") ",")? ("RefersTo PrivateData"
+	//	(refPrivateData+=RefPrivateData* | refPDAll="All") ",")? ("RefersTo Service" (refService+=RefService* |
+	//	refSAll="All") ",")? ("RefersTo Enforcement" (refEnforcement+=RefEnforcement* | refEAll="All") ",")? "Modality"
+	//	modality=("Permitted" | "Obligation" | "Forbidden") "};";
 	public DisclosureElements getDisclosureAccess() {
 		return pDisclosure;
 	}
@@ -2352,9 +2592,10 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Retention:
 	//	"Retention" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Retention"
-	//	partRetention=[Retention] ",")? "Period" period=STRING "," ("RefersTo PrivateData" refPrivateData+=RefPrivateData*
-	//	",")? ("RefersTo Service" refService+=RefService* ",")? ("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")?
-	//	"Modality" modality=("Permitted" | "Obligation" | "Forbidden") "};";
+	//	partRetention=[Retention] ",")? "Period" period=STRING "," ("RefersTo PrivateData" (refPrivateData+=RefPrivateData* |
+	//	refPDAll="All") ",")? ("RefersTo Service" (refService+=RefService* | refSAll="All") ",")? ("RefersTo Enforcement"
+	//	(refEnforcement+=RefEnforcement* | refEAll="All") ",")? "Modality" modality=("Permitted" | "Obligation" |
+	//	"Forbidden") "};";
 	public RetentionElements getRetentionAccess() {
 		return pRetention;
 	}
@@ -2365,9 +2606,10 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Usage:
 	//	"Usage" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Usage"
-	//	partUsage=[Usage] ",")? ("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")? ("RefersTo Service"
-	//	refService+=RefService* ",")? ("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")? "Modality"
-	//	modality=("Permitted" | "Obligation" | "Forbidden") "};";
+	//	partUsage=[Usage] ",")? ("RefersTo PrivateData" (refPrivateData+=RefPrivateData* | refPDAll="All") ",")?
+	//	("RefersTo Service" (refService+=RefService* | refSAll="All") ",")? ("RefersTo Enforcement"
+	//	(refEnforcement+=RefEnforcement* | refEAll="All") ",")? "Modality" modality=("Permitted" | "Obligation" |
+	//	"Forbidden") "};";
 	public UsageElements getUsageAccess() {
 		return pUsage;
 	}
@@ -2378,9 +2620,10 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Informative:
 	//	"Informative" name=ID "{" "Description" description=STRING "," "Condition" condition=STRING "," ("PartOf Informative"
-	//	partInformative=[Informative] ",")? ("RefersTo PrivateData" refPrivateData+=RefPrivateData* ",")? ("RefersTo Service"
-	//	refService+=RefService* ",")? ("RefersTo Enforcement" refEnforcement+=RefEnforcement* ",")? "Modality"
-	//	modality=("Permitted" | "Obligation" | "Forbidden") "};";
+	//	partInformative=[Informative] ",")? ("RefersTo PrivateData" (refPrivateData+=RefPrivateData* | refPDAll="All") ",")?
+	//	("RefersTo Service" (refService+=RefService* | refSAll="All") ",")? ("RefersTo Enforcement"
+	//	(refEnforcement+=RefEnforcement* | refEAll="All") ",")? "Modality" modality=("Permitted" | "Obligation" |
+	//	"Forbidden") "};";
 	public InformativeElements getInformativeAccess() {
 		return pInformative;
 	}
