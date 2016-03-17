@@ -239,6 +239,38 @@ public class DocumentHelper {
 		}
 	}
 	
+	public static int getNumberOfRSLILMonth(String month) {
+		int monthNr = 0;
+		
+		if (month.equals("Jan")) {
+			monthNr = 1;
+		} else if (month.equals("Feb")) {
+			monthNr = 2;
+		} else if (month.equals("Mar")) {
+			monthNr = 3;
+		} else if (month.equals("Apr")) {
+			monthNr = 4;
+		} else if (month.equals("May")) {
+			monthNr = 5;
+		} else if (month.equals("Jun")) {
+			monthNr = 6;
+		} else if (month.equals("Jul")) {
+			monthNr = 7;
+		} else if (month.equals("Aug")) {
+			monthNr = 8;
+		} else if (month.equals("Sep")) {
+			monthNr = 9;
+		} else if (month.equals("Oct")) {
+			monthNr = 10;
+		} else if (month.equals("Nov")) {
+			monthNr = 11;
+		} else if (month.equals("Dec")) {
+			monthNr = 12;
+		}
+		
+		return monthNr;
+	}
+	
 	public static String getRSLILDate(Date date) {
 		String rslilDate = "";
 		Calendar cal = Calendar.getInstance();

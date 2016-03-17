@@ -169,7 +169,8 @@ public class ExportExcelHandler extends AbstractHandler {
 			XSSFRow rowDate = (XSSFRow) DocumentHelper.getCell(sheet, "HDate").getRow();
 			Date date = metadata.getDate();
 			DocumentHelper.replaceText(rowDate, "HDate", date.getDay() + "-"
-				+ date.getMonth().getName() + "-" + date.getYear());
+				+ DocumentHelper.getNumberOfRSLILMonth(date.getMonth().getName())
+				+ "-" + date.getYear());
 			XSSFRow rowVersion = (XSSFRow) DocumentHelper.getCell(sheet, "HVersion").getRow();
 			DocumentHelper.replaceText(rowVersion, "HVersion", metadata.getVersion());
 		}

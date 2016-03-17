@@ -176,7 +176,9 @@ public class WordHandler extends AbstractHandler {
 			XWPFParagraph tDate = DocumentHelper.getParagraph(document, "@Date");
 			Date date = metadata.getDate();
 			DocumentHelper.replaceText(tDate, "@Date",
-					date.getDay() + "-" + date.getMonth().getName() + "-" + date.getYear());
+				date.getDay() + "-"
+				+ DocumentHelper.getNumberOfRSLILMonth(date.getMonth().getName())
+				+ "-" + date.getYear());
 
 			XWPFParagraph tVersion = DocumentHelper.getParagraph(document, "@Version");
 			DocumentHelper.replaceText(tVersion, "@Version", metadata.getVersion());
