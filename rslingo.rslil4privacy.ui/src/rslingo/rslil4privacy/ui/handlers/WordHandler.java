@@ -164,6 +164,9 @@ public class WordHandler extends AbstractHandler {
 
 	private void writePolicyMetadata(Metadata metadata, XWPFDocument document) {
 		if (metadata != null) {
+			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@PolicyName");
+			DocumentHelper.replaceText(tName, "@PolicyName", metadata.getName());
+			
 			XWPFParagraph tAuthor = DocumentHelper.getParagraph(document, "@Author");
 			DocumentHelper.replaceText(tAuthor, "@Author", metadata.getAuthors());
 
@@ -178,8 +181,8 @@ public class WordHandler extends AbstractHandler {
 			XWPFParagraph tVersion = DocumentHelper.getParagraph(document, "@Version");
 			DocumentHelper.replaceText(tVersion, "@Version", metadata.getVersion());
 			
-			XWPFParagraph tIntro = DocumentHelper.getParagraph(document, "@Introduction");
-			DocumentHelper.replaceText(tIntro, "@Introduction", metadata.getDescription());
+			XWPFParagraph tIntro = DocumentHelper.getParagraph(document, "@Description");
+			DocumentHelper.replaceText(tIntro, "@Description", metadata.getDescription());
 		}
 	}
 

@@ -249,16 +249,25 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (authors=STRING organizations=STRING description=STRING date=Date version=STRING)
+	 *     (
+	 *         name=STRING 
+	 *         description=STRING 
+	 *         authors=STRING 
+	 *         organizations=STRING 
+	 *         date=Date 
+	 *         version=STRING
+	 *     )
 	 */
 	protected void sequence_Metadata(EObject context, Metadata semanticObject) {
 		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__NAME));
+			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__DESCRIPTION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__DESCRIPTION));
 			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__AUTHORS) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__AUTHORS));
 			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__ORGANIZATIONS) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__ORGANIZATIONS));
-			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__DESCRIPTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__DESCRIPTION));
 			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__DATE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__DATE));
 			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.METADATA__VERSION) == ValueTransient.YES)
@@ -266,11 +275,12 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getMetadataAccess().getAuthorsSTRINGTerminalRuleCall_2_0(), semanticObject.getAuthors());
-		feeder.accept(grammarAccess.getMetadataAccess().getOrganizationsSTRINGTerminalRuleCall_5_0(), semanticObject.getOrganizations());
-		feeder.accept(grammarAccess.getMetadataAccess().getDescriptionSTRINGTerminalRuleCall_8_0(), semanticObject.getDescription());
-		feeder.accept(grammarAccess.getMetadataAccess().getDateDateParserRuleCall_11_0(), semanticObject.getDate());
-		feeder.accept(grammarAccess.getMetadataAccess().getVersionSTRINGTerminalRuleCall_14_0(), semanticObject.getVersion());
+		feeder.accept(grammarAccess.getMetadataAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getMetadataAccess().getDescriptionSTRINGTerminalRuleCall_5_0(), semanticObject.getDescription());
+		feeder.accept(grammarAccess.getMetadataAccess().getAuthorsSTRINGTerminalRuleCall_8_0(), semanticObject.getAuthors());
+		feeder.accept(grammarAccess.getMetadataAccess().getOrganizationsSTRINGTerminalRuleCall_11_0(), semanticObject.getOrganizations());
+		feeder.accept(grammarAccess.getMetadataAccess().getDateDateParserRuleCall_14_0(), semanticObject.getDate());
+		feeder.accept(grammarAccess.getMetadataAccess().getVersionSTRINGTerminalRuleCall_17_0(), semanticObject.getVersion());
 		feeder.finish();
 	}
 	

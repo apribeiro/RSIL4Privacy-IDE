@@ -452,15 +452,15 @@ ruleMetadata returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getMetadataAccess().getPolicyMetadataKeyword_0());
     }
-	otherlv_1='Author(s)' 
+	otherlv_1='PolicyName' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getMetadataAccess().getAuthorSKeyword_1());
+    	newLeafNode(otherlv_1, grammarAccess.getMetadataAccess().getPolicyNameKeyword_1());
     }
 (
 (
-		lv_authors_2_0=RULE_STRING
+		lv_name_2_0=RULE_STRING
 		{
-			newLeafNode(lv_authors_2_0, grammarAccess.getMetadataAccess().getAuthorsSTRINGTerminalRuleCall_2_0()); 
+			newLeafNode(lv_name_2_0, grammarAccess.getMetadataAccess().getNameSTRINGTerminalRuleCall_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -468,8 +468,8 @@ ruleMetadata returns [EObject current=null]
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"authors",
-        		lv_authors_2_0, 
+       			"name",
+        		lv_name_2_0, 
         		"STRING");
 	    }
 
@@ -478,41 +478,15 @@ ruleMetadata returns [EObject current=null]
     {
     	newLeafNode(otherlv_3, grammarAccess.getMetadataAccess().getCommaKeyword_3());
     }
-	otherlv_4='Organization(s)' 
+	otherlv_4='Description' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getMetadataAccess().getOrganizationSKeyword_4());
+    	newLeafNode(otherlv_4, grammarAccess.getMetadataAccess().getDescriptionKeyword_4());
     }
 (
 (
-		lv_organizations_5_0=RULE_STRING
+		lv_description_5_0=RULE_STRING
 		{
-			newLeafNode(lv_organizations_5_0, grammarAccess.getMetadataAccess().getOrganizationsSTRINGTerminalRuleCall_5_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getMetadataRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"organizations",
-        		lv_organizations_5_0, 
-        		"STRING");
-	    }
-
-)
-)	otherlv_6=',' 
-    {
-    	newLeafNode(otherlv_6, grammarAccess.getMetadataAccess().getCommaKeyword_6());
-    }
-	otherlv_7='Description' 
-    {
-    	newLeafNode(otherlv_7, grammarAccess.getMetadataAccess().getDescriptionKeyword_7());
-    }
-(
-(
-		lv_description_8_0=RULE_STRING
-		{
-			newLeafNode(lv_description_8_0, grammarAccess.getMetadataAccess().getDescriptionSTRINGTerminalRuleCall_8_0()); 
+			newLeafNode(lv_description_5_0, grammarAccess.getMetadataAccess().getDescriptionSTRINGTerminalRuleCall_5_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -521,7 +495,33 @@ ruleMetadata returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"description",
-        		lv_description_8_0, 
+        		lv_description_5_0, 
+        		"STRING");
+	    }
+
+)
+)	otherlv_6=',' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getMetadataAccess().getCommaKeyword_6());
+    }
+	otherlv_7='Author(s)' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getMetadataAccess().getAuthorSKeyword_7());
+    }
+(
+(
+		lv_authors_8_0=RULE_STRING
+		{
+			newLeafNode(lv_authors_8_0, grammarAccess.getMetadataAccess().getAuthorsSTRINGTerminalRuleCall_8_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMetadataRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"authors",
+        		lv_authors_8_0, 
         		"STRING");
 	    }
 
@@ -530,25 +530,25 @@ ruleMetadata returns [EObject current=null]
     {
     	newLeafNode(otherlv_9, grammarAccess.getMetadataAccess().getCommaKeyword_9());
     }
-	otherlv_10='Date' 
+	otherlv_10='Organization(s)' 
     {
-    	newLeafNode(otherlv_10, grammarAccess.getMetadataAccess().getDateKeyword_10());
+    	newLeafNode(otherlv_10, grammarAccess.getMetadataAccess().getOrganizationSKeyword_10());
     }
 (
 (
-		{ 
-	        newCompositeNode(grammarAccess.getMetadataAccess().getDateDateParserRuleCall_11_0()); 
-	    }
-		lv_date_11_0=ruleDate		{
+		lv_organizations_11_0=RULE_STRING
+		{
+			newLeafNode(lv_organizations_11_0, grammarAccess.getMetadataAccess().getOrganizationsSTRINGTerminalRuleCall_11_0()); 
+		}
+		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getMetadataRule());
+	            $current = createModelElement(grammarAccess.getMetadataRule());
 	        }
-       		set(
+       		setWithLastConsumed(
        			$current, 
-       			"date",
-        		lv_date_11_0, 
-        		"Date");
-	        afterParserOrEnumRuleCall();
+       			"organizations",
+        		lv_organizations_11_0, 
+        		"STRING");
 	    }
 
 )
@@ -556,15 +556,41 @@ ruleMetadata returns [EObject current=null]
     {
     	newLeafNode(otherlv_12, grammarAccess.getMetadataAccess().getCommaKeyword_12());
     }
-	otherlv_13='Version' 
+	otherlv_13='Date' 
     {
-    	newLeafNode(otherlv_13, grammarAccess.getMetadataAccess().getVersionKeyword_13());
+    	newLeafNode(otherlv_13, grammarAccess.getMetadataAccess().getDateKeyword_13());
     }
 (
 (
-		lv_version_14_0=RULE_STRING
+		{ 
+	        newCompositeNode(grammarAccess.getMetadataAccess().getDateDateParserRuleCall_14_0()); 
+	    }
+		lv_date_14_0=ruleDate		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getMetadataRule());
+	        }
+       		set(
+       			$current, 
+       			"date",
+        		lv_date_14_0, 
+        		"Date");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_15=',' 
+    {
+    	newLeafNode(otherlv_15, grammarAccess.getMetadataAccess().getCommaKeyword_15());
+    }
+	otherlv_16='Version' 
+    {
+    	newLeafNode(otherlv_16, grammarAccess.getMetadataAccess().getVersionKeyword_16());
+    }
+(
+(
+		lv_version_17_0=RULE_STRING
 		{
-			newLeafNode(lv_version_14_0, grammarAccess.getMetadataAccess().getVersionSTRINGTerminalRuleCall_14_0()); 
+			newLeafNode(lv_version_17_0, grammarAccess.getMetadataAccess().getVersionSTRINGTerminalRuleCall_17_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -573,14 +599,14 @@ ruleMetadata returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"version",
-        		lv_version_14_0, 
+        		lv_version_17_0, 
         		"STRING");
 	    }
 
 )
-)	otherlv_15='}' 
+)	otherlv_18='}' 
     {
-    	newLeafNode(otherlv_15, grammarAccess.getMetadataAccess().getRightCurlyBracketKeyword_15());
+    	newLeafNode(otherlv_18, grammarAccess.getMetadataAccess().getRightCurlyBracketKeyword_18());
     }
 )
 ;

@@ -28,9 +28,10 @@ QualifiedNameWithWildcard:
 
 Metadata:
 	'PolicyMetadata {'
+		'PolicyName' name=STRING ','
+		'Description' description=STRING ','
 		'Author(s)' authors=STRING ','
 		'Organization(s)' organizations=STRING ','
-		'Description' description=STRING ','
 		'Date' date=Date ','
 		'Version' version=STRING
 	'}';

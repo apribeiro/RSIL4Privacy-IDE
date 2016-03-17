@@ -158,6 +158,10 @@ public class ExportExcelHandler extends AbstractHandler {
 	private void writeMetadata(Metadata metadata, XSSFWorkbook workbook) {
 		if (metadata != null) {
 			XSSFSheet sheet = workbook.getSheet("Home");
+			XSSFRow rowName = (XSSFRow) DocumentHelper.getCell(sheet, "HPolicyName").getRow();
+			DocumentHelper.replaceText(rowName, "HPolicyName", metadata.getName());
+			XSSFRow rowDescription = (XSSFRow) DocumentHelper.getCell(sheet, "HDescription").getRow();
+			DocumentHelper.replaceText(rowDescription, "HDescription", metadata.getDescription());
 			XSSFRow rowAuthors = (XSSFRow) DocumentHelper.getCell(sheet, "HAuthors").getRow();
 			DocumentHelper.replaceText(rowAuthors, "HAuthors", metadata.getAuthors());
 			XSSFRow rowOrgs = (XSSFRow) DocumentHelper.getCell(sheet, "HOrganizations").getRow();

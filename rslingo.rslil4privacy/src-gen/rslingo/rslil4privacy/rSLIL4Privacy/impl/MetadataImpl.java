@@ -23,9 +23,10 @@ import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.MetadataImpl#getName <em>Name</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.MetadataImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.MetadataImpl#getAuthors <em>Authors</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.MetadataImpl#getOrganizations <em>Organizations</em>}</li>
- *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.MetadataImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.MetadataImpl#getDate <em>Date</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.MetadataImpl#getVersion <em>Version</em>}</li>
  * </ul>
@@ -34,6 +35,46 @@ import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
  */
 public class MetadataImpl extends MinimalEObjectImpl.Container implements Metadata
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDescription()
+   * @generated
+   * @ordered
+   */
+  protected static final String DESCRIPTION_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDescription()
+   * @generated
+   * @ordered
+   */
+  protected String description = DESCRIPTION_EDEFAULT;
+
   /**
    * The default value of the '{@link #getAuthors() <em>Authors</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -73,26 +114,6 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
    * @ordered
    */
   protected String organizations = ORGANIZATIONS_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDescription()
-   * @generated
-   * @ordered
-   */
-  protected static final String DESCRIPTION_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDescription()
-   * @generated
-   * @ordered
-   */
-  protected String description = DESCRIPTION_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getDate() <em>Date</em>}' containment reference.
@@ -150,6 +171,52 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.METADATA__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getDescription()
+  {
+    return description;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDescription(String newDescription)
+  {
+    String oldDescription = description;
+    description = newDescription;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.METADATA__DESCRIPTION, oldDescription, description));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getAuthors()
   {
     return authors;
@@ -189,29 +256,6 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
     organizations = newOrganizations;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.METADATA__ORGANIZATIONS, oldOrganizations, organizations));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getDescription()
-  {
-    return description;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setDescription(String newDescription)
-  {
-    String oldDescription = description;
-    description = newDescription;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.METADATA__DESCRIPTION, oldDescription, description));
   }
 
   /**
@@ -311,12 +355,14 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
   {
     switch (featureID)
     {
+      case RSLIL4PrivacyPackage.METADATA__NAME:
+        return getName();
+      case RSLIL4PrivacyPackage.METADATA__DESCRIPTION:
+        return getDescription();
       case RSLIL4PrivacyPackage.METADATA__AUTHORS:
         return getAuthors();
       case RSLIL4PrivacyPackage.METADATA__ORGANIZATIONS:
         return getOrganizations();
-      case RSLIL4PrivacyPackage.METADATA__DESCRIPTION:
-        return getDescription();
       case RSLIL4PrivacyPackage.METADATA__DATE:
         return getDate();
       case RSLIL4PrivacyPackage.METADATA__VERSION:
@@ -335,14 +381,17 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
   {
     switch (featureID)
     {
+      case RSLIL4PrivacyPackage.METADATA__NAME:
+        setName((String)newValue);
+        return;
+      case RSLIL4PrivacyPackage.METADATA__DESCRIPTION:
+        setDescription((String)newValue);
+        return;
       case RSLIL4PrivacyPackage.METADATA__AUTHORS:
         setAuthors((String)newValue);
         return;
       case RSLIL4PrivacyPackage.METADATA__ORGANIZATIONS:
         setOrganizations((String)newValue);
-        return;
-      case RSLIL4PrivacyPackage.METADATA__DESCRIPTION:
-        setDescription((String)newValue);
         return;
       case RSLIL4PrivacyPackage.METADATA__DATE:
         setDate((Date)newValue);
@@ -364,14 +413,17 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
   {
     switch (featureID)
     {
+      case RSLIL4PrivacyPackage.METADATA__NAME:
+        setName(NAME_EDEFAULT);
+        return;
+      case RSLIL4PrivacyPackage.METADATA__DESCRIPTION:
+        setDescription(DESCRIPTION_EDEFAULT);
+        return;
       case RSLIL4PrivacyPackage.METADATA__AUTHORS:
         setAuthors(AUTHORS_EDEFAULT);
         return;
       case RSLIL4PrivacyPackage.METADATA__ORGANIZATIONS:
         setOrganizations(ORGANIZATIONS_EDEFAULT);
-        return;
-      case RSLIL4PrivacyPackage.METADATA__DESCRIPTION:
-        setDescription(DESCRIPTION_EDEFAULT);
         return;
       case RSLIL4PrivacyPackage.METADATA__DATE:
         setDate((Date)null);
@@ -393,12 +445,14 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
   {
     switch (featureID)
     {
+      case RSLIL4PrivacyPackage.METADATA__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case RSLIL4PrivacyPackage.METADATA__DESCRIPTION:
+        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
       case RSLIL4PrivacyPackage.METADATA__AUTHORS:
         return AUTHORS_EDEFAULT == null ? authors != null : !AUTHORS_EDEFAULT.equals(authors);
       case RSLIL4PrivacyPackage.METADATA__ORGANIZATIONS:
         return ORGANIZATIONS_EDEFAULT == null ? organizations != null : !ORGANIZATIONS_EDEFAULT.equals(organizations);
-      case RSLIL4PrivacyPackage.METADATA__DESCRIPTION:
-        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
       case RSLIL4PrivacyPackage.METADATA__DATE:
         return date != null;
       case RSLIL4PrivacyPackage.METADATA__VERSION:
@@ -418,12 +472,14 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (authors: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", description: ");
+    result.append(description);
+    result.append(", authors: ");
     result.append(authors);
     result.append(", organizations: ");
     result.append(organizations);
-    result.append(", description: ");
-    result.append(description);
     result.append(", version: ");
     result.append(version);
     result.append(')');
