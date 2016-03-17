@@ -1,5 +1,7 @@
 package rslingo.rslil4privacy.ui.handlers;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -235,6 +237,63 @@ public class DocumentHelper {
                 }
             }
 		}
+	}
+	
+	public static String getRSLILDate(Date date) {
+		String rslilDate = "";
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(date);
+		rslilDate = cal.get(Calendar.DAY_OF_MONTH) + "-"
+			+ getRSLILMonth(cal.get(Calendar.MONTH)) + "-" + cal.get(Calendar.YEAR);
+		
+		return rslilDate;
+	}
+	
+	private static String getRSLILMonth(int month) {
+		String rslilMonth = "";
+		
+		switch (month) {
+			case 0:
+				rslilMonth = "Jan";
+				break;
+			case 1:
+				rslilMonth = "Feb";
+				break;
+			case 2:
+				rslilMonth = "Mar";
+				break;
+			case 3:
+				rslilMonth = "Apr";
+				break;
+			case 4:
+				rslilMonth = "May";
+				break;
+			case 5:
+				rslilMonth = "Jun";
+				break;
+			case 6:
+				rslilMonth = "Jul";
+				break;
+			case 7:
+				rslilMonth = "Aug";
+				break;
+			case 8:
+				rslilMonth = "Sep";
+				break;
+			case 9:
+				rslilMonth = "Oct";
+				break;
+			case 10:
+				rslilMonth = "Nov";
+				break;
+			case 11:
+				rslilMonth = "Dec";
+				break;
+			default:
+				break;
+		}
+		
+		return rslilMonth;
 	}
 	
 	private static boolean tryParseInt(String value) {

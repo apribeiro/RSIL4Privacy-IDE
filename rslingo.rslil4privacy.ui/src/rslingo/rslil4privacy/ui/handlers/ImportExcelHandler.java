@@ -87,7 +87,6 @@ public class ImportExcelHandler extends AbstractHandler {
 		if (importMode.equals(ImportWindow.SINGLE)) {
 			generateSingleFile(srcGenFolder, filePath, fileName);
 		} else {
-			generateMasterFile(srcGenFolder, filePath, fileName);
 			generateStatementsFile(srcGenFolder, filePath, fileName);
 			generatePrivateDataFile(srcGenFolder, filePath, fileName);
 			generateServicesFile(srcGenFolder, filePath, fileName);
@@ -117,6 +116,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		sb.append("\n");
 		sb.append("\n");
 		
+		generateMetadataRegion(wb, sb);
 		generateStatementsRegion(wb, sb);
 		generatePrivateDataRegion(wb, sb);
 		generateRecipientsRegion(wb, sb);
@@ -134,10 +134,6 @@ public class ImportExcelHandler extends AbstractHandler {
 		} else {
 			file.setContents(source, IResource.FORCE, null);
 		}
-	}
-	
-	private void generateMasterFile(IFolder srcGenFolder, String filePath, String fileName) {
-		// TODO: Implement generateMasterFileMasterFile.
 	}
 	
 	private void generateStatementsFile(IFolder srcGenFolder, String filePath, String fileName)
@@ -270,6 +266,49 @@ public class ImportExcelHandler extends AbstractHandler {
 		} else {
 			file.setContents(source, IResource.FORCE, null);
 		}
+	}
+	
+	private void generateMetadataRegion(Workbook wb, StringBuilder sb) {
+		// Get the Home Sheet
+	    Sheet sheet = wb.getSheet("Home");
+		sb.append("PolicyMetadata {");
+		sb.append("\n");
+		Iterator<Row> rowIt = sheet.rowIterator();
+		// Ignore the Header row
+    	rowIt.next();
+		
+    	Row row = rowIt.next();
+    	Cell cellName = row.getCell(1);
+		String name = cellName.getStringCellValue();
+		row = rowIt.next();
+		Cell cellDescription = row.getCell(1);
+		String description = cellDescription.getStringCellValue();
+		row = rowIt.next();
+		Cell cellAuthors = row.getCell(1);
+		String authors = cellAuthors.getStringCellValue();
+		row = rowIt.next();
+		Cell cellOrgs = row.getCell(1);
+		String orgs = cellOrgs.getStringCellValue();
+		row = rowIt.next();
+		Cell cellDate = row.getCell(1);
+		String date = DocumentHelper.getRSLILDate(cellDate.getDateCellValue());
+		row = rowIt.next();
+		Cell cellVersion = row.getCell(1);
+		String version = cellVersion.getStringCellValue();
+		
+		sb.append("\tPolicyName \"" + name + "\",");
+		sb.append("\n");
+		sb.append("\tDescription \"" + description + "\",");
+		sb.append("\n");
+		sb.append("\tAuthor(s) \"" + authors + "\",");
+		sb.append("\n");
+		sb.append("\tOrganization(s) \"" + orgs + "\",");
+		sb.append("\n");
+		sb.append("\tDate " + date + ",");
+		sb.append("\n");
+		sb.append("\tVersion \"" + version + "\"");
+		sb.append("\n}");
+		sb.append("\n\n");
 	}
 	
 	private void generateStatementsRegion(Workbook wb, StringBuilder sb) {
