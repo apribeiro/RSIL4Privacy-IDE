@@ -32,9 +32,11 @@ import com.google.inject.Injector;
 import rslingo.rslil4privacy.RSLIL4PrivacyStandaloneSetup;
 import rslingo.rslil4privacy.rSLIL4Privacy.Attribute;
 import rslingo.rslil4privacy.rSLIL4Privacy.Collection;
+import rslingo.rslil4privacy.rSLIL4Privacy.Date;
 import rslingo.rslil4privacy.rSLIL4Privacy.Disclosure;
 import rslingo.rslil4privacy.rSLIL4Privacy.Enforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.Informative;
+import rslingo.rslil4privacy.rSLIL4Privacy.Metadata;
 import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
 import rslingo.rslil4privacy.rSLIL4Privacy.PrivateData;
 import rslingo.rslil4privacy.rSLIL4Privacy.Recipient;
@@ -125,6 +127,7 @@ public class ExportExcelHandler extends AbstractHandler {
 					InputStream from = new FileInputStream(PLUGIN_PATH + DEF_WORD_PATH);
 					XSSFWorkbook workbook = new XSSFWorkbook(from);
 
+					writeMetadata(policy.getMetadata(), workbook);
 					writeStatements(policy, workbook);
 					writePrivateData(policy, workbook);
 					writeServices(policy, workbook);
@@ -150,6 +153,22 @@ public class ExportExcelHandler extends AbstractHandler {
 			}
 		};
 		new Thread(runnable).start();
+	}
+	
+	private void writeMetadata(Metadata metadata, XSSFWorkbook workbook) {
+		if (metadata != null) {
+			XSSFSheet sheet = workbook.getSheet("Home");
+			XSSFRow rowAuthors = (XSSFRow) DocumentHelper.getCell(sheet, "HAuthors").getRow();
+			DocumentHelper.replaceText(rowAuthors, "HAuthors", metadata.getAuthors());
+			XSSFRow rowOrgs = (XSSFRow) DocumentHelper.getCell(sheet, "HOrganizations").getRow();
+			DocumentHelper.replaceText(rowOrgs, "HOrganizations", metadata.getOrganizations());
+			XSSFRow rowDate = (XSSFRow) DocumentHelper.getCell(sheet, "HDate").getRow();
+			Date date = metadata.getDate();
+			DocumentHelper.replaceText(rowDate, "HDate", date.getDay() + "-"
+				+ date.getMonth().getName() + "-" + date.getYear());
+			XSSFRow rowVersion = (XSSFRow) DocumentHelper.getCell(sheet, "HVersion").getRow();
+			DocumentHelper.replaceText(rowVersion, "HVersion", metadata.getVersion());
+		}
 	}
 	
 	private void writeStatements(Policy policy, XSSFWorkbook workbook) {
