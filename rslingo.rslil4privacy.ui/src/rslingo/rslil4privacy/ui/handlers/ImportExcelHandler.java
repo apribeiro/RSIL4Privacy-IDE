@@ -142,18 +142,18 @@ public class ImportExcelHandler extends AbstractHandler {
 			StringBuilder sb = new StringBuilder();
 			InputStream inp = new FileInputStream(filePath);
 			Workbook wb = WorkbookFactory.create(inp);
-			sb.append("Package " + fileName + ".Main.RSLingo4Privacy {");
+			sb.append("Package " + fileName + ".Main {");
 			sb.append("\n");
 			sb.append("\n");
-			sb.append("import " + fileName + ".Statements.RSLingo4Privacy.*");
+			sb.append("import " + fileName + ".Statements.*");
 			sb.append("\n");
-			sb.append("import " + fileName + ".Privatedata.RSLingo4Privacy.*");
+			sb.append("import " + fileName + ".Privatedata.*");
 			sb.append("\n");
-			sb.append("import " + fileName + ".Recipients.RSLingo4Privacy.*");
+			sb.append("import " + fileName + ".Recipients.*");
 			sb.append("\n");
-			sb.append("import " + fileName + ".Enforcements.RSLingo4Privacy.*");
+			sb.append("import " + fileName + ".Enforcements.*");
 			sb.append("\n");
-			sb.append("import " + fileName + ".Services.RSLingo4Privacy.*");
+			sb.append("import " + fileName + ".Services.*");
 			sb.append("\n");
 			sb.append("\n");
 			
@@ -177,16 +177,16 @@ public class ImportExcelHandler extends AbstractHandler {
 		StringBuilder sb = new StringBuilder();
 		InputStream inp = new FileInputStream(filePath);
 		Workbook wb = WorkbookFactory.create(inp);
-		sb.append("Package " + fileName + ".Statements.RSLingo4Privacy {");
+		sb.append("Package " + fileName + ".Statements {");
 		sb.append("\n");
 		sb.append("\n");
-		sb.append("import " + fileName + ".Privatedata.RSLingo4Privacy.*");
+		sb.append("import " + fileName + ".Privatedata.*");
 		sb.append("\n");
-		sb.append("import " + fileName + ".Services.RSLingo4Privacy.*");
+		sb.append("import " + fileName + ".Services.*");
 		sb.append("\n");
-		sb.append("import " + fileName + ".Enforcements.RSLingo4Privacy.*");
+		sb.append("import " + fileName + ".Enforcements.*");
 		sb.append("\n");
-		sb.append("import " + fileName + ".Recipients.RSLingo4Privacy.*");
+		sb.append("import " + fileName + ".Recipients.*");
 		sb.append("\n");
 		sb.append("\n");
 		
@@ -210,7 +210,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		StringBuilder sb = new StringBuilder();
 		InputStream inp = new FileInputStream(filePath);
 		Workbook wb = WorkbookFactory.create(inp);
-		sb.append("Package " + fileName + ".Privatedata.RSLingo4Privacy {");
+		sb.append("Package " + fileName + ".Privatedata {");
 		sb.append("\n");
 		sb.append("\n");
 		
@@ -234,10 +234,10 @@ public class ImportExcelHandler extends AbstractHandler {
 		StringBuilder sb = new StringBuilder();
 		InputStream inp = new FileInputStream(filePath);
 		Workbook wb = WorkbookFactory.create(inp);
-		sb.append("Package " + fileName + ".Services.RSLingo4Privacy {");
+		sb.append("Package " + fileName + ".Services {");
 		sb.append("\n");
 		sb.append("\n");
-		sb.append("import " + fileName + ".Privatedata.RSLingo4Privacy.*");
+		sb.append("import " + fileName + ".Privatedata.*");
 		sb.append("\n");
 		sb.append("\n");
 		
@@ -261,7 +261,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		StringBuilder sb = new StringBuilder();
 		InputStream inp = new FileInputStream(filePath);
 		Workbook wb = WorkbookFactory.create(inp);
-		sb.append("Package " + fileName + ".Enforcements.RSLingo4Privacy {");
+		sb.append("Package " + fileName + ".Enforcements {");
 		sb.append("\n");
 		sb.append("\n");
 		
@@ -285,7 +285,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		StringBuilder sb = new StringBuilder();
 		InputStream inp = new FileInputStream(filePath);
 		Workbook wb = WorkbookFactory.create(inp);
-		sb.append("Package " + fileName + ".Recipients.RSLingo4Privacy {");
+		sb.append("Package " + fileName + ".Recipients {");
 		sb.append("\n");
 		sb.append("\n");
 		
