@@ -18,13 +18,16 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
@@ -40,6 +43,7 @@ import rslingo.rslil4privacy.rSLIL4Privacy.Collection;
 import rslingo.rslil4privacy.rSLIL4Privacy.Date;
 import rslingo.rslil4privacy.rSLIL4Privacy.Disclosure;
 import rslingo.rslil4privacy.rSLIL4Privacy.Enforcement;
+import rslingo.rslil4privacy.rSLIL4Privacy.Import;
 import rslingo.rslil4privacy.rSLIL4Privacy.Informative;
 import rslingo.rslil4privacy.rSLIL4Privacy.Metadata;
 import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
@@ -70,6 +74,8 @@ public class WordHandler extends AbstractHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
+		IWorkbenchWindow workbenchWindow = HandlerUtil.getActiveWorkbenchWindowChecked(event);
+		Shell shell = workbenchWindow.getShell();
 		ISelection selection = HandlerUtil.getActiveMenuSelection(event);
 
 		// Check if the command was triggered using the ContextMenu
@@ -77,29 +83,27 @@ public class WordHandler extends AbstractHandler {
 			if (selection instanceof IStructuredSelection) {
 				IStructuredSelection structuredSelection = (IStructuredSelection) selection;
 				IFile file = (IFile) structuredSelection.getFirstElement();
-				generateWordFile(file);
+				generateWordFile(file, shell);
 			} else {
 				IEditorPart activeEditor = HandlerUtil.getActiveEditor(event);
 				IFile file = (IFile) activeEditor.getEditorInput().getAdapter(IFile.class);
-				generateWordFile(file);
+				generateWordFile(file, shell);
 			}
 		} else {
-			IWorkbenchWindow workbenchWindow = HandlerUtil.getActiveWorkbenchWindowChecked(event);
 			MenuCommand cmd = new MenuCommand() {
 				@Override
 				public void execute(IProject project, IFile file) {
-					generateWordFile(file);
+					generateWordFile(file, shell);
 				}
 			};
-			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(),
-					cmd, false, FILE_EXT);
+			MenuCommandWindow window = new MenuCommandWindow(shell, cmd, false, FILE_EXT);
 			window.open();
 		}
 
 		return null;
 	}
 
-	private void generateWordFile(IFile file) {
+	private void generateWordFile(IFile file, Shell shell) {
 		IProject project = file.getProject();
 		IFolder srcGenFolder = project.getFolder(GEN_FOLDER);
 
@@ -118,7 +122,7 @@ public class WordHandler extends AbstractHandler {
 		}
 
 		// Start a new Thread to avoid blocking the UI
-		Runnable runnable = new Runnable() {
+		shell.getDisplay().syncExec(new Runnable() {
 			@Override
 			public void run() {
 				new org.eclipse.emf.mwe.utils.StandaloneSetup().setPlatformUri("../");
@@ -130,6 +134,82 @@ public class WordHandler extends AbstractHandler {
 				//URI.createURI("platform:/resource/rslingo.rslil4privacy/src/example.rslil"), true);
 				Policy policy = (Policy) resource.getContents().get(0);
 
+				// Deal with the Main file mode
+				if (policy.getMetadata() != null && policy.getImportelements().size() > 0) {
+					ArrayList<IFile> refs = new ArrayList<IFile>();
+					IResource parent = file.getParent();
+					
+					if (parent instanceof IFolder) {
+						IFolder pFolder = (IFolder) parent;
+						
+						try {
+							for (Import i : policy.getImportelements()) {
+								for (IResource r : pFolder.members()) {
+									if (r instanceof IFile && r.getName().endsWith(FILE_EXT)
+										&& r.getName().contains(i.getImportedNamespace().replace(".*", ""))) {
+										refs.add((IFile) r);
+									}
+								}
+							}
+						} catch (CoreException e) {
+							e.printStackTrace();
+						}
+					} else {
+						IProject pProject = (IProject) parent;
+						
+						try {
+							for (Import i : policy.getImportelements()) {
+								for (IResource r : pProject.members()) {
+									if (r instanceof IFile && r.getName().endsWith(FILE_EXT)
+										&& r.getName().contains(i.getImportedNamespace())) {
+										refs.add((IFile) r);
+									}
+								}
+							}
+						} catch (CoreException e) {
+							e.printStackTrace();
+						}
+					}
+					
+					// Set the missing Policy Elements
+					for (IFile iFile : refs) {
+						Resource res = resourceSet.getResource(
+								URI.createURI("platform:/resource/" + iFile.getFullPath().toString()), true);
+						Policy polRef = (Policy) res.getContents().get(0);
+						
+						if (polRef.getCollection().size() > 0) {
+							policy.getCollection().clear();
+							policy.getDisclosure().clear();
+							policy.getRetention().clear();
+							policy.getUsage().clear();
+							policy.getInformative().clear();
+							policy.getCollection().addAll(polRef.getCollection());
+							policy.getDisclosure().addAll(polRef.getDisclosure());
+							policy.getRetention().addAll(polRef.getRetention());
+							policy.getUsage().addAll(polRef.getUsage());
+							policy.getInformative().addAll(polRef.getInformative());
+						} else if (polRef.getPrivateData().size() > 0) {
+							policy.getPrivateData().clear();
+							policy.getPrivateData().addAll(polRef.getPrivateData());
+						} else if (polRef.getRecipient().size() > 0) {
+							policy.getRecipient().clear();
+							policy.getRecipient().addAll(polRef.getRecipient());
+						} else if (polRef.getService().size() > 0) {
+							policy.getService().clear();
+							policy.getService().addAll(polRef.getService());
+						} else if (polRef.getEnforcement().size() > 0) {
+							policy.getEnforcement().clear();
+							policy.getEnforcement().addAll(polRef.getEnforcement());
+						}
+					}
+				} else if (policy.getMetadata() == null) {
+					String message = "You should run this command using the Main file associated to this file!";
+					MessageDialog errorDialog = new MessageDialog(new Shell(), "RSLingo4Privacy Studio",
+			    		null, message, MessageDialog.ERROR, new String[] { "OK" }, 0);
+				    errorDialog.open();
+					return;
+				}
+				
 				try {
 					InputStream from = new FileInputStream(PLUGIN_PATH + DEF_WORD_PATH);
 					XWPFDocument document = new XWPFDocument(from);
@@ -140,7 +220,7 @@ public class WordHandler extends AbstractHandler {
 					writeRecipients(policy, document);
 					writeEnforcements(policy, document);
 					writeStatements(policy, document);
-
+					
 					// Write the Document in file system
 					String fileName = file.getName().split(FILE_EXT)[0];
 					File to = new File(project.getLocation().toOSString()
@@ -158,8 +238,7 @@ public class WordHandler extends AbstractHandler {
 					e.printStackTrace();
 				}
 			}
-		};
-		new Thread(runnable).start();
+		});
 	}
 
 	private void writePolicyMetadata(Metadata metadata, XWPFDocument document) {
