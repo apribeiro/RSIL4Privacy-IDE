@@ -276,11 +276,11 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getMetadataAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getMetadataAccess().getDescriptionSTRINGTerminalRuleCall_5_0(), semanticObject.getDescription());
-		feeder.accept(grammarAccess.getMetadataAccess().getAuthorsSTRINGTerminalRuleCall_8_0(), semanticObject.getAuthors());
-		feeder.accept(grammarAccess.getMetadataAccess().getOrganizationsSTRINGTerminalRuleCall_11_0(), semanticObject.getOrganizations());
-		feeder.accept(grammarAccess.getMetadataAccess().getDateDateParserRuleCall_14_0(), semanticObject.getDate());
-		feeder.accept(grammarAccess.getMetadataAccess().getVersionSTRINGTerminalRuleCall_17_0(), semanticObject.getVersion());
+		feeder.accept(grammarAccess.getMetadataAccess().getDescriptionSTRINGTerminalRuleCall_4_0(), semanticObject.getDescription());
+		feeder.accept(grammarAccess.getMetadataAccess().getAuthorsSTRINGTerminalRuleCall_6_0(), semanticObject.getAuthors());
+		feeder.accept(grammarAccess.getMetadataAccess().getOrganizationsSTRINGTerminalRuleCall_8_0(), semanticObject.getOrganizations());
+		feeder.accept(grammarAccess.getMetadataAccess().getDateDateParserRuleCall_10_0(), semanticObject.getDate());
+		feeder.accept(grammarAccess.getMetadataAccess().getVersionSTRINGTerminalRuleCall_12_0(), semanticObject.getVersion());
 		feeder.finish();
 	}
 	

@@ -15,7 +15,7 @@ Policy:
 	    recipient+=Recipient*
 	    service+=Service*
 	    enforcement+=Enforcement*
-  	'};';
+  	'}';
 
 QualifiedName:
   	ID ('.' ID)*;
@@ -28,11 +28,11 @@ QualifiedNameWithWildcard:
 
 Metadata:
 	'PolicyMetadata {'
-		'PolicyName' name=STRING ','
-		'Description' description=STRING ','
-		'Author(s)' authors=STRING ','
-		'Organization(s)' organizations=STRING ','
-		'Date' date=Date ','
+		'PolicyName' name=STRING
+		'Description' description=STRING
+		'Author(s)' authors=STRING
+		'Organization(s)' organizations=STRING
+		'Date' date=Date
 		'Version' version=STRING
 	'}';
 
@@ -44,29 +44,30 @@ Month:
 
 Enforcement:
 	'Enforcement' name=ID '{'
-	'Name' enforcementName=STRING ','
-	'Description' description=STRING ','
-	'Type' type=('Action'|'Algorithm'|'Config'|'Process'|'Tool') '};';
+	'Name' enforcementName=STRING
+	'Description' description=STRING
+	'Type' type=('Action'|'Algorithm'|'Config'|'Process'|'Tool') '}';
 	
 Service:
 	'Service' name=ID '{'
-	'Name' serviceName=STRING ','
-	('Description' description=STRING ',')?
-	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All') ',')?
-	('Service_Part' servicePart+=ServicePart*)? '};';
+	'Name' serviceName=STRING
+	('Description' description=STRING)?
+	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All'))?
+	('Service_Part' servicePart+=ServicePart*)? '}';
 	
 Recipient:
 	'Recipient' name=ID '{'
-	'Name' recipientName=STRING ','
-	'Description' description=STRING ','
-	('Recipient_Part' recipientPart+=RecipientPart* ',')?
- 	'Scope' scope=('Internal'|'External'|'Internal/External') ','
- 	'Type' type=('Individual'|'Organization'|'Individual/Organization') '};';
+	'Name' recipientName=STRING
+	'Description' description=STRING
+	('Recipient_Part' recipientPart+=RecipientPart*)?
+ 	'Scope' scope=('Internal'|'External'|'Internal/External')
+ 	'Type' type=('Individual'|'Organization'|'Individual/Organization') '}';
  		
 PrivateData:
-	'PrivateData' name=ID '{' 
-	'Description' description=STRING ','
-	'Type' type=('PersonalInformation'| 'UsageInformation')',' attribute+=Attribute* '};'; 	
+	'PrivateData' name=ID '{'
+	'Description' description=STRING
+	'Type' type=('PersonalInformation'| 'UsageInformation')
+	attribute+=Attribute* '}'; 	
 
 Attribute:
  	'Attribute' name=STRING '{'
@@ -75,78 +76,78 @@ Attribute:
 
 Collection:
 	'Collection' name=ID '{'
-	'Description' description=STRING ','
-	'Condition' condition = STRING ','
-	('PartOf Collection' partCollection=[Collection] ',')?
-	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All') ',')?
-	('RefersTo Service' (refService+=RefService* | refSAll='All') ',')?
-	('RefersTo Enforcement' (refEnforcement+=RefEnforcement* | refEAll='All') ',')?
-	'Modality' modality=('Permitted'|'Obligation'|'Forbidden') '};';
+	'Description' description=STRING
+	'Condition' condition = STRING
+	('PartOf Collection' partCollection=[Collection])?
+	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All'))?
+	('RefersTo Service' (refService+=RefService* | refSAll='All'))?
+	('RefersTo Enforcement' (refEnforcement+=RefEnforcement* | refEAll='All'))?
+	'Modality' modality=('Permitted'|'Obligation'|'Forbidden') '}';
 	
 Disclosure:
 	'Disclosure' name=ID '{'
-	'Description' description=STRING ','
-	'Condition' condition=STRING ','
-	('PartOf Disclosure' partDisclosure=[Disclosure] ',')?
-	('RefersTo Recipient' (refRecipient+=RefRecipient* | refRAll='All') ',')?
-	('RefersTo Recipient-Source' (refRecipientSource+=RefRecipientSource* | refRSAll='All') ',')?
-	('RefersTo Recipient-Target' (refRecipientTarget+=RefRecipientTarget* | refRTAll='All') ',')?
-	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All') ',')?
-	('RefersTo Service' (refService+=RefService* | refSAll='All') ',')?
-	('RefersTo Enforcement' (refEnforcement+=RefEnforcement* | refEAll='All') ',')?
-	'Modality' modality=('Permitted'|'Obligation'|'Forbidden') '};';
+	'Description' description=STRING
+	'Condition' condition=STRING
+	('PartOf Disclosure' partDisclosure=[Disclosure])?
+	('RefersTo Recipient' (refRecipient+=RefRecipient* | refRAll='All'))?
+	('RefersTo Recipient-Source' (refRecipientSource+=RefRecipientSource* | refRSAll='All'))?
+	('RefersTo Recipient-Target' (refRecipientTarget+=RefRecipientTarget* | refRTAll='All'))?
+	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All'))?
+	('RefersTo Service' (refService+=RefService* | refSAll='All'))?
+	('RefersTo Enforcement' (refEnforcement+=RefEnforcement* | refEAll='All'))?
+	'Modality' modality=('Permitted'|'Obligation'|'Forbidden') '}';
 	
 Retention:
 	'Retention' name=ID '{'
-	'Description' description=STRING ','
-	'Condition' condition=STRING ','
-	('PartOf Retention' partRetention=[Retention] ',')?
-	'Period' period=STRING ','
-	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All') ',')?
-	('RefersTo Service' (refService+=RefService* | refSAll='All') ',')?
-	('RefersTo Enforcement' (refEnforcement+=RefEnforcement* | refEAll='All') ',')?
-	'Modality' modality=('Permitted'|'Obligation'|'Forbidden') '};';
+	'Description' description=STRING
+	'Condition' condition=STRING
+	('PartOf Retention' partRetention=[Retention])?
+	'Period' period=STRING
+	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All'))?
+	('RefersTo Service' (refService+=RefService* | refSAll='All'))?
+	('RefersTo Enforcement' (refEnforcement+=RefEnforcement* | refEAll='All'))?
+	'Modality' modality=('Permitted'|'Obligation'|'Forbidden') '}';
 	
 Usage:
 	'Usage' name=ID '{'
-	'Description' description=STRING ','
-	'Condition' condition=STRING ','
-	('PartOf Usage' partUsage=[Usage] ',')?
-	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All') ',')?
-	('RefersTo Service' (refService+=RefService* | refSAll='All') ',')?
-	('RefersTo Enforcement' (refEnforcement+=RefEnforcement* | refEAll='All') ',')?
-	'Modality' modality=('Permitted'|'Obligation'|'Forbidden') '};';
+	'Description' description=STRING
+	'Condition' condition=STRING
+	('PartOf Usage' partUsage=[Usage])?
+	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All'))?
+	('RefersTo Service' (refService+=RefService* | refSAll='All'))?
+	('RefersTo Enforcement' (refEnforcement+=RefEnforcement* | refEAll='All'))?
+	'Modality' modality=('Permitted'|'Obligation'|'Forbidden') '}';
 	
 Informative:
-	'Informative' name=ID '{' 
-	'Description' description=STRING ','
-	'Condition' condition=STRING ','
-	('PartOf Informative' partInformative=[Informative] ',')?
-	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All') ',')?
-	('RefersTo Service' (refService+=RefService* | refSAll='All') ',')?
-	('RefersTo Enforcement' (refEnforcement+=RefEnforcement* | refEAll='All') ',')?
-	'Modality' modality=('Permitted'|'Obligation'|'Forbidden') '};';
+	'Informative' name=ID '{'
+	'Description' description=STRING
+	'Condition' condition=STRING
+	('PartOf Informative' partInformative=[Informative])?
+	('RefersTo PrivateData' (refPrivateData+=RefPrivateData* | refPDAll='All'))?
+	('RefersTo Service' (refService+=RefService* | refSAll='All'))?
+	('RefersTo Enforcement' (refEnforcement+=RefEnforcement* | refEAll='All'))?
+	'Modality' modality=('Permitted'|'Obligation'|'Forbidden') '}';
 	
 RecipientPart:
-	recipientPart=[Recipient]('-')?;
+	recipientPart=[Recipient](',')?;
 
 RefRecipient:
-	refRecipient=[Recipient]('-')?;
+	refRecipient=[Recipient](',')?;
 	
 RefRecipientSource:
-	refRecipientSource=[Recipient]('-')?;
+	refRecipientSource=[Recipient](',')?;
 	
 RefRecipientTarget:
-	refRecipientTarget=[Recipient]('-')?;
+	refRecipientTarget=[Recipient](',')?;
 	
 RefService:
-	refService=[Service]('-')?;
+	refService=[Service](',')?;
 	
 ServicePart:
-	servicePart=[Service]('-')?;
+	servicePart=[Service](',')?;
 		
 RefPrivateData: 
-	refPrivateData=[PrivateData]('-')?;
+	refPrivateData=[PrivateData](',')?;
 	
 RefEnforcement:
-	refEnforcement=[Enforcement]('-')?;
+	refEnforcement=[Enforcement](',')?;
