@@ -20,8 +20,12 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.dialogs.MessageDialog;
@@ -119,9 +123,9 @@ public class ExportExcelHandler extends AbstractHandler {
 		}
 
 		// Start a new Thread to avoid blocking the UI
-		shell.getDisplay().syncExec(new Runnable() {
+		Job job = new Job("Exporting to Excel...") {
 			@Override
-			public void run() {
+			protected IStatus run(IProgressMonitor monitor) {
 				new org.eclipse.emf.mwe.utils.StandaloneSetup().setPlatformUri("../");
 				Injector injector = new RSLIL4PrivacyStandaloneSetup().createInjectorAndDoEMFRegistration();
 				XtextResourceSet resourceSet = injector.getInstance(XtextResourceSet.class);
@@ -200,12 +204,16 @@ public class ExportExcelHandler extends AbstractHandler {
 						}
 					}
 				} else if (policy.getMetadata() == null) {
-					String message = "You should run this command using the Main file associated to this file ("
-						+ file.getName() + ")!";
-					MessageDialog errorDialog = new MessageDialog(new Shell(), "RSLingo4Privacy Studio",
-			    		null, message, MessageDialog.ERROR, new String[] { "OK" }, 0);
-				    errorDialog.open();
-					return;
+					shell.getDisplay().asyncExec(new Runnable() {
+						@Override
+						public void run() {
+							String message = "You should run this command using the Main file associated to this file!";
+							MessageDialog errorDialog = new MessageDialog(shell, "RSLingo4Privacy Studio",
+						    		null, message, MessageDialog.ERROR, new String[] { "OK" }, 0);
+						    errorDialog.open();
+						}
+					});
+				    return Status.OK_STATUS;
 				}
 
 				try {
@@ -235,9 +243,11 @@ public class ExportExcelHandler extends AbstractHandler {
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
+				return Status.OK_STATUS;
 			}
-		});
-//		new Thread(runnable).start();
+	    };
+	    job.setUser(true);
+	    job.schedule();
 	}
 	
 	private void writeMetadata(Metadata metadata, XSSFWorkbook workbook) {
