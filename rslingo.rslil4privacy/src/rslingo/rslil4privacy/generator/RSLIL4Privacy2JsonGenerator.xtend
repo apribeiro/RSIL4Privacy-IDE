@@ -166,7 +166,6 @@ def compileRecipient(Recipient r)
 		«IF !r.recipientPart.empty»"Recipient_Parts": [«FOR rp:r.recipientPart SEPARATOR ','»«rp.compilerpartr»«ENDFOR»],«ENDIF»
 		"Type": "«IF r.type=='Individual'»Individual«ELSEIF r.type=='Organization'»Organization«ELSE»Individual/Organization«ENDIF»",
 		"Scope": "«IF r.scope=='Internal'»Internal«ELSEIF r.scope=='External'»External«ELSE»Internal/External«ENDIF»"
-		
 	}
 '''
 

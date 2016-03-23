@@ -29,10 +29,10 @@ import rslingo.rslil4privacy.rSLIL4Privacy.Usage
 class RSLIL4Privacy2TextGenerator implements IGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-		fsa.generateFile(resource.className + '.txt', 		
+		fsa.generateFile(resource.className + '.txt',
 			resource.allContents.filter(typeof(Policy)).map[compile].join(' ')
 		)
-	}  
+	}
 
 	def className(Resource res) {
 	    var name = res.URI.lastSegment
@@ -195,4 +195,4 @@ def compileRecipientPart(RecipientPart r)
 def compileRefEnforcement(RefEnforcement e)
 '''«e.refEnforcement.name»'''
 
-}   
+}

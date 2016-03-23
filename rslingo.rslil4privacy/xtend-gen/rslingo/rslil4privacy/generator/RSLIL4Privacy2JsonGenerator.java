@@ -1151,8 +1151,6 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
     }
     _builder.append("\"");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
-    _builder.newLine();
     _builder.append("\t");
     _builder.append("}");
     _builder.newLine();

@@ -84,34 +84,34 @@ def compileAttribute(Attribute a)
 '''«a.name»'''
  
 def compileCollection(Collection c)
-'''«IF c.modality== 'Permitted'»P «ELSEIF c.modality== 'Obligation'»O «ELSE»R «ENDIF»COLLECT «/*
-*/»«IF c.refPrivateData.length== 8»ALL-Information «ELSE»«FOR p:c.refPrivateData SEPARATOR','»«p.compile» «ENDFOR»«ENDIF»«/*
+'''«IF c.modality == 'Permitted'»P «ELSEIF c.modality == 'Obligation'»O «ELSE»R «ENDIF»COLLECT «/*
+*/»«IF c.refPrivateData.length == 8»ALL-Information «ELSE»«FOR p:c.refPrivateData SEPARATOR','»«p.compile» «ENDFOR»«ENDIF»«/*
 */»«IF !c.refService.empty»FOR «FOR s:c.refService SEPARATOR ','»«s.compile»«ENDFOR»«ELSE»FOR anything«ENDIF»
 '''
 
 def compileTransfer(Disclosure d)
-'''«IF d.modality== 'Permitted'»P «ELSEIF d.modality== 'Obligation'»O «ELSE»R «ENDIF»TRANSFER «/*
-*/»«IF d.refPrivateData.length== 8»ALL-Information «ELSE»«FOR p:d.refPrivateData SEPARATOR','»«p.compile» «ENDFOR»«ENDIF»«/*
+'''«IF d.modality == 'Permitted'»P «ELSEIF d.modality == 'Obligation'»O «ELSE»R «ENDIF»TRANSFER «/*
+*/»«IF d.refPrivateData.length == 8»ALL-Information «ELSE»«FOR p:d.refPrivateData SEPARATOR','»«p.compile» «ENDFOR»«ENDIF»«/*
 */»«IF !d.refRecipientSource.empty»FROM «FOR rs:d.refRecipientSource SEPARATOR ','»«rs.compile»«ENDFOR» «ENDIF»«/*
 */»«IF !d.refRecipientTarget.empty»TO «FOR rt:d.refRecipientTarget SEPARATOR ','»«rt.compile»«ENDFOR» «ENDIF»«/*
 */»«IF !d.refService.empty»FOR «FOR s:d.refService SEPARATOR ','»«s.compile»«ENDFOR»«ELSE»FOR anything«ENDIF»
 '''
  
 def compileRetention(Retention r)
-'''«IF r.modality== 'Permitted'»P «ELSEIF r.modality== 'Obligation'»O «ELSE»R «ENDIF»RETAIN «/*
-*/»«IF r.refPrivateData.length== 8»ALL-Information «ELSE»«FOR p:r.refPrivateData SEPARATOR','»«p.compile» «ENDFOR»«ENDIF»«/*
+'''«IF r.modality == 'Permitted'»P «ELSEIF r.modality == 'Obligation'»O «ELSE»R «ENDIF»RETAIN «/*
+*/»«IF r.refPrivateData.length == 8»ALL-Information «ELSE»«FOR p:r.refPrivateData SEPARATOR','»«p.compile» «ENDFOR»«ENDIF»«/*
 */»«IF !r.refService.empty»FOR «FOR s:r.refService SEPARATOR ','»«s.compile»«ENDFOR»«ELSE»FOR anything«ENDIF»
 '''
  
 def compileUsage(Usage u)
-'''«IF u.modality== 'Permitted'»P «ELSEIF u.modality== 'Obligation'»O «ELSE»R «ENDIF»USE «/*
-*/»«IF u.refPrivateData.length== 8»ALL-Information «ELSE»«FOR p:u.refPrivateData SEPARATOR','»«p.compile» «ENDFOR»«ENDIF»«/*
+'''«IF u.modality == 'Permitted'»P «ELSEIF u.modality == 'Obligation'»O «ELSE»R «ENDIF»USE «/*
+*/»«IF u.refPrivateData.length == 8»ALL-Information «ELSE»«FOR p:u.refPrivateData SEPARATOR','»«p.compile» «ENDFOR»«ENDIF»«/*
 */»«IF !u.refService.empty»FOR «FOR s:u.refService SEPARATOR ','»«s.compile»«ENDFOR»«ELSE»FOR anything«ENDIF»
 '''
  
 def compileInformative(Informative i)
-'''«IF i.modality== 'Permitted'»P «ELSEIF i.modality== 'Obligation'»O «ELSE»R «ENDIF»INFORM «/*
-*/»«IF i.refPrivateData.length== 8»ALL-Information «FOR p:i.refPrivateData SEPARATOR','»«p.compile» «ENDFOR»«ENDIF»«/*
+'''«IF i.modality == 'Permitted'»P «ELSEIF i.modality == 'Obligation'»O «ELSE»R «ENDIF»INFORM «/*
+*/»«IF i.refPrivateData.length == 8»ALL-Information «FOR p:i.refPrivateData SEPARATOR','»«p.compile» «ENDFOR»«ENDIF»«/*
 */»«IF !i.refService.empty»FOR «FOR s:i.refService SEPARATOR ','»«s.compile»«ENDFOR»«ELSE»FOR anything«ENDIF»
 '''
 
