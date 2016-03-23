@@ -113,7 +113,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		StringBuilder sb = new StringBuilder();
 		InputStream inp = new FileInputStream(filePath);
 		Workbook wb = WorkbookFactory.create(inp);
-		sb.append("Package " + fileName + ".RSLingo4Privacy {");
+		sb.append("Package " + fileName + " {");
 		sb.append("\n");
 		sb.append("\n");
 		
@@ -125,7 +125,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		generateEnforcementsRegion(wb, sb);
     	
     	sb.deleteCharAt(sb.length() - 1);
-		sb.append("};");
+		sb.append("}");
 		
 		IFile file = srcGenFolder.getFile(fileName + ".rslil");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
@@ -160,7 +160,7 @@ public class ImportExcelHandler extends AbstractHandler {
 			generateMetadataRegion(wb, sb);
 	    	
 	    	sb.deleteCharAt(sb.length() - 1);
-	    	sb.append("};");
+	    	sb.append("}");
 			
 			IFile file = srcGenFolder.getFile(fileName + ".Main.rslil");
 			InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
@@ -193,7 +193,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		generateStatementsRegion(wb, sb);
     	
     	sb.deleteCharAt(sb.length() - 1);
-    	sb.append("};");
+    	sb.append("}");
 		
 		IFile file = srcGenFolder.getFile(fileName + ".Statements.rslil");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
@@ -217,7 +217,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		generatePrivateDataRegion(wb, sb);
     	
     	sb.deleteCharAt(sb.length() - 1);
-    	sb.append("};");
+    	sb.append("}");
 		
 		IFile file = srcGenFolder.getFile(fileName + ".Privatedata.rslil");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
@@ -244,7 +244,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		generateServicesRegion(wb, sb);
     	
     	sb.deleteCharAt(sb.length() - 1);
-    	sb.append("};");
+    	sb.append("}");
 		
 		IFile file = srcGenFolder.getFile(fileName + ".Services.rslil");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
@@ -268,7 +268,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		generateEnforcementsRegion(wb, sb);
     	
     	sb.deleteCharAt(sb.length() - 1);
-    	sb.append("};");
+    	sb.append("}");
 		
 		IFile file = srcGenFolder.getFile(fileName + ".Enforcements.rslil");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
@@ -292,7 +292,7 @@ public class ImportExcelHandler extends AbstractHandler {
 		generateRecipientsRegion(wb, sb);
     	
     	sb.deleteCharAt(sb.length() - 1);
-    	sb.append("};");
+    	sb.append("}");
 		
 		IFile file = srcGenFolder.getFile(fileName + ".Recipients.rslil");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
@@ -332,15 +332,15 @@ public class ImportExcelHandler extends AbstractHandler {
 		Cell cellVersion = row.getCell(1);
 		String version = cellVersion.getStringCellValue();
 		
-		sb.append("\tPolicyName \"" + name + "\",");
+		sb.append("\tPolicyName \"" + name + "\"");
 		sb.append("\n");
-		sb.append("\tDescription \"" + description + "\",");
+		sb.append("\tDescription \"" + description + "\"");
 		sb.append("\n");
-		sb.append("\tAuthor(s) \"" + authors + "\",");
+		sb.append("\tAuthor(s) \"" + authors + "\"");
 		sb.append("\n");
-		sb.append("\tOrganization(s) \"" + orgs + "\",");
+		sb.append("\tOrganization(s) \"" + orgs + "\"");
 		sb.append("\n");
-		sb.append("\tDate " + date + ",");
+		sb.append("\tDate " + date);
 		sb.append("\n");
 		sb.append("\tVersion \"" + version + "\"");
 		sb.append("\n}");
@@ -374,15 +374,15 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		Cell cellEnforcement = row.getCell(8);
 	    		sb.append(type + " st" + id + " {");
 	    		sb.append("\n");
-	    		sb.append("\tDescription \"" + description + "\",");
+	    		sb.append("\tDescription \"" + description + "\"");
 	    		sb.append("\n");
-	    		sb.append("\tCondition \"" + condition + "\",");
+	    		sb.append("\tCondition \"" + condition + "\"");
 	    		sb.append("\n");
 	    		
 	    		if (type.equals("Retention")) {
 	    			Cell cellPeriod = row.getCell(9);
 		    		String period = cellPeriod.getStringCellValue();
-	    			sb.append("\tPeriod \"" + period + "\",");
+	    			sb.append("\tPeriod \"" + period + "\"");
 		    		sb.append("\n");
 				}
 	    		
@@ -391,22 +391,21 @@ public class ImportExcelHandler extends AbstractHandler {
 	    			
 	    			if (cellRecipient.getCellType() == Cell.CELL_TYPE_NUMERIC) {
 		    			int recipient = (int) cellRecipient.getNumericCellValue();
-		    			sb.append("\tRefersTo Recipient R" + recipient + ",");
+		    			sb.append("\tRefersTo Recipient R" + recipient);
 		    			sb.append("\n");
 					} else if (cellRecipient.getCellType() == Cell.CELL_TYPE_STRING) {
 						String recipient = cellRecipient.getStringCellValue();
 						
 						if (recipient.equals("All")) {
-							sb.append("\tRefersTo Recipient All,");
+							sb.append("\tRefersTo Recipient All");
 						} else {
 							sb.append("\tRefersTo Recipient ");
 				    		
 			    			for (String s : recipient.split(", ")) {
-			    				sb.append("R" + s + "-"); 
+			    				sb.append("R" + s + ","); 
 							}
-			    			// Delete last '-'
+			    			// Delete last ','
 			    			sb.deleteCharAt(sb.length() - 1);
-			    			sb.append(",");
 						}
 						sb.append("\n");
 					}
@@ -414,72 +413,69 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		
 	    		if (cellPrivateData.getCellType() == Cell.CELL_TYPE_NUMERIC) {
 	    			int privateData = (int) cellPrivateData.getNumericCellValue();
-	    			sb.append("\tRefersTo PrivateData PD" + privateData + ",");
+	    			sb.append("\tRefersTo PrivateData PD" + privateData);
 	    			sb.append("\n");
 				} else if (cellPrivateData.getCellType() == Cell.CELL_TYPE_STRING) {
 					String privateData = cellPrivateData.getStringCellValue();
 					
 					if (privateData.equals("All")) {
-						sb.append("\tRefersTo PrivateData All,");
+						sb.append("\tRefersTo PrivateData All");
 					} else{
 						sb.append("\tRefersTo PrivateData ");
 			    		
 		    			for (String s : privateData.split(", ")) {
-		    				sb.append("PD" + s + "-"); 
+		    				sb.append("PD" + s + ","); 
 						}
-		    			// Delete last '-'
+		    			// Delete last ','
 		    			sb.deleteCharAt(sb.length() - 1);
-		    			sb.append(",");
 					}
 					sb.append("\n");
 				}
 	    		
 	    		if (cellService.getCellType() == Cell.CELL_TYPE_NUMERIC) {
 	    			int service = (int) cellService.getNumericCellValue();
-	    			sb.append("\tRefersTo Service S" + service + ",");
+	    			sb.append("\tRefersTo Service S" + service);
 	    			sb.append("\n");
 				} else if (cellService.getCellType() == Cell.CELL_TYPE_STRING) {
 					String service = cellService.getStringCellValue();
 					
 					if (service.equals("All")) {
-						sb.append("\tRefersTo Service All,");
+						sb.append("\tRefersTo Service All");
 					} else {
 						sb.append("\tRefersTo Service ");
 			    		
 		    			for (String s : service.split(", ")) {
-		    				sb.append("S" + s + "-"); 
+		    				sb.append("S" + s + ","); 
 						}
-		    			// Delete last '-'
+		    			// Delete last ','
 		    			sb.deleteCharAt(sb.length() - 1);
-		    			sb.append(",");
 					}
 					sb.append("\n");
 				}
 	    		
 	    		if (cellEnforcement.getCellType() == Cell.CELL_TYPE_NUMERIC) {
 	    			int enforcement = (int) cellEnforcement.getNumericCellValue();
-	    			sb.append("\tRefersTo Enforcement En" + enforcement + ",");
+	    			sb.append("\tRefersTo Enforcement En" + enforcement);
 	    			sb.append("\n");
 				} else if (cellEnforcement.getCellType() == Cell.CELL_TYPE_STRING) {
 					String enforcement = cellEnforcement.getStringCellValue();
 					
 					if (enforcement.equals("All")) {
-						sb.append("\tRefersTo Enforcement All,");
+						sb.append("\tRefersTo Enforcement All");
 					} else {
 						sb.append("\tRefersTo Enforcement ");
 			    		
 		    			for (String s : enforcement.split(", ")) {
-		    				sb.append("En" + s + "-"); 
+		    				sb.append("En" + s + ","); 
 						}
-		    			// Delete last '-'
+		    			// Delete last ','
 		    			sb.deleteCharAt(sb.length() - 1);
-		    			sb.append(",");
 					}
 					sb.append("\n");
 				}
 	    		
 	    		sb.append("\tModality " + modality);
-	    		sb.append("\n};");
+	    		sb.append("\n}");
 	    		sb.append("\n\n");
 			}
     		else
@@ -508,9 +504,9 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		String attributes = cellAttributes.getStringCellValue();
 	    		sb.append("PrivateData PD" + id + " {");
 	    		sb.append("\n");
-	    		sb.append("\tDescription \"" + description + "\",");
+	    		sb.append("\tDescription \"" + description + "\"");
 	    		sb.append("\n");
-	    		sb.append("\tType " + type + ",");
+	    		sb.append("\tType " + type);
 	    		sb.append("\n");
 	    		
 	    		for (String a : attributes.split(",\n")) {
@@ -518,13 +514,13 @@ public class ImportExcelHandler extends AbstractHandler {
 	    			sb.append("\tAttribute \"" + a + "\" {");
 	    			sb.append("\n");
 	    			sb.append("\t\tDescription \"" + a + "\"");
-	    			sb.append("\n\t},");
+	    			sb.append("\n\t}");
 	    			sb.append("\n");
 				}
-	    		// Delete last ',\n'
-	    		sb.deleteCharAt(sb.length() - 2);
+	    		// Delete last '\n'
+//	    		sb.deleteCharAt(sb.length() - 2);
 	    		sb.deleteCharAt(sb.length() - 1);
-	    		sb.append("\n};");
+	    		sb.append("\n}");
 	    		sb.append("\n\n");
 			}
     		else
@@ -553,29 +549,28 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		Cell cellPartOf = row.getCell(4);
 	    		sb.append("Service S" + id + " {");
 	    		sb.append("\n");
-	    		sb.append("\tName \"" + name + "\",");
+	    		sb.append("\tName \"" + name + "\"");
 	    		sb.append("\n");
-	    		sb.append("\tDescription \"" + description + "\",");
+	    		sb.append("\tDescription \"" + description + "\"");
 	    		sb.append("\n");
 	    		
 	    		if (cellPrivateData.getCellType() == Cell.CELL_TYPE_NUMERIC) {
 	    			int privateData = (int) cellPrivateData.getNumericCellValue();
-	    			sb.append("\tRefersTo PrivateData PD" + privateData + ",");
+	    			sb.append("\tRefersTo PrivateData PD" + privateData);
 	    			sb.append("\n");
 				} else if (cellPrivateData.getCellType() == Cell.CELL_TYPE_STRING) {
 					String privateData = cellPrivateData.getStringCellValue();
 					
 					if (privateData.equals("All")) {
-						sb.append("\tRefersTo PrivateData All,");
+						sb.append("\tRefersTo PrivateData All");
 					} else {
 						sb.append("\tRefersTo PrivateData ");
 			    		
 		    			for (String s : privateData.split(", ")) {
-		    				sb.append("PD" + s + "-");
+		    				sb.append("PD" + s + ",");
 						}
-		    			// Delete last '-'
+		    			// Delete last ','
 		    			sb.deleteCharAt(sb.length() - 1);
-		    			sb.append(",");
 					}
 					sb.append("\n");
 				}
@@ -586,7 +581,7 @@ public class ImportExcelHandler extends AbstractHandler {
 	    			sb.append("\n");
 				}
 	    		
-	    		sb.append("};");
+	    		sb.append("}");
 	    		sb.append("\n\n");
 			}
     		else
@@ -615,12 +610,12 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		String type = cellType.getStringCellValue();
 	    		sb.append("Enforcement En" + id + " {");
 	    		sb.append("\n");
-	    		sb.append("\tName \"" + name + "\",");
+	    		sb.append("\tName \"" + name + "\"");
 	    		sb.append("\n");
-	    		sb.append("\tDescription \"" + description + "\",");
+	    		sb.append("\tDescription \"" + description + "\"");
 	    		sb.append("\n");
 	    		sb.append("\tType " + type);
-	    		sb.append("\n};");
+	    		sb.append("\n}");
 	    		sb.append("\n\n");
 			}
     		else
@@ -653,21 +648,21 @@ public class ImportExcelHandler extends AbstractHandler {
     	    		Cell cellPartOf = row.getCell(4);
     	    		sb.append("Recipient R" + id + " {");
     	    		sb.append("\n");
-    	    		sb.append("\tName \"" + description + "\",");
+    	    		sb.append("\tName \"" + description + "\"");
     	    		sb.append("\n");
-    	    		sb.append("\tDescription \"" + description + "\",");
+    	    		sb.append("\tDescription \"" + description + "\"");
     	    		sb.append("\n");
     	    		
     	    		if (cellPartOf.getCellType() == Cell.CELL_TYPE_NUMERIC) {
     	    			int partOf = (int) cellPartOf.getNumericCellValue();
-    	    			sb.append("\tRecipient_Part R" + partOf + ",");
+    	    			sb.append("\tRecipient_Part R" + partOf);
     	    			sb.append("\n");
 					}
     	    		
-    	    		sb.append("\tScope " + scope + ",");
+    	    		sb.append("\tScope " + scope);
     	    		sb.append("\n");
     	    		sb.append("\tType " + type);
-    	    		sb.append("\n};");
+    	    		sb.append("\n}");
     	    		sb.append("\n\n");
 				}
 			}
