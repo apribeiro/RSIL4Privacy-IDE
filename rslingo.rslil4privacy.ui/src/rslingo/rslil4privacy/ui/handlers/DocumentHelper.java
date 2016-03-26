@@ -1,5 +1,6 @@
 package rslingo.rslil4privacy.ui.handlers;
 
+import java.io.InputStreamReader;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -23,8 +24,13 @@ import org.apache.poi.xwpf.usermodel.XWPFRun;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
 import org.apache.poi.xwpf.usermodel.XWPFTableCell;
 import org.apache.poi.xwpf.usermodel.XWPFTableRow;
+import org.eclipse.core.resources.IFile;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTPPr;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTRPr;
+
+import com.google.common.io.CharStreams;
+
+import rslingo.rslil4privacy.rSLIL4Privacy.Import;
 
 public class DocumentHelper {
 
@@ -347,5 +353,19 @@ public class DocumentHelper {
 		} catch (ParseException e) {
 			return null;
 		}
+	}
+	
+	public static boolean belongsToMainFile(Import imp, IFile file) {
+		String ns = "Package " + imp.getImportedNamespace().replace(".*", "");
+        String content = null;
+		boolean belongs = false;
+        
+		try {
+			content = CharStreams.toString(new InputStreamReader(file.getContents(), "UTF-8"));
+			belongs = content.contains(ns);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return belongs;
 	}
 }

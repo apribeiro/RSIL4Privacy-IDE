@@ -146,7 +146,7 @@ public class ExportExcelHandler extends AbstractHandler {
 							public boolean visit(IResource r) throws CoreException {
 								for (Import i : policy.getImportelements()) {
 									if (r instanceof IFile && r.getName().endsWith(FILE_EXT)
-										&& r.getName().contains(i.getImportedNamespace().replace(".*", ""))) {
+										&& DocumentHelper.belongsToMainFile(i, (IFile) r)) {
 										refs.add((IFile) r);
 									}
 								}
