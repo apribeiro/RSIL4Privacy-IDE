@@ -19,6 +19,7 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.IResourceVisitor;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
@@ -138,38 +139,22 @@ public class ExportExcelHandler extends AbstractHandler {
 				// Deal with the Main file mode
 				if (policy.getMetadata() != null && policy.getImportelements().size() > 0) {
 					ArrayList<IFile> refs = new ArrayList<IFile>();
-					IResource parent = file.getParent();
 					
-					if (parent instanceof IFolder) {
-						IFolder pFolder = (IFolder) parent;
-						
-						try {
-							for (Import i : policy.getImportelements()) {
-								for (IResource r : pFolder.members()) {
+					try {
+						project.accept(new IResourceVisitor() {
+							@Override
+							public boolean visit(IResource r) throws CoreException {
+								for (Import i : policy.getImportelements()) {
 									if (r instanceof IFile && r.getName().endsWith(FILE_EXT)
 										&& r.getName().contains(i.getImportedNamespace().replace(".*", ""))) {
 										refs.add((IFile) r);
 									}
 								}
+								return true;
 							}
-						} catch (CoreException e) {
-							e.printStackTrace();
-						}
-					} else {
-						IProject pProject = (IProject) parent;
-						
-						try {
-							for (Import i : policy.getImportelements()) {
-								for (IResource r : pProject.members()) {
-									if (r instanceof IFile && r.getName().endsWith(FILE_EXT)
-										&& r.getName().contains(i.getImportedNamespace())) {
-										refs.add((IFile) r);
-									}
-								}
-							}
-						} catch (CoreException e) {
-							e.printStackTrace();
-						}
+						});
+					} catch (CoreException e) {
+						e.printStackTrace();
 					}
 					
 					// Set the missing Policy Elements
