@@ -65,6 +65,7 @@ import rslingo.rslil4privacy.ui.windows.MenuCommandWindow;
 
 public class ExportExcelHandler extends AbstractHandler {
 
+	private static final String PLUGIN_ID = "rslingo.rslil4privacy";
 	private static final String GEN_FOLDER = "src-gen";
 	private static final String DOCS_FOLDER = "docs";
 	private static final String FILE_EXT = ".rslil";
@@ -226,7 +227,7 @@ public class ExportExcelHandler extends AbstractHandler {
 
 					System.out.println(fileName + ".xlsx generated!");
 				} catch (Exception e) {
-					e.printStackTrace();
+					return new Status(Status.ERROR, PLUGIN_ID, e.getMessage(), e);
 				}
 				return Status.OK_STATUS;
 			}
