@@ -26,9 +26,11 @@ import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IEditorDescriptor;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.ui.part.FileEditorInput;
@@ -69,6 +71,7 @@ public class CheckQualityHandler extends AbstractHandler {
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		IWorkbenchWindow workbenchWindow = HandlerUtil.getActiveWorkbenchWindowChecked(event);
+		Shell shell = workbenchWindow.getShell();
 		ISelection selection = HandlerUtil.getActiveMenuSelection(event);
 		
 		// Check if the command was triggered using the ContextMenu
@@ -78,10 +81,10 @@ public class CheckQualityHandler extends AbstractHandler {
 			IProject project = file.getProject();
 			
 			try {
-				callEddyReasoner(project, file);
+				callEddyReasoner(project, file, shell);
 			} catch (Exception e) {
 				e.printStackTrace();
-				MessageDialog errorDialog = new MessageDialog(workbenchWindow.getShell(),
+				MessageDialog errorDialog = new MessageDialog(shell,
 						"RSLingo4Privacy Studio", null, e.getMessage(),
 						MessageDialog.ERROR, new String[] { "OK" }, 0);
 				errorDialog.open();
@@ -90,25 +93,24 @@ public class CheckQualityHandler extends AbstractHandler {
 			MenuCommand cmd = new MenuCommand() {
 				@Override
 				public void execute(IProject project, IFile file) throws Exception {
-					callEddyReasoner(project, file);
+					callEddyReasoner(project, file, shell);
 				}
 			};
-			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(),
-					cmd, false, FILE_EXT);
+			MenuCommandWindow window = new MenuCommandWindow(shell, cmd, false, FILE_EXT);
 			window.open();
 		}
 		
 		return null;
 	}
 
-	private void callEddyReasoner(IProject project, IFile file) throws Exception {
+	private void callEddyReasoner(IProject project, IFile file, Shell shell) throws Exception {
 		IFolder srcGenFolder = project.getFolder(GEN_FOLDER);
 
 		if (!srcGenFolder.exists()) {
 			srcGenFolder.create(true, true, new NullProgressMonitor());
 		}
 		
-		Job job = new Job("Exporting to Excel...") {
+		Job job = new Job("Checking Quality...") {
 			@Override
 			protected IStatus run(IProgressMonitor monitor) {
 				String pluginPath = Platform.getInstallLocation()
@@ -213,10 +215,19 @@ public class CheckQualityHandler extends AbstractHandler {
 					file.getProject().refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
 
 					// Open the log file
-					IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
-					IEditorDescriptor desc = PlatformUI.getWorkbench().
-							getEditorRegistry().getDefaultEditor(logFile.getName());
-					page.openEditor(new FileEditorInput(logFile), desc.getId());
+					shell.getDisplay().asyncExec(new Runnable() {
+						@Override
+						public void run() {
+							IWorkbenchPage page = PlatformUI.getWorkbench().getWorkbenchWindows()[0].getActivePage();
+							IEditorDescriptor desc = PlatformUI.getWorkbench().
+									getEditorRegistry().getDefaultEditor(logFile.getName());
+							try {
+								page.openEditor(new FileEditorInput(logFile), desc.getId());
+							} catch (PartInitException e) {
+								e.printStackTrace();
+							}
+						}
+					});
 				} catch (Exception e) {
 					return new Status(Status.ERROR, PLUGIN_ID, e.getMessage(), e);
 				}
