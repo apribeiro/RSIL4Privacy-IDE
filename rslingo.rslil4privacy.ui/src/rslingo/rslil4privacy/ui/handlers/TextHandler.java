@@ -22,7 +22,6 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2;
-import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.ui.resource.IResourceSetProvider;
 
 import com.google.inject.Inject;
@@ -43,9 +42,6 @@ public class TextHandler extends AbstractHandler {
  
     @Inject
     private Provider<EclipseResourceFileSystemAccess2> fileAccessProvider;
-     
-    @Inject
-    IResourceDescriptions resourceDescriptions;
      
     @Inject
     IResourceSetProvider resourceSetProvider;
@@ -102,7 +98,7 @@ public class TextHandler extends AbstractHandler {
         URI uri = URI.createPlatformResourceURI(file.getFullPath().toString(), true);
         ResourceSet rs = resourceSetProvider.get(project);
         Resource resource = rs.getResource(uri, true);
-        Policy policy = DocumentHelper.getPolicy(rs, resource, file);
+        Policy policy = (Policy) resource.getContents().get(0);
         
         if (policy.getMetadata() != null) {
 			if (policy.getImportelements().size() == 0) {
@@ -125,8 +121,9 @@ public class TextHandler extends AbstractHandler {
 			        generator.doGenerate(resource, fsa);
 			        project.refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
 			        // Delete Merged File
-			        IFile mergedFile = project.getFile(mergedPath);
-			        mergedFile.delete(true, new NullProgressMonitor());
+			        // FIXME Not working!!!
+//			        IFile mergedFile = project.getFile(mergedPath);
+//			        mergedFile.delete(true, new NullProgressMonitor());
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

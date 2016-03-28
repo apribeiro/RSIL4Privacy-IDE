@@ -22,15 +22,15 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2;
-import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.ui.resource.IResourceSetProvider;
+
+import com.google.inject.Inject;
+import com.google.inject.Provider;
+
 import rslingo.rslil4privacy.generator.RSLIL4PrivacyGenerator;
 import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
 import rslingo.rslil4privacy.ui.windows.MenuCommand;
 import rslingo.rslil4privacy.ui.windows.MenuCommandWindow;
-
-import com.google.inject.Inject;
-import com.google.inject.Provider;
 
 public class JSONHandler extends AbstractHandler {
 
@@ -42,9 +42,6 @@ public class JSONHandler extends AbstractHandler {
  
     @Inject
     private Provider<EclipseResourceFileSystemAccess2> fileAccessProvider;
-     
-    @Inject
-    IResourceDescriptions resourceDescriptions;
      
     @Inject
     IResourceSetProvider resourceSetProvider;
@@ -101,7 +98,7 @@ public class JSONHandler extends AbstractHandler {
         URI uri = URI.createPlatformResourceURI(file.getFullPath().toString(), true);
         ResourceSet rs = resourceSetProvider.get(project);
         Resource resource = rs.getResource(uri, true);
-        Policy policy = DocumentHelper.getPolicy(rs, resource, file);
+        Policy policy = (Policy) resource.getContents().get(0);
         
         if (policy.getMetadata() != null) {
 			if (policy.getImportelements().size() == 0) {
@@ -123,9 +120,6 @@ public class JSONHandler extends AbstractHandler {
 					generator.setGenMode(RSLIL4PrivacyGenerator.JSON_MODE);
 			        generator.doGenerate(resource, fsa);
 			        project.refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
-			        // Delete Merged File
-			        IFile mergedFile = project.getFile(mergedPath);
-			        mergedFile.delete(true, new NullProgressMonitor());
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

@@ -1,7 +1,5 @@
 package rslingo.rslil4privacy.ui.handlers;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -377,20 +375,6 @@ public class DocumentHelper {
 			e.printStackTrace();
 		}
 		return belongs;
-	}
-	
-	public static Policy getPolicy(ResourceSet rs, Resource resource, IFile file) {
-		Policy policy = null;
-		
-		try {
-			String content = CharStreams.toString(new InputStreamReader(file.getContents(), "UTF-8"));
-			InputStream in = new ByteArrayInputStream(content.getBytes());
-			resource.load(in, rs.getLoadOptions());
-	        policy = (Policy) resource.getContents().get(0);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return policy;
 	}
 	
 	public static Policy getFullPolicy(IProject project, ResourceSet rs, Policy policy) {
