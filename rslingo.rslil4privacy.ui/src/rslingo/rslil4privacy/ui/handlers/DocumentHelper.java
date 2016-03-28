@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -27,6 +28,11 @@ import org.apache.poi.xwpf.usermodel.XWPFTable;
 import org.apache.poi.xwpf.usermodel.XWPFTableCell;
 import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.IResourceVisitor;
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTPPr;
@@ -383,6 +389,60 @@ public class DocumentHelper {
 	        policy = (Policy) resource.getContents().get(0);
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+		return policy;
+	}
+	
+	public static Policy getFullPolicy(IProject project, ResourceSet rs, Policy policy) {
+		ArrayList<IFile> refs = new ArrayList<IFile>();
+		
+		try {
+			project.accept(new IResourceVisitor() {
+				@Override
+				public boolean visit(IResource r) throws CoreException {
+					for (Import i : policy.getImportelements()) {
+						if (r instanceof IFile && r.getName().endsWith(".rslil")
+							&& DocumentHelper.belongsToMainFile(i, (IFile) r)) {
+							refs.add((IFile) r);
+						}
+					}
+					return true;
+				}
+			});
+		} catch (CoreException e) {
+			e.printStackTrace();
+		}
+		
+		// Set the missing Policy Elements
+		for (IFile iFile : refs) {
+			Resource res = rs.getResource(
+					URI.createPlatformResourceURI(iFile.getFullPath().toString(), true), true);
+			Policy polRef = (Policy) res.getContents().get(0);
+			
+			if (polRef.getCollection().size() > 0) {
+				policy.getCollection().clear();
+				policy.getDisclosure().clear();
+				policy.getRetention().clear();
+				policy.getUsage().clear();
+				policy.getInformative().clear();
+				policy.getCollection().addAll(polRef.getCollection());
+				policy.getDisclosure().addAll(polRef.getDisclosure());
+				policy.getRetention().addAll(polRef.getRetention());
+				policy.getUsage().addAll(polRef.getUsage());
+				policy.getInformative().addAll(polRef.getInformative());
+			} else if (polRef.getPrivateData().size() > 0) {
+				policy.getPrivateData().clear();
+				policy.getPrivateData().addAll(polRef.getPrivateData());
+			} else if (polRef.getRecipient().size() > 0) {
+				policy.getRecipient().clear();
+				policy.getRecipient().addAll(polRef.getRecipient());
+			} else if (polRef.getService().size() > 0) {
+				policy.getService().clear();
+				policy.getService().addAll(polRef.getService());
+			} else if (polRef.getEnforcement().size() > 0) {
+				policy.getEnforcement().clear();
+				policy.getEnforcement().addAll(polRef.getEnforcement());
+			}
 		}
 		return policy;
 	}

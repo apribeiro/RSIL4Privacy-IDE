@@ -18,8 +18,6 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
-import org.eclipse.core.resources.IResourceVisitor;
-import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.NullProgressMonitor;
@@ -48,7 +46,6 @@ import rslingo.rslil4privacy.rSLIL4Privacy.Collection;
 import rslingo.rslil4privacy.rSLIL4Privacy.Date;
 import rslingo.rslil4privacy.rSLIL4Privacy.Disclosure;
 import rslingo.rslil4privacy.rSLIL4Privacy.Enforcement;
-import rslingo.rslil4privacy.rSLIL4Privacy.Import;
 import rslingo.rslil4privacy.rSLIL4Privacy.Informative;
 import rslingo.rslil4privacy.rSLIL4Privacy.Metadata;
 import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
@@ -141,56 +138,7 @@ public class WordHandler extends AbstractHandler {
 
 				// Deal with the Main file mode
 				if (policy.getMetadata() != null && policy.getImportelements().size() > 0) {
-					ArrayList<IFile> refs = new ArrayList<IFile>();
-					
-					try {
-						project.accept(new IResourceVisitor() {
-							@Override
-							public boolean visit(IResource r) throws CoreException {
-								for (Import i : policy.getImportelements()) {
-									if (r instanceof IFile && r.getName().endsWith(FILE_EXT)
-										&& DocumentHelper.belongsToMainFile(i, (IFile) r)) {
-										refs.add((IFile) r);
-									}
-								}
-								return true;
-							}
-						});
-					} catch (CoreException e) {
-						e.printStackTrace();
-					}
-					
-					// Set the missing Policy Elements
-					for (IFile iFile : refs) {
-						Resource res = resourceSet.getResource(
-								URI.createURI("platform:/resource/" + iFile.getFullPath().toString()), true);
-						Policy polRef = (Policy) res.getContents().get(0);
-						
-						if (polRef.getCollection().size() > 0) {
-							policy.getCollection().clear();
-							policy.getDisclosure().clear();
-							policy.getRetention().clear();
-							policy.getUsage().clear();
-							policy.getInformative().clear();
-							policy.getCollection().addAll(polRef.getCollection());
-							policy.getDisclosure().addAll(polRef.getDisclosure());
-							policy.getRetention().addAll(polRef.getRetention());
-							policy.getUsage().addAll(polRef.getUsage());
-							policy.getInformative().addAll(polRef.getInformative());
-						} else if (polRef.getPrivateData().size() > 0) {
-							policy.getPrivateData().clear();
-							policy.getPrivateData().addAll(polRef.getPrivateData());
-						} else if (polRef.getRecipient().size() > 0) {
-							policy.getRecipient().clear();
-							policy.getRecipient().addAll(polRef.getRecipient());
-						} else if (polRef.getService().size() > 0) {
-							policy.getService().clear();
-							policy.getService().addAll(polRef.getService());
-						} else if (polRef.getEnforcement().size() > 0) {
-							policy.getEnforcement().clear();
-							policy.getEnforcement().addAll(polRef.getEnforcement());
-						}
-					}
+					policy = DocumentHelper.getFullPolicy(project, resourceSet, policy);
 				} else if (policy.getMetadata() == null) {
 					shell.getDisplay().asyncExec(new Runnable() {
 						@Override
