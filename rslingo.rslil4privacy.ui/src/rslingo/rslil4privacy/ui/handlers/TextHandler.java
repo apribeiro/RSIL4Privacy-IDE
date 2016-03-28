@@ -1,30 +1,40 @@
 package rslingo.rslil4privacy.ui.handlers;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.IResourceVisitor;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2;
 import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.ui.resource.IResourceSetProvider;
-import rslingo.rslil4privacy.generator.RSLIL4PrivacyGenerator;
-import rslingo.rslil4privacy.ui.windows.MenuCommand;
-import rslingo.rslil4privacy.ui.windows.MenuCommandWindow;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+
+import rslingo.rslil4privacy.generator.RSLIL4PrivacyGenerator;
+import rslingo.rslil4privacy.rSLIL4Privacy.Import;
+import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
+import rslingo.rslil4privacy.ui.windows.MenuCommand;
+import rslingo.rslil4privacy.ui.windows.MenuCommandWindow;
 
 public class TextHandler extends AbstractHandler {
 
@@ -45,6 +55,8 @@ public class TextHandler extends AbstractHandler {
 	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
+		IWorkbenchWindow workbenchWindow = HandlerUtil.getActiveWorkbenchWindowChecked(event);
+		Shell shell = workbenchWindow.getShell();
 		ISelection selection = HandlerUtil.getActiveMenuSelection(event);
 		
 		// Check if the command was triggered using the ContextMenu
@@ -53,30 +65,28 @@ public class TextHandler extends AbstractHandler {
 				IStructuredSelection structuredSelection = (IStructuredSelection) selection;
 				IFile file = (IFile) structuredSelection.getFirstElement();
 				IProject project = file.getProject();
-				generateTextFile(project, file);
+				generateTextFile(project, file, shell);
 			} else {
 				IEditorPart activeEditor = HandlerUtil.getActiveEditor(event);
 				IFile file = (IFile) activeEditor.getEditorInput().getAdapter(IFile.class);
 				IProject project = file.getProject();
-				generateTextFile(project, file);
+				generateTextFile(project, file, shell);
 			}
 		} else {
-			IWorkbenchWindow workbenchWindow = HandlerUtil.getActiveWorkbenchWindowChecked(event);
 			MenuCommand cmd = new MenuCommand() {
 				@Override
 				public void execute(IProject project, IFile file) {
-					generateTextFile(project, file);
+					generateTextFile(project, file, shell);
 				}
 			};
-			MenuCommandWindow window = new MenuCommandWindow(workbenchWindow.getShell(),
-					cmd, false, FILE_EXT);
+			MenuCommandWindow window = new MenuCommandWindow(shell, cmd, false, FILE_EXT);
 			window.open();
 		}
 		
 		return null;
 	}
 
-	private void generateTextFile(IProject project, IFile file) {
+	private void generateTextFile(IProject project, IFile file, Shell shell) {
 		IFolder srcGenFolder = project.getFolder(GEN_FOLDER);
         
         if (!srcGenFolder.exists()) {
@@ -94,8 +104,95 @@ public class TextHandler extends AbstractHandler {
          
         URI uri = URI.createPlatformResourceURI(file.getFullPath().toString(), true);
         ResourceSet rs = resourceSetProvider.get(project);
-        Resource r = rs.getResource(uri, true);
-        generator.setGenMode(RSLIL4PrivacyGenerator.TEXT_MODE);
-        generator.doGenerate(r, fsa);
+        Resource resource = rs.getResource(uri, true);
+        Policy policy = DocumentHelper.getPolicy(rs, resource, file);
+        
+        if (policy.getMetadata() != null) {
+			if (policy.getImportelements().size() == 0) {
+				// Single File
+				generator.setGenMode(RSLIL4PrivacyGenerator.TEXT_MODE);
+		        generator.doGenerate(resource, fsa);
+			} else {
+				// Master File
+				ArrayList<IFile> refs = new ArrayList<IFile>();
+				
+				try {
+					project.accept(new IResourceVisitor() {
+						@Override
+						public boolean visit(IResource r) throws CoreException {
+							for (Import i : policy.getImportelements()) {
+								if (r instanceof IFile && r.getName().endsWith(FILE_EXT)
+									&& DocumentHelper.belongsToMainFile(i, (IFile) r)) {
+									refs.add((IFile) r);
+								}
+							}
+							return true;
+						}
+					});
+				} catch (CoreException e) {
+					e.printStackTrace();
+				}
+				
+				// Set the missing Policy Elements
+				for (IFile iFile : refs) {
+					Resource res = rs.getResource(
+							URI.createPlatformResourceURI(iFile.getFullPath().toString(), true), true);
+					Policy polRef = (Policy) res.getContents().get(0);
+					
+					if (polRef.getCollection().size() > 0) {
+						policy.getCollection().clear();
+						policy.getDisclosure().clear();
+						policy.getRetention().clear();
+						policy.getUsage().clear();
+						policy.getInformative().clear();
+						policy.getCollection().addAll(polRef.getCollection());
+						policy.getDisclosure().addAll(polRef.getDisclosure());
+						policy.getRetention().addAll(polRef.getRetention());
+						policy.getUsage().addAll(polRef.getUsage());
+						policy.getInformative().addAll(polRef.getInformative());
+					} else if (polRef.getPrivateData().size() > 0) {
+						policy.getPrivateData().clear();
+						policy.getPrivateData().addAll(polRef.getPrivateData());
+					} else if (polRef.getRecipient().size() > 0) {
+						policy.getRecipient().clear();
+						policy.getRecipient().addAll(polRef.getRecipient());
+					} else if (polRef.getService().size() > 0) {
+						policy.getService().clear();
+						policy.getService().addAll(polRef.getService());
+					} else if (polRef.getEnforcement().size() > 0) {
+						policy.getEnforcement().clear();
+						policy.getEnforcement().addAll(polRef.getEnforcement());
+					}
+				}
+				
+				try {
+					// Create Merged File
+					String mergedPath = file.getFullPath().toString()
+							.replace(file.getName(), "Merged" + file.getName());
+					resource = rs.createResource(URI.createPlatformResourceURI(mergedPath, true));
+					resource.getContents().add(policy);
+					resource.save(Collections.EMPTY_MAP);
+					// Generate Text File
+					generator.setGenMode(RSLIL4PrivacyGenerator.TEXT_MODE);
+			        generator.doGenerate(resource, fsa);
+			        project.refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
+			        // Delete Merged File
+			        IFile mergedFile = project.getFile(mergedPath);
+			        mergedFile.delete(true, new NullProgressMonitor());
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		} else {
+			shell.getDisplay().asyncExec(new Runnable() {
+				@Override
+				public void run() {
+					String message = "You should run this command using the Main file associated to this file!";
+					MessageDialog errorDialog = new MessageDialog(shell, "RSLingo4Privacy Studio",
+				    		null, message, MessageDialog.ERROR, new String[] { "OK" }, 0);
+				    errorDialog.open();
+				}
+			});
+		}
 	}
 }
