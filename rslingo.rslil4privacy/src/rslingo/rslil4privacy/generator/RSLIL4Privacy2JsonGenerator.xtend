@@ -36,7 +36,7 @@ def className(Resource res) {
 //----------------------------------------------------
 def compile(Policy policy)
 '''{
-	"name": "«policy.name»",
+	"name": "«policy.metadata.name»",
 	«IF !policy.collection.empty»"Collections": [
     «FOR c:policy.collection SEPARATOR ','»«c.compileCollection»«ENDFOR»],«ENDIF»
     «IF !policy.disclosure.empty»"Disclosure": [

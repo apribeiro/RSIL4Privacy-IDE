@@ -18,6 +18,7 @@ import rslingo.rslil4privacy.rSLIL4Privacy.Collection;
 import rslingo.rslil4privacy.rSLIL4Privacy.Disclosure;
 import rslingo.rslil4privacy.rSLIL4Privacy.Enforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.Informative;
+import rslingo.rslil4privacy.rSLIL4Privacy.Metadata;
 import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
 import rslingo.rslil4privacy.rSLIL4Privacy.PrivateData;
 import rslingo.rslil4privacy.rSLIL4Privacy.Recipient;
@@ -60,7 +61,8 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("\"name\": \"");
-    String _name = policy.getName();
+    Metadata _metadata = policy.getMetadata();
+    String _name = _metadata.getName();
     _builder.append(_name, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();

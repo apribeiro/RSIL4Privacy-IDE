@@ -17,6 +17,7 @@ import rslingo.rslil4privacy.rSLIL4Privacy.Collection;
 import rslingo.rslil4privacy.rSLIL4Privacy.Disclosure;
 import rslingo.rslil4privacy.rSLIL4Privacy.Enforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.Informative;
+import rslingo.rslil4privacy.rSLIL4Privacy.Metadata;
 import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
 import rslingo.rslil4privacy.rSLIL4Privacy.PrivateData;
 import rslingo.rslil4privacy.rSLIL4Privacy.Recipient;
@@ -60,7 +61,8 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
   
   public CharSequence compile(final Policy policy) {
     StringConcatenation _builder = new StringConcatenation();
-    String _name = policy.getName();
+    Metadata _metadata = policy.getMetadata();
+    String _name = _metadata.getName();
     _builder.append(_name, "");
     _builder.append(" Privacy Policy");
     _builder.newLineIfNotEmpty();

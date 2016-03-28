@@ -42,7 +42,7 @@ class RSLIL4Privacy2TextGenerator implements IGenerator {
 //----------------------------------------------------
 def compile(Policy policy)
 '''
-«policy.name» Privacy Policy
+«policy.metadata.name» Privacy Policy
 ----------------------------------------
 «IF !policy.enforcement.empty»
 
