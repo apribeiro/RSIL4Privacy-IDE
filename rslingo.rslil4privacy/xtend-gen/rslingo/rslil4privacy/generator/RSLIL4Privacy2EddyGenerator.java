@@ -21,6 +21,7 @@ import rslingo.rslil4privacy.rSLIL4Privacy.Attribute;
 import rslingo.rslil4privacy.rSLIL4Privacy.Collection;
 import rslingo.rslil4privacy.rSLIL4Privacy.Disclosure;
 import rslingo.rslil4privacy.rSLIL4Privacy.Informative;
+import rslingo.rslil4privacy.rSLIL4Privacy.Metadata;
 import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
 import rslingo.rslil4privacy.rSLIL4Privacy.PrivateData;
 import rslingo.rslil4privacy.rSLIL4Privacy.Recipient;
@@ -70,8 +71,12 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
     _builder.append("ATTR NAMESPACE \"http://gaius.isri.cmu.edu/example2.owl\"");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("ATTR DESC \"This policy is written to test the use limitation principle\"");
-    _builder.newLine();
+    _builder.append("ATTR DESC \"");
+    Metadata _metadata = p.getMetadata();
+    String _description = _metadata.getDescription();
+    _builder.append(_description, "\t");
+    _builder.append("\"");
+    _builder.newLineIfNotEmpty();
     _builder.append("\t");
     {
       EList<Recipient> _recipient = p.getRecipient();

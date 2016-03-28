@@ -44,7 +44,7 @@ class RSLIL4Privacy2EddyGenerator implements IGenerator {
 def compile(Policy p)
 '''SPEC HEADER
 	ATTR NAMESPACE "http://gaius.isri.cmu.edu/example2.owl"
-	ATTR DESC "This policy is written to test the use limitation principle"
+	ATTR DESC "«p.metadata.description»"
 	«IF !p.recipient.empty»«FOR x:p.recipient»«x.compileActor»«ENDFOR»«ENDIF»
 	«IF !p.service.empty»«FOR z:p.service»«z.compilePurpose»«ENDFOR»«ENDIF»
 	«IF !p.privateData.empty»«FOR y:p.privateData»«y.compileDatum»«ENDFOR»«ENDIF»
