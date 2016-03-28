@@ -1,5 +1,7 @@
 package rslingo.rslil4privacy.ui.handlers;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -25,12 +27,15 @@ import org.apache.poi.xwpf.usermodel.XWPFTable;
 import org.apache.poi.xwpf.usermodel.XWPFTableCell;
 import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTPPr;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTRPr;
 
 import com.google.common.io.CharStreams;
 
 import rslingo.rslil4privacy.rSLIL4Privacy.Import;
+import rslingo.rslil4privacy.rSLIL4Privacy.Policy;
 
 public class DocumentHelper {
 
@@ -357,15 +362,28 @@ public class DocumentHelper {
 	
 	public static boolean belongsToMainFile(Import imp, IFile file) {
 		String ns = "Package " + imp.getImportedNamespace().replace(".*", "");
-        String content = null;
 		boolean belongs = false;
         
 		try {
-			content = CharStreams.toString(new InputStreamReader(file.getContents(), "UTF-8"));
+			String content = CharStreams.toString(new InputStreamReader(file.getContents(), "UTF-8"));
 			belongs = content.contains(ns);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return belongs;
+	}
+	
+	public static Policy getPolicy(ResourceSet rs, Resource resource, IFile file) {
+		Policy policy = null;
+		
+		try {
+			String content = CharStreams.toString(new InputStreamReader(file.getContents(), "UTF-8"));
+			InputStream in = new ByteArrayInputStream(content.getBytes());
+			resource.load(in, rs.getLoadOptions());
+	        policy = (Policy) resource.getContents().get(0);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return policy;
 	}
 }
