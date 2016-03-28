@@ -67,6 +67,14 @@
         	class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:rslingo.rslil4privacy.ui.handlers.TextHandler"
             commandId="rslingo.rslil4privacy.ui.commandText">
         </handler>
+        <handler
+        	class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:rslingo.rslil4privacy.ui.handlers.WordHandler"
+            commandId="rslingo.rslil4privacy.ui.commandWord">
+        </handler>
+        <handler
+        	class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:rslingo.rslil4privacy.ui.handlers.ExportExcelHandler"
+            commandId="rslingo.rslil4privacy.ui.commandExportExcel">
+        </handler>
     </extension>
     <extension point="org.eclipse.core.expressions.definitions">
         <definition id="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened">

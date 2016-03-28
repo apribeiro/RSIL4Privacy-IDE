@@ -27,6 +27,7 @@ import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -34,13 +35,12 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
-import org.eclipse.xtext.resource.XtextResource;
-import org.eclipse.xtext.resource.XtextResourceSet;
+import org.eclipse.xtext.resource.IResourceDescriptions;
+import org.eclipse.xtext.ui.resource.IResourceSetProvider;
 
 import com.google.common.collect.Lists;
-import com.google.inject.Injector;
+import com.google.inject.Inject;
 
-import rslingo.rslil4privacy.RSLIL4PrivacyStandaloneSetup;
 import rslingo.rslil4privacy.rSLIL4Privacy.Attribute;
 import rslingo.rslil4privacy.rSLIL4Privacy.Collection;
 import rslingo.rslil4privacy.rSLIL4Privacy.Date;
@@ -73,7 +73,10 @@ public class WordHandler extends AbstractHandler {
 	private final String PLUGIN_PATH = Platform.getInstallLocation()
 			.getURL().getPath().substring(1)
 			+ "plugins/RSLingo4Privacy/";
-
+     
+    @Inject
+    IResourceSetProvider resourceSetProvider;
+	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		IWorkbenchWindow workbenchWindow = HandlerUtil.getActiveWorkbenchWindowChecked(event);
@@ -127,13 +130,10 @@ public class WordHandler extends AbstractHandler {
 		Job job = new Job("Exporting to Word...") {
 			@Override
 			protected IStatus run(IProgressMonitor monitor) {
-				new org.eclipse.emf.mwe.utils.StandaloneSetup().setPlatformUri("../");
-				Injector injector = new RSLIL4PrivacyStandaloneSetup().createInjectorAndDoEMFRegistration();
-				XtextResourceSet resourceSet = injector.getInstance(XtextResourceSet.class);
-				resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);
-				Resource resource = resourceSet.getResource(
-						URI.createURI("platform:/resource/" + file.getFullPath().toString()), true);
-				//URI.createURI("platform:/resource/rslingo.rslil4privacy/src/example.rslil"), true);
+				URI uri = URI.createPlatformResourceURI(file.getFullPath().toString(), true);
+				//URI.createURI("platform:/resource/rslingo.rslil/src/example.rslil"), true);
+		        ResourceSet resourceSet = resourceSetProvider.get(project);
+		        Resource resource = resourceSet.getResource(uri, true);
 				Policy policy = (Policy) resource.getContents().get(0);
 
 				// Deal with the Main file mode
