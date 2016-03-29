@@ -631,7 +631,6 @@
            name="ImportExcel">
      </command>
      <command
-           defaultHandler="rslingo.rslil4privacy.ui.handlers.ExportExcelHandler"
            id="rslingo.rslil4privacy.ui.commandExportExcel"
            name="ExportExcel">
      </command>
@@ -641,7 +640,6 @@
            name="NLText">
      </command>
      <command
-           defaultHandler="rslingo.rslil4privacy.ui.handlers.WordHandler"
            id="rslingo.rslil4privacy.ui.commandWord"
            name="Word">
      </command>
