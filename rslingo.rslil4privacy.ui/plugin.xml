@@ -668,5 +668,20 @@
            name="Configuration">
      </command>
   </extension>
+  <!-- Wizards -->
+  <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            name="RSLingo"
+            id="RSLingo">
+      </category>
+      <wizard
+            name="RSL-IL4Privacy file"
+            icon="icons/req.png"
+            category="RSLingo"
+            class="rslingo.rslil4privacy.ui.wizards.NewRSLIL4PrivacyWizard"
+            id="rslingo.rslil4privacy.ui.wizards.NewRSLIL4PrivacyWizard">
+      </wizard>
+   </extension>
 
 </plugin>
