@@ -352,7 +352,7 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
 	private void generateStatementsRegion(StringBuilder sb) {
 		sb.append("Collection St1 {");
 		sb.append("\n");
-		sb.append("\tDescription \"St1 description \"");
+		sb.append("\tDescription \"St1 description\"");
 		sb.append("\n");
 		sb.append("\tCondition \" St1 condition\"");
 		sb.append("\n");
