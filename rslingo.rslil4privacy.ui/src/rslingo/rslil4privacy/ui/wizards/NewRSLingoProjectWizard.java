@@ -1,7 +1,6 @@
 package rslingo.rslil4privacy.ui.wizards;
 
 import java.io.ByteArrayInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 
@@ -9,6 +8,7 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
+import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
@@ -55,12 +55,13 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
 		metadata.setAuthors(metadataPage.getAuthors());
 		metadata.setOrganizations(metadataPage.getOrganizations());
 		metadata.setVersion(metadataPage.getVersion());
+		final String namespace = metadataPage.getNamespace();
 		final String date = metadataPage.getDate();
 		
 		IRunnableWithProgress op = new IRunnableWithProgress() {
 			public void run(IProgressMonitor monitor) throws InvocationTargetException {
 				try {
-					doFinish(projectName, fileMode, metadata, date, monitor);
+					doFinish(projectName, fileMode, namespace, metadata, date, monitor);
 				} catch (CoreException e) {
 					throw new InvocationTargetException(e);
 				} finally {
@@ -81,9 +82,9 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
 		return true;
 	}
 	
-	private void doFinish(String projectName, String fileMode, Metadata metadata,
-			String date, IProgressMonitor monitor)
-		throws CoreException {
+	private void doFinish(String projectName, String fileMode, String namespace,
+			Metadata metadata, String date, IProgressMonitor monitor)
+			throws CoreException {
 		// Create the Project structure
 		monitor.beginTask("Creating the project " + fileMode, 2);
 		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
@@ -101,23 +102,14 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
 		monitor.setTaskName("Creating policy files...");
 		
 		if (fileMode.equals(NewRSLingoProjectWizardPage.SINGLE)) {
-			IFile file = folder.getFile("new_policy.rslil");
-			
-			try {
-				InputStream stream = openContentStream(metadata, date);
-				file.create(stream, true, monitor);
-				stream.close();
-			} catch (IOException e) {
-			}
+			generateSingleFile(folder, namespace, metadata, date, monitor);
 		} else {
-			IFile file = folder.getFile("new_policy.Master.rslil");
-			
-			try {
-				InputStream stream = openContentStream(metadata, date);
-				file.create(stream, true, monitor);
-				stream.close();
-			} catch (IOException e) {
-			}
+			generateMainFile(folder, namespace, metadata, date, monitor);
+			generateStatementsFile(folder, namespace, monitor);
+			generatePrivateDataFile(folder, namespace, monitor);
+			generateServicesFile(folder, namespace, monitor);
+			generateRecipientsFile(folder, namespace, monitor);
+			generateEnforcementsFile(folder, namespace, monitor);
 		}
 		monitor.worked(1);
 
@@ -134,14 +126,290 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
 //		});
 //		monitor.worked(1);
 	}
-
-	private InputStream openContentStream(Metadata metadata, String date) {
-		String contents = 
-				"This is the initial file contents for *.rslil file that should be word-sorted in the Preview page of the multi-page editor"
-				+ metadata.getName() + "\n" + metadata.getDescription() + "\n"
-				+ metadata.getAuthors() + "\n" + metadata.getOrganizations() + "\n"
-				+ date + "\n" + metadata.getVersion();
-				
-		return new ByteArrayInputStream(contents.getBytes());
+	
+	private void generateSingleFile(IFolder folder, String namespace, Metadata metadata,
+			String date, IProgressMonitor monitor) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Package " + namespace + " {");
+		sb.append("\n");
+		sb.append("\n");
+		
+		generateMetadataRegion(metadata, date, sb);
+		generateStatementsRegion(sb);
+		generatePrivateDataRegion(sb);
+		generateRecipientsRegion(sb);
+		generateServicesRegion(sb);
+		generateEnforcementsRegion(sb);
+    	
+    	sb.deleteCharAt(sb.length() - 1);
+		sb.append("}");
+		
+		IFile file = folder.getFile("new_policy.rslil");
+		InputStream stream = new ByteArrayInputStream(sb.toString().getBytes());
+		
+		try {
+			if (!file.exists()) {
+				file.create(stream, IResource.FORCE, monitor);
+			} else {
+				file.setContents(stream, IResource.FORCE, monitor);
+			}
+		} catch (CoreException e) {
+		}
+	}
+	
+	private void generateMainFile(IFolder folder, String namespace, Metadata metadata,
+			String date, IProgressMonitor monitor) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Package " + namespace + ".Main {");
+		sb.append("\n");
+		sb.append("\n");
+		sb.append("import " + namespace + ".Statements.*");
+		sb.append("\n");
+		sb.append("import " + namespace + ".Privatedata.*");
+		sb.append("\n");
+		sb.append("import " + namespace + ".Recipients.*");
+		sb.append("\n");
+		sb.append("import " + namespace + ".Enforcements.*");
+		sb.append("\n");
+		sb.append("import " + namespace + ".Services.*");
+		sb.append("\n");
+		sb.append("\n");
+		
+		generateMetadataRegion(metadata, date, sb);
+    	
+    	sb.deleteCharAt(sb.length() - 1);
+    	sb.append("}");
+		
+		IFile file = folder.getFile("new_policy.Main.rslil");
+		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
+		
+		try {
+			if (!file.exists()) {
+				file.create(source, IResource.FORCE, monitor);
+			} else {
+				file.setContents(source, IResource.FORCE, monitor);
+			}
+		} catch (CoreException e) {
+		}
+	}
+		
+	private void generateStatementsFile(IFolder folder, String namespace,
+			IProgressMonitor monitor) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Package " + namespace + ".Statements {");
+		sb.append("\n");
+		sb.append("\n");
+		sb.append("import " + namespace + ".Privatedata.*");
+		sb.append("\n");
+		sb.append("import " + namespace + ".Services.*");
+		sb.append("\n");
+		sb.append("import " + namespace + ".Enforcements.*");
+		sb.append("\n");
+		sb.append("import " + namespace + ".Recipients.*");
+		sb.append("\n");
+		sb.append("\n");
+		
+		generateStatementsRegion(sb);
+    	
+    	sb.deleteCharAt(sb.length() - 1);
+    	sb.append("}");
+		
+		IFile file = folder.getFile("new_policy.Statements.rslil");
+		InputStream stream = new ByteArrayInputStream(sb.toString().getBytes());
+		
+		try {
+			if (!file.exists()) {
+				file.create(stream, IResource.FORCE, monitor);
+			} else {
+				file.setContents(stream, IResource.FORCE, monitor);
+			}
+		} catch (CoreException e) {
+		}
+	}
+		
+	private void generatePrivateDataFile(IFolder folder, String namespace,
+			IProgressMonitor monitor) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Package " + namespace + ".Privatedata {");
+		sb.append("\n");
+		sb.append("\n");
+		
+		generatePrivateDataRegion(sb);
+    	
+    	sb.deleteCharAt(sb.length() - 1);
+    	sb.append("}");
+		
+		IFile file = folder.getFile("new_policy.Privatedata.rslil");
+		InputStream stream = new ByteArrayInputStream(sb.toString().getBytes());
+		
+		try {
+			if (!file.exists()) {
+				file.create(stream, IResource.FORCE, monitor);
+			} else {
+				file.setContents(stream, IResource.FORCE, monitor);
+			}
+		} catch (CoreException e) {
+		}
+	}
+		
+	private void generateServicesFile(IFolder folder, String namespace,
+			IProgressMonitor monitor) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Package " + namespace + ".Services {");
+		sb.append("\n");
+		sb.append("\n");
+		sb.append("import " + namespace + ".Privatedata.*");
+		sb.append("\n");
+		sb.append("\n");
+		
+		generateServicesRegion(sb);
+    	
+    	sb.deleteCharAt(sb.length() - 1);
+    	sb.append("}");
+		
+		IFile file = folder.getFile("new_policy.Services.rslil");
+		InputStream stream = new ByteArrayInputStream(sb.toString().getBytes());
+		
+		try {
+			if (!file.exists()) {
+				file.create(stream, IResource.FORCE, monitor);
+			} else {
+				file.setContents(stream, IResource.FORCE, monitor);
+			}
+		} catch (CoreException e) {
+		}
+	}
+	
+	private void generateEnforcementsFile(IFolder folder, String namespace,
+			IProgressMonitor monitor) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Package " + namespace + ".Enforcements {");
+		sb.append("\n");
+		sb.append("\n");
+		
+		generateEnforcementsRegion(sb);
+    	
+    	sb.deleteCharAt(sb.length() - 1);
+    	sb.append("}");
+		
+		IFile file = folder.getFile("new_policy.Enforcements.rslil");
+		InputStream stream = new ByteArrayInputStream(sb.toString().getBytes());
+		
+		try {
+			if (!file.exists()) {
+				file.create(stream, IResource.FORCE, monitor);
+			} else {
+				file.setContents(stream, IResource.FORCE, monitor);
+			}
+		} catch (CoreException e) {
+		}
+	}	
+	
+	private void generateRecipientsFile(IFolder folder, String namespace,
+			IProgressMonitor monitor) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Package " + namespace + ".Recipients {");
+		sb.append("\n");
+		sb.append("\n");
+		
+		generateRecipientsRegion(sb);
+    	
+    	sb.deleteCharAt(sb.length() - 1);
+    	sb.append("}");
+		
+		IFile file = folder.getFile("new_policy.Recipients.rslil");
+		InputStream stream = new ByteArrayInputStream(sb.toString().getBytes());
+		
+		try {
+			if (!file.exists()) {
+				file.create(stream, IResource.FORCE, monitor);
+			} else {
+				file.setContents(stream, IResource.FORCE, monitor);
+			}
+		} catch (CoreException e) {
+		}
+	}
+		
+	
+	private void generateMetadataRegion(Metadata metadata, String date, StringBuilder sb) {
+		sb.append("PolicyMetadata {");
+		sb.append("\n");
+		sb.append("\tPolicyName \"" + metadata.getName() + "\"");
+		sb.append("\n");
+		sb.append("\tDescription \"" + metadata.getDescription() + "\"");
+		sb.append("\n");
+		sb.append("\tAuthor(s) \"" + metadata.getAuthors() + "\"");
+		sb.append("\n");
+		sb.append("\tOrganization(s) \"" + metadata.getOrganizations() + "\"");
+		sb.append("\n");
+		sb.append("\tDate " + date);
+		sb.append("\n");
+		sb.append("\tVersion \"" + metadata.getVersion() + "\"");
+		sb.append("\n}");
+		sb.append("\n\n");
+	}
+	
+	private void generateStatementsRegion(StringBuilder sb) {
+		sb.append("Collection St1 {");
+		sb.append("\n");
+		sb.append("\tDescription \"St1 description \"");
+		sb.append("\n");
+		sb.append("\tCondition \" St1 condition\"");
+		sb.append("\n");
+		sb.append("\tModality Permitted");
+		sb.append("\n}");
+		sb.append("\n\n");
+	}
+	
+	private void generatePrivateDataRegion(StringBuilder sb) {
+		sb.append("PrivateData PD1 {");
+		sb.append("\n");
+		sb.append("\tDescription \"PD1 description\"");
+		sb.append("\n");
+		sb.append("\tType PersonalInformation");
+		sb.append("\n");
+		sb.append("\tAttribute \"A1\" {");
+		sb.append("\n");
+		sb.append("\t\tDescription \"A1 description\"");
+		sb.append("\n\t}");
+		sb.append("\n}");
+		sb.append("\n\n");
+	}
+	
+	private void generateRecipientsRegion(StringBuilder sb) {
+		sb.append("Recipient R1 {");
+		sb.append("\n");
+		sb.append("\tName \"Recipient R1\"");
+		sb.append("\n");
+		sb.append("\tDescription \"R1 description\"");
+		sb.append("\n");		
+		sb.append("\tScope Internal");
+		sb.append("\n");
+		sb.append("\tType Individual");
+		sb.append("\n}");
+		sb.append("\n\n");
+	}
+	
+	private void generateServicesRegion(StringBuilder sb) {
+		sb.append("Service S1 {");
+		sb.append("\n");
+		sb.append("\tName \"Service 1\"");
+		sb.append("\n");
+		sb.append("\tDescription \"S1 description\"");
+		sb.append("\n");
+		sb.append("\n}");
+		sb.append("\n\n");
+	}
+	
+	private void generateEnforcementsRegion(StringBuilder sb) {
+		sb.append("Enforcement En1 {");
+		sb.append("\n");
+		sb.append("\tName \"Enforcement 1\"");
+		sb.append("\n");
+		sb.append("\tDescription \"En1 description\"");
+		sb.append("\n");
+		sb.append("\tType Action");
+		sb.append("\n}");
+		sb.append("\n\n");
 	}
 }
