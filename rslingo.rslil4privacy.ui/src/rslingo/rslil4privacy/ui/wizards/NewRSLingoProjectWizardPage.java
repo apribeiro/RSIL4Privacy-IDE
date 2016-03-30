@@ -1,6 +1,5 @@
 package rslingo.rslil4privacy.ui.wizards;
 
-import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -16,7 +15,7 @@ public class NewRSLingoProjectWizardPage extends WizardNewProjectCreationPage {
 	
 	private Combo comboMode;
 
-	public NewRSLingoProjectWizardPage(ISelection selection) {
+	public NewRSLingoProjectWizardPage() {
 		super("wizardPage");
 		setTitle("RSLingo Project");
 		setDescription("This wizard creates a new RSLingo project.");

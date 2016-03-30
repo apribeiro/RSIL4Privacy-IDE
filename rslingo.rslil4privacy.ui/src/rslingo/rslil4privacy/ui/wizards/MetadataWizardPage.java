@@ -2,7 +2,6 @@ package rslingo.rslil4privacy.ui.wizards;
 
 import java.util.Calendar;
 
-import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
@@ -18,7 +17,6 @@ import rslingo.rslil4privacy.ui.handlers.DocumentHelper;
 
 public class MetadataWizardPage extends WizardPage {
 
-	ISelection selection;
 	Text policyNameText;
 	Text descriptionText;
 	Text authorsText;
@@ -26,18 +24,17 @@ public class MetadataWizardPage extends WizardPage {
 	DateTime dateTime;
 	Text versionText;
 	
-	public MetadataWizardPage(ISelection selection) {
+	public MetadataWizardPage() {
 		super("MetadataWizardPage");
-		setTitle("RSLingo Project");
-		setDescription("This wizard creates a new RSLingo project.");
-		this.selection = selection;
+		setTitle("RSL-IL4Privacy Policy Metadata");
+		setDescription("Define the RSL-IL4Privacy policy metadata.");
 	}
 
 	public void createControl(Composite parent) {
 		Composite container = new Composite(parent, SWT.NULL);
 		GridLayout layout = new GridLayout();
 		container.setLayout(layout);
-		layout.numColumns = 3;
+		layout.numColumns = 2;
 		layout.verticalSpacing = 9;
 		Label label = new Label(container, SWT.NULL);
 		label.setText("&Policy name:");
@@ -91,7 +88,7 @@ public class MetadataWizardPage extends WizardPage {
 		label.setText("Dat&e:");
 
 		dateTime = new DateTime(container, SWT.BORDER | SWT.SINGLE);
-		gd = new GridData(GridData.FILL_HORIZONTAL);
+		gd = new GridData(SWT.NONE);
 		dateTime.setLayoutData(gd);
 		Calendar cal = Calendar.getInstance();
 		dateTime.setDate(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH),

@@ -21,9 +21,10 @@ import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.dialogs.ContainerSelectionDialog;
 
 public class NewRSLIL4PrivacyWizardPage extends WizardPage {
+	
+	private ISelection selection;
 	private Text containerText;
 	private Text fileText;
-	private ISelection selection;
 
 	public NewRSLIL4PrivacyWizardPage(ISelection selection) {
 		super("wizardPage");

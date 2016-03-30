@@ -15,7 +15,6 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
-import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
@@ -27,7 +26,6 @@ import rslingo.rslil4privacy.rSLIL4Privacy.impl.MetadataImpl;
 public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
 	private NewRSLingoProjectWizardPage page;
 	private MetadataWizardPage metadataPage;
-	private ISelection selection;
 	
 	public NewRSLingoProjectWizard() {
 		super();
@@ -36,15 +34,15 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
 	}
 
 	public void addPages() {
-		page = new NewRSLingoProjectWizardPage(selection);
-		metadataPage = new MetadataWizardPage(selection);
+		page = new NewRSLingoProjectWizardPage();
+		metadataPage = new MetadataWizardPage();
 		addPage(page);
 		addPage(metadataPage);
 	}
 	
 	@Override
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
-		this.selection = selection;
+		// Nothing to do
 	}
 	
 	@Override
