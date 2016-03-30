@@ -5,7 +5,7 @@ The regular use of social networking websites and applications encompasses the c
 The main goal of the project RSLingo4Privacy is to improve privacy by providing companies a set of languages and tools to align their policies with their practices, namely by introducing a privacy requirements specification into the regular software development process that allow to align multi-party expectations across multi-tier applications. To that end, and in the context of recent results from the RSLingo approach and our privacy policy analysis, we intend to research techniques that allow users to specify privacy-specific linguistics patterns to allow automatic extraction of the relevant information from privacy policies into an equivalent intermediate (RSL-IL) format, and map or transform these specifications into equivalent Eddy specifications that, with proper tools allow checking conflicts between these privacy policies and user preferences and the developers’ privacy specifications. Moreover, the relevance of this research will be demonstrated through the analysis of real world privacy policies, namely those posted by the most popular web sites, such as Facebook, Linkedin, Twitter, Dropbox, IMDB or Zynga.
 
 --
-# References
+## References
 
 [FS2012]	D. Ferreira, A. R. Silva,”RSLingo: An Information Extraction Approach toward Formal Requirements Specifications”, 2nd Int. Workshop on Model-Driven Requirements Engineering (MoDRE 2012), IEEE Computer Society, 2012.
 
