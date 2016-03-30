@@ -678,7 +678,17 @@
             icon="icons/req.png"
             category="RSLingo"
             class="rslingo.rslil4privacy.ui.wizards.NewRSLIL4PrivacyWizard"
+            finalPerspective="org.eclipse.jdt.ui.JavaPerspective"
             id="rslingo.rslil4privacy.ui.wizards.NewRSLIL4PrivacyWizard">
+      </wizard>
+      <wizard
+            name="RSLingo Project"
+            icon="icons/rslingo-icon.png"
+            category="RSLingo"
+            class="rslingo.rslil4privacy.ui.wizards.NewRSLingoProjectWizard"
+            finalPerspective="org.eclipse.jdt.ui.JavaPerspective"
+            id="rslingo.rslil4privacy.ui.wizards.NewRSLingoProjectWizard"
+            project="true">
       </wizard>
    </extension>
 
