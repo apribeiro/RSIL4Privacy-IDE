@@ -21,8 +21,12 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 
+import rslingo.rslil4privacy.rSLIL4Privacy.Metadata;
+import rslingo.rslil4privacy.rSLIL4Privacy.impl.MetadataImpl;
+
 public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
 	private NewRSLingoProjectWizardPage page;
+	private MetadataWizardPage metadataPage;
 	private ISelection selection;
 	
 	public NewRSLingoProjectWizard() {
@@ -33,7 +37,9 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
 
 	public void addPages() {
 		page = new NewRSLingoProjectWizardPage(selection);
+		metadataPage = new MetadataWizardPage(selection);
 		addPage(page);
+		addPage(metadataPage);
 	}
 	
 	@Override
@@ -45,11 +51,18 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
 	public boolean performFinish() {
 		final String projectName = page.getProjectName();
 		final String fileMode = page.getFileMode();
+		final Metadata metadata = new MetadataImpl() {};
+		metadata.setName(metadataPage.getPolicyName());
+		metadata.setDescription(metadataPage.getDescription());
+		metadata.setAuthors(metadataPage.getAuthors());
+		metadata.setOrganizations(metadataPage.getOrganizations());
+		metadata.setVersion(metadataPage.getVersion());
+		final String date = metadataPage.getDate();
 		
 		IRunnableWithProgress op = new IRunnableWithProgress() {
 			public void run(IProgressMonitor monitor) throws InvocationTargetException {
 				try {
-					doFinish(projectName, fileMode, monitor);
+					doFinish(projectName, fileMode, metadata, date, monitor);
 				} catch (CoreException e) {
 					throw new InvocationTargetException(e);
 				} finally {
@@ -70,7 +83,8 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
 		return true;
 	}
 	
-	private void doFinish(String projectName, String fileMode, IProgressMonitor monitor)
+	private void doFinish(String projectName, String fileMode, Metadata metadata,
+			String date, IProgressMonitor monitor)
 		throws CoreException {
 		// Create the Project structure
 		monitor.beginTask("Creating the project " + fileMode, 2);
@@ -78,9 +92,9 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
 		IProject project = root.getProject(projectName);
 		project.create(monitor);
 		project.open(monitor);
-		IProjectDescription description = project.getDescription();
-		description.setNatureIds(new String[] { "org.eclipse.xtext.ui.shared.xtextNature" });
-		project.setDescription(description, monitor);
+		IProjectDescription projDescription = project.getDescription();
+		projDescription.setNatureIds(new String[] { "org.eclipse.xtext.ui.shared.xtextNature" });
+		project.setDescription(projDescription, monitor);
 		monitor.worked(1);
 		
 		IFolder folder = project.getFolder("src");
@@ -92,7 +106,7 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
 			IFile file = folder.getFile("new_policy.rslil");
 			
 			try {
-				InputStream stream = openContentStream();
+				InputStream stream = openContentStream(metadata, date);
 				file.create(stream, true, monitor);
 				stream.close();
 			} catch (IOException e) {
@@ -101,7 +115,7 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
 			IFile file = folder.getFile("new_policy.Master.rslil");
 			
 			try {
-				InputStream stream = openContentStream();
+				InputStream stream = openContentStream(metadata, date);
 				file.create(stream, true, monitor);
 				stream.close();
 			} catch (IOException e) {
@@ -123,9 +137,13 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
 //		monitor.worked(1);
 	}
 
-	private InputStream openContentStream() {
-		String contents =
-			"This is the initial file contents for *.rslil file that should be word-sorted in the Preview page of the multi-page editor";
+	private InputStream openContentStream(Metadata metadata, String date) {
+		String contents = 
+				"This is the initial file contents for *.rslil file that should be word-sorted in the Preview page of the multi-page editor"
+				+ metadata.getName() + "\n" + metadata.getDescription() + "\n"
+				+ metadata.getAuthors() + "\n" + metadata.getOrganizations() + "\n"
+				+ date + "\n" + metadata.getVersion();
+				
 		return new ByteArrayInputStream(contents.getBytes());
 	}
 }
