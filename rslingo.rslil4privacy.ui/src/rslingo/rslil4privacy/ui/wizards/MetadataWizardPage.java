@@ -17,6 +17,7 @@ import rslingo.rslil4privacy.ui.handlers.DocumentHelper;
 
 public class MetadataWizardPage extends WizardPage {
 
+	Text namespaceText;
 	Text policyNameText;
 	Text descriptionText;
 	Text authorsText;
@@ -37,10 +38,22 @@ public class MetadataWizardPage extends WizardPage {
 		layout.numColumns = 2;
 		layout.verticalSpacing = 9;
 		Label label = new Label(container, SWT.NULL);
+		label.setText("&Namespace:");
+
+		namespaceText = new Text(container, SWT.BORDER | SWT.SINGLE);
+		GridData gd = new GridData(GridData.FILL_HORIZONTAL);
+		namespaceText.setLayoutData(gd);
+		namespaceText.addModifyListener(new ModifyListener() {
+			public void modifyText(ModifyEvent e) {
+				dialogChanged();
+			}
+		});
+		
+		label = new Label(container, SWT.NULL);
 		label.setText("&Policy name:");
 
 		policyNameText = new Text(container, SWT.BORDER | SWT.SINGLE);
-		GridData gd = new GridData(GridData.FILL_HORIZONTAL);
+		gd = new GridData(GridData.FILL_HORIZONTAL);
 		policyNameText.setLayoutData(gd);
 		policyNameText.addModifyListener(new ModifyListener() {
 			public void modifyText(ModifyEvent e) {
@@ -111,6 +124,19 @@ public class MetadataWizardPage extends WizardPage {
 	}
 
 	private void dialogChanged() {
+		String regex = "^[a-zA-Z_\\$][\\w\\$]*(?:\\.[a-zA-Z_\\$][\\w\\$]*)*$";
+		String namespace = getNamespace();
+		
+		if (namespace.length() == 0) {
+			updateStatus("Package namespace must be specified");
+			return;
+		}
+		
+		if (!namespace.matches(regex)) {
+			updateStatus("Invalid package namespace");
+			return;
+		}
+		
 		if (getPolicyName().length() == 0) {
 			updateStatus("Policy name must be specified");
 			return;
@@ -139,6 +165,10 @@ public class MetadataWizardPage extends WizardPage {
 		setPageComplete(message == null);
 	}
 
+	public String getNamespace() {
+		return namespaceText.getText();
+	}
+	
 	public String getPolicyName() {
 		return policyNameText.getText();
 	}
