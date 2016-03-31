@@ -372,7 +372,7 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		Cell cellPrivateData = row.getCell(5);
 	    		Cell cellService = row.getCell(7);
 	    		Cell cellEnforcement = row.getCell(8);
-	    		sb.append(type + " st" + id + " {");
+	    		sb.append(type + " St" + id + " {");
 	    		sb.append("\n");
 	    		sb.append("\tDescription \"" + description + "\"");
 	    		sb.append("\n");
