@@ -50,6 +50,7 @@ public class NewRSLIL4PrivacyWizard extends Wizard implements INewWizard {
 				}
 			}
 		};
+		
 		try {
 			getContainer().run(true, false, op);
 		} catch (InterruptedException e) {
@@ -62,22 +63,23 @@ public class NewRSLIL4PrivacyWizard extends Wizard implements INewWizard {
 		return true;
 	}
 	
-	private void doFinish(
-		String containerName,
-		String fileName,
-		IProgressMonitor monitor)
-		throws CoreException {
-		// create a sample file
+	private void doFinish(String containerName, String fileName, IProgressMonitor monitor)
+			throws CoreException {
+		// Create a sample file
 		monitor.beginTask("Creating " + fileName, 2);
 		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
 		IResource resource = root.findMember(new Path(containerName));
+		
 		if (!resource.exists() || !(resource instanceof IContainer)) {
 			throwCoreException("Container \"" + containerName + "\" does not exist.");
 		}
+		
 		IContainer container = (IContainer) resource;
 		final IFile file = container.getFile(new Path(fileName));
+		
 		try {
 			InputStream stream = openContentStream();
+			
 			if (file.exists()) {
 				file.setContents(stream, true, true, monitor);
 			} else {
@@ -102,14 +104,16 @@ public class NewRSLIL4PrivacyWizard extends Wizard implements INewWizard {
 	}
 	
 	private InputStream openContentStream() {
-		String contents =
-			"This is the initial file contents for *.rslil file that should be word-sorted in the Preview page of the multi-page editor";
-		return new ByteArrayInputStream(contents.getBytes());
+		StringBuilder sb = new StringBuilder();
+		sb.append("Package New_Policy {");
+		sb.append("\n");
+		sb.append("}");
+		return new ByteArrayInputStream(sb.toString().getBytes());
 	}
 
 	private void throwCoreException(String message) throws CoreException {
-		IStatus status =
-			new Status(IStatus.ERROR, "MyPlugin", IStatus.OK, message, null);
+		IStatus status = 
+				new Status(IStatus.ERROR, "rslingo.rslil4privacy", IStatus.OK, message, null);
 		throw new CoreException(status);
 	}
 }
