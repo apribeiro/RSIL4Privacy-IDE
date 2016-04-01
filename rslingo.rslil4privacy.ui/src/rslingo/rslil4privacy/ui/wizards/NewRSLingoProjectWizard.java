@@ -396,7 +396,6 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
 		sb.append("\tName \"Service 1\"");
 		sb.append("\n");
 		sb.append("\tDescription \"S1 description\"");
-		sb.append("\n");
 		sb.append("\n}");
 		sb.append("\n\n");
 	}
