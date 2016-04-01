@@ -106,8 +106,8 @@ public class NewRSLIL4PrivacyWizard extends Wizard implements INewWizard {
 	private InputStream openContentStream() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Package New_Policy {");
-		sb.append("\n");
-		sb.append("}");
+		sb.append("\n\t");
+		sb.append("\n}");
 		return new ByteArrayInputStream(sb.toString().getBytes());
 	}
 
