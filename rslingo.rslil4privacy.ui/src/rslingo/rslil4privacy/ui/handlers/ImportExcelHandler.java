@@ -361,7 +361,7 @@ public class ImportExcelHandler extends AbstractHandler {
     		if (cellId != null) {
     			int id = (int) cellId.getNumericCellValue();
 	    		Cell cellDescription = row.getCell(1);
-	    		String description = cellDescription.getStringCellValue();
+	    		String description = cellDescription.getStringCellValue().replaceAll("\"", "'");
 	    		Cell cellCondition = row.getCell(2);
 	    		String condition = cellCondition.getStringCellValue();
 	    		Cell cellModality = row.getCell(3);
@@ -641,10 +641,22 @@ public class ImportExcelHandler extends AbstractHandler {
     	    		String description = cellDescription.getStringCellValue();
     	    		Cell cellScope = row.getCell(2);
     	    		String scope = cellScope.getStringCellValue();
-    	    		scope = scope.substring(0, 1).toUpperCase() + scope.substring(1);
+    	    		
+    	    		if (scope.contains("/")) {
+						scope = "Internal/External";
+					} else {
+						scope = scope.substring(0, 1).toUpperCase() + scope.substring(1);
+					}
+
     	    		Cell cellType = row.getCell(3);
     	    		String type = cellType.getStringCellValue();
-    	    		type = type.substring(0, 1).toUpperCase() + type.substring(1);
+    	    		
+    	    		if (type.contains("/")) {
+						type = "Individual/Organization";
+					} else {
+						type = type.substring(0, 1).toUpperCase() + type.substring(1);
+					}
+    	    		
     	    		Cell cellPartOf = row.getCell(4);
     	    		sb.append("Recipient R" + id + " {");
     	    		sb.append("\n");
