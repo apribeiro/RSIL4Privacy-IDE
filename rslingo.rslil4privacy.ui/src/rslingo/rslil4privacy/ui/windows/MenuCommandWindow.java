@@ -109,8 +109,10 @@ public class MenuCommandWindow {
 		formToolkit.paintBordersFor(table_1);
 		
 		IWorkspaceRoot workspace = ResourcesPlugin.getWorkspace().getRoot();
+		ArrayList<IProject> projects = new ArrayList<IProject>(
+				Arrays.asList(workspace.getProjects()));
 		
-		for (IProject project : workspace.getProjects()) {
+		for (IProject project : projects) {
 			TableItem item = new TableItem(table_1, SWT.NONE);
 			item.setText(project.getName());
 		}
@@ -122,10 +124,7 @@ public class MenuCommandWindow {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				try {
-					if (btnRadioButtonAll.getSelection()) {
-						ArrayList<IProject> projects = new ArrayList<IProject>(
-								Arrays.asList(workspace.getProjects())); 
-						
+					if (btnRadioButtonAll.getSelection()) {				
 						if (importMode) {
 							for (IProject project : projects) {
 								if (project.isOpen()) {
