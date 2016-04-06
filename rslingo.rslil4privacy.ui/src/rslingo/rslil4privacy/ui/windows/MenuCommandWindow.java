@@ -111,6 +111,7 @@ public class MenuCommandWindow {
 		IWorkspaceRoot workspace = ResourcesPlugin.getWorkspace().getRoot();
 		ArrayList<IProject> projects = new ArrayList<IProject>(
 				Arrays.asList(workspace.getProjects()));
+		//TODO: Order projects alphabetically
 		
 		for (IProject project : projects) {
 			TableItem item = new TableItem(table_1, SWT.NONE);
