@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations description="File containing the configurations for RSLingo4Privacy">
+  <configuration name="word-path" value="RSLIL-WordTemplate.docx" />
+  <configuration name="excel-path" value="RSLIL-ExcelTemplate-v1.1.xlsx" />
+  <configuration name="use-graphviz" value="true" />
+  <configuration name="graphviz-path" value="C:/Program Files (x86)/Graphviz2.24/bin/dot.exe" />
+</configurations>
