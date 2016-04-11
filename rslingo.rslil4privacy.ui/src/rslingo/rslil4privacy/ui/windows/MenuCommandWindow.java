@@ -117,6 +117,7 @@ public class MenuCommandWindow {
 				projects.add(p);
 			}
 		}
+		// Order projects alphabetically by name
 		Collections.sort(projects, new ProjectComparator());
 		
 		for (IProject project : projects) {
