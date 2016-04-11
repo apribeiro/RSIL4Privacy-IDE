@@ -35,7 +35,7 @@ public class ConfigurationWindow {
 	private static final String CONFIG_PATH = "config.xml";
 	private static final String DEF_WORD_PATH = "RSL-IL4Privacy-WordTemplate.docx";
 	private static final String DEF_EXCEL_PATH = "RSL-IL4Privacy-ExcelTemplate-v1.1.xlsx";
-	private static final String DEF_EDDY_PATH = "Eddy.jar";
+	private static final String DEF_GRAPHVIZ_PATH = "C:/Program Files (x86)/Graphviz2.24/bin/dot.exe";
 	
 	private final String PLUGIN_PATH = Platform.getInstallLocation()
 			.getURL().getPath().substring(1)
@@ -146,31 +146,48 @@ public class ConfigurationWindow {
 			}
 		});
 		
-		Group grpEddy = new Group(shell, SWT.NONE);
-		grpEddy.setText("Eddy Engine");
-		grpEddy.setBounds(10, 98, 414, 82);
+		Group grpGraphviz = new Group(shell, SWT.NONE);
+		grpGraphviz.setText("Graphviz");
+		grpGraphviz.setBounds(10, 98, 414, 82);
 		
-		Label lblJarPath = formToolkit.createLabel(grpEddy, "Jar Path:", SWT.ALPHA);
-		lblJarPath.setBounds(10, 26, 44, 15);
+		Label lblGraphvizPath = formToolkit.createLabel(grpGraphviz, "dot.exe Path:", SWT.ALPHA);
+		lblGraphvizPath.setBounds(10, 52, 75, 15);
 		
-		Text txtEddy = formToolkit.createText(grpEddy, configs.get("eddy-path"), SWT.NONE);
-		txtEddy.setBounds(62, 23, 253, 21);
-		txtEddy.setEnabled(false);
+		Text txtGraphviz = formToolkit.createText(grpGraphviz, configs.get("graphviz-path"), SWT.NONE);
+		txtGraphviz.setBounds(91, 49, 224, 21);
+		txtGraphviz.setEnabled(false);
+		txtGraphviz.setText(DEF_GRAPHVIZ_PATH);
 		
-		Button btnBrowseEddy = new Button(grpEddy, SWT.NONE);
-		btnBrowseEddy.setBounds(321, 21, 75, 25);
-		formToolkit.adapt(btnBrowseEddy, true, true);
-		btnBrowseEddy.setText("Browse...");
-		btnBrowseEddy.addSelectionListener(new SelectionAdapter() {
+		Button btnBrowseGraphviz = new Button(grpGraphviz, SWT.NONE);
+		btnBrowseGraphviz.setBounds(321, 47, 75, 25);
+		formToolkit.adapt(btnBrowseGraphviz, true, true);
+		btnBrowseGraphviz.setText("Browse...");
+		btnBrowseGraphviz.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				FileDialog dialog = new FileDialog(shell, SWT.OPEN);
-				dialog.setFilterExtensions(new String[] { "*.jar" });
-				dialog.setText("Select the Eddy jar file to upload");
+				dialog.setFilterExtensions(new String[] { "*.exe" });
+				dialog.setText("Select the Graphviz dot.exe file to upload");
 				String path = dialog.open();
 				
 				if (path != null) {
-					txtEddy.setText(path);
+					txtGraphviz.setText(path);
+				}
+			}
+		});
+		
+		Button btnUseGraphviz = new Button(grpGraphviz, SWT.CHECK);
+		btnUseGraphviz.setBounds(10, 23, 93, 16);
+		formToolkit.adapt(btnUseGraphviz, true, true);
+		btnUseGraphviz.setText("Use Graphviz?");
+		btnUseGraphviz.setSelection(true);
+		btnUseGraphviz.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				if (btnUseGraphviz.getSelection()) {
+					btnBrowseGraphviz.setEnabled(true);
+				} else {
+					btnBrowseGraphviz.setEnabled(false);
 				}
 			}
 		});
@@ -184,7 +201,9 @@ public class ConfigurationWindow {
 				HashMap<String, String> configs = new HashMap<String, String>();
 				configs.put("word-path", txtWord.getText());
 				configs.put("excel-path", txtExcel.getText());
-				configs.put("eddy-path", txtEddy.getText());
+				String use = btnUseGraphviz.getSelection() ? "true": "false";
+				configs.put("use-graphviz", use);
+				configs.put("graphviz-path", txtGraphviz.getText());
 				saveConfigurations(configs);
 				shell.close();
 			}
@@ -229,11 +248,16 @@ public class ConfigurationWindow {
 				excelConfig.setAttribute("name", "excel-path");
 				excelConfig.setAttribute("value", DEF_EXCEL_PATH);
 				config.appendChild(excelConfig);
-				// Eddy Reasoner path
-				Element eddyConfig = doc.createElement("configuration");
-				eddyConfig.setAttribute("name", "eddy-path");
-				eddyConfig.setAttribute("value", DEF_EDDY_PATH);
-				config.appendChild(eddyConfig);
+				// Use Graphviz?
+				Element useGraphvizConfig = doc.createElement("configuration");
+				useGraphvizConfig.setAttribute("name", "use-graphviz");
+				useGraphvizConfig.setAttribute("value", "true");
+				config.appendChild(useGraphvizConfig);
+				// Graphviz path
+				Element graphvizConfig = doc.createElement("configuration");
+				graphvizConfig.setAttribute("name", "graphviz-path");
+				graphvizConfig.setAttribute("value", DEF_GRAPHVIZ_PATH);
+				config.appendChild(graphvizConfig);
 				
 				// Write the content into the config.xml file
 				TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -267,8 +291,8 @@ public class ConfigurationWindow {
 			configs.put("word-path", wordConfig.getAttribute("value"));
 			Element excelConfig = (Element) nodes.item(1);
 			configs.put("excel-path", excelConfig.getAttribute("value"));
-			Element eddyConfig = (Element) nodes.item(2);
-			configs.put("eddy-path", eddyConfig.getAttribute("value"));
+			Element graphvizConfig = (Element) nodes.item(2);
+			configs.put("graphviz-path", graphvizConfig.getAttribute("value"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -281,7 +305,7 @@ public class ConfigurationWindow {
 
 		if (!configs.get("word-path").equals(DEF_WORD_PATH)
 			|| !configs.get("excel-path").equals(DEF_EXCEL_PATH)
-			|| !configs.get("eddy-path").equals(DEF_EDDY_PATH)) {
+			|| !configs.get("graphviz-path").equals(DEF_GRAPHVIZ_PATH)) {
 			try {
 				DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
 				DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
@@ -302,9 +326,9 @@ public class ConfigurationWindow {
 					excelConfig.setAttribute("value", configs.get("excel-path"));
 				}
 				
-				if (!configs.get("eddy-path").equals(DEF_EDDY_PATH)) {
-					Element eddyConfig = (Element) nodes.item(2);
-					eddyConfig.setAttribute("value", configs.get("eddy-path"));
+				if (!configs.get("graphviz-path").equals(DEF_GRAPHVIZ_PATH)) {
+					Element graphvizConfig = (Element) nodes.item(2);
+					graphvizConfig.setAttribute("value", configs.get("graphviz-path"));
 				}
 				
 				// Write the content into the config.xml file

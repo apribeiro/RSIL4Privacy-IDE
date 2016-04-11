@@ -10,6 +10,9 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.TreeSet;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
@@ -39,6 +42,9 @@ import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.util.SimpleIRIMapper;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 import eddy.lang.Policy;
 import eddy.lang.analysis.Conflict;
@@ -200,7 +206,20 @@ public class CheckQualityHandler extends AbstractHandler {
 					//			osProperties.close();
 					//			ps2.close();
 
-					generateOwlPng(genPath, fileName);
+					File configFile = new File(pluginPath + "config.xml");
+					DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+					DocumentBuilder builder = factory.newDocumentBuilder();
+					Document doc = builder.parse(configFile);
+					doc.getDocumentElement().normalize();
+					NodeList configs = doc.getElementsByTagName("configuration");
+					Element useEl = (Element) configs.item(2);
+
+					// Check if OWLViz should be called
+					if (useEl.getAttribute("value").equals("true")) {
+						Element graphvizEl = (Element) configs.item(3);
+						generateOwlPng(genPath, fileName,
+								graphvizEl.getAttribute("value"));
+					}
 
 					IFile logFile = srcGenFolder.getFile(fileName + ".log");
 					InputStream source = new StringInputStream(logger.toString());
@@ -238,7 +257,8 @@ public class CheckQualityHandler extends AbstractHandler {
 		job.schedule();
 	}
 	
-	private void generateOwlPng(String genPath, String fileName) throws Exception {
+	private void generateOwlPng(String genPath, String fileName, String graphvizPath)
+			throws Exception {
 		FileInputStream is = new FileInputStream(genPath + fileName + ".owl"); 
 		OWLModel model = ProtegeOWL.createJenaOWLModelFromInputStream(is);
 		
@@ -258,7 +278,8 @@ public class CheckQualityHandler extends AbstractHandler {
 		controller.getGraphView().setPreferredSize(new Dimension(400, 400));
 
 		DotLayoutEngineProperties properties = DotLayoutEngineProperties.getInstance();
-		properties.setDotProcessPath("C:/Program Files (x86)/Graphviz2.24/bin/dot.exe");
+		// Default "C:/Program Files (x86)/Graphviz2.24/bin/dot.exe"
+		properties.setDotProcessPath(graphvizPath);
 		controller.getGraphView().revalidateGraph();
 
 		String path = genPath + fileName + ".png";
