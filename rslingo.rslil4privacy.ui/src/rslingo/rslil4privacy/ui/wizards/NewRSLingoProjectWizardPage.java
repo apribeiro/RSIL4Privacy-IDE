@@ -11,7 +11,7 @@ import org.eclipse.ui.dialogs.WizardNewProjectCreationPage;
 public class NewRSLingoProjectWizardPage extends WizardNewProjectCreationPage {
 	
 	public static final String SINGLE = "Single File";
-	public static final String MAIN = "Main File";
+	public static final String MULTIPLE = "Multiple Files";
 	
 	private Combo comboMode;
 
@@ -36,7 +36,7 @@ public class NewRSLingoProjectWizardPage extends WizardNewProjectCreationPage {
 		
 		comboMode = new Combo(projectGroup, SWT.BORDER | SWT.SINGLE | SWT.READ_ONLY);
 		comboMode.setLayoutData(new GridData(SWT.NONE));
-		comboMode.setItems(new String[] { SINGLE, MAIN });
+		comboMode.setItems(new String[] { SINGLE, MULTIPLE });
 		comboMode.select(0);
 	}
 	
