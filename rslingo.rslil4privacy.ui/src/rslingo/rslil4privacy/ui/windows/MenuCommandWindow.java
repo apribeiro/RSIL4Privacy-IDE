@@ -1,7 +1,8 @@
 package rslingo.rslil4privacy.ui.windows;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
@@ -109,9 +110,14 @@ public class MenuCommandWindow {
 		formToolkit.paintBordersFor(table_1);
 		
 		IWorkspaceRoot workspace = ResourcesPlugin.getWorkspace().getRoot();
-		ArrayList<IProject> projects = new ArrayList<IProject>(
-				Arrays.asList(workspace.getProjects()));
-		//TODO: Order projects alphabetically
+		ArrayList<IProject> projects = new ArrayList<IProject>();
+		
+		for (IProject p : workspace.getProjects()) {
+			if (p.isOpen()) {
+				projects.add(p);
+			}
+		}
+		Collections.sort(projects, new ProjectComparator());
 		
 		for (IProject project : projects) {
 			TableItem item = new TableItem(table_1, SWT.NONE);
@@ -128,18 +134,14 @@ public class MenuCommandWindow {
 					if (btnRadioButtonAll.getSelection()) {				
 						if (importMode) {
 							for (IProject project : projects) {
-								if (project.isOpen()) {
-									menuCommand.execute(project, null);
-								}
+								menuCommand.execute(project, null);
 							}
 						} else {
 							for (IProject project : projects) {
-								if (project.isOpen()) {
-									ArrayList<IFile> files = findFilesByExtension(project);
+								ArrayList<IFile> files = findFilesByExtension(project);
 									
-									for (IFile file : files) {
-										menuCommand.execute(project, file);
-									}
+								for (IFile file : files) {
+									menuCommand.execute(project, file);
 								}
 							}
 						}
@@ -147,16 +149,14 @@ public class MenuCommandWindow {
 						for (TableItem item : table_1.getItems()) {
 							if (item.getChecked()) {
 								IProject project = workspace.getProject(item.getText());
-								
-								if (project.isOpen()) {
-									if (importMode) {
-										menuCommand.execute(project, null);
-									} else {
-										ArrayList<IFile> files = findFilesByExtension(project);
-										
-										for (IFile file : files) {
-											menuCommand.execute(project, file);
-										}
+									
+								if (importMode) {
+									menuCommand.execute(project, null);
+								} else {
+									ArrayList<IFile> files = findFilesByExtension(project);
+									
+									for (IFile file : files) {
+										menuCommand.execute(project, file);
 									}
 								}
 							}
@@ -206,5 +206,12 @@ public class MenuCommandWindow {
 			e.printStackTrace();
 		}
 		return files;
+	}
+	
+	class ProjectComparator implements Comparator<IProject> {
+		@Override
+		public int compare(IProject p1, IProject p2) {
+			return p1.getName().compareTo(p2.getName());
+		}
 	}
 }
