@@ -291,7 +291,9 @@ public class ConfigurationWindow {
 			configs.put("word-path", wordConfig.getAttribute("value"));
 			Element excelConfig = (Element) nodes.item(1);
 			configs.put("excel-path", excelConfig.getAttribute("value"));
-			Element graphvizConfig = (Element) nodes.item(2);
+			Element useGraphvizConfig = (Element) nodes.item(2);
+			configs.put("use-graphviz", useGraphvizConfig.getAttribute("value"));
+			Element graphvizConfig = (Element) nodes.item(3);
 			configs.put("graphviz-path", graphvizConfig.getAttribute("value"));
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -305,6 +307,7 @@ public class ConfigurationWindow {
 
 		if (!configs.get("word-path").equals(DEF_WORD_PATH)
 			|| !configs.get("excel-path").equals(DEF_EXCEL_PATH)
+			|| !configs.get("use-graphviz").equals("true")
 			|| !configs.get("graphviz-path").equals(DEF_GRAPHVIZ_PATH)) {
 			try {
 				DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
@@ -326,8 +329,13 @@ public class ConfigurationWindow {
 					excelConfig.setAttribute("value", configs.get("excel-path"));
 				}
 				
-				if (!configs.get("graphviz-path").equals(DEF_GRAPHVIZ_PATH)) {
+				if (!configs.get("use-graphviz").equals("true")) {
 					Element graphvizConfig = (Element) nodes.item(2);
+					graphvizConfig.setAttribute("value", configs.get("use-graphviz"));
+				}
+				
+				if (!configs.get("graphviz-path").equals(DEF_GRAPHVIZ_PATH)) {
+					Element graphvizConfig = (Element) nodes.item(3);
 					graphvizConfig.setAttribute("value", configs.get("graphviz-path"));
 				}
 				
