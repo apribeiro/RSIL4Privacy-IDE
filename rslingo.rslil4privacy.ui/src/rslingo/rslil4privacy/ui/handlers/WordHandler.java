@@ -289,6 +289,15 @@ public class WordHandler extends AbstractHandler {
 					} else {
 						servicesMap.get(subService).add(service);
 					}
+					
+					for (Service refService : sub.getRefs()) {
+						if (!servicesMap.containsKey(refService)) {
+							servicesMap.put(refService, new ArrayList<Service>());
+							servicesMap.get(refService).add(service);
+						} else {
+							servicesMap.get(refService).add(service);
+						}
+					}
 				}
 			} else {
 				if (!servicesMap.containsKey(service)) {
@@ -298,7 +307,6 @@ public class WordHandler extends AbstractHandler {
 		}
 			
 		for (Service service : servicesMap.keySet()) {
-			
 			XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@SEnd");
 			// Get the position of the paragraph after the end tag
 			int endPos = document.getParagraphPos(document.getPosOfParagraph(tEnd)) + 1;
@@ -395,6 +403,15 @@ public class WordHandler extends AbstractHandler {
 						recipientsMap.get(subRecipient).add(recipient);
 					} else {
 						recipientsMap.get(subRecipient).add(recipient);
+					}
+					
+					for (Recipient refRecipient : sub.getRefs()) {
+						if (!recipientsMap.containsKey(refRecipient)) {
+							recipientsMap.put(refRecipient, new ArrayList<Recipient>());
+							recipientsMap.get(refRecipient).add(recipient);
+						} else {
+							recipientsMap.get(refRecipient).add(recipient);
+						}
 					}
 				}
 			} else {
@@ -598,6 +615,16 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getDescription()
 							+ " (" + data.getName() + ")");
 					last = nStPDName;
+					
+					for (PrivateData refMulData : refPD.getRefs()) {
+						tStPDName = DocumentHelper.getParagraph(document, "@StPDName");
+						cursor = tEnd.getCTP().newCursor();
+						nStPDName = document.insertNewParagraph(cursor);
+						DocumentHelper.cloneParagraph(nStPDName, tStPDName);
+						DocumentHelper.replaceText(nStPDName, "@StPDName", refMulData.getDescription()
+								+ " (" + refMulData.getName() + ")");
+						last = nStPDName;
+					}
 				}
 			}
 			
@@ -621,6 +648,16 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.replaceText(nStSName, "@StSName", service.getServiceName()
 							+ " (" + service.getName() + ")");
 					last = nStSName;
+					
+					for (Service refMulService : refService.getRefs()) {
+						tStSName = DocumentHelper.getParagraph(document, "@StSName");
+						cursor = tEnd.getCTP().newCursor();
+						nStSName = document.insertNewParagraph(cursor);
+						DocumentHelper.cloneParagraph(nStSName, tStSName);
+						DocumentHelper.replaceText(nStSName, "@StSName", refMulService.getServiceName()
+								+ " (" + refMulService.getName() + ")");
+						last = nStSName;
+					}
 				}
 			}
 			
@@ -644,6 +681,16 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.replaceText(nStEName, "@StEName", enforcement.getEnforcementName()
 							+ " (" + enforcement.getName() + ")");
 					last = nStEName;
+					
+					for (Enforcement refMulEnf : refEnf.getRefs()) {
+						tStEName = DocumentHelper.getParagraph(document, "@StEName");
+						cursor = tEnd.getCTP().newCursor();
+						nStEName = document.insertNewParagraph(cursor);
+						DocumentHelper.cloneParagraph(nStEName, tStEName);
+						DocumentHelper.replaceText(nStEName, "@StEName", refMulEnf.getEnforcementName()
+								+ " (" + refMulEnf.getName() + ")");
+						last = nStEName;
+					}
 				}
 			}
 			
@@ -705,6 +752,16 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getDescription()
 							+ " (" + data.getName() + ")");
 					last = nStPDName;
+					
+					for (PrivateData refMulData : refPD.getRefs()) {
+						tStPDName = DocumentHelper.getParagraph(document, "@StPDName");
+						cursor = tEnd.getCTP().newCursor();
+						nStPDName = document.insertNewParagraph(cursor);
+						DocumentHelper.cloneParagraph(nStPDName, tStPDName);
+						DocumentHelper.replaceText(nStPDName, "@StPDName", refMulData.getDescription()
+								+ " (" + refMulData.getName() + ")");
+						last = nStPDName;
+					}
 				}
 			}
 			
@@ -728,6 +785,16 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.replaceText(nStSName, "@StSName", service.getServiceName()
 							+ " (" + service.getName() + ")");
 					last = nStSName;
+					
+					for (Service refMulService : refService.getRefs()) {
+						tStSName = DocumentHelper.getParagraph(document, "@StSName");
+						cursor = tEnd.getCTP().newCursor();
+						nStSName = document.insertNewParagraph(cursor);
+						DocumentHelper.cloneParagraph(nStSName, tStSName);
+						DocumentHelper.replaceText(nStSName, "@StSName", refMulService.getServiceName()
+								+ " (" + refMulService.getName() + ")");
+						last = nStSName;
+					}
 				}
 			}
 			
@@ -751,6 +818,16 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.replaceText(nStEName, "@StEName", enforcement.getEnforcementName()
 							+ " (" + enforcement.getName() + ")");
 					last = nStEName;
+					
+					for (Enforcement refMulEnf : refEnf.getRefs()) {
+						tStEName = DocumentHelper.getParagraph(document, "@StEName");
+						cursor = tEnd.getCTP().newCursor();
+						nStEName = document.insertNewParagraph(cursor);
+						DocumentHelper.cloneParagraph(nStEName, tStEName);
+						DocumentHelper.replaceText(nStEName, "@StEName", refMulEnf.getEnforcementName()
+								+ " (" + refMulEnf.getName() + ")");
+						last = nStEName;
+					}
 				}
 			}
 			
@@ -809,6 +886,15 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.cloneParagraph(nStPDName, tStPDName);
 					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getDescription()
 							+ " (" + data.getName() + ")");
+					
+					for (PrivateData refMulData : refPD.getRefs()) {
+						tStPDName = DocumentHelper.getParagraph(document, "@StPDName");
+						cursor = tEnd.getCTP().newCursor();
+						nStPDName = document.insertNewParagraph(cursor);
+						DocumentHelper.cloneParagraph(nStPDName, tStPDName);
+						DocumentHelper.replaceText(nStPDName, "@StPDName", refMulData.getDescription()
+								+ " (" + refMulData.getName() + ")");
+					}
 				}
 			}
 			
@@ -831,6 +917,15 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.cloneParagraph(nStSName, tStSName);
 					DocumentHelper.replaceText(nStSName, "@StSName", service.getServiceName()
 							+ " (" + service.getName() + ")");
+					
+					for (Service refMulService : refService.getRefs()) {
+						tStSName = DocumentHelper.getParagraph(document, "@StSName");
+						cursor = tEnd.getCTP().newCursor();
+						nStSName = document.insertNewParagraph(cursor);
+						DocumentHelper.cloneParagraph(nStSName, tStSName);
+						DocumentHelper.replaceText(nStSName, "@StSName", refMulService.getServiceName()
+								+ " (" + refMulService.getName() + ")");
+					}
 				}
 			}
 			
@@ -853,6 +948,15 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.cloneParagraph(nStEName, tStEName);
 					DocumentHelper.replaceText(nStEName, "@StEName", enforcement.getEnforcementName()
 							+ " (" + enforcement.getName() + ")");
+					
+					for (Enforcement refMulEnf : refEnf.getRefs()) {
+						tStEName = DocumentHelper.getParagraph(document, "@StEName");
+						cursor = tEnd.getCTP().newCursor();
+						nStEName = document.insertNewParagraph(cursor);
+						DocumentHelper.cloneParagraph(nStEName, tStEName);
+						DocumentHelper.replaceText(nStEName, "@StEName", refMulEnf.getEnforcementName()
+								+ " (" + refMulEnf.getName() + ")");
+					}
 				}
 			}
 			
@@ -920,6 +1024,16 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getDescription()
 							+ " (" + data.getName() + ")");
 					last = nStPDName;
+					
+					for (PrivateData refMulData : refPD.getRefs()) {
+						tStPDName = DocumentHelper.getParagraph(document, "@StPDName");
+						cursor = tEnd.getCTP().newCursor();
+						nStPDName = document.insertNewParagraph(cursor);
+						DocumentHelper.cloneParagraph(nStPDName, tStPDName);
+						DocumentHelper.replaceText(nStPDName, "@StPDName", refMulData.getDescription()
+								+ " (" + refMulData.getName() + ")");
+						last = nStPDName;
+					}
 				}
 			}
 			
@@ -943,6 +1057,16 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.replaceText(nStRName, "@StRName", recipient.getRecipientName()
 							+ " (" + recipient.getName() + ")");
 					last = nStRName;
+					
+					for (Recipient refMulRec : refRec.getRefs()) {
+						tStRName = DocumentHelper.getParagraph(document, "@StRName");
+						cursor = tEnd.getCTP().newCursor();
+						nStRName = document.insertNewParagraph(cursor);
+						DocumentHelper.cloneParagraph(nStRName, tStRName);
+						DocumentHelper.replaceText(nStRName, "@StRName", refMulRec.getRecipientName()
+								+ " (" + refMulRec.getName() + ")");
+						last = nStRName;
+					}
 				}
 			}
 			
@@ -966,6 +1090,16 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.replaceText(nStSName, "@StSName", service.getServiceName()
 							+ " (" + service.getName() + ")");
 					last = nStSName;
+					
+					for (Service refMulService : refService.getRefs()) {
+						tStSName = DocumentHelper.getParagraph(document, "@StSName");
+						cursor = tEnd.getCTP().newCursor();
+						nStSName = document.insertNewParagraph(cursor);
+						DocumentHelper.cloneParagraph(nStSName, tStSName);
+						DocumentHelper.replaceText(nStSName, "@StSName", refMulService.getServiceName()
+								+ " (" + refMulService.getName() + ")");
+						last = nStSName;
+					}
 				}
 			}
 			
@@ -989,6 +1123,16 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.replaceText(nStEName, "@StEName", enforcement.getEnforcementName()
 							+ " (" + enforcement.getName() + ")");
 					last = nStEName;
+					
+					for (Enforcement refMulEnf : refEnf.getRefs()) {
+						tStEName = DocumentHelper.getParagraph(document, "@StEName");
+						cursor = tEnd.getCTP().newCursor();
+						nStEName = document.insertNewParagraph(cursor);
+						DocumentHelper.cloneParagraph(nStEName, tStEName);
+						DocumentHelper.replaceText(nStEName, "@StEName", refMulEnf.getEnforcementName()
+								+ " (" + refMulEnf.getName() + ")");
+						last = nStEName;
+					}
 				}
 			}
 			
@@ -1050,6 +1194,16 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.replaceText(nStPDName, "@StPDName", data.getDescription()
 							+ " (" + data.getName() + ")");
 					last = nStPDName;
+					
+					for (PrivateData refMulData : refPD.getRefs()) {
+						tStPDName = DocumentHelper.getParagraph(document, "@StPDName");
+						cursor = tEnd.getCTP().newCursor();
+						nStPDName = document.insertNewParagraph(cursor);
+						DocumentHelper.cloneParagraph(nStPDName, tStPDName);
+						DocumentHelper.replaceText(nStPDName, "@StPDName", refMulData.getDescription()
+								+ " (" + refMulData.getName() + ")");
+						last = nStPDName;
+					}
 				}
 			}
 			
@@ -1073,6 +1227,16 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.replaceText(nStSName, "@StSName", service.getServiceName()
 							+ " (" + service.getName() + ")");
 					last = nStSName;
+					
+					for (Service refMulService : refService.getRefs()) {
+						tStSName = DocumentHelper.getParagraph(document, "@StSName");
+						cursor = tEnd.getCTP().newCursor();
+						nStSName = document.insertNewParagraph(cursor);
+						DocumentHelper.cloneParagraph(nStSName, tStSName);
+						DocumentHelper.replaceText(nStSName, "@StSName", refMulService.getServiceName()
+								+ " (" + refMulService.getName() + ")");
+						last = nStSName;
+					}
 				}
 			}
 			
@@ -1096,6 +1260,16 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.replaceText(nStEName, "@StEName", enforcement.getEnforcementName()
 							+ " (" + enforcement.getName() + ")");
 					last = nStEName;
+					
+					for (Enforcement refMulEnf : refEnf.getRefs()) {
+						tStEName = DocumentHelper.getParagraph(document, "@StEName");
+						cursor = tEnd.getCTP().newCursor();
+						nStEName = document.insertNewParagraph(cursor);
+						DocumentHelper.cloneParagraph(nStEName, tStEName);
+						DocumentHelper.replaceText(nStEName, "@StEName", refMulEnf.getEnforcementName()
+								+ " (" + refMulEnf.getName() + ")");
+						last = nStEName;
+					}
 				}
 			}
 			
