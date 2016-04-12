@@ -2,13 +2,19 @@
  */
 package rslingo.rslil4privacy.rSLIL4Privacy.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import rslingo.rslil4privacy.rSLIL4Privacy.Enforcement;
 import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
@@ -23,6 +29,7 @@ import rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement;
  * </p>
  * <ul>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefEnforcementImpl#getRefEnforcement <em>Ref Enforcement</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefEnforcementImpl#getRefs <em>Refs</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +45,16 @@ public class RefEnforcementImpl extends MinimalEObjectImpl.Container implements 
    * @ordered
    */
   protected Enforcement refEnforcement;
+
+  /**
+   * The cached value of the '{@link #getRefs() <em>Refs</em>}' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefs()
+   * @generated
+   * @ordered
+   */
+  protected EList<Enforcement> refs;
 
   /**
    * <!-- begin-user-doc -->
@@ -108,6 +125,20 @@ public class RefEnforcementImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Enforcement> getRefs()
+  {
+    if (refs == null)
+    {
+      refs = new EObjectResolvingEList<Enforcement>(Enforcement.class, this, RSLIL4PrivacyPackage.REF_ENFORCEMENT__REFS);
+    }
+    return refs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -116,6 +147,8 @@ public class RefEnforcementImpl extends MinimalEObjectImpl.Container implements 
       case RSLIL4PrivacyPackage.REF_ENFORCEMENT__REF_ENFORCEMENT:
         if (resolve) return getRefEnforcement();
         return basicGetRefEnforcement();
+      case RSLIL4PrivacyPackage.REF_ENFORCEMENT__REFS:
+        return getRefs();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -125,6 +158,7 @@ public class RefEnforcementImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -132,6 +166,10 @@ public class RefEnforcementImpl extends MinimalEObjectImpl.Container implements 
     {
       case RSLIL4PrivacyPackage.REF_ENFORCEMENT__REF_ENFORCEMENT:
         setRefEnforcement((Enforcement)newValue);
+        return;
+      case RSLIL4PrivacyPackage.REF_ENFORCEMENT__REFS:
+        getRefs().clear();
+        getRefs().addAll((Collection<? extends Enforcement>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -150,6 +188,9 @@ public class RefEnforcementImpl extends MinimalEObjectImpl.Container implements 
       case RSLIL4PrivacyPackage.REF_ENFORCEMENT__REF_ENFORCEMENT:
         setRefEnforcement((Enforcement)null);
         return;
+      case RSLIL4PrivacyPackage.REF_ENFORCEMENT__REFS:
+        getRefs().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -166,6 +207,8 @@ public class RefEnforcementImpl extends MinimalEObjectImpl.Container implements 
     {
       case RSLIL4PrivacyPackage.REF_ENFORCEMENT__REF_ENFORCEMENT:
         return refEnforcement != null;
+      case RSLIL4PrivacyPackage.REF_ENFORCEMENT__REFS:
+        return refs != null && !refs.isEmpty();
     }
     return super.eIsSet(featureID);
   }

@@ -1640,10 +1640,10 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10992:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10992:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11632:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11632:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10992:11: ( '^' )?
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11632:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -1652,7 +1652,7 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10992:11: '^'
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11632:11: '^'
                     {
                     match('^'); 
 
@@ -1670,7 +1670,7 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10992:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11632:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -1719,10 +1719,10 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10994:10: ( ( '0' .. '9' )+ )
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10994:12: ( '0' .. '9' )+
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11634:10: ( ( '0' .. '9' )+ )
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11634:12: ( '0' .. '9' )+
             {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10994:12: ( '0' .. '9' )+
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11634:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -1736,7 +1736,7 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10994:13: '0' .. '9'
+            	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11634:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1768,10 +1768,10 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10996:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10996:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11636:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11636:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10996:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11636:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1789,10 +1789,10 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10996:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11636:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10996:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11636:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -1808,7 +1808,7 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10996:21: '\\\\' .
+                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11636:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1816,7 +1816,7 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10996:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11636:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1841,10 +1841,10 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10996:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11636:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10996:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11636:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1860,7 +1860,7 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10996:54: '\\\\' .
+                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11636:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1868,7 +1868,7 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10996:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11636:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1911,12 +1911,12 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10998:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10998:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11638:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11638:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10998:24: ( options {greedy=false; } : . )*
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11638:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1941,7 +1941,7 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10998:52: .
+            	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11638:52: .
             	    {
             	    matchAny(); 
 
@@ -1971,12 +1971,12 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11000:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11000:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11640:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11640:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11000:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11640:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1989,7 +1989,7 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11000:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11640:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2009,7 +2009,7 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
                 }
             } while (true);
 
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11000:40: ( ( '\\r' )? '\\n' )?
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11640:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -2018,9 +2018,9 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11000:41: ( '\\r' )? '\\n'
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11640:41: ( '\\r' )? '\\n'
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11000:41: ( '\\r' )?
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11640:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -2029,7 +2029,7 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11000:41: '\\r'
+                            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11640:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2061,10 +2061,10 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11002:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11002:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11642:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11642:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11002:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11642:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -2118,8 +2118,8 @@ public class InternalRSLIL4PrivacyLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11004:16: ( . )
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11004:18: .
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11644:16: ( . )
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11644:18: .
             {
             matchAny(); 
 

@@ -2,13 +2,19 @@
  */
 package rslingo.rslil4privacy.rSLIL4Privacy.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
 import rslingo.rslil4privacy.rSLIL4Privacy.Service;
@@ -23,6 +29,7 @@ import rslingo.rslil4privacy.rSLIL4Privacy.ServicePart;
  * </p>
  * <ul>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServicePartImpl#getServicePart <em>Service Part</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServicePartImpl#getRefs <em>Refs</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +45,16 @@ public class ServicePartImpl extends MinimalEObjectImpl.Container implements Ser
    * @ordered
    */
   protected Service servicePart;
+
+  /**
+   * The cached value of the '{@link #getRefs() <em>Refs</em>}' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefs()
+   * @generated
+   * @ordered
+   */
+  protected EList<Service> refs;
 
   /**
    * <!-- begin-user-doc -->
@@ -108,6 +125,20 @@ public class ServicePartImpl extends MinimalEObjectImpl.Container implements Ser
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Service> getRefs()
+  {
+    if (refs == null)
+    {
+      refs = new EObjectResolvingEList<Service>(Service.class, this, RSLIL4PrivacyPackage.SERVICE_PART__REFS);
+    }
+    return refs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -116,6 +147,8 @@ public class ServicePartImpl extends MinimalEObjectImpl.Container implements Ser
       case RSLIL4PrivacyPackage.SERVICE_PART__SERVICE_PART:
         if (resolve) return getServicePart();
         return basicGetServicePart();
+      case RSLIL4PrivacyPackage.SERVICE_PART__REFS:
+        return getRefs();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -125,6 +158,7 @@ public class ServicePartImpl extends MinimalEObjectImpl.Container implements Ser
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -132,6 +166,10 @@ public class ServicePartImpl extends MinimalEObjectImpl.Container implements Ser
     {
       case RSLIL4PrivacyPackage.SERVICE_PART__SERVICE_PART:
         setServicePart((Service)newValue);
+        return;
+      case RSLIL4PrivacyPackage.SERVICE_PART__REFS:
+        getRefs().clear();
+        getRefs().addAll((Collection<? extends Service>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -150,6 +188,9 @@ public class ServicePartImpl extends MinimalEObjectImpl.Container implements Ser
       case RSLIL4PrivacyPackage.SERVICE_PART__SERVICE_PART:
         setServicePart((Service)null);
         return;
+      case RSLIL4PrivacyPackage.SERVICE_PART__REFS:
+        getRefs().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -166,6 +207,8 @@ public class ServicePartImpl extends MinimalEObjectImpl.Container implements Ser
     {
       case RSLIL4PrivacyPackage.SERVICE_PART__SERVICE_PART:
         return servicePart != null;
+      case RSLIL4PrivacyPackage.SERVICE_PART__REFS:
+        return refs != null && !refs.isEmpty();
     }
     return super.eIsSet(featureID);
   }

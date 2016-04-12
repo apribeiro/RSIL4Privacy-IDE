@@ -1512,6 +1512,16 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getRecipientPart_Refs()
+  {
+    return (EReference)recipientPartEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getRefRecipient()
   {
     return refRecipientEClass;
@@ -1525,6 +1535,16 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
   public EReference getRefRecipient_RefRecipient()
   {
     return (EReference)refRecipientEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRefRecipient_Refs()
+  {
+    return (EReference)refRecipientEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1552,6 +1572,16 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getRefRecipientSource_Refs()
+  {
+    return (EReference)refRecipientSourceEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getRefRecipientTarget()
   {
     return refRecipientTargetEClass;
@@ -1565,6 +1595,16 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
   public EReference getRefRecipientTarget_RefRecipientTarget()
   {
     return (EReference)refRecipientTargetEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRefRecipientTarget_Refs()
+  {
+    return (EReference)refRecipientTargetEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1592,6 +1632,16 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getRefService_Refs()
+  {
+    return (EReference)refServiceEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getServicePart()
   {
     return servicePartEClass;
@@ -1605,6 +1655,16 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
   public EReference getServicePart_ServicePart()
   {
     return (EReference)servicePartEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getServicePart_Refs()
+  {
+    return (EReference)servicePartEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1632,6 +1692,16 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getRefPrivateData_Refs()
+  {
+    return (EReference)refPrivateDataEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getRefEnforcement()
   {
     return refEnforcementEClass;
@@ -1645,6 +1715,16 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
   public EReference getRefEnforcement_RefEnforcement()
   {
     return (EReference)refEnforcementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRefEnforcement_Refs()
+  {
+    return (EReference)refEnforcementEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1816,27 +1896,35 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
 
     recipientPartEClass = createEClass(RECIPIENT_PART);
     createEReference(recipientPartEClass, RECIPIENT_PART__RECIPIENT_PART);
+    createEReference(recipientPartEClass, RECIPIENT_PART__REFS);
 
     refRecipientEClass = createEClass(REF_RECIPIENT);
     createEReference(refRecipientEClass, REF_RECIPIENT__REF_RECIPIENT);
+    createEReference(refRecipientEClass, REF_RECIPIENT__REFS);
 
     refRecipientSourceEClass = createEClass(REF_RECIPIENT_SOURCE);
     createEReference(refRecipientSourceEClass, REF_RECIPIENT_SOURCE__REF_RECIPIENT_SOURCE);
+    createEReference(refRecipientSourceEClass, REF_RECIPIENT_SOURCE__REFS);
 
     refRecipientTargetEClass = createEClass(REF_RECIPIENT_TARGET);
     createEReference(refRecipientTargetEClass, REF_RECIPIENT_TARGET__REF_RECIPIENT_TARGET);
+    createEReference(refRecipientTargetEClass, REF_RECIPIENT_TARGET__REFS);
 
     refServiceEClass = createEClass(REF_SERVICE);
     createEReference(refServiceEClass, REF_SERVICE__REF_SERVICE);
+    createEReference(refServiceEClass, REF_SERVICE__REFS);
 
     servicePartEClass = createEClass(SERVICE_PART);
     createEReference(servicePartEClass, SERVICE_PART__SERVICE_PART);
+    createEReference(servicePartEClass, SERVICE_PART__REFS);
 
     refPrivateDataEClass = createEClass(REF_PRIVATE_DATA);
     createEReference(refPrivateDataEClass, REF_PRIVATE_DATA__REF_PRIVATE_DATA);
+    createEReference(refPrivateDataEClass, REF_PRIVATE_DATA__REFS);
 
     refEnforcementEClass = createEClass(REF_ENFORCEMENT);
     createEReference(refEnforcementEClass, REF_ENFORCEMENT__REF_ENFORCEMENT);
+    createEReference(refEnforcementEClass, REF_ENFORCEMENT__REFS);
   }
 
   /**
@@ -2009,27 +2097,35 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
 
     initEClass(recipientPartEClass, RecipientPart.class, "RecipientPart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRecipientPart_RecipientPart(), this.getRecipient(), null, "recipientPart", null, 0, 1, RecipientPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRecipientPart_Refs(), this.getRecipient(), null, "refs", null, 0, -1, RecipientPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(refRecipientEClass, RefRecipient.class, "RefRecipient", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRefRecipient_RefRecipient(), this.getRecipient(), null, "refRecipient", null, 0, 1, RefRecipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRefRecipient_Refs(), this.getRecipient(), null, "refs", null, 0, -1, RefRecipient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(refRecipientSourceEClass, RefRecipientSource.class, "RefRecipientSource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRefRecipientSource_RefRecipientSource(), this.getRecipient(), null, "refRecipientSource", null, 0, 1, RefRecipientSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRefRecipientSource_Refs(), this.getRecipient(), null, "refs", null, 0, -1, RefRecipientSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(refRecipientTargetEClass, RefRecipientTarget.class, "RefRecipientTarget", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRefRecipientTarget_RefRecipientTarget(), this.getRecipient(), null, "refRecipientTarget", null, 0, 1, RefRecipientTarget.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRefRecipientTarget_Refs(), this.getRecipient(), null, "refs", null, 0, -1, RefRecipientTarget.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(refServiceEClass, RefService.class, "RefService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRefService_RefService(), this.getService(), null, "refService", null, 0, 1, RefService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRefService_Refs(), this.getService(), null, "refs", null, 0, -1, RefService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(servicePartEClass, ServicePart.class, "ServicePart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getServicePart_ServicePart(), this.getService(), null, "servicePart", null, 0, 1, ServicePart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getServicePart_Refs(), this.getService(), null, "refs", null, 0, -1, ServicePart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(refPrivateDataEClass, RefPrivateData.class, "RefPrivateData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRefPrivateData_RefPrivateData(), this.getPrivateData(), null, "refPrivateData", null, 0, 1, RefPrivateData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRefPrivateData_Refs(), this.getPrivateData(), null, "refs", null, 0, -1, RefPrivateData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(refEnforcementEClass, RefEnforcement.class, "RefEnforcement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRefEnforcement_RefEnforcement(), this.getEnforcement(), null, "refEnforcement", null, 0, 1, RefEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRefEnforcement_Refs(), this.getEnforcement(), null, "refs", null, 0, -1, RefEnforcement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

@@ -1918,13 +1918,17 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRecipientPartAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final CrossReference cRecipientPartRecipientCrossReference_0_0 = (CrossReference)cRecipientPartAssignment_0.eContents().get(0);
 		private final RuleCall cRecipientPartRecipientIDTerminalRuleCall_0_0_1 = (RuleCall)cRecipientPartRecipientCrossReference_0_0.eContents().get(1);
-		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cRefsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final CrossReference cRefsRecipientCrossReference_1_1_0 = (CrossReference)cRefsAssignment_1_1.eContents().get(0);
+		private final RuleCall cRefsRecipientIDTerminalRuleCall_1_1_0_1 = (RuleCall)cRefsRecipientCrossReference_1_1_0.eContents().get(1);
 		
 		//RecipientPart:
-		//	recipientPart=[Recipient] ","?;
+		//	recipientPart=[Recipient] ("," refs+=[Recipient])*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//recipientPart=[Recipient] ","?
+		//recipientPart=[Recipient] ("," refs+=[Recipient])*
 		public Group getGroup() { return cGroup; }
 
 		//recipientPart=[Recipient]
@@ -1936,8 +1940,20 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getRecipientPartRecipientIDTerminalRuleCall_0_0_1() { return cRecipientPartRecipientIDTerminalRuleCall_0_0_1; }
 
-		//","?
-		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
+		//("," refs+=[Recipient])*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//","
+		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
+
+		//refs+=[Recipient]
+		public Assignment getRefsAssignment_1_1() { return cRefsAssignment_1_1; }
+
+		//[Recipient]
+		public CrossReference getRefsRecipientCrossReference_1_1_0() { return cRefsRecipientCrossReference_1_1_0; }
+
+		//ID
+		public RuleCall getRefsRecipientIDTerminalRuleCall_1_1_0_1() { return cRefsRecipientIDTerminalRuleCall_1_1_0_1; }
 	}
 
 	public class RefRecipientElements extends AbstractParserRuleElementFinder {
@@ -1946,13 +1962,17 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRefRecipientAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final CrossReference cRefRecipientRecipientCrossReference_0_0 = (CrossReference)cRefRecipientAssignment_0.eContents().get(0);
 		private final RuleCall cRefRecipientRecipientIDTerminalRuleCall_0_0_1 = (RuleCall)cRefRecipientRecipientCrossReference_0_0.eContents().get(1);
-		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cRefsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final CrossReference cRefsRecipientCrossReference_1_1_0 = (CrossReference)cRefsAssignment_1_1.eContents().get(0);
+		private final RuleCall cRefsRecipientIDTerminalRuleCall_1_1_0_1 = (RuleCall)cRefsRecipientCrossReference_1_1_0.eContents().get(1);
 		
 		//RefRecipient:
-		//	refRecipient=[Recipient] ","?;
+		//	refRecipient=[Recipient] ("," refs+=[Recipient])*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//refRecipient=[Recipient] ","?
+		//refRecipient=[Recipient] ("," refs+=[Recipient])*
 		public Group getGroup() { return cGroup; }
 
 		//refRecipient=[Recipient]
@@ -1964,8 +1984,20 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getRefRecipientRecipientIDTerminalRuleCall_0_0_1() { return cRefRecipientRecipientIDTerminalRuleCall_0_0_1; }
 
-		//","?
-		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
+		//("," refs+=[Recipient])*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//","
+		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
+
+		//refs+=[Recipient]
+		public Assignment getRefsAssignment_1_1() { return cRefsAssignment_1_1; }
+
+		//[Recipient]
+		public CrossReference getRefsRecipientCrossReference_1_1_0() { return cRefsRecipientCrossReference_1_1_0; }
+
+		//ID
+		public RuleCall getRefsRecipientIDTerminalRuleCall_1_1_0_1() { return cRefsRecipientIDTerminalRuleCall_1_1_0_1; }
 	}
 
 	public class RefRecipientSourceElements extends AbstractParserRuleElementFinder {
@@ -1974,13 +2006,17 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRefRecipientSourceAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final CrossReference cRefRecipientSourceRecipientCrossReference_0_0 = (CrossReference)cRefRecipientSourceAssignment_0.eContents().get(0);
 		private final RuleCall cRefRecipientSourceRecipientIDTerminalRuleCall_0_0_1 = (RuleCall)cRefRecipientSourceRecipientCrossReference_0_0.eContents().get(1);
-		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cRefsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final CrossReference cRefsRecipientCrossReference_1_1_0 = (CrossReference)cRefsAssignment_1_1.eContents().get(0);
+		private final RuleCall cRefsRecipientIDTerminalRuleCall_1_1_0_1 = (RuleCall)cRefsRecipientCrossReference_1_1_0.eContents().get(1);
 		
 		//RefRecipientSource:
-		//	refRecipientSource=[Recipient] ","?;
+		//	refRecipientSource=[Recipient] ("," refs+=[Recipient])*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//refRecipientSource=[Recipient] ","?
+		//refRecipientSource=[Recipient] ("," refs+=[Recipient])*
 		public Group getGroup() { return cGroup; }
 
 		//refRecipientSource=[Recipient]
@@ -1992,8 +2028,20 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getRefRecipientSourceRecipientIDTerminalRuleCall_0_0_1() { return cRefRecipientSourceRecipientIDTerminalRuleCall_0_0_1; }
 
-		//","?
-		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
+		//("," refs+=[Recipient])*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//","
+		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
+
+		//refs+=[Recipient]
+		public Assignment getRefsAssignment_1_1() { return cRefsAssignment_1_1; }
+
+		//[Recipient]
+		public CrossReference getRefsRecipientCrossReference_1_1_0() { return cRefsRecipientCrossReference_1_1_0; }
+
+		//ID
+		public RuleCall getRefsRecipientIDTerminalRuleCall_1_1_0_1() { return cRefsRecipientIDTerminalRuleCall_1_1_0_1; }
 	}
 
 	public class RefRecipientTargetElements extends AbstractParserRuleElementFinder {
@@ -2002,13 +2050,17 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRefRecipientTargetAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final CrossReference cRefRecipientTargetRecipientCrossReference_0_0 = (CrossReference)cRefRecipientTargetAssignment_0.eContents().get(0);
 		private final RuleCall cRefRecipientTargetRecipientIDTerminalRuleCall_0_0_1 = (RuleCall)cRefRecipientTargetRecipientCrossReference_0_0.eContents().get(1);
-		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cRefsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final CrossReference cRefsRecipientCrossReference_1_1_0 = (CrossReference)cRefsAssignment_1_1.eContents().get(0);
+		private final RuleCall cRefsRecipientIDTerminalRuleCall_1_1_0_1 = (RuleCall)cRefsRecipientCrossReference_1_1_0.eContents().get(1);
 		
 		//RefRecipientTarget:
-		//	refRecipientTarget=[Recipient] ","?;
+		//	refRecipientTarget=[Recipient] ("," refs+=[Recipient])*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//refRecipientTarget=[Recipient] ","?
+		//refRecipientTarget=[Recipient] ("," refs+=[Recipient])*
 		public Group getGroup() { return cGroup; }
 
 		//refRecipientTarget=[Recipient]
@@ -2020,8 +2072,20 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getRefRecipientTargetRecipientIDTerminalRuleCall_0_0_1() { return cRefRecipientTargetRecipientIDTerminalRuleCall_0_0_1; }
 
-		//","?
-		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
+		//("," refs+=[Recipient])*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//","
+		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
+
+		//refs+=[Recipient]
+		public Assignment getRefsAssignment_1_1() { return cRefsAssignment_1_1; }
+
+		//[Recipient]
+		public CrossReference getRefsRecipientCrossReference_1_1_0() { return cRefsRecipientCrossReference_1_1_0; }
+
+		//ID
+		public RuleCall getRefsRecipientIDTerminalRuleCall_1_1_0_1() { return cRefsRecipientIDTerminalRuleCall_1_1_0_1; }
 	}
 
 	public class RefServiceElements extends AbstractParserRuleElementFinder {
@@ -2030,13 +2094,17 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRefServiceAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final CrossReference cRefServiceServiceCrossReference_0_0 = (CrossReference)cRefServiceAssignment_0.eContents().get(0);
 		private final RuleCall cRefServiceServiceIDTerminalRuleCall_0_0_1 = (RuleCall)cRefServiceServiceCrossReference_0_0.eContents().get(1);
-		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cRefsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final CrossReference cRefsServiceCrossReference_1_1_0 = (CrossReference)cRefsAssignment_1_1.eContents().get(0);
+		private final RuleCall cRefsServiceIDTerminalRuleCall_1_1_0_1 = (RuleCall)cRefsServiceCrossReference_1_1_0.eContents().get(1);
 		
 		//RefService:
-		//	refService=[Service] ","?;
+		//	refService=[Service] ("," refs+=[Service])*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//refService=[Service] ","?
+		//refService=[Service] ("," refs+=[Service])*
 		public Group getGroup() { return cGroup; }
 
 		//refService=[Service]
@@ -2048,8 +2116,20 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getRefServiceServiceIDTerminalRuleCall_0_0_1() { return cRefServiceServiceIDTerminalRuleCall_0_0_1; }
 
-		//","?
-		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
+		//("," refs+=[Service])*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//","
+		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
+
+		//refs+=[Service]
+		public Assignment getRefsAssignment_1_1() { return cRefsAssignment_1_1; }
+
+		//[Service]
+		public CrossReference getRefsServiceCrossReference_1_1_0() { return cRefsServiceCrossReference_1_1_0; }
+
+		//ID
+		public RuleCall getRefsServiceIDTerminalRuleCall_1_1_0_1() { return cRefsServiceIDTerminalRuleCall_1_1_0_1; }
 	}
 
 	public class ServicePartElements extends AbstractParserRuleElementFinder {
@@ -2058,13 +2138,17 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cServicePartAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final CrossReference cServicePartServiceCrossReference_0_0 = (CrossReference)cServicePartAssignment_0.eContents().get(0);
 		private final RuleCall cServicePartServiceIDTerminalRuleCall_0_0_1 = (RuleCall)cServicePartServiceCrossReference_0_0.eContents().get(1);
-		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cRefsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final CrossReference cRefsServiceCrossReference_1_1_0 = (CrossReference)cRefsAssignment_1_1.eContents().get(0);
+		private final RuleCall cRefsServiceIDTerminalRuleCall_1_1_0_1 = (RuleCall)cRefsServiceCrossReference_1_1_0.eContents().get(1);
 		
 		//ServicePart:
-		//	servicePart=[Service] ","?;
+		//	servicePart=[Service] ("," refs+=[Service])*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//servicePart=[Service] ","?
+		//servicePart=[Service] ("," refs+=[Service])*
 		public Group getGroup() { return cGroup; }
 
 		//servicePart=[Service]
@@ -2076,8 +2160,20 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getServicePartServiceIDTerminalRuleCall_0_0_1() { return cServicePartServiceIDTerminalRuleCall_0_0_1; }
 
-		//","?
-		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
+		//("," refs+=[Service])*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//","
+		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
+
+		//refs+=[Service]
+		public Assignment getRefsAssignment_1_1() { return cRefsAssignment_1_1; }
+
+		//[Service]
+		public CrossReference getRefsServiceCrossReference_1_1_0() { return cRefsServiceCrossReference_1_1_0; }
+
+		//ID
+		public RuleCall getRefsServiceIDTerminalRuleCall_1_1_0_1() { return cRefsServiceIDTerminalRuleCall_1_1_0_1; }
 	}
 
 	public class RefPrivateDataElements extends AbstractParserRuleElementFinder {
@@ -2086,13 +2182,17 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRefPrivateDataAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final CrossReference cRefPrivateDataPrivateDataCrossReference_0_0 = (CrossReference)cRefPrivateDataAssignment_0.eContents().get(0);
 		private final RuleCall cRefPrivateDataPrivateDataIDTerminalRuleCall_0_0_1 = (RuleCall)cRefPrivateDataPrivateDataCrossReference_0_0.eContents().get(1);
-		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cRefsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final CrossReference cRefsPrivateDataCrossReference_1_1_0 = (CrossReference)cRefsAssignment_1_1.eContents().get(0);
+		private final RuleCall cRefsPrivateDataIDTerminalRuleCall_1_1_0_1 = (RuleCall)cRefsPrivateDataCrossReference_1_1_0.eContents().get(1);
 		
 		//RefPrivateData:
-		//	refPrivateData=[PrivateData] ","?;
+		//	refPrivateData=[PrivateData] ("," refs+=[PrivateData])*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//refPrivateData=[PrivateData] ","?
+		//refPrivateData=[PrivateData] ("," refs+=[PrivateData])*
 		public Group getGroup() { return cGroup; }
 
 		//refPrivateData=[PrivateData]
@@ -2104,8 +2204,20 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getRefPrivateDataPrivateDataIDTerminalRuleCall_0_0_1() { return cRefPrivateDataPrivateDataIDTerminalRuleCall_0_0_1; }
 
-		//","?
-		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
+		//("," refs+=[PrivateData])*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//","
+		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
+
+		//refs+=[PrivateData]
+		public Assignment getRefsAssignment_1_1() { return cRefsAssignment_1_1; }
+
+		//[PrivateData]
+		public CrossReference getRefsPrivateDataCrossReference_1_1_0() { return cRefsPrivateDataCrossReference_1_1_0; }
+
+		//ID
+		public RuleCall getRefsPrivateDataIDTerminalRuleCall_1_1_0_1() { return cRefsPrivateDataIDTerminalRuleCall_1_1_0_1; }
 	}
 
 	public class RefEnforcementElements extends AbstractParserRuleElementFinder {
@@ -2114,13 +2226,17 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRefEnforcementAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final CrossReference cRefEnforcementEnforcementCrossReference_0_0 = (CrossReference)cRefEnforcementAssignment_0.eContents().get(0);
 		private final RuleCall cRefEnforcementEnforcementIDTerminalRuleCall_0_0_1 = (RuleCall)cRefEnforcementEnforcementCrossReference_0_0.eContents().get(1);
-		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cRefsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final CrossReference cRefsEnforcementCrossReference_1_1_0 = (CrossReference)cRefsAssignment_1_1.eContents().get(0);
+		private final RuleCall cRefsEnforcementIDTerminalRuleCall_1_1_0_1 = (RuleCall)cRefsEnforcementCrossReference_1_1_0.eContents().get(1);
 		
 		//RefEnforcement:
-		//	refEnforcement=[Enforcement] ","?;
+		//	refEnforcement=[Enforcement] ("," refs+=[Enforcement])*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//refEnforcement=[Enforcement] ","?
+		//refEnforcement=[Enforcement] ("," refs+=[Enforcement])*
 		public Group getGroup() { return cGroup; }
 
 		//refEnforcement=[Enforcement]
@@ -2132,8 +2248,20 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getRefEnforcementEnforcementIDTerminalRuleCall_0_0_1() { return cRefEnforcementEnforcementIDTerminalRuleCall_0_0_1; }
 
-		//","?
-		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
+		//("," refs+=[Enforcement])*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//","
+		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
+
+		//refs+=[Enforcement]
+		public Assignment getRefsAssignment_1_1() { return cRefsAssignment_1_1; }
+
+		//[Enforcement]
+		public CrossReference getRefsEnforcementCrossReference_1_1_0() { return cRefsEnforcementCrossReference_1_1_0; }
+
+		//ID
+		public RuleCall getRefsEnforcementIDTerminalRuleCall_1_1_0_1() { return cRefsEnforcementIDTerminalRuleCall_1_1_0_1; }
 	}
 	
 	
@@ -2426,7 +2554,7 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RecipientPart:
-	//	recipientPart=[Recipient] ","?;
+	//	recipientPart=[Recipient] ("," refs+=[Recipient])*;
 	public RecipientPartElements getRecipientPartAccess() {
 		return pRecipientPart;
 	}
@@ -2436,7 +2564,7 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RefRecipient:
-	//	refRecipient=[Recipient] ","?;
+	//	refRecipient=[Recipient] ("," refs+=[Recipient])*;
 	public RefRecipientElements getRefRecipientAccess() {
 		return pRefRecipient;
 	}
@@ -2446,7 +2574,7 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RefRecipientSource:
-	//	refRecipientSource=[Recipient] ","?;
+	//	refRecipientSource=[Recipient] ("," refs+=[Recipient])*;
 	public RefRecipientSourceElements getRefRecipientSourceAccess() {
 		return pRefRecipientSource;
 	}
@@ -2456,7 +2584,7 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RefRecipientTarget:
-	//	refRecipientTarget=[Recipient] ","?;
+	//	refRecipientTarget=[Recipient] ("," refs+=[Recipient])*;
 	public RefRecipientTargetElements getRefRecipientTargetAccess() {
 		return pRefRecipientTarget;
 	}
@@ -2466,7 +2594,7 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RefService:
-	//	refService=[Service] ","?;
+	//	refService=[Service] ("," refs+=[Service])*;
 	public RefServiceElements getRefServiceAccess() {
 		return pRefService;
 	}
@@ -2476,7 +2604,7 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ServicePart:
-	//	servicePart=[Service] ","?;
+	//	servicePart=[Service] ("," refs+=[Service])*;
 	public ServicePartElements getServicePartAccess() {
 		return pServicePart;
 	}
@@ -2486,7 +2614,7 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RefPrivateData:
-	//	refPrivateData=[PrivateData] ","?;
+	//	refPrivateData=[PrivateData] ("," refs+=[PrivateData])*;
 	public RefPrivateDataElements getRefPrivateDataAccess() {
 		return pRefPrivateData;
 	}
@@ -2496,7 +2624,7 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RefEnforcement:
-	//	refEnforcement=[Enforcement] ","?;
+	//	refEnforcement=[Enforcement] ("," refs+=[Enforcement])*;
 	public RefEnforcementElements getRefEnforcementAccess() {
 		return pRefEnforcement;
 	}

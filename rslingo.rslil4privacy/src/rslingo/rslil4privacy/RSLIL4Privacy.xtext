@@ -129,25 +129,25 @@ Informative:
 	'Modality' modality=('Permitted'|'Obligation'|'Forbidden') '}';
 	
 RecipientPart:
-	recipientPart=[Recipient](',')?;
+	recipientPart=[Recipient](',' refs+=[Recipient])*;
 
 RefRecipient:
-	refRecipient=[Recipient](',')?;
+	refRecipient=[Recipient](',' refs+=[Recipient])*;
 	
 RefRecipientSource:
-	refRecipientSource=[Recipient](',')?;
+	refRecipientSource=[Recipient](',' refs+=[Recipient])*;
 	
 RefRecipientTarget:
-	refRecipientTarget=[Recipient](',')?;
+	refRecipientTarget=[Recipient](',' refs+=[Recipient])*;
 	
 RefService:
-	refService=[Service](',')?;
+	refService=[Service] (',' refs+=[Service])*;
 	
 ServicePart:
-	servicePart=[Service](',')?;
+	servicePart=[Service](',' refs+=[Service])*;
 		
 RefPrivateData: 
-	refPrivateData=[PrivateData](',')?;
+	refPrivateData=[PrivateData](',' refs+=[PrivateData])*;
 	
 RefEnforcement:
-	refEnforcement=[Enforcement](',')?;
+	refEnforcement=[Enforcement](',' refs+=[Enforcement])*;

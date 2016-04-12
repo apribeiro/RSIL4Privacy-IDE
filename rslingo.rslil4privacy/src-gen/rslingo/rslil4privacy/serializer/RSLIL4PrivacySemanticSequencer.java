@@ -340,17 +340,10 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     recipientPart=[Recipient|ID]
+	 *     (recipientPart=[Recipient|ID] refs+=[Recipient|ID]*)
 	 */
 	protected void sequence_RecipientPart(EObject context, RecipientPart semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.RECIPIENT_PART__RECIPIENT_PART) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.RECIPIENT_PART__RECIPIENT_PART));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getRecipientPartAccess().getRecipientPartRecipientIDTerminalRuleCall_0_0_1(), semanticObject.getRecipientPart());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -372,97 +365,55 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     refEnforcement=[Enforcement|ID]
+	 *     (refEnforcement=[Enforcement|ID] refs+=[Enforcement|ID]*)
 	 */
 	protected void sequence_RefEnforcement(EObject context, RefEnforcement semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.REF_ENFORCEMENT__REF_ENFORCEMENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.REF_ENFORCEMENT__REF_ENFORCEMENT));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getRefEnforcementAccess().getRefEnforcementEnforcementIDTerminalRuleCall_0_0_1(), semanticObject.getRefEnforcement());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     refPrivateData=[PrivateData|ID]
+	 *     (refPrivateData=[PrivateData|ID] refs+=[PrivateData|ID]*)
 	 */
 	protected void sequence_RefPrivateData(EObject context, RefPrivateData semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.REF_PRIVATE_DATA__REF_PRIVATE_DATA) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.REF_PRIVATE_DATA__REF_PRIVATE_DATA));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getRefPrivateDataAccess().getRefPrivateDataPrivateDataIDTerminalRuleCall_0_0_1(), semanticObject.getRefPrivateData());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     refRecipientSource=[Recipient|ID]
+	 *     (refRecipientSource=[Recipient|ID] refs+=[Recipient|ID]*)
 	 */
 	protected void sequence_RefRecipientSource(EObject context, RefRecipientSource semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.REF_RECIPIENT_SOURCE__REF_RECIPIENT_SOURCE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.REF_RECIPIENT_SOURCE__REF_RECIPIENT_SOURCE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getRefRecipientSourceAccess().getRefRecipientSourceRecipientIDTerminalRuleCall_0_0_1(), semanticObject.getRefRecipientSource());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     refRecipientTarget=[Recipient|ID]
+	 *     (refRecipientTarget=[Recipient|ID] refs+=[Recipient|ID]*)
 	 */
 	protected void sequence_RefRecipientTarget(EObject context, RefRecipientTarget semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.REF_RECIPIENT_TARGET__REF_RECIPIENT_TARGET) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.REF_RECIPIENT_TARGET__REF_RECIPIENT_TARGET));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getRefRecipientTargetAccess().getRefRecipientTargetRecipientIDTerminalRuleCall_0_0_1(), semanticObject.getRefRecipientTarget());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     refRecipient=[Recipient|ID]
+	 *     (refRecipient=[Recipient|ID] refs+=[Recipient|ID]*)
 	 */
 	protected void sequence_RefRecipient(EObject context, RefRecipient semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.REF_RECIPIENT__REF_RECIPIENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.REF_RECIPIENT__REF_RECIPIENT));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getRefRecipientAccess().getRefRecipientRecipientIDTerminalRuleCall_0_0_1(), semanticObject.getRefRecipient());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     refService=[Service|ID]
+	 *     (refService=[Service|ID] refs+=[Service|ID]*)
 	 */
 	protected void sequence_RefService(EObject context, RefService semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.REF_SERVICE__REF_SERVICE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.REF_SERVICE__REF_SERVICE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getRefServiceAccess().getRefServiceServiceIDTerminalRuleCall_0_0_1(), semanticObject.getRefService());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -487,17 +438,10 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     servicePart=[Service|ID]
+	 *     (servicePart=[Service|ID] refs+=[Service|ID]*)
 	 */
 	protected void sequence_ServicePart(EObject context, ServicePart semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, RSLIL4PrivacyPackage.Literals.SERVICE_PART__SERVICE_PART) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RSLIL4PrivacyPackage.Literals.SERVICE_PART__SERVICE_PART));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getServicePartAccess().getServicePartServiceIDTerminalRuleCall_0_0_1(), semanticObject.getServicePart());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

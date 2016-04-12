@@ -33,18 +33,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	protected AbstractElementAlias match_Informative_RefersToEnforcementKeyword_10_0_q;
 	protected AbstractElementAlias match_Informative_RefersToPrivateDataKeyword_8_0_q;
 	protected AbstractElementAlias match_Informative_RefersToServiceKeyword_9_0_q;
-	protected AbstractElementAlias match_RecipientPart_CommaKeyword_1_q;
 	protected AbstractElementAlias match_Recipient_Recipient_PartKeyword_7_0_q;
-	protected AbstractElementAlias match_RefEnforcement_CommaKeyword_1_q;
-	protected AbstractElementAlias match_RefPrivateData_CommaKeyword_1_q;
-	protected AbstractElementAlias match_RefRecipientSource_CommaKeyword_1_q;
-	protected AbstractElementAlias match_RefRecipientTarget_CommaKeyword_1_q;
-	protected AbstractElementAlias match_RefRecipient_CommaKeyword_1_q;
-	protected AbstractElementAlias match_RefService_CommaKeyword_1_q;
 	protected AbstractElementAlias match_Retention_RefersToEnforcementKeyword_12_0_q;
 	protected AbstractElementAlias match_Retention_RefersToPrivateDataKeyword_10_0_q;
 	protected AbstractElementAlias match_Retention_RefersToServiceKeyword_11_0_q;
-	protected AbstractElementAlias match_ServicePart_CommaKeyword_1_q;
 	protected AbstractElementAlias match_Service_RefersToPrivateDataKeyword_6_0_q;
 	protected AbstractElementAlias match_Service_Service_PartKeyword_7_0_q;
 	protected AbstractElementAlias match_Usage_RefersToEnforcementKeyword_10_0_q;
@@ -67,18 +59,10 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 		match_Informative_RefersToEnforcementKeyword_10_0_q = new TokenAlias(false, true, grammarAccess.getInformativeAccess().getRefersToEnforcementKeyword_10_0());
 		match_Informative_RefersToPrivateDataKeyword_8_0_q = new TokenAlias(false, true, grammarAccess.getInformativeAccess().getRefersToPrivateDataKeyword_8_0());
 		match_Informative_RefersToServiceKeyword_9_0_q = new TokenAlias(false, true, grammarAccess.getInformativeAccess().getRefersToServiceKeyword_9_0());
-		match_RecipientPart_CommaKeyword_1_q = new TokenAlias(false, true, grammarAccess.getRecipientPartAccess().getCommaKeyword_1());
 		match_Recipient_Recipient_PartKeyword_7_0_q = new TokenAlias(false, true, grammarAccess.getRecipientAccess().getRecipient_PartKeyword_7_0());
-		match_RefEnforcement_CommaKeyword_1_q = new TokenAlias(false, true, grammarAccess.getRefEnforcementAccess().getCommaKeyword_1());
-		match_RefPrivateData_CommaKeyword_1_q = new TokenAlias(false, true, grammarAccess.getRefPrivateDataAccess().getCommaKeyword_1());
-		match_RefRecipientSource_CommaKeyword_1_q = new TokenAlias(false, true, grammarAccess.getRefRecipientSourceAccess().getCommaKeyword_1());
-		match_RefRecipientTarget_CommaKeyword_1_q = new TokenAlias(false, true, grammarAccess.getRefRecipientTargetAccess().getCommaKeyword_1());
-		match_RefRecipient_CommaKeyword_1_q = new TokenAlias(false, true, grammarAccess.getRefRecipientAccess().getCommaKeyword_1());
-		match_RefService_CommaKeyword_1_q = new TokenAlias(false, true, grammarAccess.getRefServiceAccess().getCommaKeyword_1());
 		match_Retention_RefersToEnforcementKeyword_12_0_q = new TokenAlias(false, true, grammarAccess.getRetentionAccess().getRefersToEnforcementKeyword_12_0());
 		match_Retention_RefersToPrivateDataKeyword_10_0_q = new TokenAlias(false, true, grammarAccess.getRetentionAccess().getRefersToPrivateDataKeyword_10_0());
 		match_Retention_RefersToServiceKeyword_11_0_q = new TokenAlias(false, true, grammarAccess.getRetentionAccess().getRefersToServiceKeyword_11_0());
-		match_ServicePart_CommaKeyword_1_q = new TokenAlias(false, true, grammarAccess.getServicePartAccess().getCommaKeyword_1());
 		match_Service_RefersToPrivateDataKeyword_6_0_q = new TokenAlias(false, true, grammarAccess.getServiceAccess().getRefersToPrivateDataKeyword_6_0());
 		match_Service_Service_PartKeyword_7_0_q = new TokenAlias(false, true, grammarAccess.getServiceAccess().getService_PartKeyword_7_0());
 		match_Usage_RefersToEnforcementKeyword_10_0_q = new TokenAlias(false, true, grammarAccess.getUsageAccess().getRefersToEnforcementKeyword_10_0());
@@ -124,30 +108,14 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 				emit_Informative_RefersToPrivateDataKeyword_8_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Informative_RefersToServiceKeyword_9_0_q.equals(syntax))
 				emit_Informative_RefersToServiceKeyword_9_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_RecipientPart_CommaKeyword_1_q.equals(syntax))
-				emit_RecipientPart_CommaKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Recipient_Recipient_PartKeyword_7_0_q.equals(syntax))
 				emit_Recipient_Recipient_PartKeyword_7_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_RefEnforcement_CommaKeyword_1_q.equals(syntax))
-				emit_RefEnforcement_CommaKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_RefPrivateData_CommaKeyword_1_q.equals(syntax))
-				emit_RefPrivateData_CommaKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_RefRecipientSource_CommaKeyword_1_q.equals(syntax))
-				emit_RefRecipientSource_CommaKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_RefRecipientTarget_CommaKeyword_1_q.equals(syntax))
-				emit_RefRecipientTarget_CommaKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_RefRecipient_CommaKeyword_1_q.equals(syntax))
-				emit_RefRecipient_CommaKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_RefService_CommaKeyword_1_q.equals(syntax))
-				emit_RefService_CommaKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Retention_RefersToEnforcementKeyword_12_0_q.equals(syntax))
 				emit_Retention_RefersToEnforcementKeyword_12_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Retention_RefersToPrivateDataKeyword_10_0_q.equals(syntax))
 				emit_Retention_RefersToPrivateDataKeyword_10_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Retention_RefersToServiceKeyword_11_0_q.equals(syntax))
 				emit_Retention_RefersToServiceKeyword_11_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ServicePart_CommaKeyword_1_q.equals(syntax))
-				emit_ServicePart_CommaKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Service_RefersToPrivateDataKeyword_6_0_q.equals(syntax))
 				emit_Service_RefersToPrivateDataKeyword_6_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Service_Service_PartKeyword_7_0_q.equals(syntax))
@@ -665,17 +633,6 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ','?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     recipientPart=[Recipient|ID] (ambiguity) (rule end)
-	 */
-	protected void emit_RecipientPart_CommaKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
 	 *     'Recipient_Part'?
 	 *
 	 * This ambiguous syntax occurs at:
@@ -684,72 +641,6 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     description=STRING (ambiguity) 'Scope' scope='Internal/External'
 	 */
 	protected void emit_Recipient_Recipient_PartKeyword_7_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     ','?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     refEnforcement=[Enforcement|ID] (ambiguity) (rule end)
-	 */
-	protected void emit_RefEnforcement_CommaKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     ','?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     refPrivateData=[PrivateData|ID] (ambiguity) (rule end)
-	 */
-	protected void emit_RefPrivateData_CommaKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     ','?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     refRecipientSource=[Recipient|ID] (ambiguity) (rule end)
-	 */
-	protected void emit_RefRecipientSource_CommaKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     ','?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     refRecipientTarget=[Recipient|ID] (ambiguity) (rule end)
-	 */
-	protected void emit_RefRecipientTarget_CommaKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     ','?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     refRecipient=[Recipient|ID] (ambiguity) (rule end)
-	 */
-	protected void emit_RefRecipient_CommaKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     ','?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     refService=[Service|ID] (ambiguity) (rule end)
-	 */
-	protected void emit_RefService_CommaKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -817,17 +708,6 @@ public class RSLIL4PrivacySyntacticSequencer extends AbstractSyntacticSequencer 
 	 *     refPrivateData+=RefPrivateData (ambiguity) 'RefersTo Enforcement'? 'Modality' modality='Permitted'
 	 */
 	protected void emit_Retention_RefersToServiceKeyword_11_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     ','?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     servicePart=[Service|ID] (ambiguity) (rule end)
-	 */
-	protected void emit_ServicePart_CommaKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

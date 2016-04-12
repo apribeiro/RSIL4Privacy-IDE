@@ -1324,13 +1324,22 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int RECIPIENT_PART__RECIPIENT_PART = 0;
 
   /**
+   * The feature id for the '<em><b>Refs</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RECIPIENT_PART__REFS = 1;
+
+  /**
    * The number of structural features of the '<em>Recipient Part</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RECIPIENT_PART_FEATURE_COUNT = 1;
+  int RECIPIENT_PART_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientImpl <em>Ref Recipient</em>}' class.
@@ -1352,13 +1361,22 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int REF_RECIPIENT__REF_RECIPIENT = 0;
 
   /**
+   * The feature id for the '<em><b>Refs</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REF_RECIPIENT__REFS = 1;
+
+  /**
    * The number of structural features of the '<em>Ref Recipient</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REF_RECIPIENT_FEATURE_COUNT = 1;
+  int REF_RECIPIENT_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientSourceImpl <em>Ref Recipient Source</em>}' class.
@@ -1380,13 +1398,22 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int REF_RECIPIENT_SOURCE__REF_RECIPIENT_SOURCE = 0;
 
   /**
+   * The feature id for the '<em><b>Refs</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REF_RECIPIENT_SOURCE__REFS = 1;
+
+  /**
    * The number of structural features of the '<em>Ref Recipient Source</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REF_RECIPIENT_SOURCE_FEATURE_COUNT = 1;
+  int REF_RECIPIENT_SOURCE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientTargetImpl <em>Ref Recipient Target</em>}' class.
@@ -1408,13 +1435,22 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int REF_RECIPIENT_TARGET__REF_RECIPIENT_TARGET = 0;
 
   /**
+   * The feature id for the '<em><b>Refs</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REF_RECIPIENT_TARGET__REFS = 1;
+
+  /**
    * The number of structural features of the '<em>Ref Recipient Target</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REF_RECIPIENT_TARGET_FEATURE_COUNT = 1;
+  int REF_RECIPIENT_TARGET_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefServiceImpl <em>Ref Service</em>}' class.
@@ -1436,13 +1472,22 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int REF_SERVICE__REF_SERVICE = 0;
 
   /**
+   * The feature id for the '<em><b>Refs</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REF_SERVICE__REFS = 1;
+
+  /**
    * The number of structural features of the '<em>Ref Service</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REF_SERVICE_FEATURE_COUNT = 1;
+  int REF_SERVICE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServicePartImpl <em>Service Part</em>}' class.
@@ -1464,13 +1509,22 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int SERVICE_PART__SERVICE_PART = 0;
 
   /**
+   * The feature id for the '<em><b>Refs</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SERVICE_PART__REFS = 1;
+
+  /**
    * The number of structural features of the '<em>Service Part</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SERVICE_PART_FEATURE_COUNT = 1;
+  int SERVICE_PART_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefPrivateDataImpl <em>Ref Private Data</em>}' class.
@@ -1492,13 +1546,22 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int REF_PRIVATE_DATA__REF_PRIVATE_DATA = 0;
 
   /**
+   * The feature id for the '<em><b>Refs</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REF_PRIVATE_DATA__REFS = 1;
+
+  /**
    * The number of structural features of the '<em>Ref Private Data</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REF_PRIVATE_DATA_FEATURE_COUNT = 1;
+  int REF_PRIVATE_DATA_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefEnforcementImpl <em>Ref Enforcement</em>}' class.
@@ -1520,13 +1583,22 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int REF_ENFORCEMENT__REF_ENFORCEMENT = 0;
 
   /**
+   * The feature id for the '<em><b>Refs</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REF_ENFORCEMENT__REFS = 1;
+
+  /**
    * The number of structural features of the '<em>Ref Enforcement</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REF_ENFORCEMENT_FEATURE_COUNT = 1;
+  int REF_ENFORCEMENT_FEATURE_COUNT = 2;
 
 
   /**
@@ -2878,6 +2950,17 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EReference getRecipientPart_RecipientPart();
 
   /**
+   * Returns the meta object for the reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.RecipientPart#getRefs <em>Refs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Refs</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RecipientPart#getRefs()
+   * @see #getRecipientPart()
+   * @generated
+   */
+  EReference getRecipientPart_Refs();
+
+  /**
    * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipient <em>Ref Recipient</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2897,6 +2980,17 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    */
   EReference getRefRecipient_RefRecipient();
+
+  /**
+   * Returns the meta object for the reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipient#getRefs <em>Refs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Refs</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefRecipient#getRefs()
+   * @see #getRefRecipient()
+   * @generated
+   */
+  EReference getRefRecipient_Refs();
 
   /**
    * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientSource <em>Ref Recipient Source</em>}'.
@@ -2920,6 +3014,17 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EReference getRefRecipientSource_RefRecipientSource();
 
   /**
+   * Returns the meta object for the reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientSource#getRefs <em>Refs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Refs</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientSource#getRefs()
+   * @see #getRefRecipientSource()
+   * @generated
+   */
+  EReference getRefRecipientSource_Refs();
+
+  /**
    * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientTarget <em>Ref Recipient Target</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2939,6 +3044,17 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    */
   EReference getRefRecipientTarget_RefRecipientTarget();
+
+  /**
+   * Returns the meta object for the reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientTarget#getRefs <em>Refs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Refs</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientTarget#getRefs()
+   * @see #getRefRecipientTarget()
+   * @generated
+   */
+  EReference getRefRecipientTarget_Refs();
 
   /**
    * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefService <em>Ref Service</em>}'.
@@ -2962,6 +3078,17 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EReference getRefService_RefService();
 
   /**
+   * Returns the meta object for the reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefService#getRefs <em>Refs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Refs</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefService#getRefs()
+   * @see #getRefService()
+   * @generated
+   */
+  EReference getRefService_Refs();
+
+  /**
    * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.ServicePart <em>Service Part</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2981,6 +3108,17 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    */
   EReference getServicePart_ServicePart();
+
+  /**
+   * Returns the meta object for the reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.ServicePart#getRefs <em>Refs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Refs</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.ServicePart#getRefs()
+   * @see #getServicePart()
+   * @generated
+   */
+  EReference getServicePart_Refs();
 
   /**
    * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData <em>Ref Private Data</em>}'.
@@ -3004,6 +3142,17 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EReference getRefPrivateData_RefPrivateData();
 
   /**
+   * Returns the meta object for the reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData#getRefs <em>Refs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Refs</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData#getRefs()
+   * @see #getRefPrivateData()
+   * @generated
+   */
+  EReference getRefPrivateData_Refs();
+
+  /**
    * Returns the meta object for class '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement <em>Ref Enforcement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3023,6 +3172,17 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    */
   EReference getRefEnforcement_RefEnforcement();
+
+  /**
+   * Returns the meta object for the reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement#getRefs <em>Refs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Refs</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement#getRefs()
+   * @see #getRefEnforcement()
+   * @generated
+   */
+  EReference getRefEnforcement_Refs();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -4072,6 +4232,14 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EReference RECIPIENT_PART__RECIPIENT_PART = eINSTANCE.getRecipientPart_RecipientPart();
 
     /**
+     * The meta object literal for the '<em><b>Refs</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RECIPIENT_PART__REFS = eINSTANCE.getRecipientPart_Refs();
+
+    /**
      * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientImpl <em>Ref Recipient</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4088,6 +4256,14 @@ public interface RSLIL4PrivacyPackage extends EPackage
      * @generated
      */
     EReference REF_RECIPIENT__REF_RECIPIENT = eINSTANCE.getRefRecipient_RefRecipient();
+
+    /**
+     * The meta object literal for the '<em><b>Refs</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference REF_RECIPIENT__REFS = eINSTANCE.getRefRecipient_Refs();
 
     /**
      * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientSourceImpl <em>Ref Recipient Source</em>}' class.
@@ -4108,6 +4284,14 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EReference REF_RECIPIENT_SOURCE__REF_RECIPIENT_SOURCE = eINSTANCE.getRefRecipientSource_RefRecipientSource();
 
     /**
+     * The meta object literal for the '<em><b>Refs</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference REF_RECIPIENT_SOURCE__REFS = eINSTANCE.getRefRecipientSource_Refs();
+
+    /**
      * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefRecipientTargetImpl <em>Ref Recipient Target</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4124,6 +4308,14 @@ public interface RSLIL4PrivacyPackage extends EPackage
      * @generated
      */
     EReference REF_RECIPIENT_TARGET__REF_RECIPIENT_TARGET = eINSTANCE.getRefRecipientTarget_RefRecipientTarget();
+
+    /**
+     * The meta object literal for the '<em><b>Refs</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference REF_RECIPIENT_TARGET__REFS = eINSTANCE.getRefRecipientTarget_Refs();
 
     /**
      * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefServiceImpl <em>Ref Service</em>}' class.
@@ -4144,6 +4336,14 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EReference REF_SERVICE__REF_SERVICE = eINSTANCE.getRefService_RefService();
 
     /**
+     * The meta object literal for the '<em><b>Refs</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference REF_SERVICE__REFS = eINSTANCE.getRefService_Refs();
+
+    /**
      * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.ServicePartImpl <em>Service Part</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4160,6 +4360,14 @@ public interface RSLIL4PrivacyPackage extends EPackage
      * @generated
      */
     EReference SERVICE_PART__SERVICE_PART = eINSTANCE.getServicePart_ServicePart();
+
+    /**
+     * The meta object literal for the '<em><b>Refs</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SERVICE_PART__REFS = eINSTANCE.getServicePart_Refs();
 
     /**
      * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefPrivateDataImpl <em>Ref Private Data</em>}' class.
@@ -4180,6 +4388,14 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EReference REF_PRIVATE_DATA__REF_PRIVATE_DATA = eINSTANCE.getRefPrivateData_RefPrivateData();
 
     /**
+     * The meta object literal for the '<em><b>Refs</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference REF_PRIVATE_DATA__REFS = eINSTANCE.getRefPrivateData_Refs();
+
+    /**
      * The meta object literal for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefEnforcementImpl <em>Ref Enforcement</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4196,6 +4412,14 @@ public interface RSLIL4PrivacyPackage extends EPackage
      * @generated
      */
     EReference REF_ENFORCEMENT__REF_ENFORCEMENT = eINSTANCE.getRefEnforcement_RefEnforcement();
+
+    /**
+     * The meta object literal for the '<em><b>Refs</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference REF_ENFORCEMENT__REFS = eINSTANCE.getRefEnforcement_Refs();
 
   }
 

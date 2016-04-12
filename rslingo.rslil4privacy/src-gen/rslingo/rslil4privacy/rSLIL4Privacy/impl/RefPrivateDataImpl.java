@@ -2,13 +2,19 @@
  */
 package rslingo.rslil4privacy.rSLIL4Privacy.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import rslingo.rslil4privacy.rSLIL4Privacy.PrivateData;
 import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
@@ -23,6 +29,7 @@ import rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData;
  * </p>
  * <ul>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefPrivateDataImpl#getRefPrivateData <em>Ref Private Data</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.RefPrivateDataImpl#getRefs <em>Refs</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +45,16 @@ public class RefPrivateDataImpl extends MinimalEObjectImpl.Container implements 
    * @ordered
    */
   protected PrivateData refPrivateData;
+
+  /**
+   * The cached value of the '{@link #getRefs() <em>Refs</em>}' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefs()
+   * @generated
+   * @ordered
+   */
+  protected EList<PrivateData> refs;
 
   /**
    * <!-- begin-user-doc -->
@@ -108,6 +125,20 @@ public class RefPrivateDataImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<PrivateData> getRefs()
+  {
+    if (refs == null)
+    {
+      refs = new EObjectResolvingEList<PrivateData>(PrivateData.class, this, RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REFS);
+    }
+    return refs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -116,6 +147,8 @@ public class RefPrivateDataImpl extends MinimalEObjectImpl.Container implements 
       case RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REF_PRIVATE_DATA:
         if (resolve) return getRefPrivateData();
         return basicGetRefPrivateData();
+      case RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REFS:
+        return getRefs();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -125,6 +158,7 @@ public class RefPrivateDataImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -132,6 +166,10 @@ public class RefPrivateDataImpl extends MinimalEObjectImpl.Container implements 
     {
       case RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REF_PRIVATE_DATA:
         setRefPrivateData((PrivateData)newValue);
+        return;
+      case RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REFS:
+        getRefs().clear();
+        getRefs().addAll((Collection<? extends PrivateData>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -150,6 +188,9 @@ public class RefPrivateDataImpl extends MinimalEObjectImpl.Container implements 
       case RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REF_PRIVATE_DATA:
         setRefPrivateData((PrivateData)null);
         return;
+      case RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REFS:
+        getRefs().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -166,6 +207,8 @@ public class RefPrivateDataImpl extends MinimalEObjectImpl.Container implements 
     {
       case RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REF_PRIVATE_DATA:
         return refPrivateData != null;
+      case RSLIL4PrivacyPackage.REF_PRIVATE_DATA__REFS:
+        return refs != null && !refs.isEmpty();
     }
     return super.eIsSet(featureID);
   }

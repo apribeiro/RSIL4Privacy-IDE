@@ -111,13 +111,21 @@ public class RSLIL4PrivacyParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInformativeAccess().getGroup_9(), "rule__Informative__Group_9__0");
 					put(grammarAccess.getInformativeAccess().getGroup_10(), "rule__Informative__Group_10__0");
 					put(grammarAccess.getRecipientPartAccess().getGroup(), "rule__RecipientPart__Group__0");
+					put(grammarAccess.getRecipientPartAccess().getGroup_1(), "rule__RecipientPart__Group_1__0");
 					put(grammarAccess.getRefRecipientAccess().getGroup(), "rule__RefRecipient__Group__0");
+					put(grammarAccess.getRefRecipientAccess().getGroup_1(), "rule__RefRecipient__Group_1__0");
 					put(grammarAccess.getRefRecipientSourceAccess().getGroup(), "rule__RefRecipientSource__Group__0");
+					put(grammarAccess.getRefRecipientSourceAccess().getGroup_1(), "rule__RefRecipientSource__Group_1__0");
 					put(grammarAccess.getRefRecipientTargetAccess().getGroup(), "rule__RefRecipientTarget__Group__0");
+					put(grammarAccess.getRefRecipientTargetAccess().getGroup_1(), "rule__RefRecipientTarget__Group_1__0");
 					put(grammarAccess.getRefServiceAccess().getGroup(), "rule__RefService__Group__0");
+					put(grammarAccess.getRefServiceAccess().getGroup_1(), "rule__RefService__Group_1__0");
 					put(grammarAccess.getServicePartAccess().getGroup(), "rule__ServicePart__Group__0");
+					put(grammarAccess.getServicePartAccess().getGroup_1(), "rule__ServicePart__Group_1__0");
 					put(grammarAccess.getRefPrivateDataAccess().getGroup(), "rule__RefPrivateData__Group__0");
+					put(grammarAccess.getRefPrivateDataAccess().getGroup_1(), "rule__RefPrivateData__Group_1__0");
 					put(grammarAccess.getRefEnforcementAccess().getGroup(), "rule__RefEnforcement__Group__0");
+					put(grammarAccess.getRefEnforcementAccess().getGroup_1(), "rule__RefEnforcement__Group_1__0");
 					put(grammarAccess.getPolicyAccess().getNameAssignment_1(), "rule__Policy__NameAssignment_1");
 					put(grammarAccess.getPolicyAccess().getImportelementsAssignment_3(), "rule__Policy__ImportelementsAssignment_3");
 					put(grammarAccess.getPolicyAccess().getMetadataAssignment_4(), "rule__Policy__MetadataAssignment_4");
@@ -226,13 +234,21 @@ public class RSLIL4PrivacyParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInformativeAccess().getRefEAllAssignment_10_1_1(), "rule__Informative__RefEAllAssignment_10_1_1");
 					put(grammarAccess.getInformativeAccess().getModalityAssignment_12(), "rule__Informative__ModalityAssignment_12");
 					put(grammarAccess.getRecipientPartAccess().getRecipientPartAssignment_0(), "rule__RecipientPart__RecipientPartAssignment_0");
+					put(grammarAccess.getRecipientPartAccess().getRefsAssignment_1_1(), "rule__RecipientPart__RefsAssignment_1_1");
 					put(grammarAccess.getRefRecipientAccess().getRefRecipientAssignment_0(), "rule__RefRecipient__RefRecipientAssignment_0");
+					put(grammarAccess.getRefRecipientAccess().getRefsAssignment_1_1(), "rule__RefRecipient__RefsAssignment_1_1");
 					put(grammarAccess.getRefRecipientSourceAccess().getRefRecipientSourceAssignment_0(), "rule__RefRecipientSource__RefRecipientSourceAssignment_0");
+					put(grammarAccess.getRefRecipientSourceAccess().getRefsAssignment_1_1(), "rule__RefRecipientSource__RefsAssignment_1_1");
 					put(grammarAccess.getRefRecipientTargetAccess().getRefRecipientTargetAssignment_0(), "rule__RefRecipientTarget__RefRecipientTargetAssignment_0");
+					put(grammarAccess.getRefRecipientTargetAccess().getRefsAssignment_1_1(), "rule__RefRecipientTarget__RefsAssignment_1_1");
 					put(grammarAccess.getRefServiceAccess().getRefServiceAssignment_0(), "rule__RefService__RefServiceAssignment_0");
+					put(grammarAccess.getRefServiceAccess().getRefsAssignment_1_1(), "rule__RefService__RefsAssignment_1_1");
 					put(grammarAccess.getServicePartAccess().getServicePartAssignment_0(), "rule__ServicePart__ServicePartAssignment_0");
+					put(grammarAccess.getServicePartAccess().getRefsAssignment_1_1(), "rule__ServicePart__RefsAssignment_1_1");
 					put(grammarAccess.getRefPrivateDataAccess().getRefPrivateDataAssignment_0(), "rule__RefPrivateData__RefPrivateDataAssignment_0");
+					put(grammarAccess.getRefPrivateDataAccess().getRefsAssignment_1_1(), "rule__RefPrivateData__RefsAssignment_1_1");
 					put(grammarAccess.getRefEnforcementAccess().getRefEnforcementAssignment_0(), "rule__RefEnforcement__RefEnforcementAssignment_0");
+					put(grammarAccess.getRefEnforcementAccess().getRefsAssignment_1_1(), "rule__RefEnforcement__RefsAssignment_1_1");
 				}
 			};
 		}

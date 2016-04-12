@@ -3105,9 +3105,22 @@ ruleRecipientPart returns [EObject current=null]
 )
 )(	otherlv_1=',' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getRecipientPartAccess().getCommaKeyword_1());
+    	newLeafNode(otherlv_1, grammarAccess.getRecipientPartAccess().getCommaKeyword_1_0());
     }
-)?)
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRecipientPartRule());
+	        }
+        }
+	otherlv_2=RULE_ID
+	{
+		newLeafNode(otherlv_2, grammarAccess.getRecipientPartAccess().getRefsRecipientCrossReference_1_1_0()); 
+	}
+
+)
+))*)
 ;
 
 
@@ -3143,9 +3156,22 @@ ruleRefRecipient returns [EObject current=null]
 )
 )(	otherlv_1=',' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getRefRecipientAccess().getCommaKeyword_1());
+    	newLeafNode(otherlv_1, grammarAccess.getRefRecipientAccess().getCommaKeyword_1_0());
     }
-)?)
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRefRecipientRule());
+	        }
+        }
+	otherlv_2=RULE_ID
+	{
+		newLeafNode(otherlv_2, grammarAccess.getRefRecipientAccess().getRefsRecipientCrossReference_1_1_0()); 
+	}
+
+)
+))*)
 ;
 
 
@@ -3181,9 +3207,22 @@ ruleRefRecipientSource returns [EObject current=null]
 )
 )(	otherlv_1=',' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getRefRecipientSourceAccess().getCommaKeyword_1());
+    	newLeafNode(otherlv_1, grammarAccess.getRefRecipientSourceAccess().getCommaKeyword_1_0());
     }
-)?)
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRefRecipientSourceRule());
+	        }
+        }
+	otherlv_2=RULE_ID
+	{
+		newLeafNode(otherlv_2, grammarAccess.getRefRecipientSourceAccess().getRefsRecipientCrossReference_1_1_0()); 
+	}
+
+)
+))*)
 ;
 
 
@@ -3219,9 +3258,22 @@ ruleRefRecipientTarget returns [EObject current=null]
 )
 )(	otherlv_1=',' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getRefRecipientTargetAccess().getCommaKeyword_1());
+    	newLeafNode(otherlv_1, grammarAccess.getRefRecipientTargetAccess().getCommaKeyword_1_0());
     }
-)?)
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRefRecipientTargetRule());
+	        }
+        }
+	otherlv_2=RULE_ID
+	{
+		newLeafNode(otherlv_2, grammarAccess.getRefRecipientTargetAccess().getRefsRecipientCrossReference_1_1_0()); 
+	}
+
+)
+))*)
 ;
 
 
@@ -3257,9 +3309,22 @@ ruleRefService returns [EObject current=null]
 )
 )(	otherlv_1=',' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getRefServiceAccess().getCommaKeyword_1());
+    	newLeafNode(otherlv_1, grammarAccess.getRefServiceAccess().getCommaKeyword_1_0());
     }
-)?)
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRefServiceRule());
+	        }
+        }
+	otherlv_2=RULE_ID
+	{
+		newLeafNode(otherlv_2, grammarAccess.getRefServiceAccess().getRefsServiceCrossReference_1_1_0()); 
+	}
+
+)
+))*)
 ;
 
 
@@ -3295,9 +3360,22 @@ ruleServicePart returns [EObject current=null]
 )
 )(	otherlv_1=',' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getServicePartAccess().getCommaKeyword_1());
+    	newLeafNode(otherlv_1, grammarAccess.getServicePartAccess().getCommaKeyword_1_0());
     }
-)?)
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getServicePartRule());
+	        }
+        }
+	otherlv_2=RULE_ID
+	{
+		newLeafNode(otherlv_2, grammarAccess.getServicePartAccess().getRefsServiceCrossReference_1_1_0()); 
+	}
+
+)
+))*)
 ;
 
 
@@ -3333,9 +3411,22 @@ ruleRefPrivateData returns [EObject current=null]
 )
 )(	otherlv_1=',' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getRefPrivateDataAccess().getCommaKeyword_1());
+    	newLeafNode(otherlv_1, grammarAccess.getRefPrivateDataAccess().getCommaKeyword_1_0());
     }
-)?)
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRefPrivateDataRule());
+	        }
+        }
+	otherlv_2=RULE_ID
+	{
+		newLeafNode(otherlv_2, grammarAccess.getRefPrivateDataAccess().getRefsPrivateDataCrossReference_1_1_0()); 
+	}
+
+)
+))*)
 ;
 
 
@@ -3371,9 +3462,22 @@ ruleRefEnforcement returns [EObject current=null]
 )
 )(	otherlv_1=',' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getRefEnforcementAccess().getCommaKeyword_1());
+    	newLeafNode(otherlv_1, grammarAccess.getRefEnforcementAccess().getCommaKeyword_1_0());
     }
-)?)
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRefEnforcementRule());
+	        }
+        }
+	otherlv_2=RULE_ID
+	{
+		newLeafNode(otherlv_2, grammarAccess.getRefEnforcementAccess().getRefsEnforcementCrossReference_1_1_0()); 
+	}
+
+)
+))*)
 ;
 
 

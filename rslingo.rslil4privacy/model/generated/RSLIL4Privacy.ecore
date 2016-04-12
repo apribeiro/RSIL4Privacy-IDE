@@ -175,26 +175,42 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RecipientPart">
     <eStructuralFeatures xsi:type="ecore:EReference" name="recipientPart" eType="#//Recipient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refs" unique="false" upperBound="-1"
+        eType="#//Recipient"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RefRecipient">
     <eStructuralFeatures xsi:type="ecore:EReference" name="refRecipient" eType="#//Recipient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refs" unique="false" upperBound="-1"
+        eType="#//Recipient"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RefRecipientSource">
     <eStructuralFeatures xsi:type="ecore:EReference" name="refRecipientSource" eType="#//Recipient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refs" unique="false" upperBound="-1"
+        eType="#//Recipient"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RefRecipientTarget">
     <eStructuralFeatures xsi:type="ecore:EReference" name="refRecipientTarget" eType="#//Recipient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refs" unique="false" upperBound="-1"
+        eType="#//Recipient"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RefService">
     <eStructuralFeatures xsi:type="ecore:EReference" name="refService" eType="#//Service"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refs" unique="false" upperBound="-1"
+        eType="#//Service"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ServicePart">
     <eStructuralFeatures xsi:type="ecore:EReference" name="servicePart" eType="#//Service"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refs" unique="false" upperBound="-1"
+        eType="#//Service"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RefPrivateData">
     <eStructuralFeatures xsi:type="ecore:EReference" name="refPrivateData" eType="#//PrivateData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refs" unique="false" upperBound="-1"
+        eType="#//PrivateData"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RefEnforcement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="refEnforcement" eType="#//Enforcement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refs" unique="false" upperBound="-1"
+        eType="#//Enforcement"/>
   </eClassifiers>
 </ecore:EPackage>
