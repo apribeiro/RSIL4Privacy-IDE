@@ -240,14 +240,19 @@ public class ExportExcelHandler extends AbstractHandler {
 			if (collection.getRefPrivateData().size() > 0) {
 				StringBuilder pdIds = new StringBuilder();
 				
-				for (RefPrivateData ref : collection.getRefPrivateData()) {
-					PrivateData pd = ref.getRefPrivateData();
+				for (RefPrivateData refPD : collection.getRefPrivateData()) {
+					PrivateData pd = refPD.getRefPrivateData();
 					pdIds.append(pd.getName());
-					pdIds.append(", ");
+					
+					for (PrivateData refMulPD : refPD.getRefs()) {
+						pdIds.append(", ");
+						pdIds.append(refMulPD.getName());
+					}
 				}
-				pdIds.delete(pdIds.length() - 2, pdIds.length());
 				
 				DocumentHelper.replaceText(nRow, "StPDId", pdIds.toString());
+			} else if (collection.getRefPDAll() != null) {
+				DocumentHelper.replaceText(nRow, "StPDId", collection.getRefPDAll());
 			} else {
 				DocumentHelper.replaceText(nRow, "StPDId", "");
 			}
@@ -260,11 +265,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				for (RefService ref : collection.getRefService()) {
 					Service s = ref.getRefService();
 					sIds.append(s.getName());
-					sIds.append(", ");
+					
+					for (Service refService : ref.getRefs()) {
+						sIds.append(", ");
+						sIds.append(refService.getName());
+					}
 				}
-				sIds.delete(sIds.length() - 2, sIds.length());
 				
 				DocumentHelper.replaceText(nRow, "StSId", sIds.toString());
+			} else if (collection.getRefSAll() != null) {
+				DocumentHelper.replaceText(nRow, "StSId", collection.getRefSAll());
 			} else {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
@@ -275,11 +285,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				for (RefEnforcement ref : collection.getRefEnforcement()) {
 					Enforcement e = ref.getRefEnforcement();
 					eIds.append(e.getName());
-					eIds.append(", ");
+					
+					for (Enforcement refEnforcement : ref.getRefs()) {
+						eIds.append(", ");
+						eIds.append(refEnforcement.getName());
+					}					
 				}
-				eIds.delete(eIds.length() - 2, eIds.length());
 				
 				DocumentHelper.replaceText(nRow, "StEId", eIds.toString());
+			} else if (collection.getRefEAll() != null) {
+				DocumentHelper.replaceText(nRow, "StEId", collection.getRefEAll());
 			} else {
 				DocumentHelper.replaceText(nRow, "StEId", "");
 			}
@@ -309,11 +324,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				for (RefPrivateData ref : disclosure.getRefPrivateData()) {
 					PrivateData pd = ref.getRefPrivateData();
 					pdIds.append(pd.getName());
-					pdIds.append(", ");
+					
+					for (PrivateData refMulPD : ref.getRefs()) {
+						pdIds.append(", ");
+						pdIds.append(refMulPD.getName());
+					}
 				}
-				pdIds.delete(pdIds.length() - 2, pdIds.length());
 				
 				DocumentHelper.replaceText(nRow, "StPDId", pdIds.toString());
+			} else if (disclosure.getRefPDAll() != null) {
+				DocumentHelper.replaceText(nRow, "StPDId", disclosure.getRefPDAll());
 			} else {
 				DocumentHelper.replaceText(nRow, "StPDId", "");
 			}
@@ -324,11 +344,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				for (RefRecipient ref : disclosure.getRefRecipient()) {
 					Recipient r = ref.getRefRecipient();
 					rIds.append(r.getName());
-					rIds.append(", ");
+					
+					for (Recipient refRec : ref.getRefs()) {
+						rIds.append(", ");
+						rIds.append(refRec.getName());
+					}
 				}
-				rIds.delete(rIds.length() - 2, rIds.length());
 				
 				DocumentHelper.replaceText(nRow, "StRId", rIds.toString());
+			} else if (disclosure.getRefRAll() != null) {
+				DocumentHelper.replaceText(nRow, "StRId", disclosure.getRefRAll());
 			} else {
 				DocumentHelper.replaceText(nRow, "StRId", "");
 			}
@@ -339,11 +364,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				for (RefService ref : disclosure.getRefService()) {
 					Service s = ref.getRefService();
 					sIds.append(s.getName());
-					sIds.append(", ");
+					
+					for (Service refService : ref.getRefs()) {
+						sIds.append(", ");
+						sIds.append(refService.getName());
+					}
 				}
-				sIds.delete(sIds.length() - 2, sIds.length());
 				
 				DocumentHelper.replaceText(nRow, "StSId", sIds.toString());
+			} else if (disclosure.getRefSAll() != null) {
+				DocumentHelper.replaceText(nRow, "StSId", disclosure.getRefSAll());
 			} else {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
@@ -354,11 +384,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				for (RefEnforcement ref : disclosure.getRefEnforcement()) {
 					Enforcement e = ref.getRefEnforcement();
 					eIds.append(e.getName());
-					eIds.append(", ");
+					
+					for (Enforcement refEnforcement : ref.getRefs()) {
+						eIds.append(", ");
+						eIds.append(refEnforcement.getName());
+					}
 				}
-				eIds.delete(eIds.length() - 2, eIds.length());
 				
 				DocumentHelper.replaceText(nRow, "StEId", eIds.toString());
+			} else if (disclosure.getRefEAll() != null) {
+				DocumentHelper.replaceText(nRow, "StEId", disclosure.getRefEAll());
 			} else {
 				DocumentHelper.replaceText(nRow, "StEId", "");
 			}
@@ -388,11 +423,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				for (RefPrivateData ref : retention.getRefPrivateData()) {
 					PrivateData pd = ref.getRefPrivateData();
 					pdIds.append(pd.getName());
-					pdIds.append(", ");
+					
+					for (PrivateData refMulPD : ref.getRefs()) {
+						pdIds.append(", ");
+						pdIds.append(refMulPD.getName());
+					}
 				}
-				pdIds.delete(pdIds.length() - 2, pdIds.length());
-				
+
 				DocumentHelper.replaceText(nRow, "StPDId", pdIds.toString());
+			} else if (retention.getRefPDAll() != null) {
+				DocumentHelper.replaceText(nRow, "StPDId", retention.getRefPDAll());
 			} else {
 				DocumentHelper.replaceText(nRow, "StPDId", "");
 			}
@@ -405,11 +445,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				for (RefService ref : retention.getRefService()) {
 					Service s = ref.getRefService();
 					sIds.append(s.getName());
-					sIds.append(", ");
+					
+					for (Service refService : ref.getRefs()) {
+						sIds.append(", ");
+						sIds.append(refService.getName());
+					}
 				}
-				sIds.delete(sIds.length() - 2, sIds.length());
 				
 				DocumentHelper.replaceText(nRow, "StSId", sIds.toString());
+			} else if (retention.getRefSAll() != null) {
+				DocumentHelper.replaceText(nRow, "StSId", retention.getRefSAll());
 			} else {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
@@ -420,11 +465,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				for (RefEnforcement ref : retention.getRefEnforcement()) {
 					Enforcement e = ref.getRefEnforcement();
 					eIds.append(e.getName());
-					eIds.append(", ");
+					
+					for (Enforcement refEnforcement : ref.getRefs()) {
+						eIds.append(", ");
+						eIds.append(refEnforcement.getName());
+					}
 				}
-				eIds.delete(eIds.length() - 2, eIds.length());
 				
 				DocumentHelper.replaceText(nRow, "StEId", eIds.toString());
+			} else if (retention.getRefEAll() != null) {
+				DocumentHelper.replaceText(nRow, "StEId", retention.getRefEAll());
 			} else {
 				DocumentHelper.replaceText(nRow, "StEId", "");
 			}
@@ -454,11 +504,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				for (RefPrivateData ref : usage.getRefPrivateData()) {
 					PrivateData pd = ref.getRefPrivateData();
 					pdIds.append(pd.getName());
-					pdIds.append(", ");
+					
+					for (PrivateData refMulPD : ref.getRefs()) {
+						pdIds.append(", ");
+						pdIds.append(refMulPD.getName());
+					}
 				}
-				pdIds.delete(pdIds.length() - 2, pdIds.length());
 				
 				DocumentHelper.replaceText(nRow, "StPDId", pdIds.toString());
+			} else if (usage.getRefPDAll() != null) {
+				DocumentHelper.replaceText(nRow, "StPDId", usage.getRefPDAll());
 			} else {
 				DocumentHelper.replaceText(nRow, "StPDId", "");
 			}
@@ -471,11 +526,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				for (RefService ref : usage.getRefService()) {
 					Service s = ref.getRefService();
 					sIds.append(s.getName());
-					sIds.append(", ");
+					
+					for (Service refService : ref.getRefs()) {
+						sIds.append(", ");
+						sIds.append(refService.getName());
+					}
 				}
-				sIds.delete(sIds.length() - 2, sIds.length());
 				
 				DocumentHelper.replaceText(nRow, "StSId", sIds.toString());
+			} else if (usage.getRefSAll() != null) {
+				DocumentHelper.replaceText(nRow, "StSId", usage.getRefSAll());
 			} else {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
@@ -486,11 +546,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				for (RefEnforcement ref : usage.getRefEnforcement()) {
 					Enforcement e = ref.getRefEnforcement();
 					eIds.append(e.getName());
-					eIds.append(", ");
+					
+					for (Enforcement refEnforcement : ref.getRefs()) {
+						eIds.append(", ");
+						eIds.append(refEnforcement.getName());
+					}
 				}
-				eIds.delete(eIds.length() - 2, eIds.length());
 				
 				DocumentHelper.replaceText(nRow, "StEId", eIds.toString());
+			} else if (usage.getRefEAll() != null) {
+				DocumentHelper.replaceText(nRow, "StEId", usage.getRefEAll());
 			} else {
 				DocumentHelper.replaceText(nRow, "StEId", "");
 			}
@@ -520,11 +585,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				for (RefPrivateData ref : informative.getRefPrivateData()) {
 					PrivateData pd = ref.getRefPrivateData();
 					pdIds.append(pd.getName());
-					pdIds.append(", ");
+					
+					for (PrivateData refMulPD : ref.getRefs()) {
+						pdIds.append(", ");
+						pdIds.append(refMulPD.getName());
+					}
 				}
-				pdIds.delete(pdIds.length() - 2, pdIds.length());
 				
 				DocumentHelper.replaceText(nRow, "StPDId", pdIds.toString());
+			} else if (informative.getRefPDAll() != null) {
+				DocumentHelper.replaceText(nRow, "StPDId", informative.getRefPDAll());
 			} else {
 				DocumentHelper.replaceText(nRow, "StPDId", "");
 			}
@@ -537,11 +607,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				for (RefService ref : informative.getRefService()) {
 					Service s = ref.getRefService();
 					sIds.append(s.getName());
-					sIds.append(", ");
+					
+					for (Service refService : ref.getRefs()) {
+						sIds.append(", ");
+						sIds.append(refService.getName());
+					}
 				}
-				sIds.delete(sIds.length() - 2, sIds.length());
 				
 				DocumentHelper.replaceText(nRow, "StSId", sIds.toString());
+			} else if (informative.getRefSAll() != null) {
+				DocumentHelper.replaceText(nRow, "StSId", informative.getRefSAll());
 			} else {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
@@ -552,11 +627,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				for (RefEnforcement ref : informative.getRefEnforcement()) {
 					Enforcement e = ref.getRefEnforcement();
 					eIds.append(e.getName());
-					eIds.append(", ");
+					
+					for (Enforcement refEnforcement : ref.getRefs()) {
+						eIds.append(", ");
+						eIds.append(refEnforcement.getName());
+					}
 				}
-				eIds.delete(eIds.length() - 2, eIds.length());
 				
 				DocumentHelper.replaceText(nRow, "StEId", eIds.toString());
+			} else if (informative.getRefEAll() != null) {
+				DocumentHelper.replaceText(nRow, "StEId", informative.getRefEAll());
 			} else {
 				DocumentHelper.replaceText(nRow, "StEId", "");
 			}
@@ -607,14 +687,19 @@ public class ExportExcelHandler extends AbstractHandler {
 			if (service.getRefPrivateData().size() > 0) {
 				StringBuilder pdIds = new StringBuilder();
 				
-				for (RefPrivateData attr : service.getRefPrivateData()) {
-					PrivateData pd = attr.getRefPrivateData();
+				for (RefPrivateData refPD : service.getRefPrivateData()) {
+					PrivateData pd = refPD.getRefPrivateData();
 					pdIds.append(pd.getName());
-					pdIds.append(", ");
+					
+					for (PrivateData refMulPD : refPD.getRefs()) {
+						pdIds.append(", ");
+						pdIds.append(refMulPD.getName());
+					}
 				}
-				pdIds.delete(pdIds.length() - 2, pdIds.length());
 				
 				DocumentHelper.replaceText(nRow, "SPDId", pdIds.toString());
+			} else if (service.getRefPDAll() != null) {
+				DocumentHelper.replaceText(nRow, "SPDId", service.getRefPDAll());
 			} else {
 				DocumentHelper.replaceText(nRow, "SPDId", "");
 			}
@@ -670,7 +755,7 @@ public class ExportExcelHandler extends AbstractHandler {
 		// Delete the Template Row
 		sheet.shiftRows(tRow.getRowNum() + 1, sheet.getLastRowNum(), -1);
 	}
-	
+
 	private void writeEnforcements(Policy policy, XSSFWorkbook workbook) {
 		XSSFSheet sheet = workbook.getSheet("Enforcements");
 		XSSFRow tRow = (XSSFRow) DocumentHelper.getCell(sheet, "EId").getRow();
