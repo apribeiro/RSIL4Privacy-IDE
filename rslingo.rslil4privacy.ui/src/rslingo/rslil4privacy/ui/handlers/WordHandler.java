@@ -184,8 +184,7 @@ public class WordHandler extends AbstractHandler {
 		};
 		job.setUser(true);
 	    job.schedule();
-	}
-	
+	}	
 
 	private void writePolicyMetadata(Metadata metadata, XWPFDocument document) {
 		if (metadata != null) {
@@ -368,6 +367,10 @@ public class WordHandler extends AbstractHandler {
 			if (service.getRefPrivateData().size() > 0) {
 				for (RefPrivateData refPD : service.getRefPrivateData()) {
 					privateDatas.add(refPD.getRefPrivateData());
+					
+					for (PrivateData refMulPD : refPD.getRefs()) {
+						privateDatas.add(refMulPD);
+					}
 				}
 			} else if (service.getRefPDAll() != null) {
 				privateDatas.addAll(policy.getPrivateData());
