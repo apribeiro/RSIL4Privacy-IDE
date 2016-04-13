@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
-import org.eclipse.xtext.xbase.lib.Conversions;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import rslingo.rslil4privacy.rSLIL4Privacy.Attribute;
@@ -371,49 +370,56 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
     }
     _builder.append("COLLECT ");
     {
-      EList<RefPrivateData> _refPrivateData = c.getRefPrivateData();
-      int _length = ((Object[])Conversions.unwrapArray(_refPrivateData, Object.class)).length;
-      boolean _equals_2 = (_length == 8);
+      String _refPDAll = c.getRefPDAll();
+      boolean _equals_2 = Objects.equal(_refPDAll, "All");
       if (_equals_2) {
-        _builder.append("ALL-Information ");
+        _builder.append("ALL-Information");
       } else {
-        {
+        EList<RefPrivateData> _refPrivateData = c.getRefPrivateData();
+        boolean _isEmpty = _refPrivateData.isEmpty();
+        boolean _not = (!_isEmpty);
+        if (_not) {
           EList<RefPrivateData> _refPrivateData_1 = c.getRefPrivateData();
-          boolean _hasElements = false;
-          for(final RefPrivateData p : _refPrivateData_1) {
-            if (!_hasElements) {
-              _hasElements = true;
-            } else {
-              _builder.appendImmediate(",", "");
+          RefPrivateData _get = _refPrivateData_1.get(0);
+          PrivateData _refPrivateData_2 = _get.getRefPrivateData();
+          CharSequence _compile = this.compile(_refPrivateData_2);
+          _builder.append(_compile, "");
+          {
+            EList<RefPrivateData> _refPrivateData_3 = c.getRefPrivateData();
+            RefPrivateData _get_1 = _refPrivateData_3.get(0);
+            EList<PrivateData> _refs = _get_1.getRefs();
+            for(final PrivateData p : _refs) {
+              _builder.append(", ");
+              CharSequence _compile_1 = this.compile(p);
+              _builder.append(_compile_1, "");
             }
-            CharSequence _compile = this.compile(p);
-            _builder.append(_compile, "");
-            _builder.append(" ");
           }
         }
       }
     }
     {
       EList<RefService> _refService = c.getRefService();
-      boolean _isEmpty = _refService.isEmpty();
-      boolean _not = (!_isEmpty);
-      if (_not) {
-        _builder.append("FOR ");
+      boolean _isEmpty_1 = _refService.isEmpty();
+      boolean _not_1 = (!_isEmpty_1);
+      if (_not_1) {
+        _builder.append(" FOR ");
+        EList<RefService> _refService_1 = c.getRefService();
+        RefService _get_2 = _refService_1.get(0);
+        Service _refService_2 = _get_2.getRefService();
+        CharSequence _compile_2 = this.compile(_refService_2);
+        _builder.append(_compile_2, "");
         {
-          EList<RefService> _refService_1 = c.getRefService();
-          boolean _hasElements_1 = false;
-          for(final RefService s : _refService_1) {
-            if (!_hasElements_1) {
-              _hasElements_1 = true;
-            } else {
-              _builder.appendImmediate(",", "");
-            }
-            CharSequence _compile_1 = this.compile(s);
-            _builder.append(_compile_1, "");
+          EList<RefService> _refService_3 = c.getRefService();
+          RefService _get_3 = _refService_3.get(0);
+          EList<Service> _refs_1 = _get_3.getRefs();
+          for(final Service s : _refs_1) {
+            _builder.append(", ");
+            CharSequence _compile_3 = this.compile(s);
+            _builder.append(_compile_3, "");
           }
         }
       } else {
-        _builder.append("FOR anything");
+        _builder.append(" FOR anything");
       }
     }
     _builder.newLineIfNotEmpty();
@@ -439,66 +445,49 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
     }
     _builder.append("TRANSFER ");
     {
-      EList<RefPrivateData> _refPrivateData = d.getRefPrivateData();
-      int _length = ((Object[])Conversions.unwrapArray(_refPrivateData, Object.class)).length;
-      boolean _equals_2 = (_length == 8);
+      String _refPDAll = d.getRefPDAll();
+      boolean _equals_2 = Objects.equal(_refPDAll, "All");
       if (_equals_2) {
-        _builder.append("ALL-Information ");
+        _builder.append("ALL-Information");
       } else {
-        {
+        EList<RefPrivateData> _refPrivateData = d.getRefPrivateData();
+        boolean _isEmpty = _refPrivateData.isEmpty();
+        boolean _not = (!_isEmpty);
+        if (_not) {
           EList<RefPrivateData> _refPrivateData_1 = d.getRefPrivateData();
-          boolean _hasElements = false;
-          for(final RefPrivateData p : _refPrivateData_1) {
-            if (!_hasElements) {
-              _hasElements = true;
-            } else {
-              _builder.appendImmediate(",", "");
+          RefPrivateData _get = _refPrivateData_1.get(0);
+          PrivateData _refPrivateData_2 = _get.getRefPrivateData();
+          CharSequence _compile = this.compile(_refPrivateData_2);
+          _builder.append(_compile, "");
+          {
+            EList<RefPrivateData> _refPrivateData_3 = d.getRefPrivateData();
+            RefPrivateData _get_1 = _refPrivateData_3.get(0);
+            EList<PrivateData> _refs = _get_1.getRefs();
+            for(final PrivateData p : _refs) {
+              _builder.append(", ");
+              CharSequence _compile_1 = this.compile(p);
+              _builder.append(_compile_1, "");
             }
-            CharSequence _compile = this.compile(p);
-            _builder.append(_compile, "");
-            _builder.append(" ");
           }
         }
       }
     }
     {
       EList<RefRecipientSource> _refRecipientSource = d.getRefRecipientSource();
-      boolean _isEmpty = _refRecipientSource.isEmpty();
-      boolean _not = (!_isEmpty);
-      if (_not) {
+      boolean _isEmpty_1 = _refRecipientSource.isEmpty();
+      boolean _not_1 = (!_isEmpty_1);
+      if (_not_1) {
         _builder.append("FROM ");
         {
           EList<RefRecipientSource> _refRecipientSource_1 = d.getRefRecipientSource();
-          boolean _hasElements_1 = false;
+          boolean _hasElements = false;
           for(final RefRecipientSource rs : _refRecipientSource_1) {
-            if (!_hasElements_1) {
-              _hasElements_1 = true;
+            if (!_hasElements) {
+              _hasElements = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compile_1 = this.compile(rs);
-            _builder.append(_compile_1, "");
-          }
-        }
-        _builder.append(" ");
-      }
-    }
-    {
-      EList<RefRecipientTarget> _refRecipientTarget = d.getRefRecipientTarget();
-      boolean _isEmpty_1 = _refRecipientTarget.isEmpty();
-      boolean _not_1 = (!_isEmpty_1);
-      if (_not_1) {
-        _builder.append("TO ");
-        {
-          EList<RefRecipientTarget> _refRecipientTarget_1 = d.getRefRecipientTarget();
-          boolean _hasElements_2 = false;
-          for(final RefRecipientTarget rt : _refRecipientTarget_1) {
-            if (!_hasElements_2) {
-              _hasElements_2 = true;
-            } else {
-              _builder.appendImmediate(",", "");
-            }
-            CharSequence _compile_2 = this.compile(rt);
+            CharSequence _compile_2 = this.compile(rs);
             _builder.append(_compile_2, "");
           }
         }
@@ -506,26 +495,50 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
       }
     }
     {
-      EList<RefService> _refService = d.getRefService();
-      boolean _isEmpty_2 = _refService.isEmpty();
+      EList<RefRecipientTarget> _refRecipientTarget = d.getRefRecipientTarget();
+      boolean _isEmpty_2 = _refRecipientTarget.isEmpty();
       boolean _not_2 = (!_isEmpty_2);
       if (_not_2) {
-        _builder.append("FOR ");
+        _builder.append("TO ");
         {
-          EList<RefService> _refService_1 = d.getRefService();
-          boolean _hasElements_3 = false;
-          for(final RefService s : _refService_1) {
-            if (!_hasElements_3) {
-              _hasElements_3 = true;
+          EList<RefRecipientTarget> _refRecipientTarget_1 = d.getRefRecipientTarget();
+          boolean _hasElements_1 = false;
+          for(final RefRecipientTarget rt : _refRecipientTarget_1) {
+            if (!_hasElements_1) {
+              _hasElements_1 = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compile_3 = this.compile(s);
+            CharSequence _compile_3 = this.compile(rt);
             _builder.append(_compile_3, "");
           }
         }
+        _builder.append(" ");
+      }
+    }
+    {
+      EList<RefService> _refService = d.getRefService();
+      boolean _isEmpty_3 = _refService.isEmpty();
+      boolean _not_3 = (!_isEmpty_3);
+      if (_not_3) {
+        _builder.append(" FOR ");
+        EList<RefService> _refService_1 = d.getRefService();
+        RefService _get_2 = _refService_1.get(0);
+        Service _refService_2 = _get_2.getRefService();
+        CharSequence _compile_4 = this.compile(_refService_2);
+        _builder.append(_compile_4, "");
+        {
+          EList<RefService> _refService_3 = d.getRefService();
+          RefService _get_3 = _refService_3.get(0);
+          EList<Service> _refs_1 = _get_3.getRefs();
+          for(final Service s : _refs_1) {
+            _builder.append(", ");
+            CharSequence _compile_5 = this.compile(s);
+            _builder.append(_compile_5, "");
+          }
+        }
       } else {
-        _builder.append("FOR anything");
+        _builder.append(" FOR anything");
       }
     }
     _builder.newLineIfNotEmpty();
@@ -551,49 +564,56 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
     }
     _builder.append("RETAIN ");
     {
-      EList<RefPrivateData> _refPrivateData = r.getRefPrivateData();
-      int _length = ((Object[])Conversions.unwrapArray(_refPrivateData, Object.class)).length;
-      boolean _equals_2 = (_length == 8);
+      String _refPDAll = r.getRefPDAll();
+      boolean _equals_2 = Objects.equal(_refPDAll, "All");
       if (_equals_2) {
-        _builder.append("ALL-Information ");
+        _builder.append("ALL-Information");
       } else {
-        {
+        EList<RefPrivateData> _refPrivateData = r.getRefPrivateData();
+        boolean _isEmpty = _refPrivateData.isEmpty();
+        boolean _not = (!_isEmpty);
+        if (_not) {
           EList<RefPrivateData> _refPrivateData_1 = r.getRefPrivateData();
-          boolean _hasElements = false;
-          for(final RefPrivateData p : _refPrivateData_1) {
-            if (!_hasElements) {
-              _hasElements = true;
-            } else {
-              _builder.appendImmediate(",", "");
+          RefPrivateData _get = _refPrivateData_1.get(0);
+          PrivateData _refPrivateData_2 = _get.getRefPrivateData();
+          CharSequence _compile = this.compile(_refPrivateData_2);
+          _builder.append(_compile, "");
+          {
+            EList<RefPrivateData> _refPrivateData_3 = r.getRefPrivateData();
+            RefPrivateData _get_1 = _refPrivateData_3.get(0);
+            EList<PrivateData> _refs = _get_1.getRefs();
+            for(final PrivateData p : _refs) {
+              _builder.append(", ");
+              CharSequence _compile_1 = this.compile(p);
+              _builder.append(_compile_1, "");
             }
-            CharSequence _compile = this.compile(p);
-            _builder.append(_compile, "");
-            _builder.append(" ");
           }
         }
       }
     }
     {
       EList<RefService> _refService = r.getRefService();
-      boolean _isEmpty = _refService.isEmpty();
-      boolean _not = (!_isEmpty);
-      if (_not) {
-        _builder.append("FOR ");
+      boolean _isEmpty_1 = _refService.isEmpty();
+      boolean _not_1 = (!_isEmpty_1);
+      if (_not_1) {
+        _builder.append(" FOR ");
+        EList<RefService> _refService_1 = r.getRefService();
+        RefService _get_2 = _refService_1.get(0);
+        Service _refService_2 = _get_2.getRefService();
+        CharSequence _compile_2 = this.compile(_refService_2);
+        _builder.append(_compile_2, "");
         {
-          EList<RefService> _refService_1 = r.getRefService();
-          boolean _hasElements_1 = false;
-          for(final RefService s : _refService_1) {
-            if (!_hasElements_1) {
-              _hasElements_1 = true;
-            } else {
-              _builder.appendImmediate(",", "");
-            }
-            CharSequence _compile_1 = this.compile(s);
-            _builder.append(_compile_1, "");
+          EList<RefService> _refService_3 = r.getRefService();
+          RefService _get_3 = _refService_3.get(0);
+          EList<Service> _refs_1 = _get_3.getRefs();
+          for(final Service s : _refs_1) {
+            _builder.append(", ");
+            CharSequence _compile_3 = this.compile(s);
+            _builder.append(_compile_3, "");
           }
         }
       } else {
-        _builder.append("FOR anything");
+        _builder.append(" FOR anything");
       }
     }
     _builder.newLineIfNotEmpty();
@@ -619,49 +639,56 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
     }
     _builder.append("USE ");
     {
-      EList<RefPrivateData> _refPrivateData = u.getRefPrivateData();
-      int _length = ((Object[])Conversions.unwrapArray(_refPrivateData, Object.class)).length;
-      boolean _equals_2 = (_length == 8);
+      String _refPDAll = u.getRefPDAll();
+      boolean _equals_2 = Objects.equal(_refPDAll, "All");
       if (_equals_2) {
-        _builder.append("ALL-Information ");
+        _builder.append("ALL-Information");
       } else {
-        {
+        EList<RefPrivateData> _refPrivateData = u.getRefPrivateData();
+        boolean _isEmpty = _refPrivateData.isEmpty();
+        boolean _not = (!_isEmpty);
+        if (_not) {
           EList<RefPrivateData> _refPrivateData_1 = u.getRefPrivateData();
-          boolean _hasElements = false;
-          for(final RefPrivateData p : _refPrivateData_1) {
-            if (!_hasElements) {
-              _hasElements = true;
-            } else {
-              _builder.appendImmediate(",", "");
+          RefPrivateData _get = _refPrivateData_1.get(0);
+          PrivateData _refPrivateData_2 = _get.getRefPrivateData();
+          CharSequence _compile = this.compile(_refPrivateData_2);
+          _builder.append(_compile, "");
+          {
+            EList<RefPrivateData> _refPrivateData_3 = u.getRefPrivateData();
+            RefPrivateData _get_1 = _refPrivateData_3.get(0);
+            EList<PrivateData> _refs = _get_1.getRefs();
+            for(final PrivateData p : _refs) {
+              _builder.append(", ");
+              CharSequence _compile_1 = this.compile(p);
+              _builder.append(_compile_1, "");
             }
-            CharSequence _compile = this.compile(p);
-            _builder.append(_compile, "");
-            _builder.append(" ");
           }
         }
       }
     }
     {
       EList<RefService> _refService = u.getRefService();
-      boolean _isEmpty = _refService.isEmpty();
-      boolean _not = (!_isEmpty);
-      if (_not) {
-        _builder.append("FOR ");
+      boolean _isEmpty_1 = _refService.isEmpty();
+      boolean _not_1 = (!_isEmpty_1);
+      if (_not_1) {
+        _builder.append(" FOR ");
+        EList<RefService> _refService_1 = u.getRefService();
+        RefService _get_2 = _refService_1.get(0);
+        Service _refService_2 = _get_2.getRefService();
+        CharSequence _compile_2 = this.compile(_refService_2);
+        _builder.append(_compile_2, "");
         {
-          EList<RefService> _refService_1 = u.getRefService();
-          boolean _hasElements_1 = false;
-          for(final RefService s : _refService_1) {
-            if (!_hasElements_1) {
-              _hasElements_1 = true;
-            } else {
-              _builder.appendImmediate(",", "");
-            }
-            CharSequence _compile_1 = this.compile(s);
-            _builder.append(_compile_1, "");
+          EList<RefService> _refService_3 = u.getRefService();
+          RefService _get_3 = _refService_3.get(0);
+          EList<Service> _refs_1 = _get_3.getRefs();
+          for(final Service s : _refs_1) {
+            _builder.append(", ");
+            CharSequence _compile_3 = this.compile(s);
+            _builder.append(_compile_3, "");
           }
         }
       } else {
-        _builder.append("FOR anything");
+        _builder.append(" FOR anything");
       }
     }
     _builder.newLineIfNotEmpty();
@@ -687,48 +714,56 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
     }
     _builder.append("INFORM ");
     {
-      EList<RefPrivateData> _refPrivateData = i.getRefPrivateData();
-      int _length = ((Object[])Conversions.unwrapArray(_refPrivateData, Object.class)).length;
-      boolean _equals_2 = (_length == 8);
+      String _refPDAll = i.getRefPDAll();
+      boolean _equals_2 = Objects.equal(_refPDAll, "All");
       if (_equals_2) {
-        _builder.append("ALL-Information ");
-        {
+        _builder.append("ALL-Information");
+      } else {
+        EList<RefPrivateData> _refPrivateData = i.getRefPrivateData();
+        boolean _isEmpty = _refPrivateData.isEmpty();
+        boolean _not = (!_isEmpty);
+        if (_not) {
           EList<RefPrivateData> _refPrivateData_1 = i.getRefPrivateData();
-          boolean _hasElements = false;
-          for(final RefPrivateData p : _refPrivateData_1) {
-            if (!_hasElements) {
-              _hasElements = true;
-            } else {
-              _builder.appendImmediate(",", "");
+          RefPrivateData _get = _refPrivateData_1.get(0);
+          PrivateData _refPrivateData_2 = _get.getRefPrivateData();
+          CharSequence _compile = this.compile(_refPrivateData_2);
+          _builder.append(_compile, "");
+          {
+            EList<RefPrivateData> _refPrivateData_3 = i.getRefPrivateData();
+            RefPrivateData _get_1 = _refPrivateData_3.get(0);
+            EList<PrivateData> _refs = _get_1.getRefs();
+            for(final PrivateData p : _refs) {
+              _builder.append(", ");
+              CharSequence _compile_1 = this.compile(p);
+              _builder.append(_compile_1, "");
             }
-            CharSequence _compile = this.compile(p);
-            _builder.append(_compile, "");
-            _builder.append(" ");
           }
         }
       }
     }
     {
       EList<RefService> _refService = i.getRefService();
-      boolean _isEmpty = _refService.isEmpty();
-      boolean _not = (!_isEmpty);
-      if (_not) {
-        _builder.append("FOR ");
+      boolean _isEmpty_1 = _refService.isEmpty();
+      boolean _not_1 = (!_isEmpty_1);
+      if (_not_1) {
+        _builder.append(" FOR ");
+        EList<RefService> _refService_1 = i.getRefService();
+        RefService _get_2 = _refService_1.get(0);
+        Service _refService_2 = _get_2.getRefService();
+        CharSequence _compile_2 = this.compile(_refService_2);
+        _builder.append(_compile_2, "");
         {
-          EList<RefService> _refService_1 = i.getRefService();
-          boolean _hasElements_1 = false;
-          for(final RefService s : _refService_1) {
-            if (!_hasElements_1) {
-              _hasElements_1 = true;
-            } else {
-              _builder.appendImmediate(",", "");
-            }
-            CharSequence _compile_1 = this.compile(s);
-            _builder.append(_compile_1, "");
+          EList<RefService> _refService_3 = i.getRefService();
+          RefService _get_3 = _refService_3.get(0);
+          EList<Service> _refs_1 = _get_3.getRefs();
+          for(final Service s : _refs_1) {
+            _builder.append(", ");
+            CharSequence _compile_3 = this.compile(s);
+            _builder.append(_compile_3, "");
           }
         }
       } else {
-        _builder.append("FOR anything");
+        _builder.append(" FOR anything");
       }
     }
     _builder.newLineIfNotEmpty();
@@ -751,18 +786,16 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence compile(final RefPrivateData p) {
+  public CharSequence compile(final PrivateData p) {
     StringConcatenation _builder = new StringConcatenation();
-    PrivateData _refPrivateData = p.getRefPrivateData();
-    String _description = _refPrivateData.getDescription();
+    String _description = p.getDescription();
     _builder.append(_description, "");
     return _builder;
   }
   
-  public CharSequence compile(final RefService r) {
+  public CharSequence compile(final Service s) {
     StringConcatenation _builder = new StringConcatenation();
-    Service _refService = r.getRefService();
-    String _serviceName = _refService.getServiceName();
+    String _serviceName = s.getServiceName();
     _builder.append(_serviceName, "");
     return _builder;
   }
