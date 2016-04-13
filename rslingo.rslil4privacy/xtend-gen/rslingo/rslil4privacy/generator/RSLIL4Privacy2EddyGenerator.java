@@ -140,8 +140,8 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
             } else {
               _builder.appendImmediate(",", "\t");
             }
-            CharSequence _compileAll = this.compileAll(z_1);
-            _builder.append(_compileAll, "\t");
+            CharSequence _compile = this.compile(z_1);
+            _builder.append(_compile, "\t");
           }
         }
       }
@@ -232,13 +232,6 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence compileAll(final PrivateData p) {
-    StringConcatenation _builder = new StringConcatenation();
-    String _description = p.getDescription();
-    _builder.append(_description, "");
-    return _builder;
-  }
-  
   public CharSequence compileActor(final Recipient r) {
     StringConcatenation _builder = new StringConcatenation();
     {
@@ -247,8 +240,8 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
       boolean _not = (!_isEmpty);
       if (_not) {
         _builder.append("A ");
-        String _recipientName = r.getRecipientName();
-        _builder.append(_recipientName, "");
+        CharSequence _compileRecipient = this.compileRecipient(r);
+        _builder.append(_compileRecipient, "");
         _builder.append(" > ");
         {
           EList<RecipientPart> _recipientPart_1 = r.getRecipientPart();
@@ -259,8 +252,9 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compileRecipientPart = this.compileRecipientPart(part);
-            _builder.append(_compileRecipientPart, "");
+            Recipient _recipientPart_2 = part.getRecipientPart();
+            CharSequence _compileRecipient_1 = this.compileRecipient(_recipientPart_2);
+            _builder.append(_compileRecipient_1, "");
           }
         }
       }
@@ -269,10 +263,9 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence compileRecipientPart(final RecipientPart p) {
+  public CharSequence compileRecipient(final Recipient r) {
     StringConcatenation _builder = new StringConcatenation();
-    Recipient _recipientPart = p.getRecipientPart();
-    String _recipientName = _recipientPart.getRecipientName();
+    String _recipientName = r.getRecipientName();
     _builder.append(_recipientName, "");
     return _builder;
   }
@@ -285,8 +278,8 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
       boolean _not = (!_isEmpty);
       if (_not) {
         _builder.append("P ");
-        String _serviceName = s.getServiceName();
-        _builder.append(_serviceName, "");
+        CharSequence _compile = this.compile(s);
+        _builder.append(_compile, "");
         _builder.append(" > ");
         {
           EList<ServicePart> _servicePart_1 = s.getServicePart();
@@ -297,21 +290,14 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compilePurpose = this.compilePurpose(pur);
-            _builder.append(_compilePurpose, "");
+            Service _servicePart_2 = pur.getServicePart();
+            CharSequence _compile_1 = this.compile(_servicePart_2);
+            _builder.append(_compile_1, "");
           }
         }
       }
     }
     _builder.newLineIfNotEmpty();
-    return _builder;
-  }
-  
-  public CharSequence compilePurpose(final ServicePart p) {
-    StringConcatenation _builder = new StringConcatenation();
-    Service _servicePart = p.getServicePart();
-    String _serviceName = _servicePart.getServiceName();
-    _builder.append(_serviceName, "");
     return _builder;
   }
   
@@ -322,8 +308,8 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
       boolean _notEquals = (!Objects.equal(_name, null));
       if (_notEquals) {
         _builder.append("D ");
-        String _description = pd.getDescription();
-        _builder.append(_description, "");
+        CharSequence _compile = this.compile(pd);
+        _builder.append(_compile, "");
         _builder.append(" > ");
         {
           EList<Attribute> _attribute = pd.getAttribute();
@@ -347,7 +333,8 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
   public CharSequence compileAttribute(final Attribute a) {
     StringConcatenation _builder = new StringConcatenation();
     String _name = a.getName();
-    _builder.append(_name, "");
+    String _replaceAll = _name.replaceAll(" ", "-");
+    _builder.append(_replaceAll, "");
     return _builder;
   }
   
@@ -774,7 +761,8 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     Recipient _refRecipientSource = rs.getRefRecipientSource();
     String _recipientName = _refRecipientSource.getRecipientName();
-    _builder.append(_recipientName, "");
+    String _replaceAll = _recipientName.replaceAll(" ", "-");
+    _builder.append(_replaceAll, "");
     return _builder;
   }
   
@@ -782,21 +770,24 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     Recipient _refRecipientTarget = rt.getRefRecipientTarget();
     String _recipientName = _refRecipientTarget.getRecipientName();
-    _builder.append(_recipientName, "");
+    String _replaceAll = _recipientName.replaceAll(" ", "-");
+    _builder.append(_replaceAll, "");
     return _builder;
   }
   
   public CharSequence compile(final PrivateData p) {
     StringConcatenation _builder = new StringConcatenation();
     String _description = p.getDescription();
-    _builder.append(_description, "");
+    String _replaceAll = _description.replaceAll(" ", "-");
+    _builder.append(_replaceAll, "");
     return _builder;
   }
   
   public CharSequence compile(final Service s) {
     StringConcatenation _builder = new StringConcatenation();
     String _serviceName = s.getServiceName();
-    _builder.append(_serviceName, "");
+    String _replaceAll = _serviceName.replaceAll(" ", "-");
+    _builder.append(_replaceAll, "");
     return _builder;
   }
 }

@@ -13,12 +13,10 @@ import rslingo.rslil4privacy.rSLIL4Privacy.Informative
 import rslingo.rslil4privacy.rSLIL4Privacy.Policy
 import rslingo.rslil4privacy.rSLIL4Privacy.PrivateData
 import rslingo.rslil4privacy.rSLIL4Privacy.Recipient
-import rslingo.rslil4privacy.rSLIL4Privacy.RecipientPart
 import rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientSource
 import rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientTarget
 import rslingo.rslil4privacy.rSLIL4Privacy.Retention
 import rslingo.rslil4privacy.rSLIL4Privacy.Service
-import rslingo.rslil4privacy.rSLIL4Privacy.ServicePart
 import rslingo.rslil4privacy.rSLIL4Privacy.Usage
 
 /**
@@ -46,7 +44,7 @@ def compile(Policy p)
 	«IF !p.recipient.empty»«FOR x:p.recipient»«x.compileActor»«ENDFOR»«ENDIF»
 	«IF !p.service.empty»«FOR z:p.service»«z.compilePurpose»«ENDFOR»«ENDIF»
 	«IF !p.privateData.empty»«FOR y:p.privateData»«y.compileDatum»«ENDFOR»«ENDIF»
-	D ALL-Information > «IF !p.privateData.empty»«FOR z:p.privateData SEPARATOR ','»«z.compileAll»«ENDFOR»«ENDIF»
+	D ALL-Information > «IF !p.privateData.empty»«FOR z:p.privateData SEPARATOR ','»«z.compile»«ENDFOR»«ENDIF»
 SPEC POLICY
 	«IF !p.collection.empty»«FOR x:p.collection»«x.compileCollection»«ENDFOR»«ENDIF»
 	«IF !p.disclosure.empty»«FOR x:p.disclosure»«x.compileTransfer»«ENDFOR»«ENDIF»
@@ -54,32 +52,26 @@ SPEC POLICY
 	«IF !p.usage.empty»«FOR x:p.usage»«x.compileUsage»«ENDFOR»«ENDIF»
 	«IF !p.informative.empty»«FOR x:p.informative»«x.compileInformative»«ENDFOR»«ENDIF»
 '''
-
-def compileAll(PrivateData p)
-'''«p.description»'''
  
 def compileActor(Recipient r)
-'''«IF !r.recipientPart.empty»A «r.recipientName» > «FOR part:r.recipientPart SEPARATOR ','»«/*
-*/»«part.compileRecipientPart»«ENDFOR»«ENDIF»
+'''«IF !r.recipientPart.empty»A «r.compileRecipient» > «FOR part:r.recipientPart SEPARATOR ','»«/*
+*/»«part.recipientPart.compileRecipient»«ENDFOR»«ENDIF»
 '''
 
-def compileRecipientPart(RecipientPart p)
-'''«p.recipientPart.recipientName»'''
+def compileRecipient(Recipient r)
+'''«r.recipientName»'''
 
 def compilePurpose(Service s)
-'''«IF !s.servicePart.empty»P «s.serviceName» > «FOR pur:s.servicePart SEPARATOR ','»«/*
-*/»«pur.compilePurpose»«ENDFOR»«ENDIF»
+'''«IF !s.servicePart.empty»P «s.compile» > «FOR pur:s.servicePart SEPARATOR ','»«/*
+*/»«pur.servicePart.compile»«ENDFOR»«ENDIF»
 '''
-
-def compilePurpose(ServicePart p)
-'''«p.servicePart.serviceName»'''
  
 def compileDatum(PrivateData pd)
-'''«IF pd.name != null»D «pd.description» > «FOR pdat:pd.attribute SEPARATOR ','»«pdat.compileAttribute»«ENDFOR»«ENDIF»
+'''«IF pd.name != null»D «pd.compile» > «FOR pdat:pd.attribute SEPARATOR ','»«pdat.compileAttribute»«ENDFOR»«ENDIF»
 '''
 
 def compileAttribute(Attribute a)
-'''«a.name»'''
+'''«a.name.replaceAll(" ", "-")»'''
  
 def compileCollection(Collection c)
 '''«IF c.modality == 'Permitted'»P «ELSEIF c.modality == 'Obligation'»O «ELSE»R «ENDIF»COLLECT «/*
@@ -113,12 +105,12 @@ def compileInformative(Informative i)
 */»«IF !i.refService.empty» FOR «i.refService.get(0).refService.compile»«FOR s:i.refService.get(0).refs», «s.compile»«ENDFOR»«ELSE» FOR anything«ENDIF»
 '''
 
-def compile(RefRecipientSource rs) '''«rs.refRecipientSource.recipientName»'''
+def compile(RefRecipientSource rs) '''«rs.refRecipientSource.recipientName.replaceAll(" ", "-")»'''
 
-def compile(RefRecipientTarget rt) '''«rt.refRecipientTarget.recipientName»'''
+def compile(RefRecipientTarget rt) '''«rt.refRecipientTarget.recipientName.replaceAll(" ", "-")»'''
 
-def compile(PrivateData p) '''«p.description»'''
+def compile(PrivateData p) '''«p.description.replaceAll(" ", "-")»'''
 
-def compile(Service s) '''«s.serviceName»'''
+def compile(Service s) '''«s.serviceName.replaceAll(" ", "-")»'''
 
 }
