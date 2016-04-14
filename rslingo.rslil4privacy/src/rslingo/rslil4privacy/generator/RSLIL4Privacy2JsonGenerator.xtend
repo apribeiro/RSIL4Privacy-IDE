@@ -60,9 +60,9 @@ def compileCollection(Collection c)
 		"Description": "«c.description»",
 		"Condition": "«c.condition»",
 «««		«IF !coll.recipientPartCollection.empty»"PartOf": «FOR b:coll.recipientPartCollection SEPARATOR ','»«b.compilerpartcoll»«ENDFOR»,«ENDIF»
-		«IF !c.refPrivateData.empty»"PrivateDatums": [«c.refPrivateData.get(0).refPrivateData.compileRefPrivateData»«FOR p:c.refPrivateData.get(0).refs», «p.compileRefPrivateData»«ENDFOR»],«ELSEIF c.refPDAll == 'All'»"PrivateDatums": ["All"],«ENDIF»
-		«IF !c.refService.empty»"Services": [«c.refService.get(0).refService.compileRefService»«FOR s:c.refService.get(0).refs», «s.compileRefService»«ENDFOR»],«ELSEIF c.refSAll == 'All'»"Services": ["All"],«ENDIF»
-		«IF !c.refEnforcement.empty»"Enforcements": [«c.refEnforcement.get(0).refEnforcement.compileRefEnforcement»«FOR e:c.refEnforcement.get(0).refs», «e.compileRefEnforcement»«ENDFOR»],«ELSEIF c.refEAll == 'All'»"Enforcements": ["All"],«ENDIF»
+		«IF c.refPrivateData != null»"PrivateDatums": [«c.refPrivateData.refPrivateData.compileRefPrivateData»«FOR p:c.refPrivateData.refs», «p.compileRefPrivateData»«ENDFOR»],«ELSEIF c.refPDAll == 'All'»"PrivateDatums": ["All"],«ENDIF»
+		«IF c.refService != null»"Services": [«c.refService.refService.compileRefService»«FOR s:c.refService.refs», «s.compileRefService»«ENDFOR»],«ELSEIF c.refSAll == 'All'»"Services": ["All"],«ENDIF»
+		«IF c.refEnforcement != null»"Enforcements": [«c.refEnforcement.refEnforcement.compileRefEnforcement»«FOR e:c.refEnforcement.refs», «e.compileRefEnforcement»«ENDFOR»],«ELSEIF c.refEAll == 'All'»"Enforcements": ["All"],«ENDIF»
 		"Type": "«IF c.modality=='Permission'»Permission«ELSEIF c.modality=='Obligation'»Obligation«ELSE»Prohibition«ENDIF»"
 	}
 '''
@@ -73,10 +73,10 @@ def compileDisclosure(Disclosure d)
 		"Description": "«d.description»",
 		"Condition": "«d.condition»",
 «««		«IF !dis.recipientPartdis.empty»"PartOf": «FOR b:dis.recipientPartdis SEPARATOR ','»«b.compilerrecipientPartdis»«ENDFOR»,«ENDIF»
-		«IF !d.refRecipient.empty»"Recipients": [«d.refRecipient.get(0).refRecipient.compileRefRecipient»«FOR r:d.refRecipient.get(0).refs», «r.compileRefRecipient»«ENDFOR»],«ELSEIF d.refRAll == 'All'»"Recipients": ["All"],«ENDIF»
-		«IF !d.refPrivateData.empty»"PrivateDatums": [«d.refPrivateData.get(0).refPrivateData.compileRefPrivateData»«FOR p:d.refPrivateData.get(0).refs», «p.compileRefPrivateData»«ENDFOR»],«ELSEIF d.refPDAll == 'All'»"PrivateDatums": ["All"],«ENDIF»
-		«IF !d.refService.empty»"Services": [«d.refService.get(0).refService.compileRefService»«FOR s:d.refService.get(0).refs», «s.compileRefService»«ENDFOR»],«ELSEIF d.refSAll == 'All'»"Services": ["All"],«ENDIF»
-		«IF !d.refEnforcement.empty»"Enforcements": [«d.refEnforcement.get(0).refEnforcement.compileRefEnforcement»«FOR e:d.refEnforcement.get(0).refs», «e.compileRefEnforcement»«ENDFOR»],«ELSEIF d.refEAll == 'All'»"Enforcements": ["All"],«ENDIF»
+		«IF d.refRecipient != null»"Recipients": [«d.refRecipient.refRecipient.compileRefRecipient»«FOR r:d.refRecipient.refs», «r.compileRefRecipient»«ENDFOR»],«ELSEIF d.refRAll == 'All'»"Recipients": ["All"],«ENDIF»
+		«IF d.refPrivateData != null»"PrivateDatums": [«d.refPrivateData.refPrivateData.compileRefPrivateData»«FOR p:d.refPrivateData.refs», «p.compileRefPrivateData»«ENDFOR»],«ELSEIF d.refPDAll == 'All'»"PrivateDatums": ["All"],«ENDIF»
+		«IF d.refService != null»"Services": [«d.refService.refService.compileRefService»«FOR s:d.refService.refs», «s.compileRefService»«ENDFOR»],«ELSEIF d.refSAll == 'All'»"Services": ["All"],«ENDIF»
+		«IF d.refEnforcement != null»"Enforcements": [«d.refEnforcement.refEnforcement.compileRefEnforcement»«FOR e:d.refEnforcement.refs», «e.compileRefEnforcement»«ENDFOR»],«ELSEIF d.refEAll == 'All'»"Enforcements": ["All"],«ENDIF»
 		"Type": "«IF d.modality=='Permission'»Permission«ELSEIF d.modality=='Obligation'»Obligation«ELSE»Prohibition«ENDIF»"
 	}
 '''
@@ -87,10 +87,10 @@ def compileRetention(Retention r)
 		"Description": "«r.description»",
 		"Condition": "«r.condition»",
 «««		«IF !ret.retentionrecipientPart.empty»"PartOf": «FOR b:ret.retentionrecipientPart SEPARATOR ','»«b.compilerpartret»«ENDFOR»,«ENDIF»
-		«IF !r.period.empty»"Period": "«r.period»",«ENDIF»
-		«IF !r.refPrivateData.empty»"PrivateDatums": [«r.refPrivateData.get(0).refPrivateData.compileRefPrivateData»«FOR p:r.refPrivateData.get(0).refs», «p.compileRefPrivateData»«ENDFOR»],«ELSEIF r.refPDAll == 'All'»"PrivateDatums": ["All"],«ENDIF»
-		«IF !r.refService.empty»"Services": [«r.refService.get(0).refService.compileRefService»«FOR s:r.refService.get(0).refs», «s.compileRefService»«ENDFOR»],«ELSEIF r.refSAll == 'All'»"Services": ["All"],«ENDIF»
-		«IF !r.refEnforcement.empty»"Enforcements": [«r.refEnforcement.get(0).refEnforcement.compileRefEnforcement»«FOR e:r.refEnforcement.get(0).refs», «e.compileRefEnforcement»«ENDFOR»],«ELSEIF r.refEAll == 'All'»"Enforcements": ["All"],«ENDIF»
+		«IF r.period.empty»"Period": "«r.period»",«ENDIF»
+		«IF r.refPrivateData != null»"PrivateDatums": [«r.refPrivateData.refPrivateData.compileRefPrivateData»«FOR p:r.refPrivateData.refs», «p.compileRefPrivateData»«ENDFOR»],«ELSEIF r.refPDAll == 'All'»"PrivateDatums": ["All"],«ENDIF»
+		«IF r.refService != null»"Services": [«r.refService.refService.compileRefService»«FOR s:r.refService.refs», «s.compileRefService»«ENDFOR»],«ELSEIF r.refSAll == 'All'»"Services": ["All"],«ENDIF»
+		«IF r.refEnforcement != null»"Enforcements": [«r.refEnforcement.refEnforcement.compileRefEnforcement»«FOR e:r.refEnforcement.refs», «e.compileRefEnforcement»«ENDFOR»],«ELSEIF r.refEAll == 'All'»"Enforcements": ["All"],«ENDIF»
 		"Type": "«IF r.modality=='Permission'»Permission«ELSEIF r.modality=='Obligation'»Obligation«ELSE»Prohibition«ENDIF»"
 	}
 '''
@@ -101,9 +101,9 @@ def compileUsage(Usage u)
 		"Description": "«u.description»",
 		"Condition": "«u.condition»",
 «««		«IF !use.usagerecipientPart.empty»"PartOf": «FOR b:use.usagerecipientPart SEPARATOR ','»«b.compilerpartusage»«ENDFOR»,«ENDIF»
-		«IF !u.refPrivateData.empty»"PrivateDatums": [«u.refPrivateData.get(0).refPrivateData.compileRefPrivateData»«FOR p:u.refPrivateData.get(0).refs», «p.compileRefPrivateData»«ENDFOR»],«ELSEIF u.refPDAll == 'All'»"PrivateDatums": ["All"],«ENDIF»
-		«IF !u.refService.empty»"Services": [«u.refService.get(0).refService.compileRefService»«FOR s:u.refService.get(0).refs», «s.compileRefService»«ENDFOR»],«ELSEIF u.refSAll == 'All'»"Services": ["All"],«ENDIF»
-		«IF !u.refEnforcement.empty»"Enforcements": [«u.refEnforcement.get(0).refEnforcement.compileRefEnforcement»«FOR e:u.refEnforcement.get(0).refs», «e.compileRefEnforcement»«ENDFOR»],«ELSEIF u.refEAll == 'All'»"Enforcements": ["All"],«ENDIF»
+		«IF u.refPrivateData != null»"PrivateDatums": [«u.refPrivateData.refPrivateData.compileRefPrivateData»«FOR p:u.refPrivateData.refs», «p.compileRefPrivateData»«ENDFOR»],«ELSEIF u.refPDAll == 'All'»"PrivateDatums": ["All"],«ENDIF»
+		«IF u.refService != null»"Services": [«u.refService.refService.compileRefService»«FOR s:u.refService.refs», «s.compileRefService»«ENDFOR»],«ELSEIF u.refSAll == 'All'»"Services": ["All"],«ENDIF»
+		«IF u.refEnforcement != null»"Enforcements": [«u.refEnforcement.refEnforcement.compileRefEnforcement»«FOR e:u.refEnforcement.refs», «e.compileRefEnforcement»«ENDFOR»],«ELSEIF u.refEAll == 'All'»"Enforcements": ["All"],«ENDIF»
 		"Type": "«IF u.modality=='Permission'»Permission«ELSEIF u.modality=='Obligation'»Obligation«ELSE»Prohibition«ENDIF»"
 	}
 '''
@@ -114,9 +114,9 @@ def compileInformative(Informative i)
 		"Description": "«i.description»",
 		"Condition": "«i.condition»",
 «««		«IF !inf. .empty»"PartOf": «FOR b:inf.infrecipientPart SEPARATOR ','»«b.compilerpartinf»«ENDFOR»,«ENDIF»
-		«IF !i.refPrivateData.empty»"PrivateDatums": [«i.refPrivateData.get(0).refPrivateData.compileRefPrivateData»«FOR p:i.refPrivateData.get(0).refs», «p.compileRefPrivateData»«ENDFOR»],«ELSEIF i.refPDAll == 'All'»"PrivateDatums": ["All"],«ENDIF»
-		«IF !i.refService.empty»"Services": [«i.refService.get(0).refService.compileRefService»«FOR s:i.refService.get(0).refs», «s.compileRefService»«ENDFOR»],«ELSEIF i.refSAll == 'All'»"Services": ["All"],«ENDIF»
-		«IF !i.refEnforcement.empty»"Enforcements": [«i.refEnforcement.get(0).refEnforcement.compileRefEnforcement»«FOR e:i.refEnforcement.get(0).refs», «e.compileRefEnforcement»«ENDFOR»],«ELSEIF i.refEAll == 'All'»"Enforcements": ["All"],«ENDIF»
+		«IF i.refPrivateData != null»"PrivateDatums": [«i.refPrivateData.refPrivateData.compileRefPrivateData»«FOR p:i.refPrivateData.refs», «p.compileRefPrivateData»«ENDFOR»],«ELSEIF i.refPDAll == 'All'»"PrivateDatums": ["All"],«ENDIF»
+		«IF i.refService != null»"Services": [«i.refService.refService.compileRefService»«FOR s:i.refService.refs», «s.compileRefService»«ENDFOR»],«ELSEIF i.refSAll == 'All'»"Services": ["All"],«ENDIF»
+		«IF i.refEnforcement != null»"Enforcements": [«i.refEnforcement.refEnforcement.compileRefEnforcement»«FOR e:i.refEnforcement.refs», «e.compileRefEnforcement»«ENDFOR»],«ELSEIF i.refEAll == 'All'»"Enforcements": ["All"],«ENDIF»
 		"Type": "«IF i.modality=='Permission'»Permission«ELSEIF i.modality=='Obligation'»Obligation«ELSE»Prohibition«ENDIF»"
 	}
 '''
@@ -173,7 +173,7 @@ def compileService(Service s)
 '''	{
 		"ID": "«s.name»",
 		"Description": "«s.description»",
-		«IF !s.refPrivateData.empty»"PrivateDatums": [«s.refPrivateData.get(0).refPrivateData.compileRefPrivateData»«FOR p:s.refPrivateData.get(0).refs», «p.compileRefPrivateData»«ENDFOR»],«ELSEIF s.refPDAll == 'All'»"PrivateDatums": ["All"],«ENDIF»
+		«IF s.refPrivateData != null»"PrivateDatums": [«s.refPrivateData.refPrivateData.compileRefPrivateData»«FOR p:s.refPrivateData.refs», «p.compileRefPrivateData»«ENDFOR»],«ELSEIF s.refPDAll == 'All'»"PrivateDatums": ["All"],«ENDIF»
 		«IF !s.servicePart.empty»"Service_Parts": [«FOR sp:s.servicePart SEPARATOR ','»«sp.compilerservicePart»«ENDFOR»]«ENDIF»
 	}
 '''

@@ -97,7 +97,7 @@ def compile(Service s)
 '''
 «s.serviceName»:«s.description»,
 	«IF !s.servicePart.empty»Service_Part: «FOR part:s.servicePart SEPARATOR ','»«part.compileServicePart»«ENDFOR»,«ENDIF»
-	«IF !s.refPrivateData.empty»Refers To PrivateData: «s.refPrivateData.get(0).refPrivateData.compileRefPrivateData»«FOR part:s.refPrivateData.get(0).refs», «part.compileRefPrivateData»«ENDFOR»,«ELSEIF s.refPDAll == 'All'»Refers To PrivateData: All,«ENDIF»
+	«IF s.refPrivateData != null»Refers To PrivateData: «s.refPrivateData.refPrivateData.compileRefPrivateData»«FOR part:s.refPrivateData.refs», «part.compileRefPrivateData»«ENDFOR»,«ELSEIF s.refPDAll == 'All'»Refers To PrivateData: All,«ENDIF»
 '''
 //----------------------------------------------------
 def compile(Recipient r)
@@ -120,9 +120,9 @@ def compile(Collection c)
 '''
 «c.name»(«c.modality»): «c.description»,
 ««««IF !col.partofCollection.empty»Part Of Collection:«FOR a:col.partofCollection SEPARATOR ','»«a.compilercolpart»«ENDFOR»,«ENDIF»
-«IF !c.refService.empty»Refers To Service: «c.refService.get(0).refService.compileRefService»«FOR s:c.refService.get(0).refs», «s.compileRefService»«ENDFOR»,«ELSEIF c.refSAll == 'All'»Refers To Service: All,«ENDIF»
-«IF !c.refPrivateData.empty»Refers To PrivateData: «c.refPrivateData.get(0).refPrivateData.compileRefPrivateData»«FOR p:c.refPrivateData.get(0).refs», «p.compileRefPrivateData»«ENDFOR»,«ELSEIF c.refPDAll == 'All'»Refers To PrivateData: All,«ENDIF»
-«IF !c.refEnforcement.empty»Refers To Enforcement: «c.refEnforcement.get(0).refEnforcement.compileRefEnforcement»«FOR e:c.refEnforcement.get(0).refs», «e.compileRefEnforcement»«ENDFOR»,«ELSEIF c.refEAll == 'All'»Refers To Enforcement: All,«ENDIF»
+«IF c.refService != null»Refers To Service: «c.refService.refService.compileRefService»«FOR s:c.refService.refs», «s.compileRefService»«ENDFOR»,«ELSEIF c.refSAll == 'All'»Refers To Service: All,«ENDIF»
+«IF c.refPrivateData != null»Refers To PrivateData: «c.refPrivateData.refPrivateData.compileRefPrivateData»«FOR p:c.refPrivateData.refs», «p.compileRefPrivateData»«ENDFOR»,«ELSEIF c.refPDAll == 'All'»Refers To PrivateData: All,«ENDIF»
+«IF c.refEnforcement != null»Refers To Enforcement: «c.refEnforcement.refEnforcement.compileRefEnforcement»«FOR e:c.refEnforcement.refs», «e.compileRefEnforcement»«ENDFOR»,«ELSEIF c.refEAll == 'All'»Refers To Enforcement: All,«ENDIF»
 '''
 //def compilercolpart (PartofCollection partc)
 //'''«partc.partofcoll.name»'''
@@ -131,10 +131,9 @@ def compile(Disclosure d)
 '''
 «d.name»(«d.modality»): «d.description»,
 ««««IF !dis.partofdis.empty»Part Of Disclosure:«FOR a:dis.partofdis SEPARATOR ','»«a.compilerdispart»«ENDFOR»,«ENDIF»
-«IF !d.refRecipient.empty»Refers To Recipient: «d.refRecipient.get(0).refRecipient.compileRefRecipient»«FOR p:d.refRecipient.get(0).refs», «p.compileRefRecipient»«ENDFOR»,«ELSEIF d.refRAll == 'All'»Refers To Recipient: All,«ENDIF»
-«IF !d.refService.empty»Refers To Service: «d.refService.get(0).refService.compileRefService»«FOR s:d.refService.get(0).refs», «s.compileRefService»«ENDFOR»,«ELSEIF d.refSAll == 'All'»Refers To Service: All,«ENDIF»
-«IF !d.refPrivateData.empty»Refers To PrivateData: «d.refPrivateData.get(0).refPrivateData.compileRefPrivateData»«FOR p:d.refPrivateData.get(0).refs», «p.compileRefPrivateData»«ENDFOR»,«ELSEIF d.refPDAll == 'All'»Refers To PrivateData: All,«ENDIF»
-«IF !d.refEnforcement.empty»Refers To Enforcement: «d.refEnforcement.get(0).refEnforcement.compileRefEnforcement»«FOR e:d.refEnforcement.get(0).refs», «e.compileRefEnforcement»«ENDFOR»,«ELSEIF d.refEAll == 'All'»Refers To Enforcement: All,«ENDIF»
+«IF d.refRecipient != null»Refers To Recipient: «d.refRecipient.refRecipient.compileRefRecipient»«FOR p:d.refRecipient.refs», «p.compileRefRecipient»«ENDFOR»,«ELSEIF d.refRAll == 'All'»Refers To Recipient: All,«ENDIF»
+«IF d.refService != null»Refers To Service: «d.refService.refService.compileRefService»«FOR s:d.refService.refs», «s.compileRefService»«ENDFOR»,«ELSEIF d.refSAll == 'All'»Refers To Service: All,«ENDIF»
+«IF d.refEnforcement != null»Refers To Enforcement: «d.refEnforcement.refEnforcement.compileRefEnforcement»«FOR e:d.refEnforcement.refs», «e.compileRefEnforcement»«ENDFOR»,«ELSEIF d.refEAll == 'All'»Refers To Enforcement: All,«ENDIF»
 '''
 //def compilerdispart (Partofdis partd)
 //'''«partd.partofdis.name»'''
@@ -143,9 +142,9 @@ def compile(Retention r)
 '''
 «r.name»(«r.modality»-«r.period»): «r.description»,
 ««««IF !ret.retentionpartof.empty»Part Of Retention:«FOR a:ret.retentionpartof SEPARATOR ','»«a.compilerretpart»«ENDFOR»,«ENDIF»
-«IF !r.refService.empty»Refers To Service: «r.refService.get(0).refService.compileRefService»«FOR s:r.refService.get(0).refs», «s.compileRefService»«ENDFOR»,«ELSEIF r.refSAll == 'All'»Refers To Service: All,«ENDIF»
-«IF !r.refPrivateData.empty»Refers To PrivateData: «r.refPrivateData.get(0).refPrivateData.compileRefPrivateData»«FOR p:r.refPrivateData.get(0).refs», «p.compileRefPrivateData»«ENDFOR»,«ELSEIF r.refPDAll == 'All'»Refers To PrivateData: All,«ENDIF»
-«IF !r.refEnforcement.empty»Refers To Enforcement: «r.refEnforcement.get(0).refEnforcement.compileRefEnforcement»«FOR e:r.refEnforcement.get(0).refs», «e.compileRefEnforcement»«ENDFOR»,«ELSEIF r.refEAll == 'All'»Refers To Enforcement: All,«ENDIF»
+«IF r.refService != null»Refers To Service: «r.refService.refService.compileRefService»«FOR s:r.refService.refs», «s.compileRefService»«ENDFOR»,«ELSEIF r.refSAll == 'All'»Refers To Service: All,«ENDIF»
+«IF r.refPrivateData != null»Refers To PrivateData: «r.refPrivateData.refPrivateData.compileRefPrivateData»«FOR p:r.refPrivateData.refs», «p.compileRefPrivateData»«ENDFOR»,«ELSEIF r.refPDAll == 'All'»Refers To PrivateData: All,«ENDIF»
+«IF r.refEnforcement != null»Refers To Enforcement: «r.refEnforcement.refEnforcement.compileRefEnforcement»«FOR e:r.refEnforcement.refs», «e.compileRefEnforcement»«ENDFOR»,«ELSEIF r.refEAll == 'All'»Refers To Enforcement: All,«ENDIF»
 '''
 //def compilerretpart (Retentionpartof partr)
 //'''«partr.partofret.name»'''
@@ -154,9 +153,9 @@ def compile(Usage u)
 '''
 «u.name»(«u.modality»): «u.description»,
 ««««IF !u.usagepartof.empty»Part Of Usage:«FOR a:u.usagepartof SEPARATOR ','»«a.compilerusepart»«ENDFOR»,«ENDIF»
-«IF !u.refService.empty»Refers To Service: «u.refService.get(0).refService.compileRefService»«FOR s:u.refService.get(0).refs», «s.compileRefService»«ENDFOR»,«ELSEIF u.refSAll == 'All'»Refers To Service: All,«ENDIF»
-«IF !u.refPrivateData.empty»Refers To PrivateData: «u.refPrivateData.get(0).refPrivateData.compileRefPrivateData»«FOR p:u.refPrivateData.get(0).refs», «p.compileRefPrivateData»«ENDFOR»,«ELSEIF u.refPDAll == 'All'»Refers To PrivateData: All,«ENDIF»
-«IF !u.refEnforcement.empty»Refers To Enforcement: «u.refEnforcement.get(0).refEnforcement.compileRefEnforcement»«FOR e:u.refEnforcement.get(0).refs», «e.compileRefEnforcement»«ENDFOR»,«ELSEIF u.refEAll == 'All'»Refers To Enforcement: All,«ENDIF»
+«IF u.refService != null»Refers To Service: «u.refService.refService.compileRefService»«FOR s:u.refService.refs», «s.compileRefService»«ENDFOR»,«ELSEIF u.refSAll == 'All'»Refers To Service: All,«ENDIF»
+«IF u.refPrivateData != null»Refers To PrivateData: «u.refPrivateData.refPrivateData.compileRefPrivateData»«FOR p:u.refPrivateData.refs», «p.compileRefPrivateData»«ENDFOR»,«ELSEIF u.refPDAll == 'All'»Refers To PrivateData: All,«ENDIF»
+«IF u.refEnforcement != null»Refers To Enforcement: «u.refEnforcement.refEnforcement.compileRefEnforcement»«FOR e:u.refEnforcement.refs», «e.compileRefEnforcement»«ENDFOR»,«ELSEIF u.refEAll == 'All'»Refers To Enforcement: All,«ENDIF»
 '''
 //def compilerusepart (Usagepartof partu)
 //'''«partu.partofusage.name»'''
@@ -165,9 +164,9 @@ def compile(Informative i)
 '''
 «i.name»(«i.modality»): «i.description»,
 ««««IF !I.infpartof.empty»Part Of Informative:«FOR a:I.infpartof SEPARATOR ','»«a.compilerIpart»«ENDFOR»,«ENDIF»
-«IF !i.refService.empty»Refers To Service: «i.refService.get(0).refService.compileRefService»«FOR s:i.refService.get(0).refs», «s.compileRefService»«ENDFOR»,«ELSEIF i.refSAll == 'All'»Refers To Service: All,«ENDIF»
-«IF !i.refPrivateData.empty»Refers To PrivateData: «i.refPrivateData.get(0).refPrivateData.compileRefPrivateData»«FOR p:i.refPrivateData.get(0).refs», «p.compileRefPrivateData»«ENDFOR»,«ELSEIF i.refPDAll == 'All'»Refers To PrivateData: All,«ENDIF»
-«IF !i.refEnforcement.empty»Refers To Enforcement: «i.refEnforcement.get(0).refEnforcement.compileRefEnforcement»«FOR e:i.refEnforcement.get(0).refs», «e.compileRefEnforcement»«ENDFOR»,«ELSEIF i.refEAll == 'All'»Refers To Enforcement: All,«ENDIF»
+«IF i.refService != null»Refers To Service: «i.refService.refService.compileRefService»«FOR s:i.refService.refs», «s.compileRefService»«ENDFOR»,«ELSEIF i.refSAll == 'All'»Refers To Service: All,«ENDIF»
+«IF i.refPrivateData != null»Refers To PrivateData: «i.refPrivateData.refPrivateData.compileRefPrivateData»«FOR p:i.refPrivateData.refs», «p.compileRefPrivateData»«ENDFOR»,«ELSEIF i.refPDAll == 'All'»Refers To PrivateData: All,«ENDIF»
+«IF i.refEnforcement != null»Refers To Enforcement: «i.refEnforcement.refEnforcement.compileRefEnforcement»«FOR e:i.refEnforcement.refs», «e.compileRefEnforcement»«ENDFOR»,«ELSEIF i.refEAll == 'All'»Refers To Enforcement: All,«ENDIF»
 '''
 //def compilerIpart (Infpartof partI)
 //'''«partI.refinf.name»'''

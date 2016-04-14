@@ -108,20 +108,30 @@ public interface Service extends EObject
   void setDescription(String value);
 
   /**
-   * Returns the value of the '<em><b>Ref Private Data</b></em>' containment reference list.
-   * The list contents are of type {@link rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData}.
+   * Returns the value of the '<em><b>Ref Private Data</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Ref Private Data</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Ref Private Data</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Ref Private Data</em>' containment reference list.
+   * @return the value of the '<em>Ref Private Data</em>' containment reference.
+   * @see #setRefPrivateData(RefPrivateData)
    * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getService_RefPrivateData()
    * @model containment="true"
    * @generated
    */
-  EList<RefPrivateData> getRefPrivateData();
+  RefPrivateData getRefPrivateData();
+
+  /**
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Service#getRefPrivateData <em>Ref Private Data</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Ref Private Data</em>' containment reference.
+   * @see #getRefPrivateData()
+   * @generated
+   */
+  void setRefPrivateData(RefPrivateData value);
 
   /**
    * Returns the value of the '<em><b>Ref PD All</b></em>' attribute.

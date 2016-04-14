@@ -920,7 +920,7 @@ rule__Service__Alternatives_6_1
 :
 (
 { before(grammarAccess.getServiceAccess().getRefPrivateDataAssignment_6_1_0()); }
-(rule__Service__RefPrivateDataAssignment_6_1_0)*
+(rule__Service__RefPrivateDataAssignment_6_1_0)
 { after(grammarAccess.getServiceAccess().getRefPrivateDataAssignment_6_1_0()); }
 )
 
@@ -1036,7 +1036,7 @@ rule__Collection__Alternatives_8_1
 :
 (
 { before(grammarAccess.getCollectionAccess().getRefPrivateDataAssignment_8_1_0()); }
-(rule__Collection__RefPrivateDataAssignment_8_1_0)*
+(rule__Collection__RefPrivateDataAssignment_8_1_0)
 { after(grammarAccess.getCollectionAccess().getRefPrivateDataAssignment_8_1_0()); }
 )
 
@@ -1058,7 +1058,7 @@ rule__Collection__Alternatives_9_1
 :
 (
 { before(grammarAccess.getCollectionAccess().getRefServiceAssignment_9_1_0()); }
-(rule__Collection__RefServiceAssignment_9_1_0)*
+(rule__Collection__RefServiceAssignment_9_1_0)
 { after(grammarAccess.getCollectionAccess().getRefServiceAssignment_9_1_0()); }
 )
 
@@ -1080,7 +1080,7 @@ rule__Collection__Alternatives_10_1
 :
 (
 { before(grammarAccess.getCollectionAccess().getRefEnforcementAssignment_10_1_0()); }
-(rule__Collection__RefEnforcementAssignment_10_1_0)*
+(rule__Collection__RefEnforcementAssignment_10_1_0)
 { after(grammarAccess.getCollectionAccess().getRefEnforcementAssignment_10_1_0()); }
 )
 
@@ -1136,7 +1136,7 @@ rule__Disclosure__Alternatives_8_1
 :
 (
 { before(grammarAccess.getDisclosureAccess().getRefRecipientAssignment_8_1_0()); }
-(rule__Disclosure__RefRecipientAssignment_8_1_0)*
+(rule__Disclosure__RefRecipientAssignment_8_1_0)
 { after(grammarAccess.getDisclosureAccess().getRefRecipientAssignment_8_1_0()); }
 )
 
@@ -1158,7 +1158,7 @@ rule__Disclosure__Alternatives_9_1
 :
 (
 { before(grammarAccess.getDisclosureAccess().getRefRecipientSourceAssignment_9_1_0()); }
-(rule__Disclosure__RefRecipientSourceAssignment_9_1_0)*
+(rule__Disclosure__RefRecipientSourceAssignment_9_1_0)
 { after(grammarAccess.getDisclosureAccess().getRefRecipientSourceAssignment_9_1_0()); }
 )
 
@@ -1180,7 +1180,7 @@ rule__Disclosure__Alternatives_10_1
 :
 (
 { before(grammarAccess.getDisclosureAccess().getRefRecipientTargetAssignment_10_1_0()); }
-(rule__Disclosure__RefRecipientTargetAssignment_10_1_0)*
+(rule__Disclosure__RefRecipientTargetAssignment_10_1_0)
 { after(grammarAccess.getDisclosureAccess().getRefRecipientTargetAssignment_10_1_0()); }
 )
 
@@ -1202,7 +1202,7 @@ rule__Disclosure__Alternatives_11_1
 :
 (
 { before(grammarAccess.getDisclosureAccess().getRefPrivateDataAssignment_11_1_0()); }
-(rule__Disclosure__RefPrivateDataAssignment_11_1_0)*
+(rule__Disclosure__RefPrivateDataAssignment_11_1_0)
 { after(grammarAccess.getDisclosureAccess().getRefPrivateDataAssignment_11_1_0()); }
 )
 
@@ -1224,7 +1224,7 @@ rule__Disclosure__Alternatives_12_1
 :
 (
 { before(grammarAccess.getDisclosureAccess().getRefServiceAssignment_12_1_0()); }
-(rule__Disclosure__RefServiceAssignment_12_1_0)*
+(rule__Disclosure__RefServiceAssignment_12_1_0)
 { after(grammarAccess.getDisclosureAccess().getRefServiceAssignment_12_1_0()); }
 )
 
@@ -1246,7 +1246,7 @@ rule__Disclosure__Alternatives_13_1
 :
 (
 { before(grammarAccess.getDisclosureAccess().getRefEnforcementAssignment_13_1_0()); }
-(rule__Disclosure__RefEnforcementAssignment_13_1_0)*
+(rule__Disclosure__RefEnforcementAssignment_13_1_0)
 { after(grammarAccess.getDisclosureAccess().getRefEnforcementAssignment_13_1_0()); }
 )
 
@@ -1302,7 +1302,7 @@ rule__Retention__Alternatives_10_1
 :
 (
 { before(grammarAccess.getRetentionAccess().getRefPrivateDataAssignment_10_1_0()); }
-(rule__Retention__RefPrivateDataAssignment_10_1_0)*
+(rule__Retention__RefPrivateDataAssignment_10_1_0)
 { after(grammarAccess.getRetentionAccess().getRefPrivateDataAssignment_10_1_0()); }
 )
 
@@ -1324,7 +1324,7 @@ rule__Retention__Alternatives_11_1
 :
 (
 { before(grammarAccess.getRetentionAccess().getRefServiceAssignment_11_1_0()); }
-(rule__Retention__RefServiceAssignment_11_1_0)*
+(rule__Retention__RefServiceAssignment_11_1_0)
 { after(grammarAccess.getRetentionAccess().getRefServiceAssignment_11_1_0()); }
 )
 
@@ -1346,7 +1346,7 @@ rule__Retention__Alternatives_12_1
 :
 (
 { before(grammarAccess.getRetentionAccess().getRefEnforcementAssignment_12_1_0()); }
-(rule__Retention__RefEnforcementAssignment_12_1_0)*
+(rule__Retention__RefEnforcementAssignment_12_1_0)
 { after(grammarAccess.getRetentionAccess().getRefEnforcementAssignment_12_1_0()); }
 )
 
@@ -1402,7 +1402,7 @@ rule__Usage__Alternatives_8_1
 :
 (
 { before(grammarAccess.getUsageAccess().getRefPrivateDataAssignment_8_1_0()); }
-(rule__Usage__RefPrivateDataAssignment_8_1_0)*
+(rule__Usage__RefPrivateDataAssignment_8_1_0)
 { after(grammarAccess.getUsageAccess().getRefPrivateDataAssignment_8_1_0()); }
 )
 
@@ -1424,7 +1424,7 @@ rule__Usage__Alternatives_9_1
 :
 (
 { before(grammarAccess.getUsageAccess().getRefServiceAssignment_9_1_0()); }
-(rule__Usage__RefServiceAssignment_9_1_0)*
+(rule__Usage__RefServiceAssignment_9_1_0)
 { after(grammarAccess.getUsageAccess().getRefServiceAssignment_9_1_0()); }
 )
 
@@ -1446,7 +1446,7 @@ rule__Usage__Alternatives_10_1
 :
 (
 { before(grammarAccess.getUsageAccess().getRefEnforcementAssignment_10_1_0()); }
-(rule__Usage__RefEnforcementAssignment_10_1_0)*
+(rule__Usage__RefEnforcementAssignment_10_1_0)
 { after(grammarAccess.getUsageAccess().getRefEnforcementAssignment_10_1_0()); }
 )
 
@@ -1502,7 +1502,7 @@ rule__Informative__Alternatives_8_1
 :
 (
 { before(grammarAccess.getInformativeAccess().getRefPrivateDataAssignment_8_1_0()); }
-(rule__Informative__RefPrivateDataAssignment_8_1_0)*
+(rule__Informative__RefPrivateDataAssignment_8_1_0)
 { after(grammarAccess.getInformativeAccess().getRefPrivateDataAssignment_8_1_0()); }
 )
 
@@ -1524,7 +1524,7 @@ rule__Informative__Alternatives_9_1
 :
 (
 { before(grammarAccess.getInformativeAccess().getRefServiceAssignment_9_1_0()); }
-(rule__Informative__RefServiceAssignment_9_1_0)*
+(rule__Informative__RefServiceAssignment_9_1_0)
 { after(grammarAccess.getInformativeAccess().getRefServiceAssignment_9_1_0()); }
 )
 
@@ -1546,7 +1546,7 @@ rule__Informative__Alternatives_10_1
 :
 (
 { before(grammarAccess.getInformativeAccess().getRefEnforcementAssignment_10_1_0()); }
-(rule__Informative__RefEnforcementAssignment_10_1_0)*
+(rule__Informative__RefEnforcementAssignment_10_1_0)
 { after(grammarAccess.getInformativeAccess().getRefEnforcementAssignment_10_1_0()); }
 )
 

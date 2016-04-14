@@ -266,7 +266,8 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
   public CharSequence compileRecipient(final Recipient r) {
     StringConcatenation _builder = new StringConcatenation();
     String _recipientName = r.getRecipientName();
-    _builder.append(_recipientName, "");
+    String _replaceAll = _recipientName.replaceAll(" ", "-");
+    _builder.append(_replaceAll, "");
     return _builder;
   }
   
@@ -362,19 +363,16 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
       if (_equals_2) {
         _builder.append("ALL-Information");
       } else {
-        EList<RefPrivateData> _refPrivateData = c.getRefPrivateData();
-        boolean _isEmpty = _refPrivateData.isEmpty();
-        boolean _not = (!_isEmpty);
-        if (_not) {
-          EList<RefPrivateData> _refPrivateData_1 = c.getRefPrivateData();
-          RefPrivateData _get = _refPrivateData_1.get(0);
-          PrivateData _refPrivateData_2 = _get.getRefPrivateData();
+        RefPrivateData _refPrivateData = c.getRefPrivateData();
+        boolean _notEquals = (!Objects.equal(_refPrivateData, null));
+        if (_notEquals) {
+          RefPrivateData _refPrivateData_1 = c.getRefPrivateData();
+          PrivateData _refPrivateData_2 = _refPrivateData_1.getRefPrivateData();
           CharSequence _compile = this.compile(_refPrivateData_2);
           _builder.append(_compile, "");
           {
-            EList<RefPrivateData> _refPrivateData_3 = c.getRefPrivateData();
-            RefPrivateData _get_1 = _refPrivateData_3.get(0);
-            EList<PrivateData> _refs = _get_1.getRefs();
+            RefPrivateData _refPrivateData_3 = c.getRefPrivateData();
+            EList<PrivateData> _refs = _refPrivateData_3.getRefs();
             for(final PrivateData p : _refs) {
               _builder.append(", ");
               CharSequence _compile_1 = this.compile(p);
@@ -385,20 +383,17 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
       }
     }
     {
-      EList<RefService> _refService = c.getRefService();
-      boolean _isEmpty_1 = _refService.isEmpty();
-      boolean _not_1 = (!_isEmpty_1);
-      if (_not_1) {
+      RefService _refService = c.getRefService();
+      boolean _notEquals_1 = (!Objects.equal(_refService, null));
+      if (_notEquals_1) {
         _builder.append(" FOR ");
-        EList<RefService> _refService_1 = c.getRefService();
-        RefService _get_2 = _refService_1.get(0);
-        Service _refService_2 = _get_2.getRefService();
+        RefService _refService_1 = c.getRefService();
+        Service _refService_2 = _refService_1.getRefService();
         CharSequence _compile_2 = this.compile(_refService_2);
         _builder.append(_compile_2, "");
         {
-          EList<RefService> _refService_3 = c.getRefService();
-          RefService _get_3 = _refService_3.get(0);
-          EList<Service> _refs_1 = _get_3.getRefs();
+          RefService _refService_3 = c.getRefService();
+          EList<Service> _refs_1 = _refService_3.getRefs();
           for(final Service s : _refs_1) {
             _builder.append(", ");
             CharSequence _compile_3 = this.compile(s);
@@ -437,19 +432,16 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
       if (_equals_2) {
         _builder.append("ALL-Information");
       } else {
-        EList<RefPrivateData> _refPrivateData = d.getRefPrivateData();
-        boolean _isEmpty = _refPrivateData.isEmpty();
-        boolean _not = (!_isEmpty);
-        if (_not) {
-          EList<RefPrivateData> _refPrivateData_1 = d.getRefPrivateData();
-          RefPrivateData _get = _refPrivateData_1.get(0);
-          PrivateData _refPrivateData_2 = _get.getRefPrivateData();
+        RefPrivateData _refPrivateData = d.getRefPrivateData();
+        boolean _notEquals = (!Objects.equal(_refPrivateData, null));
+        if (_notEquals) {
+          RefPrivateData _refPrivateData_1 = d.getRefPrivateData();
+          PrivateData _refPrivateData_2 = _refPrivateData_1.getRefPrivateData();
           CharSequence _compile = this.compile(_refPrivateData_2);
           _builder.append(_compile, "");
           {
-            EList<RefPrivateData> _refPrivateData_3 = d.getRefPrivateData();
-            RefPrivateData _get_1 = _refPrivateData_3.get(0);
-            EList<PrivateData> _refs = _get_1.getRefs();
+            RefPrivateData _refPrivateData_3 = d.getRefPrivateData();
+            EList<PrivateData> _refs = _refPrivateData_3.getRefs();
             for(final PrivateData p : _refs) {
               _builder.append(", ");
               CharSequence _compile_1 = this.compile(p);
@@ -460,68 +452,73 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
       }
     }
     {
-      EList<RefRecipientSource> _refRecipientSource = d.getRefRecipientSource();
-      boolean _isEmpty_1 = _refRecipientSource.isEmpty();
-      boolean _not_1 = (!_isEmpty_1);
-      if (_not_1) {
+      RefRecipientSource _refRecipientSource = d.getRefRecipientSource();
+      boolean _notEquals_1 = (!Objects.equal(_refRecipientSource, null));
+      if (_notEquals_1) {
         _builder.append("FROM ");
+        RefRecipientSource _refRecipientSource_1 = d.getRefRecipientSource();
+        Recipient _refRecipientSource_2 = _refRecipientSource_1.getRefRecipientSource();
+        CharSequence _compileRecipient = this.compileRecipient(_refRecipientSource_2);
+        _builder.append(_compileRecipient, "");
         {
-          EList<RefRecipientSource> _refRecipientSource_1 = d.getRefRecipientSource();
+          RefRecipientSource _refRecipientSource_3 = d.getRefRecipientSource();
+          EList<Recipient> _refs_1 = _refRecipientSource_3.getRefs();
           boolean _hasElements = false;
-          for(final RefRecipientSource rs : _refRecipientSource_1) {
+          for(final Recipient rt : _refs_1) {
             if (!_hasElements) {
               _hasElements = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compile_2 = this.compile(rs);
-            _builder.append(_compile_2, "");
+            CharSequence _compileRecipient_1 = this.compileRecipient(rt);
+            _builder.append(_compileRecipient_1, "");
           }
         }
         _builder.append(" ");
       }
     }
     {
-      EList<RefRecipientTarget> _refRecipientTarget = d.getRefRecipientTarget();
-      boolean _isEmpty_2 = _refRecipientTarget.isEmpty();
-      boolean _not_2 = (!_isEmpty_2);
-      if (_not_2) {
+      RefRecipientTarget _refRecipientTarget = d.getRefRecipientTarget();
+      boolean _notEquals_2 = (!Objects.equal(_refRecipientTarget, null));
+      if (_notEquals_2) {
         _builder.append("TO ");
+        RefRecipientTarget _refRecipientTarget_1 = d.getRefRecipientTarget();
+        Recipient _refRecipientTarget_2 = _refRecipientTarget_1.getRefRecipientTarget();
+        CharSequence _compileRecipient_2 = this.compileRecipient(_refRecipientTarget_2);
+        _builder.append(_compileRecipient_2, "");
         {
-          EList<RefRecipientTarget> _refRecipientTarget_1 = d.getRefRecipientTarget();
+          RefRecipientTarget _refRecipientTarget_3 = d.getRefRecipientTarget();
+          EList<Recipient> _refs_2 = _refRecipientTarget_3.getRefs();
           boolean _hasElements_1 = false;
-          for(final RefRecipientTarget rt : _refRecipientTarget_1) {
+          for(final Recipient rt_1 : _refs_2) {
             if (!_hasElements_1) {
               _hasElements_1 = true;
             } else {
               _builder.appendImmediate(",", "");
             }
-            CharSequence _compile_3 = this.compile(rt);
-            _builder.append(_compile_3, "");
+            CharSequence _compileRecipient_3 = this.compileRecipient(rt_1);
+            _builder.append(_compileRecipient_3, "");
           }
         }
         _builder.append(" ");
       }
     }
     {
-      EList<RefService> _refService = d.getRefService();
-      boolean _isEmpty_3 = _refService.isEmpty();
-      boolean _not_3 = (!_isEmpty_3);
-      if (_not_3) {
+      RefService _refService = d.getRefService();
+      boolean _notEquals_3 = (!Objects.equal(_refService, null));
+      if (_notEquals_3) {
         _builder.append(" FOR ");
-        EList<RefService> _refService_1 = d.getRefService();
-        RefService _get_2 = _refService_1.get(0);
-        Service _refService_2 = _get_2.getRefService();
-        CharSequence _compile_4 = this.compile(_refService_2);
-        _builder.append(_compile_4, "");
+        RefService _refService_1 = d.getRefService();
+        Service _refService_2 = _refService_1.getRefService();
+        CharSequence _compile_2 = this.compile(_refService_2);
+        _builder.append(_compile_2, "");
         {
-          EList<RefService> _refService_3 = d.getRefService();
-          RefService _get_3 = _refService_3.get(0);
-          EList<Service> _refs_1 = _get_3.getRefs();
-          for(final Service s : _refs_1) {
+          RefService _refService_3 = d.getRefService();
+          EList<Service> _refs_3 = _refService_3.getRefs();
+          for(final Service s : _refs_3) {
             _builder.append(", ");
-            CharSequence _compile_5 = this.compile(s);
-            _builder.append(_compile_5, "");
+            CharSequence _compile_3 = this.compile(s);
+            _builder.append(_compile_3, "");
           }
         }
       } else {
@@ -556,19 +553,16 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
       if (_equals_2) {
         _builder.append("ALL-Information");
       } else {
-        EList<RefPrivateData> _refPrivateData = r.getRefPrivateData();
-        boolean _isEmpty = _refPrivateData.isEmpty();
-        boolean _not = (!_isEmpty);
-        if (_not) {
-          EList<RefPrivateData> _refPrivateData_1 = r.getRefPrivateData();
-          RefPrivateData _get = _refPrivateData_1.get(0);
-          PrivateData _refPrivateData_2 = _get.getRefPrivateData();
+        RefPrivateData _refPrivateData = r.getRefPrivateData();
+        boolean _notEquals = (!Objects.equal(_refPrivateData, null));
+        if (_notEquals) {
+          RefPrivateData _refPrivateData_1 = r.getRefPrivateData();
+          PrivateData _refPrivateData_2 = _refPrivateData_1.getRefPrivateData();
           CharSequence _compile = this.compile(_refPrivateData_2);
           _builder.append(_compile, "");
           {
-            EList<RefPrivateData> _refPrivateData_3 = r.getRefPrivateData();
-            RefPrivateData _get_1 = _refPrivateData_3.get(0);
-            EList<PrivateData> _refs = _get_1.getRefs();
+            RefPrivateData _refPrivateData_3 = r.getRefPrivateData();
+            EList<PrivateData> _refs = _refPrivateData_3.getRefs();
             for(final PrivateData p : _refs) {
               _builder.append(", ");
               CharSequence _compile_1 = this.compile(p);
@@ -579,20 +573,17 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
       }
     }
     {
-      EList<RefService> _refService = r.getRefService();
-      boolean _isEmpty_1 = _refService.isEmpty();
-      boolean _not_1 = (!_isEmpty_1);
-      if (_not_1) {
+      RefService _refService = r.getRefService();
+      boolean _notEquals_1 = (!Objects.equal(_refService, null));
+      if (_notEquals_1) {
         _builder.append(" FOR ");
-        EList<RefService> _refService_1 = r.getRefService();
-        RefService _get_2 = _refService_1.get(0);
-        Service _refService_2 = _get_2.getRefService();
+        RefService _refService_1 = r.getRefService();
+        Service _refService_2 = _refService_1.getRefService();
         CharSequence _compile_2 = this.compile(_refService_2);
         _builder.append(_compile_2, "");
         {
-          EList<RefService> _refService_3 = r.getRefService();
-          RefService _get_3 = _refService_3.get(0);
-          EList<Service> _refs_1 = _get_3.getRefs();
+          RefService _refService_3 = r.getRefService();
+          EList<Service> _refs_1 = _refService_3.getRefs();
           for(final Service s : _refs_1) {
             _builder.append(", ");
             CharSequence _compile_3 = this.compile(s);
@@ -631,19 +622,16 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
       if (_equals_2) {
         _builder.append("ALL-Information");
       } else {
-        EList<RefPrivateData> _refPrivateData = u.getRefPrivateData();
-        boolean _isEmpty = _refPrivateData.isEmpty();
-        boolean _not = (!_isEmpty);
-        if (_not) {
-          EList<RefPrivateData> _refPrivateData_1 = u.getRefPrivateData();
-          RefPrivateData _get = _refPrivateData_1.get(0);
-          PrivateData _refPrivateData_2 = _get.getRefPrivateData();
+        RefPrivateData _refPrivateData = u.getRefPrivateData();
+        boolean _notEquals = (!Objects.equal(_refPrivateData, null));
+        if (_notEquals) {
+          RefPrivateData _refPrivateData_1 = u.getRefPrivateData();
+          PrivateData _refPrivateData_2 = _refPrivateData_1.getRefPrivateData();
           CharSequence _compile = this.compile(_refPrivateData_2);
           _builder.append(_compile, "");
           {
-            EList<RefPrivateData> _refPrivateData_3 = u.getRefPrivateData();
-            RefPrivateData _get_1 = _refPrivateData_3.get(0);
-            EList<PrivateData> _refs = _get_1.getRefs();
+            RefPrivateData _refPrivateData_3 = u.getRefPrivateData();
+            EList<PrivateData> _refs = _refPrivateData_3.getRefs();
             for(final PrivateData p : _refs) {
               _builder.append(", ");
               CharSequence _compile_1 = this.compile(p);
@@ -654,20 +642,17 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
       }
     }
     {
-      EList<RefService> _refService = u.getRefService();
-      boolean _isEmpty_1 = _refService.isEmpty();
-      boolean _not_1 = (!_isEmpty_1);
-      if (_not_1) {
+      RefService _refService = u.getRefService();
+      boolean _notEquals_1 = (!Objects.equal(_refService, null));
+      if (_notEquals_1) {
         _builder.append(" FOR ");
-        EList<RefService> _refService_1 = u.getRefService();
-        RefService _get_2 = _refService_1.get(0);
-        Service _refService_2 = _get_2.getRefService();
+        RefService _refService_1 = u.getRefService();
+        Service _refService_2 = _refService_1.getRefService();
         CharSequence _compile_2 = this.compile(_refService_2);
         _builder.append(_compile_2, "");
         {
-          EList<RefService> _refService_3 = u.getRefService();
-          RefService _get_3 = _refService_3.get(0);
-          EList<Service> _refs_1 = _get_3.getRefs();
+          RefService _refService_3 = u.getRefService();
+          EList<Service> _refs_1 = _refService_3.getRefs();
           for(final Service s : _refs_1) {
             _builder.append(", ");
             CharSequence _compile_3 = this.compile(s);
@@ -706,19 +691,16 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
       if (_equals_2) {
         _builder.append("ALL-Information");
       } else {
-        EList<RefPrivateData> _refPrivateData = i.getRefPrivateData();
-        boolean _isEmpty = _refPrivateData.isEmpty();
-        boolean _not = (!_isEmpty);
-        if (_not) {
-          EList<RefPrivateData> _refPrivateData_1 = i.getRefPrivateData();
-          RefPrivateData _get = _refPrivateData_1.get(0);
-          PrivateData _refPrivateData_2 = _get.getRefPrivateData();
+        RefPrivateData _refPrivateData = i.getRefPrivateData();
+        boolean _notEquals = (!Objects.equal(_refPrivateData, null));
+        if (_notEquals) {
+          RefPrivateData _refPrivateData_1 = i.getRefPrivateData();
+          PrivateData _refPrivateData_2 = _refPrivateData_1.getRefPrivateData();
           CharSequence _compile = this.compile(_refPrivateData_2);
           _builder.append(_compile, "");
           {
-            EList<RefPrivateData> _refPrivateData_3 = i.getRefPrivateData();
-            RefPrivateData _get_1 = _refPrivateData_3.get(0);
-            EList<PrivateData> _refs = _get_1.getRefs();
+            RefPrivateData _refPrivateData_3 = i.getRefPrivateData();
+            EList<PrivateData> _refs = _refPrivateData_3.getRefs();
             for(final PrivateData p : _refs) {
               _builder.append(", ");
               CharSequence _compile_1 = this.compile(p);
@@ -729,20 +711,17 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
       }
     }
     {
-      EList<RefService> _refService = i.getRefService();
-      boolean _isEmpty_1 = _refService.isEmpty();
-      boolean _not_1 = (!_isEmpty_1);
-      if (_not_1) {
+      RefService _refService = i.getRefService();
+      boolean _notEquals_1 = (!Objects.equal(_refService, null));
+      if (_notEquals_1) {
         _builder.append(" FOR ");
-        EList<RefService> _refService_1 = i.getRefService();
-        RefService _get_2 = _refService_1.get(0);
-        Service _refService_2 = _get_2.getRefService();
+        RefService _refService_1 = i.getRefService();
+        Service _refService_2 = _refService_1.getRefService();
         CharSequence _compile_2 = this.compile(_refService_2);
         _builder.append(_compile_2, "");
         {
-          EList<RefService> _refService_3 = i.getRefService();
-          RefService _get_3 = _refService_3.get(0);
-          EList<Service> _refs_1 = _get_3.getRefs();
+          RefService _refService_3 = i.getRefService();
+          EList<Service> _refs_1 = _refService_3.getRefs();
           for(final Service s : _refs_1) {
             _builder.append(", ");
             CharSequence _compile_3 = this.compile(s);
@@ -754,24 +733,6 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    return _builder;
-  }
-  
-  public CharSequence compile(final RefRecipientSource rs) {
-    StringConcatenation _builder = new StringConcatenation();
-    Recipient _refRecipientSource = rs.getRefRecipientSource();
-    String _recipientName = _refRecipientSource.getRecipientName();
-    String _replaceAll = _recipientName.replaceAll(" ", "-");
-    _builder.append(_replaceAll, "");
-    return _builder;
-  }
-  
-  public CharSequence compile(final RefRecipientTarget rt) {
-    StringConcatenation _builder = new StringConcatenation();
-    Recipient _refRecipientTarget = rt.getRefRecipientTarget();
-    String _recipientName = _refRecipientTarget.getRecipientName();
-    String _replaceAll = _recipientName.replaceAll(" ", "-");
-    _builder.append(_replaceAll, "");
     return _builder;
   }
   

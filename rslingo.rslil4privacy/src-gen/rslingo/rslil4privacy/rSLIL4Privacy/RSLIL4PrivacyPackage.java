@@ -451,7 +451,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int SERVICE__DESCRIPTION = 2;
 
   /**
-   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -698,7 +698,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int COLLECTION__PART_COLLECTION = 3;
 
   /**
-   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -716,7 +716,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int COLLECTION__REF_PD_ALL = 5;
 
   /**
-   * The feature id for the '<em><b>Ref Service</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Service</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -734,7 +734,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int COLLECTION__REF_SALL = 7;
 
   /**
-   * The feature id for the '<em><b>Ref Enforcement</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Enforcement</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -816,7 +816,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int DISCLOSURE__PART_DISCLOSURE = 3;
 
   /**
-   * The feature id for the '<em><b>Ref Recipient</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Recipient</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -834,7 +834,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int DISCLOSURE__REF_RALL = 5;
 
   /**
-   * The feature id for the '<em><b>Ref Recipient Source</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Recipient Source</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -852,7 +852,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int DISCLOSURE__REF_RS_ALL = 7;
 
   /**
-   * The feature id for the '<em><b>Ref Recipient Target</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Recipient Target</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -870,7 +870,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int DISCLOSURE__REF_RT_ALL = 9;
 
   /**
-   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -888,7 +888,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int DISCLOSURE__REF_PD_ALL = 11;
 
   /**
-   * The feature id for the '<em><b>Ref Service</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Service</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -906,7 +906,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int DISCLOSURE__REF_SALL = 13;
 
   /**
-   * The feature id for the '<em><b>Ref Enforcement</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Enforcement</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -997,7 +997,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int RETENTION__PERIOD = 4;
 
   /**
-   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1015,7 +1015,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int RETENTION__REF_PD_ALL = 6;
 
   /**
-   * The feature id for the '<em><b>Ref Service</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Service</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1033,7 +1033,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int RETENTION__REF_SALL = 8;
 
   /**
-   * The feature id for the '<em><b>Ref Enforcement</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Enforcement</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1115,7 +1115,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int USAGE__PART_USAGE = 3;
 
   /**
-   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1133,7 +1133,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int USAGE__REF_PD_ALL = 5;
 
   /**
-   * The feature id for the '<em><b>Ref Service</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Service</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1151,7 +1151,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int USAGE__REF_SALL = 7;
 
   /**
-   * The feature id for the '<em><b>Ref Enforcement</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Enforcement</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1233,7 +1233,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int INFORMATIVE__PART_INFORMATIVE = 3;
 
   /**
-   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Private Data</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1251,7 +1251,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int INFORMATIVE__REF_PD_ALL = 5;
 
   /**
-   * The feature id for the '<em><b>Ref Service</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Service</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1269,7 +1269,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int INFORMATIVE__REF_SALL = 7;
 
   /**
-   * The feature id for the '<em><b>Ref Enforcement</b></em>' containment reference list.
+   * The feature id for the '<em><b>Ref Enforcement</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -2002,10 +2002,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getService_Description();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Service#getRefPrivateData <em>Ref Private Data</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Service#getRefPrivateData <em>Ref Private Data</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Private Data</em>'.
+   * @return the meta object for the containment reference '<em>Ref Private Data</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Service#getRefPrivateData()
    * @see #getService()
    * @generated
@@ -2251,10 +2251,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EReference getCollection_PartCollection();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefPrivateData <em>Ref Private Data</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefPrivateData <em>Ref Private Data</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Private Data</em>'.
+   * @return the meta object for the containment reference '<em>Ref Private Data</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefPrivateData()
    * @see #getCollection()
    * @generated
@@ -2273,10 +2273,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getCollection_RefPDAll();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefService <em>Ref Service</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefService <em>Ref Service</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Service</em>'.
+   * @return the meta object for the containment reference '<em>Ref Service</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefService()
    * @see #getCollection()
    * @generated
@@ -2295,10 +2295,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getCollection_RefSAll();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefEnforcement <em>Ref Enforcement</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefEnforcement <em>Ref Enforcement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Enforcement</em>'.
+   * @return the meta object for the containment reference '<em>Ref Enforcement</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Collection#getRefEnforcement()
    * @see #getCollection()
    * @generated
@@ -2382,10 +2382,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EReference getDisclosure_PartDisclosure();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipient <em>Ref Recipient</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipient <em>Ref Recipient</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Recipient</em>'.
+   * @return the meta object for the containment reference '<em>Ref Recipient</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipient()
    * @see #getDisclosure()
    * @generated
@@ -2404,10 +2404,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getDisclosure_RefRAll();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipientSource <em>Ref Recipient Source</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipientSource <em>Ref Recipient Source</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Recipient Source</em>'.
+   * @return the meta object for the containment reference '<em>Ref Recipient Source</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipientSource()
    * @see #getDisclosure()
    * @generated
@@ -2426,10 +2426,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getDisclosure_RefRSAll();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipientTarget <em>Ref Recipient Target</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipientTarget <em>Ref Recipient Target</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Recipient Target</em>'.
+   * @return the meta object for the containment reference '<em>Ref Recipient Target</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipientTarget()
    * @see #getDisclosure()
    * @generated
@@ -2448,10 +2448,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getDisclosure_RefRTAll();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefPrivateData <em>Ref Private Data</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefPrivateData <em>Ref Private Data</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Private Data</em>'.
+   * @return the meta object for the containment reference '<em>Ref Private Data</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefPrivateData()
    * @see #getDisclosure()
    * @generated
@@ -2470,10 +2470,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getDisclosure_RefPDAll();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefService <em>Ref Service</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefService <em>Ref Service</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Service</em>'.
+   * @return the meta object for the containment reference '<em>Ref Service</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefService()
    * @see #getDisclosure()
    * @generated
@@ -2492,10 +2492,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getDisclosure_RefSAll();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefEnforcement <em>Ref Enforcement</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefEnforcement <em>Ref Enforcement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Enforcement</em>'.
+   * @return the meta object for the containment reference '<em>Ref Enforcement</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefEnforcement()
    * @see #getDisclosure()
    * @generated
@@ -2590,10 +2590,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getRetention_Period();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefPrivateData <em>Ref Private Data</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefPrivateData <em>Ref Private Data</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Private Data</em>'.
+   * @return the meta object for the containment reference '<em>Ref Private Data</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefPrivateData()
    * @see #getRetention()
    * @generated
@@ -2612,10 +2612,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getRetention_RefPDAll();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefService <em>Ref Service</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefService <em>Ref Service</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Service</em>'.
+   * @return the meta object for the containment reference '<em>Ref Service</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefService()
    * @see #getRetention()
    * @generated
@@ -2634,10 +2634,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getRetention_RefSAll();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefEnforcement <em>Ref Enforcement</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefEnforcement <em>Ref Enforcement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Enforcement</em>'.
+   * @return the meta object for the containment reference '<em>Ref Enforcement</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Retention#getRefEnforcement()
    * @see #getRetention()
    * @generated
@@ -2721,10 +2721,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EReference getUsage_PartUsage();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefPrivateData <em>Ref Private Data</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefPrivateData <em>Ref Private Data</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Private Data</em>'.
+   * @return the meta object for the containment reference '<em>Ref Private Data</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefPrivateData()
    * @see #getUsage()
    * @generated
@@ -2743,10 +2743,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getUsage_RefPDAll();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefService <em>Ref Service</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefService <em>Ref Service</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Service</em>'.
+   * @return the meta object for the containment reference '<em>Ref Service</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefService()
    * @see #getUsage()
    * @generated
@@ -2765,10 +2765,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getUsage_RefSAll();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefEnforcement <em>Ref Enforcement</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefEnforcement <em>Ref Enforcement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Enforcement</em>'.
+   * @return the meta object for the containment reference '<em>Ref Enforcement</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Usage#getRefEnforcement()
    * @see #getUsage()
    * @generated
@@ -2852,10 +2852,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EReference getInformative_PartInformative();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefPrivateData <em>Ref Private Data</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefPrivateData <em>Ref Private Data</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Private Data</em>'.
+   * @return the meta object for the containment reference '<em>Ref Private Data</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefPrivateData()
    * @see #getInformative()
    * @generated
@@ -2874,10 +2874,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getInformative_RefPDAll();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefService <em>Ref Service</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefService <em>Ref Service</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Service</em>'.
+   * @return the meta object for the containment reference '<em>Ref Service</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefService()
    * @see #getInformative()
    * @generated
@@ -2896,10 +2896,10 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getInformative_RefSAll();
 
   /**
-   * Returns the meta object for the containment reference list '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefEnforcement <em>Ref Enforcement</em>}'.
+   * Returns the meta object for the containment reference '{@link rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefEnforcement <em>Ref Enforcement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ref Enforcement</em>'.
+   * @return the meta object for the containment reference '<em>Ref Enforcement</em>'.
    * @see rslingo.rslil4privacy.rSLIL4Privacy.Informative#getRefEnforcement()
    * @see #getInformative()
    * @generated
@@ -3518,7 +3518,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute SERVICE__DESCRIPTION = eINSTANCE.getService_Description();
 
     /**
-     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -3710,7 +3710,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EReference COLLECTION__PART_COLLECTION = eINSTANCE.getCollection_PartCollection();
 
     /**
-     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -3726,7 +3726,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute COLLECTION__REF_PD_ALL = eINSTANCE.getCollection_RefPDAll();
 
     /**
-     * The meta object literal for the '<em><b>Ref Service</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Service</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -3742,7 +3742,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute COLLECTION__REF_SALL = eINSTANCE.getCollection_RefSAll();
 
     /**
-     * The meta object literal for the '<em><b>Ref Enforcement</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Enforcement</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -3808,7 +3808,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EReference DISCLOSURE__PART_DISCLOSURE = eINSTANCE.getDisclosure_PartDisclosure();
 
     /**
-     * The meta object literal for the '<em><b>Ref Recipient</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Recipient</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -3824,7 +3824,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute DISCLOSURE__REF_RALL = eINSTANCE.getDisclosure_RefRAll();
 
     /**
-     * The meta object literal for the '<em><b>Ref Recipient Source</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Recipient Source</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -3840,7 +3840,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute DISCLOSURE__REF_RS_ALL = eINSTANCE.getDisclosure_RefRSAll();
 
     /**
-     * The meta object literal for the '<em><b>Ref Recipient Target</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Recipient Target</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -3856,7 +3856,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute DISCLOSURE__REF_RT_ALL = eINSTANCE.getDisclosure_RefRTAll();
 
     /**
-     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -3872,7 +3872,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute DISCLOSURE__REF_PD_ALL = eINSTANCE.getDisclosure_RefPDAll();
 
     /**
-     * The meta object literal for the '<em><b>Ref Service</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Service</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -3888,7 +3888,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute DISCLOSURE__REF_SALL = eINSTANCE.getDisclosure_RefSAll();
 
     /**
-     * The meta object literal for the '<em><b>Ref Enforcement</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Enforcement</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -3962,7 +3962,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute RETENTION__PERIOD = eINSTANCE.getRetention_Period();
 
     /**
-     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -3978,7 +3978,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute RETENTION__REF_PD_ALL = eINSTANCE.getRetention_RefPDAll();
 
     /**
-     * The meta object literal for the '<em><b>Ref Service</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Service</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -3994,7 +3994,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute RETENTION__REF_SALL = eINSTANCE.getRetention_RefSAll();
 
     /**
-     * The meta object literal for the '<em><b>Ref Enforcement</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Enforcement</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -4060,7 +4060,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EReference USAGE__PART_USAGE = eINSTANCE.getUsage_PartUsage();
 
     /**
-     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -4076,7 +4076,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute USAGE__REF_PD_ALL = eINSTANCE.getUsage_RefPDAll();
 
     /**
-     * The meta object literal for the '<em><b>Ref Service</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Service</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -4092,7 +4092,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute USAGE__REF_SALL = eINSTANCE.getUsage_RefSAll();
 
     /**
-     * The meta object literal for the '<em><b>Ref Enforcement</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Enforcement</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -4158,7 +4158,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EReference INFORMATIVE__PART_INFORMATIVE = eINSTANCE.getInformative_PartInformative();
 
     /**
-     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Private Data</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -4174,7 +4174,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute INFORMATIVE__REF_PD_ALL = eINSTANCE.getInformative_RefPDAll();
 
     /**
-     * The meta object literal for the '<em><b>Ref Service</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Service</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -4190,7 +4190,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
     EAttribute INFORMATIVE__REF_SALL = eINSTANCE.getInformative_RefSAll();
 
     /**
-     * The meta object literal for the '<em><b>Ref Enforcement</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Ref Enforcement</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated

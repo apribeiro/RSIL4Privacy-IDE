@@ -104,14 +104,14 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
   protected String description = DESCRIPTION_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getRefPrivateData() <em>Ref Private Data</em>}' containment reference list.
+   * The cached value of the '{@link #getRefPrivateData() <em>Ref Private Data</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getRefPrivateData()
    * @generated
    * @ordered
    */
-  protected EList<RefPrivateData> refPrivateData;
+  protected RefPrivateData refPrivateData;
 
   /**
    * The default value of the '{@link #getRefPDAll() <em>Ref PD All</em>}' attribute.
@@ -238,13 +238,47 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<RefPrivateData> getRefPrivateData()
+  public RefPrivateData getRefPrivateData()
   {
-    if (refPrivateData == null)
-    {
-      refPrivateData = new EObjectContainmentEList<RefPrivateData>(RefPrivateData.class, this, RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA);
-    }
     return refPrivateData;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetRefPrivateData(RefPrivateData newRefPrivateData, NotificationChain msgs)
+  {
+    RefPrivateData oldRefPrivateData = refPrivateData;
+    refPrivateData = newRefPrivateData;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA, oldRefPrivateData, newRefPrivateData);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRefPrivateData(RefPrivateData newRefPrivateData)
+  {
+    if (newRefPrivateData != refPrivateData)
+    {
+      NotificationChain msgs = null;
+      if (refPrivateData != null)
+        msgs = ((InternalEObject)refPrivateData).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA, null, msgs);
+      if (newRefPrivateData != null)
+        msgs = ((InternalEObject)newRefPrivateData).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA, null, msgs);
+      msgs = basicSetRefPrivateData(newRefPrivateData, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA, newRefPrivateData, newRefPrivateData));
   }
 
   /**
@@ -295,7 +329,7 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
     switch (featureID)
     {
       case RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA:
-        return ((InternalEList<?>)getRefPrivateData()).basicRemove(otherEnd, msgs);
+        return basicSetRefPrivateData(null, msgs);
       case RSLIL4PrivacyPackage.SERVICE__SERVICE_PART:
         return ((InternalEList<?>)getServicePart()).basicRemove(otherEnd, msgs);
     }
@@ -349,8 +383,7 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
         setDescription((String)newValue);
         return;
       case RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA:
-        getRefPrivateData().clear();
-        getRefPrivateData().addAll((Collection<? extends RefPrivateData>)newValue);
+        setRefPrivateData((RefPrivateData)newValue);
         return;
       case RSLIL4PrivacyPackage.SERVICE__REF_PD_ALL:
         setRefPDAll((String)newValue);
@@ -383,7 +416,7 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
         setDescription(DESCRIPTION_EDEFAULT);
         return;
       case RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA:
-        getRefPrivateData().clear();
+        setRefPrivateData((RefPrivateData)null);
         return;
       case RSLIL4PrivacyPackage.SERVICE__REF_PD_ALL:
         setRefPDAll(REF_PD_ALL_EDEFAULT);
@@ -412,7 +445,7 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
       case RSLIL4PrivacyPackage.SERVICE__DESCRIPTION:
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
       case RSLIL4PrivacyPackage.SERVICE__REF_PRIVATE_DATA:
-        return refPrivateData != null && !refPrivateData.isEmpty();
+        return refPrivateData != null;
       case RSLIL4PrivacyPackage.SERVICE__REF_PD_ALL:
         return REF_PD_ALL_EDEFAULT == null ? refPDAll != null : !REF_PD_ALL_EDEFAULT.equals(refPDAll);
       case RSLIL4PrivacyPackage.SERVICE__SERVICE_PART:

@@ -1111,7 +1111,7 @@ ruleService returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getServiceRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refPrivateData",
         		lv_refPrivateData_8_0, 
@@ -1120,7 +1120,7 @@ ruleService returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refPDAll_9_0=	'All' 
@@ -1694,7 +1694,7 @@ ruleCollection returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getCollectionRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refPrivateData",
         		lv_refPrivateData_10_0, 
@@ -1703,7 +1703,7 @@ ruleCollection returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refPDAll_11_0=	'All' 
@@ -1732,7 +1732,7 @@ ruleCollection returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getCollectionRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refService",
         		lv_refService_13_0, 
@@ -1741,7 +1741,7 @@ ruleCollection returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refSAll_14_0=	'All' 
@@ -1770,7 +1770,7 @@ ruleCollection returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getCollectionRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refEnforcement",
         		lv_refEnforcement_16_0, 
@@ -1779,7 +1779,7 @@ ruleCollection returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refEAll_17_0=	'All' 
@@ -1966,7 +1966,7 @@ ruleDisclosure returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getDisclosureRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refRecipient",
         		lv_refRecipient_10_0, 
@@ -1975,7 +1975,7 @@ ruleDisclosure returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refRAll_11_0=	'All' 
@@ -2004,7 +2004,7 @@ ruleDisclosure returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getDisclosureRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refRecipientSource",
         		lv_refRecipientSource_13_0, 
@@ -2013,7 +2013,7 @@ ruleDisclosure returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refRSAll_14_0=	'All' 
@@ -2042,7 +2042,7 @@ ruleDisclosure returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getDisclosureRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refRecipientTarget",
         		lv_refRecipientTarget_16_0, 
@@ -2051,7 +2051,7 @@ ruleDisclosure returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refRTAll_17_0=	'All' 
@@ -2080,7 +2080,7 @@ ruleDisclosure returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getDisclosureRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refPrivateData",
         		lv_refPrivateData_19_0, 
@@ -2089,7 +2089,7 @@ ruleDisclosure returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refPDAll_20_0=	'All' 
@@ -2118,7 +2118,7 @@ ruleDisclosure returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getDisclosureRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refService",
         		lv_refService_22_0, 
@@ -2127,7 +2127,7 @@ ruleDisclosure returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refSAll_23_0=	'All' 
@@ -2156,7 +2156,7 @@ ruleDisclosure returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getDisclosureRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refEnforcement",
         		lv_refEnforcement_25_0, 
@@ -2165,7 +2165,7 @@ ruleDisclosure returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refEAll_26_0=	'All' 
@@ -2374,7 +2374,7 @@ ruleRetention returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRetentionRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refPrivateData",
         		lv_refPrivateData_12_0, 
@@ -2383,7 +2383,7 @@ ruleRetention returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refPDAll_13_0=	'All' 
@@ -2412,7 +2412,7 @@ ruleRetention returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRetentionRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refService",
         		lv_refService_15_0, 
@@ -2421,7 +2421,7 @@ ruleRetention returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refSAll_16_0=	'All' 
@@ -2450,7 +2450,7 @@ ruleRetention returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRetentionRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refEnforcement",
         		lv_refEnforcement_18_0, 
@@ -2459,7 +2459,7 @@ ruleRetention returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refEAll_19_0=	'All' 
@@ -2646,7 +2646,7 @@ ruleUsage returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getUsageRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refPrivateData",
         		lv_refPrivateData_10_0, 
@@ -2655,7 +2655,7 @@ ruleUsage returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refPDAll_11_0=	'All' 
@@ -2684,7 +2684,7 @@ ruleUsage returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getUsageRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refService",
         		lv_refService_13_0, 
@@ -2693,7 +2693,7 @@ ruleUsage returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refSAll_14_0=	'All' 
@@ -2722,7 +2722,7 @@ ruleUsage returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getUsageRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refEnforcement",
         		lv_refEnforcement_16_0, 
@@ -2731,7 +2731,7 @@ ruleUsage returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refEAll_17_0=	'All' 
@@ -2918,7 +2918,7 @@ ruleInformative returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getInformativeRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refPrivateData",
         		lv_refPrivateData_10_0, 
@@ -2927,7 +2927,7 @@ ruleInformative returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refPDAll_11_0=	'All' 
@@ -2956,7 +2956,7 @@ ruleInformative returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getInformativeRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refService",
         		lv_refService_13_0, 
@@ -2965,7 +2965,7 @@ ruleInformative returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refSAll_14_0=	'All' 
@@ -2994,7 +2994,7 @@ ruleInformative returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getInformativeRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"refEnforcement",
         		lv_refEnforcement_16_0, 
@@ -3003,7 +3003,7 @@ ruleInformative returns [EObject current=null]
 	    }
 
 )
-)*
+)
     |(
 (
 		lv_refEAll_17_0=	'All' 

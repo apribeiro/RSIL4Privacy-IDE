@@ -2479,64 +2479,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Service__Alternatives_6_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:916:1: rule__Service__Alternatives_6_1 : ( ( ( rule__Service__RefPrivateDataAssignment_6_1_0 )* ) | ( ( rule__Service__RefPDAllAssignment_6_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:916:1: rule__Service__Alternatives_6_1 : ( ( ( rule__Service__RefPrivateDataAssignment_6_1_0 ) ) | ( ( rule__Service__RefPDAllAssignment_6_1_1 ) ) );
     public final void rule__Service__Alternatives_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:920:1: ( ( ( rule__Service__RefPrivateDataAssignment_6_1_0 )* ) | ( ( rule__Service__RefPDAllAssignment_6_1_1 ) ) )
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:920:1: ( ( ( rule__Service__RefPrivateDataAssignment_6_1_0 ) ) | ( ( rule__Service__RefPDAllAssignment_6_1_1 ) ) )
+            int alt3=2;
+            int LA3_0 = input.LA(1);
 
-            if ( (LA4_0==RULE_ID||LA4_0==41||LA4_0==58) ) {
-                alt4=1;
+            if ( (LA3_0==RULE_ID) ) {
+                alt3=1;
             }
-            else if ( (LA4_0==83) ) {
-                alt4=2;
+            else if ( (LA3_0==83) ) {
+                alt3=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
+                    new NoViableAltException("", 3, 0, input);
 
                 throw nvae;
             }
-            switch (alt4) {
+            switch (alt3) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:921:1: ( ( rule__Service__RefPrivateDataAssignment_6_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:921:1: ( ( rule__Service__RefPrivateDataAssignment_6_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:921:1: ( ( rule__Service__RefPrivateDataAssignment_6_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:922:1: ( rule__Service__RefPrivateDataAssignment_6_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:921:1: ( ( rule__Service__RefPrivateDataAssignment_6_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:922:1: ( rule__Service__RefPrivateDataAssignment_6_1_0 )
                     {
                      before(grammarAccess.getServiceAccess().getRefPrivateDataAssignment_6_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:923:1: ( rule__Service__RefPrivateDataAssignment_6_1_0 )*
-                    loop3:
-                    do {
-                        int alt3=2;
-                        int LA3_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:923:1: ( rule__Service__RefPrivateDataAssignment_6_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:923:2: rule__Service__RefPrivateDataAssignment_6_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Service__RefPrivateDataAssignment_6_1_0_in_rule__Service__Alternatives_6_11940);
+                    rule__Service__RefPrivateDataAssignment_6_1_0();
 
-                        if ( (LA3_0==RULE_ID) ) {
-                            alt3=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt3) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:923:2: rule__Service__RefPrivateDataAssignment_6_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Service__RefPrivateDataAssignment_6_1_0_in_rule__Service__Alternatives_6_11940);
-                    	    rule__Service__RefPrivateDataAssignment_6_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop3;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getServiceAccess().getRefPrivateDataAssignment_6_1_0()); 
 
@@ -2555,7 +2537,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:929:1: ( rule__Service__RefPDAllAssignment_6_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:929:2: rule__Service__RefPDAllAssignment_6_1_1
                     {
-                    pushFollow(FOLLOW_rule__Service__RefPDAllAssignment_6_1_1_in_rule__Service__Alternatives_6_11959);
+                    pushFollow(FOLLOW_rule__Service__RefPDAllAssignment_6_1_1_in_rule__Service__Alternatives_6_11958);
                     rule__Service__RefPDAllAssignment_6_1_1();
 
                     state._fsp--;
@@ -2595,31 +2577,31 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             
         try {
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:942:1: ( ( 'Internal' ) | ( 'External' ) | ( 'Internal/External' ) )
-            int alt5=3;
+            int alt4=3;
             switch ( input.LA(1) ) {
             case 28:
                 {
-                alt5=1;
+                alt4=1;
                 }
                 break;
             case 29:
                 {
-                alt5=2;
+                alt4=2;
                 }
                 break;
             case 30:
                 {
-                alt5=3;
+                alt4=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
+                    new NoViableAltException("", 4, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt5) {
+            switch (alt4) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:943:1: ( 'Internal' )
                     {
@@ -2627,7 +2609,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:944:1: 'Internal'
                     {
                      before(grammarAccess.getRecipientAccess().getScopeInternalKeyword_9_0_0()); 
-                    match(input,28,FOLLOW_28_in_rule__Recipient__ScopeAlternatives_9_01993); 
+                    match(input,28,FOLLOW_28_in_rule__Recipient__ScopeAlternatives_9_01992); 
                      after(grammarAccess.getRecipientAccess().getScopeInternalKeyword_9_0_0()); 
 
                     }
@@ -2642,7 +2624,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:952:1: 'External'
                     {
                      before(grammarAccess.getRecipientAccess().getScopeExternalKeyword_9_0_1()); 
-                    match(input,29,FOLLOW_29_in_rule__Recipient__ScopeAlternatives_9_02013); 
+                    match(input,29,FOLLOW_29_in_rule__Recipient__ScopeAlternatives_9_02012); 
                      after(grammarAccess.getRecipientAccess().getScopeExternalKeyword_9_0_1()); 
 
                     }
@@ -2657,7 +2639,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:960:1: 'Internal/External'
                     {
                      before(grammarAccess.getRecipientAccess().getScopeInternalExternalKeyword_9_0_2()); 
-                    match(input,30,FOLLOW_30_in_rule__Recipient__ScopeAlternatives_9_02033); 
+                    match(input,30,FOLLOW_30_in_rule__Recipient__ScopeAlternatives_9_02032); 
                      after(grammarAccess.getRecipientAccess().getScopeInternalExternalKeyword_9_0_2()); 
 
                     }
@@ -2690,31 +2672,31 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             
         try {
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:976:1: ( ( 'Individual' ) | ( 'Organization' ) | ( 'Individual/Organization' ) )
-            int alt6=3;
+            int alt5=3;
             switch ( input.LA(1) ) {
             case 31:
                 {
-                alt6=1;
+                alt5=1;
                 }
                 break;
             case 32:
                 {
-                alt6=2;
+                alt5=2;
                 }
                 break;
             case 33:
                 {
-                alt6=3;
+                alt5=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt6) {
+            switch (alt5) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:977:1: ( 'Individual' )
                     {
@@ -2722,7 +2704,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:978:1: 'Individual'
                     {
                      before(grammarAccess.getRecipientAccess().getTypeIndividualKeyword_11_0_0()); 
-                    match(input,31,FOLLOW_31_in_rule__Recipient__TypeAlternatives_11_02068); 
+                    match(input,31,FOLLOW_31_in_rule__Recipient__TypeAlternatives_11_02067); 
                      after(grammarAccess.getRecipientAccess().getTypeIndividualKeyword_11_0_0()); 
 
                     }
@@ -2737,7 +2719,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:986:1: 'Organization'
                     {
                      before(grammarAccess.getRecipientAccess().getTypeOrganizationKeyword_11_0_1()); 
-                    match(input,32,FOLLOW_32_in_rule__Recipient__TypeAlternatives_11_02088); 
+                    match(input,32,FOLLOW_32_in_rule__Recipient__TypeAlternatives_11_02087); 
                      after(grammarAccess.getRecipientAccess().getTypeOrganizationKeyword_11_0_1()); 
 
                     }
@@ -2752,7 +2734,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:994:1: 'Individual/Organization'
                     {
                      before(grammarAccess.getRecipientAccess().getTypeIndividualOrganizationKeyword_11_0_2()); 
-                    match(input,33,FOLLOW_33_in_rule__Recipient__TypeAlternatives_11_02108); 
+                    match(input,33,FOLLOW_33_in_rule__Recipient__TypeAlternatives_11_02107); 
                      after(grammarAccess.getRecipientAccess().getTypeIndividualOrganizationKeyword_11_0_2()); 
 
                     }
@@ -2785,22 +2767,22 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             
         try {
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1010:1: ( ( 'PersonalInformation' ) | ( 'UsageInformation' ) )
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA7_0==34) ) {
-                alt7=1;
+            if ( (LA6_0==34) ) {
+                alt6=1;
             }
-            else if ( (LA7_0==35) ) {
-                alt7=2;
+            else if ( (LA6_0==35) ) {
+                alt6=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 7, 0, input);
+                    new NoViableAltException("", 6, 0, input);
 
                 throw nvae;
             }
-            switch (alt7) {
+            switch (alt6) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1011:1: ( 'PersonalInformation' )
                     {
@@ -2808,7 +2790,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1012:1: 'PersonalInformation'
                     {
                      before(grammarAccess.getPrivateDataAccess().getTypePersonalInformationKeyword_6_0_0()); 
-                    match(input,34,FOLLOW_34_in_rule__PrivateData__TypeAlternatives_6_02143); 
+                    match(input,34,FOLLOW_34_in_rule__PrivateData__TypeAlternatives_6_02142); 
                      after(grammarAccess.getPrivateDataAccess().getTypePersonalInformationKeyword_6_0_0()); 
 
                     }
@@ -2823,7 +2805,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1020:1: 'UsageInformation'
                     {
                      before(grammarAccess.getPrivateDataAccess().getTypeUsageInformationKeyword_6_0_1()); 
-                    match(input,35,FOLLOW_35_in_rule__PrivateData__TypeAlternatives_6_02163); 
+                    match(input,35,FOLLOW_35_in_rule__PrivateData__TypeAlternatives_6_02162); 
                      after(grammarAccess.getPrivateDataAccess().getTypeUsageInformationKeyword_6_0_1()); 
 
                     }
@@ -2849,64 +2831,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Collection__Alternatives_8_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1032:1: rule__Collection__Alternatives_8_1 : ( ( ( rule__Collection__RefPrivateDataAssignment_8_1_0 )* ) | ( ( rule__Collection__RefPDAllAssignment_8_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1032:1: rule__Collection__Alternatives_8_1 : ( ( ( rule__Collection__RefPrivateDataAssignment_8_1_0 ) ) | ( ( rule__Collection__RefPDAllAssignment_8_1_1 ) ) );
     public final void rule__Collection__Alternatives_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1036:1: ( ( ( rule__Collection__RefPrivateDataAssignment_8_1_0 )* ) | ( ( rule__Collection__RefPDAllAssignment_8_1_1 ) ) )
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1036:1: ( ( ( rule__Collection__RefPrivateDataAssignment_8_1_0 ) ) | ( ( rule__Collection__RefPDAllAssignment_8_1_1 ) ) )
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( (LA9_0==RULE_ID||LA9_0==67||(LA9_0>=69 && LA9_0<=70)) ) {
-                alt9=1;
+            if ( (LA7_0==RULE_ID) ) {
+                alt7=1;
             }
-            else if ( (LA9_0==83) ) {
-                alt9=2;
+            else if ( (LA7_0==83) ) {
+                alt7=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 9, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
-            switch (alt9) {
+            switch (alt7) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1037:1: ( ( rule__Collection__RefPrivateDataAssignment_8_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1037:1: ( ( rule__Collection__RefPrivateDataAssignment_8_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1037:1: ( ( rule__Collection__RefPrivateDataAssignment_8_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1038:1: ( rule__Collection__RefPrivateDataAssignment_8_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1037:1: ( ( rule__Collection__RefPrivateDataAssignment_8_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1038:1: ( rule__Collection__RefPrivateDataAssignment_8_1_0 )
                     {
                      before(grammarAccess.getCollectionAccess().getRefPrivateDataAssignment_8_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1039:1: ( rule__Collection__RefPrivateDataAssignment_8_1_0 )*
-                    loop8:
-                    do {
-                        int alt8=2;
-                        int LA8_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1039:1: ( rule__Collection__RefPrivateDataAssignment_8_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1039:2: rule__Collection__RefPrivateDataAssignment_8_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Collection__RefPrivateDataAssignment_8_1_0_in_rule__Collection__Alternatives_8_12196);
+                    rule__Collection__RefPrivateDataAssignment_8_1_0();
 
-                        if ( (LA8_0==RULE_ID) ) {
-                            alt8=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt8) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1039:2: rule__Collection__RefPrivateDataAssignment_8_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Collection__RefPrivateDataAssignment_8_1_0_in_rule__Collection__Alternatives_8_12197);
-                    	    rule__Collection__RefPrivateDataAssignment_8_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop8;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getCollectionAccess().getRefPrivateDataAssignment_8_1_0()); 
 
@@ -2925,7 +2889,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1045:1: ( rule__Collection__RefPDAllAssignment_8_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1045:2: rule__Collection__RefPDAllAssignment_8_1_1
                     {
-                    pushFollow(FOLLOW_rule__Collection__RefPDAllAssignment_8_1_1_in_rule__Collection__Alternatives_8_12216);
+                    pushFollow(FOLLOW_rule__Collection__RefPDAllAssignment_8_1_1_in_rule__Collection__Alternatives_8_12214);
                     rule__Collection__RefPDAllAssignment_8_1_1();
 
                     state._fsp--;
@@ -2958,64 +2922,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Collection__Alternatives_9_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1054:1: rule__Collection__Alternatives_9_1 : ( ( ( rule__Collection__RefServiceAssignment_9_1_0 )* ) | ( ( rule__Collection__RefSAllAssignment_9_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1054:1: rule__Collection__Alternatives_9_1 : ( ( ( rule__Collection__RefServiceAssignment_9_1_0 ) ) | ( ( rule__Collection__RefSAllAssignment_9_1_1 ) ) );
     public final void rule__Collection__Alternatives_9_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1058:1: ( ( ( rule__Collection__RefServiceAssignment_9_1_0 )* ) | ( ( rule__Collection__RefSAllAssignment_9_1_1 ) ) )
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1058:1: ( ( ( rule__Collection__RefServiceAssignment_9_1_0 ) ) | ( ( rule__Collection__RefSAllAssignment_9_1_1 ) ) )
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA11_0==RULE_ID||LA11_0==67||LA11_0==70) ) {
-                alt11=1;
+            if ( (LA8_0==RULE_ID) ) {
+                alt8=1;
             }
-            else if ( (LA11_0==83) ) {
-                alt11=2;
+            else if ( (LA8_0==83) ) {
+                alt8=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 11, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
-            switch (alt11) {
+            switch (alt8) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1059:1: ( ( rule__Collection__RefServiceAssignment_9_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1059:1: ( ( rule__Collection__RefServiceAssignment_9_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1059:1: ( ( rule__Collection__RefServiceAssignment_9_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1060:1: ( rule__Collection__RefServiceAssignment_9_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1059:1: ( ( rule__Collection__RefServiceAssignment_9_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1060:1: ( rule__Collection__RefServiceAssignment_9_1_0 )
                     {
                      before(grammarAccess.getCollectionAccess().getRefServiceAssignment_9_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1061:1: ( rule__Collection__RefServiceAssignment_9_1_0 )*
-                    loop10:
-                    do {
-                        int alt10=2;
-                        int LA10_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1061:1: ( rule__Collection__RefServiceAssignment_9_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1061:2: rule__Collection__RefServiceAssignment_9_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Collection__RefServiceAssignment_9_1_0_in_rule__Collection__Alternatives_9_12247);
+                    rule__Collection__RefServiceAssignment_9_1_0();
 
-                        if ( (LA10_0==RULE_ID) ) {
-                            alt10=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt10) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1061:2: rule__Collection__RefServiceAssignment_9_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Collection__RefServiceAssignment_9_1_0_in_rule__Collection__Alternatives_9_12249);
-                    	    rule__Collection__RefServiceAssignment_9_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop10;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getCollectionAccess().getRefServiceAssignment_9_1_0()); 
 
@@ -3034,7 +2980,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1067:1: ( rule__Collection__RefSAllAssignment_9_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1067:2: rule__Collection__RefSAllAssignment_9_1_1
                     {
-                    pushFollow(FOLLOW_rule__Collection__RefSAllAssignment_9_1_1_in_rule__Collection__Alternatives_9_12268);
+                    pushFollow(FOLLOW_rule__Collection__RefSAllAssignment_9_1_1_in_rule__Collection__Alternatives_9_12265);
                     rule__Collection__RefSAllAssignment_9_1_1();
 
                     state._fsp--;
@@ -3067,64 +3013,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Collection__Alternatives_10_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1076:1: rule__Collection__Alternatives_10_1 : ( ( ( rule__Collection__RefEnforcementAssignment_10_1_0 )* ) | ( ( rule__Collection__RefEAllAssignment_10_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1076:1: rule__Collection__Alternatives_10_1 : ( ( ( rule__Collection__RefEnforcementAssignment_10_1_0 ) ) | ( ( rule__Collection__RefEAllAssignment_10_1_1 ) ) );
     public final void rule__Collection__Alternatives_10_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1080:1: ( ( ( rule__Collection__RefEnforcementAssignment_10_1_0 )* ) | ( ( rule__Collection__RefEAllAssignment_10_1_1 ) ) )
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1080:1: ( ( ( rule__Collection__RefEnforcementAssignment_10_1_0 ) ) | ( ( rule__Collection__RefEAllAssignment_10_1_1 ) ) )
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( (LA13_0==RULE_ID||LA13_0==67) ) {
-                alt13=1;
+            if ( (LA9_0==RULE_ID) ) {
+                alt9=1;
             }
-            else if ( (LA13_0==83) ) {
-                alt13=2;
+            else if ( (LA9_0==83) ) {
+                alt9=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 9, 0, input);
 
                 throw nvae;
             }
-            switch (alt13) {
+            switch (alt9) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1081:1: ( ( rule__Collection__RefEnforcementAssignment_10_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1081:1: ( ( rule__Collection__RefEnforcementAssignment_10_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1081:1: ( ( rule__Collection__RefEnforcementAssignment_10_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1082:1: ( rule__Collection__RefEnforcementAssignment_10_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1081:1: ( ( rule__Collection__RefEnforcementAssignment_10_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1082:1: ( rule__Collection__RefEnforcementAssignment_10_1_0 )
                     {
                      before(grammarAccess.getCollectionAccess().getRefEnforcementAssignment_10_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1083:1: ( rule__Collection__RefEnforcementAssignment_10_1_0 )*
-                    loop12:
-                    do {
-                        int alt12=2;
-                        int LA12_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1083:1: ( rule__Collection__RefEnforcementAssignment_10_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1083:2: rule__Collection__RefEnforcementAssignment_10_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Collection__RefEnforcementAssignment_10_1_0_in_rule__Collection__Alternatives_10_12298);
+                    rule__Collection__RefEnforcementAssignment_10_1_0();
 
-                        if ( (LA12_0==RULE_ID) ) {
-                            alt12=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt12) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1083:2: rule__Collection__RefEnforcementAssignment_10_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Collection__RefEnforcementAssignment_10_1_0_in_rule__Collection__Alternatives_10_12301);
-                    	    rule__Collection__RefEnforcementAssignment_10_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop12;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getCollectionAccess().getRefEnforcementAssignment_10_1_0()); 
 
@@ -3143,7 +3071,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1089:1: ( rule__Collection__RefEAllAssignment_10_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1089:2: rule__Collection__RefEAllAssignment_10_1_1
                     {
-                    pushFollow(FOLLOW_rule__Collection__RefEAllAssignment_10_1_1_in_rule__Collection__Alternatives_10_12320);
+                    pushFollow(FOLLOW_rule__Collection__RefEAllAssignment_10_1_1_in_rule__Collection__Alternatives_10_12316);
                     rule__Collection__RefEAllAssignment_10_1_1();
 
                     state._fsp--;
@@ -3183,31 +3111,31 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             
         try {
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1102:1: ( ( 'Permitted' ) | ( 'Obligation' ) | ( 'Forbidden' ) )
-            int alt14=3;
+            int alt10=3;
             switch ( input.LA(1) ) {
             case 36:
                 {
-                alt14=1;
+                alt10=1;
                 }
                 break;
             case 37:
                 {
-                alt14=2;
+                alt10=2;
                 }
                 break;
             case 38:
                 {
-                alt14=3;
+                alt10=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
+                    new NoViableAltException("", 10, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt14) {
+            switch (alt10) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1103:1: ( 'Permitted' )
                     {
@@ -3215,7 +3143,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1104:1: 'Permitted'
                     {
                      before(grammarAccess.getCollectionAccess().getModalityPermittedKeyword_12_0_0()); 
-                    match(input,36,FOLLOW_36_in_rule__Collection__ModalityAlternatives_12_02354); 
+                    match(input,36,FOLLOW_36_in_rule__Collection__ModalityAlternatives_12_02350); 
                      after(grammarAccess.getCollectionAccess().getModalityPermittedKeyword_12_0_0()); 
 
                     }
@@ -3230,7 +3158,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1112:1: 'Obligation'
                     {
                      before(grammarAccess.getCollectionAccess().getModalityObligationKeyword_12_0_1()); 
-                    match(input,37,FOLLOW_37_in_rule__Collection__ModalityAlternatives_12_02374); 
+                    match(input,37,FOLLOW_37_in_rule__Collection__ModalityAlternatives_12_02370); 
                      after(grammarAccess.getCollectionAccess().getModalityObligationKeyword_12_0_1()); 
 
                     }
@@ -3245,7 +3173,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1120:1: 'Forbidden'
                     {
                      before(grammarAccess.getCollectionAccess().getModalityForbiddenKeyword_12_0_2()); 
-                    match(input,38,FOLLOW_38_in_rule__Collection__ModalityAlternatives_12_02394); 
+                    match(input,38,FOLLOW_38_in_rule__Collection__ModalityAlternatives_12_02390); 
                      after(grammarAccess.getCollectionAccess().getModalityForbiddenKeyword_12_0_2()); 
 
                     }
@@ -3271,64 +3199,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Disclosure__Alternatives_8_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1132:1: rule__Disclosure__Alternatives_8_1 : ( ( ( rule__Disclosure__RefRecipientAssignment_8_1_0 )* ) | ( ( rule__Disclosure__RefRAllAssignment_8_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1132:1: rule__Disclosure__Alternatives_8_1 : ( ( ( rule__Disclosure__RefRecipientAssignment_8_1_0 ) ) | ( ( rule__Disclosure__RefRAllAssignment_8_1_1 ) ) );
     public final void rule__Disclosure__Alternatives_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1136:1: ( ( ( rule__Disclosure__RefRecipientAssignment_8_1_0 )* ) | ( ( rule__Disclosure__RefRAllAssignment_8_1_1 ) ) )
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1136:1: ( ( ( rule__Disclosure__RefRecipientAssignment_8_1_0 ) ) | ( ( rule__Disclosure__RefRAllAssignment_8_1_1 ) ) )
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA16_0==RULE_ID||LA16_0==57||LA16_0==67||(LA16_0>=69 && LA16_0<=70)||(LA16_0>=74 && LA16_0<=75)) ) {
-                alt16=1;
+            if ( (LA11_0==RULE_ID) ) {
+                alt11=1;
             }
-            else if ( (LA16_0==83) ) {
-                alt16=2;
+            else if ( (LA11_0==83) ) {
+                alt11=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 16, 0, input);
+                    new NoViableAltException("", 11, 0, input);
 
                 throw nvae;
             }
-            switch (alt16) {
+            switch (alt11) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1137:1: ( ( rule__Disclosure__RefRecipientAssignment_8_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1137:1: ( ( rule__Disclosure__RefRecipientAssignment_8_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1137:1: ( ( rule__Disclosure__RefRecipientAssignment_8_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1138:1: ( rule__Disclosure__RefRecipientAssignment_8_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1137:1: ( ( rule__Disclosure__RefRecipientAssignment_8_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1138:1: ( rule__Disclosure__RefRecipientAssignment_8_1_0 )
                     {
                      before(grammarAccess.getDisclosureAccess().getRefRecipientAssignment_8_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1139:1: ( rule__Disclosure__RefRecipientAssignment_8_1_0 )*
-                    loop15:
-                    do {
-                        int alt15=2;
-                        int LA15_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1139:1: ( rule__Disclosure__RefRecipientAssignment_8_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1139:2: rule__Disclosure__RefRecipientAssignment_8_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Disclosure__RefRecipientAssignment_8_1_0_in_rule__Disclosure__Alternatives_8_12424);
+                    rule__Disclosure__RefRecipientAssignment_8_1_0();
 
-                        if ( (LA15_0==RULE_ID) ) {
-                            alt15=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt15) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1139:2: rule__Disclosure__RefRecipientAssignment_8_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Disclosure__RefRecipientAssignment_8_1_0_in_rule__Disclosure__Alternatives_8_12428);
-                    	    rule__Disclosure__RefRecipientAssignment_8_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop15;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getDisclosureAccess().getRefRecipientAssignment_8_1_0()); 
 
@@ -3347,7 +3257,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1145:1: ( rule__Disclosure__RefRAllAssignment_8_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1145:2: rule__Disclosure__RefRAllAssignment_8_1_1
                     {
-                    pushFollow(FOLLOW_rule__Disclosure__RefRAllAssignment_8_1_1_in_rule__Disclosure__Alternatives_8_12447);
+                    pushFollow(FOLLOW_rule__Disclosure__RefRAllAssignment_8_1_1_in_rule__Disclosure__Alternatives_8_12442);
                     rule__Disclosure__RefRAllAssignment_8_1_1();
 
                     state._fsp--;
@@ -3380,64 +3290,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Disclosure__Alternatives_9_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1154:1: rule__Disclosure__Alternatives_9_1 : ( ( ( rule__Disclosure__RefRecipientSourceAssignment_9_1_0 )* ) | ( ( rule__Disclosure__RefRSAllAssignment_9_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1154:1: rule__Disclosure__Alternatives_9_1 : ( ( ( rule__Disclosure__RefRecipientSourceAssignment_9_1_0 ) ) | ( ( rule__Disclosure__RefRSAllAssignment_9_1_1 ) ) );
     public final void rule__Disclosure__Alternatives_9_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1158:1: ( ( ( rule__Disclosure__RefRecipientSourceAssignment_9_1_0 )* ) | ( ( rule__Disclosure__RefRSAllAssignment_9_1_1 ) ) )
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1158:1: ( ( ( rule__Disclosure__RefRecipientSourceAssignment_9_1_0 ) ) | ( ( rule__Disclosure__RefRSAllAssignment_9_1_1 ) ) )
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA18_0==RULE_ID||LA18_0==57||LA18_0==67||(LA18_0>=69 && LA18_0<=70)||LA18_0==75) ) {
-                alt18=1;
+            if ( (LA12_0==RULE_ID) ) {
+                alt12=1;
             }
-            else if ( (LA18_0==83) ) {
-                alt18=2;
+            else if ( (LA12_0==83) ) {
+                alt12=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 18, 0, input);
+                    new NoViableAltException("", 12, 0, input);
 
                 throw nvae;
             }
-            switch (alt18) {
+            switch (alt12) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1159:1: ( ( rule__Disclosure__RefRecipientSourceAssignment_9_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1159:1: ( ( rule__Disclosure__RefRecipientSourceAssignment_9_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1159:1: ( ( rule__Disclosure__RefRecipientSourceAssignment_9_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1160:1: ( rule__Disclosure__RefRecipientSourceAssignment_9_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1159:1: ( ( rule__Disclosure__RefRecipientSourceAssignment_9_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1160:1: ( rule__Disclosure__RefRecipientSourceAssignment_9_1_0 )
                     {
                      before(grammarAccess.getDisclosureAccess().getRefRecipientSourceAssignment_9_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1161:1: ( rule__Disclosure__RefRecipientSourceAssignment_9_1_0 )*
-                    loop17:
-                    do {
-                        int alt17=2;
-                        int LA17_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1161:1: ( rule__Disclosure__RefRecipientSourceAssignment_9_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1161:2: rule__Disclosure__RefRecipientSourceAssignment_9_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Disclosure__RefRecipientSourceAssignment_9_1_0_in_rule__Disclosure__Alternatives_9_12475);
+                    rule__Disclosure__RefRecipientSourceAssignment_9_1_0();
 
-                        if ( (LA17_0==RULE_ID) ) {
-                            alt17=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt17) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1161:2: rule__Disclosure__RefRecipientSourceAssignment_9_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Disclosure__RefRecipientSourceAssignment_9_1_0_in_rule__Disclosure__Alternatives_9_12480);
-                    	    rule__Disclosure__RefRecipientSourceAssignment_9_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop17;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getDisclosureAccess().getRefRecipientSourceAssignment_9_1_0()); 
 
@@ -3456,7 +3348,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1167:1: ( rule__Disclosure__RefRSAllAssignment_9_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1167:2: rule__Disclosure__RefRSAllAssignment_9_1_1
                     {
-                    pushFollow(FOLLOW_rule__Disclosure__RefRSAllAssignment_9_1_1_in_rule__Disclosure__Alternatives_9_12499);
+                    pushFollow(FOLLOW_rule__Disclosure__RefRSAllAssignment_9_1_1_in_rule__Disclosure__Alternatives_9_12493);
                     rule__Disclosure__RefRSAllAssignment_9_1_1();
 
                     state._fsp--;
@@ -3489,64 +3381,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Disclosure__Alternatives_10_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1176:1: rule__Disclosure__Alternatives_10_1 : ( ( ( rule__Disclosure__RefRecipientTargetAssignment_10_1_0 )* ) | ( ( rule__Disclosure__RefRTAllAssignment_10_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1176:1: rule__Disclosure__Alternatives_10_1 : ( ( ( rule__Disclosure__RefRecipientTargetAssignment_10_1_0 ) ) | ( ( rule__Disclosure__RefRTAllAssignment_10_1_1 ) ) );
     public final void rule__Disclosure__Alternatives_10_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1180:1: ( ( ( rule__Disclosure__RefRecipientTargetAssignment_10_1_0 )* ) | ( ( rule__Disclosure__RefRTAllAssignment_10_1_1 ) ) )
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1180:1: ( ( ( rule__Disclosure__RefRecipientTargetAssignment_10_1_0 ) ) | ( ( rule__Disclosure__RefRTAllAssignment_10_1_1 ) ) )
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA20_0==RULE_ID||LA20_0==57||LA20_0==67||(LA20_0>=69 && LA20_0<=70)) ) {
-                alt20=1;
+            if ( (LA13_0==RULE_ID) ) {
+                alt13=1;
             }
-            else if ( (LA20_0==83) ) {
-                alt20=2;
+            else if ( (LA13_0==83) ) {
+                alt13=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 20, 0, input);
+                    new NoViableAltException("", 13, 0, input);
 
                 throw nvae;
             }
-            switch (alt20) {
+            switch (alt13) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1181:1: ( ( rule__Disclosure__RefRecipientTargetAssignment_10_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1181:1: ( ( rule__Disclosure__RefRecipientTargetAssignment_10_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1181:1: ( ( rule__Disclosure__RefRecipientTargetAssignment_10_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1182:1: ( rule__Disclosure__RefRecipientTargetAssignment_10_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1181:1: ( ( rule__Disclosure__RefRecipientTargetAssignment_10_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1182:1: ( rule__Disclosure__RefRecipientTargetAssignment_10_1_0 )
                     {
                      before(grammarAccess.getDisclosureAccess().getRefRecipientTargetAssignment_10_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1183:1: ( rule__Disclosure__RefRecipientTargetAssignment_10_1_0 )*
-                    loop19:
-                    do {
-                        int alt19=2;
-                        int LA19_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1183:1: ( rule__Disclosure__RefRecipientTargetAssignment_10_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1183:2: rule__Disclosure__RefRecipientTargetAssignment_10_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Disclosure__RefRecipientTargetAssignment_10_1_0_in_rule__Disclosure__Alternatives_10_12526);
+                    rule__Disclosure__RefRecipientTargetAssignment_10_1_0();
 
-                        if ( (LA19_0==RULE_ID) ) {
-                            alt19=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt19) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1183:2: rule__Disclosure__RefRecipientTargetAssignment_10_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Disclosure__RefRecipientTargetAssignment_10_1_0_in_rule__Disclosure__Alternatives_10_12532);
-                    	    rule__Disclosure__RefRecipientTargetAssignment_10_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop19;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getDisclosureAccess().getRefRecipientTargetAssignment_10_1_0()); 
 
@@ -3565,7 +3439,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1189:1: ( rule__Disclosure__RefRTAllAssignment_10_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1189:2: rule__Disclosure__RefRTAllAssignment_10_1_1
                     {
-                    pushFollow(FOLLOW_rule__Disclosure__RefRTAllAssignment_10_1_1_in_rule__Disclosure__Alternatives_10_12551);
+                    pushFollow(FOLLOW_rule__Disclosure__RefRTAllAssignment_10_1_1_in_rule__Disclosure__Alternatives_10_12544);
                     rule__Disclosure__RefRTAllAssignment_10_1_1();
 
                     state._fsp--;
@@ -3598,64 +3472,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Disclosure__Alternatives_11_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1198:1: rule__Disclosure__Alternatives_11_1 : ( ( ( rule__Disclosure__RefPrivateDataAssignment_11_1_0 )* ) | ( ( rule__Disclosure__RefPDAllAssignment_11_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1198:1: rule__Disclosure__Alternatives_11_1 : ( ( ( rule__Disclosure__RefPrivateDataAssignment_11_1_0 ) ) | ( ( rule__Disclosure__RefPDAllAssignment_11_1_1 ) ) );
     public final void rule__Disclosure__Alternatives_11_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1202:1: ( ( ( rule__Disclosure__RefPrivateDataAssignment_11_1_0 )* ) | ( ( rule__Disclosure__RefPDAllAssignment_11_1_1 ) ) )
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1202:1: ( ( ( rule__Disclosure__RefPrivateDataAssignment_11_1_0 ) ) | ( ( rule__Disclosure__RefPDAllAssignment_11_1_1 ) ) )
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA22_0==RULE_ID||LA22_0==67||(LA22_0>=69 && LA22_0<=70)) ) {
-                alt22=1;
+            if ( (LA14_0==RULE_ID) ) {
+                alt14=1;
             }
-            else if ( (LA22_0==83) ) {
-                alt22=2;
+            else if ( (LA14_0==83) ) {
+                alt14=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 22, 0, input);
+                    new NoViableAltException("", 14, 0, input);
 
                 throw nvae;
             }
-            switch (alt22) {
+            switch (alt14) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1203:1: ( ( rule__Disclosure__RefPrivateDataAssignment_11_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1203:1: ( ( rule__Disclosure__RefPrivateDataAssignment_11_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1203:1: ( ( rule__Disclosure__RefPrivateDataAssignment_11_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1204:1: ( rule__Disclosure__RefPrivateDataAssignment_11_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1203:1: ( ( rule__Disclosure__RefPrivateDataAssignment_11_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1204:1: ( rule__Disclosure__RefPrivateDataAssignment_11_1_0 )
                     {
                      before(grammarAccess.getDisclosureAccess().getRefPrivateDataAssignment_11_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1205:1: ( rule__Disclosure__RefPrivateDataAssignment_11_1_0 )*
-                    loop21:
-                    do {
-                        int alt21=2;
-                        int LA21_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1205:1: ( rule__Disclosure__RefPrivateDataAssignment_11_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1205:2: rule__Disclosure__RefPrivateDataAssignment_11_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Disclosure__RefPrivateDataAssignment_11_1_0_in_rule__Disclosure__Alternatives_11_12577);
+                    rule__Disclosure__RefPrivateDataAssignment_11_1_0();
 
-                        if ( (LA21_0==RULE_ID) ) {
-                            alt21=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt21) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1205:2: rule__Disclosure__RefPrivateDataAssignment_11_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Disclosure__RefPrivateDataAssignment_11_1_0_in_rule__Disclosure__Alternatives_11_12584);
-                    	    rule__Disclosure__RefPrivateDataAssignment_11_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop21;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getDisclosureAccess().getRefPrivateDataAssignment_11_1_0()); 
 
@@ -3674,7 +3530,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1211:1: ( rule__Disclosure__RefPDAllAssignment_11_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1211:2: rule__Disclosure__RefPDAllAssignment_11_1_1
                     {
-                    pushFollow(FOLLOW_rule__Disclosure__RefPDAllAssignment_11_1_1_in_rule__Disclosure__Alternatives_11_12603);
+                    pushFollow(FOLLOW_rule__Disclosure__RefPDAllAssignment_11_1_1_in_rule__Disclosure__Alternatives_11_12595);
                     rule__Disclosure__RefPDAllAssignment_11_1_1();
 
                     state._fsp--;
@@ -3707,64 +3563,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Disclosure__Alternatives_12_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1220:1: rule__Disclosure__Alternatives_12_1 : ( ( ( rule__Disclosure__RefServiceAssignment_12_1_0 )* ) | ( ( rule__Disclosure__RefSAllAssignment_12_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1220:1: rule__Disclosure__Alternatives_12_1 : ( ( ( rule__Disclosure__RefServiceAssignment_12_1_0 ) ) | ( ( rule__Disclosure__RefSAllAssignment_12_1_1 ) ) );
     public final void rule__Disclosure__Alternatives_12_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1224:1: ( ( ( rule__Disclosure__RefServiceAssignment_12_1_0 )* ) | ( ( rule__Disclosure__RefSAllAssignment_12_1_1 ) ) )
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1224:1: ( ( ( rule__Disclosure__RefServiceAssignment_12_1_0 ) ) | ( ( rule__Disclosure__RefSAllAssignment_12_1_1 ) ) )
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA24_0==RULE_ID||LA24_0==67||LA24_0==70) ) {
-                alt24=1;
+            if ( (LA15_0==RULE_ID) ) {
+                alt15=1;
             }
-            else if ( (LA24_0==83) ) {
-                alt24=2;
+            else if ( (LA15_0==83) ) {
+                alt15=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 24, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
                 throw nvae;
             }
-            switch (alt24) {
+            switch (alt15) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1225:1: ( ( rule__Disclosure__RefServiceAssignment_12_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1225:1: ( ( rule__Disclosure__RefServiceAssignment_12_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1225:1: ( ( rule__Disclosure__RefServiceAssignment_12_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1226:1: ( rule__Disclosure__RefServiceAssignment_12_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1225:1: ( ( rule__Disclosure__RefServiceAssignment_12_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1226:1: ( rule__Disclosure__RefServiceAssignment_12_1_0 )
                     {
                      before(grammarAccess.getDisclosureAccess().getRefServiceAssignment_12_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1227:1: ( rule__Disclosure__RefServiceAssignment_12_1_0 )*
-                    loop23:
-                    do {
-                        int alt23=2;
-                        int LA23_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1227:1: ( rule__Disclosure__RefServiceAssignment_12_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1227:2: rule__Disclosure__RefServiceAssignment_12_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Disclosure__RefServiceAssignment_12_1_0_in_rule__Disclosure__Alternatives_12_12628);
+                    rule__Disclosure__RefServiceAssignment_12_1_0();
 
-                        if ( (LA23_0==RULE_ID) ) {
-                            alt23=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt23) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1227:2: rule__Disclosure__RefServiceAssignment_12_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Disclosure__RefServiceAssignment_12_1_0_in_rule__Disclosure__Alternatives_12_12636);
-                    	    rule__Disclosure__RefServiceAssignment_12_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop23;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getDisclosureAccess().getRefServiceAssignment_12_1_0()); 
 
@@ -3783,7 +3621,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1233:1: ( rule__Disclosure__RefSAllAssignment_12_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1233:2: rule__Disclosure__RefSAllAssignment_12_1_1
                     {
-                    pushFollow(FOLLOW_rule__Disclosure__RefSAllAssignment_12_1_1_in_rule__Disclosure__Alternatives_12_12655);
+                    pushFollow(FOLLOW_rule__Disclosure__RefSAllAssignment_12_1_1_in_rule__Disclosure__Alternatives_12_12646);
                     rule__Disclosure__RefSAllAssignment_12_1_1();
 
                     state._fsp--;
@@ -3816,64 +3654,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Disclosure__Alternatives_13_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1242:1: rule__Disclosure__Alternatives_13_1 : ( ( ( rule__Disclosure__RefEnforcementAssignment_13_1_0 )* ) | ( ( rule__Disclosure__RefEAllAssignment_13_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1242:1: rule__Disclosure__Alternatives_13_1 : ( ( ( rule__Disclosure__RefEnforcementAssignment_13_1_0 ) ) | ( ( rule__Disclosure__RefEAllAssignment_13_1_1 ) ) );
     public final void rule__Disclosure__Alternatives_13_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1246:1: ( ( ( rule__Disclosure__RefEnforcementAssignment_13_1_0 )* ) | ( ( rule__Disclosure__RefEAllAssignment_13_1_1 ) ) )
-            int alt26=2;
-            int LA26_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1246:1: ( ( ( rule__Disclosure__RefEnforcementAssignment_13_1_0 ) ) | ( ( rule__Disclosure__RefEAllAssignment_13_1_1 ) ) )
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA26_0==RULE_ID||LA26_0==67) ) {
-                alt26=1;
+            if ( (LA16_0==RULE_ID) ) {
+                alt16=1;
             }
-            else if ( (LA26_0==83) ) {
-                alt26=2;
+            else if ( (LA16_0==83) ) {
+                alt16=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 26, 0, input);
+                    new NoViableAltException("", 16, 0, input);
 
                 throw nvae;
             }
-            switch (alt26) {
+            switch (alt16) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1247:1: ( ( rule__Disclosure__RefEnforcementAssignment_13_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1247:1: ( ( rule__Disclosure__RefEnforcementAssignment_13_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1247:1: ( ( rule__Disclosure__RefEnforcementAssignment_13_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1248:1: ( rule__Disclosure__RefEnforcementAssignment_13_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1247:1: ( ( rule__Disclosure__RefEnforcementAssignment_13_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1248:1: ( rule__Disclosure__RefEnforcementAssignment_13_1_0 )
                     {
                      before(grammarAccess.getDisclosureAccess().getRefEnforcementAssignment_13_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1249:1: ( rule__Disclosure__RefEnforcementAssignment_13_1_0 )*
-                    loop25:
-                    do {
-                        int alt25=2;
-                        int LA25_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1249:1: ( rule__Disclosure__RefEnforcementAssignment_13_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1249:2: rule__Disclosure__RefEnforcementAssignment_13_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Disclosure__RefEnforcementAssignment_13_1_0_in_rule__Disclosure__Alternatives_13_12679);
+                    rule__Disclosure__RefEnforcementAssignment_13_1_0();
 
-                        if ( (LA25_0==RULE_ID) ) {
-                            alt25=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt25) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1249:2: rule__Disclosure__RefEnforcementAssignment_13_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Disclosure__RefEnforcementAssignment_13_1_0_in_rule__Disclosure__Alternatives_13_12688);
-                    	    rule__Disclosure__RefEnforcementAssignment_13_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop25;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getDisclosureAccess().getRefEnforcementAssignment_13_1_0()); 
 
@@ -3892,7 +3712,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1255:1: ( rule__Disclosure__RefEAllAssignment_13_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1255:2: rule__Disclosure__RefEAllAssignment_13_1_1
                     {
-                    pushFollow(FOLLOW_rule__Disclosure__RefEAllAssignment_13_1_1_in_rule__Disclosure__Alternatives_13_12707);
+                    pushFollow(FOLLOW_rule__Disclosure__RefEAllAssignment_13_1_1_in_rule__Disclosure__Alternatives_13_12697);
                     rule__Disclosure__RefEAllAssignment_13_1_1();
 
                     state._fsp--;
@@ -3932,31 +3752,31 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             
         try {
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1268:1: ( ( 'Permitted' ) | ( 'Obligation' ) | ( 'Forbidden' ) )
-            int alt27=3;
+            int alt17=3;
             switch ( input.LA(1) ) {
             case 36:
                 {
-                alt27=1;
+                alt17=1;
                 }
                 break;
             case 37:
                 {
-                alt27=2;
+                alt17=2;
                 }
                 break;
             case 38:
                 {
-                alt27=3;
+                alt17=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 27, 0, input);
+                    new NoViableAltException("", 17, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt27) {
+            switch (alt17) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1269:1: ( 'Permitted' )
                     {
@@ -3964,7 +3784,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1270:1: 'Permitted'
                     {
                      before(grammarAccess.getDisclosureAccess().getModalityPermittedKeyword_15_0_0()); 
-                    match(input,36,FOLLOW_36_in_rule__Disclosure__ModalityAlternatives_15_02741); 
+                    match(input,36,FOLLOW_36_in_rule__Disclosure__ModalityAlternatives_15_02731); 
                      after(grammarAccess.getDisclosureAccess().getModalityPermittedKeyword_15_0_0()); 
 
                     }
@@ -3979,7 +3799,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1278:1: 'Obligation'
                     {
                      before(grammarAccess.getDisclosureAccess().getModalityObligationKeyword_15_0_1()); 
-                    match(input,37,FOLLOW_37_in_rule__Disclosure__ModalityAlternatives_15_02761); 
+                    match(input,37,FOLLOW_37_in_rule__Disclosure__ModalityAlternatives_15_02751); 
                      after(grammarAccess.getDisclosureAccess().getModalityObligationKeyword_15_0_1()); 
 
                     }
@@ -3994,7 +3814,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1286:1: 'Forbidden'
                     {
                      before(grammarAccess.getDisclosureAccess().getModalityForbiddenKeyword_15_0_2()); 
-                    match(input,38,FOLLOW_38_in_rule__Disclosure__ModalityAlternatives_15_02781); 
+                    match(input,38,FOLLOW_38_in_rule__Disclosure__ModalityAlternatives_15_02771); 
                      after(grammarAccess.getDisclosureAccess().getModalityForbiddenKeyword_15_0_2()); 
 
                     }
@@ -4020,64 +3840,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Retention__Alternatives_10_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1298:1: rule__Retention__Alternatives_10_1 : ( ( ( rule__Retention__RefPrivateDataAssignment_10_1_0 )* ) | ( ( rule__Retention__RefPDAllAssignment_10_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1298:1: rule__Retention__Alternatives_10_1 : ( ( ( rule__Retention__RefPrivateDataAssignment_10_1_0 ) ) | ( ( rule__Retention__RefPDAllAssignment_10_1_1 ) ) );
     public final void rule__Retention__Alternatives_10_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1302:1: ( ( ( rule__Retention__RefPrivateDataAssignment_10_1_0 )* ) | ( ( rule__Retention__RefPDAllAssignment_10_1_1 ) ) )
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1302:1: ( ( ( rule__Retention__RefPrivateDataAssignment_10_1_0 ) ) | ( ( rule__Retention__RefPDAllAssignment_10_1_1 ) ) )
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA29_0==RULE_ID||LA29_0==67||(LA29_0>=69 && LA29_0<=70)) ) {
-                alt29=1;
+            if ( (LA18_0==RULE_ID) ) {
+                alt18=1;
             }
-            else if ( (LA29_0==83) ) {
-                alt29=2;
+            else if ( (LA18_0==83) ) {
+                alt18=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 29, 0, input);
+                    new NoViableAltException("", 18, 0, input);
 
                 throw nvae;
             }
-            switch (alt29) {
+            switch (alt18) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1303:1: ( ( rule__Retention__RefPrivateDataAssignment_10_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1303:1: ( ( rule__Retention__RefPrivateDataAssignment_10_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1303:1: ( ( rule__Retention__RefPrivateDataAssignment_10_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1304:1: ( rule__Retention__RefPrivateDataAssignment_10_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1303:1: ( ( rule__Retention__RefPrivateDataAssignment_10_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1304:1: ( rule__Retention__RefPrivateDataAssignment_10_1_0 )
                     {
                      before(grammarAccess.getRetentionAccess().getRefPrivateDataAssignment_10_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1305:1: ( rule__Retention__RefPrivateDataAssignment_10_1_0 )*
-                    loop28:
-                    do {
-                        int alt28=2;
-                        int LA28_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1305:1: ( rule__Retention__RefPrivateDataAssignment_10_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1305:2: rule__Retention__RefPrivateDataAssignment_10_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Retention__RefPrivateDataAssignment_10_1_0_in_rule__Retention__Alternatives_10_12805);
+                    rule__Retention__RefPrivateDataAssignment_10_1_0();
 
-                        if ( (LA28_0==RULE_ID) ) {
-                            alt28=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt28) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1305:2: rule__Retention__RefPrivateDataAssignment_10_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Retention__RefPrivateDataAssignment_10_1_0_in_rule__Retention__Alternatives_10_12815);
-                    	    rule__Retention__RefPrivateDataAssignment_10_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop28;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getRetentionAccess().getRefPrivateDataAssignment_10_1_0()); 
 
@@ -4096,7 +3898,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1311:1: ( rule__Retention__RefPDAllAssignment_10_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1311:2: rule__Retention__RefPDAllAssignment_10_1_1
                     {
-                    pushFollow(FOLLOW_rule__Retention__RefPDAllAssignment_10_1_1_in_rule__Retention__Alternatives_10_12834);
+                    pushFollow(FOLLOW_rule__Retention__RefPDAllAssignment_10_1_1_in_rule__Retention__Alternatives_10_12823);
                     rule__Retention__RefPDAllAssignment_10_1_1();
 
                     state._fsp--;
@@ -4129,64 +3931,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Retention__Alternatives_11_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1320:1: rule__Retention__Alternatives_11_1 : ( ( ( rule__Retention__RefServiceAssignment_11_1_0 )* ) | ( ( rule__Retention__RefSAllAssignment_11_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1320:1: rule__Retention__Alternatives_11_1 : ( ( ( rule__Retention__RefServiceAssignment_11_1_0 ) ) | ( ( rule__Retention__RefSAllAssignment_11_1_1 ) ) );
     public final void rule__Retention__Alternatives_11_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1324:1: ( ( ( rule__Retention__RefServiceAssignment_11_1_0 )* ) | ( ( rule__Retention__RefSAllAssignment_11_1_1 ) ) )
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1324:1: ( ( ( rule__Retention__RefServiceAssignment_11_1_0 ) ) | ( ( rule__Retention__RefSAllAssignment_11_1_1 ) ) )
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA31_0==RULE_ID||LA31_0==67||LA31_0==70) ) {
-                alt31=1;
+            if ( (LA19_0==RULE_ID) ) {
+                alt19=1;
             }
-            else if ( (LA31_0==83) ) {
-                alt31=2;
+            else if ( (LA19_0==83) ) {
+                alt19=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 31, 0, input);
+                    new NoViableAltException("", 19, 0, input);
 
                 throw nvae;
             }
-            switch (alt31) {
+            switch (alt19) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1325:1: ( ( rule__Retention__RefServiceAssignment_11_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1325:1: ( ( rule__Retention__RefServiceAssignment_11_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1325:1: ( ( rule__Retention__RefServiceAssignment_11_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1326:1: ( rule__Retention__RefServiceAssignment_11_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1325:1: ( ( rule__Retention__RefServiceAssignment_11_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1326:1: ( rule__Retention__RefServiceAssignment_11_1_0 )
                     {
                      before(grammarAccess.getRetentionAccess().getRefServiceAssignment_11_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1327:1: ( rule__Retention__RefServiceAssignment_11_1_0 )*
-                    loop30:
-                    do {
-                        int alt30=2;
-                        int LA30_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1327:1: ( rule__Retention__RefServiceAssignment_11_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1327:2: rule__Retention__RefServiceAssignment_11_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Retention__RefServiceAssignment_11_1_0_in_rule__Retention__Alternatives_11_12856);
+                    rule__Retention__RefServiceAssignment_11_1_0();
 
-                        if ( (LA30_0==RULE_ID) ) {
-                            alt30=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt30) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1327:2: rule__Retention__RefServiceAssignment_11_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Retention__RefServiceAssignment_11_1_0_in_rule__Retention__Alternatives_11_12867);
-                    	    rule__Retention__RefServiceAssignment_11_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop30;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getRetentionAccess().getRefServiceAssignment_11_1_0()); 
 
@@ -4205,7 +3989,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1333:1: ( rule__Retention__RefSAllAssignment_11_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1333:2: rule__Retention__RefSAllAssignment_11_1_1
                     {
-                    pushFollow(FOLLOW_rule__Retention__RefSAllAssignment_11_1_1_in_rule__Retention__Alternatives_11_12886);
+                    pushFollow(FOLLOW_rule__Retention__RefSAllAssignment_11_1_1_in_rule__Retention__Alternatives_11_12874);
                     rule__Retention__RefSAllAssignment_11_1_1();
 
                     state._fsp--;
@@ -4238,64 +4022,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Retention__Alternatives_12_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1342:1: rule__Retention__Alternatives_12_1 : ( ( ( rule__Retention__RefEnforcementAssignment_12_1_0 )* ) | ( ( rule__Retention__RefEAllAssignment_12_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1342:1: rule__Retention__Alternatives_12_1 : ( ( ( rule__Retention__RefEnforcementAssignment_12_1_0 ) ) | ( ( rule__Retention__RefEAllAssignment_12_1_1 ) ) );
     public final void rule__Retention__Alternatives_12_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1346:1: ( ( ( rule__Retention__RefEnforcementAssignment_12_1_0 )* ) | ( ( rule__Retention__RefEAllAssignment_12_1_1 ) ) )
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1346:1: ( ( ( rule__Retention__RefEnforcementAssignment_12_1_0 ) ) | ( ( rule__Retention__RefEAllAssignment_12_1_1 ) ) )
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA33_0==RULE_ID||LA33_0==67) ) {
-                alt33=1;
+            if ( (LA20_0==RULE_ID) ) {
+                alt20=1;
             }
-            else if ( (LA33_0==83) ) {
-                alt33=2;
+            else if ( (LA20_0==83) ) {
+                alt20=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 33, 0, input);
+                    new NoViableAltException("", 20, 0, input);
 
                 throw nvae;
             }
-            switch (alt33) {
+            switch (alt20) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1347:1: ( ( rule__Retention__RefEnforcementAssignment_12_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1347:1: ( ( rule__Retention__RefEnforcementAssignment_12_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1347:1: ( ( rule__Retention__RefEnforcementAssignment_12_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1348:1: ( rule__Retention__RefEnforcementAssignment_12_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1347:1: ( ( rule__Retention__RefEnforcementAssignment_12_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1348:1: ( rule__Retention__RefEnforcementAssignment_12_1_0 )
                     {
                      before(grammarAccess.getRetentionAccess().getRefEnforcementAssignment_12_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1349:1: ( rule__Retention__RefEnforcementAssignment_12_1_0 )*
-                    loop32:
-                    do {
-                        int alt32=2;
-                        int LA32_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1349:1: ( rule__Retention__RefEnforcementAssignment_12_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1349:2: rule__Retention__RefEnforcementAssignment_12_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Retention__RefEnforcementAssignment_12_1_0_in_rule__Retention__Alternatives_12_12907);
+                    rule__Retention__RefEnforcementAssignment_12_1_0();
 
-                        if ( (LA32_0==RULE_ID) ) {
-                            alt32=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt32) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1349:2: rule__Retention__RefEnforcementAssignment_12_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Retention__RefEnforcementAssignment_12_1_0_in_rule__Retention__Alternatives_12_12919);
-                    	    rule__Retention__RefEnforcementAssignment_12_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop32;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getRetentionAccess().getRefEnforcementAssignment_12_1_0()); 
 
@@ -4314,7 +4080,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1355:1: ( rule__Retention__RefEAllAssignment_12_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1355:2: rule__Retention__RefEAllAssignment_12_1_1
                     {
-                    pushFollow(FOLLOW_rule__Retention__RefEAllAssignment_12_1_1_in_rule__Retention__Alternatives_12_12938);
+                    pushFollow(FOLLOW_rule__Retention__RefEAllAssignment_12_1_1_in_rule__Retention__Alternatives_12_12925);
                     rule__Retention__RefEAllAssignment_12_1_1();
 
                     state._fsp--;
@@ -4354,31 +4120,31 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             
         try {
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1368:1: ( ( 'Permitted' ) | ( 'Obligation' ) | ( 'Forbidden' ) )
-            int alt34=3;
+            int alt21=3;
             switch ( input.LA(1) ) {
             case 36:
                 {
-                alt34=1;
+                alt21=1;
                 }
                 break;
             case 37:
                 {
-                alt34=2;
+                alt21=2;
                 }
                 break;
             case 38:
                 {
-                alt34=3;
+                alt21=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 34, 0, input);
+                    new NoViableAltException("", 21, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt34) {
+            switch (alt21) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1369:1: ( 'Permitted' )
                     {
@@ -4386,7 +4152,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1370:1: 'Permitted'
                     {
                      before(grammarAccess.getRetentionAccess().getModalityPermittedKeyword_14_0_0()); 
-                    match(input,36,FOLLOW_36_in_rule__Retention__ModalityAlternatives_14_02972); 
+                    match(input,36,FOLLOW_36_in_rule__Retention__ModalityAlternatives_14_02959); 
                      after(grammarAccess.getRetentionAccess().getModalityPermittedKeyword_14_0_0()); 
 
                     }
@@ -4401,7 +4167,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1378:1: 'Obligation'
                     {
                      before(grammarAccess.getRetentionAccess().getModalityObligationKeyword_14_0_1()); 
-                    match(input,37,FOLLOW_37_in_rule__Retention__ModalityAlternatives_14_02992); 
+                    match(input,37,FOLLOW_37_in_rule__Retention__ModalityAlternatives_14_02979); 
                      after(grammarAccess.getRetentionAccess().getModalityObligationKeyword_14_0_1()); 
 
                     }
@@ -4416,7 +4182,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1386:1: 'Forbidden'
                     {
                      before(grammarAccess.getRetentionAccess().getModalityForbiddenKeyword_14_0_2()); 
-                    match(input,38,FOLLOW_38_in_rule__Retention__ModalityAlternatives_14_03012); 
+                    match(input,38,FOLLOW_38_in_rule__Retention__ModalityAlternatives_14_02999); 
                      after(grammarAccess.getRetentionAccess().getModalityForbiddenKeyword_14_0_2()); 
 
                     }
@@ -4442,64 +4208,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Usage__Alternatives_8_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1398:1: rule__Usage__Alternatives_8_1 : ( ( ( rule__Usage__RefPrivateDataAssignment_8_1_0 )* ) | ( ( rule__Usage__RefPDAllAssignment_8_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1398:1: rule__Usage__Alternatives_8_1 : ( ( ( rule__Usage__RefPrivateDataAssignment_8_1_0 ) ) | ( ( rule__Usage__RefPDAllAssignment_8_1_1 ) ) );
     public final void rule__Usage__Alternatives_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1402:1: ( ( ( rule__Usage__RefPrivateDataAssignment_8_1_0 )* ) | ( ( rule__Usage__RefPDAllAssignment_8_1_1 ) ) )
-            int alt36=2;
-            int LA36_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1402:1: ( ( ( rule__Usage__RefPrivateDataAssignment_8_1_0 ) ) | ( ( rule__Usage__RefPDAllAssignment_8_1_1 ) ) )
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA36_0==RULE_ID||LA36_0==67||(LA36_0>=69 && LA36_0<=70)) ) {
-                alt36=1;
+            if ( (LA22_0==RULE_ID) ) {
+                alt22=1;
             }
-            else if ( (LA36_0==83) ) {
-                alt36=2;
+            else if ( (LA22_0==83) ) {
+                alt22=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 36, 0, input);
+                    new NoViableAltException("", 22, 0, input);
 
                 throw nvae;
             }
-            switch (alt36) {
+            switch (alt22) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1403:1: ( ( rule__Usage__RefPrivateDataAssignment_8_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1403:1: ( ( rule__Usage__RefPrivateDataAssignment_8_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1403:1: ( ( rule__Usage__RefPrivateDataAssignment_8_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1404:1: ( rule__Usage__RefPrivateDataAssignment_8_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1403:1: ( ( rule__Usage__RefPrivateDataAssignment_8_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1404:1: ( rule__Usage__RefPrivateDataAssignment_8_1_0 )
                     {
                      before(grammarAccess.getUsageAccess().getRefPrivateDataAssignment_8_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1405:1: ( rule__Usage__RefPrivateDataAssignment_8_1_0 )*
-                    loop35:
-                    do {
-                        int alt35=2;
-                        int LA35_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1405:1: ( rule__Usage__RefPrivateDataAssignment_8_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1405:2: rule__Usage__RefPrivateDataAssignment_8_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Usage__RefPrivateDataAssignment_8_1_0_in_rule__Usage__Alternatives_8_13033);
+                    rule__Usage__RefPrivateDataAssignment_8_1_0();
 
-                        if ( (LA35_0==RULE_ID) ) {
-                            alt35=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt35) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1405:2: rule__Usage__RefPrivateDataAssignment_8_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Usage__RefPrivateDataAssignment_8_1_0_in_rule__Usage__Alternatives_8_13046);
-                    	    rule__Usage__RefPrivateDataAssignment_8_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop35;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getUsageAccess().getRefPrivateDataAssignment_8_1_0()); 
 
@@ -4518,7 +4266,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1411:1: ( rule__Usage__RefPDAllAssignment_8_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1411:2: rule__Usage__RefPDAllAssignment_8_1_1
                     {
-                    pushFollow(FOLLOW_rule__Usage__RefPDAllAssignment_8_1_1_in_rule__Usage__Alternatives_8_13065);
+                    pushFollow(FOLLOW_rule__Usage__RefPDAllAssignment_8_1_1_in_rule__Usage__Alternatives_8_13051);
                     rule__Usage__RefPDAllAssignment_8_1_1();
 
                     state._fsp--;
@@ -4551,64 +4299,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Usage__Alternatives_9_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1420:1: rule__Usage__Alternatives_9_1 : ( ( ( rule__Usage__RefServiceAssignment_9_1_0 )* ) | ( ( rule__Usage__RefSAllAssignment_9_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1420:1: rule__Usage__Alternatives_9_1 : ( ( ( rule__Usage__RefServiceAssignment_9_1_0 ) ) | ( ( rule__Usage__RefSAllAssignment_9_1_1 ) ) );
     public final void rule__Usage__Alternatives_9_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1424:1: ( ( ( rule__Usage__RefServiceAssignment_9_1_0 )* ) | ( ( rule__Usage__RefSAllAssignment_9_1_1 ) ) )
-            int alt38=2;
-            int LA38_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1424:1: ( ( ( rule__Usage__RefServiceAssignment_9_1_0 ) ) | ( ( rule__Usage__RefSAllAssignment_9_1_1 ) ) )
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA38_0==RULE_ID||LA38_0==67||LA38_0==70) ) {
-                alt38=1;
+            if ( (LA23_0==RULE_ID) ) {
+                alt23=1;
             }
-            else if ( (LA38_0==83) ) {
-                alt38=2;
+            else if ( (LA23_0==83) ) {
+                alt23=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 38, 0, input);
+                    new NoViableAltException("", 23, 0, input);
 
                 throw nvae;
             }
-            switch (alt38) {
+            switch (alt23) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1425:1: ( ( rule__Usage__RefServiceAssignment_9_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1425:1: ( ( rule__Usage__RefServiceAssignment_9_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1425:1: ( ( rule__Usage__RefServiceAssignment_9_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1426:1: ( rule__Usage__RefServiceAssignment_9_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1425:1: ( ( rule__Usage__RefServiceAssignment_9_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1426:1: ( rule__Usage__RefServiceAssignment_9_1_0 )
                     {
                      before(grammarAccess.getUsageAccess().getRefServiceAssignment_9_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1427:1: ( rule__Usage__RefServiceAssignment_9_1_0 )*
-                    loop37:
-                    do {
-                        int alt37=2;
-                        int LA37_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1427:1: ( rule__Usage__RefServiceAssignment_9_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1427:2: rule__Usage__RefServiceAssignment_9_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Usage__RefServiceAssignment_9_1_0_in_rule__Usage__Alternatives_9_13084);
+                    rule__Usage__RefServiceAssignment_9_1_0();
 
-                        if ( (LA37_0==RULE_ID) ) {
-                            alt37=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt37) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1427:2: rule__Usage__RefServiceAssignment_9_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Usage__RefServiceAssignment_9_1_0_in_rule__Usage__Alternatives_9_13098);
-                    	    rule__Usage__RefServiceAssignment_9_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop37;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getUsageAccess().getRefServiceAssignment_9_1_0()); 
 
@@ -4627,7 +4357,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1433:1: ( rule__Usage__RefSAllAssignment_9_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1433:2: rule__Usage__RefSAllAssignment_9_1_1
                     {
-                    pushFollow(FOLLOW_rule__Usage__RefSAllAssignment_9_1_1_in_rule__Usage__Alternatives_9_13117);
+                    pushFollow(FOLLOW_rule__Usage__RefSAllAssignment_9_1_1_in_rule__Usage__Alternatives_9_13102);
                     rule__Usage__RefSAllAssignment_9_1_1();
 
                     state._fsp--;
@@ -4660,64 +4390,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Usage__Alternatives_10_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1442:1: rule__Usage__Alternatives_10_1 : ( ( ( rule__Usage__RefEnforcementAssignment_10_1_0 )* ) | ( ( rule__Usage__RefEAllAssignment_10_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1442:1: rule__Usage__Alternatives_10_1 : ( ( ( rule__Usage__RefEnforcementAssignment_10_1_0 ) ) | ( ( rule__Usage__RefEAllAssignment_10_1_1 ) ) );
     public final void rule__Usage__Alternatives_10_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1446:1: ( ( ( rule__Usage__RefEnforcementAssignment_10_1_0 )* ) | ( ( rule__Usage__RefEAllAssignment_10_1_1 ) ) )
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1446:1: ( ( ( rule__Usage__RefEnforcementAssignment_10_1_0 ) ) | ( ( rule__Usage__RefEAllAssignment_10_1_1 ) ) )
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA40_0==RULE_ID||LA40_0==67) ) {
-                alt40=1;
+            if ( (LA24_0==RULE_ID) ) {
+                alt24=1;
             }
-            else if ( (LA40_0==83) ) {
-                alt40=2;
+            else if ( (LA24_0==83) ) {
+                alt24=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 40, 0, input);
+                    new NoViableAltException("", 24, 0, input);
 
                 throw nvae;
             }
-            switch (alt40) {
+            switch (alt24) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1447:1: ( ( rule__Usage__RefEnforcementAssignment_10_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1447:1: ( ( rule__Usage__RefEnforcementAssignment_10_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1447:1: ( ( rule__Usage__RefEnforcementAssignment_10_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1448:1: ( rule__Usage__RefEnforcementAssignment_10_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1447:1: ( ( rule__Usage__RefEnforcementAssignment_10_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1448:1: ( rule__Usage__RefEnforcementAssignment_10_1_0 )
                     {
                      before(grammarAccess.getUsageAccess().getRefEnforcementAssignment_10_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1449:1: ( rule__Usage__RefEnforcementAssignment_10_1_0 )*
-                    loop39:
-                    do {
-                        int alt39=2;
-                        int LA39_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1449:1: ( rule__Usage__RefEnforcementAssignment_10_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1449:2: rule__Usage__RefEnforcementAssignment_10_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Usage__RefEnforcementAssignment_10_1_0_in_rule__Usage__Alternatives_10_13135);
+                    rule__Usage__RefEnforcementAssignment_10_1_0();
 
-                        if ( (LA39_0==RULE_ID) ) {
-                            alt39=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt39) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1449:2: rule__Usage__RefEnforcementAssignment_10_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Usage__RefEnforcementAssignment_10_1_0_in_rule__Usage__Alternatives_10_13150);
-                    	    rule__Usage__RefEnforcementAssignment_10_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop39;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getUsageAccess().getRefEnforcementAssignment_10_1_0()); 
 
@@ -4736,7 +4448,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1455:1: ( rule__Usage__RefEAllAssignment_10_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1455:2: rule__Usage__RefEAllAssignment_10_1_1
                     {
-                    pushFollow(FOLLOW_rule__Usage__RefEAllAssignment_10_1_1_in_rule__Usage__Alternatives_10_13169);
+                    pushFollow(FOLLOW_rule__Usage__RefEAllAssignment_10_1_1_in_rule__Usage__Alternatives_10_13153);
                     rule__Usage__RefEAllAssignment_10_1_1();
 
                     state._fsp--;
@@ -4776,31 +4488,31 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             
         try {
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1468:1: ( ( 'Permitted' ) | ( 'Obligation' ) | ( 'Forbidden' ) )
-            int alt41=3;
+            int alt25=3;
             switch ( input.LA(1) ) {
             case 36:
                 {
-                alt41=1;
+                alt25=1;
                 }
                 break;
             case 37:
                 {
-                alt41=2;
+                alt25=2;
                 }
                 break;
             case 38:
                 {
-                alt41=3;
+                alt25=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 41, 0, input);
+                    new NoViableAltException("", 25, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt41) {
+            switch (alt25) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1469:1: ( 'Permitted' )
                     {
@@ -4808,7 +4520,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1470:1: 'Permitted'
                     {
                      before(grammarAccess.getUsageAccess().getModalityPermittedKeyword_12_0_0()); 
-                    match(input,36,FOLLOW_36_in_rule__Usage__ModalityAlternatives_12_03203); 
+                    match(input,36,FOLLOW_36_in_rule__Usage__ModalityAlternatives_12_03187); 
                      after(grammarAccess.getUsageAccess().getModalityPermittedKeyword_12_0_0()); 
 
                     }
@@ -4823,7 +4535,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1478:1: 'Obligation'
                     {
                      before(grammarAccess.getUsageAccess().getModalityObligationKeyword_12_0_1()); 
-                    match(input,37,FOLLOW_37_in_rule__Usage__ModalityAlternatives_12_03223); 
+                    match(input,37,FOLLOW_37_in_rule__Usage__ModalityAlternatives_12_03207); 
                      after(grammarAccess.getUsageAccess().getModalityObligationKeyword_12_0_1()); 
 
                     }
@@ -4838,7 +4550,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1486:1: 'Forbidden'
                     {
                      before(grammarAccess.getUsageAccess().getModalityForbiddenKeyword_12_0_2()); 
-                    match(input,38,FOLLOW_38_in_rule__Usage__ModalityAlternatives_12_03243); 
+                    match(input,38,FOLLOW_38_in_rule__Usage__ModalityAlternatives_12_03227); 
                      after(grammarAccess.getUsageAccess().getModalityForbiddenKeyword_12_0_2()); 
 
                     }
@@ -4864,64 +4576,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Informative__Alternatives_8_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1498:1: rule__Informative__Alternatives_8_1 : ( ( ( rule__Informative__RefPrivateDataAssignment_8_1_0 )* ) | ( ( rule__Informative__RefPDAllAssignment_8_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1498:1: rule__Informative__Alternatives_8_1 : ( ( ( rule__Informative__RefPrivateDataAssignment_8_1_0 ) ) | ( ( rule__Informative__RefPDAllAssignment_8_1_1 ) ) );
     public final void rule__Informative__Alternatives_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1502:1: ( ( ( rule__Informative__RefPrivateDataAssignment_8_1_0 )* ) | ( ( rule__Informative__RefPDAllAssignment_8_1_1 ) ) )
-            int alt43=2;
-            int LA43_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1502:1: ( ( ( rule__Informative__RefPrivateDataAssignment_8_1_0 ) ) | ( ( rule__Informative__RefPDAllAssignment_8_1_1 ) ) )
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA43_0==RULE_ID||LA43_0==67||(LA43_0>=69 && LA43_0<=70)) ) {
-                alt43=1;
+            if ( (LA26_0==RULE_ID) ) {
+                alt26=1;
             }
-            else if ( (LA43_0==83) ) {
-                alt43=2;
+            else if ( (LA26_0==83) ) {
+                alt26=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 43, 0, input);
+                    new NoViableAltException("", 26, 0, input);
 
                 throw nvae;
             }
-            switch (alt43) {
+            switch (alt26) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1503:1: ( ( rule__Informative__RefPrivateDataAssignment_8_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1503:1: ( ( rule__Informative__RefPrivateDataAssignment_8_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1503:1: ( ( rule__Informative__RefPrivateDataAssignment_8_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1504:1: ( rule__Informative__RefPrivateDataAssignment_8_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1503:1: ( ( rule__Informative__RefPrivateDataAssignment_8_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1504:1: ( rule__Informative__RefPrivateDataAssignment_8_1_0 )
                     {
                      before(grammarAccess.getInformativeAccess().getRefPrivateDataAssignment_8_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1505:1: ( rule__Informative__RefPrivateDataAssignment_8_1_0 )*
-                    loop42:
-                    do {
-                        int alt42=2;
-                        int LA42_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1505:1: ( rule__Informative__RefPrivateDataAssignment_8_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1505:2: rule__Informative__RefPrivateDataAssignment_8_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Informative__RefPrivateDataAssignment_8_1_0_in_rule__Informative__Alternatives_8_13261);
+                    rule__Informative__RefPrivateDataAssignment_8_1_0();
 
-                        if ( (LA42_0==RULE_ID) ) {
-                            alt42=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt42) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1505:2: rule__Informative__RefPrivateDataAssignment_8_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Informative__RefPrivateDataAssignment_8_1_0_in_rule__Informative__Alternatives_8_13277);
-                    	    rule__Informative__RefPrivateDataAssignment_8_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop42;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getInformativeAccess().getRefPrivateDataAssignment_8_1_0()); 
 
@@ -4940,7 +4634,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1511:1: ( rule__Informative__RefPDAllAssignment_8_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1511:2: rule__Informative__RefPDAllAssignment_8_1_1
                     {
-                    pushFollow(FOLLOW_rule__Informative__RefPDAllAssignment_8_1_1_in_rule__Informative__Alternatives_8_13296);
+                    pushFollow(FOLLOW_rule__Informative__RefPDAllAssignment_8_1_1_in_rule__Informative__Alternatives_8_13279);
                     rule__Informative__RefPDAllAssignment_8_1_1();
 
                     state._fsp--;
@@ -4973,64 +4667,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Informative__Alternatives_9_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1520:1: rule__Informative__Alternatives_9_1 : ( ( ( rule__Informative__RefServiceAssignment_9_1_0 )* ) | ( ( rule__Informative__RefSAllAssignment_9_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1520:1: rule__Informative__Alternatives_9_1 : ( ( ( rule__Informative__RefServiceAssignment_9_1_0 ) ) | ( ( rule__Informative__RefSAllAssignment_9_1_1 ) ) );
     public final void rule__Informative__Alternatives_9_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1524:1: ( ( ( rule__Informative__RefServiceAssignment_9_1_0 )* ) | ( ( rule__Informative__RefSAllAssignment_9_1_1 ) ) )
-            int alt45=2;
-            int LA45_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1524:1: ( ( ( rule__Informative__RefServiceAssignment_9_1_0 ) ) | ( ( rule__Informative__RefSAllAssignment_9_1_1 ) ) )
+            int alt27=2;
+            int LA27_0 = input.LA(1);
 
-            if ( (LA45_0==RULE_ID||LA45_0==67||LA45_0==70) ) {
-                alt45=1;
+            if ( (LA27_0==RULE_ID) ) {
+                alt27=1;
             }
-            else if ( (LA45_0==83) ) {
-                alt45=2;
+            else if ( (LA27_0==83) ) {
+                alt27=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 45, 0, input);
+                    new NoViableAltException("", 27, 0, input);
 
                 throw nvae;
             }
-            switch (alt45) {
+            switch (alt27) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1525:1: ( ( rule__Informative__RefServiceAssignment_9_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1525:1: ( ( rule__Informative__RefServiceAssignment_9_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1525:1: ( ( rule__Informative__RefServiceAssignment_9_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1526:1: ( rule__Informative__RefServiceAssignment_9_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1525:1: ( ( rule__Informative__RefServiceAssignment_9_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1526:1: ( rule__Informative__RefServiceAssignment_9_1_0 )
                     {
                      before(grammarAccess.getInformativeAccess().getRefServiceAssignment_9_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1527:1: ( rule__Informative__RefServiceAssignment_9_1_0 )*
-                    loop44:
-                    do {
-                        int alt44=2;
-                        int LA44_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1527:1: ( rule__Informative__RefServiceAssignment_9_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1527:2: rule__Informative__RefServiceAssignment_9_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Informative__RefServiceAssignment_9_1_0_in_rule__Informative__Alternatives_9_13312);
+                    rule__Informative__RefServiceAssignment_9_1_0();
 
-                        if ( (LA44_0==RULE_ID) ) {
-                            alt44=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt44) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1527:2: rule__Informative__RefServiceAssignment_9_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Informative__RefServiceAssignment_9_1_0_in_rule__Informative__Alternatives_9_13329);
-                    	    rule__Informative__RefServiceAssignment_9_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop44;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getInformativeAccess().getRefServiceAssignment_9_1_0()); 
 
@@ -5049,7 +4725,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1533:1: ( rule__Informative__RefSAllAssignment_9_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1533:2: rule__Informative__RefSAllAssignment_9_1_1
                     {
-                    pushFollow(FOLLOW_rule__Informative__RefSAllAssignment_9_1_1_in_rule__Informative__Alternatives_9_13348);
+                    pushFollow(FOLLOW_rule__Informative__RefSAllAssignment_9_1_1_in_rule__Informative__Alternatives_9_13330);
                     rule__Informative__RefSAllAssignment_9_1_1();
 
                     state._fsp--;
@@ -5082,64 +4758,46 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__Informative__Alternatives_10_1"
-    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1542:1: rule__Informative__Alternatives_10_1 : ( ( ( rule__Informative__RefEnforcementAssignment_10_1_0 )* ) | ( ( rule__Informative__RefEAllAssignment_10_1_1 ) ) );
+    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1542:1: rule__Informative__Alternatives_10_1 : ( ( ( rule__Informative__RefEnforcementAssignment_10_1_0 ) ) | ( ( rule__Informative__RefEAllAssignment_10_1_1 ) ) );
     public final void rule__Informative__Alternatives_10_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1546:1: ( ( ( rule__Informative__RefEnforcementAssignment_10_1_0 )* ) | ( ( rule__Informative__RefEAllAssignment_10_1_1 ) ) )
-            int alt47=2;
-            int LA47_0 = input.LA(1);
+            // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1546:1: ( ( ( rule__Informative__RefEnforcementAssignment_10_1_0 ) ) | ( ( rule__Informative__RefEAllAssignment_10_1_1 ) ) )
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA47_0==RULE_ID||LA47_0==67) ) {
-                alt47=1;
+            if ( (LA28_0==RULE_ID) ) {
+                alt28=1;
             }
-            else if ( (LA47_0==83) ) {
-                alt47=2;
+            else if ( (LA28_0==83) ) {
+                alt28=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 47, 0, input);
+                    new NoViableAltException("", 28, 0, input);
 
                 throw nvae;
             }
-            switch (alt47) {
+            switch (alt28) {
                 case 1 :
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1547:1: ( ( rule__Informative__RefEnforcementAssignment_10_1_0 )* )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1547:1: ( ( rule__Informative__RefEnforcementAssignment_10_1_0 ) )
                     {
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1547:1: ( ( rule__Informative__RefEnforcementAssignment_10_1_0 )* )
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1548:1: ( rule__Informative__RefEnforcementAssignment_10_1_0 )*
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1547:1: ( ( rule__Informative__RefEnforcementAssignment_10_1_0 ) )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1548:1: ( rule__Informative__RefEnforcementAssignment_10_1_0 )
                     {
                      before(grammarAccess.getInformativeAccess().getRefEnforcementAssignment_10_1_0()); 
-                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1549:1: ( rule__Informative__RefEnforcementAssignment_10_1_0 )*
-                    loop46:
-                    do {
-                        int alt46=2;
-                        int LA46_0 = input.LA(1);
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1549:1: ( rule__Informative__RefEnforcementAssignment_10_1_0 )
+                    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1549:2: rule__Informative__RefEnforcementAssignment_10_1_0
+                    {
+                    pushFollow(FOLLOW_rule__Informative__RefEnforcementAssignment_10_1_0_in_rule__Informative__Alternatives_10_13363);
+                    rule__Informative__RefEnforcementAssignment_10_1_0();
 
-                        if ( (LA46_0==RULE_ID) ) {
-                            alt46=1;
-                        }
+                    state._fsp--;
 
 
-                        switch (alt46) {
-                    	case 1 :
-                    	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1549:2: rule__Informative__RefEnforcementAssignment_10_1_0
-                    	    {
-                    	    pushFollow(FOLLOW_rule__Informative__RefEnforcementAssignment_10_1_0_in_rule__Informative__Alternatives_10_13381);
-                    	    rule__Informative__RefEnforcementAssignment_10_1_0();
-
-                    	    state._fsp--;
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop46;
-                        }
-                    } while (true);
+                    }
 
                      after(grammarAccess.getInformativeAccess().getRefEnforcementAssignment_10_1_0()); 
 
@@ -5158,7 +4816,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1555:1: ( rule__Informative__RefEAllAssignment_10_1_1 )
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1555:2: rule__Informative__RefEAllAssignment_10_1_1
                     {
-                    pushFollow(FOLLOW_rule__Informative__RefEAllAssignment_10_1_1_in_rule__Informative__Alternatives_10_13400);
+                    pushFollow(FOLLOW_rule__Informative__RefEAllAssignment_10_1_1_in_rule__Informative__Alternatives_10_13381);
                     rule__Informative__RefEAllAssignment_10_1_1();
 
                     state._fsp--;
@@ -5198,31 +4856,31 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             
         try {
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1568:1: ( ( 'Permitted' ) | ( 'Obligation' ) | ( 'Forbidden' ) )
-            int alt48=3;
+            int alt29=3;
             switch ( input.LA(1) ) {
             case 36:
                 {
-                alt48=1;
+                alt29=1;
                 }
                 break;
             case 37:
                 {
-                alt48=2;
+                alt29=2;
                 }
                 break;
             case 38:
                 {
-                alt48=3;
+                alt29=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 48, 0, input);
+                    new NoViableAltException("", 29, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt48) {
+            switch (alt29) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1569:1: ( 'Permitted' )
                     {
@@ -5230,7 +4888,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1570:1: 'Permitted'
                     {
                      before(grammarAccess.getInformativeAccess().getModalityPermittedKeyword_12_0_0()); 
-                    match(input,36,FOLLOW_36_in_rule__Informative__ModalityAlternatives_12_03434); 
+                    match(input,36,FOLLOW_36_in_rule__Informative__ModalityAlternatives_12_03415); 
                      after(grammarAccess.getInformativeAccess().getModalityPermittedKeyword_12_0_0()); 
 
                     }
@@ -5245,7 +4903,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1578:1: 'Obligation'
                     {
                      before(grammarAccess.getInformativeAccess().getModalityObligationKeyword_12_0_1()); 
-                    match(input,37,FOLLOW_37_in_rule__Informative__ModalityAlternatives_12_03454); 
+                    match(input,37,FOLLOW_37_in_rule__Informative__ModalityAlternatives_12_03435); 
                      after(grammarAccess.getInformativeAccess().getModalityObligationKeyword_12_0_1()); 
 
                     }
@@ -5260,7 +4918,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1586:1: 'Forbidden'
                     {
                      before(grammarAccess.getInformativeAccess().getModalityForbiddenKeyword_12_0_2()); 
-                    match(input,38,FOLLOW_38_in_rule__Informative__ModalityAlternatives_12_03474); 
+                    match(input,38,FOLLOW_38_in_rule__Informative__ModalityAlternatives_12_03455); 
                      after(grammarAccess.getInformativeAccess().getModalityForbiddenKeyword_12_0_2()); 
 
                     }
@@ -5295,12 +4953,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1604:1: ( rule__Policy__Group__0__Impl rule__Policy__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1605:2: rule__Policy__Group__0__Impl rule__Policy__Group__1
             {
-            pushFollow(FOLLOW_rule__Policy__Group__0__Impl_in_rule__Policy__Group__03506);
+            pushFollow(FOLLOW_rule__Policy__Group__0__Impl_in_rule__Policy__Group__03487);
             rule__Policy__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Policy__Group__1_in_rule__Policy__Group__03509);
+            pushFollow(FOLLOW_rule__Policy__Group__1_in_rule__Policy__Group__03490);
             rule__Policy__Group__1();
 
             state._fsp--;
@@ -5337,7 +4995,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1618:1: 'Package'
             {
              before(grammarAccess.getPolicyAccess().getPackageKeyword_0()); 
-            match(input,39,FOLLOW_39_in_rule__Policy__Group__0__Impl3537); 
+            match(input,39,FOLLOW_39_in_rule__Policy__Group__0__Impl3518); 
              after(grammarAccess.getPolicyAccess().getPackageKeyword_0()); 
 
             }
@@ -5370,12 +5028,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1635:1: ( rule__Policy__Group__1__Impl rule__Policy__Group__2 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1636:2: rule__Policy__Group__1__Impl rule__Policy__Group__2
             {
-            pushFollow(FOLLOW_rule__Policy__Group__1__Impl_in_rule__Policy__Group__13568);
+            pushFollow(FOLLOW_rule__Policy__Group__1__Impl_in_rule__Policy__Group__13549);
             rule__Policy__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Policy__Group__2_in_rule__Policy__Group__13571);
+            pushFollow(FOLLOW_rule__Policy__Group__2_in_rule__Policy__Group__13552);
             rule__Policy__Group__2();
 
             state._fsp--;
@@ -5415,7 +5073,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1650:1: ( rule__Policy__NameAssignment_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1650:2: rule__Policy__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Policy__NameAssignment_1_in_rule__Policy__Group__1__Impl3598);
+            pushFollow(FOLLOW_rule__Policy__NameAssignment_1_in_rule__Policy__Group__1__Impl3579);
             rule__Policy__NameAssignment_1();
 
             state._fsp--;
@@ -5455,12 +5113,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1664:1: ( rule__Policy__Group__2__Impl rule__Policy__Group__3 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1665:2: rule__Policy__Group__2__Impl rule__Policy__Group__3
             {
-            pushFollow(FOLLOW_rule__Policy__Group__2__Impl_in_rule__Policy__Group__23628);
+            pushFollow(FOLLOW_rule__Policy__Group__2__Impl_in_rule__Policy__Group__23609);
             rule__Policy__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Policy__Group__3_in_rule__Policy__Group__23631);
+            pushFollow(FOLLOW_rule__Policy__Group__3_in_rule__Policy__Group__23612);
             rule__Policy__Group__3();
 
             state._fsp--;
@@ -5497,7 +5155,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1678:1: '{'
             {
              before(grammarAccess.getPolicyAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,40,FOLLOW_40_in_rule__Policy__Group__2__Impl3659); 
+            match(input,40,FOLLOW_40_in_rule__Policy__Group__2__Impl3640); 
              after(grammarAccess.getPolicyAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -5530,12 +5188,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1695:1: ( rule__Policy__Group__3__Impl rule__Policy__Group__4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1696:2: rule__Policy__Group__3__Impl rule__Policy__Group__4
             {
-            pushFollow(FOLLOW_rule__Policy__Group__3__Impl_in_rule__Policy__Group__33690);
+            pushFollow(FOLLOW_rule__Policy__Group__3__Impl_in_rule__Policy__Group__33671);
             rule__Policy__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Policy__Group__4_in_rule__Policy__Group__33693);
+            pushFollow(FOLLOW_rule__Policy__Group__4_in_rule__Policy__Group__33674);
             rule__Policy__Group__4();
 
             state._fsp--;
@@ -5573,21 +5231,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getPolicyAccess().getImportelementsAssignment_3()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1710:1: ( rule__Policy__ImportelementsAssignment_3 )*
-            loop49:
+            loop30:
             do {
-                int alt49=2;
-                int LA49_0 = input.LA(1);
+                int alt30=2;
+                int LA30_0 = input.LA(1);
 
-                if ( (LA49_0==43) ) {
-                    alt49=1;
+                if ( (LA30_0==43) ) {
+                    alt30=1;
                 }
 
 
-                switch (alt49) {
+                switch (alt30) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1710:2: rule__Policy__ImportelementsAssignment_3
             	    {
-            	    pushFollow(FOLLOW_rule__Policy__ImportelementsAssignment_3_in_rule__Policy__Group__3__Impl3720);
+            	    pushFollow(FOLLOW_rule__Policy__ImportelementsAssignment_3_in_rule__Policy__Group__3__Impl3701);
             	    rule__Policy__ImportelementsAssignment_3();
 
             	    state._fsp--;
@@ -5597,7 +5255,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop49;
+            	    break loop30;
                 }
             } while (true);
 
@@ -5633,12 +5291,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1724:1: ( rule__Policy__Group__4__Impl rule__Policy__Group__5 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1725:2: rule__Policy__Group__4__Impl rule__Policy__Group__5
             {
-            pushFollow(FOLLOW_rule__Policy__Group__4__Impl_in_rule__Policy__Group__43751);
+            pushFollow(FOLLOW_rule__Policy__Group__4__Impl_in_rule__Policy__Group__43732);
             rule__Policy__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Policy__Group__5_in_rule__Policy__Group__43754);
+            pushFollow(FOLLOW_rule__Policy__Group__5_in_rule__Policy__Group__43735);
             rule__Policy__Group__5();
 
             state._fsp--;
@@ -5676,17 +5334,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getPolicyAccess().getMetadataAssignment_4()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1739:1: ( rule__Policy__MetadataAssignment_4 )?
-            int alt50=2;
-            int LA50_0 = input.LA(1);
+            int alt31=2;
+            int LA31_0 = input.LA(1);
 
-            if ( (LA50_0==45) ) {
-                alt50=1;
+            if ( (LA31_0==45) ) {
+                alt31=1;
             }
-            switch (alt50) {
+            switch (alt31) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1739:2: rule__Policy__MetadataAssignment_4
                     {
-                    pushFollow(FOLLOW_rule__Policy__MetadataAssignment_4_in_rule__Policy__Group__4__Impl3781);
+                    pushFollow(FOLLOW_rule__Policy__MetadataAssignment_4_in_rule__Policy__Group__4__Impl3762);
                     rule__Policy__MetadataAssignment_4();
 
                     state._fsp--;
@@ -5729,12 +5387,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1753:1: ( rule__Policy__Group__5__Impl rule__Policy__Group__6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1754:2: rule__Policy__Group__5__Impl rule__Policy__Group__6
             {
-            pushFollow(FOLLOW_rule__Policy__Group__5__Impl_in_rule__Policy__Group__53812);
+            pushFollow(FOLLOW_rule__Policy__Group__5__Impl_in_rule__Policy__Group__53793);
             rule__Policy__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Policy__Group__6_in_rule__Policy__Group__53815);
+            pushFollow(FOLLOW_rule__Policy__Group__6_in_rule__Policy__Group__53796);
             rule__Policy__Group__6();
 
             state._fsp--;
@@ -5772,21 +5430,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getPolicyAccess().getCollectionAssignment_5()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1768:1: ( rule__Policy__CollectionAssignment_5 )*
-            loop51:
+            loop32:
             do {
-                int alt51=2;
-                int LA51_0 = input.LA(1);
+                int alt32=2;
+                int LA32_0 = input.LA(1);
 
-                if ( (LA51_0==65) ) {
-                    alt51=1;
+                if ( (LA32_0==65) ) {
+                    alt32=1;
                 }
 
 
-                switch (alt51) {
+                switch (alt32) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1768:2: rule__Policy__CollectionAssignment_5
             	    {
-            	    pushFollow(FOLLOW_rule__Policy__CollectionAssignment_5_in_rule__Policy__Group__5__Impl3842);
+            	    pushFollow(FOLLOW_rule__Policy__CollectionAssignment_5_in_rule__Policy__Group__5__Impl3823);
             	    rule__Policy__CollectionAssignment_5();
 
             	    state._fsp--;
@@ -5796,7 +5454,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop51;
+            	    break loop32;
                 }
             } while (true);
 
@@ -5832,12 +5490,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1782:1: ( rule__Policy__Group__6__Impl rule__Policy__Group__7 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1783:2: rule__Policy__Group__6__Impl rule__Policy__Group__7
             {
-            pushFollow(FOLLOW_rule__Policy__Group__6__Impl_in_rule__Policy__Group__63873);
+            pushFollow(FOLLOW_rule__Policy__Group__6__Impl_in_rule__Policy__Group__63854);
             rule__Policy__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Policy__Group__7_in_rule__Policy__Group__63876);
+            pushFollow(FOLLOW_rule__Policy__Group__7_in_rule__Policy__Group__63857);
             rule__Policy__Group__7();
 
             state._fsp--;
@@ -5875,21 +5533,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getPolicyAccess().getDisclosureAssignment_6()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1797:1: ( rule__Policy__DisclosureAssignment_6 )*
-            loop52:
+            loop33:
             do {
-                int alt52=2;
-                int LA52_0 = input.LA(1);
+                int alt33=2;
+                int LA33_0 = input.LA(1);
 
-                if ( (LA52_0==71) ) {
-                    alt52=1;
+                if ( (LA33_0==71) ) {
+                    alt33=1;
                 }
 
 
-                switch (alt52) {
+                switch (alt33) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1797:2: rule__Policy__DisclosureAssignment_6
             	    {
-            	    pushFollow(FOLLOW_rule__Policy__DisclosureAssignment_6_in_rule__Policy__Group__6__Impl3903);
+            	    pushFollow(FOLLOW_rule__Policy__DisclosureAssignment_6_in_rule__Policy__Group__6__Impl3884);
             	    rule__Policy__DisclosureAssignment_6();
 
             	    state._fsp--;
@@ -5899,7 +5557,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop52;
+            	    break loop33;
                 }
             } while (true);
 
@@ -5935,12 +5593,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1811:1: ( rule__Policy__Group__7__Impl rule__Policy__Group__8 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1812:2: rule__Policy__Group__7__Impl rule__Policy__Group__8
             {
-            pushFollow(FOLLOW_rule__Policy__Group__7__Impl_in_rule__Policy__Group__73934);
+            pushFollow(FOLLOW_rule__Policy__Group__7__Impl_in_rule__Policy__Group__73915);
             rule__Policy__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Policy__Group__8_in_rule__Policy__Group__73937);
+            pushFollow(FOLLOW_rule__Policy__Group__8_in_rule__Policy__Group__73918);
             rule__Policy__Group__8();
 
             state._fsp--;
@@ -5978,21 +5636,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getPolicyAccess().getRetentionAssignment_7()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1826:1: ( rule__Policy__RetentionAssignment_7 )*
-            loop53:
+            loop34:
             do {
-                int alt53=2;
-                int LA53_0 = input.LA(1);
+                int alt34=2;
+                int LA34_0 = input.LA(1);
 
-                if ( (LA53_0==76) ) {
-                    alt53=1;
+                if ( (LA34_0==76) ) {
+                    alt34=1;
                 }
 
 
-                switch (alt53) {
+                switch (alt34) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1826:2: rule__Policy__RetentionAssignment_7
             	    {
-            	    pushFollow(FOLLOW_rule__Policy__RetentionAssignment_7_in_rule__Policy__Group__7__Impl3964);
+            	    pushFollow(FOLLOW_rule__Policy__RetentionAssignment_7_in_rule__Policy__Group__7__Impl3945);
             	    rule__Policy__RetentionAssignment_7();
 
             	    state._fsp--;
@@ -6002,7 +5660,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop53;
+            	    break loop34;
                 }
             } while (true);
 
@@ -6038,12 +5696,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1840:1: ( rule__Policy__Group__8__Impl rule__Policy__Group__9 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1841:2: rule__Policy__Group__8__Impl rule__Policy__Group__9
             {
-            pushFollow(FOLLOW_rule__Policy__Group__8__Impl_in_rule__Policy__Group__83995);
+            pushFollow(FOLLOW_rule__Policy__Group__8__Impl_in_rule__Policy__Group__83976);
             rule__Policy__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Policy__Group__9_in_rule__Policy__Group__83998);
+            pushFollow(FOLLOW_rule__Policy__Group__9_in_rule__Policy__Group__83979);
             rule__Policy__Group__9();
 
             state._fsp--;
@@ -6081,21 +5739,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getPolicyAccess().getUsageAssignment_8()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1855:1: ( rule__Policy__UsageAssignment_8 )*
-            loop54:
+            loop35:
             do {
-                int alt54=2;
-                int LA54_0 = input.LA(1);
+                int alt35=2;
+                int LA35_0 = input.LA(1);
 
-                if ( (LA54_0==79) ) {
-                    alt54=1;
+                if ( (LA35_0==79) ) {
+                    alt35=1;
                 }
 
 
-                switch (alt54) {
+                switch (alt35) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1855:2: rule__Policy__UsageAssignment_8
             	    {
-            	    pushFollow(FOLLOW_rule__Policy__UsageAssignment_8_in_rule__Policy__Group__8__Impl4025);
+            	    pushFollow(FOLLOW_rule__Policy__UsageAssignment_8_in_rule__Policy__Group__8__Impl4006);
             	    rule__Policy__UsageAssignment_8();
 
             	    state._fsp--;
@@ -6105,7 +5763,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop54;
+            	    break loop35;
                 }
             } while (true);
 
@@ -6141,12 +5799,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1869:1: ( rule__Policy__Group__9__Impl rule__Policy__Group__10 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1870:2: rule__Policy__Group__9__Impl rule__Policy__Group__10
             {
-            pushFollow(FOLLOW_rule__Policy__Group__9__Impl_in_rule__Policy__Group__94056);
+            pushFollow(FOLLOW_rule__Policy__Group__9__Impl_in_rule__Policy__Group__94037);
             rule__Policy__Group__9__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Policy__Group__10_in_rule__Policy__Group__94059);
+            pushFollow(FOLLOW_rule__Policy__Group__10_in_rule__Policy__Group__94040);
             rule__Policy__Group__10();
 
             state._fsp--;
@@ -6184,21 +5842,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getPolicyAccess().getInformativeAssignment_9()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1884:1: ( rule__Policy__InformativeAssignment_9 )*
-            loop55:
+            loop36:
             do {
-                int alt55=2;
-                int LA55_0 = input.LA(1);
+                int alt36=2;
+                int LA36_0 = input.LA(1);
 
-                if ( (LA55_0==81) ) {
-                    alt55=1;
+                if ( (LA36_0==81) ) {
+                    alt36=1;
                 }
 
 
-                switch (alt55) {
+                switch (alt36) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1884:2: rule__Policy__InformativeAssignment_9
             	    {
-            	    pushFollow(FOLLOW_rule__Policy__InformativeAssignment_9_in_rule__Policy__Group__9__Impl4086);
+            	    pushFollow(FOLLOW_rule__Policy__InformativeAssignment_9_in_rule__Policy__Group__9__Impl4067);
             	    rule__Policy__InformativeAssignment_9();
 
             	    state._fsp--;
@@ -6208,7 +5866,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop55;
+            	    break loop36;
                 }
             } while (true);
 
@@ -6244,12 +5902,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1898:1: ( rule__Policy__Group__10__Impl rule__Policy__Group__11 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1899:2: rule__Policy__Group__10__Impl rule__Policy__Group__11
             {
-            pushFollow(FOLLOW_rule__Policy__Group__10__Impl_in_rule__Policy__Group__104117);
+            pushFollow(FOLLOW_rule__Policy__Group__10__Impl_in_rule__Policy__Group__104098);
             rule__Policy__Group__10__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Policy__Group__11_in_rule__Policy__Group__104120);
+            pushFollow(FOLLOW_rule__Policy__Group__11_in_rule__Policy__Group__104101);
             rule__Policy__Group__11();
 
             state._fsp--;
@@ -6287,21 +5945,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getPolicyAccess().getPrivateDataAssignment_10()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1913:1: ( rule__Policy__PrivateDataAssignment_10 )*
-            loop56:
+            loop37:
             do {
-                int alt56=2;
-                int LA56_0 = input.LA(1);
+                int alt37=2;
+                int LA37_0 = input.LA(1);
 
-                if ( (LA56_0==62) ) {
-                    alt56=1;
+                if ( (LA37_0==62) ) {
+                    alt37=1;
                 }
 
 
-                switch (alt56) {
+                switch (alt37) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1913:2: rule__Policy__PrivateDataAssignment_10
             	    {
-            	    pushFollow(FOLLOW_rule__Policy__PrivateDataAssignment_10_in_rule__Policy__Group__10__Impl4147);
+            	    pushFollow(FOLLOW_rule__Policy__PrivateDataAssignment_10_in_rule__Policy__Group__10__Impl4128);
             	    rule__Policy__PrivateDataAssignment_10();
 
             	    state._fsp--;
@@ -6311,7 +5969,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop56;
+            	    break loop37;
                 }
             } while (true);
 
@@ -6347,12 +6005,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1927:1: ( rule__Policy__Group__11__Impl rule__Policy__Group__12 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1928:2: rule__Policy__Group__11__Impl rule__Policy__Group__12
             {
-            pushFollow(FOLLOW_rule__Policy__Group__11__Impl_in_rule__Policy__Group__114178);
+            pushFollow(FOLLOW_rule__Policy__Group__11__Impl_in_rule__Policy__Group__114159);
             rule__Policy__Group__11__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Policy__Group__12_in_rule__Policy__Group__114181);
+            pushFollow(FOLLOW_rule__Policy__Group__12_in_rule__Policy__Group__114162);
             rule__Policy__Group__12();
 
             state._fsp--;
@@ -6390,21 +6048,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getPolicyAccess().getRecipientAssignment_11()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1942:1: ( rule__Policy__RecipientAssignment_11 )*
-            loop57:
+            loop38:
             do {
-                int alt57=2;
-                int LA57_0 = input.LA(1);
+                int alt38=2;
+                int LA38_0 = input.LA(1);
 
-                if ( (LA57_0==59) ) {
-                    alt57=1;
+                if ( (LA38_0==59) ) {
+                    alt38=1;
                 }
 
 
-                switch (alt57) {
+                switch (alt38) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1942:2: rule__Policy__RecipientAssignment_11
             	    {
-            	    pushFollow(FOLLOW_rule__Policy__RecipientAssignment_11_in_rule__Policy__Group__11__Impl4208);
+            	    pushFollow(FOLLOW_rule__Policy__RecipientAssignment_11_in_rule__Policy__Group__11__Impl4189);
             	    rule__Policy__RecipientAssignment_11();
 
             	    state._fsp--;
@@ -6414,7 +6072,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop57;
+            	    break loop38;
                 }
             } while (true);
 
@@ -6450,12 +6108,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1956:1: ( rule__Policy__Group__12__Impl rule__Policy__Group__13 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1957:2: rule__Policy__Group__12__Impl rule__Policy__Group__13
             {
-            pushFollow(FOLLOW_rule__Policy__Group__12__Impl_in_rule__Policy__Group__124239);
+            pushFollow(FOLLOW_rule__Policy__Group__12__Impl_in_rule__Policy__Group__124220);
             rule__Policy__Group__12__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Policy__Group__13_in_rule__Policy__Group__124242);
+            pushFollow(FOLLOW_rule__Policy__Group__13_in_rule__Policy__Group__124223);
             rule__Policy__Group__13();
 
             state._fsp--;
@@ -6493,21 +6151,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getPolicyAccess().getServiceAssignment_12()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1971:1: ( rule__Policy__ServiceAssignment_12 )*
-            loop58:
+            loop39:
             do {
-                int alt58=2;
-                int LA58_0 = input.LA(1);
+                int alt39=2;
+                int LA39_0 = input.LA(1);
 
-                if ( (LA58_0==56) ) {
-                    alt58=1;
+                if ( (LA39_0==56) ) {
+                    alt39=1;
                 }
 
 
-                switch (alt58) {
+                switch (alt39) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1971:2: rule__Policy__ServiceAssignment_12
             	    {
-            	    pushFollow(FOLLOW_rule__Policy__ServiceAssignment_12_in_rule__Policy__Group__12__Impl4269);
+            	    pushFollow(FOLLOW_rule__Policy__ServiceAssignment_12_in_rule__Policy__Group__12__Impl4250);
             	    rule__Policy__ServiceAssignment_12();
 
             	    state._fsp--;
@@ -6517,7 +6175,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop58;
+            	    break loop39;
                 }
             } while (true);
 
@@ -6553,12 +6211,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1985:1: ( rule__Policy__Group__13__Impl rule__Policy__Group__14 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:1986:2: rule__Policy__Group__13__Impl rule__Policy__Group__14
             {
-            pushFollow(FOLLOW_rule__Policy__Group__13__Impl_in_rule__Policy__Group__134300);
+            pushFollow(FOLLOW_rule__Policy__Group__13__Impl_in_rule__Policy__Group__134281);
             rule__Policy__Group__13__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Policy__Group__14_in_rule__Policy__Group__134303);
+            pushFollow(FOLLOW_rule__Policy__Group__14_in_rule__Policy__Group__134284);
             rule__Policy__Group__14();
 
             state._fsp--;
@@ -6596,21 +6254,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getPolicyAccess().getEnforcementAssignment_13()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2000:1: ( rule__Policy__EnforcementAssignment_13 )*
-            loop59:
+            loop40:
             do {
-                int alt59=2;
-                int LA59_0 = input.LA(1);
+                int alt40=2;
+                int LA40_0 = input.LA(1);
 
-                if ( (LA59_0==53) ) {
-                    alt59=1;
+                if ( (LA40_0==53) ) {
+                    alt40=1;
                 }
 
 
-                switch (alt59) {
+                switch (alt40) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2000:2: rule__Policy__EnforcementAssignment_13
             	    {
-            	    pushFollow(FOLLOW_rule__Policy__EnforcementAssignment_13_in_rule__Policy__Group__13__Impl4330);
+            	    pushFollow(FOLLOW_rule__Policy__EnforcementAssignment_13_in_rule__Policy__Group__13__Impl4311);
             	    rule__Policy__EnforcementAssignment_13();
 
             	    state._fsp--;
@@ -6620,7 +6278,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop59;
+            	    break loop40;
                 }
             } while (true);
 
@@ -6656,7 +6314,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2014:1: ( rule__Policy__Group__14__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2015:2: rule__Policy__Group__14__Impl
             {
-            pushFollow(FOLLOW_rule__Policy__Group__14__Impl_in_rule__Policy__Group__144361);
+            pushFollow(FOLLOW_rule__Policy__Group__14__Impl_in_rule__Policy__Group__144342);
             rule__Policy__Group__14__Impl();
 
             state._fsp--;
@@ -6693,7 +6351,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2027:1: '}'
             {
              before(grammarAccess.getPolicyAccess().getRightCurlyBracketKeyword_14()); 
-            match(input,41,FOLLOW_41_in_rule__Policy__Group__14__Impl4389); 
+            match(input,41,FOLLOW_41_in_rule__Policy__Group__14__Impl4370); 
              after(grammarAccess.getPolicyAccess().getRightCurlyBracketKeyword_14()); 
 
             }
@@ -6726,12 +6384,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2074:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2075:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__04450);
+            pushFollow(FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__04431);
             rule__QualifiedName__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__04453);
+            pushFollow(FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__04434);
             rule__QualifiedName__Group__1();
 
             state._fsp--;
@@ -6768,7 +6426,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2088:1: RULE_ID
             {
              before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl4480); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl4461); 
              after(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
 
             }
@@ -6801,7 +6459,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2103:1: ( rule__QualifiedName__Group__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2104:2: rule__QualifiedName__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__14509);
+            pushFollow(FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__14490);
             rule__QualifiedName__Group__1__Impl();
 
             state._fsp--;
@@ -6839,21 +6497,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getQualifiedNameAccess().getGroup_1()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2117:1: ( rule__QualifiedName__Group_1__0 )*
-            loop60:
+            loop41:
             do {
-                int alt60=2;
-                int LA60_0 = input.LA(1);
+                int alt41=2;
+                int LA41_0 = input.LA(1);
 
-                if ( (LA60_0==42) ) {
-                    alt60=1;
+                if ( (LA41_0==42) ) {
+                    alt41=1;
                 }
 
 
-                switch (alt60) {
+                switch (alt41) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2117:2: rule__QualifiedName__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl4536);
+            	    pushFollow(FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl4517);
             	    rule__QualifiedName__Group_1__0();
 
             	    state._fsp--;
@@ -6863,7 +6521,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop60;
+            	    break loop41;
                 }
             } while (true);
 
@@ -6899,12 +6557,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2135:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2136:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__04571);
+            pushFollow(FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__04552);
             rule__QualifiedName__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__04574);
+            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__04555);
             rule__QualifiedName__Group_1__1();
 
             state._fsp--;
@@ -6941,7 +6599,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2149:1: '.'
             {
              before(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
-            match(input,42,FOLLOW_42_in_rule__QualifiedName__Group_1__0__Impl4602); 
+            match(input,42,FOLLOW_42_in_rule__QualifiedName__Group_1__0__Impl4583); 
              after(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
 
             }
@@ -6974,7 +6632,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2166:1: ( rule__QualifiedName__Group_1__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2167:2: rule__QualifiedName__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__14633);
+            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__14614);
             rule__QualifiedName__Group_1__1__Impl();
 
             state._fsp--;
@@ -7011,7 +6669,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2179:1: RULE_ID
             {
              before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl4660); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl4641); 
              after(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1()); 
 
             }
@@ -7044,12 +6702,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2198:1: ( rule__Import__Group__0__Impl rule__Import__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2199:2: rule__Import__Group__0__Impl rule__Import__Group__1
             {
-            pushFollow(FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__04693);
+            pushFollow(FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__04674);
             rule__Import__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Import__Group__1_in_rule__Import__Group__04696);
+            pushFollow(FOLLOW_rule__Import__Group__1_in_rule__Import__Group__04677);
             rule__Import__Group__1();
 
             state._fsp--;
@@ -7086,7 +6744,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2212:1: 'import'
             {
              before(grammarAccess.getImportAccess().getImportKeyword_0()); 
-            match(input,43,FOLLOW_43_in_rule__Import__Group__0__Impl4724); 
+            match(input,43,FOLLOW_43_in_rule__Import__Group__0__Impl4705); 
              after(grammarAccess.getImportAccess().getImportKeyword_0()); 
 
             }
@@ -7119,7 +6777,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2229:1: ( rule__Import__Group__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2230:2: rule__Import__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__14755);
+            pushFollow(FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__14736);
             rule__Import__Group__1__Impl();
 
             state._fsp--;
@@ -7159,7 +6817,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2243:1: ( rule__Import__ImportedNamespaceAssignment_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2243:2: rule__Import__ImportedNamespaceAssignment_1
             {
-            pushFollow(FOLLOW_rule__Import__ImportedNamespaceAssignment_1_in_rule__Import__Group__1__Impl4782);
+            pushFollow(FOLLOW_rule__Import__ImportedNamespaceAssignment_1_in_rule__Import__Group__1__Impl4763);
             rule__Import__ImportedNamespaceAssignment_1();
 
             state._fsp--;
@@ -7199,12 +6857,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2261:1: ( rule__QualifiedNameWithWildcard__Group__0__Impl rule__QualifiedNameWithWildcard__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2262:2: rule__QualifiedNameWithWildcard__Group__0__Impl rule__QualifiedNameWithWildcard__Group__1
             {
-            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group__0__Impl_in_rule__QualifiedNameWithWildcard__Group__04816);
+            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group__0__Impl_in_rule__QualifiedNameWithWildcard__Group__04797);
             rule__QualifiedNameWithWildcard__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group__1_in_rule__QualifiedNameWithWildcard__Group__04819);
+            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group__1_in_rule__QualifiedNameWithWildcard__Group__04800);
             rule__QualifiedNameWithWildcard__Group__1();
 
             state._fsp--;
@@ -7241,7 +6899,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2275:1: ruleQualifiedName
             {
              before(grammarAccess.getQualifiedNameWithWildcardAccess().getQualifiedNameParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__QualifiedNameWithWildcard__Group__0__Impl4846);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__QualifiedNameWithWildcard__Group__0__Impl4827);
             ruleQualifiedName();
 
             state._fsp--;
@@ -7278,7 +6936,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2290:1: ( rule__QualifiedNameWithWildcard__Group__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2291:2: rule__QualifiedNameWithWildcard__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group__1__Impl_in_rule__QualifiedNameWithWildcard__Group__14875);
+            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group__1__Impl_in_rule__QualifiedNameWithWildcard__Group__14856);
             rule__QualifiedNameWithWildcard__Group__1__Impl();
 
             state._fsp--;
@@ -7316,17 +6974,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getQualifiedNameWithWildcardAccess().getFullStopAsteriskKeyword_1()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2304:1: ( '.*' )?
-            int alt61=2;
-            int LA61_0 = input.LA(1);
+            int alt42=2;
+            int LA42_0 = input.LA(1);
 
-            if ( (LA61_0==44) ) {
-                alt61=1;
+            if ( (LA42_0==44) ) {
+                alt42=1;
             }
-            switch (alt61) {
+            switch (alt42) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2305:2: '.*'
                     {
-                    match(input,44,FOLLOW_44_in_rule__QualifiedNameWithWildcard__Group__1__Impl4904); 
+                    match(input,44,FOLLOW_44_in_rule__QualifiedNameWithWildcard__Group__1__Impl4885); 
 
                     }
                     break;
@@ -7365,12 +7023,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2324:1: ( rule__Metadata__Group__0__Impl rule__Metadata__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2325:2: rule__Metadata__Group__0__Impl rule__Metadata__Group__1
             {
-            pushFollow(FOLLOW_rule__Metadata__Group__0__Impl_in_rule__Metadata__Group__04941);
+            pushFollow(FOLLOW_rule__Metadata__Group__0__Impl_in_rule__Metadata__Group__04922);
             rule__Metadata__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Metadata__Group__1_in_rule__Metadata__Group__04944);
+            pushFollow(FOLLOW_rule__Metadata__Group__1_in_rule__Metadata__Group__04925);
             rule__Metadata__Group__1();
 
             state._fsp--;
@@ -7407,7 +7065,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2338:1: 'PolicyMetadata {'
             {
              before(grammarAccess.getMetadataAccess().getPolicyMetadataKeyword_0()); 
-            match(input,45,FOLLOW_45_in_rule__Metadata__Group__0__Impl4972); 
+            match(input,45,FOLLOW_45_in_rule__Metadata__Group__0__Impl4953); 
              after(grammarAccess.getMetadataAccess().getPolicyMetadataKeyword_0()); 
 
             }
@@ -7440,12 +7098,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2355:1: ( rule__Metadata__Group__1__Impl rule__Metadata__Group__2 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2356:2: rule__Metadata__Group__1__Impl rule__Metadata__Group__2
             {
-            pushFollow(FOLLOW_rule__Metadata__Group__1__Impl_in_rule__Metadata__Group__15003);
+            pushFollow(FOLLOW_rule__Metadata__Group__1__Impl_in_rule__Metadata__Group__14984);
             rule__Metadata__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Metadata__Group__2_in_rule__Metadata__Group__15006);
+            pushFollow(FOLLOW_rule__Metadata__Group__2_in_rule__Metadata__Group__14987);
             rule__Metadata__Group__2();
 
             state._fsp--;
@@ -7482,7 +7140,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2369:1: 'PolicyName'
             {
              before(grammarAccess.getMetadataAccess().getPolicyNameKeyword_1()); 
-            match(input,46,FOLLOW_46_in_rule__Metadata__Group__1__Impl5034); 
+            match(input,46,FOLLOW_46_in_rule__Metadata__Group__1__Impl5015); 
              after(grammarAccess.getMetadataAccess().getPolicyNameKeyword_1()); 
 
             }
@@ -7515,12 +7173,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2386:1: ( rule__Metadata__Group__2__Impl rule__Metadata__Group__3 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2387:2: rule__Metadata__Group__2__Impl rule__Metadata__Group__3
             {
-            pushFollow(FOLLOW_rule__Metadata__Group__2__Impl_in_rule__Metadata__Group__25065);
+            pushFollow(FOLLOW_rule__Metadata__Group__2__Impl_in_rule__Metadata__Group__25046);
             rule__Metadata__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Metadata__Group__3_in_rule__Metadata__Group__25068);
+            pushFollow(FOLLOW_rule__Metadata__Group__3_in_rule__Metadata__Group__25049);
             rule__Metadata__Group__3();
 
             state._fsp--;
@@ -7560,7 +7218,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2401:1: ( rule__Metadata__NameAssignment_2 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2401:2: rule__Metadata__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__Metadata__NameAssignment_2_in_rule__Metadata__Group__2__Impl5095);
+            pushFollow(FOLLOW_rule__Metadata__NameAssignment_2_in_rule__Metadata__Group__2__Impl5076);
             rule__Metadata__NameAssignment_2();
 
             state._fsp--;
@@ -7600,12 +7258,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2415:1: ( rule__Metadata__Group__3__Impl rule__Metadata__Group__4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2416:2: rule__Metadata__Group__3__Impl rule__Metadata__Group__4
             {
-            pushFollow(FOLLOW_rule__Metadata__Group__3__Impl_in_rule__Metadata__Group__35125);
+            pushFollow(FOLLOW_rule__Metadata__Group__3__Impl_in_rule__Metadata__Group__35106);
             rule__Metadata__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Metadata__Group__4_in_rule__Metadata__Group__35128);
+            pushFollow(FOLLOW_rule__Metadata__Group__4_in_rule__Metadata__Group__35109);
             rule__Metadata__Group__4();
 
             state._fsp--;
@@ -7642,7 +7300,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2429:1: 'Description'
             {
              before(grammarAccess.getMetadataAccess().getDescriptionKeyword_3()); 
-            match(input,47,FOLLOW_47_in_rule__Metadata__Group__3__Impl5156); 
+            match(input,47,FOLLOW_47_in_rule__Metadata__Group__3__Impl5137); 
              after(grammarAccess.getMetadataAccess().getDescriptionKeyword_3()); 
 
             }
@@ -7675,12 +7333,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2446:1: ( rule__Metadata__Group__4__Impl rule__Metadata__Group__5 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2447:2: rule__Metadata__Group__4__Impl rule__Metadata__Group__5
             {
-            pushFollow(FOLLOW_rule__Metadata__Group__4__Impl_in_rule__Metadata__Group__45187);
+            pushFollow(FOLLOW_rule__Metadata__Group__4__Impl_in_rule__Metadata__Group__45168);
             rule__Metadata__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Metadata__Group__5_in_rule__Metadata__Group__45190);
+            pushFollow(FOLLOW_rule__Metadata__Group__5_in_rule__Metadata__Group__45171);
             rule__Metadata__Group__5();
 
             state._fsp--;
@@ -7720,7 +7378,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2461:1: ( rule__Metadata__DescriptionAssignment_4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2461:2: rule__Metadata__DescriptionAssignment_4
             {
-            pushFollow(FOLLOW_rule__Metadata__DescriptionAssignment_4_in_rule__Metadata__Group__4__Impl5217);
+            pushFollow(FOLLOW_rule__Metadata__DescriptionAssignment_4_in_rule__Metadata__Group__4__Impl5198);
             rule__Metadata__DescriptionAssignment_4();
 
             state._fsp--;
@@ -7760,12 +7418,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2475:1: ( rule__Metadata__Group__5__Impl rule__Metadata__Group__6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2476:2: rule__Metadata__Group__5__Impl rule__Metadata__Group__6
             {
-            pushFollow(FOLLOW_rule__Metadata__Group__5__Impl_in_rule__Metadata__Group__55247);
+            pushFollow(FOLLOW_rule__Metadata__Group__5__Impl_in_rule__Metadata__Group__55228);
             rule__Metadata__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Metadata__Group__6_in_rule__Metadata__Group__55250);
+            pushFollow(FOLLOW_rule__Metadata__Group__6_in_rule__Metadata__Group__55231);
             rule__Metadata__Group__6();
 
             state._fsp--;
@@ -7802,7 +7460,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2489:1: 'Author(s)'
             {
              before(grammarAccess.getMetadataAccess().getAuthorSKeyword_5()); 
-            match(input,48,FOLLOW_48_in_rule__Metadata__Group__5__Impl5278); 
+            match(input,48,FOLLOW_48_in_rule__Metadata__Group__5__Impl5259); 
              after(grammarAccess.getMetadataAccess().getAuthorSKeyword_5()); 
 
             }
@@ -7835,12 +7493,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2506:1: ( rule__Metadata__Group__6__Impl rule__Metadata__Group__7 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2507:2: rule__Metadata__Group__6__Impl rule__Metadata__Group__7
             {
-            pushFollow(FOLLOW_rule__Metadata__Group__6__Impl_in_rule__Metadata__Group__65309);
+            pushFollow(FOLLOW_rule__Metadata__Group__6__Impl_in_rule__Metadata__Group__65290);
             rule__Metadata__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Metadata__Group__7_in_rule__Metadata__Group__65312);
+            pushFollow(FOLLOW_rule__Metadata__Group__7_in_rule__Metadata__Group__65293);
             rule__Metadata__Group__7();
 
             state._fsp--;
@@ -7880,7 +7538,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2521:1: ( rule__Metadata__AuthorsAssignment_6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2521:2: rule__Metadata__AuthorsAssignment_6
             {
-            pushFollow(FOLLOW_rule__Metadata__AuthorsAssignment_6_in_rule__Metadata__Group__6__Impl5339);
+            pushFollow(FOLLOW_rule__Metadata__AuthorsAssignment_6_in_rule__Metadata__Group__6__Impl5320);
             rule__Metadata__AuthorsAssignment_6();
 
             state._fsp--;
@@ -7920,12 +7578,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2535:1: ( rule__Metadata__Group__7__Impl rule__Metadata__Group__8 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2536:2: rule__Metadata__Group__7__Impl rule__Metadata__Group__8
             {
-            pushFollow(FOLLOW_rule__Metadata__Group__7__Impl_in_rule__Metadata__Group__75369);
+            pushFollow(FOLLOW_rule__Metadata__Group__7__Impl_in_rule__Metadata__Group__75350);
             rule__Metadata__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Metadata__Group__8_in_rule__Metadata__Group__75372);
+            pushFollow(FOLLOW_rule__Metadata__Group__8_in_rule__Metadata__Group__75353);
             rule__Metadata__Group__8();
 
             state._fsp--;
@@ -7962,7 +7620,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2549:1: 'Organization(s)'
             {
              before(grammarAccess.getMetadataAccess().getOrganizationSKeyword_7()); 
-            match(input,49,FOLLOW_49_in_rule__Metadata__Group__7__Impl5400); 
+            match(input,49,FOLLOW_49_in_rule__Metadata__Group__7__Impl5381); 
              after(grammarAccess.getMetadataAccess().getOrganizationSKeyword_7()); 
 
             }
@@ -7995,12 +7653,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2566:1: ( rule__Metadata__Group__8__Impl rule__Metadata__Group__9 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2567:2: rule__Metadata__Group__8__Impl rule__Metadata__Group__9
             {
-            pushFollow(FOLLOW_rule__Metadata__Group__8__Impl_in_rule__Metadata__Group__85431);
+            pushFollow(FOLLOW_rule__Metadata__Group__8__Impl_in_rule__Metadata__Group__85412);
             rule__Metadata__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Metadata__Group__9_in_rule__Metadata__Group__85434);
+            pushFollow(FOLLOW_rule__Metadata__Group__9_in_rule__Metadata__Group__85415);
             rule__Metadata__Group__9();
 
             state._fsp--;
@@ -8040,7 +7698,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2581:1: ( rule__Metadata__OrganizationsAssignment_8 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2581:2: rule__Metadata__OrganizationsAssignment_8
             {
-            pushFollow(FOLLOW_rule__Metadata__OrganizationsAssignment_8_in_rule__Metadata__Group__8__Impl5461);
+            pushFollow(FOLLOW_rule__Metadata__OrganizationsAssignment_8_in_rule__Metadata__Group__8__Impl5442);
             rule__Metadata__OrganizationsAssignment_8();
 
             state._fsp--;
@@ -8080,12 +7738,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2595:1: ( rule__Metadata__Group__9__Impl rule__Metadata__Group__10 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2596:2: rule__Metadata__Group__9__Impl rule__Metadata__Group__10
             {
-            pushFollow(FOLLOW_rule__Metadata__Group__9__Impl_in_rule__Metadata__Group__95491);
+            pushFollow(FOLLOW_rule__Metadata__Group__9__Impl_in_rule__Metadata__Group__95472);
             rule__Metadata__Group__9__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Metadata__Group__10_in_rule__Metadata__Group__95494);
+            pushFollow(FOLLOW_rule__Metadata__Group__10_in_rule__Metadata__Group__95475);
             rule__Metadata__Group__10();
 
             state._fsp--;
@@ -8122,7 +7780,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2609:1: 'Date'
             {
              before(grammarAccess.getMetadataAccess().getDateKeyword_9()); 
-            match(input,50,FOLLOW_50_in_rule__Metadata__Group__9__Impl5522); 
+            match(input,50,FOLLOW_50_in_rule__Metadata__Group__9__Impl5503); 
              after(grammarAccess.getMetadataAccess().getDateKeyword_9()); 
 
             }
@@ -8155,12 +7813,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2626:1: ( rule__Metadata__Group__10__Impl rule__Metadata__Group__11 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2627:2: rule__Metadata__Group__10__Impl rule__Metadata__Group__11
             {
-            pushFollow(FOLLOW_rule__Metadata__Group__10__Impl_in_rule__Metadata__Group__105553);
+            pushFollow(FOLLOW_rule__Metadata__Group__10__Impl_in_rule__Metadata__Group__105534);
             rule__Metadata__Group__10__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Metadata__Group__11_in_rule__Metadata__Group__105556);
+            pushFollow(FOLLOW_rule__Metadata__Group__11_in_rule__Metadata__Group__105537);
             rule__Metadata__Group__11();
 
             state._fsp--;
@@ -8200,7 +7858,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2641:1: ( rule__Metadata__DateAssignment_10 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2641:2: rule__Metadata__DateAssignment_10
             {
-            pushFollow(FOLLOW_rule__Metadata__DateAssignment_10_in_rule__Metadata__Group__10__Impl5583);
+            pushFollow(FOLLOW_rule__Metadata__DateAssignment_10_in_rule__Metadata__Group__10__Impl5564);
             rule__Metadata__DateAssignment_10();
 
             state._fsp--;
@@ -8240,12 +7898,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2655:1: ( rule__Metadata__Group__11__Impl rule__Metadata__Group__12 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2656:2: rule__Metadata__Group__11__Impl rule__Metadata__Group__12
             {
-            pushFollow(FOLLOW_rule__Metadata__Group__11__Impl_in_rule__Metadata__Group__115613);
+            pushFollow(FOLLOW_rule__Metadata__Group__11__Impl_in_rule__Metadata__Group__115594);
             rule__Metadata__Group__11__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Metadata__Group__12_in_rule__Metadata__Group__115616);
+            pushFollow(FOLLOW_rule__Metadata__Group__12_in_rule__Metadata__Group__115597);
             rule__Metadata__Group__12();
 
             state._fsp--;
@@ -8282,7 +7940,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2669:1: 'Version'
             {
              before(grammarAccess.getMetadataAccess().getVersionKeyword_11()); 
-            match(input,51,FOLLOW_51_in_rule__Metadata__Group__11__Impl5644); 
+            match(input,51,FOLLOW_51_in_rule__Metadata__Group__11__Impl5625); 
              after(grammarAccess.getMetadataAccess().getVersionKeyword_11()); 
 
             }
@@ -8315,12 +7973,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2686:1: ( rule__Metadata__Group__12__Impl rule__Metadata__Group__13 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2687:2: rule__Metadata__Group__12__Impl rule__Metadata__Group__13
             {
-            pushFollow(FOLLOW_rule__Metadata__Group__12__Impl_in_rule__Metadata__Group__125675);
+            pushFollow(FOLLOW_rule__Metadata__Group__12__Impl_in_rule__Metadata__Group__125656);
             rule__Metadata__Group__12__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Metadata__Group__13_in_rule__Metadata__Group__125678);
+            pushFollow(FOLLOW_rule__Metadata__Group__13_in_rule__Metadata__Group__125659);
             rule__Metadata__Group__13();
 
             state._fsp--;
@@ -8360,7 +8018,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2701:1: ( rule__Metadata__VersionAssignment_12 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2701:2: rule__Metadata__VersionAssignment_12
             {
-            pushFollow(FOLLOW_rule__Metadata__VersionAssignment_12_in_rule__Metadata__Group__12__Impl5705);
+            pushFollow(FOLLOW_rule__Metadata__VersionAssignment_12_in_rule__Metadata__Group__12__Impl5686);
             rule__Metadata__VersionAssignment_12();
 
             state._fsp--;
@@ -8400,7 +8058,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2715:1: ( rule__Metadata__Group__13__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2716:2: rule__Metadata__Group__13__Impl
             {
-            pushFollow(FOLLOW_rule__Metadata__Group__13__Impl_in_rule__Metadata__Group__135735);
+            pushFollow(FOLLOW_rule__Metadata__Group__13__Impl_in_rule__Metadata__Group__135716);
             rule__Metadata__Group__13__Impl();
 
             state._fsp--;
@@ -8437,7 +8095,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2728:1: '}'
             {
              before(grammarAccess.getMetadataAccess().getRightCurlyBracketKeyword_13()); 
-            match(input,41,FOLLOW_41_in_rule__Metadata__Group__13__Impl5763); 
+            match(input,41,FOLLOW_41_in_rule__Metadata__Group__13__Impl5744); 
              after(grammarAccess.getMetadataAccess().getRightCurlyBracketKeyword_13()); 
 
             }
@@ -8470,12 +8128,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2773:1: ( rule__Date__Group__0__Impl rule__Date__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2774:2: rule__Date__Group__0__Impl rule__Date__Group__1
             {
-            pushFollow(FOLLOW_rule__Date__Group__0__Impl_in_rule__Date__Group__05822);
+            pushFollow(FOLLOW_rule__Date__Group__0__Impl_in_rule__Date__Group__05803);
             rule__Date__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Date__Group__1_in_rule__Date__Group__05825);
+            pushFollow(FOLLOW_rule__Date__Group__1_in_rule__Date__Group__05806);
             rule__Date__Group__1();
 
             state._fsp--;
@@ -8515,7 +8173,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2788:1: ( rule__Date__DayAssignment_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2788:2: rule__Date__DayAssignment_0
             {
-            pushFollow(FOLLOW_rule__Date__DayAssignment_0_in_rule__Date__Group__0__Impl5852);
+            pushFollow(FOLLOW_rule__Date__DayAssignment_0_in_rule__Date__Group__0__Impl5833);
             rule__Date__DayAssignment_0();
 
             state._fsp--;
@@ -8555,12 +8213,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2802:1: ( rule__Date__Group__1__Impl rule__Date__Group__2 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2803:2: rule__Date__Group__1__Impl rule__Date__Group__2
             {
-            pushFollow(FOLLOW_rule__Date__Group__1__Impl_in_rule__Date__Group__15882);
+            pushFollow(FOLLOW_rule__Date__Group__1__Impl_in_rule__Date__Group__15863);
             rule__Date__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Date__Group__2_in_rule__Date__Group__15885);
+            pushFollow(FOLLOW_rule__Date__Group__2_in_rule__Date__Group__15866);
             rule__Date__Group__2();
 
             state._fsp--;
@@ -8597,7 +8255,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2816:1: '-'
             {
              before(grammarAccess.getDateAccess().getHyphenMinusKeyword_1()); 
-            match(input,52,FOLLOW_52_in_rule__Date__Group__1__Impl5913); 
+            match(input,52,FOLLOW_52_in_rule__Date__Group__1__Impl5894); 
              after(grammarAccess.getDateAccess().getHyphenMinusKeyword_1()); 
 
             }
@@ -8630,12 +8288,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2833:1: ( rule__Date__Group__2__Impl rule__Date__Group__3 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2834:2: rule__Date__Group__2__Impl rule__Date__Group__3
             {
-            pushFollow(FOLLOW_rule__Date__Group__2__Impl_in_rule__Date__Group__25944);
+            pushFollow(FOLLOW_rule__Date__Group__2__Impl_in_rule__Date__Group__25925);
             rule__Date__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Date__Group__3_in_rule__Date__Group__25947);
+            pushFollow(FOLLOW_rule__Date__Group__3_in_rule__Date__Group__25928);
             rule__Date__Group__3();
 
             state._fsp--;
@@ -8675,7 +8333,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2848:1: ( rule__Date__MonthAssignment_2 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2848:2: rule__Date__MonthAssignment_2
             {
-            pushFollow(FOLLOW_rule__Date__MonthAssignment_2_in_rule__Date__Group__2__Impl5974);
+            pushFollow(FOLLOW_rule__Date__MonthAssignment_2_in_rule__Date__Group__2__Impl5955);
             rule__Date__MonthAssignment_2();
 
             state._fsp--;
@@ -8715,12 +8373,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2862:1: ( rule__Date__Group__3__Impl rule__Date__Group__4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2863:2: rule__Date__Group__3__Impl rule__Date__Group__4
             {
-            pushFollow(FOLLOW_rule__Date__Group__3__Impl_in_rule__Date__Group__36004);
+            pushFollow(FOLLOW_rule__Date__Group__3__Impl_in_rule__Date__Group__35985);
             rule__Date__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Date__Group__4_in_rule__Date__Group__36007);
+            pushFollow(FOLLOW_rule__Date__Group__4_in_rule__Date__Group__35988);
             rule__Date__Group__4();
 
             state._fsp--;
@@ -8757,7 +8415,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2876:1: '-'
             {
              before(grammarAccess.getDateAccess().getHyphenMinusKeyword_3()); 
-            match(input,52,FOLLOW_52_in_rule__Date__Group__3__Impl6035); 
+            match(input,52,FOLLOW_52_in_rule__Date__Group__3__Impl6016); 
              after(grammarAccess.getDateAccess().getHyphenMinusKeyword_3()); 
 
             }
@@ -8790,7 +8448,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2893:1: ( rule__Date__Group__4__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2894:2: rule__Date__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Date__Group__4__Impl_in_rule__Date__Group__46066);
+            pushFollow(FOLLOW_rule__Date__Group__4__Impl_in_rule__Date__Group__46047);
             rule__Date__Group__4__Impl();
 
             state._fsp--;
@@ -8830,7 +8488,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2907:1: ( rule__Date__YearAssignment_4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2907:2: rule__Date__YearAssignment_4
             {
-            pushFollow(FOLLOW_rule__Date__YearAssignment_4_in_rule__Date__Group__4__Impl6093);
+            pushFollow(FOLLOW_rule__Date__YearAssignment_4_in_rule__Date__Group__4__Impl6074);
             rule__Date__YearAssignment_4();
 
             state._fsp--;
@@ -8870,12 +8528,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2931:1: ( rule__Enforcement__Group__0__Impl rule__Enforcement__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2932:2: rule__Enforcement__Group__0__Impl rule__Enforcement__Group__1
             {
-            pushFollow(FOLLOW_rule__Enforcement__Group__0__Impl_in_rule__Enforcement__Group__06133);
+            pushFollow(FOLLOW_rule__Enforcement__Group__0__Impl_in_rule__Enforcement__Group__06114);
             rule__Enforcement__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Enforcement__Group__1_in_rule__Enforcement__Group__06136);
+            pushFollow(FOLLOW_rule__Enforcement__Group__1_in_rule__Enforcement__Group__06117);
             rule__Enforcement__Group__1();
 
             state._fsp--;
@@ -8912,7 +8570,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2945:1: 'Enforcement'
             {
              before(grammarAccess.getEnforcementAccess().getEnforcementKeyword_0()); 
-            match(input,53,FOLLOW_53_in_rule__Enforcement__Group__0__Impl6164); 
+            match(input,53,FOLLOW_53_in_rule__Enforcement__Group__0__Impl6145); 
              after(grammarAccess.getEnforcementAccess().getEnforcementKeyword_0()); 
 
             }
@@ -8945,12 +8603,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2962:1: ( rule__Enforcement__Group__1__Impl rule__Enforcement__Group__2 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2963:2: rule__Enforcement__Group__1__Impl rule__Enforcement__Group__2
             {
-            pushFollow(FOLLOW_rule__Enforcement__Group__1__Impl_in_rule__Enforcement__Group__16195);
+            pushFollow(FOLLOW_rule__Enforcement__Group__1__Impl_in_rule__Enforcement__Group__16176);
             rule__Enforcement__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Enforcement__Group__2_in_rule__Enforcement__Group__16198);
+            pushFollow(FOLLOW_rule__Enforcement__Group__2_in_rule__Enforcement__Group__16179);
             rule__Enforcement__Group__2();
 
             state._fsp--;
@@ -8990,7 +8648,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2977:1: ( rule__Enforcement__NameAssignment_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2977:2: rule__Enforcement__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Enforcement__NameAssignment_1_in_rule__Enforcement__Group__1__Impl6225);
+            pushFollow(FOLLOW_rule__Enforcement__NameAssignment_1_in_rule__Enforcement__Group__1__Impl6206);
             rule__Enforcement__NameAssignment_1();
 
             state._fsp--;
@@ -9030,12 +8688,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2991:1: ( rule__Enforcement__Group__2__Impl rule__Enforcement__Group__3 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:2992:2: rule__Enforcement__Group__2__Impl rule__Enforcement__Group__3
             {
-            pushFollow(FOLLOW_rule__Enforcement__Group__2__Impl_in_rule__Enforcement__Group__26255);
+            pushFollow(FOLLOW_rule__Enforcement__Group__2__Impl_in_rule__Enforcement__Group__26236);
             rule__Enforcement__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Enforcement__Group__3_in_rule__Enforcement__Group__26258);
+            pushFollow(FOLLOW_rule__Enforcement__Group__3_in_rule__Enforcement__Group__26239);
             rule__Enforcement__Group__3();
 
             state._fsp--;
@@ -9072,7 +8730,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3005:1: '{'
             {
              before(grammarAccess.getEnforcementAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,40,FOLLOW_40_in_rule__Enforcement__Group__2__Impl6286); 
+            match(input,40,FOLLOW_40_in_rule__Enforcement__Group__2__Impl6267); 
              after(grammarAccess.getEnforcementAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -9105,12 +8763,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3022:1: ( rule__Enforcement__Group__3__Impl rule__Enforcement__Group__4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3023:2: rule__Enforcement__Group__3__Impl rule__Enforcement__Group__4
             {
-            pushFollow(FOLLOW_rule__Enforcement__Group__3__Impl_in_rule__Enforcement__Group__36317);
+            pushFollow(FOLLOW_rule__Enforcement__Group__3__Impl_in_rule__Enforcement__Group__36298);
             rule__Enforcement__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Enforcement__Group__4_in_rule__Enforcement__Group__36320);
+            pushFollow(FOLLOW_rule__Enforcement__Group__4_in_rule__Enforcement__Group__36301);
             rule__Enforcement__Group__4();
 
             state._fsp--;
@@ -9147,7 +8805,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3036:1: 'Name'
             {
              before(grammarAccess.getEnforcementAccess().getNameKeyword_3()); 
-            match(input,54,FOLLOW_54_in_rule__Enforcement__Group__3__Impl6348); 
+            match(input,54,FOLLOW_54_in_rule__Enforcement__Group__3__Impl6329); 
              after(grammarAccess.getEnforcementAccess().getNameKeyword_3()); 
 
             }
@@ -9180,12 +8838,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3053:1: ( rule__Enforcement__Group__4__Impl rule__Enforcement__Group__5 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3054:2: rule__Enforcement__Group__4__Impl rule__Enforcement__Group__5
             {
-            pushFollow(FOLLOW_rule__Enforcement__Group__4__Impl_in_rule__Enforcement__Group__46379);
+            pushFollow(FOLLOW_rule__Enforcement__Group__4__Impl_in_rule__Enforcement__Group__46360);
             rule__Enforcement__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Enforcement__Group__5_in_rule__Enforcement__Group__46382);
+            pushFollow(FOLLOW_rule__Enforcement__Group__5_in_rule__Enforcement__Group__46363);
             rule__Enforcement__Group__5();
 
             state._fsp--;
@@ -9225,7 +8883,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3068:1: ( rule__Enforcement__EnforcementNameAssignment_4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3068:2: rule__Enforcement__EnforcementNameAssignment_4
             {
-            pushFollow(FOLLOW_rule__Enforcement__EnforcementNameAssignment_4_in_rule__Enforcement__Group__4__Impl6409);
+            pushFollow(FOLLOW_rule__Enforcement__EnforcementNameAssignment_4_in_rule__Enforcement__Group__4__Impl6390);
             rule__Enforcement__EnforcementNameAssignment_4();
 
             state._fsp--;
@@ -9265,12 +8923,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3082:1: ( rule__Enforcement__Group__5__Impl rule__Enforcement__Group__6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3083:2: rule__Enforcement__Group__5__Impl rule__Enforcement__Group__6
             {
-            pushFollow(FOLLOW_rule__Enforcement__Group__5__Impl_in_rule__Enforcement__Group__56439);
+            pushFollow(FOLLOW_rule__Enforcement__Group__5__Impl_in_rule__Enforcement__Group__56420);
             rule__Enforcement__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Enforcement__Group__6_in_rule__Enforcement__Group__56442);
+            pushFollow(FOLLOW_rule__Enforcement__Group__6_in_rule__Enforcement__Group__56423);
             rule__Enforcement__Group__6();
 
             state._fsp--;
@@ -9307,7 +8965,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3096:1: 'Description'
             {
              before(grammarAccess.getEnforcementAccess().getDescriptionKeyword_5()); 
-            match(input,47,FOLLOW_47_in_rule__Enforcement__Group__5__Impl6470); 
+            match(input,47,FOLLOW_47_in_rule__Enforcement__Group__5__Impl6451); 
              after(grammarAccess.getEnforcementAccess().getDescriptionKeyword_5()); 
 
             }
@@ -9340,12 +8998,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3113:1: ( rule__Enforcement__Group__6__Impl rule__Enforcement__Group__7 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3114:2: rule__Enforcement__Group__6__Impl rule__Enforcement__Group__7
             {
-            pushFollow(FOLLOW_rule__Enforcement__Group__6__Impl_in_rule__Enforcement__Group__66501);
+            pushFollow(FOLLOW_rule__Enforcement__Group__6__Impl_in_rule__Enforcement__Group__66482);
             rule__Enforcement__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Enforcement__Group__7_in_rule__Enforcement__Group__66504);
+            pushFollow(FOLLOW_rule__Enforcement__Group__7_in_rule__Enforcement__Group__66485);
             rule__Enforcement__Group__7();
 
             state._fsp--;
@@ -9385,7 +9043,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3128:1: ( rule__Enforcement__DescriptionAssignment_6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3128:2: rule__Enforcement__DescriptionAssignment_6
             {
-            pushFollow(FOLLOW_rule__Enforcement__DescriptionAssignment_6_in_rule__Enforcement__Group__6__Impl6531);
+            pushFollow(FOLLOW_rule__Enforcement__DescriptionAssignment_6_in_rule__Enforcement__Group__6__Impl6512);
             rule__Enforcement__DescriptionAssignment_6();
 
             state._fsp--;
@@ -9425,12 +9083,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3142:1: ( rule__Enforcement__Group__7__Impl rule__Enforcement__Group__8 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3143:2: rule__Enforcement__Group__7__Impl rule__Enforcement__Group__8
             {
-            pushFollow(FOLLOW_rule__Enforcement__Group__7__Impl_in_rule__Enforcement__Group__76561);
+            pushFollow(FOLLOW_rule__Enforcement__Group__7__Impl_in_rule__Enforcement__Group__76542);
             rule__Enforcement__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Enforcement__Group__8_in_rule__Enforcement__Group__76564);
+            pushFollow(FOLLOW_rule__Enforcement__Group__8_in_rule__Enforcement__Group__76545);
             rule__Enforcement__Group__8();
 
             state._fsp--;
@@ -9467,7 +9125,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3156:1: 'Type'
             {
              before(grammarAccess.getEnforcementAccess().getTypeKeyword_7()); 
-            match(input,55,FOLLOW_55_in_rule__Enforcement__Group__7__Impl6592); 
+            match(input,55,FOLLOW_55_in_rule__Enforcement__Group__7__Impl6573); 
              after(grammarAccess.getEnforcementAccess().getTypeKeyword_7()); 
 
             }
@@ -9500,12 +9158,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3173:1: ( rule__Enforcement__Group__8__Impl rule__Enforcement__Group__9 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3174:2: rule__Enforcement__Group__8__Impl rule__Enforcement__Group__9
             {
-            pushFollow(FOLLOW_rule__Enforcement__Group__8__Impl_in_rule__Enforcement__Group__86623);
+            pushFollow(FOLLOW_rule__Enforcement__Group__8__Impl_in_rule__Enforcement__Group__86604);
             rule__Enforcement__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Enforcement__Group__9_in_rule__Enforcement__Group__86626);
+            pushFollow(FOLLOW_rule__Enforcement__Group__9_in_rule__Enforcement__Group__86607);
             rule__Enforcement__Group__9();
 
             state._fsp--;
@@ -9545,7 +9203,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3188:1: ( rule__Enforcement__TypeAssignment_8 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3188:2: rule__Enforcement__TypeAssignment_8
             {
-            pushFollow(FOLLOW_rule__Enforcement__TypeAssignment_8_in_rule__Enforcement__Group__8__Impl6653);
+            pushFollow(FOLLOW_rule__Enforcement__TypeAssignment_8_in_rule__Enforcement__Group__8__Impl6634);
             rule__Enforcement__TypeAssignment_8();
 
             state._fsp--;
@@ -9585,7 +9243,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3202:1: ( rule__Enforcement__Group__9__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3203:2: rule__Enforcement__Group__9__Impl
             {
-            pushFollow(FOLLOW_rule__Enforcement__Group__9__Impl_in_rule__Enforcement__Group__96683);
+            pushFollow(FOLLOW_rule__Enforcement__Group__9__Impl_in_rule__Enforcement__Group__96664);
             rule__Enforcement__Group__9__Impl();
 
             state._fsp--;
@@ -9622,7 +9280,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3215:1: '}'
             {
              before(grammarAccess.getEnforcementAccess().getRightCurlyBracketKeyword_9()); 
-            match(input,41,FOLLOW_41_in_rule__Enforcement__Group__9__Impl6711); 
+            match(input,41,FOLLOW_41_in_rule__Enforcement__Group__9__Impl6692); 
              after(grammarAccess.getEnforcementAccess().getRightCurlyBracketKeyword_9()); 
 
             }
@@ -9655,12 +9313,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3252:1: ( rule__Service__Group__0__Impl rule__Service__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3253:2: rule__Service__Group__0__Impl rule__Service__Group__1
             {
-            pushFollow(FOLLOW_rule__Service__Group__0__Impl_in_rule__Service__Group__06762);
+            pushFollow(FOLLOW_rule__Service__Group__0__Impl_in_rule__Service__Group__06743);
             rule__Service__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Service__Group__1_in_rule__Service__Group__06765);
+            pushFollow(FOLLOW_rule__Service__Group__1_in_rule__Service__Group__06746);
             rule__Service__Group__1();
 
             state._fsp--;
@@ -9697,7 +9355,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3266:1: 'Service'
             {
              before(grammarAccess.getServiceAccess().getServiceKeyword_0()); 
-            match(input,56,FOLLOW_56_in_rule__Service__Group__0__Impl6793); 
+            match(input,56,FOLLOW_56_in_rule__Service__Group__0__Impl6774); 
              after(grammarAccess.getServiceAccess().getServiceKeyword_0()); 
 
             }
@@ -9730,12 +9388,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3283:1: ( rule__Service__Group__1__Impl rule__Service__Group__2 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3284:2: rule__Service__Group__1__Impl rule__Service__Group__2
             {
-            pushFollow(FOLLOW_rule__Service__Group__1__Impl_in_rule__Service__Group__16824);
+            pushFollow(FOLLOW_rule__Service__Group__1__Impl_in_rule__Service__Group__16805);
             rule__Service__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Service__Group__2_in_rule__Service__Group__16827);
+            pushFollow(FOLLOW_rule__Service__Group__2_in_rule__Service__Group__16808);
             rule__Service__Group__2();
 
             state._fsp--;
@@ -9775,7 +9433,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3298:1: ( rule__Service__NameAssignment_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3298:2: rule__Service__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Service__NameAssignment_1_in_rule__Service__Group__1__Impl6854);
+            pushFollow(FOLLOW_rule__Service__NameAssignment_1_in_rule__Service__Group__1__Impl6835);
             rule__Service__NameAssignment_1();
 
             state._fsp--;
@@ -9815,12 +9473,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3312:1: ( rule__Service__Group__2__Impl rule__Service__Group__3 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3313:2: rule__Service__Group__2__Impl rule__Service__Group__3
             {
-            pushFollow(FOLLOW_rule__Service__Group__2__Impl_in_rule__Service__Group__26884);
+            pushFollow(FOLLOW_rule__Service__Group__2__Impl_in_rule__Service__Group__26865);
             rule__Service__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Service__Group__3_in_rule__Service__Group__26887);
+            pushFollow(FOLLOW_rule__Service__Group__3_in_rule__Service__Group__26868);
             rule__Service__Group__3();
 
             state._fsp--;
@@ -9857,7 +9515,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3326:1: '{'
             {
              before(grammarAccess.getServiceAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,40,FOLLOW_40_in_rule__Service__Group__2__Impl6915); 
+            match(input,40,FOLLOW_40_in_rule__Service__Group__2__Impl6896); 
              after(grammarAccess.getServiceAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -9890,12 +9548,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3343:1: ( rule__Service__Group__3__Impl rule__Service__Group__4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3344:2: rule__Service__Group__3__Impl rule__Service__Group__4
             {
-            pushFollow(FOLLOW_rule__Service__Group__3__Impl_in_rule__Service__Group__36946);
+            pushFollow(FOLLOW_rule__Service__Group__3__Impl_in_rule__Service__Group__36927);
             rule__Service__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Service__Group__4_in_rule__Service__Group__36949);
+            pushFollow(FOLLOW_rule__Service__Group__4_in_rule__Service__Group__36930);
             rule__Service__Group__4();
 
             state._fsp--;
@@ -9932,7 +9590,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3357:1: 'Name'
             {
              before(grammarAccess.getServiceAccess().getNameKeyword_3()); 
-            match(input,54,FOLLOW_54_in_rule__Service__Group__3__Impl6977); 
+            match(input,54,FOLLOW_54_in_rule__Service__Group__3__Impl6958); 
              after(grammarAccess.getServiceAccess().getNameKeyword_3()); 
 
             }
@@ -9965,12 +9623,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3374:1: ( rule__Service__Group__4__Impl rule__Service__Group__5 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3375:2: rule__Service__Group__4__Impl rule__Service__Group__5
             {
-            pushFollow(FOLLOW_rule__Service__Group__4__Impl_in_rule__Service__Group__47008);
+            pushFollow(FOLLOW_rule__Service__Group__4__Impl_in_rule__Service__Group__46989);
             rule__Service__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Service__Group__5_in_rule__Service__Group__47011);
+            pushFollow(FOLLOW_rule__Service__Group__5_in_rule__Service__Group__46992);
             rule__Service__Group__5();
 
             state._fsp--;
@@ -10010,7 +9668,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3389:1: ( rule__Service__ServiceNameAssignment_4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3389:2: rule__Service__ServiceNameAssignment_4
             {
-            pushFollow(FOLLOW_rule__Service__ServiceNameAssignment_4_in_rule__Service__Group__4__Impl7038);
+            pushFollow(FOLLOW_rule__Service__ServiceNameAssignment_4_in_rule__Service__Group__4__Impl7019);
             rule__Service__ServiceNameAssignment_4();
 
             state._fsp--;
@@ -10050,12 +9708,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3403:1: ( rule__Service__Group__5__Impl rule__Service__Group__6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3404:2: rule__Service__Group__5__Impl rule__Service__Group__6
             {
-            pushFollow(FOLLOW_rule__Service__Group__5__Impl_in_rule__Service__Group__57068);
+            pushFollow(FOLLOW_rule__Service__Group__5__Impl_in_rule__Service__Group__57049);
             rule__Service__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Service__Group__6_in_rule__Service__Group__57071);
+            pushFollow(FOLLOW_rule__Service__Group__6_in_rule__Service__Group__57052);
             rule__Service__Group__6();
 
             state._fsp--;
@@ -10093,17 +9751,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getServiceAccess().getGroup_5()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3418:1: ( rule__Service__Group_5__0 )?
-            int alt62=2;
-            int LA62_0 = input.LA(1);
+            int alt43=2;
+            int LA43_0 = input.LA(1);
 
-            if ( (LA62_0==47) ) {
-                alt62=1;
+            if ( (LA43_0==47) ) {
+                alt43=1;
             }
-            switch (alt62) {
+            switch (alt43) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3418:2: rule__Service__Group_5__0
                     {
-                    pushFollow(FOLLOW_rule__Service__Group_5__0_in_rule__Service__Group__5__Impl7098);
+                    pushFollow(FOLLOW_rule__Service__Group_5__0_in_rule__Service__Group__5__Impl7079);
                     rule__Service__Group_5__0();
 
                     state._fsp--;
@@ -10146,12 +9804,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3432:1: ( rule__Service__Group__6__Impl rule__Service__Group__7 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3433:2: rule__Service__Group__6__Impl rule__Service__Group__7
             {
-            pushFollow(FOLLOW_rule__Service__Group__6__Impl_in_rule__Service__Group__67129);
+            pushFollow(FOLLOW_rule__Service__Group__6__Impl_in_rule__Service__Group__67110);
             rule__Service__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Service__Group__7_in_rule__Service__Group__67132);
+            pushFollow(FOLLOW_rule__Service__Group__7_in_rule__Service__Group__67113);
             rule__Service__Group__7();
 
             state._fsp--;
@@ -10189,17 +9847,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getServiceAccess().getGroup_6()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3447:1: ( rule__Service__Group_6__0 )?
-            int alt63=2;
-            int LA63_0 = input.LA(1);
+            int alt44=2;
+            int LA44_0 = input.LA(1);
 
-            if ( (LA63_0==57) ) {
-                alt63=1;
+            if ( (LA44_0==57) ) {
+                alt44=1;
             }
-            switch (alt63) {
+            switch (alt44) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3447:2: rule__Service__Group_6__0
                     {
-                    pushFollow(FOLLOW_rule__Service__Group_6__0_in_rule__Service__Group__6__Impl7159);
+                    pushFollow(FOLLOW_rule__Service__Group_6__0_in_rule__Service__Group__6__Impl7140);
                     rule__Service__Group_6__0();
 
                     state._fsp--;
@@ -10242,12 +9900,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3461:1: ( rule__Service__Group__7__Impl rule__Service__Group__8 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3462:2: rule__Service__Group__7__Impl rule__Service__Group__8
             {
-            pushFollow(FOLLOW_rule__Service__Group__7__Impl_in_rule__Service__Group__77190);
+            pushFollow(FOLLOW_rule__Service__Group__7__Impl_in_rule__Service__Group__77171);
             rule__Service__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Service__Group__8_in_rule__Service__Group__77193);
+            pushFollow(FOLLOW_rule__Service__Group__8_in_rule__Service__Group__77174);
             rule__Service__Group__8();
 
             state._fsp--;
@@ -10285,17 +9943,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getServiceAccess().getGroup_7()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3476:1: ( rule__Service__Group_7__0 )?
-            int alt64=2;
-            int LA64_0 = input.LA(1);
+            int alt45=2;
+            int LA45_0 = input.LA(1);
 
-            if ( (LA64_0==58) ) {
-                alt64=1;
+            if ( (LA45_0==58) ) {
+                alt45=1;
             }
-            switch (alt64) {
+            switch (alt45) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3476:2: rule__Service__Group_7__0
                     {
-                    pushFollow(FOLLOW_rule__Service__Group_7__0_in_rule__Service__Group__7__Impl7220);
+                    pushFollow(FOLLOW_rule__Service__Group_7__0_in_rule__Service__Group__7__Impl7201);
                     rule__Service__Group_7__0();
 
                     state._fsp--;
@@ -10338,7 +9996,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3490:1: ( rule__Service__Group__8__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3491:2: rule__Service__Group__8__Impl
             {
-            pushFollow(FOLLOW_rule__Service__Group__8__Impl_in_rule__Service__Group__87251);
+            pushFollow(FOLLOW_rule__Service__Group__8__Impl_in_rule__Service__Group__87232);
             rule__Service__Group__8__Impl();
 
             state._fsp--;
@@ -10375,7 +10033,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3503:1: '}'
             {
              before(grammarAccess.getServiceAccess().getRightCurlyBracketKeyword_8()); 
-            match(input,41,FOLLOW_41_in_rule__Service__Group__8__Impl7279); 
+            match(input,41,FOLLOW_41_in_rule__Service__Group__8__Impl7260); 
              after(grammarAccess.getServiceAccess().getRightCurlyBracketKeyword_8()); 
 
             }
@@ -10408,12 +10066,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3538:1: ( rule__Service__Group_5__0__Impl rule__Service__Group_5__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3539:2: rule__Service__Group_5__0__Impl rule__Service__Group_5__1
             {
-            pushFollow(FOLLOW_rule__Service__Group_5__0__Impl_in_rule__Service__Group_5__07328);
+            pushFollow(FOLLOW_rule__Service__Group_5__0__Impl_in_rule__Service__Group_5__07309);
             rule__Service__Group_5__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Service__Group_5__1_in_rule__Service__Group_5__07331);
+            pushFollow(FOLLOW_rule__Service__Group_5__1_in_rule__Service__Group_5__07312);
             rule__Service__Group_5__1();
 
             state._fsp--;
@@ -10450,7 +10108,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3552:1: 'Description'
             {
              before(grammarAccess.getServiceAccess().getDescriptionKeyword_5_0()); 
-            match(input,47,FOLLOW_47_in_rule__Service__Group_5__0__Impl7359); 
+            match(input,47,FOLLOW_47_in_rule__Service__Group_5__0__Impl7340); 
              after(grammarAccess.getServiceAccess().getDescriptionKeyword_5_0()); 
 
             }
@@ -10483,7 +10141,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3569:1: ( rule__Service__Group_5__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3570:2: rule__Service__Group_5__1__Impl
             {
-            pushFollow(FOLLOW_rule__Service__Group_5__1__Impl_in_rule__Service__Group_5__17390);
+            pushFollow(FOLLOW_rule__Service__Group_5__1__Impl_in_rule__Service__Group_5__17371);
             rule__Service__Group_5__1__Impl();
 
             state._fsp--;
@@ -10523,7 +10181,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3583:1: ( rule__Service__DescriptionAssignment_5_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3583:2: rule__Service__DescriptionAssignment_5_1
             {
-            pushFollow(FOLLOW_rule__Service__DescriptionAssignment_5_1_in_rule__Service__Group_5__1__Impl7417);
+            pushFollow(FOLLOW_rule__Service__DescriptionAssignment_5_1_in_rule__Service__Group_5__1__Impl7398);
             rule__Service__DescriptionAssignment_5_1();
 
             state._fsp--;
@@ -10563,12 +10221,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3601:1: ( rule__Service__Group_6__0__Impl rule__Service__Group_6__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3602:2: rule__Service__Group_6__0__Impl rule__Service__Group_6__1
             {
-            pushFollow(FOLLOW_rule__Service__Group_6__0__Impl_in_rule__Service__Group_6__07451);
+            pushFollow(FOLLOW_rule__Service__Group_6__0__Impl_in_rule__Service__Group_6__07432);
             rule__Service__Group_6__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Service__Group_6__1_in_rule__Service__Group_6__07454);
+            pushFollow(FOLLOW_rule__Service__Group_6__1_in_rule__Service__Group_6__07435);
             rule__Service__Group_6__1();
 
             state._fsp--;
@@ -10605,7 +10263,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3615:1: 'RefersTo PrivateData'
             {
              before(grammarAccess.getServiceAccess().getRefersToPrivateDataKeyword_6_0()); 
-            match(input,57,FOLLOW_57_in_rule__Service__Group_6__0__Impl7482); 
+            match(input,57,FOLLOW_57_in_rule__Service__Group_6__0__Impl7463); 
              after(grammarAccess.getServiceAccess().getRefersToPrivateDataKeyword_6_0()); 
 
             }
@@ -10638,7 +10296,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3632:1: ( rule__Service__Group_6__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3633:2: rule__Service__Group_6__1__Impl
             {
-            pushFollow(FOLLOW_rule__Service__Group_6__1__Impl_in_rule__Service__Group_6__17513);
+            pushFollow(FOLLOW_rule__Service__Group_6__1__Impl_in_rule__Service__Group_6__17494);
             rule__Service__Group_6__1__Impl();
 
             state._fsp--;
@@ -10678,7 +10336,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3646:1: ( rule__Service__Alternatives_6_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3646:2: rule__Service__Alternatives_6_1
             {
-            pushFollow(FOLLOW_rule__Service__Alternatives_6_1_in_rule__Service__Group_6__1__Impl7540);
+            pushFollow(FOLLOW_rule__Service__Alternatives_6_1_in_rule__Service__Group_6__1__Impl7521);
             rule__Service__Alternatives_6_1();
 
             state._fsp--;
@@ -10718,12 +10376,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3664:1: ( rule__Service__Group_7__0__Impl rule__Service__Group_7__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3665:2: rule__Service__Group_7__0__Impl rule__Service__Group_7__1
             {
-            pushFollow(FOLLOW_rule__Service__Group_7__0__Impl_in_rule__Service__Group_7__07574);
+            pushFollow(FOLLOW_rule__Service__Group_7__0__Impl_in_rule__Service__Group_7__07555);
             rule__Service__Group_7__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Service__Group_7__1_in_rule__Service__Group_7__07577);
+            pushFollow(FOLLOW_rule__Service__Group_7__1_in_rule__Service__Group_7__07558);
             rule__Service__Group_7__1();
 
             state._fsp--;
@@ -10760,7 +10418,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3678:1: 'Service_Part'
             {
              before(grammarAccess.getServiceAccess().getService_PartKeyword_7_0()); 
-            match(input,58,FOLLOW_58_in_rule__Service__Group_7__0__Impl7605); 
+            match(input,58,FOLLOW_58_in_rule__Service__Group_7__0__Impl7586); 
              after(grammarAccess.getServiceAccess().getService_PartKeyword_7_0()); 
 
             }
@@ -10793,7 +10451,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3695:1: ( rule__Service__Group_7__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3696:2: rule__Service__Group_7__1__Impl
             {
-            pushFollow(FOLLOW_rule__Service__Group_7__1__Impl_in_rule__Service__Group_7__17636);
+            pushFollow(FOLLOW_rule__Service__Group_7__1__Impl_in_rule__Service__Group_7__17617);
             rule__Service__Group_7__1__Impl();
 
             state._fsp--;
@@ -10831,21 +10489,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getServiceAccess().getServicePartAssignment_7_1()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3709:1: ( rule__Service__ServicePartAssignment_7_1 )*
-            loop65:
+            loop46:
             do {
-                int alt65=2;
-                int LA65_0 = input.LA(1);
+                int alt46=2;
+                int LA46_0 = input.LA(1);
 
-                if ( (LA65_0==RULE_ID) ) {
-                    alt65=1;
+                if ( (LA46_0==RULE_ID) ) {
+                    alt46=1;
                 }
 
 
-                switch (alt65) {
+                switch (alt46) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3709:2: rule__Service__ServicePartAssignment_7_1
             	    {
-            	    pushFollow(FOLLOW_rule__Service__ServicePartAssignment_7_1_in_rule__Service__Group_7__1__Impl7663);
+            	    pushFollow(FOLLOW_rule__Service__ServicePartAssignment_7_1_in_rule__Service__Group_7__1__Impl7644);
             	    rule__Service__ServicePartAssignment_7_1();
 
             	    state._fsp--;
@@ -10855,7 +10513,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop65;
+            	    break loop46;
                 }
             } while (true);
 
@@ -10891,12 +10549,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3727:1: ( rule__Recipient__Group__0__Impl rule__Recipient__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3728:2: rule__Recipient__Group__0__Impl rule__Recipient__Group__1
             {
-            pushFollow(FOLLOW_rule__Recipient__Group__0__Impl_in_rule__Recipient__Group__07698);
+            pushFollow(FOLLOW_rule__Recipient__Group__0__Impl_in_rule__Recipient__Group__07679);
             rule__Recipient__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Recipient__Group__1_in_rule__Recipient__Group__07701);
+            pushFollow(FOLLOW_rule__Recipient__Group__1_in_rule__Recipient__Group__07682);
             rule__Recipient__Group__1();
 
             state._fsp--;
@@ -10933,7 +10591,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3741:1: 'Recipient'
             {
              before(grammarAccess.getRecipientAccess().getRecipientKeyword_0()); 
-            match(input,59,FOLLOW_59_in_rule__Recipient__Group__0__Impl7729); 
+            match(input,59,FOLLOW_59_in_rule__Recipient__Group__0__Impl7710); 
              after(grammarAccess.getRecipientAccess().getRecipientKeyword_0()); 
 
             }
@@ -10966,12 +10624,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3758:1: ( rule__Recipient__Group__1__Impl rule__Recipient__Group__2 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3759:2: rule__Recipient__Group__1__Impl rule__Recipient__Group__2
             {
-            pushFollow(FOLLOW_rule__Recipient__Group__1__Impl_in_rule__Recipient__Group__17760);
+            pushFollow(FOLLOW_rule__Recipient__Group__1__Impl_in_rule__Recipient__Group__17741);
             rule__Recipient__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Recipient__Group__2_in_rule__Recipient__Group__17763);
+            pushFollow(FOLLOW_rule__Recipient__Group__2_in_rule__Recipient__Group__17744);
             rule__Recipient__Group__2();
 
             state._fsp--;
@@ -11011,7 +10669,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3773:1: ( rule__Recipient__NameAssignment_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3773:2: rule__Recipient__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Recipient__NameAssignment_1_in_rule__Recipient__Group__1__Impl7790);
+            pushFollow(FOLLOW_rule__Recipient__NameAssignment_1_in_rule__Recipient__Group__1__Impl7771);
             rule__Recipient__NameAssignment_1();
 
             state._fsp--;
@@ -11051,12 +10709,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3787:1: ( rule__Recipient__Group__2__Impl rule__Recipient__Group__3 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3788:2: rule__Recipient__Group__2__Impl rule__Recipient__Group__3
             {
-            pushFollow(FOLLOW_rule__Recipient__Group__2__Impl_in_rule__Recipient__Group__27820);
+            pushFollow(FOLLOW_rule__Recipient__Group__2__Impl_in_rule__Recipient__Group__27801);
             rule__Recipient__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Recipient__Group__3_in_rule__Recipient__Group__27823);
+            pushFollow(FOLLOW_rule__Recipient__Group__3_in_rule__Recipient__Group__27804);
             rule__Recipient__Group__3();
 
             state._fsp--;
@@ -11093,7 +10751,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3801:1: '{'
             {
              before(grammarAccess.getRecipientAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,40,FOLLOW_40_in_rule__Recipient__Group__2__Impl7851); 
+            match(input,40,FOLLOW_40_in_rule__Recipient__Group__2__Impl7832); 
              after(grammarAccess.getRecipientAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -11126,12 +10784,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3818:1: ( rule__Recipient__Group__3__Impl rule__Recipient__Group__4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3819:2: rule__Recipient__Group__3__Impl rule__Recipient__Group__4
             {
-            pushFollow(FOLLOW_rule__Recipient__Group__3__Impl_in_rule__Recipient__Group__37882);
+            pushFollow(FOLLOW_rule__Recipient__Group__3__Impl_in_rule__Recipient__Group__37863);
             rule__Recipient__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Recipient__Group__4_in_rule__Recipient__Group__37885);
+            pushFollow(FOLLOW_rule__Recipient__Group__4_in_rule__Recipient__Group__37866);
             rule__Recipient__Group__4();
 
             state._fsp--;
@@ -11168,7 +10826,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3832:1: 'Name'
             {
              before(grammarAccess.getRecipientAccess().getNameKeyword_3()); 
-            match(input,54,FOLLOW_54_in_rule__Recipient__Group__3__Impl7913); 
+            match(input,54,FOLLOW_54_in_rule__Recipient__Group__3__Impl7894); 
              after(grammarAccess.getRecipientAccess().getNameKeyword_3()); 
 
             }
@@ -11201,12 +10859,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3849:1: ( rule__Recipient__Group__4__Impl rule__Recipient__Group__5 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3850:2: rule__Recipient__Group__4__Impl rule__Recipient__Group__5
             {
-            pushFollow(FOLLOW_rule__Recipient__Group__4__Impl_in_rule__Recipient__Group__47944);
+            pushFollow(FOLLOW_rule__Recipient__Group__4__Impl_in_rule__Recipient__Group__47925);
             rule__Recipient__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Recipient__Group__5_in_rule__Recipient__Group__47947);
+            pushFollow(FOLLOW_rule__Recipient__Group__5_in_rule__Recipient__Group__47928);
             rule__Recipient__Group__5();
 
             state._fsp--;
@@ -11246,7 +10904,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3864:1: ( rule__Recipient__RecipientNameAssignment_4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3864:2: rule__Recipient__RecipientNameAssignment_4
             {
-            pushFollow(FOLLOW_rule__Recipient__RecipientNameAssignment_4_in_rule__Recipient__Group__4__Impl7974);
+            pushFollow(FOLLOW_rule__Recipient__RecipientNameAssignment_4_in_rule__Recipient__Group__4__Impl7955);
             rule__Recipient__RecipientNameAssignment_4();
 
             state._fsp--;
@@ -11286,12 +10944,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3878:1: ( rule__Recipient__Group__5__Impl rule__Recipient__Group__6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3879:2: rule__Recipient__Group__5__Impl rule__Recipient__Group__6
             {
-            pushFollow(FOLLOW_rule__Recipient__Group__5__Impl_in_rule__Recipient__Group__58004);
+            pushFollow(FOLLOW_rule__Recipient__Group__5__Impl_in_rule__Recipient__Group__57985);
             rule__Recipient__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Recipient__Group__6_in_rule__Recipient__Group__58007);
+            pushFollow(FOLLOW_rule__Recipient__Group__6_in_rule__Recipient__Group__57988);
             rule__Recipient__Group__6();
 
             state._fsp--;
@@ -11328,7 +10986,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3892:1: 'Description'
             {
              before(grammarAccess.getRecipientAccess().getDescriptionKeyword_5()); 
-            match(input,47,FOLLOW_47_in_rule__Recipient__Group__5__Impl8035); 
+            match(input,47,FOLLOW_47_in_rule__Recipient__Group__5__Impl8016); 
              after(grammarAccess.getRecipientAccess().getDescriptionKeyword_5()); 
 
             }
@@ -11361,12 +11019,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3909:1: ( rule__Recipient__Group__6__Impl rule__Recipient__Group__7 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3910:2: rule__Recipient__Group__6__Impl rule__Recipient__Group__7
             {
-            pushFollow(FOLLOW_rule__Recipient__Group__6__Impl_in_rule__Recipient__Group__68066);
+            pushFollow(FOLLOW_rule__Recipient__Group__6__Impl_in_rule__Recipient__Group__68047);
             rule__Recipient__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Recipient__Group__7_in_rule__Recipient__Group__68069);
+            pushFollow(FOLLOW_rule__Recipient__Group__7_in_rule__Recipient__Group__68050);
             rule__Recipient__Group__7();
 
             state._fsp--;
@@ -11406,7 +11064,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3924:1: ( rule__Recipient__DescriptionAssignment_6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3924:2: rule__Recipient__DescriptionAssignment_6
             {
-            pushFollow(FOLLOW_rule__Recipient__DescriptionAssignment_6_in_rule__Recipient__Group__6__Impl8096);
+            pushFollow(FOLLOW_rule__Recipient__DescriptionAssignment_6_in_rule__Recipient__Group__6__Impl8077);
             rule__Recipient__DescriptionAssignment_6();
 
             state._fsp--;
@@ -11446,12 +11104,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3938:1: ( rule__Recipient__Group__7__Impl rule__Recipient__Group__8 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3939:2: rule__Recipient__Group__7__Impl rule__Recipient__Group__8
             {
-            pushFollow(FOLLOW_rule__Recipient__Group__7__Impl_in_rule__Recipient__Group__78126);
+            pushFollow(FOLLOW_rule__Recipient__Group__7__Impl_in_rule__Recipient__Group__78107);
             rule__Recipient__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Recipient__Group__8_in_rule__Recipient__Group__78129);
+            pushFollow(FOLLOW_rule__Recipient__Group__8_in_rule__Recipient__Group__78110);
             rule__Recipient__Group__8();
 
             state._fsp--;
@@ -11489,17 +11147,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getRecipientAccess().getGroup_7()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3953:1: ( rule__Recipient__Group_7__0 )?
-            int alt66=2;
-            int LA66_0 = input.LA(1);
+            int alt47=2;
+            int LA47_0 = input.LA(1);
 
-            if ( (LA66_0==61) ) {
-                alt66=1;
+            if ( (LA47_0==61) ) {
+                alt47=1;
             }
-            switch (alt66) {
+            switch (alt47) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3953:2: rule__Recipient__Group_7__0
                     {
-                    pushFollow(FOLLOW_rule__Recipient__Group_7__0_in_rule__Recipient__Group__7__Impl8156);
+                    pushFollow(FOLLOW_rule__Recipient__Group_7__0_in_rule__Recipient__Group__7__Impl8137);
                     rule__Recipient__Group_7__0();
 
                     state._fsp--;
@@ -11542,12 +11200,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3967:1: ( rule__Recipient__Group__8__Impl rule__Recipient__Group__9 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3968:2: rule__Recipient__Group__8__Impl rule__Recipient__Group__9
             {
-            pushFollow(FOLLOW_rule__Recipient__Group__8__Impl_in_rule__Recipient__Group__88187);
+            pushFollow(FOLLOW_rule__Recipient__Group__8__Impl_in_rule__Recipient__Group__88168);
             rule__Recipient__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Recipient__Group__9_in_rule__Recipient__Group__88190);
+            pushFollow(FOLLOW_rule__Recipient__Group__9_in_rule__Recipient__Group__88171);
             rule__Recipient__Group__9();
 
             state._fsp--;
@@ -11584,7 +11242,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3981:1: 'Scope'
             {
              before(grammarAccess.getRecipientAccess().getScopeKeyword_8()); 
-            match(input,60,FOLLOW_60_in_rule__Recipient__Group__8__Impl8218); 
+            match(input,60,FOLLOW_60_in_rule__Recipient__Group__8__Impl8199); 
              after(grammarAccess.getRecipientAccess().getScopeKeyword_8()); 
 
             }
@@ -11617,12 +11275,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3998:1: ( rule__Recipient__Group__9__Impl rule__Recipient__Group__10 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:3999:2: rule__Recipient__Group__9__Impl rule__Recipient__Group__10
             {
-            pushFollow(FOLLOW_rule__Recipient__Group__9__Impl_in_rule__Recipient__Group__98249);
+            pushFollow(FOLLOW_rule__Recipient__Group__9__Impl_in_rule__Recipient__Group__98230);
             rule__Recipient__Group__9__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Recipient__Group__10_in_rule__Recipient__Group__98252);
+            pushFollow(FOLLOW_rule__Recipient__Group__10_in_rule__Recipient__Group__98233);
             rule__Recipient__Group__10();
 
             state._fsp--;
@@ -11662,7 +11320,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4013:1: ( rule__Recipient__ScopeAssignment_9 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4013:2: rule__Recipient__ScopeAssignment_9
             {
-            pushFollow(FOLLOW_rule__Recipient__ScopeAssignment_9_in_rule__Recipient__Group__9__Impl8279);
+            pushFollow(FOLLOW_rule__Recipient__ScopeAssignment_9_in_rule__Recipient__Group__9__Impl8260);
             rule__Recipient__ScopeAssignment_9();
 
             state._fsp--;
@@ -11702,12 +11360,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4027:1: ( rule__Recipient__Group__10__Impl rule__Recipient__Group__11 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4028:2: rule__Recipient__Group__10__Impl rule__Recipient__Group__11
             {
-            pushFollow(FOLLOW_rule__Recipient__Group__10__Impl_in_rule__Recipient__Group__108309);
+            pushFollow(FOLLOW_rule__Recipient__Group__10__Impl_in_rule__Recipient__Group__108290);
             rule__Recipient__Group__10__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Recipient__Group__11_in_rule__Recipient__Group__108312);
+            pushFollow(FOLLOW_rule__Recipient__Group__11_in_rule__Recipient__Group__108293);
             rule__Recipient__Group__11();
 
             state._fsp--;
@@ -11744,7 +11402,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4041:1: 'Type'
             {
              before(grammarAccess.getRecipientAccess().getTypeKeyword_10()); 
-            match(input,55,FOLLOW_55_in_rule__Recipient__Group__10__Impl8340); 
+            match(input,55,FOLLOW_55_in_rule__Recipient__Group__10__Impl8321); 
              after(grammarAccess.getRecipientAccess().getTypeKeyword_10()); 
 
             }
@@ -11777,12 +11435,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4058:1: ( rule__Recipient__Group__11__Impl rule__Recipient__Group__12 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4059:2: rule__Recipient__Group__11__Impl rule__Recipient__Group__12
             {
-            pushFollow(FOLLOW_rule__Recipient__Group__11__Impl_in_rule__Recipient__Group__118371);
+            pushFollow(FOLLOW_rule__Recipient__Group__11__Impl_in_rule__Recipient__Group__118352);
             rule__Recipient__Group__11__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Recipient__Group__12_in_rule__Recipient__Group__118374);
+            pushFollow(FOLLOW_rule__Recipient__Group__12_in_rule__Recipient__Group__118355);
             rule__Recipient__Group__12();
 
             state._fsp--;
@@ -11822,7 +11480,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4073:1: ( rule__Recipient__TypeAssignment_11 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4073:2: rule__Recipient__TypeAssignment_11
             {
-            pushFollow(FOLLOW_rule__Recipient__TypeAssignment_11_in_rule__Recipient__Group__11__Impl8401);
+            pushFollow(FOLLOW_rule__Recipient__TypeAssignment_11_in_rule__Recipient__Group__11__Impl8382);
             rule__Recipient__TypeAssignment_11();
 
             state._fsp--;
@@ -11862,7 +11520,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4087:1: ( rule__Recipient__Group__12__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4088:2: rule__Recipient__Group__12__Impl
             {
-            pushFollow(FOLLOW_rule__Recipient__Group__12__Impl_in_rule__Recipient__Group__128431);
+            pushFollow(FOLLOW_rule__Recipient__Group__12__Impl_in_rule__Recipient__Group__128412);
             rule__Recipient__Group__12__Impl();
 
             state._fsp--;
@@ -11899,7 +11557,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4100:1: '}'
             {
              before(grammarAccess.getRecipientAccess().getRightCurlyBracketKeyword_12()); 
-            match(input,41,FOLLOW_41_in_rule__Recipient__Group__12__Impl8459); 
+            match(input,41,FOLLOW_41_in_rule__Recipient__Group__12__Impl8440); 
              after(grammarAccess.getRecipientAccess().getRightCurlyBracketKeyword_12()); 
 
             }
@@ -11932,12 +11590,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4143:1: ( rule__Recipient__Group_7__0__Impl rule__Recipient__Group_7__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4144:2: rule__Recipient__Group_7__0__Impl rule__Recipient__Group_7__1
             {
-            pushFollow(FOLLOW_rule__Recipient__Group_7__0__Impl_in_rule__Recipient__Group_7__08516);
+            pushFollow(FOLLOW_rule__Recipient__Group_7__0__Impl_in_rule__Recipient__Group_7__08497);
             rule__Recipient__Group_7__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Recipient__Group_7__1_in_rule__Recipient__Group_7__08519);
+            pushFollow(FOLLOW_rule__Recipient__Group_7__1_in_rule__Recipient__Group_7__08500);
             rule__Recipient__Group_7__1();
 
             state._fsp--;
@@ -11974,7 +11632,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4157:1: 'Recipient_Part'
             {
              before(grammarAccess.getRecipientAccess().getRecipient_PartKeyword_7_0()); 
-            match(input,61,FOLLOW_61_in_rule__Recipient__Group_7__0__Impl8547); 
+            match(input,61,FOLLOW_61_in_rule__Recipient__Group_7__0__Impl8528); 
              after(grammarAccess.getRecipientAccess().getRecipient_PartKeyword_7_0()); 
 
             }
@@ -12007,7 +11665,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4174:1: ( rule__Recipient__Group_7__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4175:2: rule__Recipient__Group_7__1__Impl
             {
-            pushFollow(FOLLOW_rule__Recipient__Group_7__1__Impl_in_rule__Recipient__Group_7__18578);
+            pushFollow(FOLLOW_rule__Recipient__Group_7__1__Impl_in_rule__Recipient__Group_7__18559);
             rule__Recipient__Group_7__1__Impl();
 
             state._fsp--;
@@ -12045,21 +11703,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getRecipientAccess().getRecipientPartAssignment_7_1()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4188:1: ( rule__Recipient__RecipientPartAssignment_7_1 )*
-            loop67:
+            loop48:
             do {
-                int alt67=2;
-                int LA67_0 = input.LA(1);
+                int alt48=2;
+                int LA48_0 = input.LA(1);
 
-                if ( (LA67_0==RULE_ID) ) {
-                    alt67=1;
+                if ( (LA48_0==RULE_ID) ) {
+                    alt48=1;
                 }
 
 
-                switch (alt67) {
+                switch (alt48) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4188:2: rule__Recipient__RecipientPartAssignment_7_1
             	    {
-            	    pushFollow(FOLLOW_rule__Recipient__RecipientPartAssignment_7_1_in_rule__Recipient__Group_7__1__Impl8605);
+            	    pushFollow(FOLLOW_rule__Recipient__RecipientPartAssignment_7_1_in_rule__Recipient__Group_7__1__Impl8586);
             	    rule__Recipient__RecipientPartAssignment_7_1();
 
             	    state._fsp--;
@@ -12069,7 +11727,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop67;
+            	    break loop48;
                 }
             } while (true);
 
@@ -12105,12 +11763,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4206:1: ( rule__PrivateData__Group__0__Impl rule__PrivateData__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4207:2: rule__PrivateData__Group__0__Impl rule__PrivateData__Group__1
             {
-            pushFollow(FOLLOW_rule__PrivateData__Group__0__Impl_in_rule__PrivateData__Group__08640);
+            pushFollow(FOLLOW_rule__PrivateData__Group__0__Impl_in_rule__PrivateData__Group__08621);
             rule__PrivateData__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PrivateData__Group__1_in_rule__PrivateData__Group__08643);
+            pushFollow(FOLLOW_rule__PrivateData__Group__1_in_rule__PrivateData__Group__08624);
             rule__PrivateData__Group__1();
 
             state._fsp--;
@@ -12147,7 +11805,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4220:1: 'PrivateData'
             {
              before(grammarAccess.getPrivateDataAccess().getPrivateDataKeyword_0()); 
-            match(input,62,FOLLOW_62_in_rule__PrivateData__Group__0__Impl8671); 
+            match(input,62,FOLLOW_62_in_rule__PrivateData__Group__0__Impl8652); 
              after(grammarAccess.getPrivateDataAccess().getPrivateDataKeyword_0()); 
 
             }
@@ -12180,12 +11838,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4237:1: ( rule__PrivateData__Group__1__Impl rule__PrivateData__Group__2 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4238:2: rule__PrivateData__Group__1__Impl rule__PrivateData__Group__2
             {
-            pushFollow(FOLLOW_rule__PrivateData__Group__1__Impl_in_rule__PrivateData__Group__18702);
+            pushFollow(FOLLOW_rule__PrivateData__Group__1__Impl_in_rule__PrivateData__Group__18683);
             rule__PrivateData__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PrivateData__Group__2_in_rule__PrivateData__Group__18705);
+            pushFollow(FOLLOW_rule__PrivateData__Group__2_in_rule__PrivateData__Group__18686);
             rule__PrivateData__Group__2();
 
             state._fsp--;
@@ -12225,7 +11883,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4252:1: ( rule__PrivateData__NameAssignment_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4252:2: rule__PrivateData__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__PrivateData__NameAssignment_1_in_rule__PrivateData__Group__1__Impl8732);
+            pushFollow(FOLLOW_rule__PrivateData__NameAssignment_1_in_rule__PrivateData__Group__1__Impl8713);
             rule__PrivateData__NameAssignment_1();
 
             state._fsp--;
@@ -12265,12 +11923,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4266:1: ( rule__PrivateData__Group__2__Impl rule__PrivateData__Group__3 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4267:2: rule__PrivateData__Group__2__Impl rule__PrivateData__Group__3
             {
-            pushFollow(FOLLOW_rule__PrivateData__Group__2__Impl_in_rule__PrivateData__Group__28762);
+            pushFollow(FOLLOW_rule__PrivateData__Group__2__Impl_in_rule__PrivateData__Group__28743);
             rule__PrivateData__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PrivateData__Group__3_in_rule__PrivateData__Group__28765);
+            pushFollow(FOLLOW_rule__PrivateData__Group__3_in_rule__PrivateData__Group__28746);
             rule__PrivateData__Group__3();
 
             state._fsp--;
@@ -12307,7 +11965,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4280:1: '{'
             {
              before(grammarAccess.getPrivateDataAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,40,FOLLOW_40_in_rule__PrivateData__Group__2__Impl8793); 
+            match(input,40,FOLLOW_40_in_rule__PrivateData__Group__2__Impl8774); 
              after(grammarAccess.getPrivateDataAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -12340,12 +11998,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4297:1: ( rule__PrivateData__Group__3__Impl rule__PrivateData__Group__4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4298:2: rule__PrivateData__Group__3__Impl rule__PrivateData__Group__4
             {
-            pushFollow(FOLLOW_rule__PrivateData__Group__3__Impl_in_rule__PrivateData__Group__38824);
+            pushFollow(FOLLOW_rule__PrivateData__Group__3__Impl_in_rule__PrivateData__Group__38805);
             rule__PrivateData__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PrivateData__Group__4_in_rule__PrivateData__Group__38827);
+            pushFollow(FOLLOW_rule__PrivateData__Group__4_in_rule__PrivateData__Group__38808);
             rule__PrivateData__Group__4();
 
             state._fsp--;
@@ -12382,7 +12040,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4311:1: 'Description'
             {
              before(grammarAccess.getPrivateDataAccess().getDescriptionKeyword_3()); 
-            match(input,47,FOLLOW_47_in_rule__PrivateData__Group__3__Impl8855); 
+            match(input,47,FOLLOW_47_in_rule__PrivateData__Group__3__Impl8836); 
              after(grammarAccess.getPrivateDataAccess().getDescriptionKeyword_3()); 
 
             }
@@ -12415,12 +12073,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4328:1: ( rule__PrivateData__Group__4__Impl rule__PrivateData__Group__5 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4329:2: rule__PrivateData__Group__4__Impl rule__PrivateData__Group__5
             {
-            pushFollow(FOLLOW_rule__PrivateData__Group__4__Impl_in_rule__PrivateData__Group__48886);
+            pushFollow(FOLLOW_rule__PrivateData__Group__4__Impl_in_rule__PrivateData__Group__48867);
             rule__PrivateData__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PrivateData__Group__5_in_rule__PrivateData__Group__48889);
+            pushFollow(FOLLOW_rule__PrivateData__Group__5_in_rule__PrivateData__Group__48870);
             rule__PrivateData__Group__5();
 
             state._fsp--;
@@ -12460,7 +12118,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4343:1: ( rule__PrivateData__DescriptionAssignment_4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4343:2: rule__PrivateData__DescriptionAssignment_4
             {
-            pushFollow(FOLLOW_rule__PrivateData__DescriptionAssignment_4_in_rule__PrivateData__Group__4__Impl8916);
+            pushFollow(FOLLOW_rule__PrivateData__DescriptionAssignment_4_in_rule__PrivateData__Group__4__Impl8897);
             rule__PrivateData__DescriptionAssignment_4();
 
             state._fsp--;
@@ -12500,12 +12158,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4357:1: ( rule__PrivateData__Group__5__Impl rule__PrivateData__Group__6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4358:2: rule__PrivateData__Group__5__Impl rule__PrivateData__Group__6
             {
-            pushFollow(FOLLOW_rule__PrivateData__Group__5__Impl_in_rule__PrivateData__Group__58946);
+            pushFollow(FOLLOW_rule__PrivateData__Group__5__Impl_in_rule__PrivateData__Group__58927);
             rule__PrivateData__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PrivateData__Group__6_in_rule__PrivateData__Group__58949);
+            pushFollow(FOLLOW_rule__PrivateData__Group__6_in_rule__PrivateData__Group__58930);
             rule__PrivateData__Group__6();
 
             state._fsp--;
@@ -12542,7 +12200,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4371:1: 'Type'
             {
              before(grammarAccess.getPrivateDataAccess().getTypeKeyword_5()); 
-            match(input,55,FOLLOW_55_in_rule__PrivateData__Group__5__Impl8977); 
+            match(input,55,FOLLOW_55_in_rule__PrivateData__Group__5__Impl8958); 
              after(grammarAccess.getPrivateDataAccess().getTypeKeyword_5()); 
 
             }
@@ -12575,12 +12233,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4388:1: ( rule__PrivateData__Group__6__Impl rule__PrivateData__Group__7 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4389:2: rule__PrivateData__Group__6__Impl rule__PrivateData__Group__7
             {
-            pushFollow(FOLLOW_rule__PrivateData__Group__6__Impl_in_rule__PrivateData__Group__69008);
+            pushFollow(FOLLOW_rule__PrivateData__Group__6__Impl_in_rule__PrivateData__Group__68989);
             rule__PrivateData__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PrivateData__Group__7_in_rule__PrivateData__Group__69011);
+            pushFollow(FOLLOW_rule__PrivateData__Group__7_in_rule__PrivateData__Group__68992);
             rule__PrivateData__Group__7();
 
             state._fsp--;
@@ -12620,7 +12278,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4403:1: ( rule__PrivateData__TypeAssignment_6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4403:2: rule__PrivateData__TypeAssignment_6
             {
-            pushFollow(FOLLOW_rule__PrivateData__TypeAssignment_6_in_rule__PrivateData__Group__6__Impl9038);
+            pushFollow(FOLLOW_rule__PrivateData__TypeAssignment_6_in_rule__PrivateData__Group__6__Impl9019);
             rule__PrivateData__TypeAssignment_6();
 
             state._fsp--;
@@ -12660,12 +12318,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4417:1: ( rule__PrivateData__Group__7__Impl rule__PrivateData__Group__8 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4418:2: rule__PrivateData__Group__7__Impl rule__PrivateData__Group__8
             {
-            pushFollow(FOLLOW_rule__PrivateData__Group__7__Impl_in_rule__PrivateData__Group__79068);
+            pushFollow(FOLLOW_rule__PrivateData__Group__7__Impl_in_rule__PrivateData__Group__79049);
             rule__PrivateData__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PrivateData__Group__8_in_rule__PrivateData__Group__79071);
+            pushFollow(FOLLOW_rule__PrivateData__Group__8_in_rule__PrivateData__Group__79052);
             rule__PrivateData__Group__8();
 
             state._fsp--;
@@ -12703,21 +12361,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getPrivateDataAccess().getAttributeAssignment_7()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4432:1: ( rule__PrivateData__AttributeAssignment_7 )*
-            loop68:
+            loop49:
             do {
-                int alt68=2;
-                int LA68_0 = input.LA(1);
+                int alt49=2;
+                int LA49_0 = input.LA(1);
 
-                if ( (LA68_0==63) ) {
-                    alt68=1;
+                if ( (LA49_0==63) ) {
+                    alt49=1;
                 }
 
 
-                switch (alt68) {
+                switch (alt49) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4432:2: rule__PrivateData__AttributeAssignment_7
             	    {
-            	    pushFollow(FOLLOW_rule__PrivateData__AttributeAssignment_7_in_rule__PrivateData__Group__7__Impl9098);
+            	    pushFollow(FOLLOW_rule__PrivateData__AttributeAssignment_7_in_rule__PrivateData__Group__7__Impl9079);
             	    rule__PrivateData__AttributeAssignment_7();
 
             	    state._fsp--;
@@ -12727,7 +12385,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop68;
+            	    break loop49;
                 }
             } while (true);
 
@@ -12763,7 +12421,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4446:1: ( rule__PrivateData__Group__8__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4447:2: rule__PrivateData__Group__8__Impl
             {
-            pushFollow(FOLLOW_rule__PrivateData__Group__8__Impl_in_rule__PrivateData__Group__89129);
+            pushFollow(FOLLOW_rule__PrivateData__Group__8__Impl_in_rule__PrivateData__Group__89110);
             rule__PrivateData__Group__8__Impl();
 
             state._fsp--;
@@ -12800,7 +12458,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4459:1: '}'
             {
              before(grammarAccess.getPrivateDataAccess().getRightCurlyBracketKeyword_8()); 
-            match(input,41,FOLLOW_41_in_rule__PrivateData__Group__8__Impl9157); 
+            match(input,41,FOLLOW_41_in_rule__PrivateData__Group__8__Impl9138); 
              after(grammarAccess.getPrivateDataAccess().getRightCurlyBracketKeyword_8()); 
 
             }
@@ -12833,12 +12491,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4494:1: ( rule__Attribute__Group__0__Impl rule__Attribute__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4495:2: rule__Attribute__Group__0__Impl rule__Attribute__Group__1
             {
-            pushFollow(FOLLOW_rule__Attribute__Group__0__Impl_in_rule__Attribute__Group__09206);
+            pushFollow(FOLLOW_rule__Attribute__Group__0__Impl_in_rule__Attribute__Group__09187);
             rule__Attribute__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Attribute__Group__1_in_rule__Attribute__Group__09209);
+            pushFollow(FOLLOW_rule__Attribute__Group__1_in_rule__Attribute__Group__09190);
             rule__Attribute__Group__1();
 
             state._fsp--;
@@ -12875,7 +12533,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4508:1: 'Attribute'
             {
              before(grammarAccess.getAttributeAccess().getAttributeKeyword_0()); 
-            match(input,63,FOLLOW_63_in_rule__Attribute__Group__0__Impl9237); 
+            match(input,63,FOLLOW_63_in_rule__Attribute__Group__0__Impl9218); 
              after(grammarAccess.getAttributeAccess().getAttributeKeyword_0()); 
 
             }
@@ -12908,12 +12566,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4525:1: ( rule__Attribute__Group__1__Impl rule__Attribute__Group__2 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4526:2: rule__Attribute__Group__1__Impl rule__Attribute__Group__2
             {
-            pushFollow(FOLLOW_rule__Attribute__Group__1__Impl_in_rule__Attribute__Group__19268);
+            pushFollow(FOLLOW_rule__Attribute__Group__1__Impl_in_rule__Attribute__Group__19249);
             rule__Attribute__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Attribute__Group__2_in_rule__Attribute__Group__19271);
+            pushFollow(FOLLOW_rule__Attribute__Group__2_in_rule__Attribute__Group__19252);
             rule__Attribute__Group__2();
 
             state._fsp--;
@@ -12953,7 +12611,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4540:1: ( rule__Attribute__NameAssignment_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4540:2: rule__Attribute__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Attribute__NameAssignment_1_in_rule__Attribute__Group__1__Impl9298);
+            pushFollow(FOLLOW_rule__Attribute__NameAssignment_1_in_rule__Attribute__Group__1__Impl9279);
             rule__Attribute__NameAssignment_1();
 
             state._fsp--;
@@ -12993,12 +12651,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4554:1: ( rule__Attribute__Group__2__Impl rule__Attribute__Group__3 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4555:2: rule__Attribute__Group__2__Impl rule__Attribute__Group__3
             {
-            pushFollow(FOLLOW_rule__Attribute__Group__2__Impl_in_rule__Attribute__Group__29328);
+            pushFollow(FOLLOW_rule__Attribute__Group__2__Impl_in_rule__Attribute__Group__29309);
             rule__Attribute__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Attribute__Group__3_in_rule__Attribute__Group__29331);
+            pushFollow(FOLLOW_rule__Attribute__Group__3_in_rule__Attribute__Group__29312);
             rule__Attribute__Group__3();
 
             state._fsp--;
@@ -13035,7 +12693,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4568:1: '{'
             {
              before(grammarAccess.getAttributeAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,40,FOLLOW_40_in_rule__Attribute__Group__2__Impl9359); 
+            match(input,40,FOLLOW_40_in_rule__Attribute__Group__2__Impl9340); 
              after(grammarAccess.getAttributeAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -13068,12 +12726,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4585:1: ( rule__Attribute__Group__3__Impl rule__Attribute__Group__4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4586:2: rule__Attribute__Group__3__Impl rule__Attribute__Group__4
             {
-            pushFollow(FOLLOW_rule__Attribute__Group__3__Impl_in_rule__Attribute__Group__39390);
+            pushFollow(FOLLOW_rule__Attribute__Group__3__Impl_in_rule__Attribute__Group__39371);
             rule__Attribute__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Attribute__Group__4_in_rule__Attribute__Group__39393);
+            pushFollow(FOLLOW_rule__Attribute__Group__4_in_rule__Attribute__Group__39374);
             rule__Attribute__Group__4();
 
             state._fsp--;
@@ -13110,7 +12768,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4599:1: 'Description'
             {
              before(grammarAccess.getAttributeAccess().getDescriptionKeyword_3()); 
-            match(input,47,FOLLOW_47_in_rule__Attribute__Group__3__Impl9421); 
+            match(input,47,FOLLOW_47_in_rule__Attribute__Group__3__Impl9402); 
              after(grammarAccess.getAttributeAccess().getDescriptionKeyword_3()); 
 
             }
@@ -13143,12 +12801,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4616:1: ( rule__Attribute__Group__4__Impl rule__Attribute__Group__5 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4617:2: rule__Attribute__Group__4__Impl rule__Attribute__Group__5
             {
-            pushFollow(FOLLOW_rule__Attribute__Group__4__Impl_in_rule__Attribute__Group__49452);
+            pushFollow(FOLLOW_rule__Attribute__Group__4__Impl_in_rule__Attribute__Group__49433);
             rule__Attribute__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Attribute__Group__5_in_rule__Attribute__Group__49455);
+            pushFollow(FOLLOW_rule__Attribute__Group__5_in_rule__Attribute__Group__49436);
             rule__Attribute__Group__5();
 
             state._fsp--;
@@ -13188,7 +12846,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4631:1: ( rule__Attribute__DescriptionAssignment_4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4631:2: rule__Attribute__DescriptionAssignment_4
             {
-            pushFollow(FOLLOW_rule__Attribute__DescriptionAssignment_4_in_rule__Attribute__Group__4__Impl9482);
+            pushFollow(FOLLOW_rule__Attribute__DescriptionAssignment_4_in_rule__Attribute__Group__4__Impl9463);
             rule__Attribute__DescriptionAssignment_4();
 
             state._fsp--;
@@ -13228,12 +12886,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4645:1: ( rule__Attribute__Group__5__Impl rule__Attribute__Group__6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4646:2: rule__Attribute__Group__5__Impl rule__Attribute__Group__6
             {
-            pushFollow(FOLLOW_rule__Attribute__Group__5__Impl_in_rule__Attribute__Group__59512);
+            pushFollow(FOLLOW_rule__Attribute__Group__5__Impl_in_rule__Attribute__Group__59493);
             rule__Attribute__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Attribute__Group__6_in_rule__Attribute__Group__59515);
+            pushFollow(FOLLOW_rule__Attribute__Group__6_in_rule__Attribute__Group__59496);
             rule__Attribute__Group__6();
 
             state._fsp--;
@@ -13270,7 +12928,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4659:1: '}'
             {
              before(grammarAccess.getAttributeAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,41,FOLLOW_41_in_rule__Attribute__Group__5__Impl9543); 
+            match(input,41,FOLLOW_41_in_rule__Attribute__Group__5__Impl9524); 
              after(grammarAccess.getAttributeAccess().getRightCurlyBracketKeyword_5()); 
 
             }
@@ -13303,7 +12961,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4676:1: ( rule__Attribute__Group__6__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4677:2: rule__Attribute__Group__6__Impl
             {
-            pushFollow(FOLLOW_rule__Attribute__Group__6__Impl_in_rule__Attribute__Group__69574);
+            pushFollow(FOLLOW_rule__Attribute__Group__6__Impl_in_rule__Attribute__Group__69555);
             rule__Attribute__Group__6__Impl();
 
             state._fsp--;
@@ -13341,17 +12999,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getAttributeAccess().getCommaKeyword_6()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4690:1: ( ',' )?
-            int alt69=2;
-            int LA69_0 = input.LA(1);
+            int alt50=2;
+            int LA50_0 = input.LA(1);
 
-            if ( (LA69_0==64) ) {
-                alt69=1;
+            if ( (LA50_0==64) ) {
+                alt50=1;
             }
-            switch (alt69) {
+            switch (alt50) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4691:2: ','
                     {
-                    match(input,64,FOLLOW_64_in_rule__Attribute__Group__6__Impl9603); 
+                    match(input,64,FOLLOW_64_in_rule__Attribute__Group__6__Impl9584); 
 
                     }
                     break;
@@ -13390,12 +13048,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4720:1: ( rule__Collection__Group__0__Impl rule__Collection__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4721:2: rule__Collection__Group__0__Impl rule__Collection__Group__1
             {
-            pushFollow(FOLLOW_rule__Collection__Group__0__Impl_in_rule__Collection__Group__09650);
+            pushFollow(FOLLOW_rule__Collection__Group__0__Impl_in_rule__Collection__Group__09631);
             rule__Collection__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Collection__Group__1_in_rule__Collection__Group__09653);
+            pushFollow(FOLLOW_rule__Collection__Group__1_in_rule__Collection__Group__09634);
             rule__Collection__Group__1();
 
             state._fsp--;
@@ -13432,7 +13090,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4734:1: 'Collection'
             {
              before(grammarAccess.getCollectionAccess().getCollectionKeyword_0()); 
-            match(input,65,FOLLOW_65_in_rule__Collection__Group__0__Impl9681); 
+            match(input,65,FOLLOW_65_in_rule__Collection__Group__0__Impl9662); 
              after(grammarAccess.getCollectionAccess().getCollectionKeyword_0()); 
 
             }
@@ -13465,12 +13123,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4751:1: ( rule__Collection__Group__1__Impl rule__Collection__Group__2 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4752:2: rule__Collection__Group__1__Impl rule__Collection__Group__2
             {
-            pushFollow(FOLLOW_rule__Collection__Group__1__Impl_in_rule__Collection__Group__19712);
+            pushFollow(FOLLOW_rule__Collection__Group__1__Impl_in_rule__Collection__Group__19693);
             rule__Collection__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Collection__Group__2_in_rule__Collection__Group__19715);
+            pushFollow(FOLLOW_rule__Collection__Group__2_in_rule__Collection__Group__19696);
             rule__Collection__Group__2();
 
             state._fsp--;
@@ -13510,7 +13168,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4766:1: ( rule__Collection__NameAssignment_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4766:2: rule__Collection__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Collection__NameAssignment_1_in_rule__Collection__Group__1__Impl9742);
+            pushFollow(FOLLOW_rule__Collection__NameAssignment_1_in_rule__Collection__Group__1__Impl9723);
             rule__Collection__NameAssignment_1();
 
             state._fsp--;
@@ -13550,12 +13208,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4780:1: ( rule__Collection__Group__2__Impl rule__Collection__Group__3 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4781:2: rule__Collection__Group__2__Impl rule__Collection__Group__3
             {
-            pushFollow(FOLLOW_rule__Collection__Group__2__Impl_in_rule__Collection__Group__29772);
+            pushFollow(FOLLOW_rule__Collection__Group__2__Impl_in_rule__Collection__Group__29753);
             rule__Collection__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Collection__Group__3_in_rule__Collection__Group__29775);
+            pushFollow(FOLLOW_rule__Collection__Group__3_in_rule__Collection__Group__29756);
             rule__Collection__Group__3();
 
             state._fsp--;
@@ -13592,7 +13250,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4794:1: '{'
             {
              before(grammarAccess.getCollectionAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,40,FOLLOW_40_in_rule__Collection__Group__2__Impl9803); 
+            match(input,40,FOLLOW_40_in_rule__Collection__Group__2__Impl9784); 
              after(grammarAccess.getCollectionAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -13625,12 +13283,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4811:1: ( rule__Collection__Group__3__Impl rule__Collection__Group__4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4812:2: rule__Collection__Group__3__Impl rule__Collection__Group__4
             {
-            pushFollow(FOLLOW_rule__Collection__Group__3__Impl_in_rule__Collection__Group__39834);
+            pushFollow(FOLLOW_rule__Collection__Group__3__Impl_in_rule__Collection__Group__39815);
             rule__Collection__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Collection__Group__4_in_rule__Collection__Group__39837);
+            pushFollow(FOLLOW_rule__Collection__Group__4_in_rule__Collection__Group__39818);
             rule__Collection__Group__4();
 
             state._fsp--;
@@ -13667,7 +13325,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4825:1: 'Description'
             {
              before(grammarAccess.getCollectionAccess().getDescriptionKeyword_3()); 
-            match(input,47,FOLLOW_47_in_rule__Collection__Group__3__Impl9865); 
+            match(input,47,FOLLOW_47_in_rule__Collection__Group__3__Impl9846); 
              after(grammarAccess.getCollectionAccess().getDescriptionKeyword_3()); 
 
             }
@@ -13700,12 +13358,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4842:1: ( rule__Collection__Group__4__Impl rule__Collection__Group__5 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4843:2: rule__Collection__Group__4__Impl rule__Collection__Group__5
             {
-            pushFollow(FOLLOW_rule__Collection__Group__4__Impl_in_rule__Collection__Group__49896);
+            pushFollow(FOLLOW_rule__Collection__Group__4__Impl_in_rule__Collection__Group__49877);
             rule__Collection__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Collection__Group__5_in_rule__Collection__Group__49899);
+            pushFollow(FOLLOW_rule__Collection__Group__5_in_rule__Collection__Group__49880);
             rule__Collection__Group__5();
 
             state._fsp--;
@@ -13745,7 +13403,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4857:1: ( rule__Collection__DescriptionAssignment_4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4857:2: rule__Collection__DescriptionAssignment_4
             {
-            pushFollow(FOLLOW_rule__Collection__DescriptionAssignment_4_in_rule__Collection__Group__4__Impl9926);
+            pushFollow(FOLLOW_rule__Collection__DescriptionAssignment_4_in_rule__Collection__Group__4__Impl9907);
             rule__Collection__DescriptionAssignment_4();
 
             state._fsp--;
@@ -13785,12 +13443,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4871:1: ( rule__Collection__Group__5__Impl rule__Collection__Group__6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4872:2: rule__Collection__Group__5__Impl rule__Collection__Group__6
             {
-            pushFollow(FOLLOW_rule__Collection__Group__5__Impl_in_rule__Collection__Group__59956);
+            pushFollow(FOLLOW_rule__Collection__Group__5__Impl_in_rule__Collection__Group__59937);
             rule__Collection__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Collection__Group__6_in_rule__Collection__Group__59959);
+            pushFollow(FOLLOW_rule__Collection__Group__6_in_rule__Collection__Group__59940);
             rule__Collection__Group__6();
 
             state._fsp--;
@@ -13827,7 +13485,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4885:1: 'Condition'
             {
              before(grammarAccess.getCollectionAccess().getConditionKeyword_5()); 
-            match(input,66,FOLLOW_66_in_rule__Collection__Group__5__Impl9987); 
+            match(input,66,FOLLOW_66_in_rule__Collection__Group__5__Impl9968); 
              after(grammarAccess.getCollectionAccess().getConditionKeyword_5()); 
 
             }
@@ -13860,12 +13518,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4902:1: ( rule__Collection__Group__6__Impl rule__Collection__Group__7 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4903:2: rule__Collection__Group__6__Impl rule__Collection__Group__7
             {
-            pushFollow(FOLLOW_rule__Collection__Group__6__Impl_in_rule__Collection__Group__610018);
+            pushFollow(FOLLOW_rule__Collection__Group__6__Impl_in_rule__Collection__Group__69999);
             rule__Collection__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Collection__Group__7_in_rule__Collection__Group__610021);
+            pushFollow(FOLLOW_rule__Collection__Group__7_in_rule__Collection__Group__610002);
             rule__Collection__Group__7();
 
             state._fsp--;
@@ -13905,7 +13563,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4917:1: ( rule__Collection__ConditionAssignment_6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4917:2: rule__Collection__ConditionAssignment_6
             {
-            pushFollow(FOLLOW_rule__Collection__ConditionAssignment_6_in_rule__Collection__Group__6__Impl10048);
+            pushFollow(FOLLOW_rule__Collection__ConditionAssignment_6_in_rule__Collection__Group__6__Impl10029);
             rule__Collection__ConditionAssignment_6();
 
             state._fsp--;
@@ -13945,12 +13603,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4931:1: ( rule__Collection__Group__7__Impl rule__Collection__Group__8 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4932:2: rule__Collection__Group__7__Impl rule__Collection__Group__8
             {
-            pushFollow(FOLLOW_rule__Collection__Group__7__Impl_in_rule__Collection__Group__710078);
+            pushFollow(FOLLOW_rule__Collection__Group__7__Impl_in_rule__Collection__Group__710059);
             rule__Collection__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Collection__Group__8_in_rule__Collection__Group__710081);
+            pushFollow(FOLLOW_rule__Collection__Group__8_in_rule__Collection__Group__710062);
             rule__Collection__Group__8();
 
             state._fsp--;
@@ -13988,17 +13646,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getCollectionAccess().getGroup_7()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4946:1: ( rule__Collection__Group_7__0 )?
-            int alt70=2;
-            int LA70_0 = input.LA(1);
+            int alt51=2;
+            int LA51_0 = input.LA(1);
 
-            if ( (LA70_0==68) ) {
-                alt70=1;
+            if ( (LA51_0==68) ) {
+                alt51=1;
             }
-            switch (alt70) {
+            switch (alt51) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4946:2: rule__Collection__Group_7__0
                     {
-                    pushFollow(FOLLOW_rule__Collection__Group_7__0_in_rule__Collection__Group__7__Impl10108);
+                    pushFollow(FOLLOW_rule__Collection__Group_7__0_in_rule__Collection__Group__7__Impl10089);
                     rule__Collection__Group_7__0();
 
                     state._fsp--;
@@ -14041,12 +13699,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4960:1: ( rule__Collection__Group__8__Impl rule__Collection__Group__9 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4961:2: rule__Collection__Group__8__Impl rule__Collection__Group__9
             {
-            pushFollow(FOLLOW_rule__Collection__Group__8__Impl_in_rule__Collection__Group__810139);
+            pushFollow(FOLLOW_rule__Collection__Group__8__Impl_in_rule__Collection__Group__810120);
             rule__Collection__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Collection__Group__9_in_rule__Collection__Group__810142);
+            pushFollow(FOLLOW_rule__Collection__Group__9_in_rule__Collection__Group__810123);
             rule__Collection__Group__9();
 
             state._fsp--;
@@ -14084,17 +13742,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getCollectionAccess().getGroup_8()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4975:1: ( rule__Collection__Group_8__0 )?
-            int alt71=2;
-            int LA71_0 = input.LA(1);
+            int alt52=2;
+            int LA52_0 = input.LA(1);
 
-            if ( (LA71_0==57) ) {
-                alt71=1;
+            if ( (LA52_0==57) ) {
+                alt52=1;
             }
-            switch (alt71) {
+            switch (alt52) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4975:2: rule__Collection__Group_8__0
                     {
-                    pushFollow(FOLLOW_rule__Collection__Group_8__0_in_rule__Collection__Group__8__Impl10169);
+                    pushFollow(FOLLOW_rule__Collection__Group_8__0_in_rule__Collection__Group__8__Impl10150);
                     rule__Collection__Group_8__0();
 
                     state._fsp--;
@@ -14137,12 +13795,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4989:1: ( rule__Collection__Group__9__Impl rule__Collection__Group__10 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:4990:2: rule__Collection__Group__9__Impl rule__Collection__Group__10
             {
-            pushFollow(FOLLOW_rule__Collection__Group__9__Impl_in_rule__Collection__Group__910200);
+            pushFollow(FOLLOW_rule__Collection__Group__9__Impl_in_rule__Collection__Group__910181);
             rule__Collection__Group__9__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Collection__Group__10_in_rule__Collection__Group__910203);
+            pushFollow(FOLLOW_rule__Collection__Group__10_in_rule__Collection__Group__910184);
             rule__Collection__Group__10();
 
             state._fsp--;
@@ -14180,17 +13838,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getCollectionAccess().getGroup_9()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5004:1: ( rule__Collection__Group_9__0 )?
-            int alt72=2;
-            int LA72_0 = input.LA(1);
+            int alt53=2;
+            int LA53_0 = input.LA(1);
 
-            if ( (LA72_0==69) ) {
-                alt72=1;
+            if ( (LA53_0==69) ) {
+                alt53=1;
             }
-            switch (alt72) {
+            switch (alt53) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5004:2: rule__Collection__Group_9__0
                     {
-                    pushFollow(FOLLOW_rule__Collection__Group_9__0_in_rule__Collection__Group__9__Impl10230);
+                    pushFollow(FOLLOW_rule__Collection__Group_9__0_in_rule__Collection__Group__9__Impl10211);
                     rule__Collection__Group_9__0();
 
                     state._fsp--;
@@ -14233,12 +13891,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5018:1: ( rule__Collection__Group__10__Impl rule__Collection__Group__11 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5019:2: rule__Collection__Group__10__Impl rule__Collection__Group__11
             {
-            pushFollow(FOLLOW_rule__Collection__Group__10__Impl_in_rule__Collection__Group__1010261);
+            pushFollow(FOLLOW_rule__Collection__Group__10__Impl_in_rule__Collection__Group__1010242);
             rule__Collection__Group__10__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Collection__Group__11_in_rule__Collection__Group__1010264);
+            pushFollow(FOLLOW_rule__Collection__Group__11_in_rule__Collection__Group__1010245);
             rule__Collection__Group__11();
 
             state._fsp--;
@@ -14276,17 +13934,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getCollectionAccess().getGroup_10()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5033:1: ( rule__Collection__Group_10__0 )?
-            int alt73=2;
-            int LA73_0 = input.LA(1);
+            int alt54=2;
+            int LA54_0 = input.LA(1);
 
-            if ( (LA73_0==70) ) {
-                alt73=1;
+            if ( (LA54_0==70) ) {
+                alt54=1;
             }
-            switch (alt73) {
+            switch (alt54) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5033:2: rule__Collection__Group_10__0
                     {
-                    pushFollow(FOLLOW_rule__Collection__Group_10__0_in_rule__Collection__Group__10__Impl10291);
+                    pushFollow(FOLLOW_rule__Collection__Group_10__0_in_rule__Collection__Group__10__Impl10272);
                     rule__Collection__Group_10__0();
 
                     state._fsp--;
@@ -14329,12 +13987,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5047:1: ( rule__Collection__Group__11__Impl rule__Collection__Group__12 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5048:2: rule__Collection__Group__11__Impl rule__Collection__Group__12
             {
-            pushFollow(FOLLOW_rule__Collection__Group__11__Impl_in_rule__Collection__Group__1110322);
+            pushFollow(FOLLOW_rule__Collection__Group__11__Impl_in_rule__Collection__Group__1110303);
             rule__Collection__Group__11__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Collection__Group__12_in_rule__Collection__Group__1110325);
+            pushFollow(FOLLOW_rule__Collection__Group__12_in_rule__Collection__Group__1110306);
             rule__Collection__Group__12();
 
             state._fsp--;
@@ -14371,7 +14029,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5061:1: 'Modality'
             {
              before(grammarAccess.getCollectionAccess().getModalityKeyword_11()); 
-            match(input,67,FOLLOW_67_in_rule__Collection__Group__11__Impl10353); 
+            match(input,67,FOLLOW_67_in_rule__Collection__Group__11__Impl10334); 
              after(grammarAccess.getCollectionAccess().getModalityKeyword_11()); 
 
             }
@@ -14404,12 +14062,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5078:1: ( rule__Collection__Group__12__Impl rule__Collection__Group__13 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5079:2: rule__Collection__Group__12__Impl rule__Collection__Group__13
             {
-            pushFollow(FOLLOW_rule__Collection__Group__12__Impl_in_rule__Collection__Group__1210384);
+            pushFollow(FOLLOW_rule__Collection__Group__12__Impl_in_rule__Collection__Group__1210365);
             rule__Collection__Group__12__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Collection__Group__13_in_rule__Collection__Group__1210387);
+            pushFollow(FOLLOW_rule__Collection__Group__13_in_rule__Collection__Group__1210368);
             rule__Collection__Group__13();
 
             state._fsp--;
@@ -14449,7 +14107,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5093:1: ( rule__Collection__ModalityAssignment_12 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5093:2: rule__Collection__ModalityAssignment_12
             {
-            pushFollow(FOLLOW_rule__Collection__ModalityAssignment_12_in_rule__Collection__Group__12__Impl10414);
+            pushFollow(FOLLOW_rule__Collection__ModalityAssignment_12_in_rule__Collection__Group__12__Impl10395);
             rule__Collection__ModalityAssignment_12();
 
             state._fsp--;
@@ -14489,7 +14147,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5107:1: ( rule__Collection__Group__13__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5108:2: rule__Collection__Group__13__Impl
             {
-            pushFollow(FOLLOW_rule__Collection__Group__13__Impl_in_rule__Collection__Group__1310444);
+            pushFollow(FOLLOW_rule__Collection__Group__13__Impl_in_rule__Collection__Group__1310425);
             rule__Collection__Group__13__Impl();
 
             state._fsp--;
@@ -14526,7 +14184,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5120:1: '}'
             {
              before(grammarAccess.getCollectionAccess().getRightCurlyBracketKeyword_13()); 
-            match(input,41,FOLLOW_41_in_rule__Collection__Group__13__Impl10472); 
+            match(input,41,FOLLOW_41_in_rule__Collection__Group__13__Impl10453); 
              after(grammarAccess.getCollectionAccess().getRightCurlyBracketKeyword_13()); 
 
             }
@@ -14559,12 +14217,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5165:1: ( rule__Collection__Group_7__0__Impl rule__Collection__Group_7__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5166:2: rule__Collection__Group_7__0__Impl rule__Collection__Group_7__1
             {
-            pushFollow(FOLLOW_rule__Collection__Group_7__0__Impl_in_rule__Collection__Group_7__010531);
+            pushFollow(FOLLOW_rule__Collection__Group_7__0__Impl_in_rule__Collection__Group_7__010512);
             rule__Collection__Group_7__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Collection__Group_7__1_in_rule__Collection__Group_7__010534);
+            pushFollow(FOLLOW_rule__Collection__Group_7__1_in_rule__Collection__Group_7__010515);
             rule__Collection__Group_7__1();
 
             state._fsp--;
@@ -14601,7 +14259,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5179:1: 'PartOf Collection'
             {
              before(grammarAccess.getCollectionAccess().getPartOfCollectionKeyword_7_0()); 
-            match(input,68,FOLLOW_68_in_rule__Collection__Group_7__0__Impl10562); 
+            match(input,68,FOLLOW_68_in_rule__Collection__Group_7__0__Impl10543); 
              after(grammarAccess.getCollectionAccess().getPartOfCollectionKeyword_7_0()); 
 
             }
@@ -14634,7 +14292,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5196:1: ( rule__Collection__Group_7__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5197:2: rule__Collection__Group_7__1__Impl
             {
-            pushFollow(FOLLOW_rule__Collection__Group_7__1__Impl_in_rule__Collection__Group_7__110593);
+            pushFollow(FOLLOW_rule__Collection__Group_7__1__Impl_in_rule__Collection__Group_7__110574);
             rule__Collection__Group_7__1__Impl();
 
             state._fsp--;
@@ -14674,7 +14332,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5210:1: ( rule__Collection__PartCollectionAssignment_7_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5210:2: rule__Collection__PartCollectionAssignment_7_1
             {
-            pushFollow(FOLLOW_rule__Collection__PartCollectionAssignment_7_1_in_rule__Collection__Group_7__1__Impl10620);
+            pushFollow(FOLLOW_rule__Collection__PartCollectionAssignment_7_1_in_rule__Collection__Group_7__1__Impl10601);
             rule__Collection__PartCollectionAssignment_7_1();
 
             state._fsp--;
@@ -14714,12 +14372,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5228:1: ( rule__Collection__Group_8__0__Impl rule__Collection__Group_8__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5229:2: rule__Collection__Group_8__0__Impl rule__Collection__Group_8__1
             {
-            pushFollow(FOLLOW_rule__Collection__Group_8__0__Impl_in_rule__Collection__Group_8__010654);
+            pushFollow(FOLLOW_rule__Collection__Group_8__0__Impl_in_rule__Collection__Group_8__010635);
             rule__Collection__Group_8__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Collection__Group_8__1_in_rule__Collection__Group_8__010657);
+            pushFollow(FOLLOW_rule__Collection__Group_8__1_in_rule__Collection__Group_8__010638);
             rule__Collection__Group_8__1();
 
             state._fsp--;
@@ -14756,7 +14414,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5242:1: 'RefersTo PrivateData'
             {
              before(grammarAccess.getCollectionAccess().getRefersToPrivateDataKeyword_8_0()); 
-            match(input,57,FOLLOW_57_in_rule__Collection__Group_8__0__Impl10685); 
+            match(input,57,FOLLOW_57_in_rule__Collection__Group_8__0__Impl10666); 
              after(grammarAccess.getCollectionAccess().getRefersToPrivateDataKeyword_8_0()); 
 
             }
@@ -14789,7 +14447,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5259:1: ( rule__Collection__Group_8__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5260:2: rule__Collection__Group_8__1__Impl
             {
-            pushFollow(FOLLOW_rule__Collection__Group_8__1__Impl_in_rule__Collection__Group_8__110716);
+            pushFollow(FOLLOW_rule__Collection__Group_8__1__Impl_in_rule__Collection__Group_8__110697);
             rule__Collection__Group_8__1__Impl();
 
             state._fsp--;
@@ -14829,7 +14487,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5273:1: ( rule__Collection__Alternatives_8_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5273:2: rule__Collection__Alternatives_8_1
             {
-            pushFollow(FOLLOW_rule__Collection__Alternatives_8_1_in_rule__Collection__Group_8__1__Impl10743);
+            pushFollow(FOLLOW_rule__Collection__Alternatives_8_1_in_rule__Collection__Group_8__1__Impl10724);
             rule__Collection__Alternatives_8_1();
 
             state._fsp--;
@@ -14869,12 +14527,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5291:1: ( rule__Collection__Group_9__0__Impl rule__Collection__Group_9__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5292:2: rule__Collection__Group_9__0__Impl rule__Collection__Group_9__1
             {
-            pushFollow(FOLLOW_rule__Collection__Group_9__0__Impl_in_rule__Collection__Group_9__010777);
+            pushFollow(FOLLOW_rule__Collection__Group_9__0__Impl_in_rule__Collection__Group_9__010758);
             rule__Collection__Group_9__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Collection__Group_9__1_in_rule__Collection__Group_9__010780);
+            pushFollow(FOLLOW_rule__Collection__Group_9__1_in_rule__Collection__Group_9__010761);
             rule__Collection__Group_9__1();
 
             state._fsp--;
@@ -14911,7 +14569,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5305:1: 'RefersTo Service'
             {
              before(grammarAccess.getCollectionAccess().getRefersToServiceKeyword_9_0()); 
-            match(input,69,FOLLOW_69_in_rule__Collection__Group_9__0__Impl10808); 
+            match(input,69,FOLLOW_69_in_rule__Collection__Group_9__0__Impl10789); 
              after(grammarAccess.getCollectionAccess().getRefersToServiceKeyword_9_0()); 
 
             }
@@ -14944,7 +14602,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5322:1: ( rule__Collection__Group_9__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5323:2: rule__Collection__Group_9__1__Impl
             {
-            pushFollow(FOLLOW_rule__Collection__Group_9__1__Impl_in_rule__Collection__Group_9__110839);
+            pushFollow(FOLLOW_rule__Collection__Group_9__1__Impl_in_rule__Collection__Group_9__110820);
             rule__Collection__Group_9__1__Impl();
 
             state._fsp--;
@@ -14984,7 +14642,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5336:1: ( rule__Collection__Alternatives_9_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5336:2: rule__Collection__Alternatives_9_1
             {
-            pushFollow(FOLLOW_rule__Collection__Alternatives_9_1_in_rule__Collection__Group_9__1__Impl10866);
+            pushFollow(FOLLOW_rule__Collection__Alternatives_9_1_in_rule__Collection__Group_9__1__Impl10847);
             rule__Collection__Alternatives_9_1();
 
             state._fsp--;
@@ -15024,12 +14682,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5354:1: ( rule__Collection__Group_10__0__Impl rule__Collection__Group_10__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5355:2: rule__Collection__Group_10__0__Impl rule__Collection__Group_10__1
             {
-            pushFollow(FOLLOW_rule__Collection__Group_10__0__Impl_in_rule__Collection__Group_10__010900);
+            pushFollow(FOLLOW_rule__Collection__Group_10__0__Impl_in_rule__Collection__Group_10__010881);
             rule__Collection__Group_10__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Collection__Group_10__1_in_rule__Collection__Group_10__010903);
+            pushFollow(FOLLOW_rule__Collection__Group_10__1_in_rule__Collection__Group_10__010884);
             rule__Collection__Group_10__1();
 
             state._fsp--;
@@ -15066,7 +14724,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5368:1: 'RefersTo Enforcement'
             {
              before(grammarAccess.getCollectionAccess().getRefersToEnforcementKeyword_10_0()); 
-            match(input,70,FOLLOW_70_in_rule__Collection__Group_10__0__Impl10931); 
+            match(input,70,FOLLOW_70_in_rule__Collection__Group_10__0__Impl10912); 
              after(grammarAccess.getCollectionAccess().getRefersToEnforcementKeyword_10_0()); 
 
             }
@@ -15099,7 +14757,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5385:1: ( rule__Collection__Group_10__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5386:2: rule__Collection__Group_10__1__Impl
             {
-            pushFollow(FOLLOW_rule__Collection__Group_10__1__Impl_in_rule__Collection__Group_10__110962);
+            pushFollow(FOLLOW_rule__Collection__Group_10__1__Impl_in_rule__Collection__Group_10__110943);
             rule__Collection__Group_10__1__Impl();
 
             state._fsp--;
@@ -15139,7 +14797,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5399:1: ( rule__Collection__Alternatives_10_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5399:2: rule__Collection__Alternatives_10_1
             {
-            pushFollow(FOLLOW_rule__Collection__Alternatives_10_1_in_rule__Collection__Group_10__1__Impl10989);
+            pushFollow(FOLLOW_rule__Collection__Alternatives_10_1_in_rule__Collection__Group_10__1__Impl10970);
             rule__Collection__Alternatives_10_1();
 
             state._fsp--;
@@ -15179,12 +14837,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5417:1: ( rule__Disclosure__Group__0__Impl rule__Disclosure__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5418:2: rule__Disclosure__Group__0__Impl rule__Disclosure__Group__1
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group__0__Impl_in_rule__Disclosure__Group__011023);
+            pushFollow(FOLLOW_rule__Disclosure__Group__0__Impl_in_rule__Disclosure__Group__011004);
             rule__Disclosure__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group__1_in_rule__Disclosure__Group__011026);
+            pushFollow(FOLLOW_rule__Disclosure__Group__1_in_rule__Disclosure__Group__011007);
             rule__Disclosure__Group__1();
 
             state._fsp--;
@@ -15221,7 +14879,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5431:1: 'Disclosure'
             {
              before(grammarAccess.getDisclosureAccess().getDisclosureKeyword_0()); 
-            match(input,71,FOLLOW_71_in_rule__Disclosure__Group__0__Impl11054); 
+            match(input,71,FOLLOW_71_in_rule__Disclosure__Group__0__Impl11035); 
              after(grammarAccess.getDisclosureAccess().getDisclosureKeyword_0()); 
 
             }
@@ -15254,12 +14912,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5448:1: ( rule__Disclosure__Group__1__Impl rule__Disclosure__Group__2 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5449:2: rule__Disclosure__Group__1__Impl rule__Disclosure__Group__2
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group__1__Impl_in_rule__Disclosure__Group__111085);
+            pushFollow(FOLLOW_rule__Disclosure__Group__1__Impl_in_rule__Disclosure__Group__111066);
             rule__Disclosure__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group__2_in_rule__Disclosure__Group__111088);
+            pushFollow(FOLLOW_rule__Disclosure__Group__2_in_rule__Disclosure__Group__111069);
             rule__Disclosure__Group__2();
 
             state._fsp--;
@@ -15299,7 +14957,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5463:1: ( rule__Disclosure__NameAssignment_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5463:2: rule__Disclosure__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Disclosure__NameAssignment_1_in_rule__Disclosure__Group__1__Impl11115);
+            pushFollow(FOLLOW_rule__Disclosure__NameAssignment_1_in_rule__Disclosure__Group__1__Impl11096);
             rule__Disclosure__NameAssignment_1();
 
             state._fsp--;
@@ -15339,12 +14997,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5477:1: ( rule__Disclosure__Group__2__Impl rule__Disclosure__Group__3 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5478:2: rule__Disclosure__Group__2__Impl rule__Disclosure__Group__3
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group__2__Impl_in_rule__Disclosure__Group__211145);
+            pushFollow(FOLLOW_rule__Disclosure__Group__2__Impl_in_rule__Disclosure__Group__211126);
             rule__Disclosure__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group__3_in_rule__Disclosure__Group__211148);
+            pushFollow(FOLLOW_rule__Disclosure__Group__3_in_rule__Disclosure__Group__211129);
             rule__Disclosure__Group__3();
 
             state._fsp--;
@@ -15381,7 +15039,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5491:1: '{'
             {
              before(grammarAccess.getDisclosureAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,40,FOLLOW_40_in_rule__Disclosure__Group__2__Impl11176); 
+            match(input,40,FOLLOW_40_in_rule__Disclosure__Group__2__Impl11157); 
              after(grammarAccess.getDisclosureAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -15414,12 +15072,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5508:1: ( rule__Disclosure__Group__3__Impl rule__Disclosure__Group__4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5509:2: rule__Disclosure__Group__3__Impl rule__Disclosure__Group__4
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group__3__Impl_in_rule__Disclosure__Group__311207);
+            pushFollow(FOLLOW_rule__Disclosure__Group__3__Impl_in_rule__Disclosure__Group__311188);
             rule__Disclosure__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group__4_in_rule__Disclosure__Group__311210);
+            pushFollow(FOLLOW_rule__Disclosure__Group__4_in_rule__Disclosure__Group__311191);
             rule__Disclosure__Group__4();
 
             state._fsp--;
@@ -15456,7 +15114,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5522:1: 'Description'
             {
              before(grammarAccess.getDisclosureAccess().getDescriptionKeyword_3()); 
-            match(input,47,FOLLOW_47_in_rule__Disclosure__Group__3__Impl11238); 
+            match(input,47,FOLLOW_47_in_rule__Disclosure__Group__3__Impl11219); 
              after(grammarAccess.getDisclosureAccess().getDescriptionKeyword_3()); 
 
             }
@@ -15489,12 +15147,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5539:1: ( rule__Disclosure__Group__4__Impl rule__Disclosure__Group__5 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5540:2: rule__Disclosure__Group__4__Impl rule__Disclosure__Group__5
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group__4__Impl_in_rule__Disclosure__Group__411269);
+            pushFollow(FOLLOW_rule__Disclosure__Group__4__Impl_in_rule__Disclosure__Group__411250);
             rule__Disclosure__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group__5_in_rule__Disclosure__Group__411272);
+            pushFollow(FOLLOW_rule__Disclosure__Group__5_in_rule__Disclosure__Group__411253);
             rule__Disclosure__Group__5();
 
             state._fsp--;
@@ -15534,7 +15192,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5554:1: ( rule__Disclosure__DescriptionAssignment_4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5554:2: rule__Disclosure__DescriptionAssignment_4
             {
-            pushFollow(FOLLOW_rule__Disclosure__DescriptionAssignment_4_in_rule__Disclosure__Group__4__Impl11299);
+            pushFollow(FOLLOW_rule__Disclosure__DescriptionAssignment_4_in_rule__Disclosure__Group__4__Impl11280);
             rule__Disclosure__DescriptionAssignment_4();
 
             state._fsp--;
@@ -15574,12 +15232,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5568:1: ( rule__Disclosure__Group__5__Impl rule__Disclosure__Group__6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5569:2: rule__Disclosure__Group__5__Impl rule__Disclosure__Group__6
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group__5__Impl_in_rule__Disclosure__Group__511329);
+            pushFollow(FOLLOW_rule__Disclosure__Group__5__Impl_in_rule__Disclosure__Group__511310);
             rule__Disclosure__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group__6_in_rule__Disclosure__Group__511332);
+            pushFollow(FOLLOW_rule__Disclosure__Group__6_in_rule__Disclosure__Group__511313);
             rule__Disclosure__Group__6();
 
             state._fsp--;
@@ -15616,7 +15274,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5582:1: 'Condition'
             {
              before(grammarAccess.getDisclosureAccess().getConditionKeyword_5()); 
-            match(input,66,FOLLOW_66_in_rule__Disclosure__Group__5__Impl11360); 
+            match(input,66,FOLLOW_66_in_rule__Disclosure__Group__5__Impl11341); 
              after(grammarAccess.getDisclosureAccess().getConditionKeyword_5()); 
 
             }
@@ -15649,12 +15307,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5599:1: ( rule__Disclosure__Group__6__Impl rule__Disclosure__Group__7 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5600:2: rule__Disclosure__Group__6__Impl rule__Disclosure__Group__7
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group__6__Impl_in_rule__Disclosure__Group__611391);
+            pushFollow(FOLLOW_rule__Disclosure__Group__6__Impl_in_rule__Disclosure__Group__611372);
             rule__Disclosure__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group__7_in_rule__Disclosure__Group__611394);
+            pushFollow(FOLLOW_rule__Disclosure__Group__7_in_rule__Disclosure__Group__611375);
             rule__Disclosure__Group__7();
 
             state._fsp--;
@@ -15694,7 +15352,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5614:1: ( rule__Disclosure__ConditionAssignment_6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5614:2: rule__Disclosure__ConditionAssignment_6
             {
-            pushFollow(FOLLOW_rule__Disclosure__ConditionAssignment_6_in_rule__Disclosure__Group__6__Impl11421);
+            pushFollow(FOLLOW_rule__Disclosure__ConditionAssignment_6_in_rule__Disclosure__Group__6__Impl11402);
             rule__Disclosure__ConditionAssignment_6();
 
             state._fsp--;
@@ -15734,12 +15392,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5628:1: ( rule__Disclosure__Group__7__Impl rule__Disclosure__Group__8 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5629:2: rule__Disclosure__Group__7__Impl rule__Disclosure__Group__8
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group__7__Impl_in_rule__Disclosure__Group__711451);
+            pushFollow(FOLLOW_rule__Disclosure__Group__7__Impl_in_rule__Disclosure__Group__711432);
             rule__Disclosure__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group__8_in_rule__Disclosure__Group__711454);
+            pushFollow(FOLLOW_rule__Disclosure__Group__8_in_rule__Disclosure__Group__711435);
             rule__Disclosure__Group__8();
 
             state._fsp--;
@@ -15777,17 +15435,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getDisclosureAccess().getGroup_7()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5643:1: ( rule__Disclosure__Group_7__0 )?
-            int alt74=2;
-            int LA74_0 = input.LA(1);
+            int alt55=2;
+            int LA55_0 = input.LA(1);
 
-            if ( (LA74_0==72) ) {
-                alt74=1;
+            if ( (LA55_0==72) ) {
+                alt55=1;
             }
-            switch (alt74) {
+            switch (alt55) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5643:2: rule__Disclosure__Group_7__0
                     {
-                    pushFollow(FOLLOW_rule__Disclosure__Group_7__0_in_rule__Disclosure__Group__7__Impl11481);
+                    pushFollow(FOLLOW_rule__Disclosure__Group_7__0_in_rule__Disclosure__Group__7__Impl11462);
                     rule__Disclosure__Group_7__0();
 
                     state._fsp--;
@@ -15830,12 +15488,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5657:1: ( rule__Disclosure__Group__8__Impl rule__Disclosure__Group__9 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5658:2: rule__Disclosure__Group__8__Impl rule__Disclosure__Group__9
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group__8__Impl_in_rule__Disclosure__Group__811512);
+            pushFollow(FOLLOW_rule__Disclosure__Group__8__Impl_in_rule__Disclosure__Group__811493);
             rule__Disclosure__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group__9_in_rule__Disclosure__Group__811515);
+            pushFollow(FOLLOW_rule__Disclosure__Group__9_in_rule__Disclosure__Group__811496);
             rule__Disclosure__Group__9();
 
             state._fsp--;
@@ -15873,17 +15531,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getDisclosureAccess().getGroup_8()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5672:1: ( rule__Disclosure__Group_8__0 )?
-            int alt75=2;
-            int LA75_0 = input.LA(1);
+            int alt56=2;
+            int LA56_0 = input.LA(1);
 
-            if ( (LA75_0==73) ) {
-                alt75=1;
+            if ( (LA56_0==73) ) {
+                alt56=1;
             }
-            switch (alt75) {
+            switch (alt56) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5672:2: rule__Disclosure__Group_8__0
                     {
-                    pushFollow(FOLLOW_rule__Disclosure__Group_8__0_in_rule__Disclosure__Group__8__Impl11542);
+                    pushFollow(FOLLOW_rule__Disclosure__Group_8__0_in_rule__Disclosure__Group__8__Impl11523);
                     rule__Disclosure__Group_8__0();
 
                     state._fsp--;
@@ -15926,12 +15584,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5686:1: ( rule__Disclosure__Group__9__Impl rule__Disclosure__Group__10 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5687:2: rule__Disclosure__Group__9__Impl rule__Disclosure__Group__10
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group__9__Impl_in_rule__Disclosure__Group__911573);
+            pushFollow(FOLLOW_rule__Disclosure__Group__9__Impl_in_rule__Disclosure__Group__911554);
             rule__Disclosure__Group__9__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group__10_in_rule__Disclosure__Group__911576);
+            pushFollow(FOLLOW_rule__Disclosure__Group__10_in_rule__Disclosure__Group__911557);
             rule__Disclosure__Group__10();
 
             state._fsp--;
@@ -15969,17 +15627,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getDisclosureAccess().getGroup_9()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5701:1: ( rule__Disclosure__Group_9__0 )?
-            int alt76=2;
-            int LA76_0 = input.LA(1);
+            int alt57=2;
+            int LA57_0 = input.LA(1);
 
-            if ( (LA76_0==74) ) {
-                alt76=1;
+            if ( (LA57_0==74) ) {
+                alt57=1;
             }
-            switch (alt76) {
+            switch (alt57) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5701:2: rule__Disclosure__Group_9__0
                     {
-                    pushFollow(FOLLOW_rule__Disclosure__Group_9__0_in_rule__Disclosure__Group__9__Impl11603);
+                    pushFollow(FOLLOW_rule__Disclosure__Group_9__0_in_rule__Disclosure__Group__9__Impl11584);
                     rule__Disclosure__Group_9__0();
 
                     state._fsp--;
@@ -16022,12 +15680,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5715:1: ( rule__Disclosure__Group__10__Impl rule__Disclosure__Group__11 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5716:2: rule__Disclosure__Group__10__Impl rule__Disclosure__Group__11
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group__10__Impl_in_rule__Disclosure__Group__1011634);
+            pushFollow(FOLLOW_rule__Disclosure__Group__10__Impl_in_rule__Disclosure__Group__1011615);
             rule__Disclosure__Group__10__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group__11_in_rule__Disclosure__Group__1011637);
+            pushFollow(FOLLOW_rule__Disclosure__Group__11_in_rule__Disclosure__Group__1011618);
             rule__Disclosure__Group__11();
 
             state._fsp--;
@@ -16065,17 +15723,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getDisclosureAccess().getGroup_10()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5730:1: ( rule__Disclosure__Group_10__0 )?
-            int alt77=2;
-            int LA77_0 = input.LA(1);
+            int alt58=2;
+            int LA58_0 = input.LA(1);
 
-            if ( (LA77_0==75) ) {
-                alt77=1;
+            if ( (LA58_0==75) ) {
+                alt58=1;
             }
-            switch (alt77) {
+            switch (alt58) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5730:2: rule__Disclosure__Group_10__0
                     {
-                    pushFollow(FOLLOW_rule__Disclosure__Group_10__0_in_rule__Disclosure__Group__10__Impl11664);
+                    pushFollow(FOLLOW_rule__Disclosure__Group_10__0_in_rule__Disclosure__Group__10__Impl11645);
                     rule__Disclosure__Group_10__0();
 
                     state._fsp--;
@@ -16118,12 +15776,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5744:1: ( rule__Disclosure__Group__11__Impl rule__Disclosure__Group__12 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5745:2: rule__Disclosure__Group__11__Impl rule__Disclosure__Group__12
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group__11__Impl_in_rule__Disclosure__Group__1111695);
+            pushFollow(FOLLOW_rule__Disclosure__Group__11__Impl_in_rule__Disclosure__Group__1111676);
             rule__Disclosure__Group__11__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group__12_in_rule__Disclosure__Group__1111698);
+            pushFollow(FOLLOW_rule__Disclosure__Group__12_in_rule__Disclosure__Group__1111679);
             rule__Disclosure__Group__12();
 
             state._fsp--;
@@ -16161,17 +15819,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getDisclosureAccess().getGroup_11()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5759:1: ( rule__Disclosure__Group_11__0 )?
-            int alt78=2;
-            int LA78_0 = input.LA(1);
+            int alt59=2;
+            int LA59_0 = input.LA(1);
 
-            if ( (LA78_0==57) ) {
-                alt78=1;
+            if ( (LA59_0==57) ) {
+                alt59=1;
             }
-            switch (alt78) {
+            switch (alt59) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5759:2: rule__Disclosure__Group_11__0
                     {
-                    pushFollow(FOLLOW_rule__Disclosure__Group_11__0_in_rule__Disclosure__Group__11__Impl11725);
+                    pushFollow(FOLLOW_rule__Disclosure__Group_11__0_in_rule__Disclosure__Group__11__Impl11706);
                     rule__Disclosure__Group_11__0();
 
                     state._fsp--;
@@ -16214,12 +15872,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5773:1: ( rule__Disclosure__Group__12__Impl rule__Disclosure__Group__13 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5774:2: rule__Disclosure__Group__12__Impl rule__Disclosure__Group__13
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group__12__Impl_in_rule__Disclosure__Group__1211756);
+            pushFollow(FOLLOW_rule__Disclosure__Group__12__Impl_in_rule__Disclosure__Group__1211737);
             rule__Disclosure__Group__12__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group__13_in_rule__Disclosure__Group__1211759);
+            pushFollow(FOLLOW_rule__Disclosure__Group__13_in_rule__Disclosure__Group__1211740);
             rule__Disclosure__Group__13();
 
             state._fsp--;
@@ -16257,17 +15915,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getDisclosureAccess().getGroup_12()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5788:1: ( rule__Disclosure__Group_12__0 )?
-            int alt79=2;
-            int LA79_0 = input.LA(1);
+            int alt60=2;
+            int LA60_0 = input.LA(1);
 
-            if ( (LA79_0==69) ) {
-                alt79=1;
+            if ( (LA60_0==69) ) {
+                alt60=1;
             }
-            switch (alt79) {
+            switch (alt60) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5788:2: rule__Disclosure__Group_12__0
                     {
-                    pushFollow(FOLLOW_rule__Disclosure__Group_12__0_in_rule__Disclosure__Group__12__Impl11786);
+                    pushFollow(FOLLOW_rule__Disclosure__Group_12__0_in_rule__Disclosure__Group__12__Impl11767);
                     rule__Disclosure__Group_12__0();
 
                     state._fsp--;
@@ -16310,12 +15968,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5802:1: ( rule__Disclosure__Group__13__Impl rule__Disclosure__Group__14 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5803:2: rule__Disclosure__Group__13__Impl rule__Disclosure__Group__14
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group__13__Impl_in_rule__Disclosure__Group__1311817);
+            pushFollow(FOLLOW_rule__Disclosure__Group__13__Impl_in_rule__Disclosure__Group__1311798);
             rule__Disclosure__Group__13__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group__14_in_rule__Disclosure__Group__1311820);
+            pushFollow(FOLLOW_rule__Disclosure__Group__14_in_rule__Disclosure__Group__1311801);
             rule__Disclosure__Group__14();
 
             state._fsp--;
@@ -16353,17 +16011,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getDisclosureAccess().getGroup_13()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5817:1: ( rule__Disclosure__Group_13__0 )?
-            int alt80=2;
-            int LA80_0 = input.LA(1);
+            int alt61=2;
+            int LA61_0 = input.LA(1);
 
-            if ( (LA80_0==70) ) {
-                alt80=1;
+            if ( (LA61_0==70) ) {
+                alt61=1;
             }
-            switch (alt80) {
+            switch (alt61) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5817:2: rule__Disclosure__Group_13__0
                     {
-                    pushFollow(FOLLOW_rule__Disclosure__Group_13__0_in_rule__Disclosure__Group__13__Impl11847);
+                    pushFollow(FOLLOW_rule__Disclosure__Group_13__0_in_rule__Disclosure__Group__13__Impl11828);
                     rule__Disclosure__Group_13__0();
 
                     state._fsp--;
@@ -16406,12 +16064,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5831:1: ( rule__Disclosure__Group__14__Impl rule__Disclosure__Group__15 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5832:2: rule__Disclosure__Group__14__Impl rule__Disclosure__Group__15
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group__14__Impl_in_rule__Disclosure__Group__1411878);
+            pushFollow(FOLLOW_rule__Disclosure__Group__14__Impl_in_rule__Disclosure__Group__1411859);
             rule__Disclosure__Group__14__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group__15_in_rule__Disclosure__Group__1411881);
+            pushFollow(FOLLOW_rule__Disclosure__Group__15_in_rule__Disclosure__Group__1411862);
             rule__Disclosure__Group__15();
 
             state._fsp--;
@@ -16448,7 +16106,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5845:1: 'Modality'
             {
              before(grammarAccess.getDisclosureAccess().getModalityKeyword_14()); 
-            match(input,67,FOLLOW_67_in_rule__Disclosure__Group__14__Impl11909); 
+            match(input,67,FOLLOW_67_in_rule__Disclosure__Group__14__Impl11890); 
              after(grammarAccess.getDisclosureAccess().getModalityKeyword_14()); 
 
             }
@@ -16481,12 +16139,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5862:1: ( rule__Disclosure__Group__15__Impl rule__Disclosure__Group__16 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5863:2: rule__Disclosure__Group__15__Impl rule__Disclosure__Group__16
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group__15__Impl_in_rule__Disclosure__Group__1511940);
+            pushFollow(FOLLOW_rule__Disclosure__Group__15__Impl_in_rule__Disclosure__Group__1511921);
             rule__Disclosure__Group__15__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group__16_in_rule__Disclosure__Group__1511943);
+            pushFollow(FOLLOW_rule__Disclosure__Group__16_in_rule__Disclosure__Group__1511924);
             rule__Disclosure__Group__16();
 
             state._fsp--;
@@ -16526,7 +16184,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5877:1: ( rule__Disclosure__ModalityAssignment_15 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5877:2: rule__Disclosure__ModalityAssignment_15
             {
-            pushFollow(FOLLOW_rule__Disclosure__ModalityAssignment_15_in_rule__Disclosure__Group__15__Impl11970);
+            pushFollow(FOLLOW_rule__Disclosure__ModalityAssignment_15_in_rule__Disclosure__Group__15__Impl11951);
             rule__Disclosure__ModalityAssignment_15();
 
             state._fsp--;
@@ -16566,7 +16224,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5891:1: ( rule__Disclosure__Group__16__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5892:2: rule__Disclosure__Group__16__Impl
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group__16__Impl_in_rule__Disclosure__Group__1612000);
+            pushFollow(FOLLOW_rule__Disclosure__Group__16__Impl_in_rule__Disclosure__Group__1611981);
             rule__Disclosure__Group__16__Impl();
 
             state._fsp--;
@@ -16603,7 +16261,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5904:1: '}'
             {
              before(grammarAccess.getDisclosureAccess().getRightCurlyBracketKeyword_16()); 
-            match(input,41,FOLLOW_41_in_rule__Disclosure__Group__16__Impl12028); 
+            match(input,41,FOLLOW_41_in_rule__Disclosure__Group__16__Impl12009); 
              after(grammarAccess.getDisclosureAccess().getRightCurlyBracketKeyword_16()); 
 
             }
@@ -16636,12 +16294,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5955:1: ( rule__Disclosure__Group_7__0__Impl rule__Disclosure__Group_7__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5956:2: rule__Disclosure__Group_7__0__Impl rule__Disclosure__Group_7__1
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group_7__0__Impl_in_rule__Disclosure__Group_7__012093);
+            pushFollow(FOLLOW_rule__Disclosure__Group_7__0__Impl_in_rule__Disclosure__Group_7__012074);
             rule__Disclosure__Group_7__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group_7__1_in_rule__Disclosure__Group_7__012096);
+            pushFollow(FOLLOW_rule__Disclosure__Group_7__1_in_rule__Disclosure__Group_7__012077);
             rule__Disclosure__Group_7__1();
 
             state._fsp--;
@@ -16678,7 +16336,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5969:1: 'PartOf Disclosure'
             {
              before(grammarAccess.getDisclosureAccess().getPartOfDisclosureKeyword_7_0()); 
-            match(input,72,FOLLOW_72_in_rule__Disclosure__Group_7__0__Impl12124); 
+            match(input,72,FOLLOW_72_in_rule__Disclosure__Group_7__0__Impl12105); 
              after(grammarAccess.getDisclosureAccess().getPartOfDisclosureKeyword_7_0()); 
 
             }
@@ -16711,7 +16369,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5986:1: ( rule__Disclosure__Group_7__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:5987:2: rule__Disclosure__Group_7__1__Impl
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group_7__1__Impl_in_rule__Disclosure__Group_7__112155);
+            pushFollow(FOLLOW_rule__Disclosure__Group_7__1__Impl_in_rule__Disclosure__Group_7__112136);
             rule__Disclosure__Group_7__1__Impl();
 
             state._fsp--;
@@ -16751,7 +16409,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6000:1: ( rule__Disclosure__PartDisclosureAssignment_7_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6000:2: rule__Disclosure__PartDisclosureAssignment_7_1
             {
-            pushFollow(FOLLOW_rule__Disclosure__PartDisclosureAssignment_7_1_in_rule__Disclosure__Group_7__1__Impl12182);
+            pushFollow(FOLLOW_rule__Disclosure__PartDisclosureAssignment_7_1_in_rule__Disclosure__Group_7__1__Impl12163);
             rule__Disclosure__PartDisclosureAssignment_7_1();
 
             state._fsp--;
@@ -16791,12 +16449,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6018:1: ( rule__Disclosure__Group_8__0__Impl rule__Disclosure__Group_8__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6019:2: rule__Disclosure__Group_8__0__Impl rule__Disclosure__Group_8__1
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group_8__0__Impl_in_rule__Disclosure__Group_8__012216);
+            pushFollow(FOLLOW_rule__Disclosure__Group_8__0__Impl_in_rule__Disclosure__Group_8__012197);
             rule__Disclosure__Group_8__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group_8__1_in_rule__Disclosure__Group_8__012219);
+            pushFollow(FOLLOW_rule__Disclosure__Group_8__1_in_rule__Disclosure__Group_8__012200);
             rule__Disclosure__Group_8__1();
 
             state._fsp--;
@@ -16833,7 +16491,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6032:1: 'RefersTo Recipient'
             {
              before(grammarAccess.getDisclosureAccess().getRefersToRecipientKeyword_8_0()); 
-            match(input,73,FOLLOW_73_in_rule__Disclosure__Group_8__0__Impl12247); 
+            match(input,73,FOLLOW_73_in_rule__Disclosure__Group_8__0__Impl12228); 
              after(grammarAccess.getDisclosureAccess().getRefersToRecipientKeyword_8_0()); 
 
             }
@@ -16866,7 +16524,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6049:1: ( rule__Disclosure__Group_8__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6050:2: rule__Disclosure__Group_8__1__Impl
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group_8__1__Impl_in_rule__Disclosure__Group_8__112278);
+            pushFollow(FOLLOW_rule__Disclosure__Group_8__1__Impl_in_rule__Disclosure__Group_8__112259);
             rule__Disclosure__Group_8__1__Impl();
 
             state._fsp--;
@@ -16906,7 +16564,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6063:1: ( rule__Disclosure__Alternatives_8_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6063:2: rule__Disclosure__Alternatives_8_1
             {
-            pushFollow(FOLLOW_rule__Disclosure__Alternatives_8_1_in_rule__Disclosure__Group_8__1__Impl12305);
+            pushFollow(FOLLOW_rule__Disclosure__Alternatives_8_1_in_rule__Disclosure__Group_8__1__Impl12286);
             rule__Disclosure__Alternatives_8_1();
 
             state._fsp--;
@@ -16946,12 +16604,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6081:1: ( rule__Disclosure__Group_9__0__Impl rule__Disclosure__Group_9__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6082:2: rule__Disclosure__Group_9__0__Impl rule__Disclosure__Group_9__1
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group_9__0__Impl_in_rule__Disclosure__Group_9__012339);
+            pushFollow(FOLLOW_rule__Disclosure__Group_9__0__Impl_in_rule__Disclosure__Group_9__012320);
             rule__Disclosure__Group_9__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group_9__1_in_rule__Disclosure__Group_9__012342);
+            pushFollow(FOLLOW_rule__Disclosure__Group_9__1_in_rule__Disclosure__Group_9__012323);
             rule__Disclosure__Group_9__1();
 
             state._fsp--;
@@ -16988,7 +16646,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6095:1: 'RefersTo Recipient-Source'
             {
              before(grammarAccess.getDisclosureAccess().getRefersToRecipientSourceKeyword_9_0()); 
-            match(input,74,FOLLOW_74_in_rule__Disclosure__Group_9__0__Impl12370); 
+            match(input,74,FOLLOW_74_in_rule__Disclosure__Group_9__0__Impl12351); 
              after(grammarAccess.getDisclosureAccess().getRefersToRecipientSourceKeyword_9_0()); 
 
             }
@@ -17021,7 +16679,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6112:1: ( rule__Disclosure__Group_9__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6113:2: rule__Disclosure__Group_9__1__Impl
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group_9__1__Impl_in_rule__Disclosure__Group_9__112401);
+            pushFollow(FOLLOW_rule__Disclosure__Group_9__1__Impl_in_rule__Disclosure__Group_9__112382);
             rule__Disclosure__Group_9__1__Impl();
 
             state._fsp--;
@@ -17061,7 +16719,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6126:1: ( rule__Disclosure__Alternatives_9_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6126:2: rule__Disclosure__Alternatives_9_1
             {
-            pushFollow(FOLLOW_rule__Disclosure__Alternatives_9_1_in_rule__Disclosure__Group_9__1__Impl12428);
+            pushFollow(FOLLOW_rule__Disclosure__Alternatives_9_1_in_rule__Disclosure__Group_9__1__Impl12409);
             rule__Disclosure__Alternatives_9_1();
 
             state._fsp--;
@@ -17101,12 +16759,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6144:1: ( rule__Disclosure__Group_10__0__Impl rule__Disclosure__Group_10__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6145:2: rule__Disclosure__Group_10__0__Impl rule__Disclosure__Group_10__1
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group_10__0__Impl_in_rule__Disclosure__Group_10__012462);
+            pushFollow(FOLLOW_rule__Disclosure__Group_10__0__Impl_in_rule__Disclosure__Group_10__012443);
             rule__Disclosure__Group_10__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group_10__1_in_rule__Disclosure__Group_10__012465);
+            pushFollow(FOLLOW_rule__Disclosure__Group_10__1_in_rule__Disclosure__Group_10__012446);
             rule__Disclosure__Group_10__1();
 
             state._fsp--;
@@ -17143,7 +16801,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6158:1: 'RefersTo Recipient-Target'
             {
              before(grammarAccess.getDisclosureAccess().getRefersToRecipientTargetKeyword_10_0()); 
-            match(input,75,FOLLOW_75_in_rule__Disclosure__Group_10__0__Impl12493); 
+            match(input,75,FOLLOW_75_in_rule__Disclosure__Group_10__0__Impl12474); 
              after(grammarAccess.getDisclosureAccess().getRefersToRecipientTargetKeyword_10_0()); 
 
             }
@@ -17176,7 +16834,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6175:1: ( rule__Disclosure__Group_10__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6176:2: rule__Disclosure__Group_10__1__Impl
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group_10__1__Impl_in_rule__Disclosure__Group_10__112524);
+            pushFollow(FOLLOW_rule__Disclosure__Group_10__1__Impl_in_rule__Disclosure__Group_10__112505);
             rule__Disclosure__Group_10__1__Impl();
 
             state._fsp--;
@@ -17216,7 +16874,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6189:1: ( rule__Disclosure__Alternatives_10_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6189:2: rule__Disclosure__Alternatives_10_1
             {
-            pushFollow(FOLLOW_rule__Disclosure__Alternatives_10_1_in_rule__Disclosure__Group_10__1__Impl12551);
+            pushFollow(FOLLOW_rule__Disclosure__Alternatives_10_1_in_rule__Disclosure__Group_10__1__Impl12532);
             rule__Disclosure__Alternatives_10_1();
 
             state._fsp--;
@@ -17256,12 +16914,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6207:1: ( rule__Disclosure__Group_11__0__Impl rule__Disclosure__Group_11__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6208:2: rule__Disclosure__Group_11__0__Impl rule__Disclosure__Group_11__1
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group_11__0__Impl_in_rule__Disclosure__Group_11__012585);
+            pushFollow(FOLLOW_rule__Disclosure__Group_11__0__Impl_in_rule__Disclosure__Group_11__012566);
             rule__Disclosure__Group_11__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group_11__1_in_rule__Disclosure__Group_11__012588);
+            pushFollow(FOLLOW_rule__Disclosure__Group_11__1_in_rule__Disclosure__Group_11__012569);
             rule__Disclosure__Group_11__1();
 
             state._fsp--;
@@ -17298,7 +16956,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6221:1: 'RefersTo PrivateData'
             {
              before(grammarAccess.getDisclosureAccess().getRefersToPrivateDataKeyword_11_0()); 
-            match(input,57,FOLLOW_57_in_rule__Disclosure__Group_11__0__Impl12616); 
+            match(input,57,FOLLOW_57_in_rule__Disclosure__Group_11__0__Impl12597); 
              after(grammarAccess.getDisclosureAccess().getRefersToPrivateDataKeyword_11_0()); 
 
             }
@@ -17331,7 +16989,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6238:1: ( rule__Disclosure__Group_11__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6239:2: rule__Disclosure__Group_11__1__Impl
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group_11__1__Impl_in_rule__Disclosure__Group_11__112647);
+            pushFollow(FOLLOW_rule__Disclosure__Group_11__1__Impl_in_rule__Disclosure__Group_11__112628);
             rule__Disclosure__Group_11__1__Impl();
 
             state._fsp--;
@@ -17371,7 +17029,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6252:1: ( rule__Disclosure__Alternatives_11_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6252:2: rule__Disclosure__Alternatives_11_1
             {
-            pushFollow(FOLLOW_rule__Disclosure__Alternatives_11_1_in_rule__Disclosure__Group_11__1__Impl12674);
+            pushFollow(FOLLOW_rule__Disclosure__Alternatives_11_1_in_rule__Disclosure__Group_11__1__Impl12655);
             rule__Disclosure__Alternatives_11_1();
 
             state._fsp--;
@@ -17411,12 +17069,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6270:1: ( rule__Disclosure__Group_12__0__Impl rule__Disclosure__Group_12__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6271:2: rule__Disclosure__Group_12__0__Impl rule__Disclosure__Group_12__1
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group_12__0__Impl_in_rule__Disclosure__Group_12__012708);
+            pushFollow(FOLLOW_rule__Disclosure__Group_12__0__Impl_in_rule__Disclosure__Group_12__012689);
             rule__Disclosure__Group_12__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group_12__1_in_rule__Disclosure__Group_12__012711);
+            pushFollow(FOLLOW_rule__Disclosure__Group_12__1_in_rule__Disclosure__Group_12__012692);
             rule__Disclosure__Group_12__1();
 
             state._fsp--;
@@ -17453,7 +17111,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6284:1: 'RefersTo Service'
             {
              before(grammarAccess.getDisclosureAccess().getRefersToServiceKeyword_12_0()); 
-            match(input,69,FOLLOW_69_in_rule__Disclosure__Group_12__0__Impl12739); 
+            match(input,69,FOLLOW_69_in_rule__Disclosure__Group_12__0__Impl12720); 
              after(grammarAccess.getDisclosureAccess().getRefersToServiceKeyword_12_0()); 
 
             }
@@ -17486,7 +17144,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6301:1: ( rule__Disclosure__Group_12__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6302:2: rule__Disclosure__Group_12__1__Impl
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group_12__1__Impl_in_rule__Disclosure__Group_12__112770);
+            pushFollow(FOLLOW_rule__Disclosure__Group_12__1__Impl_in_rule__Disclosure__Group_12__112751);
             rule__Disclosure__Group_12__1__Impl();
 
             state._fsp--;
@@ -17526,7 +17184,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6315:1: ( rule__Disclosure__Alternatives_12_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6315:2: rule__Disclosure__Alternatives_12_1
             {
-            pushFollow(FOLLOW_rule__Disclosure__Alternatives_12_1_in_rule__Disclosure__Group_12__1__Impl12797);
+            pushFollow(FOLLOW_rule__Disclosure__Alternatives_12_1_in_rule__Disclosure__Group_12__1__Impl12778);
             rule__Disclosure__Alternatives_12_1();
 
             state._fsp--;
@@ -17566,12 +17224,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6333:1: ( rule__Disclosure__Group_13__0__Impl rule__Disclosure__Group_13__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6334:2: rule__Disclosure__Group_13__0__Impl rule__Disclosure__Group_13__1
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group_13__0__Impl_in_rule__Disclosure__Group_13__012831);
+            pushFollow(FOLLOW_rule__Disclosure__Group_13__0__Impl_in_rule__Disclosure__Group_13__012812);
             rule__Disclosure__Group_13__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Disclosure__Group_13__1_in_rule__Disclosure__Group_13__012834);
+            pushFollow(FOLLOW_rule__Disclosure__Group_13__1_in_rule__Disclosure__Group_13__012815);
             rule__Disclosure__Group_13__1();
 
             state._fsp--;
@@ -17608,7 +17266,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6347:1: 'RefersTo Enforcement'
             {
              before(grammarAccess.getDisclosureAccess().getRefersToEnforcementKeyword_13_0()); 
-            match(input,70,FOLLOW_70_in_rule__Disclosure__Group_13__0__Impl12862); 
+            match(input,70,FOLLOW_70_in_rule__Disclosure__Group_13__0__Impl12843); 
              after(grammarAccess.getDisclosureAccess().getRefersToEnforcementKeyword_13_0()); 
 
             }
@@ -17641,7 +17299,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6364:1: ( rule__Disclosure__Group_13__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6365:2: rule__Disclosure__Group_13__1__Impl
             {
-            pushFollow(FOLLOW_rule__Disclosure__Group_13__1__Impl_in_rule__Disclosure__Group_13__112893);
+            pushFollow(FOLLOW_rule__Disclosure__Group_13__1__Impl_in_rule__Disclosure__Group_13__112874);
             rule__Disclosure__Group_13__1__Impl();
 
             state._fsp--;
@@ -17681,7 +17339,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6378:1: ( rule__Disclosure__Alternatives_13_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6378:2: rule__Disclosure__Alternatives_13_1
             {
-            pushFollow(FOLLOW_rule__Disclosure__Alternatives_13_1_in_rule__Disclosure__Group_13__1__Impl12920);
+            pushFollow(FOLLOW_rule__Disclosure__Alternatives_13_1_in_rule__Disclosure__Group_13__1__Impl12901);
             rule__Disclosure__Alternatives_13_1();
 
             state._fsp--;
@@ -17721,12 +17379,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6396:1: ( rule__Retention__Group__0__Impl rule__Retention__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6397:2: rule__Retention__Group__0__Impl rule__Retention__Group__1
             {
-            pushFollow(FOLLOW_rule__Retention__Group__0__Impl_in_rule__Retention__Group__012954);
+            pushFollow(FOLLOW_rule__Retention__Group__0__Impl_in_rule__Retention__Group__012935);
             rule__Retention__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group__1_in_rule__Retention__Group__012957);
+            pushFollow(FOLLOW_rule__Retention__Group__1_in_rule__Retention__Group__012938);
             rule__Retention__Group__1();
 
             state._fsp--;
@@ -17763,7 +17421,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6410:1: 'Retention'
             {
              before(grammarAccess.getRetentionAccess().getRetentionKeyword_0()); 
-            match(input,76,FOLLOW_76_in_rule__Retention__Group__0__Impl12985); 
+            match(input,76,FOLLOW_76_in_rule__Retention__Group__0__Impl12966); 
              after(grammarAccess.getRetentionAccess().getRetentionKeyword_0()); 
 
             }
@@ -17796,12 +17454,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6427:1: ( rule__Retention__Group__1__Impl rule__Retention__Group__2 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6428:2: rule__Retention__Group__1__Impl rule__Retention__Group__2
             {
-            pushFollow(FOLLOW_rule__Retention__Group__1__Impl_in_rule__Retention__Group__113016);
+            pushFollow(FOLLOW_rule__Retention__Group__1__Impl_in_rule__Retention__Group__112997);
             rule__Retention__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group__2_in_rule__Retention__Group__113019);
+            pushFollow(FOLLOW_rule__Retention__Group__2_in_rule__Retention__Group__113000);
             rule__Retention__Group__2();
 
             state._fsp--;
@@ -17841,7 +17499,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6442:1: ( rule__Retention__NameAssignment_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6442:2: rule__Retention__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Retention__NameAssignment_1_in_rule__Retention__Group__1__Impl13046);
+            pushFollow(FOLLOW_rule__Retention__NameAssignment_1_in_rule__Retention__Group__1__Impl13027);
             rule__Retention__NameAssignment_1();
 
             state._fsp--;
@@ -17881,12 +17539,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6456:1: ( rule__Retention__Group__2__Impl rule__Retention__Group__3 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6457:2: rule__Retention__Group__2__Impl rule__Retention__Group__3
             {
-            pushFollow(FOLLOW_rule__Retention__Group__2__Impl_in_rule__Retention__Group__213076);
+            pushFollow(FOLLOW_rule__Retention__Group__2__Impl_in_rule__Retention__Group__213057);
             rule__Retention__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group__3_in_rule__Retention__Group__213079);
+            pushFollow(FOLLOW_rule__Retention__Group__3_in_rule__Retention__Group__213060);
             rule__Retention__Group__3();
 
             state._fsp--;
@@ -17923,7 +17581,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6470:1: '{'
             {
              before(grammarAccess.getRetentionAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,40,FOLLOW_40_in_rule__Retention__Group__2__Impl13107); 
+            match(input,40,FOLLOW_40_in_rule__Retention__Group__2__Impl13088); 
              after(grammarAccess.getRetentionAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -17956,12 +17614,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6487:1: ( rule__Retention__Group__3__Impl rule__Retention__Group__4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6488:2: rule__Retention__Group__3__Impl rule__Retention__Group__4
             {
-            pushFollow(FOLLOW_rule__Retention__Group__3__Impl_in_rule__Retention__Group__313138);
+            pushFollow(FOLLOW_rule__Retention__Group__3__Impl_in_rule__Retention__Group__313119);
             rule__Retention__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group__4_in_rule__Retention__Group__313141);
+            pushFollow(FOLLOW_rule__Retention__Group__4_in_rule__Retention__Group__313122);
             rule__Retention__Group__4();
 
             state._fsp--;
@@ -17998,7 +17656,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6501:1: 'Description'
             {
              before(grammarAccess.getRetentionAccess().getDescriptionKeyword_3()); 
-            match(input,47,FOLLOW_47_in_rule__Retention__Group__3__Impl13169); 
+            match(input,47,FOLLOW_47_in_rule__Retention__Group__3__Impl13150); 
              after(grammarAccess.getRetentionAccess().getDescriptionKeyword_3()); 
 
             }
@@ -18031,12 +17689,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6518:1: ( rule__Retention__Group__4__Impl rule__Retention__Group__5 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6519:2: rule__Retention__Group__4__Impl rule__Retention__Group__5
             {
-            pushFollow(FOLLOW_rule__Retention__Group__4__Impl_in_rule__Retention__Group__413200);
+            pushFollow(FOLLOW_rule__Retention__Group__4__Impl_in_rule__Retention__Group__413181);
             rule__Retention__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group__5_in_rule__Retention__Group__413203);
+            pushFollow(FOLLOW_rule__Retention__Group__5_in_rule__Retention__Group__413184);
             rule__Retention__Group__5();
 
             state._fsp--;
@@ -18076,7 +17734,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6533:1: ( rule__Retention__DescriptionAssignment_4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6533:2: rule__Retention__DescriptionAssignment_4
             {
-            pushFollow(FOLLOW_rule__Retention__DescriptionAssignment_4_in_rule__Retention__Group__4__Impl13230);
+            pushFollow(FOLLOW_rule__Retention__DescriptionAssignment_4_in_rule__Retention__Group__4__Impl13211);
             rule__Retention__DescriptionAssignment_4();
 
             state._fsp--;
@@ -18116,12 +17774,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6547:1: ( rule__Retention__Group__5__Impl rule__Retention__Group__6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6548:2: rule__Retention__Group__5__Impl rule__Retention__Group__6
             {
-            pushFollow(FOLLOW_rule__Retention__Group__5__Impl_in_rule__Retention__Group__513260);
+            pushFollow(FOLLOW_rule__Retention__Group__5__Impl_in_rule__Retention__Group__513241);
             rule__Retention__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group__6_in_rule__Retention__Group__513263);
+            pushFollow(FOLLOW_rule__Retention__Group__6_in_rule__Retention__Group__513244);
             rule__Retention__Group__6();
 
             state._fsp--;
@@ -18158,7 +17816,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6561:1: 'Condition'
             {
              before(grammarAccess.getRetentionAccess().getConditionKeyword_5()); 
-            match(input,66,FOLLOW_66_in_rule__Retention__Group__5__Impl13291); 
+            match(input,66,FOLLOW_66_in_rule__Retention__Group__5__Impl13272); 
              after(grammarAccess.getRetentionAccess().getConditionKeyword_5()); 
 
             }
@@ -18191,12 +17849,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6578:1: ( rule__Retention__Group__6__Impl rule__Retention__Group__7 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6579:2: rule__Retention__Group__6__Impl rule__Retention__Group__7
             {
-            pushFollow(FOLLOW_rule__Retention__Group__6__Impl_in_rule__Retention__Group__613322);
+            pushFollow(FOLLOW_rule__Retention__Group__6__Impl_in_rule__Retention__Group__613303);
             rule__Retention__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group__7_in_rule__Retention__Group__613325);
+            pushFollow(FOLLOW_rule__Retention__Group__7_in_rule__Retention__Group__613306);
             rule__Retention__Group__7();
 
             state._fsp--;
@@ -18236,7 +17894,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6593:1: ( rule__Retention__ConditionAssignment_6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6593:2: rule__Retention__ConditionAssignment_6
             {
-            pushFollow(FOLLOW_rule__Retention__ConditionAssignment_6_in_rule__Retention__Group__6__Impl13352);
+            pushFollow(FOLLOW_rule__Retention__ConditionAssignment_6_in_rule__Retention__Group__6__Impl13333);
             rule__Retention__ConditionAssignment_6();
 
             state._fsp--;
@@ -18276,12 +17934,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6607:1: ( rule__Retention__Group__7__Impl rule__Retention__Group__8 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6608:2: rule__Retention__Group__7__Impl rule__Retention__Group__8
             {
-            pushFollow(FOLLOW_rule__Retention__Group__7__Impl_in_rule__Retention__Group__713382);
+            pushFollow(FOLLOW_rule__Retention__Group__7__Impl_in_rule__Retention__Group__713363);
             rule__Retention__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group__8_in_rule__Retention__Group__713385);
+            pushFollow(FOLLOW_rule__Retention__Group__8_in_rule__Retention__Group__713366);
             rule__Retention__Group__8();
 
             state._fsp--;
@@ -18319,17 +17977,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getRetentionAccess().getGroup_7()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6622:1: ( rule__Retention__Group_7__0 )?
-            int alt81=2;
-            int LA81_0 = input.LA(1);
+            int alt62=2;
+            int LA62_0 = input.LA(1);
 
-            if ( (LA81_0==78) ) {
-                alt81=1;
+            if ( (LA62_0==78) ) {
+                alt62=1;
             }
-            switch (alt81) {
+            switch (alt62) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6622:2: rule__Retention__Group_7__0
                     {
-                    pushFollow(FOLLOW_rule__Retention__Group_7__0_in_rule__Retention__Group__7__Impl13412);
+                    pushFollow(FOLLOW_rule__Retention__Group_7__0_in_rule__Retention__Group__7__Impl13393);
                     rule__Retention__Group_7__0();
 
                     state._fsp--;
@@ -18372,12 +18030,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6636:1: ( rule__Retention__Group__8__Impl rule__Retention__Group__9 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6637:2: rule__Retention__Group__8__Impl rule__Retention__Group__9
             {
-            pushFollow(FOLLOW_rule__Retention__Group__8__Impl_in_rule__Retention__Group__813443);
+            pushFollow(FOLLOW_rule__Retention__Group__8__Impl_in_rule__Retention__Group__813424);
             rule__Retention__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group__9_in_rule__Retention__Group__813446);
+            pushFollow(FOLLOW_rule__Retention__Group__9_in_rule__Retention__Group__813427);
             rule__Retention__Group__9();
 
             state._fsp--;
@@ -18414,7 +18072,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6650:1: 'Period'
             {
              before(grammarAccess.getRetentionAccess().getPeriodKeyword_8()); 
-            match(input,77,FOLLOW_77_in_rule__Retention__Group__8__Impl13474); 
+            match(input,77,FOLLOW_77_in_rule__Retention__Group__8__Impl13455); 
              after(grammarAccess.getRetentionAccess().getPeriodKeyword_8()); 
 
             }
@@ -18447,12 +18105,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6667:1: ( rule__Retention__Group__9__Impl rule__Retention__Group__10 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6668:2: rule__Retention__Group__9__Impl rule__Retention__Group__10
             {
-            pushFollow(FOLLOW_rule__Retention__Group__9__Impl_in_rule__Retention__Group__913505);
+            pushFollow(FOLLOW_rule__Retention__Group__9__Impl_in_rule__Retention__Group__913486);
             rule__Retention__Group__9__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group__10_in_rule__Retention__Group__913508);
+            pushFollow(FOLLOW_rule__Retention__Group__10_in_rule__Retention__Group__913489);
             rule__Retention__Group__10();
 
             state._fsp--;
@@ -18492,7 +18150,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6682:1: ( rule__Retention__PeriodAssignment_9 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6682:2: rule__Retention__PeriodAssignment_9
             {
-            pushFollow(FOLLOW_rule__Retention__PeriodAssignment_9_in_rule__Retention__Group__9__Impl13535);
+            pushFollow(FOLLOW_rule__Retention__PeriodAssignment_9_in_rule__Retention__Group__9__Impl13516);
             rule__Retention__PeriodAssignment_9();
 
             state._fsp--;
@@ -18532,12 +18190,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6696:1: ( rule__Retention__Group__10__Impl rule__Retention__Group__11 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6697:2: rule__Retention__Group__10__Impl rule__Retention__Group__11
             {
-            pushFollow(FOLLOW_rule__Retention__Group__10__Impl_in_rule__Retention__Group__1013565);
+            pushFollow(FOLLOW_rule__Retention__Group__10__Impl_in_rule__Retention__Group__1013546);
             rule__Retention__Group__10__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group__11_in_rule__Retention__Group__1013568);
+            pushFollow(FOLLOW_rule__Retention__Group__11_in_rule__Retention__Group__1013549);
             rule__Retention__Group__11();
 
             state._fsp--;
@@ -18575,17 +18233,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getRetentionAccess().getGroup_10()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6711:1: ( rule__Retention__Group_10__0 )?
-            int alt82=2;
-            int LA82_0 = input.LA(1);
+            int alt63=2;
+            int LA63_0 = input.LA(1);
 
-            if ( (LA82_0==57) ) {
-                alt82=1;
+            if ( (LA63_0==57) ) {
+                alt63=1;
             }
-            switch (alt82) {
+            switch (alt63) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6711:2: rule__Retention__Group_10__0
                     {
-                    pushFollow(FOLLOW_rule__Retention__Group_10__0_in_rule__Retention__Group__10__Impl13595);
+                    pushFollow(FOLLOW_rule__Retention__Group_10__0_in_rule__Retention__Group__10__Impl13576);
                     rule__Retention__Group_10__0();
 
                     state._fsp--;
@@ -18628,12 +18286,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6725:1: ( rule__Retention__Group__11__Impl rule__Retention__Group__12 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6726:2: rule__Retention__Group__11__Impl rule__Retention__Group__12
             {
-            pushFollow(FOLLOW_rule__Retention__Group__11__Impl_in_rule__Retention__Group__1113626);
+            pushFollow(FOLLOW_rule__Retention__Group__11__Impl_in_rule__Retention__Group__1113607);
             rule__Retention__Group__11__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group__12_in_rule__Retention__Group__1113629);
+            pushFollow(FOLLOW_rule__Retention__Group__12_in_rule__Retention__Group__1113610);
             rule__Retention__Group__12();
 
             state._fsp--;
@@ -18671,17 +18329,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getRetentionAccess().getGroup_11()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6740:1: ( rule__Retention__Group_11__0 )?
-            int alt83=2;
-            int LA83_0 = input.LA(1);
+            int alt64=2;
+            int LA64_0 = input.LA(1);
 
-            if ( (LA83_0==69) ) {
-                alt83=1;
+            if ( (LA64_0==69) ) {
+                alt64=1;
             }
-            switch (alt83) {
+            switch (alt64) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6740:2: rule__Retention__Group_11__0
                     {
-                    pushFollow(FOLLOW_rule__Retention__Group_11__0_in_rule__Retention__Group__11__Impl13656);
+                    pushFollow(FOLLOW_rule__Retention__Group_11__0_in_rule__Retention__Group__11__Impl13637);
                     rule__Retention__Group_11__0();
 
                     state._fsp--;
@@ -18724,12 +18382,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6754:1: ( rule__Retention__Group__12__Impl rule__Retention__Group__13 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6755:2: rule__Retention__Group__12__Impl rule__Retention__Group__13
             {
-            pushFollow(FOLLOW_rule__Retention__Group__12__Impl_in_rule__Retention__Group__1213687);
+            pushFollow(FOLLOW_rule__Retention__Group__12__Impl_in_rule__Retention__Group__1213668);
             rule__Retention__Group__12__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group__13_in_rule__Retention__Group__1213690);
+            pushFollow(FOLLOW_rule__Retention__Group__13_in_rule__Retention__Group__1213671);
             rule__Retention__Group__13();
 
             state._fsp--;
@@ -18767,17 +18425,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getRetentionAccess().getGroup_12()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6769:1: ( rule__Retention__Group_12__0 )?
-            int alt84=2;
-            int LA84_0 = input.LA(1);
+            int alt65=2;
+            int LA65_0 = input.LA(1);
 
-            if ( (LA84_0==70) ) {
-                alt84=1;
+            if ( (LA65_0==70) ) {
+                alt65=1;
             }
-            switch (alt84) {
+            switch (alt65) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6769:2: rule__Retention__Group_12__0
                     {
-                    pushFollow(FOLLOW_rule__Retention__Group_12__0_in_rule__Retention__Group__12__Impl13717);
+                    pushFollow(FOLLOW_rule__Retention__Group_12__0_in_rule__Retention__Group__12__Impl13698);
                     rule__Retention__Group_12__0();
 
                     state._fsp--;
@@ -18820,12 +18478,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6783:1: ( rule__Retention__Group__13__Impl rule__Retention__Group__14 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6784:2: rule__Retention__Group__13__Impl rule__Retention__Group__14
             {
-            pushFollow(FOLLOW_rule__Retention__Group__13__Impl_in_rule__Retention__Group__1313748);
+            pushFollow(FOLLOW_rule__Retention__Group__13__Impl_in_rule__Retention__Group__1313729);
             rule__Retention__Group__13__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group__14_in_rule__Retention__Group__1313751);
+            pushFollow(FOLLOW_rule__Retention__Group__14_in_rule__Retention__Group__1313732);
             rule__Retention__Group__14();
 
             state._fsp--;
@@ -18862,7 +18520,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6797:1: 'Modality'
             {
              before(grammarAccess.getRetentionAccess().getModalityKeyword_13()); 
-            match(input,67,FOLLOW_67_in_rule__Retention__Group__13__Impl13779); 
+            match(input,67,FOLLOW_67_in_rule__Retention__Group__13__Impl13760); 
              after(grammarAccess.getRetentionAccess().getModalityKeyword_13()); 
 
             }
@@ -18895,12 +18553,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6814:1: ( rule__Retention__Group__14__Impl rule__Retention__Group__15 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6815:2: rule__Retention__Group__14__Impl rule__Retention__Group__15
             {
-            pushFollow(FOLLOW_rule__Retention__Group__14__Impl_in_rule__Retention__Group__1413810);
+            pushFollow(FOLLOW_rule__Retention__Group__14__Impl_in_rule__Retention__Group__1413791);
             rule__Retention__Group__14__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group__15_in_rule__Retention__Group__1413813);
+            pushFollow(FOLLOW_rule__Retention__Group__15_in_rule__Retention__Group__1413794);
             rule__Retention__Group__15();
 
             state._fsp--;
@@ -18940,7 +18598,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6829:1: ( rule__Retention__ModalityAssignment_14 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6829:2: rule__Retention__ModalityAssignment_14
             {
-            pushFollow(FOLLOW_rule__Retention__ModalityAssignment_14_in_rule__Retention__Group__14__Impl13840);
+            pushFollow(FOLLOW_rule__Retention__ModalityAssignment_14_in_rule__Retention__Group__14__Impl13821);
             rule__Retention__ModalityAssignment_14();
 
             state._fsp--;
@@ -18980,7 +18638,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6843:1: ( rule__Retention__Group__15__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6844:2: rule__Retention__Group__15__Impl
             {
-            pushFollow(FOLLOW_rule__Retention__Group__15__Impl_in_rule__Retention__Group__1513870);
+            pushFollow(FOLLOW_rule__Retention__Group__15__Impl_in_rule__Retention__Group__1513851);
             rule__Retention__Group__15__Impl();
 
             state._fsp--;
@@ -19017,7 +18675,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6856:1: '}'
             {
              before(grammarAccess.getRetentionAccess().getRightCurlyBracketKeyword_15()); 
-            match(input,41,FOLLOW_41_in_rule__Retention__Group__15__Impl13898); 
+            match(input,41,FOLLOW_41_in_rule__Retention__Group__15__Impl13879); 
              after(grammarAccess.getRetentionAccess().getRightCurlyBracketKeyword_15()); 
 
             }
@@ -19050,12 +18708,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6905:1: ( rule__Retention__Group_7__0__Impl rule__Retention__Group_7__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6906:2: rule__Retention__Group_7__0__Impl rule__Retention__Group_7__1
             {
-            pushFollow(FOLLOW_rule__Retention__Group_7__0__Impl_in_rule__Retention__Group_7__013961);
+            pushFollow(FOLLOW_rule__Retention__Group_7__0__Impl_in_rule__Retention__Group_7__013942);
             rule__Retention__Group_7__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group_7__1_in_rule__Retention__Group_7__013964);
+            pushFollow(FOLLOW_rule__Retention__Group_7__1_in_rule__Retention__Group_7__013945);
             rule__Retention__Group_7__1();
 
             state._fsp--;
@@ -19092,7 +18750,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6919:1: 'PartOf Retention'
             {
              before(grammarAccess.getRetentionAccess().getPartOfRetentionKeyword_7_0()); 
-            match(input,78,FOLLOW_78_in_rule__Retention__Group_7__0__Impl13992); 
+            match(input,78,FOLLOW_78_in_rule__Retention__Group_7__0__Impl13973); 
              after(grammarAccess.getRetentionAccess().getPartOfRetentionKeyword_7_0()); 
 
             }
@@ -19125,7 +18783,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6936:1: ( rule__Retention__Group_7__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6937:2: rule__Retention__Group_7__1__Impl
             {
-            pushFollow(FOLLOW_rule__Retention__Group_7__1__Impl_in_rule__Retention__Group_7__114023);
+            pushFollow(FOLLOW_rule__Retention__Group_7__1__Impl_in_rule__Retention__Group_7__114004);
             rule__Retention__Group_7__1__Impl();
 
             state._fsp--;
@@ -19165,7 +18823,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6950:1: ( rule__Retention__PartRetentionAssignment_7_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6950:2: rule__Retention__PartRetentionAssignment_7_1
             {
-            pushFollow(FOLLOW_rule__Retention__PartRetentionAssignment_7_1_in_rule__Retention__Group_7__1__Impl14050);
+            pushFollow(FOLLOW_rule__Retention__PartRetentionAssignment_7_1_in_rule__Retention__Group_7__1__Impl14031);
             rule__Retention__PartRetentionAssignment_7_1();
 
             state._fsp--;
@@ -19205,12 +18863,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6968:1: ( rule__Retention__Group_10__0__Impl rule__Retention__Group_10__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6969:2: rule__Retention__Group_10__0__Impl rule__Retention__Group_10__1
             {
-            pushFollow(FOLLOW_rule__Retention__Group_10__0__Impl_in_rule__Retention__Group_10__014084);
+            pushFollow(FOLLOW_rule__Retention__Group_10__0__Impl_in_rule__Retention__Group_10__014065);
             rule__Retention__Group_10__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group_10__1_in_rule__Retention__Group_10__014087);
+            pushFollow(FOLLOW_rule__Retention__Group_10__1_in_rule__Retention__Group_10__014068);
             rule__Retention__Group_10__1();
 
             state._fsp--;
@@ -19247,7 +18905,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6982:1: 'RefersTo PrivateData'
             {
              before(grammarAccess.getRetentionAccess().getRefersToPrivateDataKeyword_10_0()); 
-            match(input,57,FOLLOW_57_in_rule__Retention__Group_10__0__Impl14115); 
+            match(input,57,FOLLOW_57_in_rule__Retention__Group_10__0__Impl14096); 
              after(grammarAccess.getRetentionAccess().getRefersToPrivateDataKeyword_10_0()); 
 
             }
@@ -19280,7 +18938,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:6999:1: ( rule__Retention__Group_10__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7000:2: rule__Retention__Group_10__1__Impl
             {
-            pushFollow(FOLLOW_rule__Retention__Group_10__1__Impl_in_rule__Retention__Group_10__114146);
+            pushFollow(FOLLOW_rule__Retention__Group_10__1__Impl_in_rule__Retention__Group_10__114127);
             rule__Retention__Group_10__1__Impl();
 
             state._fsp--;
@@ -19320,7 +18978,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7013:1: ( rule__Retention__Alternatives_10_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7013:2: rule__Retention__Alternatives_10_1
             {
-            pushFollow(FOLLOW_rule__Retention__Alternatives_10_1_in_rule__Retention__Group_10__1__Impl14173);
+            pushFollow(FOLLOW_rule__Retention__Alternatives_10_1_in_rule__Retention__Group_10__1__Impl14154);
             rule__Retention__Alternatives_10_1();
 
             state._fsp--;
@@ -19360,12 +19018,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7031:1: ( rule__Retention__Group_11__0__Impl rule__Retention__Group_11__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7032:2: rule__Retention__Group_11__0__Impl rule__Retention__Group_11__1
             {
-            pushFollow(FOLLOW_rule__Retention__Group_11__0__Impl_in_rule__Retention__Group_11__014207);
+            pushFollow(FOLLOW_rule__Retention__Group_11__0__Impl_in_rule__Retention__Group_11__014188);
             rule__Retention__Group_11__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group_11__1_in_rule__Retention__Group_11__014210);
+            pushFollow(FOLLOW_rule__Retention__Group_11__1_in_rule__Retention__Group_11__014191);
             rule__Retention__Group_11__1();
 
             state._fsp--;
@@ -19402,7 +19060,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7045:1: 'RefersTo Service'
             {
              before(grammarAccess.getRetentionAccess().getRefersToServiceKeyword_11_0()); 
-            match(input,69,FOLLOW_69_in_rule__Retention__Group_11__0__Impl14238); 
+            match(input,69,FOLLOW_69_in_rule__Retention__Group_11__0__Impl14219); 
              after(grammarAccess.getRetentionAccess().getRefersToServiceKeyword_11_0()); 
 
             }
@@ -19435,7 +19093,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7062:1: ( rule__Retention__Group_11__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7063:2: rule__Retention__Group_11__1__Impl
             {
-            pushFollow(FOLLOW_rule__Retention__Group_11__1__Impl_in_rule__Retention__Group_11__114269);
+            pushFollow(FOLLOW_rule__Retention__Group_11__1__Impl_in_rule__Retention__Group_11__114250);
             rule__Retention__Group_11__1__Impl();
 
             state._fsp--;
@@ -19475,7 +19133,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7076:1: ( rule__Retention__Alternatives_11_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7076:2: rule__Retention__Alternatives_11_1
             {
-            pushFollow(FOLLOW_rule__Retention__Alternatives_11_1_in_rule__Retention__Group_11__1__Impl14296);
+            pushFollow(FOLLOW_rule__Retention__Alternatives_11_1_in_rule__Retention__Group_11__1__Impl14277);
             rule__Retention__Alternatives_11_1();
 
             state._fsp--;
@@ -19515,12 +19173,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7094:1: ( rule__Retention__Group_12__0__Impl rule__Retention__Group_12__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7095:2: rule__Retention__Group_12__0__Impl rule__Retention__Group_12__1
             {
-            pushFollow(FOLLOW_rule__Retention__Group_12__0__Impl_in_rule__Retention__Group_12__014330);
+            pushFollow(FOLLOW_rule__Retention__Group_12__0__Impl_in_rule__Retention__Group_12__014311);
             rule__Retention__Group_12__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Retention__Group_12__1_in_rule__Retention__Group_12__014333);
+            pushFollow(FOLLOW_rule__Retention__Group_12__1_in_rule__Retention__Group_12__014314);
             rule__Retention__Group_12__1();
 
             state._fsp--;
@@ -19557,7 +19215,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7108:1: 'RefersTo Enforcement'
             {
              before(grammarAccess.getRetentionAccess().getRefersToEnforcementKeyword_12_0()); 
-            match(input,70,FOLLOW_70_in_rule__Retention__Group_12__0__Impl14361); 
+            match(input,70,FOLLOW_70_in_rule__Retention__Group_12__0__Impl14342); 
              after(grammarAccess.getRetentionAccess().getRefersToEnforcementKeyword_12_0()); 
 
             }
@@ -19590,7 +19248,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7125:1: ( rule__Retention__Group_12__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7126:2: rule__Retention__Group_12__1__Impl
             {
-            pushFollow(FOLLOW_rule__Retention__Group_12__1__Impl_in_rule__Retention__Group_12__114392);
+            pushFollow(FOLLOW_rule__Retention__Group_12__1__Impl_in_rule__Retention__Group_12__114373);
             rule__Retention__Group_12__1__Impl();
 
             state._fsp--;
@@ -19630,7 +19288,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7139:1: ( rule__Retention__Alternatives_12_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7139:2: rule__Retention__Alternatives_12_1
             {
-            pushFollow(FOLLOW_rule__Retention__Alternatives_12_1_in_rule__Retention__Group_12__1__Impl14419);
+            pushFollow(FOLLOW_rule__Retention__Alternatives_12_1_in_rule__Retention__Group_12__1__Impl14400);
             rule__Retention__Alternatives_12_1();
 
             state._fsp--;
@@ -19670,12 +19328,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7157:1: ( rule__Usage__Group__0__Impl rule__Usage__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7158:2: rule__Usage__Group__0__Impl rule__Usage__Group__1
             {
-            pushFollow(FOLLOW_rule__Usage__Group__0__Impl_in_rule__Usage__Group__014453);
+            pushFollow(FOLLOW_rule__Usage__Group__0__Impl_in_rule__Usage__Group__014434);
             rule__Usage__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Usage__Group__1_in_rule__Usage__Group__014456);
+            pushFollow(FOLLOW_rule__Usage__Group__1_in_rule__Usage__Group__014437);
             rule__Usage__Group__1();
 
             state._fsp--;
@@ -19712,7 +19370,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7171:1: 'Usage'
             {
              before(grammarAccess.getUsageAccess().getUsageKeyword_0()); 
-            match(input,79,FOLLOW_79_in_rule__Usage__Group__0__Impl14484); 
+            match(input,79,FOLLOW_79_in_rule__Usage__Group__0__Impl14465); 
              after(grammarAccess.getUsageAccess().getUsageKeyword_0()); 
 
             }
@@ -19745,12 +19403,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7188:1: ( rule__Usage__Group__1__Impl rule__Usage__Group__2 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7189:2: rule__Usage__Group__1__Impl rule__Usage__Group__2
             {
-            pushFollow(FOLLOW_rule__Usage__Group__1__Impl_in_rule__Usage__Group__114515);
+            pushFollow(FOLLOW_rule__Usage__Group__1__Impl_in_rule__Usage__Group__114496);
             rule__Usage__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Usage__Group__2_in_rule__Usage__Group__114518);
+            pushFollow(FOLLOW_rule__Usage__Group__2_in_rule__Usage__Group__114499);
             rule__Usage__Group__2();
 
             state._fsp--;
@@ -19790,7 +19448,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7203:1: ( rule__Usage__NameAssignment_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7203:2: rule__Usage__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Usage__NameAssignment_1_in_rule__Usage__Group__1__Impl14545);
+            pushFollow(FOLLOW_rule__Usage__NameAssignment_1_in_rule__Usage__Group__1__Impl14526);
             rule__Usage__NameAssignment_1();
 
             state._fsp--;
@@ -19830,12 +19488,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7217:1: ( rule__Usage__Group__2__Impl rule__Usage__Group__3 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7218:2: rule__Usage__Group__2__Impl rule__Usage__Group__3
             {
-            pushFollow(FOLLOW_rule__Usage__Group__2__Impl_in_rule__Usage__Group__214575);
+            pushFollow(FOLLOW_rule__Usage__Group__2__Impl_in_rule__Usage__Group__214556);
             rule__Usage__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Usage__Group__3_in_rule__Usage__Group__214578);
+            pushFollow(FOLLOW_rule__Usage__Group__3_in_rule__Usage__Group__214559);
             rule__Usage__Group__3();
 
             state._fsp--;
@@ -19872,7 +19530,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7231:1: '{'
             {
              before(grammarAccess.getUsageAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,40,FOLLOW_40_in_rule__Usage__Group__2__Impl14606); 
+            match(input,40,FOLLOW_40_in_rule__Usage__Group__2__Impl14587); 
              after(grammarAccess.getUsageAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -19905,12 +19563,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7248:1: ( rule__Usage__Group__3__Impl rule__Usage__Group__4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7249:2: rule__Usage__Group__3__Impl rule__Usage__Group__4
             {
-            pushFollow(FOLLOW_rule__Usage__Group__3__Impl_in_rule__Usage__Group__314637);
+            pushFollow(FOLLOW_rule__Usage__Group__3__Impl_in_rule__Usage__Group__314618);
             rule__Usage__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Usage__Group__4_in_rule__Usage__Group__314640);
+            pushFollow(FOLLOW_rule__Usage__Group__4_in_rule__Usage__Group__314621);
             rule__Usage__Group__4();
 
             state._fsp--;
@@ -19947,7 +19605,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7262:1: 'Description'
             {
              before(grammarAccess.getUsageAccess().getDescriptionKeyword_3()); 
-            match(input,47,FOLLOW_47_in_rule__Usage__Group__3__Impl14668); 
+            match(input,47,FOLLOW_47_in_rule__Usage__Group__3__Impl14649); 
              after(grammarAccess.getUsageAccess().getDescriptionKeyword_3()); 
 
             }
@@ -19980,12 +19638,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7279:1: ( rule__Usage__Group__4__Impl rule__Usage__Group__5 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7280:2: rule__Usage__Group__4__Impl rule__Usage__Group__5
             {
-            pushFollow(FOLLOW_rule__Usage__Group__4__Impl_in_rule__Usage__Group__414699);
+            pushFollow(FOLLOW_rule__Usage__Group__4__Impl_in_rule__Usage__Group__414680);
             rule__Usage__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Usage__Group__5_in_rule__Usage__Group__414702);
+            pushFollow(FOLLOW_rule__Usage__Group__5_in_rule__Usage__Group__414683);
             rule__Usage__Group__5();
 
             state._fsp--;
@@ -20025,7 +19683,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7294:1: ( rule__Usage__DescriptionAssignment_4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7294:2: rule__Usage__DescriptionAssignment_4
             {
-            pushFollow(FOLLOW_rule__Usage__DescriptionAssignment_4_in_rule__Usage__Group__4__Impl14729);
+            pushFollow(FOLLOW_rule__Usage__DescriptionAssignment_4_in_rule__Usage__Group__4__Impl14710);
             rule__Usage__DescriptionAssignment_4();
 
             state._fsp--;
@@ -20065,12 +19723,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7308:1: ( rule__Usage__Group__5__Impl rule__Usage__Group__6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7309:2: rule__Usage__Group__5__Impl rule__Usage__Group__6
             {
-            pushFollow(FOLLOW_rule__Usage__Group__5__Impl_in_rule__Usage__Group__514759);
+            pushFollow(FOLLOW_rule__Usage__Group__5__Impl_in_rule__Usage__Group__514740);
             rule__Usage__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Usage__Group__6_in_rule__Usage__Group__514762);
+            pushFollow(FOLLOW_rule__Usage__Group__6_in_rule__Usage__Group__514743);
             rule__Usage__Group__6();
 
             state._fsp--;
@@ -20107,7 +19765,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7322:1: 'Condition'
             {
              before(grammarAccess.getUsageAccess().getConditionKeyword_5()); 
-            match(input,66,FOLLOW_66_in_rule__Usage__Group__5__Impl14790); 
+            match(input,66,FOLLOW_66_in_rule__Usage__Group__5__Impl14771); 
              after(grammarAccess.getUsageAccess().getConditionKeyword_5()); 
 
             }
@@ -20140,12 +19798,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7339:1: ( rule__Usage__Group__6__Impl rule__Usage__Group__7 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7340:2: rule__Usage__Group__6__Impl rule__Usage__Group__7
             {
-            pushFollow(FOLLOW_rule__Usage__Group__6__Impl_in_rule__Usage__Group__614821);
+            pushFollow(FOLLOW_rule__Usage__Group__6__Impl_in_rule__Usage__Group__614802);
             rule__Usage__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Usage__Group__7_in_rule__Usage__Group__614824);
+            pushFollow(FOLLOW_rule__Usage__Group__7_in_rule__Usage__Group__614805);
             rule__Usage__Group__7();
 
             state._fsp--;
@@ -20185,7 +19843,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7354:1: ( rule__Usage__ConditionAssignment_6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7354:2: rule__Usage__ConditionAssignment_6
             {
-            pushFollow(FOLLOW_rule__Usage__ConditionAssignment_6_in_rule__Usage__Group__6__Impl14851);
+            pushFollow(FOLLOW_rule__Usage__ConditionAssignment_6_in_rule__Usage__Group__6__Impl14832);
             rule__Usage__ConditionAssignment_6();
 
             state._fsp--;
@@ -20225,12 +19883,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7368:1: ( rule__Usage__Group__7__Impl rule__Usage__Group__8 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7369:2: rule__Usage__Group__7__Impl rule__Usage__Group__8
             {
-            pushFollow(FOLLOW_rule__Usage__Group__7__Impl_in_rule__Usage__Group__714881);
+            pushFollow(FOLLOW_rule__Usage__Group__7__Impl_in_rule__Usage__Group__714862);
             rule__Usage__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Usage__Group__8_in_rule__Usage__Group__714884);
+            pushFollow(FOLLOW_rule__Usage__Group__8_in_rule__Usage__Group__714865);
             rule__Usage__Group__8();
 
             state._fsp--;
@@ -20268,17 +19926,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getUsageAccess().getGroup_7()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7383:1: ( rule__Usage__Group_7__0 )?
-            int alt85=2;
-            int LA85_0 = input.LA(1);
+            int alt66=2;
+            int LA66_0 = input.LA(1);
 
-            if ( (LA85_0==80) ) {
-                alt85=1;
+            if ( (LA66_0==80) ) {
+                alt66=1;
             }
-            switch (alt85) {
+            switch (alt66) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7383:2: rule__Usage__Group_7__0
                     {
-                    pushFollow(FOLLOW_rule__Usage__Group_7__0_in_rule__Usage__Group__7__Impl14911);
+                    pushFollow(FOLLOW_rule__Usage__Group_7__0_in_rule__Usage__Group__7__Impl14892);
                     rule__Usage__Group_7__0();
 
                     state._fsp--;
@@ -20321,12 +19979,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7397:1: ( rule__Usage__Group__8__Impl rule__Usage__Group__9 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7398:2: rule__Usage__Group__8__Impl rule__Usage__Group__9
             {
-            pushFollow(FOLLOW_rule__Usage__Group__8__Impl_in_rule__Usage__Group__814942);
+            pushFollow(FOLLOW_rule__Usage__Group__8__Impl_in_rule__Usage__Group__814923);
             rule__Usage__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Usage__Group__9_in_rule__Usage__Group__814945);
+            pushFollow(FOLLOW_rule__Usage__Group__9_in_rule__Usage__Group__814926);
             rule__Usage__Group__9();
 
             state._fsp--;
@@ -20364,17 +20022,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getUsageAccess().getGroup_8()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7412:1: ( rule__Usage__Group_8__0 )?
-            int alt86=2;
-            int LA86_0 = input.LA(1);
+            int alt67=2;
+            int LA67_0 = input.LA(1);
 
-            if ( (LA86_0==57) ) {
-                alt86=1;
+            if ( (LA67_0==57) ) {
+                alt67=1;
             }
-            switch (alt86) {
+            switch (alt67) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7412:2: rule__Usage__Group_8__0
                     {
-                    pushFollow(FOLLOW_rule__Usage__Group_8__0_in_rule__Usage__Group__8__Impl14972);
+                    pushFollow(FOLLOW_rule__Usage__Group_8__0_in_rule__Usage__Group__8__Impl14953);
                     rule__Usage__Group_8__0();
 
                     state._fsp--;
@@ -20417,12 +20075,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7426:1: ( rule__Usage__Group__9__Impl rule__Usage__Group__10 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7427:2: rule__Usage__Group__9__Impl rule__Usage__Group__10
             {
-            pushFollow(FOLLOW_rule__Usage__Group__9__Impl_in_rule__Usage__Group__915003);
+            pushFollow(FOLLOW_rule__Usage__Group__9__Impl_in_rule__Usage__Group__914984);
             rule__Usage__Group__9__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Usage__Group__10_in_rule__Usage__Group__915006);
+            pushFollow(FOLLOW_rule__Usage__Group__10_in_rule__Usage__Group__914987);
             rule__Usage__Group__10();
 
             state._fsp--;
@@ -20460,17 +20118,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getUsageAccess().getGroup_9()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7441:1: ( rule__Usage__Group_9__0 )?
-            int alt87=2;
-            int LA87_0 = input.LA(1);
+            int alt68=2;
+            int LA68_0 = input.LA(1);
 
-            if ( (LA87_0==69) ) {
-                alt87=1;
+            if ( (LA68_0==69) ) {
+                alt68=1;
             }
-            switch (alt87) {
+            switch (alt68) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7441:2: rule__Usage__Group_9__0
                     {
-                    pushFollow(FOLLOW_rule__Usage__Group_9__0_in_rule__Usage__Group__9__Impl15033);
+                    pushFollow(FOLLOW_rule__Usage__Group_9__0_in_rule__Usage__Group__9__Impl15014);
                     rule__Usage__Group_9__0();
 
                     state._fsp--;
@@ -20513,12 +20171,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7455:1: ( rule__Usage__Group__10__Impl rule__Usage__Group__11 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7456:2: rule__Usage__Group__10__Impl rule__Usage__Group__11
             {
-            pushFollow(FOLLOW_rule__Usage__Group__10__Impl_in_rule__Usage__Group__1015064);
+            pushFollow(FOLLOW_rule__Usage__Group__10__Impl_in_rule__Usage__Group__1015045);
             rule__Usage__Group__10__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Usage__Group__11_in_rule__Usage__Group__1015067);
+            pushFollow(FOLLOW_rule__Usage__Group__11_in_rule__Usage__Group__1015048);
             rule__Usage__Group__11();
 
             state._fsp--;
@@ -20556,17 +20214,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getUsageAccess().getGroup_10()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7470:1: ( rule__Usage__Group_10__0 )?
-            int alt88=2;
-            int LA88_0 = input.LA(1);
+            int alt69=2;
+            int LA69_0 = input.LA(1);
 
-            if ( (LA88_0==70) ) {
-                alt88=1;
+            if ( (LA69_0==70) ) {
+                alt69=1;
             }
-            switch (alt88) {
+            switch (alt69) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7470:2: rule__Usage__Group_10__0
                     {
-                    pushFollow(FOLLOW_rule__Usage__Group_10__0_in_rule__Usage__Group__10__Impl15094);
+                    pushFollow(FOLLOW_rule__Usage__Group_10__0_in_rule__Usage__Group__10__Impl15075);
                     rule__Usage__Group_10__0();
 
                     state._fsp--;
@@ -20609,12 +20267,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7484:1: ( rule__Usage__Group__11__Impl rule__Usage__Group__12 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7485:2: rule__Usage__Group__11__Impl rule__Usage__Group__12
             {
-            pushFollow(FOLLOW_rule__Usage__Group__11__Impl_in_rule__Usage__Group__1115125);
+            pushFollow(FOLLOW_rule__Usage__Group__11__Impl_in_rule__Usage__Group__1115106);
             rule__Usage__Group__11__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Usage__Group__12_in_rule__Usage__Group__1115128);
+            pushFollow(FOLLOW_rule__Usage__Group__12_in_rule__Usage__Group__1115109);
             rule__Usage__Group__12();
 
             state._fsp--;
@@ -20651,7 +20309,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7498:1: 'Modality'
             {
              before(grammarAccess.getUsageAccess().getModalityKeyword_11()); 
-            match(input,67,FOLLOW_67_in_rule__Usage__Group__11__Impl15156); 
+            match(input,67,FOLLOW_67_in_rule__Usage__Group__11__Impl15137); 
              after(grammarAccess.getUsageAccess().getModalityKeyword_11()); 
 
             }
@@ -20684,12 +20342,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7515:1: ( rule__Usage__Group__12__Impl rule__Usage__Group__13 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7516:2: rule__Usage__Group__12__Impl rule__Usage__Group__13
             {
-            pushFollow(FOLLOW_rule__Usage__Group__12__Impl_in_rule__Usage__Group__1215187);
+            pushFollow(FOLLOW_rule__Usage__Group__12__Impl_in_rule__Usage__Group__1215168);
             rule__Usage__Group__12__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Usage__Group__13_in_rule__Usage__Group__1215190);
+            pushFollow(FOLLOW_rule__Usage__Group__13_in_rule__Usage__Group__1215171);
             rule__Usage__Group__13();
 
             state._fsp--;
@@ -20729,7 +20387,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7530:1: ( rule__Usage__ModalityAssignment_12 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7530:2: rule__Usage__ModalityAssignment_12
             {
-            pushFollow(FOLLOW_rule__Usage__ModalityAssignment_12_in_rule__Usage__Group__12__Impl15217);
+            pushFollow(FOLLOW_rule__Usage__ModalityAssignment_12_in_rule__Usage__Group__12__Impl15198);
             rule__Usage__ModalityAssignment_12();
 
             state._fsp--;
@@ -20769,7 +20427,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7544:1: ( rule__Usage__Group__13__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7545:2: rule__Usage__Group__13__Impl
             {
-            pushFollow(FOLLOW_rule__Usage__Group__13__Impl_in_rule__Usage__Group__1315247);
+            pushFollow(FOLLOW_rule__Usage__Group__13__Impl_in_rule__Usage__Group__1315228);
             rule__Usage__Group__13__Impl();
 
             state._fsp--;
@@ -20806,7 +20464,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7557:1: '}'
             {
              before(grammarAccess.getUsageAccess().getRightCurlyBracketKeyword_13()); 
-            match(input,41,FOLLOW_41_in_rule__Usage__Group__13__Impl15275); 
+            match(input,41,FOLLOW_41_in_rule__Usage__Group__13__Impl15256); 
              after(grammarAccess.getUsageAccess().getRightCurlyBracketKeyword_13()); 
 
             }
@@ -20839,12 +20497,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7602:1: ( rule__Usage__Group_7__0__Impl rule__Usage__Group_7__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7603:2: rule__Usage__Group_7__0__Impl rule__Usage__Group_7__1
             {
-            pushFollow(FOLLOW_rule__Usage__Group_7__0__Impl_in_rule__Usage__Group_7__015334);
+            pushFollow(FOLLOW_rule__Usage__Group_7__0__Impl_in_rule__Usage__Group_7__015315);
             rule__Usage__Group_7__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Usage__Group_7__1_in_rule__Usage__Group_7__015337);
+            pushFollow(FOLLOW_rule__Usage__Group_7__1_in_rule__Usage__Group_7__015318);
             rule__Usage__Group_7__1();
 
             state._fsp--;
@@ -20881,7 +20539,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7616:1: 'PartOf Usage'
             {
              before(grammarAccess.getUsageAccess().getPartOfUsageKeyword_7_0()); 
-            match(input,80,FOLLOW_80_in_rule__Usage__Group_7__0__Impl15365); 
+            match(input,80,FOLLOW_80_in_rule__Usage__Group_7__0__Impl15346); 
              after(grammarAccess.getUsageAccess().getPartOfUsageKeyword_7_0()); 
 
             }
@@ -20914,7 +20572,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7633:1: ( rule__Usage__Group_7__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7634:2: rule__Usage__Group_7__1__Impl
             {
-            pushFollow(FOLLOW_rule__Usage__Group_7__1__Impl_in_rule__Usage__Group_7__115396);
+            pushFollow(FOLLOW_rule__Usage__Group_7__1__Impl_in_rule__Usage__Group_7__115377);
             rule__Usage__Group_7__1__Impl();
 
             state._fsp--;
@@ -20954,7 +20612,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7647:1: ( rule__Usage__PartUsageAssignment_7_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7647:2: rule__Usage__PartUsageAssignment_7_1
             {
-            pushFollow(FOLLOW_rule__Usage__PartUsageAssignment_7_1_in_rule__Usage__Group_7__1__Impl15423);
+            pushFollow(FOLLOW_rule__Usage__PartUsageAssignment_7_1_in_rule__Usage__Group_7__1__Impl15404);
             rule__Usage__PartUsageAssignment_7_1();
 
             state._fsp--;
@@ -20994,12 +20652,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7665:1: ( rule__Usage__Group_8__0__Impl rule__Usage__Group_8__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7666:2: rule__Usage__Group_8__0__Impl rule__Usage__Group_8__1
             {
-            pushFollow(FOLLOW_rule__Usage__Group_8__0__Impl_in_rule__Usage__Group_8__015457);
+            pushFollow(FOLLOW_rule__Usage__Group_8__0__Impl_in_rule__Usage__Group_8__015438);
             rule__Usage__Group_8__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Usage__Group_8__1_in_rule__Usage__Group_8__015460);
+            pushFollow(FOLLOW_rule__Usage__Group_8__1_in_rule__Usage__Group_8__015441);
             rule__Usage__Group_8__1();
 
             state._fsp--;
@@ -21036,7 +20694,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7679:1: 'RefersTo PrivateData'
             {
              before(grammarAccess.getUsageAccess().getRefersToPrivateDataKeyword_8_0()); 
-            match(input,57,FOLLOW_57_in_rule__Usage__Group_8__0__Impl15488); 
+            match(input,57,FOLLOW_57_in_rule__Usage__Group_8__0__Impl15469); 
              after(grammarAccess.getUsageAccess().getRefersToPrivateDataKeyword_8_0()); 
 
             }
@@ -21069,7 +20727,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7696:1: ( rule__Usage__Group_8__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7697:2: rule__Usage__Group_8__1__Impl
             {
-            pushFollow(FOLLOW_rule__Usage__Group_8__1__Impl_in_rule__Usage__Group_8__115519);
+            pushFollow(FOLLOW_rule__Usage__Group_8__1__Impl_in_rule__Usage__Group_8__115500);
             rule__Usage__Group_8__1__Impl();
 
             state._fsp--;
@@ -21109,7 +20767,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7710:1: ( rule__Usage__Alternatives_8_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7710:2: rule__Usage__Alternatives_8_1
             {
-            pushFollow(FOLLOW_rule__Usage__Alternatives_8_1_in_rule__Usage__Group_8__1__Impl15546);
+            pushFollow(FOLLOW_rule__Usage__Alternatives_8_1_in_rule__Usage__Group_8__1__Impl15527);
             rule__Usage__Alternatives_8_1();
 
             state._fsp--;
@@ -21149,12 +20807,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7728:1: ( rule__Usage__Group_9__0__Impl rule__Usage__Group_9__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7729:2: rule__Usage__Group_9__0__Impl rule__Usage__Group_9__1
             {
-            pushFollow(FOLLOW_rule__Usage__Group_9__0__Impl_in_rule__Usage__Group_9__015580);
+            pushFollow(FOLLOW_rule__Usage__Group_9__0__Impl_in_rule__Usage__Group_9__015561);
             rule__Usage__Group_9__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Usage__Group_9__1_in_rule__Usage__Group_9__015583);
+            pushFollow(FOLLOW_rule__Usage__Group_9__1_in_rule__Usage__Group_9__015564);
             rule__Usage__Group_9__1();
 
             state._fsp--;
@@ -21191,7 +20849,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7742:1: 'RefersTo Service'
             {
              before(grammarAccess.getUsageAccess().getRefersToServiceKeyword_9_0()); 
-            match(input,69,FOLLOW_69_in_rule__Usage__Group_9__0__Impl15611); 
+            match(input,69,FOLLOW_69_in_rule__Usage__Group_9__0__Impl15592); 
              after(grammarAccess.getUsageAccess().getRefersToServiceKeyword_9_0()); 
 
             }
@@ -21224,7 +20882,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7759:1: ( rule__Usage__Group_9__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7760:2: rule__Usage__Group_9__1__Impl
             {
-            pushFollow(FOLLOW_rule__Usage__Group_9__1__Impl_in_rule__Usage__Group_9__115642);
+            pushFollow(FOLLOW_rule__Usage__Group_9__1__Impl_in_rule__Usage__Group_9__115623);
             rule__Usage__Group_9__1__Impl();
 
             state._fsp--;
@@ -21264,7 +20922,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7773:1: ( rule__Usage__Alternatives_9_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7773:2: rule__Usage__Alternatives_9_1
             {
-            pushFollow(FOLLOW_rule__Usage__Alternatives_9_1_in_rule__Usage__Group_9__1__Impl15669);
+            pushFollow(FOLLOW_rule__Usage__Alternatives_9_1_in_rule__Usage__Group_9__1__Impl15650);
             rule__Usage__Alternatives_9_1();
 
             state._fsp--;
@@ -21304,12 +20962,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7791:1: ( rule__Usage__Group_10__0__Impl rule__Usage__Group_10__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7792:2: rule__Usage__Group_10__0__Impl rule__Usage__Group_10__1
             {
-            pushFollow(FOLLOW_rule__Usage__Group_10__0__Impl_in_rule__Usage__Group_10__015703);
+            pushFollow(FOLLOW_rule__Usage__Group_10__0__Impl_in_rule__Usage__Group_10__015684);
             rule__Usage__Group_10__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Usage__Group_10__1_in_rule__Usage__Group_10__015706);
+            pushFollow(FOLLOW_rule__Usage__Group_10__1_in_rule__Usage__Group_10__015687);
             rule__Usage__Group_10__1();
 
             state._fsp--;
@@ -21346,7 +21004,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7805:1: 'RefersTo Enforcement'
             {
              before(grammarAccess.getUsageAccess().getRefersToEnforcementKeyword_10_0()); 
-            match(input,70,FOLLOW_70_in_rule__Usage__Group_10__0__Impl15734); 
+            match(input,70,FOLLOW_70_in_rule__Usage__Group_10__0__Impl15715); 
              after(grammarAccess.getUsageAccess().getRefersToEnforcementKeyword_10_0()); 
 
             }
@@ -21379,7 +21037,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7822:1: ( rule__Usage__Group_10__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7823:2: rule__Usage__Group_10__1__Impl
             {
-            pushFollow(FOLLOW_rule__Usage__Group_10__1__Impl_in_rule__Usage__Group_10__115765);
+            pushFollow(FOLLOW_rule__Usage__Group_10__1__Impl_in_rule__Usage__Group_10__115746);
             rule__Usage__Group_10__1__Impl();
 
             state._fsp--;
@@ -21419,7 +21077,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7836:1: ( rule__Usage__Alternatives_10_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7836:2: rule__Usage__Alternatives_10_1
             {
-            pushFollow(FOLLOW_rule__Usage__Alternatives_10_1_in_rule__Usage__Group_10__1__Impl15792);
+            pushFollow(FOLLOW_rule__Usage__Alternatives_10_1_in_rule__Usage__Group_10__1__Impl15773);
             rule__Usage__Alternatives_10_1();
 
             state._fsp--;
@@ -21459,12 +21117,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7854:1: ( rule__Informative__Group__0__Impl rule__Informative__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7855:2: rule__Informative__Group__0__Impl rule__Informative__Group__1
             {
-            pushFollow(FOLLOW_rule__Informative__Group__0__Impl_in_rule__Informative__Group__015826);
+            pushFollow(FOLLOW_rule__Informative__Group__0__Impl_in_rule__Informative__Group__015807);
             rule__Informative__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Informative__Group__1_in_rule__Informative__Group__015829);
+            pushFollow(FOLLOW_rule__Informative__Group__1_in_rule__Informative__Group__015810);
             rule__Informative__Group__1();
 
             state._fsp--;
@@ -21501,7 +21159,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7868:1: 'Informative'
             {
              before(grammarAccess.getInformativeAccess().getInformativeKeyword_0()); 
-            match(input,81,FOLLOW_81_in_rule__Informative__Group__0__Impl15857); 
+            match(input,81,FOLLOW_81_in_rule__Informative__Group__0__Impl15838); 
              after(grammarAccess.getInformativeAccess().getInformativeKeyword_0()); 
 
             }
@@ -21534,12 +21192,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7885:1: ( rule__Informative__Group__1__Impl rule__Informative__Group__2 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7886:2: rule__Informative__Group__1__Impl rule__Informative__Group__2
             {
-            pushFollow(FOLLOW_rule__Informative__Group__1__Impl_in_rule__Informative__Group__115888);
+            pushFollow(FOLLOW_rule__Informative__Group__1__Impl_in_rule__Informative__Group__115869);
             rule__Informative__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Informative__Group__2_in_rule__Informative__Group__115891);
+            pushFollow(FOLLOW_rule__Informative__Group__2_in_rule__Informative__Group__115872);
             rule__Informative__Group__2();
 
             state._fsp--;
@@ -21579,7 +21237,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7900:1: ( rule__Informative__NameAssignment_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7900:2: rule__Informative__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Informative__NameAssignment_1_in_rule__Informative__Group__1__Impl15918);
+            pushFollow(FOLLOW_rule__Informative__NameAssignment_1_in_rule__Informative__Group__1__Impl15899);
             rule__Informative__NameAssignment_1();
 
             state._fsp--;
@@ -21619,12 +21277,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7914:1: ( rule__Informative__Group__2__Impl rule__Informative__Group__3 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7915:2: rule__Informative__Group__2__Impl rule__Informative__Group__3
             {
-            pushFollow(FOLLOW_rule__Informative__Group__2__Impl_in_rule__Informative__Group__215948);
+            pushFollow(FOLLOW_rule__Informative__Group__2__Impl_in_rule__Informative__Group__215929);
             rule__Informative__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Informative__Group__3_in_rule__Informative__Group__215951);
+            pushFollow(FOLLOW_rule__Informative__Group__3_in_rule__Informative__Group__215932);
             rule__Informative__Group__3();
 
             state._fsp--;
@@ -21661,7 +21319,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7928:1: '{'
             {
              before(grammarAccess.getInformativeAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,40,FOLLOW_40_in_rule__Informative__Group__2__Impl15979); 
+            match(input,40,FOLLOW_40_in_rule__Informative__Group__2__Impl15960); 
              after(grammarAccess.getInformativeAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -21694,12 +21352,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7945:1: ( rule__Informative__Group__3__Impl rule__Informative__Group__4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7946:2: rule__Informative__Group__3__Impl rule__Informative__Group__4
             {
-            pushFollow(FOLLOW_rule__Informative__Group__3__Impl_in_rule__Informative__Group__316010);
+            pushFollow(FOLLOW_rule__Informative__Group__3__Impl_in_rule__Informative__Group__315991);
             rule__Informative__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Informative__Group__4_in_rule__Informative__Group__316013);
+            pushFollow(FOLLOW_rule__Informative__Group__4_in_rule__Informative__Group__315994);
             rule__Informative__Group__4();
 
             state._fsp--;
@@ -21736,7 +21394,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7959:1: 'Description'
             {
              before(grammarAccess.getInformativeAccess().getDescriptionKeyword_3()); 
-            match(input,47,FOLLOW_47_in_rule__Informative__Group__3__Impl16041); 
+            match(input,47,FOLLOW_47_in_rule__Informative__Group__3__Impl16022); 
              after(grammarAccess.getInformativeAccess().getDescriptionKeyword_3()); 
 
             }
@@ -21769,12 +21427,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7976:1: ( rule__Informative__Group__4__Impl rule__Informative__Group__5 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7977:2: rule__Informative__Group__4__Impl rule__Informative__Group__5
             {
-            pushFollow(FOLLOW_rule__Informative__Group__4__Impl_in_rule__Informative__Group__416072);
+            pushFollow(FOLLOW_rule__Informative__Group__4__Impl_in_rule__Informative__Group__416053);
             rule__Informative__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Informative__Group__5_in_rule__Informative__Group__416075);
+            pushFollow(FOLLOW_rule__Informative__Group__5_in_rule__Informative__Group__416056);
             rule__Informative__Group__5();
 
             state._fsp--;
@@ -21814,7 +21472,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7991:1: ( rule__Informative__DescriptionAssignment_4 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:7991:2: rule__Informative__DescriptionAssignment_4
             {
-            pushFollow(FOLLOW_rule__Informative__DescriptionAssignment_4_in_rule__Informative__Group__4__Impl16102);
+            pushFollow(FOLLOW_rule__Informative__DescriptionAssignment_4_in_rule__Informative__Group__4__Impl16083);
             rule__Informative__DescriptionAssignment_4();
 
             state._fsp--;
@@ -21854,12 +21512,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8005:1: ( rule__Informative__Group__5__Impl rule__Informative__Group__6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8006:2: rule__Informative__Group__5__Impl rule__Informative__Group__6
             {
-            pushFollow(FOLLOW_rule__Informative__Group__5__Impl_in_rule__Informative__Group__516132);
+            pushFollow(FOLLOW_rule__Informative__Group__5__Impl_in_rule__Informative__Group__516113);
             rule__Informative__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Informative__Group__6_in_rule__Informative__Group__516135);
+            pushFollow(FOLLOW_rule__Informative__Group__6_in_rule__Informative__Group__516116);
             rule__Informative__Group__6();
 
             state._fsp--;
@@ -21896,7 +21554,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8019:1: 'Condition'
             {
              before(grammarAccess.getInformativeAccess().getConditionKeyword_5()); 
-            match(input,66,FOLLOW_66_in_rule__Informative__Group__5__Impl16163); 
+            match(input,66,FOLLOW_66_in_rule__Informative__Group__5__Impl16144); 
              after(grammarAccess.getInformativeAccess().getConditionKeyword_5()); 
 
             }
@@ -21929,12 +21587,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8036:1: ( rule__Informative__Group__6__Impl rule__Informative__Group__7 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8037:2: rule__Informative__Group__6__Impl rule__Informative__Group__7
             {
-            pushFollow(FOLLOW_rule__Informative__Group__6__Impl_in_rule__Informative__Group__616194);
+            pushFollow(FOLLOW_rule__Informative__Group__6__Impl_in_rule__Informative__Group__616175);
             rule__Informative__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Informative__Group__7_in_rule__Informative__Group__616197);
+            pushFollow(FOLLOW_rule__Informative__Group__7_in_rule__Informative__Group__616178);
             rule__Informative__Group__7();
 
             state._fsp--;
@@ -21974,7 +21632,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8051:1: ( rule__Informative__ConditionAssignment_6 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8051:2: rule__Informative__ConditionAssignment_6
             {
-            pushFollow(FOLLOW_rule__Informative__ConditionAssignment_6_in_rule__Informative__Group__6__Impl16224);
+            pushFollow(FOLLOW_rule__Informative__ConditionAssignment_6_in_rule__Informative__Group__6__Impl16205);
             rule__Informative__ConditionAssignment_6();
 
             state._fsp--;
@@ -22014,12 +21672,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8065:1: ( rule__Informative__Group__7__Impl rule__Informative__Group__8 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8066:2: rule__Informative__Group__7__Impl rule__Informative__Group__8
             {
-            pushFollow(FOLLOW_rule__Informative__Group__7__Impl_in_rule__Informative__Group__716254);
+            pushFollow(FOLLOW_rule__Informative__Group__7__Impl_in_rule__Informative__Group__716235);
             rule__Informative__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Informative__Group__8_in_rule__Informative__Group__716257);
+            pushFollow(FOLLOW_rule__Informative__Group__8_in_rule__Informative__Group__716238);
             rule__Informative__Group__8();
 
             state._fsp--;
@@ -22057,17 +21715,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getInformativeAccess().getGroup_7()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8080:1: ( rule__Informative__Group_7__0 )?
-            int alt89=2;
-            int LA89_0 = input.LA(1);
+            int alt70=2;
+            int LA70_0 = input.LA(1);
 
-            if ( (LA89_0==82) ) {
-                alt89=1;
+            if ( (LA70_0==82) ) {
+                alt70=1;
             }
-            switch (alt89) {
+            switch (alt70) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8080:2: rule__Informative__Group_7__0
                     {
-                    pushFollow(FOLLOW_rule__Informative__Group_7__0_in_rule__Informative__Group__7__Impl16284);
+                    pushFollow(FOLLOW_rule__Informative__Group_7__0_in_rule__Informative__Group__7__Impl16265);
                     rule__Informative__Group_7__0();
 
                     state._fsp--;
@@ -22110,12 +21768,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8094:1: ( rule__Informative__Group__8__Impl rule__Informative__Group__9 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8095:2: rule__Informative__Group__8__Impl rule__Informative__Group__9
             {
-            pushFollow(FOLLOW_rule__Informative__Group__8__Impl_in_rule__Informative__Group__816315);
+            pushFollow(FOLLOW_rule__Informative__Group__8__Impl_in_rule__Informative__Group__816296);
             rule__Informative__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Informative__Group__9_in_rule__Informative__Group__816318);
+            pushFollow(FOLLOW_rule__Informative__Group__9_in_rule__Informative__Group__816299);
             rule__Informative__Group__9();
 
             state._fsp--;
@@ -22153,17 +21811,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getInformativeAccess().getGroup_8()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8109:1: ( rule__Informative__Group_8__0 )?
-            int alt90=2;
-            int LA90_0 = input.LA(1);
+            int alt71=2;
+            int LA71_0 = input.LA(1);
 
-            if ( (LA90_0==57) ) {
-                alt90=1;
+            if ( (LA71_0==57) ) {
+                alt71=1;
             }
-            switch (alt90) {
+            switch (alt71) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8109:2: rule__Informative__Group_8__0
                     {
-                    pushFollow(FOLLOW_rule__Informative__Group_8__0_in_rule__Informative__Group__8__Impl16345);
+                    pushFollow(FOLLOW_rule__Informative__Group_8__0_in_rule__Informative__Group__8__Impl16326);
                     rule__Informative__Group_8__0();
 
                     state._fsp--;
@@ -22206,12 +21864,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8123:1: ( rule__Informative__Group__9__Impl rule__Informative__Group__10 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8124:2: rule__Informative__Group__9__Impl rule__Informative__Group__10
             {
-            pushFollow(FOLLOW_rule__Informative__Group__9__Impl_in_rule__Informative__Group__916376);
+            pushFollow(FOLLOW_rule__Informative__Group__9__Impl_in_rule__Informative__Group__916357);
             rule__Informative__Group__9__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Informative__Group__10_in_rule__Informative__Group__916379);
+            pushFollow(FOLLOW_rule__Informative__Group__10_in_rule__Informative__Group__916360);
             rule__Informative__Group__10();
 
             state._fsp--;
@@ -22249,17 +21907,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getInformativeAccess().getGroup_9()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8138:1: ( rule__Informative__Group_9__0 )?
-            int alt91=2;
-            int LA91_0 = input.LA(1);
+            int alt72=2;
+            int LA72_0 = input.LA(1);
 
-            if ( (LA91_0==69) ) {
-                alt91=1;
+            if ( (LA72_0==69) ) {
+                alt72=1;
             }
-            switch (alt91) {
+            switch (alt72) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8138:2: rule__Informative__Group_9__0
                     {
-                    pushFollow(FOLLOW_rule__Informative__Group_9__0_in_rule__Informative__Group__9__Impl16406);
+                    pushFollow(FOLLOW_rule__Informative__Group_9__0_in_rule__Informative__Group__9__Impl16387);
                     rule__Informative__Group_9__0();
 
                     state._fsp--;
@@ -22302,12 +21960,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8152:1: ( rule__Informative__Group__10__Impl rule__Informative__Group__11 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8153:2: rule__Informative__Group__10__Impl rule__Informative__Group__11
             {
-            pushFollow(FOLLOW_rule__Informative__Group__10__Impl_in_rule__Informative__Group__1016437);
+            pushFollow(FOLLOW_rule__Informative__Group__10__Impl_in_rule__Informative__Group__1016418);
             rule__Informative__Group__10__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Informative__Group__11_in_rule__Informative__Group__1016440);
+            pushFollow(FOLLOW_rule__Informative__Group__11_in_rule__Informative__Group__1016421);
             rule__Informative__Group__11();
 
             state._fsp--;
@@ -22345,17 +22003,17 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getInformativeAccess().getGroup_10()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8167:1: ( rule__Informative__Group_10__0 )?
-            int alt92=2;
-            int LA92_0 = input.LA(1);
+            int alt73=2;
+            int LA73_0 = input.LA(1);
 
-            if ( (LA92_0==70) ) {
-                alt92=1;
+            if ( (LA73_0==70) ) {
+                alt73=1;
             }
-            switch (alt92) {
+            switch (alt73) {
                 case 1 :
                     // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8167:2: rule__Informative__Group_10__0
                     {
-                    pushFollow(FOLLOW_rule__Informative__Group_10__0_in_rule__Informative__Group__10__Impl16467);
+                    pushFollow(FOLLOW_rule__Informative__Group_10__0_in_rule__Informative__Group__10__Impl16448);
                     rule__Informative__Group_10__0();
 
                     state._fsp--;
@@ -22398,12 +22056,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8181:1: ( rule__Informative__Group__11__Impl rule__Informative__Group__12 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8182:2: rule__Informative__Group__11__Impl rule__Informative__Group__12
             {
-            pushFollow(FOLLOW_rule__Informative__Group__11__Impl_in_rule__Informative__Group__1116498);
+            pushFollow(FOLLOW_rule__Informative__Group__11__Impl_in_rule__Informative__Group__1116479);
             rule__Informative__Group__11__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Informative__Group__12_in_rule__Informative__Group__1116501);
+            pushFollow(FOLLOW_rule__Informative__Group__12_in_rule__Informative__Group__1116482);
             rule__Informative__Group__12();
 
             state._fsp--;
@@ -22440,7 +22098,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8195:1: 'Modality'
             {
              before(grammarAccess.getInformativeAccess().getModalityKeyword_11()); 
-            match(input,67,FOLLOW_67_in_rule__Informative__Group__11__Impl16529); 
+            match(input,67,FOLLOW_67_in_rule__Informative__Group__11__Impl16510); 
              after(grammarAccess.getInformativeAccess().getModalityKeyword_11()); 
 
             }
@@ -22473,12 +22131,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8212:1: ( rule__Informative__Group__12__Impl rule__Informative__Group__13 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8213:2: rule__Informative__Group__12__Impl rule__Informative__Group__13
             {
-            pushFollow(FOLLOW_rule__Informative__Group__12__Impl_in_rule__Informative__Group__1216560);
+            pushFollow(FOLLOW_rule__Informative__Group__12__Impl_in_rule__Informative__Group__1216541);
             rule__Informative__Group__12__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Informative__Group__13_in_rule__Informative__Group__1216563);
+            pushFollow(FOLLOW_rule__Informative__Group__13_in_rule__Informative__Group__1216544);
             rule__Informative__Group__13();
 
             state._fsp--;
@@ -22518,7 +22176,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8227:1: ( rule__Informative__ModalityAssignment_12 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8227:2: rule__Informative__ModalityAssignment_12
             {
-            pushFollow(FOLLOW_rule__Informative__ModalityAssignment_12_in_rule__Informative__Group__12__Impl16590);
+            pushFollow(FOLLOW_rule__Informative__ModalityAssignment_12_in_rule__Informative__Group__12__Impl16571);
             rule__Informative__ModalityAssignment_12();
 
             state._fsp--;
@@ -22558,7 +22216,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8241:1: ( rule__Informative__Group__13__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8242:2: rule__Informative__Group__13__Impl
             {
-            pushFollow(FOLLOW_rule__Informative__Group__13__Impl_in_rule__Informative__Group__1316620);
+            pushFollow(FOLLOW_rule__Informative__Group__13__Impl_in_rule__Informative__Group__1316601);
             rule__Informative__Group__13__Impl();
 
             state._fsp--;
@@ -22595,7 +22253,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8254:1: '}'
             {
              before(grammarAccess.getInformativeAccess().getRightCurlyBracketKeyword_13()); 
-            match(input,41,FOLLOW_41_in_rule__Informative__Group__13__Impl16648); 
+            match(input,41,FOLLOW_41_in_rule__Informative__Group__13__Impl16629); 
              after(grammarAccess.getInformativeAccess().getRightCurlyBracketKeyword_13()); 
 
             }
@@ -22628,12 +22286,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8299:1: ( rule__Informative__Group_7__0__Impl rule__Informative__Group_7__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8300:2: rule__Informative__Group_7__0__Impl rule__Informative__Group_7__1
             {
-            pushFollow(FOLLOW_rule__Informative__Group_7__0__Impl_in_rule__Informative__Group_7__016707);
+            pushFollow(FOLLOW_rule__Informative__Group_7__0__Impl_in_rule__Informative__Group_7__016688);
             rule__Informative__Group_7__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Informative__Group_7__1_in_rule__Informative__Group_7__016710);
+            pushFollow(FOLLOW_rule__Informative__Group_7__1_in_rule__Informative__Group_7__016691);
             rule__Informative__Group_7__1();
 
             state._fsp--;
@@ -22670,7 +22328,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8313:1: 'PartOf Informative'
             {
              before(grammarAccess.getInformativeAccess().getPartOfInformativeKeyword_7_0()); 
-            match(input,82,FOLLOW_82_in_rule__Informative__Group_7__0__Impl16738); 
+            match(input,82,FOLLOW_82_in_rule__Informative__Group_7__0__Impl16719); 
              after(grammarAccess.getInformativeAccess().getPartOfInformativeKeyword_7_0()); 
 
             }
@@ -22703,7 +22361,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8330:1: ( rule__Informative__Group_7__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8331:2: rule__Informative__Group_7__1__Impl
             {
-            pushFollow(FOLLOW_rule__Informative__Group_7__1__Impl_in_rule__Informative__Group_7__116769);
+            pushFollow(FOLLOW_rule__Informative__Group_7__1__Impl_in_rule__Informative__Group_7__116750);
             rule__Informative__Group_7__1__Impl();
 
             state._fsp--;
@@ -22743,7 +22401,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8344:1: ( rule__Informative__PartInformativeAssignment_7_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8344:2: rule__Informative__PartInformativeAssignment_7_1
             {
-            pushFollow(FOLLOW_rule__Informative__PartInformativeAssignment_7_1_in_rule__Informative__Group_7__1__Impl16796);
+            pushFollow(FOLLOW_rule__Informative__PartInformativeAssignment_7_1_in_rule__Informative__Group_7__1__Impl16777);
             rule__Informative__PartInformativeAssignment_7_1();
 
             state._fsp--;
@@ -22783,12 +22441,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8362:1: ( rule__Informative__Group_8__0__Impl rule__Informative__Group_8__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8363:2: rule__Informative__Group_8__0__Impl rule__Informative__Group_8__1
             {
-            pushFollow(FOLLOW_rule__Informative__Group_8__0__Impl_in_rule__Informative__Group_8__016830);
+            pushFollow(FOLLOW_rule__Informative__Group_8__0__Impl_in_rule__Informative__Group_8__016811);
             rule__Informative__Group_8__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Informative__Group_8__1_in_rule__Informative__Group_8__016833);
+            pushFollow(FOLLOW_rule__Informative__Group_8__1_in_rule__Informative__Group_8__016814);
             rule__Informative__Group_8__1();
 
             state._fsp--;
@@ -22825,7 +22483,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8376:1: 'RefersTo PrivateData'
             {
              before(grammarAccess.getInformativeAccess().getRefersToPrivateDataKeyword_8_0()); 
-            match(input,57,FOLLOW_57_in_rule__Informative__Group_8__0__Impl16861); 
+            match(input,57,FOLLOW_57_in_rule__Informative__Group_8__0__Impl16842); 
              after(grammarAccess.getInformativeAccess().getRefersToPrivateDataKeyword_8_0()); 
 
             }
@@ -22858,7 +22516,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8393:1: ( rule__Informative__Group_8__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8394:2: rule__Informative__Group_8__1__Impl
             {
-            pushFollow(FOLLOW_rule__Informative__Group_8__1__Impl_in_rule__Informative__Group_8__116892);
+            pushFollow(FOLLOW_rule__Informative__Group_8__1__Impl_in_rule__Informative__Group_8__116873);
             rule__Informative__Group_8__1__Impl();
 
             state._fsp--;
@@ -22898,7 +22556,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8407:1: ( rule__Informative__Alternatives_8_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8407:2: rule__Informative__Alternatives_8_1
             {
-            pushFollow(FOLLOW_rule__Informative__Alternatives_8_1_in_rule__Informative__Group_8__1__Impl16919);
+            pushFollow(FOLLOW_rule__Informative__Alternatives_8_1_in_rule__Informative__Group_8__1__Impl16900);
             rule__Informative__Alternatives_8_1();
 
             state._fsp--;
@@ -22938,12 +22596,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8425:1: ( rule__Informative__Group_9__0__Impl rule__Informative__Group_9__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8426:2: rule__Informative__Group_9__0__Impl rule__Informative__Group_9__1
             {
-            pushFollow(FOLLOW_rule__Informative__Group_9__0__Impl_in_rule__Informative__Group_9__016953);
+            pushFollow(FOLLOW_rule__Informative__Group_9__0__Impl_in_rule__Informative__Group_9__016934);
             rule__Informative__Group_9__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Informative__Group_9__1_in_rule__Informative__Group_9__016956);
+            pushFollow(FOLLOW_rule__Informative__Group_9__1_in_rule__Informative__Group_9__016937);
             rule__Informative__Group_9__1();
 
             state._fsp--;
@@ -22980,7 +22638,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8439:1: 'RefersTo Service'
             {
              before(grammarAccess.getInformativeAccess().getRefersToServiceKeyword_9_0()); 
-            match(input,69,FOLLOW_69_in_rule__Informative__Group_9__0__Impl16984); 
+            match(input,69,FOLLOW_69_in_rule__Informative__Group_9__0__Impl16965); 
              after(grammarAccess.getInformativeAccess().getRefersToServiceKeyword_9_0()); 
 
             }
@@ -23013,7 +22671,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8456:1: ( rule__Informative__Group_9__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8457:2: rule__Informative__Group_9__1__Impl
             {
-            pushFollow(FOLLOW_rule__Informative__Group_9__1__Impl_in_rule__Informative__Group_9__117015);
+            pushFollow(FOLLOW_rule__Informative__Group_9__1__Impl_in_rule__Informative__Group_9__116996);
             rule__Informative__Group_9__1__Impl();
 
             state._fsp--;
@@ -23053,7 +22711,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8470:1: ( rule__Informative__Alternatives_9_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8470:2: rule__Informative__Alternatives_9_1
             {
-            pushFollow(FOLLOW_rule__Informative__Alternatives_9_1_in_rule__Informative__Group_9__1__Impl17042);
+            pushFollow(FOLLOW_rule__Informative__Alternatives_9_1_in_rule__Informative__Group_9__1__Impl17023);
             rule__Informative__Alternatives_9_1();
 
             state._fsp--;
@@ -23093,12 +22751,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8488:1: ( rule__Informative__Group_10__0__Impl rule__Informative__Group_10__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8489:2: rule__Informative__Group_10__0__Impl rule__Informative__Group_10__1
             {
-            pushFollow(FOLLOW_rule__Informative__Group_10__0__Impl_in_rule__Informative__Group_10__017076);
+            pushFollow(FOLLOW_rule__Informative__Group_10__0__Impl_in_rule__Informative__Group_10__017057);
             rule__Informative__Group_10__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Informative__Group_10__1_in_rule__Informative__Group_10__017079);
+            pushFollow(FOLLOW_rule__Informative__Group_10__1_in_rule__Informative__Group_10__017060);
             rule__Informative__Group_10__1();
 
             state._fsp--;
@@ -23135,7 +22793,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8502:1: 'RefersTo Enforcement'
             {
              before(grammarAccess.getInformativeAccess().getRefersToEnforcementKeyword_10_0()); 
-            match(input,70,FOLLOW_70_in_rule__Informative__Group_10__0__Impl17107); 
+            match(input,70,FOLLOW_70_in_rule__Informative__Group_10__0__Impl17088); 
              after(grammarAccess.getInformativeAccess().getRefersToEnforcementKeyword_10_0()); 
 
             }
@@ -23168,7 +22826,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8519:1: ( rule__Informative__Group_10__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8520:2: rule__Informative__Group_10__1__Impl
             {
-            pushFollow(FOLLOW_rule__Informative__Group_10__1__Impl_in_rule__Informative__Group_10__117138);
+            pushFollow(FOLLOW_rule__Informative__Group_10__1__Impl_in_rule__Informative__Group_10__117119);
             rule__Informative__Group_10__1__Impl();
 
             state._fsp--;
@@ -23208,7 +22866,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8533:1: ( rule__Informative__Alternatives_10_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8533:2: rule__Informative__Alternatives_10_1
             {
-            pushFollow(FOLLOW_rule__Informative__Alternatives_10_1_in_rule__Informative__Group_10__1__Impl17165);
+            pushFollow(FOLLOW_rule__Informative__Alternatives_10_1_in_rule__Informative__Group_10__1__Impl17146);
             rule__Informative__Alternatives_10_1();
 
             state._fsp--;
@@ -23248,12 +22906,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8551:1: ( rule__RecipientPart__Group__0__Impl rule__RecipientPart__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8552:2: rule__RecipientPart__Group__0__Impl rule__RecipientPart__Group__1
             {
-            pushFollow(FOLLOW_rule__RecipientPart__Group__0__Impl_in_rule__RecipientPart__Group__017199);
+            pushFollow(FOLLOW_rule__RecipientPart__Group__0__Impl_in_rule__RecipientPart__Group__017180);
             rule__RecipientPart__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RecipientPart__Group__1_in_rule__RecipientPart__Group__017202);
+            pushFollow(FOLLOW_rule__RecipientPart__Group__1_in_rule__RecipientPart__Group__017183);
             rule__RecipientPart__Group__1();
 
             state._fsp--;
@@ -23293,7 +22951,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8566:1: ( rule__RecipientPart__RecipientPartAssignment_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8566:2: rule__RecipientPart__RecipientPartAssignment_0
             {
-            pushFollow(FOLLOW_rule__RecipientPart__RecipientPartAssignment_0_in_rule__RecipientPart__Group__0__Impl17229);
+            pushFollow(FOLLOW_rule__RecipientPart__RecipientPartAssignment_0_in_rule__RecipientPart__Group__0__Impl17210);
             rule__RecipientPart__RecipientPartAssignment_0();
 
             state._fsp--;
@@ -23333,7 +22991,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8580:1: ( rule__RecipientPart__Group__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8581:2: rule__RecipientPart__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__RecipientPart__Group__1__Impl_in_rule__RecipientPart__Group__117259);
+            pushFollow(FOLLOW_rule__RecipientPart__Group__1__Impl_in_rule__RecipientPart__Group__117240);
             rule__RecipientPart__Group__1__Impl();
 
             state._fsp--;
@@ -23371,21 +23029,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getRecipientPartAccess().getGroup_1()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8594:1: ( rule__RecipientPart__Group_1__0 )*
-            loop93:
+            loop74:
             do {
-                int alt93=2;
-                int LA93_0 = input.LA(1);
+                int alt74=2;
+                int LA74_0 = input.LA(1);
 
-                if ( (LA93_0==64) ) {
-                    alt93=1;
+                if ( (LA74_0==64) ) {
+                    alt74=1;
                 }
 
 
-                switch (alt93) {
+                switch (alt74) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8594:2: rule__RecipientPart__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__RecipientPart__Group_1__0_in_rule__RecipientPart__Group__1__Impl17286);
+            	    pushFollow(FOLLOW_rule__RecipientPart__Group_1__0_in_rule__RecipientPart__Group__1__Impl17267);
             	    rule__RecipientPart__Group_1__0();
 
             	    state._fsp--;
@@ -23395,7 +23053,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop93;
+            	    break loop74;
                 }
             } while (true);
 
@@ -23431,12 +23089,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8612:1: ( rule__RecipientPart__Group_1__0__Impl rule__RecipientPart__Group_1__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8613:2: rule__RecipientPart__Group_1__0__Impl rule__RecipientPart__Group_1__1
             {
-            pushFollow(FOLLOW_rule__RecipientPart__Group_1__0__Impl_in_rule__RecipientPart__Group_1__017321);
+            pushFollow(FOLLOW_rule__RecipientPart__Group_1__0__Impl_in_rule__RecipientPart__Group_1__017302);
             rule__RecipientPart__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RecipientPart__Group_1__1_in_rule__RecipientPart__Group_1__017324);
+            pushFollow(FOLLOW_rule__RecipientPart__Group_1__1_in_rule__RecipientPart__Group_1__017305);
             rule__RecipientPart__Group_1__1();
 
             state._fsp--;
@@ -23473,7 +23131,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8626:1: ','
             {
              before(grammarAccess.getRecipientPartAccess().getCommaKeyword_1_0()); 
-            match(input,64,FOLLOW_64_in_rule__RecipientPart__Group_1__0__Impl17352); 
+            match(input,64,FOLLOW_64_in_rule__RecipientPart__Group_1__0__Impl17333); 
              after(grammarAccess.getRecipientPartAccess().getCommaKeyword_1_0()); 
 
             }
@@ -23506,7 +23164,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8643:1: ( rule__RecipientPart__Group_1__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8644:2: rule__RecipientPart__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__RecipientPart__Group_1__1__Impl_in_rule__RecipientPart__Group_1__117383);
+            pushFollow(FOLLOW_rule__RecipientPart__Group_1__1__Impl_in_rule__RecipientPart__Group_1__117364);
             rule__RecipientPart__Group_1__1__Impl();
 
             state._fsp--;
@@ -23546,7 +23204,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8657:1: ( rule__RecipientPart__RefsAssignment_1_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8657:2: rule__RecipientPart__RefsAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__RecipientPart__RefsAssignment_1_1_in_rule__RecipientPart__Group_1__1__Impl17410);
+            pushFollow(FOLLOW_rule__RecipientPart__RefsAssignment_1_1_in_rule__RecipientPart__Group_1__1__Impl17391);
             rule__RecipientPart__RefsAssignment_1_1();
 
             state._fsp--;
@@ -23586,12 +23244,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8675:1: ( rule__RefRecipient__Group__0__Impl rule__RefRecipient__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8676:2: rule__RefRecipient__Group__0__Impl rule__RefRecipient__Group__1
             {
-            pushFollow(FOLLOW_rule__RefRecipient__Group__0__Impl_in_rule__RefRecipient__Group__017444);
+            pushFollow(FOLLOW_rule__RefRecipient__Group__0__Impl_in_rule__RefRecipient__Group__017425);
             rule__RefRecipient__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RefRecipient__Group__1_in_rule__RefRecipient__Group__017447);
+            pushFollow(FOLLOW_rule__RefRecipient__Group__1_in_rule__RefRecipient__Group__017428);
             rule__RefRecipient__Group__1();
 
             state._fsp--;
@@ -23631,7 +23289,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8690:1: ( rule__RefRecipient__RefRecipientAssignment_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8690:2: rule__RefRecipient__RefRecipientAssignment_0
             {
-            pushFollow(FOLLOW_rule__RefRecipient__RefRecipientAssignment_0_in_rule__RefRecipient__Group__0__Impl17474);
+            pushFollow(FOLLOW_rule__RefRecipient__RefRecipientAssignment_0_in_rule__RefRecipient__Group__0__Impl17455);
             rule__RefRecipient__RefRecipientAssignment_0();
 
             state._fsp--;
@@ -23671,7 +23329,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8704:1: ( rule__RefRecipient__Group__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8705:2: rule__RefRecipient__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__RefRecipient__Group__1__Impl_in_rule__RefRecipient__Group__117504);
+            pushFollow(FOLLOW_rule__RefRecipient__Group__1__Impl_in_rule__RefRecipient__Group__117485);
             rule__RefRecipient__Group__1__Impl();
 
             state._fsp--;
@@ -23709,21 +23367,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getRefRecipientAccess().getGroup_1()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8718:1: ( rule__RefRecipient__Group_1__0 )*
-            loop94:
+            loop75:
             do {
-                int alt94=2;
-                int LA94_0 = input.LA(1);
+                int alt75=2;
+                int LA75_0 = input.LA(1);
 
-                if ( (LA94_0==64) ) {
-                    alt94=1;
+                if ( (LA75_0==64) ) {
+                    alt75=1;
                 }
 
 
-                switch (alt94) {
+                switch (alt75) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8718:2: rule__RefRecipient__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__RefRecipient__Group_1__0_in_rule__RefRecipient__Group__1__Impl17531);
+            	    pushFollow(FOLLOW_rule__RefRecipient__Group_1__0_in_rule__RefRecipient__Group__1__Impl17512);
             	    rule__RefRecipient__Group_1__0();
 
             	    state._fsp--;
@@ -23733,7 +23391,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop94;
+            	    break loop75;
                 }
             } while (true);
 
@@ -23769,12 +23427,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8736:1: ( rule__RefRecipient__Group_1__0__Impl rule__RefRecipient__Group_1__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8737:2: rule__RefRecipient__Group_1__0__Impl rule__RefRecipient__Group_1__1
             {
-            pushFollow(FOLLOW_rule__RefRecipient__Group_1__0__Impl_in_rule__RefRecipient__Group_1__017566);
+            pushFollow(FOLLOW_rule__RefRecipient__Group_1__0__Impl_in_rule__RefRecipient__Group_1__017547);
             rule__RefRecipient__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RefRecipient__Group_1__1_in_rule__RefRecipient__Group_1__017569);
+            pushFollow(FOLLOW_rule__RefRecipient__Group_1__1_in_rule__RefRecipient__Group_1__017550);
             rule__RefRecipient__Group_1__1();
 
             state._fsp--;
@@ -23811,7 +23469,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8750:1: ','
             {
              before(grammarAccess.getRefRecipientAccess().getCommaKeyword_1_0()); 
-            match(input,64,FOLLOW_64_in_rule__RefRecipient__Group_1__0__Impl17597); 
+            match(input,64,FOLLOW_64_in_rule__RefRecipient__Group_1__0__Impl17578); 
              after(grammarAccess.getRefRecipientAccess().getCommaKeyword_1_0()); 
 
             }
@@ -23844,7 +23502,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8767:1: ( rule__RefRecipient__Group_1__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8768:2: rule__RefRecipient__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__RefRecipient__Group_1__1__Impl_in_rule__RefRecipient__Group_1__117628);
+            pushFollow(FOLLOW_rule__RefRecipient__Group_1__1__Impl_in_rule__RefRecipient__Group_1__117609);
             rule__RefRecipient__Group_1__1__Impl();
 
             state._fsp--;
@@ -23884,7 +23542,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8781:1: ( rule__RefRecipient__RefsAssignment_1_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8781:2: rule__RefRecipient__RefsAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__RefRecipient__RefsAssignment_1_1_in_rule__RefRecipient__Group_1__1__Impl17655);
+            pushFollow(FOLLOW_rule__RefRecipient__RefsAssignment_1_1_in_rule__RefRecipient__Group_1__1__Impl17636);
             rule__RefRecipient__RefsAssignment_1_1();
 
             state._fsp--;
@@ -23924,12 +23582,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8799:1: ( rule__RefRecipientSource__Group__0__Impl rule__RefRecipientSource__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8800:2: rule__RefRecipientSource__Group__0__Impl rule__RefRecipientSource__Group__1
             {
-            pushFollow(FOLLOW_rule__RefRecipientSource__Group__0__Impl_in_rule__RefRecipientSource__Group__017689);
+            pushFollow(FOLLOW_rule__RefRecipientSource__Group__0__Impl_in_rule__RefRecipientSource__Group__017670);
             rule__RefRecipientSource__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RefRecipientSource__Group__1_in_rule__RefRecipientSource__Group__017692);
+            pushFollow(FOLLOW_rule__RefRecipientSource__Group__1_in_rule__RefRecipientSource__Group__017673);
             rule__RefRecipientSource__Group__1();
 
             state._fsp--;
@@ -23969,7 +23627,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8814:1: ( rule__RefRecipientSource__RefRecipientSourceAssignment_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8814:2: rule__RefRecipientSource__RefRecipientSourceAssignment_0
             {
-            pushFollow(FOLLOW_rule__RefRecipientSource__RefRecipientSourceAssignment_0_in_rule__RefRecipientSource__Group__0__Impl17719);
+            pushFollow(FOLLOW_rule__RefRecipientSource__RefRecipientSourceAssignment_0_in_rule__RefRecipientSource__Group__0__Impl17700);
             rule__RefRecipientSource__RefRecipientSourceAssignment_0();
 
             state._fsp--;
@@ -24009,7 +23667,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8828:1: ( rule__RefRecipientSource__Group__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8829:2: rule__RefRecipientSource__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__RefRecipientSource__Group__1__Impl_in_rule__RefRecipientSource__Group__117749);
+            pushFollow(FOLLOW_rule__RefRecipientSource__Group__1__Impl_in_rule__RefRecipientSource__Group__117730);
             rule__RefRecipientSource__Group__1__Impl();
 
             state._fsp--;
@@ -24047,21 +23705,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getRefRecipientSourceAccess().getGroup_1()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8842:1: ( rule__RefRecipientSource__Group_1__0 )*
-            loop95:
+            loop76:
             do {
-                int alt95=2;
-                int LA95_0 = input.LA(1);
+                int alt76=2;
+                int LA76_0 = input.LA(1);
 
-                if ( (LA95_0==64) ) {
-                    alt95=1;
+                if ( (LA76_0==64) ) {
+                    alt76=1;
                 }
 
 
-                switch (alt95) {
+                switch (alt76) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8842:2: rule__RefRecipientSource__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__RefRecipientSource__Group_1__0_in_rule__RefRecipientSource__Group__1__Impl17776);
+            	    pushFollow(FOLLOW_rule__RefRecipientSource__Group_1__0_in_rule__RefRecipientSource__Group__1__Impl17757);
             	    rule__RefRecipientSource__Group_1__0();
 
             	    state._fsp--;
@@ -24071,7 +23729,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop95;
+            	    break loop76;
                 }
             } while (true);
 
@@ -24107,12 +23765,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8860:1: ( rule__RefRecipientSource__Group_1__0__Impl rule__RefRecipientSource__Group_1__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8861:2: rule__RefRecipientSource__Group_1__0__Impl rule__RefRecipientSource__Group_1__1
             {
-            pushFollow(FOLLOW_rule__RefRecipientSource__Group_1__0__Impl_in_rule__RefRecipientSource__Group_1__017811);
+            pushFollow(FOLLOW_rule__RefRecipientSource__Group_1__0__Impl_in_rule__RefRecipientSource__Group_1__017792);
             rule__RefRecipientSource__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RefRecipientSource__Group_1__1_in_rule__RefRecipientSource__Group_1__017814);
+            pushFollow(FOLLOW_rule__RefRecipientSource__Group_1__1_in_rule__RefRecipientSource__Group_1__017795);
             rule__RefRecipientSource__Group_1__1();
 
             state._fsp--;
@@ -24149,7 +23807,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8874:1: ','
             {
              before(grammarAccess.getRefRecipientSourceAccess().getCommaKeyword_1_0()); 
-            match(input,64,FOLLOW_64_in_rule__RefRecipientSource__Group_1__0__Impl17842); 
+            match(input,64,FOLLOW_64_in_rule__RefRecipientSource__Group_1__0__Impl17823); 
              after(grammarAccess.getRefRecipientSourceAccess().getCommaKeyword_1_0()); 
 
             }
@@ -24182,7 +23840,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8891:1: ( rule__RefRecipientSource__Group_1__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8892:2: rule__RefRecipientSource__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__RefRecipientSource__Group_1__1__Impl_in_rule__RefRecipientSource__Group_1__117873);
+            pushFollow(FOLLOW_rule__RefRecipientSource__Group_1__1__Impl_in_rule__RefRecipientSource__Group_1__117854);
             rule__RefRecipientSource__Group_1__1__Impl();
 
             state._fsp--;
@@ -24222,7 +23880,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8905:1: ( rule__RefRecipientSource__RefsAssignment_1_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8905:2: rule__RefRecipientSource__RefsAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__RefRecipientSource__RefsAssignment_1_1_in_rule__RefRecipientSource__Group_1__1__Impl17900);
+            pushFollow(FOLLOW_rule__RefRecipientSource__RefsAssignment_1_1_in_rule__RefRecipientSource__Group_1__1__Impl17881);
             rule__RefRecipientSource__RefsAssignment_1_1();
 
             state._fsp--;
@@ -24262,12 +23920,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8923:1: ( rule__RefRecipientTarget__Group__0__Impl rule__RefRecipientTarget__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8924:2: rule__RefRecipientTarget__Group__0__Impl rule__RefRecipientTarget__Group__1
             {
-            pushFollow(FOLLOW_rule__RefRecipientTarget__Group__0__Impl_in_rule__RefRecipientTarget__Group__017934);
+            pushFollow(FOLLOW_rule__RefRecipientTarget__Group__0__Impl_in_rule__RefRecipientTarget__Group__017915);
             rule__RefRecipientTarget__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RefRecipientTarget__Group__1_in_rule__RefRecipientTarget__Group__017937);
+            pushFollow(FOLLOW_rule__RefRecipientTarget__Group__1_in_rule__RefRecipientTarget__Group__017918);
             rule__RefRecipientTarget__Group__1();
 
             state._fsp--;
@@ -24307,7 +23965,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8938:1: ( rule__RefRecipientTarget__RefRecipientTargetAssignment_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8938:2: rule__RefRecipientTarget__RefRecipientTargetAssignment_0
             {
-            pushFollow(FOLLOW_rule__RefRecipientTarget__RefRecipientTargetAssignment_0_in_rule__RefRecipientTarget__Group__0__Impl17964);
+            pushFollow(FOLLOW_rule__RefRecipientTarget__RefRecipientTargetAssignment_0_in_rule__RefRecipientTarget__Group__0__Impl17945);
             rule__RefRecipientTarget__RefRecipientTargetAssignment_0();
 
             state._fsp--;
@@ -24347,7 +24005,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8952:1: ( rule__RefRecipientTarget__Group__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8953:2: rule__RefRecipientTarget__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__RefRecipientTarget__Group__1__Impl_in_rule__RefRecipientTarget__Group__117994);
+            pushFollow(FOLLOW_rule__RefRecipientTarget__Group__1__Impl_in_rule__RefRecipientTarget__Group__117975);
             rule__RefRecipientTarget__Group__1__Impl();
 
             state._fsp--;
@@ -24385,21 +24043,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getRefRecipientTargetAccess().getGroup_1()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8966:1: ( rule__RefRecipientTarget__Group_1__0 )*
-            loop96:
+            loop77:
             do {
-                int alt96=2;
-                int LA96_0 = input.LA(1);
+                int alt77=2;
+                int LA77_0 = input.LA(1);
 
-                if ( (LA96_0==64) ) {
-                    alt96=1;
+                if ( (LA77_0==64) ) {
+                    alt77=1;
                 }
 
 
-                switch (alt96) {
+                switch (alt77) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8966:2: rule__RefRecipientTarget__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__RefRecipientTarget__Group_1__0_in_rule__RefRecipientTarget__Group__1__Impl18021);
+            	    pushFollow(FOLLOW_rule__RefRecipientTarget__Group_1__0_in_rule__RefRecipientTarget__Group__1__Impl18002);
             	    rule__RefRecipientTarget__Group_1__0();
 
             	    state._fsp--;
@@ -24409,7 +24067,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop96;
+            	    break loop77;
                 }
             } while (true);
 
@@ -24445,12 +24103,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8984:1: ( rule__RefRecipientTarget__Group_1__0__Impl rule__RefRecipientTarget__Group_1__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8985:2: rule__RefRecipientTarget__Group_1__0__Impl rule__RefRecipientTarget__Group_1__1
             {
-            pushFollow(FOLLOW_rule__RefRecipientTarget__Group_1__0__Impl_in_rule__RefRecipientTarget__Group_1__018056);
+            pushFollow(FOLLOW_rule__RefRecipientTarget__Group_1__0__Impl_in_rule__RefRecipientTarget__Group_1__018037);
             rule__RefRecipientTarget__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RefRecipientTarget__Group_1__1_in_rule__RefRecipientTarget__Group_1__018059);
+            pushFollow(FOLLOW_rule__RefRecipientTarget__Group_1__1_in_rule__RefRecipientTarget__Group_1__018040);
             rule__RefRecipientTarget__Group_1__1();
 
             state._fsp--;
@@ -24487,7 +24145,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:8998:1: ','
             {
              before(grammarAccess.getRefRecipientTargetAccess().getCommaKeyword_1_0()); 
-            match(input,64,FOLLOW_64_in_rule__RefRecipientTarget__Group_1__0__Impl18087); 
+            match(input,64,FOLLOW_64_in_rule__RefRecipientTarget__Group_1__0__Impl18068); 
              after(grammarAccess.getRefRecipientTargetAccess().getCommaKeyword_1_0()); 
 
             }
@@ -24520,7 +24178,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9015:1: ( rule__RefRecipientTarget__Group_1__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9016:2: rule__RefRecipientTarget__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__RefRecipientTarget__Group_1__1__Impl_in_rule__RefRecipientTarget__Group_1__118118);
+            pushFollow(FOLLOW_rule__RefRecipientTarget__Group_1__1__Impl_in_rule__RefRecipientTarget__Group_1__118099);
             rule__RefRecipientTarget__Group_1__1__Impl();
 
             state._fsp--;
@@ -24560,7 +24218,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9029:1: ( rule__RefRecipientTarget__RefsAssignment_1_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9029:2: rule__RefRecipientTarget__RefsAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__RefRecipientTarget__RefsAssignment_1_1_in_rule__RefRecipientTarget__Group_1__1__Impl18145);
+            pushFollow(FOLLOW_rule__RefRecipientTarget__RefsAssignment_1_1_in_rule__RefRecipientTarget__Group_1__1__Impl18126);
             rule__RefRecipientTarget__RefsAssignment_1_1();
 
             state._fsp--;
@@ -24600,12 +24258,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9047:1: ( rule__RefService__Group__0__Impl rule__RefService__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9048:2: rule__RefService__Group__0__Impl rule__RefService__Group__1
             {
-            pushFollow(FOLLOW_rule__RefService__Group__0__Impl_in_rule__RefService__Group__018179);
+            pushFollow(FOLLOW_rule__RefService__Group__0__Impl_in_rule__RefService__Group__018160);
             rule__RefService__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RefService__Group__1_in_rule__RefService__Group__018182);
+            pushFollow(FOLLOW_rule__RefService__Group__1_in_rule__RefService__Group__018163);
             rule__RefService__Group__1();
 
             state._fsp--;
@@ -24645,7 +24303,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9062:1: ( rule__RefService__RefServiceAssignment_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9062:2: rule__RefService__RefServiceAssignment_0
             {
-            pushFollow(FOLLOW_rule__RefService__RefServiceAssignment_0_in_rule__RefService__Group__0__Impl18209);
+            pushFollow(FOLLOW_rule__RefService__RefServiceAssignment_0_in_rule__RefService__Group__0__Impl18190);
             rule__RefService__RefServiceAssignment_0();
 
             state._fsp--;
@@ -24685,7 +24343,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9076:1: ( rule__RefService__Group__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9077:2: rule__RefService__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__RefService__Group__1__Impl_in_rule__RefService__Group__118239);
+            pushFollow(FOLLOW_rule__RefService__Group__1__Impl_in_rule__RefService__Group__118220);
             rule__RefService__Group__1__Impl();
 
             state._fsp--;
@@ -24723,21 +24381,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getRefServiceAccess().getGroup_1()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9090:1: ( rule__RefService__Group_1__0 )*
-            loop97:
+            loop78:
             do {
-                int alt97=2;
-                int LA97_0 = input.LA(1);
+                int alt78=2;
+                int LA78_0 = input.LA(1);
 
-                if ( (LA97_0==64) ) {
-                    alt97=1;
+                if ( (LA78_0==64) ) {
+                    alt78=1;
                 }
 
 
-                switch (alt97) {
+                switch (alt78) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9090:2: rule__RefService__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__RefService__Group_1__0_in_rule__RefService__Group__1__Impl18266);
+            	    pushFollow(FOLLOW_rule__RefService__Group_1__0_in_rule__RefService__Group__1__Impl18247);
             	    rule__RefService__Group_1__0();
 
             	    state._fsp--;
@@ -24747,7 +24405,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop97;
+            	    break loop78;
                 }
             } while (true);
 
@@ -24783,12 +24441,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9108:1: ( rule__RefService__Group_1__0__Impl rule__RefService__Group_1__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9109:2: rule__RefService__Group_1__0__Impl rule__RefService__Group_1__1
             {
-            pushFollow(FOLLOW_rule__RefService__Group_1__0__Impl_in_rule__RefService__Group_1__018301);
+            pushFollow(FOLLOW_rule__RefService__Group_1__0__Impl_in_rule__RefService__Group_1__018282);
             rule__RefService__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RefService__Group_1__1_in_rule__RefService__Group_1__018304);
+            pushFollow(FOLLOW_rule__RefService__Group_1__1_in_rule__RefService__Group_1__018285);
             rule__RefService__Group_1__1();
 
             state._fsp--;
@@ -24825,7 +24483,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9122:1: ','
             {
              before(grammarAccess.getRefServiceAccess().getCommaKeyword_1_0()); 
-            match(input,64,FOLLOW_64_in_rule__RefService__Group_1__0__Impl18332); 
+            match(input,64,FOLLOW_64_in_rule__RefService__Group_1__0__Impl18313); 
              after(grammarAccess.getRefServiceAccess().getCommaKeyword_1_0()); 
 
             }
@@ -24858,7 +24516,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9139:1: ( rule__RefService__Group_1__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9140:2: rule__RefService__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__RefService__Group_1__1__Impl_in_rule__RefService__Group_1__118363);
+            pushFollow(FOLLOW_rule__RefService__Group_1__1__Impl_in_rule__RefService__Group_1__118344);
             rule__RefService__Group_1__1__Impl();
 
             state._fsp--;
@@ -24898,7 +24556,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9153:1: ( rule__RefService__RefsAssignment_1_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9153:2: rule__RefService__RefsAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__RefService__RefsAssignment_1_1_in_rule__RefService__Group_1__1__Impl18390);
+            pushFollow(FOLLOW_rule__RefService__RefsAssignment_1_1_in_rule__RefService__Group_1__1__Impl18371);
             rule__RefService__RefsAssignment_1_1();
 
             state._fsp--;
@@ -24938,12 +24596,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9171:1: ( rule__ServicePart__Group__0__Impl rule__ServicePart__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9172:2: rule__ServicePart__Group__0__Impl rule__ServicePart__Group__1
             {
-            pushFollow(FOLLOW_rule__ServicePart__Group__0__Impl_in_rule__ServicePart__Group__018424);
+            pushFollow(FOLLOW_rule__ServicePart__Group__0__Impl_in_rule__ServicePart__Group__018405);
             rule__ServicePart__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ServicePart__Group__1_in_rule__ServicePart__Group__018427);
+            pushFollow(FOLLOW_rule__ServicePart__Group__1_in_rule__ServicePart__Group__018408);
             rule__ServicePart__Group__1();
 
             state._fsp--;
@@ -24983,7 +24641,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9186:1: ( rule__ServicePart__ServicePartAssignment_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9186:2: rule__ServicePart__ServicePartAssignment_0
             {
-            pushFollow(FOLLOW_rule__ServicePart__ServicePartAssignment_0_in_rule__ServicePart__Group__0__Impl18454);
+            pushFollow(FOLLOW_rule__ServicePart__ServicePartAssignment_0_in_rule__ServicePart__Group__0__Impl18435);
             rule__ServicePart__ServicePartAssignment_0();
 
             state._fsp--;
@@ -25023,7 +24681,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9200:1: ( rule__ServicePart__Group__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9201:2: rule__ServicePart__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__ServicePart__Group__1__Impl_in_rule__ServicePart__Group__118484);
+            pushFollow(FOLLOW_rule__ServicePart__Group__1__Impl_in_rule__ServicePart__Group__118465);
             rule__ServicePart__Group__1__Impl();
 
             state._fsp--;
@@ -25061,21 +24719,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getServicePartAccess().getGroup_1()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9214:1: ( rule__ServicePart__Group_1__0 )*
-            loop98:
+            loop79:
             do {
-                int alt98=2;
-                int LA98_0 = input.LA(1);
+                int alt79=2;
+                int LA79_0 = input.LA(1);
 
-                if ( (LA98_0==64) ) {
-                    alt98=1;
+                if ( (LA79_0==64) ) {
+                    alt79=1;
                 }
 
 
-                switch (alt98) {
+                switch (alt79) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9214:2: rule__ServicePart__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__ServicePart__Group_1__0_in_rule__ServicePart__Group__1__Impl18511);
+            	    pushFollow(FOLLOW_rule__ServicePart__Group_1__0_in_rule__ServicePart__Group__1__Impl18492);
             	    rule__ServicePart__Group_1__0();
 
             	    state._fsp--;
@@ -25085,7 +24743,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop98;
+            	    break loop79;
                 }
             } while (true);
 
@@ -25121,12 +24779,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9232:1: ( rule__ServicePart__Group_1__0__Impl rule__ServicePart__Group_1__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9233:2: rule__ServicePart__Group_1__0__Impl rule__ServicePart__Group_1__1
             {
-            pushFollow(FOLLOW_rule__ServicePart__Group_1__0__Impl_in_rule__ServicePart__Group_1__018546);
+            pushFollow(FOLLOW_rule__ServicePart__Group_1__0__Impl_in_rule__ServicePart__Group_1__018527);
             rule__ServicePart__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ServicePart__Group_1__1_in_rule__ServicePart__Group_1__018549);
+            pushFollow(FOLLOW_rule__ServicePart__Group_1__1_in_rule__ServicePart__Group_1__018530);
             rule__ServicePart__Group_1__1();
 
             state._fsp--;
@@ -25163,7 +24821,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9246:1: ','
             {
              before(grammarAccess.getServicePartAccess().getCommaKeyword_1_0()); 
-            match(input,64,FOLLOW_64_in_rule__ServicePart__Group_1__0__Impl18577); 
+            match(input,64,FOLLOW_64_in_rule__ServicePart__Group_1__0__Impl18558); 
              after(grammarAccess.getServicePartAccess().getCommaKeyword_1_0()); 
 
             }
@@ -25196,7 +24854,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9263:1: ( rule__ServicePart__Group_1__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9264:2: rule__ServicePart__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__ServicePart__Group_1__1__Impl_in_rule__ServicePart__Group_1__118608);
+            pushFollow(FOLLOW_rule__ServicePart__Group_1__1__Impl_in_rule__ServicePart__Group_1__118589);
             rule__ServicePart__Group_1__1__Impl();
 
             state._fsp--;
@@ -25236,7 +24894,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9277:1: ( rule__ServicePart__RefsAssignment_1_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9277:2: rule__ServicePart__RefsAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__ServicePart__RefsAssignment_1_1_in_rule__ServicePart__Group_1__1__Impl18635);
+            pushFollow(FOLLOW_rule__ServicePart__RefsAssignment_1_1_in_rule__ServicePart__Group_1__1__Impl18616);
             rule__ServicePart__RefsAssignment_1_1();
 
             state._fsp--;
@@ -25276,12 +24934,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9295:1: ( rule__RefPrivateData__Group__0__Impl rule__RefPrivateData__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9296:2: rule__RefPrivateData__Group__0__Impl rule__RefPrivateData__Group__1
             {
-            pushFollow(FOLLOW_rule__RefPrivateData__Group__0__Impl_in_rule__RefPrivateData__Group__018669);
+            pushFollow(FOLLOW_rule__RefPrivateData__Group__0__Impl_in_rule__RefPrivateData__Group__018650);
             rule__RefPrivateData__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RefPrivateData__Group__1_in_rule__RefPrivateData__Group__018672);
+            pushFollow(FOLLOW_rule__RefPrivateData__Group__1_in_rule__RefPrivateData__Group__018653);
             rule__RefPrivateData__Group__1();
 
             state._fsp--;
@@ -25321,7 +24979,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9310:1: ( rule__RefPrivateData__RefPrivateDataAssignment_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9310:2: rule__RefPrivateData__RefPrivateDataAssignment_0
             {
-            pushFollow(FOLLOW_rule__RefPrivateData__RefPrivateDataAssignment_0_in_rule__RefPrivateData__Group__0__Impl18699);
+            pushFollow(FOLLOW_rule__RefPrivateData__RefPrivateDataAssignment_0_in_rule__RefPrivateData__Group__0__Impl18680);
             rule__RefPrivateData__RefPrivateDataAssignment_0();
 
             state._fsp--;
@@ -25361,7 +25019,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9324:1: ( rule__RefPrivateData__Group__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9325:2: rule__RefPrivateData__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__RefPrivateData__Group__1__Impl_in_rule__RefPrivateData__Group__118729);
+            pushFollow(FOLLOW_rule__RefPrivateData__Group__1__Impl_in_rule__RefPrivateData__Group__118710);
             rule__RefPrivateData__Group__1__Impl();
 
             state._fsp--;
@@ -25399,21 +25057,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getRefPrivateDataAccess().getGroup_1()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9338:1: ( rule__RefPrivateData__Group_1__0 )*
-            loop99:
+            loop80:
             do {
-                int alt99=2;
-                int LA99_0 = input.LA(1);
+                int alt80=2;
+                int LA80_0 = input.LA(1);
 
-                if ( (LA99_0==64) ) {
-                    alt99=1;
+                if ( (LA80_0==64) ) {
+                    alt80=1;
                 }
 
 
-                switch (alt99) {
+                switch (alt80) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9338:2: rule__RefPrivateData__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__RefPrivateData__Group_1__0_in_rule__RefPrivateData__Group__1__Impl18756);
+            	    pushFollow(FOLLOW_rule__RefPrivateData__Group_1__0_in_rule__RefPrivateData__Group__1__Impl18737);
             	    rule__RefPrivateData__Group_1__0();
 
             	    state._fsp--;
@@ -25423,7 +25081,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop99;
+            	    break loop80;
                 }
             } while (true);
 
@@ -25459,12 +25117,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9356:1: ( rule__RefPrivateData__Group_1__0__Impl rule__RefPrivateData__Group_1__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9357:2: rule__RefPrivateData__Group_1__0__Impl rule__RefPrivateData__Group_1__1
             {
-            pushFollow(FOLLOW_rule__RefPrivateData__Group_1__0__Impl_in_rule__RefPrivateData__Group_1__018791);
+            pushFollow(FOLLOW_rule__RefPrivateData__Group_1__0__Impl_in_rule__RefPrivateData__Group_1__018772);
             rule__RefPrivateData__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RefPrivateData__Group_1__1_in_rule__RefPrivateData__Group_1__018794);
+            pushFollow(FOLLOW_rule__RefPrivateData__Group_1__1_in_rule__RefPrivateData__Group_1__018775);
             rule__RefPrivateData__Group_1__1();
 
             state._fsp--;
@@ -25501,7 +25159,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9370:1: ','
             {
              before(grammarAccess.getRefPrivateDataAccess().getCommaKeyword_1_0()); 
-            match(input,64,FOLLOW_64_in_rule__RefPrivateData__Group_1__0__Impl18822); 
+            match(input,64,FOLLOW_64_in_rule__RefPrivateData__Group_1__0__Impl18803); 
              after(grammarAccess.getRefPrivateDataAccess().getCommaKeyword_1_0()); 
 
             }
@@ -25534,7 +25192,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9387:1: ( rule__RefPrivateData__Group_1__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9388:2: rule__RefPrivateData__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__RefPrivateData__Group_1__1__Impl_in_rule__RefPrivateData__Group_1__118853);
+            pushFollow(FOLLOW_rule__RefPrivateData__Group_1__1__Impl_in_rule__RefPrivateData__Group_1__118834);
             rule__RefPrivateData__Group_1__1__Impl();
 
             state._fsp--;
@@ -25574,7 +25232,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9401:1: ( rule__RefPrivateData__RefsAssignment_1_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9401:2: rule__RefPrivateData__RefsAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__RefPrivateData__RefsAssignment_1_1_in_rule__RefPrivateData__Group_1__1__Impl18880);
+            pushFollow(FOLLOW_rule__RefPrivateData__RefsAssignment_1_1_in_rule__RefPrivateData__Group_1__1__Impl18861);
             rule__RefPrivateData__RefsAssignment_1_1();
 
             state._fsp--;
@@ -25614,12 +25272,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9419:1: ( rule__RefEnforcement__Group__0__Impl rule__RefEnforcement__Group__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9420:2: rule__RefEnforcement__Group__0__Impl rule__RefEnforcement__Group__1
             {
-            pushFollow(FOLLOW_rule__RefEnforcement__Group__0__Impl_in_rule__RefEnforcement__Group__018914);
+            pushFollow(FOLLOW_rule__RefEnforcement__Group__0__Impl_in_rule__RefEnforcement__Group__018895);
             rule__RefEnforcement__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RefEnforcement__Group__1_in_rule__RefEnforcement__Group__018917);
+            pushFollow(FOLLOW_rule__RefEnforcement__Group__1_in_rule__RefEnforcement__Group__018898);
             rule__RefEnforcement__Group__1();
 
             state._fsp--;
@@ -25659,7 +25317,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9434:1: ( rule__RefEnforcement__RefEnforcementAssignment_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9434:2: rule__RefEnforcement__RefEnforcementAssignment_0
             {
-            pushFollow(FOLLOW_rule__RefEnforcement__RefEnforcementAssignment_0_in_rule__RefEnforcement__Group__0__Impl18944);
+            pushFollow(FOLLOW_rule__RefEnforcement__RefEnforcementAssignment_0_in_rule__RefEnforcement__Group__0__Impl18925);
             rule__RefEnforcement__RefEnforcementAssignment_0();
 
             state._fsp--;
@@ -25699,7 +25357,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9448:1: ( rule__RefEnforcement__Group__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9449:2: rule__RefEnforcement__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__RefEnforcement__Group__1__Impl_in_rule__RefEnforcement__Group__118974);
+            pushFollow(FOLLOW_rule__RefEnforcement__Group__1__Impl_in_rule__RefEnforcement__Group__118955);
             rule__RefEnforcement__Group__1__Impl();
 
             state._fsp--;
@@ -25737,21 +25395,21 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             {
              before(grammarAccess.getRefEnforcementAccess().getGroup_1()); 
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9462:1: ( rule__RefEnforcement__Group_1__0 )*
-            loop100:
+            loop81:
             do {
-                int alt100=2;
-                int LA100_0 = input.LA(1);
+                int alt81=2;
+                int LA81_0 = input.LA(1);
 
-                if ( (LA100_0==64) ) {
-                    alt100=1;
+                if ( (LA81_0==64) ) {
+                    alt81=1;
                 }
 
 
-                switch (alt100) {
+                switch (alt81) {
             	case 1 :
             	    // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9462:2: rule__RefEnforcement__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__RefEnforcement__Group_1__0_in_rule__RefEnforcement__Group__1__Impl19001);
+            	    pushFollow(FOLLOW_rule__RefEnforcement__Group_1__0_in_rule__RefEnforcement__Group__1__Impl18982);
             	    rule__RefEnforcement__Group_1__0();
 
             	    state._fsp--;
@@ -25761,7 +25419,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             	    break;
 
             	default :
-            	    break loop100;
+            	    break loop81;
                 }
             } while (true);
 
@@ -25797,12 +25455,12 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9480:1: ( rule__RefEnforcement__Group_1__0__Impl rule__RefEnforcement__Group_1__1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9481:2: rule__RefEnforcement__Group_1__0__Impl rule__RefEnforcement__Group_1__1
             {
-            pushFollow(FOLLOW_rule__RefEnforcement__Group_1__0__Impl_in_rule__RefEnforcement__Group_1__019036);
+            pushFollow(FOLLOW_rule__RefEnforcement__Group_1__0__Impl_in_rule__RefEnforcement__Group_1__019017);
             rule__RefEnforcement__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RefEnforcement__Group_1__1_in_rule__RefEnforcement__Group_1__019039);
+            pushFollow(FOLLOW_rule__RefEnforcement__Group_1__1_in_rule__RefEnforcement__Group_1__019020);
             rule__RefEnforcement__Group_1__1();
 
             state._fsp--;
@@ -25839,7 +25497,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9494:1: ','
             {
              before(grammarAccess.getRefEnforcementAccess().getCommaKeyword_1_0()); 
-            match(input,64,FOLLOW_64_in_rule__RefEnforcement__Group_1__0__Impl19067); 
+            match(input,64,FOLLOW_64_in_rule__RefEnforcement__Group_1__0__Impl19048); 
              after(grammarAccess.getRefEnforcementAccess().getCommaKeyword_1_0()); 
 
             }
@@ -25872,7 +25530,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9511:1: ( rule__RefEnforcement__Group_1__1__Impl )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9512:2: rule__RefEnforcement__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__RefEnforcement__Group_1__1__Impl_in_rule__RefEnforcement__Group_1__119098);
+            pushFollow(FOLLOW_rule__RefEnforcement__Group_1__1__Impl_in_rule__RefEnforcement__Group_1__119079);
             rule__RefEnforcement__Group_1__1__Impl();
 
             state._fsp--;
@@ -25912,7 +25570,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9525:1: ( rule__RefEnforcement__RefsAssignment_1_1 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9525:2: rule__RefEnforcement__RefsAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__RefEnforcement__RefsAssignment_1_1_in_rule__RefEnforcement__Group_1__1__Impl19125);
+            pushFollow(FOLLOW_rule__RefEnforcement__RefsAssignment_1_1_in_rule__RefEnforcement__Group_1__1__Impl19106);
             rule__RefEnforcement__RefsAssignment_1_1();
 
             state._fsp--;
@@ -25956,7 +25614,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9546:1: ruleQualifiedName
             {
              before(grammarAccess.getPolicyAccess().getNameQualifiedNameParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Policy__NameAssignment_119164);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Policy__NameAssignment_119145);
             ruleQualifiedName();
 
             state._fsp--;
@@ -25997,7 +25655,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9561:1: ruleImport
             {
              before(grammarAccess.getPolicyAccess().getImportelementsImportParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleImport_in_rule__Policy__ImportelementsAssignment_319195);
+            pushFollow(FOLLOW_ruleImport_in_rule__Policy__ImportelementsAssignment_319176);
             ruleImport();
 
             state._fsp--;
@@ -26038,7 +25696,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9576:1: ruleMetadata
             {
              before(grammarAccess.getPolicyAccess().getMetadataMetadataParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleMetadata_in_rule__Policy__MetadataAssignment_419226);
+            pushFollow(FOLLOW_ruleMetadata_in_rule__Policy__MetadataAssignment_419207);
             ruleMetadata();
 
             state._fsp--;
@@ -26079,7 +25737,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9591:1: ruleCollection
             {
              before(grammarAccess.getPolicyAccess().getCollectionCollectionParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleCollection_in_rule__Policy__CollectionAssignment_519257);
+            pushFollow(FOLLOW_ruleCollection_in_rule__Policy__CollectionAssignment_519238);
             ruleCollection();
 
             state._fsp--;
@@ -26120,7 +25778,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9606:1: ruleDisclosure
             {
              before(grammarAccess.getPolicyAccess().getDisclosureDisclosureParserRuleCall_6_0()); 
-            pushFollow(FOLLOW_ruleDisclosure_in_rule__Policy__DisclosureAssignment_619288);
+            pushFollow(FOLLOW_ruleDisclosure_in_rule__Policy__DisclosureAssignment_619269);
             ruleDisclosure();
 
             state._fsp--;
@@ -26161,7 +25819,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9621:1: ruleRetention
             {
              before(grammarAccess.getPolicyAccess().getRetentionRetentionParserRuleCall_7_0()); 
-            pushFollow(FOLLOW_ruleRetention_in_rule__Policy__RetentionAssignment_719319);
+            pushFollow(FOLLOW_ruleRetention_in_rule__Policy__RetentionAssignment_719300);
             ruleRetention();
 
             state._fsp--;
@@ -26202,7 +25860,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9636:1: ruleUsage
             {
              before(grammarAccess.getPolicyAccess().getUsageUsageParserRuleCall_8_0()); 
-            pushFollow(FOLLOW_ruleUsage_in_rule__Policy__UsageAssignment_819350);
+            pushFollow(FOLLOW_ruleUsage_in_rule__Policy__UsageAssignment_819331);
             ruleUsage();
 
             state._fsp--;
@@ -26243,7 +25901,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9651:1: ruleInformative
             {
              before(grammarAccess.getPolicyAccess().getInformativeInformativeParserRuleCall_9_0()); 
-            pushFollow(FOLLOW_ruleInformative_in_rule__Policy__InformativeAssignment_919381);
+            pushFollow(FOLLOW_ruleInformative_in_rule__Policy__InformativeAssignment_919362);
             ruleInformative();
 
             state._fsp--;
@@ -26284,7 +25942,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9666:1: rulePrivateData
             {
              before(grammarAccess.getPolicyAccess().getPrivateDataPrivateDataParserRuleCall_10_0()); 
-            pushFollow(FOLLOW_rulePrivateData_in_rule__Policy__PrivateDataAssignment_1019412);
+            pushFollow(FOLLOW_rulePrivateData_in_rule__Policy__PrivateDataAssignment_1019393);
             rulePrivateData();
 
             state._fsp--;
@@ -26325,7 +25983,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9681:1: ruleRecipient
             {
              before(grammarAccess.getPolicyAccess().getRecipientRecipientParserRuleCall_11_0()); 
-            pushFollow(FOLLOW_ruleRecipient_in_rule__Policy__RecipientAssignment_1119443);
+            pushFollow(FOLLOW_ruleRecipient_in_rule__Policy__RecipientAssignment_1119424);
             ruleRecipient();
 
             state._fsp--;
@@ -26366,7 +26024,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9696:1: ruleService
             {
              before(grammarAccess.getPolicyAccess().getServiceServiceParserRuleCall_12_0()); 
-            pushFollow(FOLLOW_ruleService_in_rule__Policy__ServiceAssignment_1219474);
+            pushFollow(FOLLOW_ruleService_in_rule__Policy__ServiceAssignment_1219455);
             ruleService();
 
             state._fsp--;
@@ -26407,7 +26065,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9711:1: ruleEnforcement
             {
              before(grammarAccess.getPolicyAccess().getEnforcementEnforcementParserRuleCall_13_0()); 
-            pushFollow(FOLLOW_ruleEnforcement_in_rule__Policy__EnforcementAssignment_1319505);
+            pushFollow(FOLLOW_ruleEnforcement_in_rule__Policy__EnforcementAssignment_1319486);
             ruleEnforcement();
 
             state._fsp--;
@@ -26448,7 +26106,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9726:1: ruleQualifiedNameWithWildcard
             {
              before(grammarAccess.getImportAccess().getImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleQualifiedNameWithWildcard_in_rule__Import__ImportedNamespaceAssignment_119536);
+            pushFollow(FOLLOW_ruleQualifiedNameWithWildcard_in_rule__Import__ImportedNamespaceAssignment_119517);
             ruleQualifiedNameWithWildcard();
 
             state._fsp--;
@@ -26489,7 +26147,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9741:1: RULE_STRING
             {
              before(grammarAccess.getMetadataAccess().getNameSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Metadata__NameAssignment_219567); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Metadata__NameAssignment_219548); 
              after(grammarAccess.getMetadataAccess().getNameSTRINGTerminalRuleCall_2_0()); 
 
             }
@@ -26526,7 +26184,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9756:1: RULE_STRING
             {
              before(grammarAccess.getMetadataAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Metadata__DescriptionAssignment_419598); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Metadata__DescriptionAssignment_419579); 
              after(grammarAccess.getMetadataAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
 
             }
@@ -26563,7 +26221,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9771:1: RULE_STRING
             {
              before(grammarAccess.getMetadataAccess().getAuthorsSTRINGTerminalRuleCall_6_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Metadata__AuthorsAssignment_619629); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Metadata__AuthorsAssignment_619610); 
              after(grammarAccess.getMetadataAccess().getAuthorsSTRINGTerminalRuleCall_6_0()); 
 
             }
@@ -26600,7 +26258,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9786:1: RULE_STRING
             {
              before(grammarAccess.getMetadataAccess().getOrganizationsSTRINGTerminalRuleCall_8_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Metadata__OrganizationsAssignment_819660); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Metadata__OrganizationsAssignment_819641); 
              after(grammarAccess.getMetadataAccess().getOrganizationsSTRINGTerminalRuleCall_8_0()); 
 
             }
@@ -26637,7 +26295,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9801:1: ruleDate
             {
              before(grammarAccess.getMetadataAccess().getDateDateParserRuleCall_10_0()); 
-            pushFollow(FOLLOW_ruleDate_in_rule__Metadata__DateAssignment_1019691);
+            pushFollow(FOLLOW_ruleDate_in_rule__Metadata__DateAssignment_1019672);
             ruleDate();
 
             state._fsp--;
@@ -26678,7 +26336,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9816:1: RULE_STRING
             {
              before(grammarAccess.getMetadataAccess().getVersionSTRINGTerminalRuleCall_12_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Metadata__VersionAssignment_1219722); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Metadata__VersionAssignment_1219703); 
              after(grammarAccess.getMetadataAccess().getVersionSTRINGTerminalRuleCall_12_0()); 
 
             }
@@ -26715,7 +26373,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9831:1: RULE_INT
             {
              before(grammarAccess.getDateAccess().getDayINTTerminalRuleCall_0_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Date__DayAssignment_019753); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Date__DayAssignment_019734); 
              after(grammarAccess.getDateAccess().getDayINTTerminalRuleCall_0_0()); 
 
             }
@@ -26752,7 +26410,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9846:1: ruleMonth
             {
              before(grammarAccess.getDateAccess().getMonthMonthParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleMonth_in_rule__Date__MonthAssignment_219784);
+            pushFollow(FOLLOW_ruleMonth_in_rule__Date__MonthAssignment_219765);
             ruleMonth();
 
             state._fsp--;
@@ -26793,7 +26451,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9861:1: RULE_INT
             {
              before(grammarAccess.getDateAccess().getYearINTTerminalRuleCall_4_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Date__YearAssignment_419815); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Date__YearAssignment_419796); 
              after(grammarAccess.getDateAccess().getYearINTTerminalRuleCall_4_0()); 
 
             }
@@ -26833,7 +26491,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9877:1: ( rule__Month__NameAlternatives_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9877:2: rule__Month__NameAlternatives_0
             {
-            pushFollow(FOLLOW_rule__Month__NameAlternatives_0_in_rule__Month__NameAssignment19846);
+            pushFollow(FOLLOW_rule__Month__NameAlternatives_0_in_rule__Month__NameAssignment19827);
             rule__Month__NameAlternatives_0();
 
             state._fsp--;
@@ -26877,7 +26535,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9892:1: RULE_ID
             {
              before(grammarAccess.getEnforcementAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Enforcement__NameAssignment_119879); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Enforcement__NameAssignment_119860); 
              after(grammarAccess.getEnforcementAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -26914,7 +26572,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9907:1: RULE_STRING
             {
              before(grammarAccess.getEnforcementAccess().getEnforcementNameSTRINGTerminalRuleCall_4_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Enforcement__EnforcementNameAssignment_419910); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Enforcement__EnforcementNameAssignment_419891); 
              after(grammarAccess.getEnforcementAccess().getEnforcementNameSTRINGTerminalRuleCall_4_0()); 
 
             }
@@ -26951,7 +26609,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9922:1: RULE_STRING
             {
              before(grammarAccess.getEnforcementAccess().getDescriptionSTRINGTerminalRuleCall_6_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Enforcement__DescriptionAssignment_619941); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Enforcement__DescriptionAssignment_619922); 
              after(grammarAccess.getEnforcementAccess().getDescriptionSTRINGTerminalRuleCall_6_0()); 
 
             }
@@ -26991,7 +26649,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9938:1: ( rule__Enforcement__TypeAlternatives_8_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9938:2: rule__Enforcement__TypeAlternatives_8_0
             {
-            pushFollow(FOLLOW_rule__Enforcement__TypeAlternatives_8_0_in_rule__Enforcement__TypeAssignment_819972);
+            pushFollow(FOLLOW_rule__Enforcement__TypeAlternatives_8_0_in_rule__Enforcement__TypeAssignment_819953);
             rule__Enforcement__TypeAlternatives_8_0();
 
             state._fsp--;
@@ -27035,7 +26693,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9953:1: RULE_ID
             {
              before(grammarAccess.getServiceAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Service__NameAssignment_120005); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Service__NameAssignment_119986); 
              after(grammarAccess.getServiceAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -27072,7 +26730,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9968:1: RULE_STRING
             {
              before(grammarAccess.getServiceAccess().getServiceNameSTRINGTerminalRuleCall_4_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Service__ServiceNameAssignment_420036); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Service__ServiceNameAssignment_420017); 
              after(grammarAccess.getServiceAccess().getServiceNameSTRINGTerminalRuleCall_4_0()); 
 
             }
@@ -27109,7 +26767,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9983:1: RULE_STRING
             {
              before(grammarAccess.getServiceAccess().getDescriptionSTRINGTerminalRuleCall_5_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Service__DescriptionAssignment_5_120067); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Service__DescriptionAssignment_5_120048); 
              after(grammarAccess.getServiceAccess().getDescriptionSTRINGTerminalRuleCall_5_1_0()); 
 
             }
@@ -27146,7 +26804,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:9998:1: ruleRefPrivateData
             {
              before(grammarAccess.getServiceAccess().getRefPrivateDataRefPrivateDataParserRuleCall_6_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefPrivateData_in_rule__Service__RefPrivateDataAssignment_6_1_020098);
+            pushFollow(FOLLOW_ruleRefPrivateData_in_rule__Service__RefPrivateDataAssignment_6_1_020079);
             ruleRefPrivateData();
 
             state._fsp--;
@@ -27191,7 +26849,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10015:1: 'All'
             {
              before(grammarAccess.getServiceAccess().getRefPDAllAllKeyword_6_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Service__RefPDAllAssignment_6_1_120134); 
+            match(input,83,FOLLOW_83_in_rule__Service__RefPDAllAssignment_6_1_120115); 
              after(grammarAccess.getServiceAccess().getRefPDAllAllKeyword_6_1_1_0()); 
 
             }
@@ -27232,7 +26890,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10036:1: ruleServicePart
             {
              before(grammarAccess.getServiceAccess().getServicePartServicePartParserRuleCall_7_1_0()); 
-            pushFollow(FOLLOW_ruleServicePart_in_rule__Service__ServicePartAssignment_7_120173);
+            pushFollow(FOLLOW_ruleServicePart_in_rule__Service__ServicePartAssignment_7_120154);
             ruleServicePart();
 
             state._fsp--;
@@ -27273,7 +26931,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10051:1: RULE_ID
             {
              before(grammarAccess.getRecipientAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Recipient__NameAssignment_120204); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Recipient__NameAssignment_120185); 
              after(grammarAccess.getRecipientAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -27310,7 +26968,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10066:1: RULE_STRING
             {
              before(grammarAccess.getRecipientAccess().getRecipientNameSTRINGTerminalRuleCall_4_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Recipient__RecipientNameAssignment_420235); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Recipient__RecipientNameAssignment_420216); 
              after(grammarAccess.getRecipientAccess().getRecipientNameSTRINGTerminalRuleCall_4_0()); 
 
             }
@@ -27347,7 +27005,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10081:1: RULE_STRING
             {
              before(grammarAccess.getRecipientAccess().getDescriptionSTRINGTerminalRuleCall_6_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Recipient__DescriptionAssignment_620266); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Recipient__DescriptionAssignment_620247); 
              after(grammarAccess.getRecipientAccess().getDescriptionSTRINGTerminalRuleCall_6_0()); 
 
             }
@@ -27384,7 +27042,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10096:1: ruleRecipientPart
             {
              before(grammarAccess.getRecipientAccess().getRecipientPartRecipientPartParserRuleCall_7_1_0()); 
-            pushFollow(FOLLOW_ruleRecipientPart_in_rule__Recipient__RecipientPartAssignment_7_120297);
+            pushFollow(FOLLOW_ruleRecipientPart_in_rule__Recipient__RecipientPartAssignment_7_120278);
             ruleRecipientPart();
 
             state._fsp--;
@@ -27428,7 +27086,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10112:1: ( rule__Recipient__ScopeAlternatives_9_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10112:2: rule__Recipient__ScopeAlternatives_9_0
             {
-            pushFollow(FOLLOW_rule__Recipient__ScopeAlternatives_9_0_in_rule__Recipient__ScopeAssignment_920328);
+            pushFollow(FOLLOW_rule__Recipient__ScopeAlternatives_9_0_in_rule__Recipient__ScopeAssignment_920309);
             rule__Recipient__ScopeAlternatives_9_0();
 
             state._fsp--;
@@ -27475,7 +27133,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10128:1: ( rule__Recipient__TypeAlternatives_11_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10128:2: rule__Recipient__TypeAlternatives_11_0
             {
-            pushFollow(FOLLOW_rule__Recipient__TypeAlternatives_11_0_in_rule__Recipient__TypeAssignment_1120361);
+            pushFollow(FOLLOW_rule__Recipient__TypeAlternatives_11_0_in_rule__Recipient__TypeAssignment_1120342);
             rule__Recipient__TypeAlternatives_11_0();
 
             state._fsp--;
@@ -27519,7 +27177,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10143:1: RULE_ID
             {
              before(grammarAccess.getPrivateDataAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrivateData__NameAssignment_120394); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrivateData__NameAssignment_120375); 
              after(grammarAccess.getPrivateDataAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -27556,7 +27214,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10158:1: RULE_STRING
             {
              before(grammarAccess.getPrivateDataAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__PrivateData__DescriptionAssignment_420425); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__PrivateData__DescriptionAssignment_420406); 
              after(grammarAccess.getPrivateDataAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
 
             }
@@ -27596,7 +27254,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10174:1: ( rule__PrivateData__TypeAlternatives_6_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10174:2: rule__PrivateData__TypeAlternatives_6_0
             {
-            pushFollow(FOLLOW_rule__PrivateData__TypeAlternatives_6_0_in_rule__PrivateData__TypeAssignment_620456);
+            pushFollow(FOLLOW_rule__PrivateData__TypeAlternatives_6_0_in_rule__PrivateData__TypeAssignment_620437);
             rule__PrivateData__TypeAlternatives_6_0();
 
             state._fsp--;
@@ -27640,7 +27298,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10189:1: ruleAttribute
             {
              before(grammarAccess.getPrivateDataAccess().getAttributeAttributeParserRuleCall_7_0()); 
-            pushFollow(FOLLOW_ruleAttribute_in_rule__PrivateData__AttributeAssignment_720489);
+            pushFollow(FOLLOW_ruleAttribute_in_rule__PrivateData__AttributeAssignment_720470);
             ruleAttribute();
 
             state._fsp--;
@@ -27681,7 +27339,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10204:1: RULE_STRING
             {
              before(grammarAccess.getAttributeAccess().getNameSTRINGTerminalRuleCall_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Attribute__NameAssignment_120520); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Attribute__NameAssignment_120501); 
              after(grammarAccess.getAttributeAccess().getNameSTRINGTerminalRuleCall_1_0()); 
 
             }
@@ -27718,7 +27376,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10219:1: RULE_STRING
             {
              before(grammarAccess.getAttributeAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Attribute__DescriptionAssignment_420551); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Attribute__DescriptionAssignment_420532); 
              after(grammarAccess.getAttributeAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
 
             }
@@ -27755,7 +27413,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10234:1: RULE_ID
             {
              before(grammarAccess.getCollectionAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Collection__NameAssignment_120582); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Collection__NameAssignment_120563); 
              after(grammarAccess.getCollectionAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -27792,7 +27450,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10249:1: RULE_STRING
             {
              before(grammarAccess.getCollectionAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Collection__DescriptionAssignment_420613); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Collection__DescriptionAssignment_420594); 
              after(grammarAccess.getCollectionAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
 
             }
@@ -27829,7 +27487,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10264:1: RULE_STRING
             {
              before(grammarAccess.getCollectionAccess().getConditionSTRINGTerminalRuleCall_6_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Collection__ConditionAssignment_620644); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Collection__ConditionAssignment_620625); 
              after(grammarAccess.getCollectionAccess().getConditionSTRINGTerminalRuleCall_6_0()); 
 
             }
@@ -27870,7 +27528,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10281:1: RULE_ID
             {
              before(grammarAccess.getCollectionAccess().getPartCollectionCollectionIDTerminalRuleCall_7_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Collection__PartCollectionAssignment_7_120679); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Collection__PartCollectionAssignment_7_120660); 
              after(grammarAccess.getCollectionAccess().getPartCollectionCollectionIDTerminalRuleCall_7_1_0_1()); 
 
             }
@@ -27911,7 +27569,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10298:1: ruleRefPrivateData
             {
              before(grammarAccess.getCollectionAccess().getRefPrivateDataRefPrivateDataParserRuleCall_8_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefPrivateData_in_rule__Collection__RefPrivateDataAssignment_8_1_020714);
+            pushFollow(FOLLOW_ruleRefPrivateData_in_rule__Collection__RefPrivateDataAssignment_8_1_020695);
             ruleRefPrivateData();
 
             state._fsp--;
@@ -27956,7 +27614,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10315:1: 'All'
             {
              before(grammarAccess.getCollectionAccess().getRefPDAllAllKeyword_8_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Collection__RefPDAllAssignment_8_1_120750); 
+            match(input,83,FOLLOW_83_in_rule__Collection__RefPDAllAssignment_8_1_120731); 
              after(grammarAccess.getCollectionAccess().getRefPDAllAllKeyword_8_1_1_0()); 
 
             }
@@ -27997,7 +27655,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10336:1: ruleRefService
             {
              before(grammarAccess.getCollectionAccess().getRefServiceRefServiceParserRuleCall_9_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefService_in_rule__Collection__RefServiceAssignment_9_1_020789);
+            pushFollow(FOLLOW_ruleRefService_in_rule__Collection__RefServiceAssignment_9_1_020770);
             ruleRefService();
 
             state._fsp--;
@@ -28042,7 +27700,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10353:1: 'All'
             {
              before(grammarAccess.getCollectionAccess().getRefSAllAllKeyword_9_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Collection__RefSAllAssignment_9_1_120825); 
+            match(input,83,FOLLOW_83_in_rule__Collection__RefSAllAssignment_9_1_120806); 
              after(grammarAccess.getCollectionAccess().getRefSAllAllKeyword_9_1_1_0()); 
 
             }
@@ -28083,7 +27741,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10374:1: ruleRefEnforcement
             {
              before(grammarAccess.getCollectionAccess().getRefEnforcementRefEnforcementParserRuleCall_10_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefEnforcement_in_rule__Collection__RefEnforcementAssignment_10_1_020864);
+            pushFollow(FOLLOW_ruleRefEnforcement_in_rule__Collection__RefEnforcementAssignment_10_1_020845);
             ruleRefEnforcement();
 
             state._fsp--;
@@ -28128,7 +27786,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10391:1: 'All'
             {
              before(grammarAccess.getCollectionAccess().getRefEAllAllKeyword_10_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Collection__RefEAllAssignment_10_1_120900); 
+            match(input,83,FOLLOW_83_in_rule__Collection__RefEAllAssignment_10_1_120881); 
              after(grammarAccess.getCollectionAccess().getRefEAllAllKeyword_10_1_1_0()); 
 
             }
@@ -28172,7 +27830,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10413:1: ( rule__Collection__ModalityAlternatives_12_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10413:2: rule__Collection__ModalityAlternatives_12_0
             {
-            pushFollow(FOLLOW_rule__Collection__ModalityAlternatives_12_0_in_rule__Collection__ModalityAssignment_1220939);
+            pushFollow(FOLLOW_rule__Collection__ModalityAlternatives_12_0_in_rule__Collection__ModalityAssignment_1220920);
             rule__Collection__ModalityAlternatives_12_0();
 
             state._fsp--;
@@ -28216,7 +27874,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10428:1: RULE_ID
             {
              before(grammarAccess.getDisclosureAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Disclosure__NameAssignment_120972); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Disclosure__NameAssignment_120953); 
              after(grammarAccess.getDisclosureAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -28253,7 +27911,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10443:1: RULE_STRING
             {
              before(grammarAccess.getDisclosureAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Disclosure__DescriptionAssignment_421003); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Disclosure__DescriptionAssignment_420984); 
              after(grammarAccess.getDisclosureAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
 
             }
@@ -28290,7 +27948,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10458:1: RULE_STRING
             {
              before(grammarAccess.getDisclosureAccess().getConditionSTRINGTerminalRuleCall_6_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Disclosure__ConditionAssignment_621034); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Disclosure__ConditionAssignment_621015); 
              after(grammarAccess.getDisclosureAccess().getConditionSTRINGTerminalRuleCall_6_0()); 
 
             }
@@ -28331,7 +27989,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10475:1: RULE_ID
             {
              before(grammarAccess.getDisclosureAccess().getPartDisclosureDisclosureIDTerminalRuleCall_7_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Disclosure__PartDisclosureAssignment_7_121069); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Disclosure__PartDisclosureAssignment_7_121050); 
              after(grammarAccess.getDisclosureAccess().getPartDisclosureDisclosureIDTerminalRuleCall_7_1_0_1()); 
 
             }
@@ -28372,7 +28030,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10492:1: ruleRefRecipient
             {
              before(grammarAccess.getDisclosureAccess().getRefRecipientRefRecipientParserRuleCall_8_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefRecipient_in_rule__Disclosure__RefRecipientAssignment_8_1_021104);
+            pushFollow(FOLLOW_ruleRefRecipient_in_rule__Disclosure__RefRecipientAssignment_8_1_021085);
             ruleRefRecipient();
 
             state._fsp--;
@@ -28417,7 +28075,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10509:1: 'All'
             {
              before(grammarAccess.getDisclosureAccess().getRefRAllAllKeyword_8_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Disclosure__RefRAllAssignment_8_1_121140); 
+            match(input,83,FOLLOW_83_in_rule__Disclosure__RefRAllAssignment_8_1_121121); 
              after(grammarAccess.getDisclosureAccess().getRefRAllAllKeyword_8_1_1_0()); 
 
             }
@@ -28458,7 +28116,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10530:1: ruleRefRecipientSource
             {
              before(grammarAccess.getDisclosureAccess().getRefRecipientSourceRefRecipientSourceParserRuleCall_9_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefRecipientSource_in_rule__Disclosure__RefRecipientSourceAssignment_9_1_021179);
+            pushFollow(FOLLOW_ruleRefRecipientSource_in_rule__Disclosure__RefRecipientSourceAssignment_9_1_021160);
             ruleRefRecipientSource();
 
             state._fsp--;
@@ -28503,7 +28161,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10547:1: 'All'
             {
              before(grammarAccess.getDisclosureAccess().getRefRSAllAllKeyword_9_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Disclosure__RefRSAllAssignment_9_1_121215); 
+            match(input,83,FOLLOW_83_in_rule__Disclosure__RefRSAllAssignment_9_1_121196); 
              after(grammarAccess.getDisclosureAccess().getRefRSAllAllKeyword_9_1_1_0()); 
 
             }
@@ -28544,7 +28202,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10568:1: ruleRefRecipientTarget
             {
              before(grammarAccess.getDisclosureAccess().getRefRecipientTargetRefRecipientTargetParserRuleCall_10_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefRecipientTarget_in_rule__Disclosure__RefRecipientTargetAssignment_10_1_021254);
+            pushFollow(FOLLOW_ruleRefRecipientTarget_in_rule__Disclosure__RefRecipientTargetAssignment_10_1_021235);
             ruleRefRecipientTarget();
 
             state._fsp--;
@@ -28589,7 +28247,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10585:1: 'All'
             {
              before(grammarAccess.getDisclosureAccess().getRefRTAllAllKeyword_10_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Disclosure__RefRTAllAssignment_10_1_121290); 
+            match(input,83,FOLLOW_83_in_rule__Disclosure__RefRTAllAssignment_10_1_121271); 
              after(grammarAccess.getDisclosureAccess().getRefRTAllAllKeyword_10_1_1_0()); 
 
             }
@@ -28630,7 +28288,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10606:1: ruleRefPrivateData
             {
              before(grammarAccess.getDisclosureAccess().getRefPrivateDataRefPrivateDataParserRuleCall_11_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefPrivateData_in_rule__Disclosure__RefPrivateDataAssignment_11_1_021329);
+            pushFollow(FOLLOW_ruleRefPrivateData_in_rule__Disclosure__RefPrivateDataAssignment_11_1_021310);
             ruleRefPrivateData();
 
             state._fsp--;
@@ -28675,7 +28333,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10623:1: 'All'
             {
              before(grammarAccess.getDisclosureAccess().getRefPDAllAllKeyword_11_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Disclosure__RefPDAllAssignment_11_1_121365); 
+            match(input,83,FOLLOW_83_in_rule__Disclosure__RefPDAllAssignment_11_1_121346); 
              after(grammarAccess.getDisclosureAccess().getRefPDAllAllKeyword_11_1_1_0()); 
 
             }
@@ -28716,7 +28374,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10644:1: ruleRefService
             {
              before(grammarAccess.getDisclosureAccess().getRefServiceRefServiceParserRuleCall_12_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefService_in_rule__Disclosure__RefServiceAssignment_12_1_021404);
+            pushFollow(FOLLOW_ruleRefService_in_rule__Disclosure__RefServiceAssignment_12_1_021385);
             ruleRefService();
 
             state._fsp--;
@@ -28761,7 +28419,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10661:1: 'All'
             {
              before(grammarAccess.getDisclosureAccess().getRefSAllAllKeyword_12_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Disclosure__RefSAllAssignment_12_1_121440); 
+            match(input,83,FOLLOW_83_in_rule__Disclosure__RefSAllAssignment_12_1_121421); 
              after(grammarAccess.getDisclosureAccess().getRefSAllAllKeyword_12_1_1_0()); 
 
             }
@@ -28802,7 +28460,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10682:1: ruleRefEnforcement
             {
              before(grammarAccess.getDisclosureAccess().getRefEnforcementRefEnforcementParserRuleCall_13_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefEnforcement_in_rule__Disclosure__RefEnforcementAssignment_13_1_021479);
+            pushFollow(FOLLOW_ruleRefEnforcement_in_rule__Disclosure__RefEnforcementAssignment_13_1_021460);
             ruleRefEnforcement();
 
             state._fsp--;
@@ -28847,7 +28505,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10699:1: 'All'
             {
              before(grammarAccess.getDisclosureAccess().getRefEAllAllKeyword_13_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Disclosure__RefEAllAssignment_13_1_121515); 
+            match(input,83,FOLLOW_83_in_rule__Disclosure__RefEAllAssignment_13_1_121496); 
              after(grammarAccess.getDisclosureAccess().getRefEAllAllKeyword_13_1_1_0()); 
 
             }
@@ -28891,7 +28549,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10721:1: ( rule__Disclosure__ModalityAlternatives_15_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10721:2: rule__Disclosure__ModalityAlternatives_15_0
             {
-            pushFollow(FOLLOW_rule__Disclosure__ModalityAlternatives_15_0_in_rule__Disclosure__ModalityAssignment_1521554);
+            pushFollow(FOLLOW_rule__Disclosure__ModalityAlternatives_15_0_in_rule__Disclosure__ModalityAssignment_1521535);
             rule__Disclosure__ModalityAlternatives_15_0();
 
             state._fsp--;
@@ -28935,7 +28593,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10736:1: RULE_ID
             {
              before(grammarAccess.getRetentionAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Retention__NameAssignment_121587); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Retention__NameAssignment_121568); 
              after(grammarAccess.getRetentionAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -28972,7 +28630,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10751:1: RULE_STRING
             {
              before(grammarAccess.getRetentionAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Retention__DescriptionAssignment_421618); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Retention__DescriptionAssignment_421599); 
              after(grammarAccess.getRetentionAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
 
             }
@@ -29009,7 +28667,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10766:1: RULE_STRING
             {
              before(grammarAccess.getRetentionAccess().getConditionSTRINGTerminalRuleCall_6_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Retention__ConditionAssignment_621649); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Retention__ConditionAssignment_621630); 
              after(grammarAccess.getRetentionAccess().getConditionSTRINGTerminalRuleCall_6_0()); 
 
             }
@@ -29050,7 +28708,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10783:1: RULE_ID
             {
              before(grammarAccess.getRetentionAccess().getPartRetentionRetentionIDTerminalRuleCall_7_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Retention__PartRetentionAssignment_7_121684); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Retention__PartRetentionAssignment_7_121665); 
              after(grammarAccess.getRetentionAccess().getPartRetentionRetentionIDTerminalRuleCall_7_1_0_1()); 
 
             }
@@ -29091,7 +28749,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10800:1: RULE_STRING
             {
              before(grammarAccess.getRetentionAccess().getPeriodSTRINGTerminalRuleCall_9_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Retention__PeriodAssignment_921719); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Retention__PeriodAssignment_921700); 
              after(grammarAccess.getRetentionAccess().getPeriodSTRINGTerminalRuleCall_9_0()); 
 
             }
@@ -29128,7 +28786,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10815:1: ruleRefPrivateData
             {
              before(grammarAccess.getRetentionAccess().getRefPrivateDataRefPrivateDataParserRuleCall_10_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefPrivateData_in_rule__Retention__RefPrivateDataAssignment_10_1_021750);
+            pushFollow(FOLLOW_ruleRefPrivateData_in_rule__Retention__RefPrivateDataAssignment_10_1_021731);
             ruleRefPrivateData();
 
             state._fsp--;
@@ -29173,7 +28831,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10832:1: 'All'
             {
              before(grammarAccess.getRetentionAccess().getRefPDAllAllKeyword_10_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Retention__RefPDAllAssignment_10_1_121786); 
+            match(input,83,FOLLOW_83_in_rule__Retention__RefPDAllAssignment_10_1_121767); 
              after(grammarAccess.getRetentionAccess().getRefPDAllAllKeyword_10_1_1_0()); 
 
             }
@@ -29214,7 +28872,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10853:1: ruleRefService
             {
              before(grammarAccess.getRetentionAccess().getRefServiceRefServiceParserRuleCall_11_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefService_in_rule__Retention__RefServiceAssignment_11_1_021825);
+            pushFollow(FOLLOW_ruleRefService_in_rule__Retention__RefServiceAssignment_11_1_021806);
             ruleRefService();
 
             state._fsp--;
@@ -29259,7 +28917,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10870:1: 'All'
             {
              before(grammarAccess.getRetentionAccess().getRefSAllAllKeyword_11_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Retention__RefSAllAssignment_11_1_121861); 
+            match(input,83,FOLLOW_83_in_rule__Retention__RefSAllAssignment_11_1_121842); 
              after(grammarAccess.getRetentionAccess().getRefSAllAllKeyword_11_1_1_0()); 
 
             }
@@ -29300,7 +28958,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10891:1: ruleRefEnforcement
             {
              before(grammarAccess.getRetentionAccess().getRefEnforcementRefEnforcementParserRuleCall_12_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefEnforcement_in_rule__Retention__RefEnforcementAssignment_12_1_021900);
+            pushFollow(FOLLOW_ruleRefEnforcement_in_rule__Retention__RefEnforcementAssignment_12_1_021881);
             ruleRefEnforcement();
 
             state._fsp--;
@@ -29345,7 +29003,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10908:1: 'All'
             {
              before(grammarAccess.getRetentionAccess().getRefEAllAllKeyword_12_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Retention__RefEAllAssignment_12_1_121936); 
+            match(input,83,FOLLOW_83_in_rule__Retention__RefEAllAssignment_12_1_121917); 
              after(grammarAccess.getRetentionAccess().getRefEAllAllKeyword_12_1_1_0()); 
 
             }
@@ -29389,7 +29047,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10930:1: ( rule__Retention__ModalityAlternatives_14_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10930:2: rule__Retention__ModalityAlternatives_14_0
             {
-            pushFollow(FOLLOW_rule__Retention__ModalityAlternatives_14_0_in_rule__Retention__ModalityAssignment_1421975);
+            pushFollow(FOLLOW_rule__Retention__ModalityAlternatives_14_0_in_rule__Retention__ModalityAssignment_1421956);
             rule__Retention__ModalityAlternatives_14_0();
 
             state._fsp--;
@@ -29433,7 +29091,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10945:1: RULE_ID
             {
              before(grammarAccess.getUsageAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Usage__NameAssignment_122008); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Usage__NameAssignment_121989); 
              after(grammarAccess.getUsageAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -29470,7 +29128,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10960:1: RULE_STRING
             {
              before(grammarAccess.getUsageAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Usage__DescriptionAssignment_422039); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Usage__DescriptionAssignment_422020); 
              after(grammarAccess.getUsageAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
 
             }
@@ -29507,7 +29165,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10975:1: RULE_STRING
             {
              before(grammarAccess.getUsageAccess().getConditionSTRINGTerminalRuleCall_6_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Usage__ConditionAssignment_622070); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Usage__ConditionAssignment_622051); 
              after(grammarAccess.getUsageAccess().getConditionSTRINGTerminalRuleCall_6_0()); 
 
             }
@@ -29548,7 +29206,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:10992:1: RULE_ID
             {
              before(grammarAccess.getUsageAccess().getPartUsageUsageIDTerminalRuleCall_7_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Usage__PartUsageAssignment_7_122105); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Usage__PartUsageAssignment_7_122086); 
              after(grammarAccess.getUsageAccess().getPartUsageUsageIDTerminalRuleCall_7_1_0_1()); 
 
             }
@@ -29589,7 +29247,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11009:1: ruleRefPrivateData
             {
              before(grammarAccess.getUsageAccess().getRefPrivateDataRefPrivateDataParserRuleCall_8_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefPrivateData_in_rule__Usage__RefPrivateDataAssignment_8_1_022140);
+            pushFollow(FOLLOW_ruleRefPrivateData_in_rule__Usage__RefPrivateDataAssignment_8_1_022121);
             ruleRefPrivateData();
 
             state._fsp--;
@@ -29634,7 +29292,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11026:1: 'All'
             {
              before(grammarAccess.getUsageAccess().getRefPDAllAllKeyword_8_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Usage__RefPDAllAssignment_8_1_122176); 
+            match(input,83,FOLLOW_83_in_rule__Usage__RefPDAllAssignment_8_1_122157); 
              after(grammarAccess.getUsageAccess().getRefPDAllAllKeyword_8_1_1_0()); 
 
             }
@@ -29675,7 +29333,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11047:1: ruleRefService
             {
              before(grammarAccess.getUsageAccess().getRefServiceRefServiceParserRuleCall_9_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefService_in_rule__Usage__RefServiceAssignment_9_1_022215);
+            pushFollow(FOLLOW_ruleRefService_in_rule__Usage__RefServiceAssignment_9_1_022196);
             ruleRefService();
 
             state._fsp--;
@@ -29720,7 +29378,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11064:1: 'All'
             {
              before(grammarAccess.getUsageAccess().getRefSAllAllKeyword_9_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Usage__RefSAllAssignment_9_1_122251); 
+            match(input,83,FOLLOW_83_in_rule__Usage__RefSAllAssignment_9_1_122232); 
              after(grammarAccess.getUsageAccess().getRefSAllAllKeyword_9_1_1_0()); 
 
             }
@@ -29761,7 +29419,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11085:1: ruleRefEnforcement
             {
              before(grammarAccess.getUsageAccess().getRefEnforcementRefEnforcementParserRuleCall_10_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefEnforcement_in_rule__Usage__RefEnforcementAssignment_10_1_022290);
+            pushFollow(FOLLOW_ruleRefEnforcement_in_rule__Usage__RefEnforcementAssignment_10_1_022271);
             ruleRefEnforcement();
 
             state._fsp--;
@@ -29806,7 +29464,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11102:1: 'All'
             {
              before(grammarAccess.getUsageAccess().getRefEAllAllKeyword_10_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Usage__RefEAllAssignment_10_1_122326); 
+            match(input,83,FOLLOW_83_in_rule__Usage__RefEAllAssignment_10_1_122307); 
              after(grammarAccess.getUsageAccess().getRefEAllAllKeyword_10_1_1_0()); 
 
             }
@@ -29850,7 +29508,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11124:1: ( rule__Usage__ModalityAlternatives_12_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11124:2: rule__Usage__ModalityAlternatives_12_0
             {
-            pushFollow(FOLLOW_rule__Usage__ModalityAlternatives_12_0_in_rule__Usage__ModalityAssignment_1222365);
+            pushFollow(FOLLOW_rule__Usage__ModalityAlternatives_12_0_in_rule__Usage__ModalityAssignment_1222346);
             rule__Usage__ModalityAlternatives_12_0();
 
             state._fsp--;
@@ -29894,7 +29552,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11139:1: RULE_ID
             {
              before(grammarAccess.getInformativeAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Informative__NameAssignment_122398); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Informative__NameAssignment_122379); 
              after(grammarAccess.getInformativeAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -29931,7 +29589,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11154:1: RULE_STRING
             {
              before(grammarAccess.getInformativeAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Informative__DescriptionAssignment_422429); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Informative__DescriptionAssignment_422410); 
              after(grammarAccess.getInformativeAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
 
             }
@@ -29968,7 +29626,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11169:1: RULE_STRING
             {
              before(grammarAccess.getInformativeAccess().getConditionSTRINGTerminalRuleCall_6_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Informative__ConditionAssignment_622460); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Informative__ConditionAssignment_622441); 
              after(grammarAccess.getInformativeAccess().getConditionSTRINGTerminalRuleCall_6_0()); 
 
             }
@@ -30009,7 +29667,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11186:1: RULE_ID
             {
              before(grammarAccess.getInformativeAccess().getPartInformativeInformativeIDTerminalRuleCall_7_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Informative__PartInformativeAssignment_7_122495); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Informative__PartInformativeAssignment_7_122476); 
              after(grammarAccess.getInformativeAccess().getPartInformativeInformativeIDTerminalRuleCall_7_1_0_1()); 
 
             }
@@ -30050,7 +29708,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11203:1: ruleRefPrivateData
             {
              before(grammarAccess.getInformativeAccess().getRefPrivateDataRefPrivateDataParserRuleCall_8_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefPrivateData_in_rule__Informative__RefPrivateDataAssignment_8_1_022530);
+            pushFollow(FOLLOW_ruleRefPrivateData_in_rule__Informative__RefPrivateDataAssignment_8_1_022511);
             ruleRefPrivateData();
 
             state._fsp--;
@@ -30095,7 +29753,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11220:1: 'All'
             {
              before(grammarAccess.getInformativeAccess().getRefPDAllAllKeyword_8_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Informative__RefPDAllAssignment_8_1_122566); 
+            match(input,83,FOLLOW_83_in_rule__Informative__RefPDAllAssignment_8_1_122547); 
              after(grammarAccess.getInformativeAccess().getRefPDAllAllKeyword_8_1_1_0()); 
 
             }
@@ -30136,7 +29794,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11241:1: ruleRefService
             {
              before(grammarAccess.getInformativeAccess().getRefServiceRefServiceParserRuleCall_9_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefService_in_rule__Informative__RefServiceAssignment_9_1_022605);
+            pushFollow(FOLLOW_ruleRefService_in_rule__Informative__RefServiceAssignment_9_1_022586);
             ruleRefService();
 
             state._fsp--;
@@ -30181,7 +29839,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11258:1: 'All'
             {
              before(grammarAccess.getInformativeAccess().getRefSAllAllKeyword_9_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Informative__RefSAllAssignment_9_1_122641); 
+            match(input,83,FOLLOW_83_in_rule__Informative__RefSAllAssignment_9_1_122622); 
              after(grammarAccess.getInformativeAccess().getRefSAllAllKeyword_9_1_1_0()); 
 
             }
@@ -30222,7 +29880,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11279:1: ruleRefEnforcement
             {
              before(grammarAccess.getInformativeAccess().getRefEnforcementRefEnforcementParserRuleCall_10_1_0_0()); 
-            pushFollow(FOLLOW_ruleRefEnforcement_in_rule__Informative__RefEnforcementAssignment_10_1_022680);
+            pushFollow(FOLLOW_ruleRefEnforcement_in_rule__Informative__RefEnforcementAssignment_10_1_022661);
             ruleRefEnforcement();
 
             state._fsp--;
@@ -30267,7 +29925,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11296:1: 'All'
             {
              before(grammarAccess.getInformativeAccess().getRefEAllAllKeyword_10_1_1_0()); 
-            match(input,83,FOLLOW_83_in_rule__Informative__RefEAllAssignment_10_1_122716); 
+            match(input,83,FOLLOW_83_in_rule__Informative__RefEAllAssignment_10_1_122697); 
              after(grammarAccess.getInformativeAccess().getRefEAllAllKeyword_10_1_1_0()); 
 
             }
@@ -30311,7 +29969,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11318:1: ( rule__Informative__ModalityAlternatives_12_0 )
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11318:2: rule__Informative__ModalityAlternatives_12_0
             {
-            pushFollow(FOLLOW_rule__Informative__ModalityAlternatives_12_0_in_rule__Informative__ModalityAssignment_1222755);
+            pushFollow(FOLLOW_rule__Informative__ModalityAlternatives_12_0_in_rule__Informative__ModalityAssignment_1222736);
             rule__Informative__ModalityAlternatives_12_0();
 
             state._fsp--;
@@ -30359,7 +30017,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11335:1: RULE_ID
             {
              before(grammarAccess.getRecipientPartAccess().getRecipientPartRecipientIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RecipientPart__RecipientPartAssignment_022792); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RecipientPart__RecipientPartAssignment_022773); 
              after(grammarAccess.getRecipientPartAccess().getRecipientPartRecipientIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -30404,7 +30062,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11354:1: RULE_ID
             {
              before(grammarAccess.getRecipientPartAccess().getRefsRecipientIDTerminalRuleCall_1_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RecipientPart__RefsAssignment_1_122831); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RecipientPart__RefsAssignment_1_122812); 
              after(grammarAccess.getRecipientPartAccess().getRefsRecipientIDTerminalRuleCall_1_1_0_1()); 
 
             }
@@ -30449,7 +30107,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11373:1: RULE_ID
             {
              before(grammarAccess.getRefRecipientAccess().getRefRecipientRecipientIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefRecipient__RefRecipientAssignment_022870); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefRecipient__RefRecipientAssignment_022851); 
              after(grammarAccess.getRefRecipientAccess().getRefRecipientRecipientIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -30494,7 +30152,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11392:1: RULE_ID
             {
              before(grammarAccess.getRefRecipientAccess().getRefsRecipientIDTerminalRuleCall_1_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefRecipient__RefsAssignment_1_122909); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefRecipient__RefsAssignment_1_122890); 
              after(grammarAccess.getRefRecipientAccess().getRefsRecipientIDTerminalRuleCall_1_1_0_1()); 
 
             }
@@ -30539,7 +30197,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11411:1: RULE_ID
             {
              before(grammarAccess.getRefRecipientSourceAccess().getRefRecipientSourceRecipientIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefRecipientSource__RefRecipientSourceAssignment_022948); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefRecipientSource__RefRecipientSourceAssignment_022929); 
              after(grammarAccess.getRefRecipientSourceAccess().getRefRecipientSourceRecipientIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -30584,7 +30242,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11430:1: RULE_ID
             {
              before(grammarAccess.getRefRecipientSourceAccess().getRefsRecipientIDTerminalRuleCall_1_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefRecipientSource__RefsAssignment_1_122987); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefRecipientSource__RefsAssignment_1_122968); 
              after(grammarAccess.getRefRecipientSourceAccess().getRefsRecipientIDTerminalRuleCall_1_1_0_1()); 
 
             }
@@ -30629,7 +30287,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11449:1: RULE_ID
             {
              before(grammarAccess.getRefRecipientTargetAccess().getRefRecipientTargetRecipientIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefRecipientTarget__RefRecipientTargetAssignment_023026); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefRecipientTarget__RefRecipientTargetAssignment_023007); 
              after(grammarAccess.getRefRecipientTargetAccess().getRefRecipientTargetRecipientIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -30674,7 +30332,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11468:1: RULE_ID
             {
              before(grammarAccess.getRefRecipientTargetAccess().getRefsRecipientIDTerminalRuleCall_1_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefRecipientTarget__RefsAssignment_1_123065); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefRecipientTarget__RefsAssignment_1_123046); 
              after(grammarAccess.getRefRecipientTargetAccess().getRefsRecipientIDTerminalRuleCall_1_1_0_1()); 
 
             }
@@ -30719,7 +30377,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11487:1: RULE_ID
             {
              before(grammarAccess.getRefServiceAccess().getRefServiceServiceIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefService__RefServiceAssignment_023104); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefService__RefServiceAssignment_023085); 
              after(grammarAccess.getRefServiceAccess().getRefServiceServiceIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -30764,7 +30422,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11506:1: RULE_ID
             {
              before(grammarAccess.getRefServiceAccess().getRefsServiceIDTerminalRuleCall_1_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefService__RefsAssignment_1_123143); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefService__RefsAssignment_1_123124); 
              after(grammarAccess.getRefServiceAccess().getRefsServiceIDTerminalRuleCall_1_1_0_1()); 
 
             }
@@ -30809,7 +30467,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11525:1: RULE_ID
             {
              before(grammarAccess.getServicePartAccess().getServicePartServiceIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ServicePart__ServicePartAssignment_023182); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ServicePart__ServicePartAssignment_023163); 
              after(grammarAccess.getServicePartAccess().getServicePartServiceIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -30854,7 +30512,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11544:1: RULE_ID
             {
              before(grammarAccess.getServicePartAccess().getRefsServiceIDTerminalRuleCall_1_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ServicePart__RefsAssignment_1_123221); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ServicePart__RefsAssignment_1_123202); 
              after(grammarAccess.getServicePartAccess().getRefsServiceIDTerminalRuleCall_1_1_0_1()); 
 
             }
@@ -30899,7 +30557,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11563:1: RULE_ID
             {
              before(grammarAccess.getRefPrivateDataAccess().getRefPrivateDataPrivateDataIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefPrivateData__RefPrivateDataAssignment_023260); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefPrivateData__RefPrivateDataAssignment_023241); 
              after(grammarAccess.getRefPrivateDataAccess().getRefPrivateDataPrivateDataIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -30944,7 +30602,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11582:1: RULE_ID
             {
              before(grammarAccess.getRefPrivateDataAccess().getRefsPrivateDataIDTerminalRuleCall_1_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefPrivateData__RefsAssignment_1_123299); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefPrivateData__RefsAssignment_1_123280); 
              after(grammarAccess.getRefPrivateDataAccess().getRefsPrivateDataIDTerminalRuleCall_1_1_0_1()); 
 
             }
@@ -30989,7 +30647,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11601:1: RULE_ID
             {
              before(grammarAccess.getRefEnforcementAccess().getRefEnforcementEnforcementIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefEnforcement__RefEnforcementAssignment_023338); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefEnforcement__RefEnforcementAssignment_023319); 
              after(grammarAccess.getRefEnforcementAccess().getRefEnforcementEnforcementIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -31034,7 +30692,7 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
             // ../rslingo.rslil4privacy.ui/src-gen/rslingo/rslil4privacy/ui/contentassist/antlr/internal/InternalRSLIL4Privacy.g:11620:1: RULE_ID
             {
              before(grammarAccess.getRefEnforcementAccess().getRefsEnforcementIDTerminalRuleCall_1_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefEnforcement__RefsAssignment_1_123377); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RefEnforcement__RefsAssignment_1_123358); 
              after(grammarAccess.getRefEnforcementAccess().getRefsEnforcementIDTerminalRuleCall_1_1_0_1()); 
 
             }
@@ -31157,882 +30815,882 @@ public class InternalRSLIL4PrivacyParser extends AbstractInternalContentAssistPa
     public static final BitSet FOLLOW_25_in_rule__Enforcement__TypeAlternatives_8_01866 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_26_in_rule__Enforcement__TypeAlternatives_8_01886 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_27_in_rule__Enforcement__TypeAlternatives_8_01906 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__RefPrivateDataAssignment_6_1_0_in_rule__Service__Alternatives_6_11940 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Service__RefPDAllAssignment_6_1_1_in_rule__Service__Alternatives_6_11959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Recipient__ScopeAlternatives_9_01993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__Recipient__ScopeAlternatives_9_02013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__Recipient__ScopeAlternatives_9_02033 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__Recipient__TypeAlternatives_11_02068 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Recipient__TypeAlternatives_11_02088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Recipient__TypeAlternatives_11_02108 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__PrivateData__TypeAlternatives_6_02143 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__PrivateData__TypeAlternatives_6_02163 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__RefPrivateDataAssignment_8_1_0_in_rule__Collection__Alternatives_8_12197 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Collection__RefPDAllAssignment_8_1_1_in_rule__Collection__Alternatives_8_12216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__RefServiceAssignment_9_1_0_in_rule__Collection__Alternatives_9_12249 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Collection__RefSAllAssignment_9_1_1_in_rule__Collection__Alternatives_9_12268 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__RefEnforcementAssignment_10_1_0_in_rule__Collection__Alternatives_10_12301 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Collection__RefEAllAssignment_10_1_1_in_rule__Collection__Alternatives_10_12320 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__Collection__ModalityAlternatives_12_02354 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__Collection__ModalityAlternatives_12_02374 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__Collection__ModalityAlternatives_12_02394 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__RefRecipientAssignment_8_1_0_in_rule__Disclosure__Alternatives_8_12428 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Disclosure__RefRAllAssignment_8_1_1_in_rule__Disclosure__Alternatives_8_12447 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__RefRecipientSourceAssignment_9_1_0_in_rule__Disclosure__Alternatives_9_12480 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Disclosure__RefRSAllAssignment_9_1_1_in_rule__Disclosure__Alternatives_9_12499 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__RefRecipientTargetAssignment_10_1_0_in_rule__Disclosure__Alternatives_10_12532 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Disclosure__RefRTAllAssignment_10_1_1_in_rule__Disclosure__Alternatives_10_12551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__RefPrivateDataAssignment_11_1_0_in_rule__Disclosure__Alternatives_11_12584 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Disclosure__RefPDAllAssignment_11_1_1_in_rule__Disclosure__Alternatives_11_12603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__RefServiceAssignment_12_1_0_in_rule__Disclosure__Alternatives_12_12636 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Disclosure__RefSAllAssignment_12_1_1_in_rule__Disclosure__Alternatives_12_12655 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__RefEnforcementAssignment_13_1_0_in_rule__Disclosure__Alternatives_13_12688 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Disclosure__RefEAllAssignment_13_1_1_in_rule__Disclosure__Alternatives_13_12707 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__Disclosure__ModalityAlternatives_15_02741 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__Disclosure__ModalityAlternatives_15_02761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__Disclosure__ModalityAlternatives_15_02781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__RefPrivateDataAssignment_10_1_0_in_rule__Retention__Alternatives_10_12815 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Retention__RefPDAllAssignment_10_1_1_in_rule__Retention__Alternatives_10_12834 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__RefServiceAssignment_11_1_0_in_rule__Retention__Alternatives_11_12867 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Retention__RefSAllAssignment_11_1_1_in_rule__Retention__Alternatives_11_12886 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__RefEnforcementAssignment_12_1_0_in_rule__Retention__Alternatives_12_12919 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Retention__RefEAllAssignment_12_1_1_in_rule__Retention__Alternatives_12_12938 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__Retention__ModalityAlternatives_14_02972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__Retention__ModalityAlternatives_14_02992 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__Retention__ModalityAlternatives_14_03012 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__RefPrivateDataAssignment_8_1_0_in_rule__Usage__Alternatives_8_13046 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Usage__RefPDAllAssignment_8_1_1_in_rule__Usage__Alternatives_8_13065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__RefServiceAssignment_9_1_0_in_rule__Usage__Alternatives_9_13098 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Usage__RefSAllAssignment_9_1_1_in_rule__Usage__Alternatives_9_13117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__RefEnforcementAssignment_10_1_0_in_rule__Usage__Alternatives_10_13150 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Usage__RefEAllAssignment_10_1_1_in_rule__Usage__Alternatives_10_13169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__Usage__ModalityAlternatives_12_03203 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__Usage__ModalityAlternatives_12_03223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__Usage__ModalityAlternatives_12_03243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__RefPrivateDataAssignment_8_1_0_in_rule__Informative__Alternatives_8_13277 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Informative__RefPDAllAssignment_8_1_1_in_rule__Informative__Alternatives_8_13296 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__RefServiceAssignment_9_1_0_in_rule__Informative__Alternatives_9_13329 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Informative__RefSAllAssignment_9_1_1_in_rule__Informative__Alternatives_9_13348 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__RefEnforcementAssignment_10_1_0_in_rule__Informative__Alternatives_10_13381 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Informative__RefEAllAssignment_10_1_1_in_rule__Informative__Alternatives_10_13400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__Informative__ModalityAlternatives_12_03434 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__Informative__ModalityAlternatives_12_03454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__Informative__ModalityAlternatives_12_03474 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__Group__0__Impl_in_rule__Policy__Group__03506 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Policy__Group__1_in_rule__Policy__Group__03509 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__Policy__Group__0__Impl3537 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__Group__1__Impl_in_rule__Policy__Group__13568 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_rule__Policy__Group__2_in_rule__Policy__Group__13571 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__NameAssignment_1_in_rule__Policy__Group__1__Impl3598 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__Group__2__Impl_in_rule__Policy__Group__23628 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
-    public static final BitSet FOLLOW_rule__Policy__Group__3_in_rule__Policy__Group__23631 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__Policy__Group__2__Impl3659 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__Group__3__Impl_in_rule__Policy__Group__33690 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
-    public static final BitSet FOLLOW_rule__Policy__Group__4_in_rule__Policy__Group__33693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__ImportelementsAssignment_3_in_rule__Policy__Group__3__Impl3720 = new BitSet(new long[]{0x0000080000000002L});
-    public static final BitSet FOLLOW_rule__Policy__Group__4__Impl_in_rule__Policy__Group__43751 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
-    public static final BitSet FOLLOW_rule__Policy__Group__5_in_rule__Policy__Group__43754 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__MetadataAssignment_4_in_rule__Policy__Group__4__Impl3781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__Group__5__Impl_in_rule__Policy__Group__53812 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
-    public static final BitSet FOLLOW_rule__Policy__Group__6_in_rule__Policy__Group__53815 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__CollectionAssignment_5_in_rule__Policy__Group__5__Impl3842 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__Group__6__Impl_in_rule__Policy__Group__63873 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
-    public static final BitSet FOLLOW_rule__Policy__Group__7_in_rule__Policy__Group__63876 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__DisclosureAssignment_6_in_rule__Policy__Group__6__Impl3903 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000080L});
-    public static final BitSet FOLLOW_rule__Policy__Group__7__Impl_in_rule__Policy__Group__73934 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
-    public static final BitSet FOLLOW_rule__Policy__Group__8_in_rule__Policy__Group__73937 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__RetentionAssignment_7_in_rule__Policy__Group__7__Impl3964 = new BitSet(new long[]{0x0000000000000002L,0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__Policy__Group__8__Impl_in_rule__Policy__Group__83995 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
-    public static final BitSet FOLLOW_rule__Policy__Group__9_in_rule__Policy__Group__83998 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__UsageAssignment_8_in_rule__Policy__Group__8__Impl4025 = new BitSet(new long[]{0x0000000000000002L,0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__Policy__Group__9__Impl_in_rule__Policy__Group__94056 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
-    public static final BitSet FOLLOW_rule__Policy__Group__10_in_rule__Policy__Group__94059 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__InformativeAssignment_9_in_rule__Policy__Group__9__Impl4086 = new BitSet(new long[]{0x0000000000000002L,0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Policy__Group__10__Impl_in_rule__Policy__Group__104117 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
-    public static final BitSet FOLLOW_rule__Policy__Group__11_in_rule__Policy__Group__104120 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__PrivateDataAssignment_10_in_rule__Policy__Group__10__Impl4147 = new BitSet(new long[]{0x4000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__Group__11__Impl_in_rule__Policy__Group__114178 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
-    public static final BitSet FOLLOW_rule__Policy__Group__12_in_rule__Policy__Group__114181 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__RecipientAssignment_11_in_rule__Policy__Group__11__Impl4208 = new BitSet(new long[]{0x0800000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__Group__12__Impl_in_rule__Policy__Group__124239 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
-    public static final BitSet FOLLOW_rule__Policy__Group__13_in_rule__Policy__Group__124242 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__ServiceAssignment_12_in_rule__Policy__Group__12__Impl4269 = new BitSet(new long[]{0x0100000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__Group__13__Impl_in_rule__Policy__Group__134300 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
-    public static final BitSet FOLLOW_rule__Policy__Group__14_in_rule__Policy__Group__134303 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__EnforcementAssignment_13_in_rule__Policy__Group__13__Impl4330 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_rule__Policy__Group__14__Impl_in_rule__Policy__Group__144361 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__Policy__Group__14__Impl4389 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__04450 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__04453 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl4480 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__14509 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl4536 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__04571 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__04574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__QualifiedName__Group_1__0__Impl4602 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__14633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl4660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__04693 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Import__Group__1_in_rule__Import__Group__04696 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_rule__Import__Group__0__Impl4724 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__14755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Import__ImportedNamespaceAssignment_1_in_rule__Import__Group__1__Impl4782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group__0__Impl_in_rule__QualifiedNameWithWildcard__Group__04816 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group__1_in_rule__QualifiedNameWithWildcard__Group__04819 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__QualifiedNameWithWildcard__Group__0__Impl4846 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group__1__Impl_in_rule__QualifiedNameWithWildcard__Group__14875 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_rule__QualifiedNameWithWildcard__Group__1__Impl4904 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__0__Impl_in_rule__Metadata__Group__04941 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__1_in_rule__Metadata__Group__04944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_rule__Metadata__Group__0__Impl4972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__1__Impl_in_rule__Metadata__Group__15003 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__2_in_rule__Metadata__Group__15006 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_rule__Metadata__Group__1__Impl5034 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__2__Impl_in_rule__Metadata__Group__25065 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__3_in_rule__Metadata__Group__25068 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__NameAssignment_2_in_rule__Metadata__Group__2__Impl5095 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__3__Impl_in_rule__Metadata__Group__35125 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__4_in_rule__Metadata__Group__35128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__Metadata__Group__3__Impl5156 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__4__Impl_in_rule__Metadata__Group__45187 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__5_in_rule__Metadata__Group__45190 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__DescriptionAssignment_4_in_rule__Metadata__Group__4__Impl5217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__5__Impl_in_rule__Metadata__Group__55247 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__6_in_rule__Metadata__Group__55250 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_rule__Metadata__Group__5__Impl5278 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__6__Impl_in_rule__Metadata__Group__65309 = new BitSet(new long[]{0x0002000000000000L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__7_in_rule__Metadata__Group__65312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__AuthorsAssignment_6_in_rule__Metadata__Group__6__Impl5339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__7__Impl_in_rule__Metadata__Group__75369 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__8_in_rule__Metadata__Group__75372 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_rule__Metadata__Group__7__Impl5400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__8__Impl_in_rule__Metadata__Group__85431 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__9_in_rule__Metadata__Group__85434 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__OrganizationsAssignment_8_in_rule__Metadata__Group__8__Impl5461 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__9__Impl_in_rule__Metadata__Group__95491 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__10_in_rule__Metadata__Group__95494 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_rule__Metadata__Group__9__Impl5522 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__10__Impl_in_rule__Metadata__Group__105553 = new BitSet(new long[]{0x0008000000000000L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__11_in_rule__Metadata__Group__105556 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__DateAssignment_10_in_rule__Metadata__Group__10__Impl5583 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__11__Impl_in_rule__Metadata__Group__115613 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__12_in_rule__Metadata__Group__115616 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_rule__Metadata__Group__11__Impl5644 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__12__Impl_in_rule__Metadata__Group__125675 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__13_in_rule__Metadata__Group__125678 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__VersionAssignment_12_in_rule__Metadata__Group__12__Impl5705 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Metadata__Group__13__Impl_in_rule__Metadata__Group__135735 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__Metadata__Group__13__Impl5763 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Date__Group__0__Impl_in_rule__Date__Group__05822 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_rule__Date__Group__1_in_rule__Date__Group__05825 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Date__DayAssignment_0_in_rule__Date__Group__0__Impl5852 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Date__Group__1__Impl_in_rule__Date__Group__15882 = new BitSet(new long[]{0x00000000007FF800L});
-    public static final BitSet FOLLOW_rule__Date__Group__2_in_rule__Date__Group__15885 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_rule__Date__Group__1__Impl5913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Date__Group__2__Impl_in_rule__Date__Group__25944 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_rule__Date__Group__3_in_rule__Date__Group__25947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Date__MonthAssignment_2_in_rule__Date__Group__2__Impl5974 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Date__Group__3__Impl_in_rule__Date__Group__36004 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__Date__Group__4_in_rule__Date__Group__36007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_rule__Date__Group__3__Impl6035 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Date__Group__4__Impl_in_rule__Date__Group__46066 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Date__YearAssignment_4_in_rule__Date__Group__4__Impl6093 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__0__Impl_in_rule__Enforcement__Group__06133 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__1_in_rule__Enforcement__Group__06136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_rule__Enforcement__Group__0__Impl6164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__1__Impl_in_rule__Enforcement__Group__16195 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__2_in_rule__Enforcement__Group__16198 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enforcement__NameAssignment_1_in_rule__Enforcement__Group__1__Impl6225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__2__Impl_in_rule__Enforcement__Group__26255 = new BitSet(new long[]{0x0040000000000000L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__3_in_rule__Enforcement__Group__26258 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__Enforcement__Group__2__Impl6286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__3__Impl_in_rule__Enforcement__Group__36317 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__4_in_rule__Enforcement__Group__36320 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_rule__Enforcement__Group__3__Impl6348 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__4__Impl_in_rule__Enforcement__Group__46379 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__5_in_rule__Enforcement__Group__46382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enforcement__EnforcementNameAssignment_4_in_rule__Enforcement__Group__4__Impl6409 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__5__Impl_in_rule__Enforcement__Group__56439 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__6_in_rule__Enforcement__Group__56442 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__Enforcement__Group__5__Impl6470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__6__Impl_in_rule__Enforcement__Group__66501 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__7_in_rule__Enforcement__Group__66504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enforcement__DescriptionAssignment_6_in_rule__Enforcement__Group__6__Impl6531 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__7__Impl_in_rule__Enforcement__Group__76561 = new BitSet(new long[]{0x000000000F800000L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__8_in_rule__Enforcement__Group__76564 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_rule__Enforcement__Group__7__Impl6592 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__8__Impl_in_rule__Enforcement__Group__86623 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__9_in_rule__Enforcement__Group__86626 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enforcement__TypeAssignment_8_in_rule__Enforcement__Group__8__Impl6653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enforcement__Group__9__Impl_in_rule__Enforcement__Group__96683 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__Enforcement__Group__9__Impl6711 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group__0__Impl_in_rule__Service__Group__06762 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Service__Group__1_in_rule__Service__Group__06765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_rule__Service__Group__0__Impl6793 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group__1__Impl_in_rule__Service__Group__16824 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_rule__Service__Group__2_in_rule__Service__Group__16827 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__NameAssignment_1_in_rule__Service__Group__1__Impl6854 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group__2__Impl_in_rule__Service__Group__26884 = new BitSet(new long[]{0x0040000000000000L});
-    public static final BitSet FOLLOW_rule__Service__Group__3_in_rule__Service__Group__26887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__Service__Group__2__Impl6915 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group__3__Impl_in_rule__Service__Group__36946 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Service__Group__4_in_rule__Service__Group__36949 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_rule__Service__Group__3__Impl6977 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group__4__Impl_in_rule__Service__Group__47008 = new BitSet(new long[]{0x0600820000000000L});
-    public static final BitSet FOLLOW_rule__Service__Group__5_in_rule__Service__Group__47011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__ServiceNameAssignment_4_in_rule__Service__Group__4__Impl7038 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group__5__Impl_in_rule__Service__Group__57068 = new BitSet(new long[]{0x0600820000000000L});
-    public static final BitSet FOLLOW_rule__Service__Group__6_in_rule__Service__Group__57071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group_5__0_in_rule__Service__Group__5__Impl7098 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group__6__Impl_in_rule__Service__Group__67129 = new BitSet(new long[]{0x0600820000000000L});
-    public static final BitSet FOLLOW_rule__Service__Group__7_in_rule__Service__Group__67132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group_6__0_in_rule__Service__Group__6__Impl7159 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group__7__Impl_in_rule__Service__Group__77190 = new BitSet(new long[]{0x0600820000000000L});
-    public static final BitSet FOLLOW_rule__Service__Group__8_in_rule__Service__Group__77193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group_7__0_in_rule__Service__Group__7__Impl7220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group__8__Impl_in_rule__Service__Group__87251 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__Service__Group__8__Impl7279 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group_5__0__Impl_in_rule__Service__Group_5__07328 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Service__Group_5__1_in_rule__Service__Group_5__07331 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__Service__Group_5__0__Impl7359 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group_5__1__Impl_in_rule__Service__Group_5__17390 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__DescriptionAssignment_5_1_in_rule__Service__Group_5__1__Impl7417 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group_6__0__Impl_in_rule__Service__Group_6__07451 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Service__Group_6__1_in_rule__Service__Group_6__07454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_rule__Service__Group_6__0__Impl7482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group_6__1__Impl_in_rule__Service__Group_6__17513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Alternatives_6_1_in_rule__Service__Group_6__1__Impl7540 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group_7__0__Impl_in_rule__Service__Group_7__07574 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Service__Group_7__1_in_rule__Service__Group_7__07577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_rule__Service__Group_7__0__Impl7605 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group_7__1__Impl_in_rule__Service__Group_7__17636 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__ServicePartAssignment_7_1_in_rule__Service__Group_7__1__Impl7663 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__0__Impl_in_rule__Recipient__Group__07698 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__1_in_rule__Recipient__Group__07701 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_rule__Recipient__Group__0__Impl7729 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__1__Impl_in_rule__Recipient__Group__17760 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__2_in_rule__Recipient__Group__17763 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__NameAssignment_1_in_rule__Recipient__Group__1__Impl7790 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__2__Impl_in_rule__Recipient__Group__27820 = new BitSet(new long[]{0x0040000000000000L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__3_in_rule__Recipient__Group__27823 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__Recipient__Group__2__Impl7851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__3__Impl_in_rule__Recipient__Group__37882 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__4_in_rule__Recipient__Group__37885 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_rule__Recipient__Group__3__Impl7913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__4__Impl_in_rule__Recipient__Group__47944 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__5_in_rule__Recipient__Group__47947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__RecipientNameAssignment_4_in_rule__Recipient__Group__4__Impl7974 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__5__Impl_in_rule__Recipient__Group__58004 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__6_in_rule__Recipient__Group__58007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__Recipient__Group__5__Impl8035 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__6__Impl_in_rule__Recipient__Group__68066 = new BitSet(new long[]{0x3000000000000000L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__7_in_rule__Recipient__Group__68069 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__DescriptionAssignment_6_in_rule__Recipient__Group__6__Impl8096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__7__Impl_in_rule__Recipient__Group__78126 = new BitSet(new long[]{0x3000000000000000L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__8_in_rule__Recipient__Group__78129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__Group_7__0_in_rule__Recipient__Group__7__Impl8156 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__8__Impl_in_rule__Recipient__Group__88187 = new BitSet(new long[]{0x0000000070000000L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__9_in_rule__Recipient__Group__88190 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_60_in_rule__Recipient__Group__8__Impl8218 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__9__Impl_in_rule__Recipient__Group__98249 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__10_in_rule__Recipient__Group__98252 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__ScopeAssignment_9_in_rule__Recipient__Group__9__Impl8279 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__10__Impl_in_rule__Recipient__Group__108309 = new BitSet(new long[]{0x0000000380000000L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__11_in_rule__Recipient__Group__108312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_rule__Recipient__Group__10__Impl8340 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__11__Impl_in_rule__Recipient__Group__118371 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__12_in_rule__Recipient__Group__118374 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__TypeAssignment_11_in_rule__Recipient__Group__11__Impl8401 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__Group__12__Impl_in_rule__Recipient__Group__128431 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__Recipient__Group__12__Impl8459 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__Group_7__0__Impl_in_rule__Recipient__Group_7__08516 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Recipient__Group_7__1_in_rule__Recipient__Group_7__08519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_61_in_rule__Recipient__Group_7__0__Impl8547 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__Group_7__1__Impl_in_rule__Recipient__Group_7__18578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__RecipientPartAssignment_7_1_in_rule__Recipient__Group_7__1__Impl8605 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__PrivateData__Group__0__Impl_in_rule__PrivateData__Group__08640 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__PrivateData__Group__1_in_rule__PrivateData__Group__08643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_62_in_rule__PrivateData__Group__0__Impl8671 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrivateData__Group__1__Impl_in_rule__PrivateData__Group__18702 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_rule__PrivateData__Group__2_in_rule__PrivateData__Group__18705 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrivateData__NameAssignment_1_in_rule__PrivateData__Group__1__Impl8732 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrivateData__Group__2__Impl_in_rule__PrivateData__Group__28762 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_rule__PrivateData__Group__3_in_rule__PrivateData__Group__28765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__PrivateData__Group__2__Impl8793 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrivateData__Group__3__Impl_in_rule__PrivateData__Group__38824 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__PrivateData__Group__4_in_rule__PrivateData__Group__38827 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__PrivateData__Group__3__Impl8855 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrivateData__Group__4__Impl_in_rule__PrivateData__Group__48886 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_rule__PrivateData__Group__5_in_rule__PrivateData__Group__48889 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrivateData__DescriptionAssignment_4_in_rule__PrivateData__Group__4__Impl8916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrivateData__Group__5__Impl_in_rule__PrivateData__Group__58946 = new BitSet(new long[]{0x0000000C00000000L});
-    public static final BitSet FOLLOW_rule__PrivateData__Group__6_in_rule__PrivateData__Group__58949 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_rule__PrivateData__Group__5__Impl8977 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrivateData__Group__6__Impl_in_rule__PrivateData__Group__69008 = new BitSet(new long[]{0x8000020000000000L});
-    public static final BitSet FOLLOW_rule__PrivateData__Group__7_in_rule__PrivateData__Group__69011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrivateData__TypeAssignment_6_in_rule__PrivateData__Group__6__Impl9038 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrivateData__Group__7__Impl_in_rule__PrivateData__Group__79068 = new BitSet(new long[]{0x8000020000000000L});
-    public static final BitSet FOLLOW_rule__PrivateData__Group__8_in_rule__PrivateData__Group__79071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrivateData__AttributeAssignment_7_in_rule__PrivateData__Group__7__Impl9098 = new BitSet(new long[]{0x8000000000000002L});
-    public static final BitSet FOLLOW_rule__PrivateData__Group__8__Impl_in_rule__PrivateData__Group__89129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__PrivateData__Group__8__Impl9157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__0__Impl_in_rule__Attribute__Group__09206 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__1_in_rule__Attribute__Group__09209 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_rule__Attribute__Group__0__Impl9237 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__1__Impl_in_rule__Attribute__Group__19268 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__2_in_rule__Attribute__Group__19271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Attribute__NameAssignment_1_in_rule__Attribute__Group__1__Impl9298 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__2__Impl_in_rule__Attribute__Group__29328 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__3_in_rule__Attribute__Group__29331 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__Attribute__Group__2__Impl9359 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__3__Impl_in_rule__Attribute__Group__39390 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__4_in_rule__Attribute__Group__39393 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__Attribute__Group__3__Impl9421 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__4__Impl_in_rule__Attribute__Group__49452 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__5_in_rule__Attribute__Group__49455 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Attribute__DescriptionAssignment_4_in_rule__Attribute__Group__4__Impl9482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__5__Impl_in_rule__Attribute__Group__59512 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__6_in_rule__Attribute__Group__59515 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__Attribute__Group__5__Impl9543 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Attribute__Group__6__Impl_in_rule__Attribute__Group__69574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_rule__Attribute__Group__6__Impl9603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group__0__Impl_in_rule__Collection__Group__09650 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Collection__Group__1_in_rule__Collection__Group__09653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_65_in_rule__Collection__Group__0__Impl9681 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group__1__Impl_in_rule__Collection__Group__19712 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_rule__Collection__Group__2_in_rule__Collection__Group__19715 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__NameAssignment_1_in_rule__Collection__Group__1__Impl9742 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group__2__Impl_in_rule__Collection__Group__29772 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_rule__Collection__Group__3_in_rule__Collection__Group__29775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__Collection__Group__2__Impl9803 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group__3__Impl_in_rule__Collection__Group__39834 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Collection__Group__4_in_rule__Collection__Group__39837 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__Collection__Group__3__Impl9865 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group__4__Impl_in_rule__Collection__Group__49896 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_rule__Collection__Group__5_in_rule__Collection__Group__49899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__DescriptionAssignment_4_in_rule__Collection__Group__4__Impl9926 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group__5__Impl_in_rule__Collection__Group__59956 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Collection__Group__6_in_rule__Collection__Group__59959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_rule__Collection__Group__5__Impl9987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group__6__Impl_in_rule__Collection__Group__610018 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000078L});
-    public static final BitSet FOLLOW_rule__Collection__Group__7_in_rule__Collection__Group__610021 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__ConditionAssignment_6_in_rule__Collection__Group__6__Impl10048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group__7__Impl_in_rule__Collection__Group__710078 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000078L});
-    public static final BitSet FOLLOW_rule__Collection__Group__8_in_rule__Collection__Group__710081 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group_7__0_in_rule__Collection__Group__7__Impl10108 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group__8__Impl_in_rule__Collection__Group__810139 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000078L});
-    public static final BitSet FOLLOW_rule__Collection__Group__9_in_rule__Collection__Group__810142 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group_8__0_in_rule__Collection__Group__8__Impl10169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group__9__Impl_in_rule__Collection__Group__910200 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000078L});
-    public static final BitSet FOLLOW_rule__Collection__Group__10_in_rule__Collection__Group__910203 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group_9__0_in_rule__Collection__Group__9__Impl10230 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group__10__Impl_in_rule__Collection__Group__1010261 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000078L});
-    public static final BitSet FOLLOW_rule__Collection__Group__11_in_rule__Collection__Group__1010264 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group_10__0_in_rule__Collection__Group__10__Impl10291 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group__11__Impl_in_rule__Collection__Group__1110322 = new BitSet(new long[]{0x0000007000000000L});
-    public static final BitSet FOLLOW_rule__Collection__Group__12_in_rule__Collection__Group__1110325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_67_in_rule__Collection__Group__11__Impl10353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group__12__Impl_in_rule__Collection__Group__1210384 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__Collection__Group__13_in_rule__Collection__Group__1210387 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__ModalityAssignment_12_in_rule__Collection__Group__12__Impl10414 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group__13__Impl_in_rule__Collection__Group__1310444 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__Collection__Group__13__Impl10472 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group_7__0__Impl_in_rule__Collection__Group_7__010531 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Collection__Group_7__1_in_rule__Collection__Group_7__010534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_rule__Collection__Group_7__0__Impl10562 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group_7__1__Impl_in_rule__Collection__Group_7__110593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__PartCollectionAssignment_7_1_in_rule__Collection__Group_7__1__Impl10620 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group_8__0__Impl_in_rule__Collection__Group_8__010654 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Collection__Group_8__1_in_rule__Collection__Group_8__010657 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_rule__Collection__Group_8__0__Impl10685 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group_8__1__Impl_in_rule__Collection__Group_8__110716 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Alternatives_8_1_in_rule__Collection__Group_8__1__Impl10743 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group_9__0__Impl_in_rule__Collection__Group_9__010777 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Collection__Group_9__1_in_rule__Collection__Group_9__010780 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_rule__Collection__Group_9__0__Impl10808 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group_9__1__Impl_in_rule__Collection__Group_9__110839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Alternatives_9_1_in_rule__Collection__Group_9__1__Impl10866 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group_10__0__Impl_in_rule__Collection__Group_10__010900 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Collection__Group_10__1_in_rule__Collection__Group_10__010903 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_rule__Collection__Group_10__0__Impl10931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Group_10__1__Impl_in_rule__Collection__Group_10__110962 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__Alternatives_10_1_in_rule__Collection__Group_10__1__Impl10989 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__0__Impl_in_rule__Disclosure__Group__011023 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__1_in_rule__Disclosure__Group__011026 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_rule__Disclosure__Group__0__Impl11054 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__1__Impl_in_rule__Disclosure__Group__111085 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__2_in_rule__Disclosure__Group__111088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__NameAssignment_1_in_rule__Disclosure__Group__1__Impl11115 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__2__Impl_in_rule__Disclosure__Group__211145 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__3_in_rule__Disclosure__Group__211148 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__Disclosure__Group__2__Impl11176 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__3__Impl_in_rule__Disclosure__Group__311207 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__4_in_rule__Disclosure__Group__311210 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__Disclosure__Group__3__Impl11238 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__4__Impl_in_rule__Disclosure__Group__411269 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__5_in_rule__Disclosure__Group__411272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__DescriptionAssignment_4_in_rule__Disclosure__Group__4__Impl11299 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__5__Impl_in_rule__Disclosure__Group__511329 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__6_in_rule__Disclosure__Group__511332 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_rule__Disclosure__Group__5__Impl11360 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__6__Impl_in_rule__Disclosure__Group__611391 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000F68L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__7_in_rule__Disclosure__Group__611394 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__ConditionAssignment_6_in_rule__Disclosure__Group__6__Impl11421 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__7__Impl_in_rule__Disclosure__Group__711451 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000F68L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__8_in_rule__Disclosure__Group__711454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_7__0_in_rule__Disclosure__Group__7__Impl11481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__8__Impl_in_rule__Disclosure__Group__811512 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000F68L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__9_in_rule__Disclosure__Group__811515 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_8__0_in_rule__Disclosure__Group__8__Impl11542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__9__Impl_in_rule__Disclosure__Group__911573 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000F68L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__10_in_rule__Disclosure__Group__911576 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_9__0_in_rule__Disclosure__Group__9__Impl11603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__10__Impl_in_rule__Disclosure__Group__1011634 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000F68L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__11_in_rule__Disclosure__Group__1011637 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_10__0_in_rule__Disclosure__Group__10__Impl11664 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__11__Impl_in_rule__Disclosure__Group__1111695 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000F68L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__12_in_rule__Disclosure__Group__1111698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_11__0_in_rule__Disclosure__Group__11__Impl11725 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__12__Impl_in_rule__Disclosure__Group__1211756 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000F68L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__13_in_rule__Disclosure__Group__1211759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_12__0_in_rule__Disclosure__Group__12__Impl11786 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__13__Impl_in_rule__Disclosure__Group__1311817 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000F68L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__14_in_rule__Disclosure__Group__1311820 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_13__0_in_rule__Disclosure__Group__13__Impl11847 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__14__Impl_in_rule__Disclosure__Group__1411878 = new BitSet(new long[]{0x0000007000000000L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__15_in_rule__Disclosure__Group__1411881 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_67_in_rule__Disclosure__Group__14__Impl11909 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__15__Impl_in_rule__Disclosure__Group__1511940 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__16_in_rule__Disclosure__Group__1511943 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__ModalityAssignment_15_in_rule__Disclosure__Group__15__Impl11970 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group__16__Impl_in_rule__Disclosure__Group__1612000 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__Disclosure__Group__16__Impl12028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_7__0__Impl_in_rule__Disclosure__Group_7__012093 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_7__1_in_rule__Disclosure__Group_7__012096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_72_in_rule__Disclosure__Group_7__0__Impl12124 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_7__1__Impl_in_rule__Disclosure__Group_7__112155 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__PartDisclosureAssignment_7_1_in_rule__Disclosure__Group_7__1__Impl12182 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_8__0__Impl_in_rule__Disclosure__Group_8__012216 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_8__1_in_rule__Disclosure__Group_8__012219 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_rule__Disclosure__Group_8__0__Impl12247 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_8__1__Impl_in_rule__Disclosure__Group_8__112278 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Alternatives_8_1_in_rule__Disclosure__Group_8__1__Impl12305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_9__0__Impl_in_rule__Disclosure__Group_9__012339 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_9__1_in_rule__Disclosure__Group_9__012342 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_rule__Disclosure__Group_9__0__Impl12370 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_9__1__Impl_in_rule__Disclosure__Group_9__112401 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Alternatives_9_1_in_rule__Disclosure__Group_9__1__Impl12428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_10__0__Impl_in_rule__Disclosure__Group_10__012462 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_10__1_in_rule__Disclosure__Group_10__012465 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_75_in_rule__Disclosure__Group_10__0__Impl12493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_10__1__Impl_in_rule__Disclosure__Group_10__112524 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Alternatives_10_1_in_rule__Disclosure__Group_10__1__Impl12551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_11__0__Impl_in_rule__Disclosure__Group_11__012585 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_11__1_in_rule__Disclosure__Group_11__012588 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_rule__Disclosure__Group_11__0__Impl12616 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_11__1__Impl_in_rule__Disclosure__Group_11__112647 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Alternatives_11_1_in_rule__Disclosure__Group_11__1__Impl12674 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_12__0__Impl_in_rule__Disclosure__Group_12__012708 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_12__1_in_rule__Disclosure__Group_12__012711 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_rule__Disclosure__Group_12__0__Impl12739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_12__1__Impl_in_rule__Disclosure__Group_12__112770 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Alternatives_12_1_in_rule__Disclosure__Group_12__1__Impl12797 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_13__0__Impl_in_rule__Disclosure__Group_13__012831 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_13__1_in_rule__Disclosure__Group_13__012834 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_rule__Disclosure__Group_13__0__Impl12862 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Group_13__1__Impl_in_rule__Disclosure__Group_13__112893 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__Alternatives_13_1_in_rule__Disclosure__Group_13__1__Impl12920 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group__0__Impl_in_rule__Retention__Group__012954 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Retention__Group__1_in_rule__Retention__Group__012957 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_76_in_rule__Retention__Group__0__Impl12985 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group__1__Impl_in_rule__Retention__Group__113016 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_rule__Retention__Group__2_in_rule__Retention__Group__113019 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__NameAssignment_1_in_rule__Retention__Group__1__Impl13046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group__2__Impl_in_rule__Retention__Group__213076 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_rule__Retention__Group__3_in_rule__Retention__Group__213079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__Retention__Group__2__Impl13107 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group__3__Impl_in_rule__Retention__Group__313138 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Retention__Group__4_in_rule__Retention__Group__313141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__Retention__Group__3__Impl13169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group__4__Impl_in_rule__Retention__Group__413200 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_rule__Retention__Group__5_in_rule__Retention__Group__413203 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__DescriptionAssignment_4_in_rule__Retention__Group__4__Impl13230 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group__5__Impl_in_rule__Retention__Group__513260 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Retention__Group__6_in_rule__Retention__Group__513263 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_rule__Retention__Group__5__Impl13291 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group__6__Impl_in_rule__Retention__Group__613322 = new BitSet(new long[]{0x0000000000000000L,0x0000000000006000L});
-    public static final BitSet FOLLOW_rule__Retention__Group__7_in_rule__Retention__Group__613325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__ConditionAssignment_6_in_rule__Retention__Group__6__Impl13352 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group__7__Impl_in_rule__Retention__Group__713382 = new BitSet(new long[]{0x0000000000000000L,0x0000000000006000L});
-    public static final BitSet FOLLOW_rule__Retention__Group__8_in_rule__Retention__Group__713385 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group_7__0_in_rule__Retention__Group__7__Impl13412 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group__8__Impl_in_rule__Retention__Group__813443 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Retention__Group__9_in_rule__Retention__Group__813446 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_77_in_rule__Retention__Group__8__Impl13474 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group__9__Impl_in_rule__Retention__Group__913505 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000068L});
-    public static final BitSet FOLLOW_rule__Retention__Group__10_in_rule__Retention__Group__913508 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__PeriodAssignment_9_in_rule__Retention__Group__9__Impl13535 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group__10__Impl_in_rule__Retention__Group__1013565 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000068L});
-    public static final BitSet FOLLOW_rule__Retention__Group__11_in_rule__Retention__Group__1013568 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group_10__0_in_rule__Retention__Group__10__Impl13595 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group__11__Impl_in_rule__Retention__Group__1113626 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000068L});
-    public static final BitSet FOLLOW_rule__Retention__Group__12_in_rule__Retention__Group__1113629 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group_11__0_in_rule__Retention__Group__11__Impl13656 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group__12__Impl_in_rule__Retention__Group__1213687 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000068L});
-    public static final BitSet FOLLOW_rule__Retention__Group__13_in_rule__Retention__Group__1213690 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group_12__0_in_rule__Retention__Group__12__Impl13717 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group__13__Impl_in_rule__Retention__Group__1313748 = new BitSet(new long[]{0x0000007000000000L});
-    public static final BitSet FOLLOW_rule__Retention__Group__14_in_rule__Retention__Group__1313751 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_67_in_rule__Retention__Group__13__Impl13779 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group__14__Impl_in_rule__Retention__Group__1413810 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__Retention__Group__15_in_rule__Retention__Group__1413813 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__ModalityAssignment_14_in_rule__Retention__Group__14__Impl13840 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group__15__Impl_in_rule__Retention__Group__1513870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__Retention__Group__15__Impl13898 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group_7__0__Impl_in_rule__Retention__Group_7__013961 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Retention__Group_7__1_in_rule__Retention__Group_7__013964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_78_in_rule__Retention__Group_7__0__Impl13992 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group_7__1__Impl_in_rule__Retention__Group_7__114023 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__PartRetentionAssignment_7_1_in_rule__Retention__Group_7__1__Impl14050 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group_10__0__Impl_in_rule__Retention__Group_10__014084 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Retention__Group_10__1_in_rule__Retention__Group_10__014087 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_rule__Retention__Group_10__0__Impl14115 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group_10__1__Impl_in_rule__Retention__Group_10__114146 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Alternatives_10_1_in_rule__Retention__Group_10__1__Impl14173 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group_11__0__Impl_in_rule__Retention__Group_11__014207 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Retention__Group_11__1_in_rule__Retention__Group_11__014210 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_rule__Retention__Group_11__0__Impl14238 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group_11__1__Impl_in_rule__Retention__Group_11__114269 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Alternatives_11_1_in_rule__Retention__Group_11__1__Impl14296 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group_12__0__Impl_in_rule__Retention__Group_12__014330 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Retention__Group_12__1_in_rule__Retention__Group_12__014333 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_rule__Retention__Group_12__0__Impl14361 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Group_12__1__Impl_in_rule__Retention__Group_12__114392 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__Alternatives_12_1_in_rule__Retention__Group_12__1__Impl14419 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group__0__Impl_in_rule__Usage__Group__014453 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Usage__Group__1_in_rule__Usage__Group__014456 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_79_in_rule__Usage__Group__0__Impl14484 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group__1__Impl_in_rule__Usage__Group__114515 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_rule__Usage__Group__2_in_rule__Usage__Group__114518 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__NameAssignment_1_in_rule__Usage__Group__1__Impl14545 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group__2__Impl_in_rule__Usage__Group__214575 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_rule__Usage__Group__3_in_rule__Usage__Group__214578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__Usage__Group__2__Impl14606 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group__3__Impl_in_rule__Usage__Group__314637 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Usage__Group__4_in_rule__Usage__Group__314640 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__Usage__Group__3__Impl14668 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group__4__Impl_in_rule__Usage__Group__414699 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_rule__Usage__Group__5_in_rule__Usage__Group__414702 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__DescriptionAssignment_4_in_rule__Usage__Group__4__Impl14729 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group__5__Impl_in_rule__Usage__Group__514759 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Usage__Group__6_in_rule__Usage__Group__514762 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_rule__Usage__Group__5__Impl14790 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group__6__Impl_in_rule__Usage__Group__614821 = new BitSet(new long[]{0x0200000000000000L,0x0000000000010068L});
-    public static final BitSet FOLLOW_rule__Usage__Group__7_in_rule__Usage__Group__614824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__ConditionAssignment_6_in_rule__Usage__Group__6__Impl14851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group__7__Impl_in_rule__Usage__Group__714881 = new BitSet(new long[]{0x0200000000000000L,0x0000000000010068L});
-    public static final BitSet FOLLOW_rule__Usage__Group__8_in_rule__Usage__Group__714884 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group_7__0_in_rule__Usage__Group__7__Impl14911 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group__8__Impl_in_rule__Usage__Group__814942 = new BitSet(new long[]{0x0200000000000000L,0x0000000000010068L});
-    public static final BitSet FOLLOW_rule__Usage__Group__9_in_rule__Usage__Group__814945 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group_8__0_in_rule__Usage__Group__8__Impl14972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group__9__Impl_in_rule__Usage__Group__915003 = new BitSet(new long[]{0x0200000000000000L,0x0000000000010068L});
-    public static final BitSet FOLLOW_rule__Usage__Group__10_in_rule__Usage__Group__915006 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group_9__0_in_rule__Usage__Group__9__Impl15033 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group__10__Impl_in_rule__Usage__Group__1015064 = new BitSet(new long[]{0x0200000000000000L,0x0000000000010068L});
-    public static final BitSet FOLLOW_rule__Usage__Group__11_in_rule__Usage__Group__1015067 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group_10__0_in_rule__Usage__Group__10__Impl15094 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group__11__Impl_in_rule__Usage__Group__1115125 = new BitSet(new long[]{0x0000007000000000L});
-    public static final BitSet FOLLOW_rule__Usage__Group__12_in_rule__Usage__Group__1115128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_67_in_rule__Usage__Group__11__Impl15156 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group__12__Impl_in_rule__Usage__Group__1215187 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__Usage__Group__13_in_rule__Usage__Group__1215190 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__ModalityAssignment_12_in_rule__Usage__Group__12__Impl15217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group__13__Impl_in_rule__Usage__Group__1315247 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__Usage__Group__13__Impl15275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group_7__0__Impl_in_rule__Usage__Group_7__015334 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Usage__Group_7__1_in_rule__Usage__Group_7__015337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_80_in_rule__Usage__Group_7__0__Impl15365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group_7__1__Impl_in_rule__Usage__Group_7__115396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__PartUsageAssignment_7_1_in_rule__Usage__Group_7__1__Impl15423 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group_8__0__Impl_in_rule__Usage__Group_8__015457 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Usage__Group_8__1_in_rule__Usage__Group_8__015460 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_rule__Usage__Group_8__0__Impl15488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group_8__1__Impl_in_rule__Usage__Group_8__115519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Alternatives_8_1_in_rule__Usage__Group_8__1__Impl15546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group_9__0__Impl_in_rule__Usage__Group_9__015580 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Usage__Group_9__1_in_rule__Usage__Group_9__015583 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_rule__Usage__Group_9__0__Impl15611 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group_9__1__Impl_in_rule__Usage__Group_9__115642 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Alternatives_9_1_in_rule__Usage__Group_9__1__Impl15669 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group_10__0__Impl_in_rule__Usage__Group_10__015703 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Usage__Group_10__1_in_rule__Usage__Group_10__015706 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_rule__Usage__Group_10__0__Impl15734 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Group_10__1__Impl_in_rule__Usage__Group_10__115765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__Alternatives_10_1_in_rule__Usage__Group_10__1__Impl15792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group__0__Impl_in_rule__Informative__Group__015826 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Informative__Group__1_in_rule__Informative__Group__015829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_81_in_rule__Informative__Group__0__Impl15857 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group__1__Impl_in_rule__Informative__Group__115888 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_rule__Informative__Group__2_in_rule__Informative__Group__115891 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__NameAssignment_1_in_rule__Informative__Group__1__Impl15918 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group__2__Impl_in_rule__Informative__Group__215948 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_rule__Informative__Group__3_in_rule__Informative__Group__215951 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__Informative__Group__2__Impl15979 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group__3__Impl_in_rule__Informative__Group__316010 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Informative__Group__4_in_rule__Informative__Group__316013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__Informative__Group__3__Impl16041 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group__4__Impl_in_rule__Informative__Group__416072 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_rule__Informative__Group__5_in_rule__Informative__Group__416075 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__DescriptionAssignment_4_in_rule__Informative__Group__4__Impl16102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group__5__Impl_in_rule__Informative__Group__516132 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Informative__Group__6_in_rule__Informative__Group__516135 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_rule__Informative__Group__5__Impl16163 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group__6__Impl_in_rule__Informative__Group__616194 = new BitSet(new long[]{0x0200000000000000L,0x0000000000040068L});
-    public static final BitSet FOLLOW_rule__Informative__Group__7_in_rule__Informative__Group__616197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__ConditionAssignment_6_in_rule__Informative__Group__6__Impl16224 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group__7__Impl_in_rule__Informative__Group__716254 = new BitSet(new long[]{0x0200000000000000L,0x0000000000040068L});
-    public static final BitSet FOLLOW_rule__Informative__Group__8_in_rule__Informative__Group__716257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group_7__0_in_rule__Informative__Group__7__Impl16284 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group__8__Impl_in_rule__Informative__Group__816315 = new BitSet(new long[]{0x0200000000000000L,0x0000000000040068L});
-    public static final BitSet FOLLOW_rule__Informative__Group__9_in_rule__Informative__Group__816318 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group_8__0_in_rule__Informative__Group__8__Impl16345 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group__9__Impl_in_rule__Informative__Group__916376 = new BitSet(new long[]{0x0200000000000000L,0x0000000000040068L});
-    public static final BitSet FOLLOW_rule__Informative__Group__10_in_rule__Informative__Group__916379 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group_9__0_in_rule__Informative__Group__9__Impl16406 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group__10__Impl_in_rule__Informative__Group__1016437 = new BitSet(new long[]{0x0200000000000000L,0x0000000000040068L});
-    public static final BitSet FOLLOW_rule__Informative__Group__11_in_rule__Informative__Group__1016440 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group_10__0_in_rule__Informative__Group__10__Impl16467 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group__11__Impl_in_rule__Informative__Group__1116498 = new BitSet(new long[]{0x0000007000000000L});
-    public static final BitSet FOLLOW_rule__Informative__Group__12_in_rule__Informative__Group__1116501 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_67_in_rule__Informative__Group__11__Impl16529 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group__12__Impl_in_rule__Informative__Group__1216560 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__Informative__Group__13_in_rule__Informative__Group__1216563 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__ModalityAssignment_12_in_rule__Informative__Group__12__Impl16590 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group__13__Impl_in_rule__Informative__Group__1316620 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__Informative__Group__13__Impl16648 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group_7__0__Impl_in_rule__Informative__Group_7__016707 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Informative__Group_7__1_in_rule__Informative__Group_7__016710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_82_in_rule__Informative__Group_7__0__Impl16738 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group_7__1__Impl_in_rule__Informative__Group_7__116769 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__PartInformativeAssignment_7_1_in_rule__Informative__Group_7__1__Impl16796 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group_8__0__Impl_in_rule__Informative__Group_8__016830 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Informative__Group_8__1_in_rule__Informative__Group_8__016833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_rule__Informative__Group_8__0__Impl16861 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group_8__1__Impl_in_rule__Informative__Group_8__116892 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Alternatives_8_1_in_rule__Informative__Group_8__1__Impl16919 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group_9__0__Impl_in_rule__Informative__Group_9__016953 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Informative__Group_9__1_in_rule__Informative__Group_9__016956 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_rule__Informative__Group_9__0__Impl16984 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group_9__1__Impl_in_rule__Informative__Group_9__117015 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Alternatives_9_1_in_rule__Informative__Group_9__1__Impl17042 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group_10__0__Impl_in_rule__Informative__Group_10__017076 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Informative__Group_10__1_in_rule__Informative__Group_10__017079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_rule__Informative__Group_10__0__Impl17107 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Group_10__1__Impl_in_rule__Informative__Group_10__117138 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__Alternatives_10_1_in_rule__Informative__Group_10__1__Impl17165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RecipientPart__Group__0__Impl_in_rule__RecipientPart__Group__017199 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__RecipientPart__Group__1_in_rule__RecipientPart__Group__017202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RecipientPart__RecipientPartAssignment_0_in_rule__RecipientPart__Group__0__Impl17229 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RecipientPart__Group__1__Impl_in_rule__RecipientPart__Group__117259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RecipientPart__Group_1__0_in_rule__RecipientPart__Group__1__Impl17286 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__RecipientPart__Group_1__0__Impl_in_rule__RecipientPart__Group_1__017321 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__RecipientPart__Group_1__1_in_rule__RecipientPart__Group_1__017324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_rule__RecipientPart__Group_1__0__Impl17352 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RecipientPart__Group_1__1__Impl_in_rule__RecipientPart__Group_1__117383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RecipientPart__RefsAssignment_1_1_in_rule__RecipientPart__Group_1__1__Impl17410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipient__Group__0__Impl_in_rule__RefRecipient__Group__017444 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__RefRecipient__Group__1_in_rule__RefRecipient__Group__017447 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipient__RefRecipientAssignment_0_in_rule__RefRecipient__Group__0__Impl17474 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipient__Group__1__Impl_in_rule__RefRecipient__Group__117504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipient__Group_1__0_in_rule__RefRecipient__Group__1__Impl17531 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__RefRecipient__Group_1__0__Impl_in_rule__RefRecipient__Group_1__017566 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__RefRecipient__Group_1__1_in_rule__RefRecipient__Group_1__017569 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_rule__RefRecipient__Group_1__0__Impl17597 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipient__Group_1__1__Impl_in_rule__RefRecipient__Group_1__117628 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipient__RefsAssignment_1_1_in_rule__RefRecipient__Group_1__1__Impl17655 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipientSource__Group__0__Impl_in_rule__RefRecipientSource__Group__017689 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__RefRecipientSource__Group__1_in_rule__RefRecipientSource__Group__017692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipientSource__RefRecipientSourceAssignment_0_in_rule__RefRecipientSource__Group__0__Impl17719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipientSource__Group__1__Impl_in_rule__RefRecipientSource__Group__117749 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipientSource__Group_1__0_in_rule__RefRecipientSource__Group__1__Impl17776 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__RefRecipientSource__Group_1__0__Impl_in_rule__RefRecipientSource__Group_1__017811 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__RefRecipientSource__Group_1__1_in_rule__RefRecipientSource__Group_1__017814 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_rule__RefRecipientSource__Group_1__0__Impl17842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipientSource__Group_1__1__Impl_in_rule__RefRecipientSource__Group_1__117873 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipientSource__RefsAssignment_1_1_in_rule__RefRecipientSource__Group_1__1__Impl17900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipientTarget__Group__0__Impl_in_rule__RefRecipientTarget__Group__017934 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__RefRecipientTarget__Group__1_in_rule__RefRecipientTarget__Group__017937 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipientTarget__RefRecipientTargetAssignment_0_in_rule__RefRecipientTarget__Group__0__Impl17964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipientTarget__Group__1__Impl_in_rule__RefRecipientTarget__Group__117994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipientTarget__Group_1__0_in_rule__RefRecipientTarget__Group__1__Impl18021 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__RefRecipientTarget__Group_1__0__Impl_in_rule__RefRecipientTarget__Group_1__018056 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__RefRecipientTarget__Group_1__1_in_rule__RefRecipientTarget__Group_1__018059 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_rule__RefRecipientTarget__Group_1__0__Impl18087 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipientTarget__Group_1__1__Impl_in_rule__RefRecipientTarget__Group_1__118118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefRecipientTarget__RefsAssignment_1_1_in_rule__RefRecipientTarget__Group_1__1__Impl18145 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefService__Group__0__Impl_in_rule__RefService__Group__018179 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__RefService__Group__1_in_rule__RefService__Group__018182 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefService__RefServiceAssignment_0_in_rule__RefService__Group__0__Impl18209 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefService__Group__1__Impl_in_rule__RefService__Group__118239 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefService__Group_1__0_in_rule__RefService__Group__1__Impl18266 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__RefService__Group_1__0__Impl_in_rule__RefService__Group_1__018301 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__RefService__Group_1__1_in_rule__RefService__Group_1__018304 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_rule__RefService__Group_1__0__Impl18332 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefService__Group_1__1__Impl_in_rule__RefService__Group_1__118363 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefService__RefsAssignment_1_1_in_rule__RefService__Group_1__1__Impl18390 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ServicePart__Group__0__Impl_in_rule__ServicePart__Group__018424 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__ServicePart__Group__1_in_rule__ServicePart__Group__018427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ServicePart__ServicePartAssignment_0_in_rule__ServicePart__Group__0__Impl18454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ServicePart__Group__1__Impl_in_rule__ServicePart__Group__118484 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ServicePart__Group_1__0_in_rule__ServicePart__Group__1__Impl18511 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__ServicePart__Group_1__0__Impl_in_rule__ServicePart__Group_1__018546 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ServicePart__Group_1__1_in_rule__ServicePart__Group_1__018549 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_rule__ServicePart__Group_1__0__Impl18577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ServicePart__Group_1__1__Impl_in_rule__ServicePart__Group_1__118608 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ServicePart__RefsAssignment_1_1_in_rule__ServicePart__Group_1__1__Impl18635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefPrivateData__Group__0__Impl_in_rule__RefPrivateData__Group__018669 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__RefPrivateData__Group__1_in_rule__RefPrivateData__Group__018672 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefPrivateData__RefPrivateDataAssignment_0_in_rule__RefPrivateData__Group__0__Impl18699 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefPrivateData__Group__1__Impl_in_rule__RefPrivateData__Group__118729 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefPrivateData__Group_1__0_in_rule__RefPrivateData__Group__1__Impl18756 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__RefPrivateData__Group_1__0__Impl_in_rule__RefPrivateData__Group_1__018791 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__RefPrivateData__Group_1__1_in_rule__RefPrivateData__Group_1__018794 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_rule__RefPrivateData__Group_1__0__Impl18822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefPrivateData__Group_1__1__Impl_in_rule__RefPrivateData__Group_1__118853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefPrivateData__RefsAssignment_1_1_in_rule__RefPrivateData__Group_1__1__Impl18880 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefEnforcement__Group__0__Impl_in_rule__RefEnforcement__Group__018914 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__RefEnforcement__Group__1_in_rule__RefEnforcement__Group__018917 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefEnforcement__RefEnforcementAssignment_0_in_rule__RefEnforcement__Group__0__Impl18944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefEnforcement__Group__1__Impl_in_rule__RefEnforcement__Group__118974 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefEnforcement__Group_1__0_in_rule__RefEnforcement__Group__1__Impl19001 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rule__RefEnforcement__Group_1__0__Impl_in_rule__RefEnforcement__Group_1__019036 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__RefEnforcement__Group_1__1_in_rule__RefEnforcement__Group_1__019039 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_rule__RefEnforcement__Group_1__0__Impl19067 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefEnforcement__Group_1__1__Impl_in_rule__RefEnforcement__Group_1__119098 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RefEnforcement__RefsAssignment_1_1_in_rule__RefEnforcement__Group_1__1__Impl19125 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Policy__NameAssignment_119164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImport_in_rule__Policy__ImportelementsAssignment_319195 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMetadata_in_rule__Policy__MetadataAssignment_419226 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCollection_in_rule__Policy__CollectionAssignment_519257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDisclosure_in_rule__Policy__DisclosureAssignment_619288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRetention_in_rule__Policy__RetentionAssignment_719319 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUsage_in_rule__Policy__UsageAssignment_819350 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInformative_in_rule__Policy__InformativeAssignment_919381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrivateData_in_rule__Policy__PrivateDataAssignment_1019412 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRecipient_in_rule__Policy__RecipientAssignment_1119443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleService_in_rule__Policy__ServiceAssignment_1219474 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEnforcement_in_rule__Policy__EnforcementAssignment_1319505 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedNameWithWildcard_in_rule__Import__ImportedNamespaceAssignment_119536 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Metadata__NameAssignment_219567 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Metadata__DescriptionAssignment_419598 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Metadata__AuthorsAssignment_619629 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Metadata__OrganizationsAssignment_819660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDate_in_rule__Metadata__DateAssignment_1019691 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Metadata__VersionAssignment_1219722 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Date__DayAssignment_019753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMonth_in_rule__Date__MonthAssignment_219784 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Date__YearAssignment_419815 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Month__NameAlternatives_0_in_rule__Month__NameAssignment19846 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Enforcement__NameAssignment_119879 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Enforcement__EnforcementNameAssignment_419910 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Enforcement__DescriptionAssignment_619941 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enforcement__TypeAlternatives_8_0_in_rule__Enforcement__TypeAssignment_819972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Service__NameAssignment_120005 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Service__ServiceNameAssignment_420036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Service__DescriptionAssignment_5_120067 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefPrivateData_in_rule__Service__RefPrivateDataAssignment_6_1_020098 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Service__RefPDAllAssignment_6_1_120134 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleServicePart_in_rule__Service__ServicePartAssignment_7_120173 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Recipient__NameAssignment_120204 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Recipient__RecipientNameAssignment_420235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Recipient__DescriptionAssignment_620266 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRecipientPart_in_rule__Recipient__RecipientPartAssignment_7_120297 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__ScopeAlternatives_9_0_in_rule__Recipient__ScopeAssignment_920328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Recipient__TypeAlternatives_11_0_in_rule__Recipient__TypeAssignment_1120361 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__PrivateData__NameAssignment_120394 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__PrivateData__DescriptionAssignment_420425 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrivateData__TypeAlternatives_6_0_in_rule__PrivateData__TypeAssignment_620456 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAttribute_in_rule__PrivateData__AttributeAssignment_720489 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Attribute__NameAssignment_120520 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Attribute__DescriptionAssignment_420551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Collection__NameAssignment_120582 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Collection__DescriptionAssignment_420613 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Collection__ConditionAssignment_620644 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Collection__PartCollectionAssignment_7_120679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefPrivateData_in_rule__Collection__RefPrivateDataAssignment_8_1_020714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Collection__RefPDAllAssignment_8_1_120750 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefService_in_rule__Collection__RefServiceAssignment_9_1_020789 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Collection__RefSAllAssignment_9_1_120825 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefEnforcement_in_rule__Collection__RefEnforcementAssignment_10_1_020864 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Collection__RefEAllAssignment_10_1_120900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Collection__ModalityAlternatives_12_0_in_rule__Collection__ModalityAssignment_1220939 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Disclosure__NameAssignment_120972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Disclosure__DescriptionAssignment_421003 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Disclosure__ConditionAssignment_621034 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Disclosure__PartDisclosureAssignment_7_121069 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefRecipient_in_rule__Disclosure__RefRecipientAssignment_8_1_021104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Disclosure__RefRAllAssignment_8_1_121140 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefRecipientSource_in_rule__Disclosure__RefRecipientSourceAssignment_9_1_021179 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Disclosure__RefRSAllAssignment_9_1_121215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefRecipientTarget_in_rule__Disclosure__RefRecipientTargetAssignment_10_1_021254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Disclosure__RefRTAllAssignment_10_1_121290 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefPrivateData_in_rule__Disclosure__RefPrivateDataAssignment_11_1_021329 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Disclosure__RefPDAllAssignment_11_1_121365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefService_in_rule__Disclosure__RefServiceAssignment_12_1_021404 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Disclosure__RefSAllAssignment_12_1_121440 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefEnforcement_in_rule__Disclosure__RefEnforcementAssignment_13_1_021479 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Disclosure__RefEAllAssignment_13_1_121515 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Disclosure__ModalityAlternatives_15_0_in_rule__Disclosure__ModalityAssignment_1521554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Retention__NameAssignment_121587 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Retention__DescriptionAssignment_421618 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Retention__ConditionAssignment_621649 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Retention__PartRetentionAssignment_7_121684 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Retention__PeriodAssignment_921719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefPrivateData_in_rule__Retention__RefPrivateDataAssignment_10_1_021750 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Retention__RefPDAllAssignment_10_1_121786 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefService_in_rule__Retention__RefServiceAssignment_11_1_021825 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Retention__RefSAllAssignment_11_1_121861 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefEnforcement_in_rule__Retention__RefEnforcementAssignment_12_1_021900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Retention__RefEAllAssignment_12_1_121936 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Retention__ModalityAlternatives_14_0_in_rule__Retention__ModalityAssignment_1421975 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Usage__NameAssignment_122008 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Usage__DescriptionAssignment_422039 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Usage__ConditionAssignment_622070 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Usage__PartUsageAssignment_7_122105 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefPrivateData_in_rule__Usage__RefPrivateDataAssignment_8_1_022140 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Usage__RefPDAllAssignment_8_1_122176 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefService_in_rule__Usage__RefServiceAssignment_9_1_022215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Usage__RefSAllAssignment_9_1_122251 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefEnforcement_in_rule__Usage__RefEnforcementAssignment_10_1_022290 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Usage__RefEAllAssignment_10_1_122326 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Usage__ModalityAlternatives_12_0_in_rule__Usage__ModalityAssignment_1222365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Informative__NameAssignment_122398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Informative__DescriptionAssignment_422429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Informative__ConditionAssignment_622460 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Informative__PartInformativeAssignment_7_122495 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefPrivateData_in_rule__Informative__RefPrivateDataAssignment_8_1_022530 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Informative__RefPDAllAssignment_8_1_122566 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefService_in_rule__Informative__RefServiceAssignment_9_1_022605 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Informative__RefSAllAssignment_9_1_122641 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefEnforcement_in_rule__Informative__RefEnforcementAssignment_10_1_022680 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_rule__Informative__RefEAllAssignment_10_1_122716 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Informative__ModalityAlternatives_12_0_in_rule__Informative__ModalityAssignment_1222755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__RecipientPart__RecipientPartAssignment_022792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__RecipientPart__RefsAssignment_1_122831 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__RefRecipient__RefRecipientAssignment_022870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__RefRecipient__RefsAssignment_1_122909 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__RefRecipientSource__RefRecipientSourceAssignment_022948 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__RefRecipientSource__RefsAssignment_1_122987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__RefRecipientTarget__RefRecipientTargetAssignment_023026 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__RefRecipientTarget__RefsAssignment_1_123065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__RefService__RefServiceAssignment_023104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__RefService__RefsAssignment_1_123143 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ServicePart__ServicePartAssignment_023182 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ServicePart__RefsAssignment_1_123221 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__RefPrivateData__RefPrivateDataAssignment_023260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__RefPrivateData__RefsAssignment_1_123299 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__RefEnforcement__RefEnforcementAssignment_023338 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__RefEnforcement__RefsAssignment_1_123377 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__RefPrivateDataAssignment_6_1_0_in_rule__Service__Alternatives_6_11940 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__RefPDAllAssignment_6_1_1_in_rule__Service__Alternatives_6_11958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__Recipient__ScopeAlternatives_9_01992 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__Recipient__ScopeAlternatives_9_02012 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__Recipient__ScopeAlternatives_9_02032 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__Recipient__TypeAlternatives_11_02067 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Recipient__TypeAlternatives_11_02087 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Recipient__TypeAlternatives_11_02107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__PrivateData__TypeAlternatives_6_02142 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__PrivateData__TypeAlternatives_6_02162 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__RefPrivateDataAssignment_8_1_0_in_rule__Collection__Alternatives_8_12196 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__RefPDAllAssignment_8_1_1_in_rule__Collection__Alternatives_8_12214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__RefServiceAssignment_9_1_0_in_rule__Collection__Alternatives_9_12247 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__RefSAllAssignment_9_1_1_in_rule__Collection__Alternatives_9_12265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__RefEnforcementAssignment_10_1_0_in_rule__Collection__Alternatives_10_12298 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__RefEAllAssignment_10_1_1_in_rule__Collection__Alternatives_10_12316 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__Collection__ModalityAlternatives_12_02350 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__Collection__ModalityAlternatives_12_02370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__Collection__ModalityAlternatives_12_02390 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__RefRecipientAssignment_8_1_0_in_rule__Disclosure__Alternatives_8_12424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__RefRAllAssignment_8_1_1_in_rule__Disclosure__Alternatives_8_12442 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__RefRecipientSourceAssignment_9_1_0_in_rule__Disclosure__Alternatives_9_12475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__RefRSAllAssignment_9_1_1_in_rule__Disclosure__Alternatives_9_12493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__RefRecipientTargetAssignment_10_1_0_in_rule__Disclosure__Alternatives_10_12526 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__RefRTAllAssignment_10_1_1_in_rule__Disclosure__Alternatives_10_12544 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__RefPrivateDataAssignment_11_1_0_in_rule__Disclosure__Alternatives_11_12577 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__RefPDAllAssignment_11_1_1_in_rule__Disclosure__Alternatives_11_12595 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__RefServiceAssignment_12_1_0_in_rule__Disclosure__Alternatives_12_12628 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__RefSAllAssignment_12_1_1_in_rule__Disclosure__Alternatives_12_12646 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__RefEnforcementAssignment_13_1_0_in_rule__Disclosure__Alternatives_13_12679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__RefEAllAssignment_13_1_1_in_rule__Disclosure__Alternatives_13_12697 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__Disclosure__ModalityAlternatives_15_02731 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__Disclosure__ModalityAlternatives_15_02751 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__Disclosure__ModalityAlternatives_15_02771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__RefPrivateDataAssignment_10_1_0_in_rule__Retention__Alternatives_10_12805 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__RefPDAllAssignment_10_1_1_in_rule__Retention__Alternatives_10_12823 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__RefServiceAssignment_11_1_0_in_rule__Retention__Alternatives_11_12856 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__RefSAllAssignment_11_1_1_in_rule__Retention__Alternatives_11_12874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__RefEnforcementAssignment_12_1_0_in_rule__Retention__Alternatives_12_12907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__RefEAllAssignment_12_1_1_in_rule__Retention__Alternatives_12_12925 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__Retention__ModalityAlternatives_14_02959 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__Retention__ModalityAlternatives_14_02979 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__Retention__ModalityAlternatives_14_02999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__RefPrivateDataAssignment_8_1_0_in_rule__Usage__Alternatives_8_13033 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__RefPDAllAssignment_8_1_1_in_rule__Usage__Alternatives_8_13051 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__RefServiceAssignment_9_1_0_in_rule__Usage__Alternatives_9_13084 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__RefSAllAssignment_9_1_1_in_rule__Usage__Alternatives_9_13102 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__RefEnforcementAssignment_10_1_0_in_rule__Usage__Alternatives_10_13135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__RefEAllAssignment_10_1_1_in_rule__Usage__Alternatives_10_13153 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__Usage__ModalityAlternatives_12_03187 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__Usage__ModalityAlternatives_12_03207 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__Usage__ModalityAlternatives_12_03227 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__RefPrivateDataAssignment_8_1_0_in_rule__Informative__Alternatives_8_13261 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__RefPDAllAssignment_8_1_1_in_rule__Informative__Alternatives_8_13279 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__RefServiceAssignment_9_1_0_in_rule__Informative__Alternatives_9_13312 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__RefSAllAssignment_9_1_1_in_rule__Informative__Alternatives_9_13330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__RefEnforcementAssignment_10_1_0_in_rule__Informative__Alternatives_10_13363 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__RefEAllAssignment_10_1_1_in_rule__Informative__Alternatives_10_13381 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__Informative__ModalityAlternatives_12_03415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__Informative__ModalityAlternatives_12_03435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__Informative__ModalityAlternatives_12_03455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__Group__0__Impl_in_rule__Policy__Group__03487 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Policy__Group__1_in_rule__Policy__Group__03490 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__Policy__Group__0__Impl3518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__Group__1__Impl_in_rule__Policy__Group__13549 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__Policy__Group__2_in_rule__Policy__Group__13552 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__NameAssignment_1_in_rule__Policy__Group__1__Impl3579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__Group__2__Impl_in_rule__Policy__Group__23609 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
+    public static final BitSet FOLLOW_rule__Policy__Group__3_in_rule__Policy__Group__23612 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Policy__Group__2__Impl3640 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__Group__3__Impl_in_rule__Policy__Group__33671 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
+    public static final BitSet FOLLOW_rule__Policy__Group__4_in_rule__Policy__Group__33674 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__ImportelementsAssignment_3_in_rule__Policy__Group__3__Impl3701 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_rule__Policy__Group__4__Impl_in_rule__Policy__Group__43732 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
+    public static final BitSet FOLLOW_rule__Policy__Group__5_in_rule__Policy__Group__43735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__MetadataAssignment_4_in_rule__Policy__Group__4__Impl3762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__Group__5__Impl_in_rule__Policy__Group__53793 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
+    public static final BitSet FOLLOW_rule__Policy__Group__6_in_rule__Policy__Group__53796 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__CollectionAssignment_5_in_rule__Policy__Group__5__Impl3823 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__Group__6__Impl_in_rule__Policy__Group__63854 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
+    public static final BitSet FOLLOW_rule__Policy__Group__7_in_rule__Policy__Group__63857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__DisclosureAssignment_6_in_rule__Policy__Group__6__Impl3884 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000080L});
+    public static final BitSet FOLLOW_rule__Policy__Group__7__Impl_in_rule__Policy__Group__73915 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
+    public static final BitSet FOLLOW_rule__Policy__Group__8_in_rule__Policy__Group__73918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__RetentionAssignment_7_in_rule__Policy__Group__7__Impl3945 = new BitSet(new long[]{0x0000000000000002L,0x0000000000001000L});
+    public static final BitSet FOLLOW_rule__Policy__Group__8__Impl_in_rule__Policy__Group__83976 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
+    public static final BitSet FOLLOW_rule__Policy__Group__9_in_rule__Policy__Group__83979 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__UsageAssignment_8_in_rule__Policy__Group__8__Impl4006 = new BitSet(new long[]{0x0000000000000002L,0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__Policy__Group__9__Impl_in_rule__Policy__Group__94037 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
+    public static final BitSet FOLLOW_rule__Policy__Group__10_in_rule__Policy__Group__94040 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__InformativeAssignment_9_in_rule__Policy__Group__9__Impl4067 = new BitSet(new long[]{0x0000000000000002L,0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__Policy__Group__10__Impl_in_rule__Policy__Group__104098 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
+    public static final BitSet FOLLOW_rule__Policy__Group__11_in_rule__Policy__Group__104101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__PrivateDataAssignment_10_in_rule__Policy__Group__10__Impl4128 = new BitSet(new long[]{0x4000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__Group__11__Impl_in_rule__Policy__Group__114159 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
+    public static final BitSet FOLLOW_rule__Policy__Group__12_in_rule__Policy__Group__114162 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__RecipientAssignment_11_in_rule__Policy__Group__11__Impl4189 = new BitSet(new long[]{0x0800000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__Group__12__Impl_in_rule__Policy__Group__124220 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
+    public static final BitSet FOLLOW_rule__Policy__Group__13_in_rule__Policy__Group__124223 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__ServiceAssignment_12_in_rule__Policy__Group__12__Impl4250 = new BitSet(new long[]{0x0100000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__Group__13__Impl_in_rule__Policy__Group__134281 = new BitSet(new long[]{0x49202A0000000000L,0x0000000000029082L});
+    public static final BitSet FOLLOW_rule__Policy__Group__14_in_rule__Policy__Group__134284 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__EnforcementAssignment_13_in_rule__Policy__Group__13__Impl4311 = new BitSet(new long[]{0x0020000000000002L});
+    public static final BitSet FOLLOW_rule__Policy__Group__14__Impl_in_rule__Policy__Group__144342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Policy__Group__14__Impl4370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__04431 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__04434 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl4461 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__14490 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl4517 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__04552 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__04555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__QualifiedName__Group_1__0__Impl4583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__14614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl4641 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__04674 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Import__Group__1_in_rule__Import__Group__04677 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_rule__Import__Group__0__Impl4705 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__14736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__ImportedNamespaceAssignment_1_in_rule__Import__Group__1__Impl4763 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group__0__Impl_in_rule__QualifiedNameWithWildcard__Group__04797 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group__1_in_rule__QualifiedNameWithWildcard__Group__04800 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__QualifiedNameWithWildcard__Group__0__Impl4827 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group__1__Impl_in_rule__QualifiedNameWithWildcard__Group__14856 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_rule__QualifiedNameWithWildcard__Group__1__Impl4885 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__0__Impl_in_rule__Metadata__Group__04922 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__1_in_rule__Metadata__Group__04925 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_rule__Metadata__Group__0__Impl4953 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__1__Impl_in_rule__Metadata__Group__14984 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__2_in_rule__Metadata__Group__14987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_rule__Metadata__Group__1__Impl5015 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__2__Impl_in_rule__Metadata__Group__25046 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__3_in_rule__Metadata__Group__25049 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__NameAssignment_2_in_rule__Metadata__Group__2__Impl5076 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__3__Impl_in_rule__Metadata__Group__35106 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__4_in_rule__Metadata__Group__35109 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__Metadata__Group__3__Impl5137 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__4__Impl_in_rule__Metadata__Group__45168 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__5_in_rule__Metadata__Group__45171 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__DescriptionAssignment_4_in_rule__Metadata__Group__4__Impl5198 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__5__Impl_in_rule__Metadata__Group__55228 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__6_in_rule__Metadata__Group__55231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_rule__Metadata__Group__5__Impl5259 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__6__Impl_in_rule__Metadata__Group__65290 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__7_in_rule__Metadata__Group__65293 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__AuthorsAssignment_6_in_rule__Metadata__Group__6__Impl5320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__7__Impl_in_rule__Metadata__Group__75350 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__8_in_rule__Metadata__Group__75353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_rule__Metadata__Group__7__Impl5381 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__8__Impl_in_rule__Metadata__Group__85412 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__9_in_rule__Metadata__Group__85415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__OrganizationsAssignment_8_in_rule__Metadata__Group__8__Impl5442 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__9__Impl_in_rule__Metadata__Group__95472 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__10_in_rule__Metadata__Group__95475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_rule__Metadata__Group__9__Impl5503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__10__Impl_in_rule__Metadata__Group__105534 = new BitSet(new long[]{0x0008000000000000L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__11_in_rule__Metadata__Group__105537 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__DateAssignment_10_in_rule__Metadata__Group__10__Impl5564 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__11__Impl_in_rule__Metadata__Group__115594 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__12_in_rule__Metadata__Group__115597 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_rule__Metadata__Group__11__Impl5625 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__12__Impl_in_rule__Metadata__Group__125656 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__13_in_rule__Metadata__Group__125659 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__VersionAssignment_12_in_rule__Metadata__Group__12__Impl5686 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Metadata__Group__13__Impl_in_rule__Metadata__Group__135716 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Metadata__Group__13__Impl5744 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Date__Group__0__Impl_in_rule__Date__Group__05803 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_rule__Date__Group__1_in_rule__Date__Group__05806 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Date__DayAssignment_0_in_rule__Date__Group__0__Impl5833 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Date__Group__1__Impl_in_rule__Date__Group__15863 = new BitSet(new long[]{0x00000000007FF800L});
+    public static final BitSet FOLLOW_rule__Date__Group__2_in_rule__Date__Group__15866 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_rule__Date__Group__1__Impl5894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Date__Group__2__Impl_in_rule__Date__Group__25925 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_rule__Date__Group__3_in_rule__Date__Group__25928 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Date__MonthAssignment_2_in_rule__Date__Group__2__Impl5955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Date__Group__3__Impl_in_rule__Date__Group__35985 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__Date__Group__4_in_rule__Date__Group__35988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_rule__Date__Group__3__Impl6016 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Date__Group__4__Impl_in_rule__Date__Group__46047 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Date__YearAssignment_4_in_rule__Date__Group__4__Impl6074 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__0__Impl_in_rule__Enforcement__Group__06114 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__1_in_rule__Enforcement__Group__06117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_rule__Enforcement__Group__0__Impl6145 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__1__Impl_in_rule__Enforcement__Group__16176 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__2_in_rule__Enforcement__Group__16179 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enforcement__NameAssignment_1_in_rule__Enforcement__Group__1__Impl6206 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__2__Impl_in_rule__Enforcement__Group__26236 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__3_in_rule__Enforcement__Group__26239 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Enforcement__Group__2__Impl6267 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__3__Impl_in_rule__Enforcement__Group__36298 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__4_in_rule__Enforcement__Group__36301 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_rule__Enforcement__Group__3__Impl6329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__4__Impl_in_rule__Enforcement__Group__46360 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__5_in_rule__Enforcement__Group__46363 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enforcement__EnforcementNameAssignment_4_in_rule__Enforcement__Group__4__Impl6390 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__5__Impl_in_rule__Enforcement__Group__56420 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__6_in_rule__Enforcement__Group__56423 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__Enforcement__Group__5__Impl6451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__6__Impl_in_rule__Enforcement__Group__66482 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__7_in_rule__Enforcement__Group__66485 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enforcement__DescriptionAssignment_6_in_rule__Enforcement__Group__6__Impl6512 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__7__Impl_in_rule__Enforcement__Group__76542 = new BitSet(new long[]{0x000000000F800000L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__8_in_rule__Enforcement__Group__76545 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_rule__Enforcement__Group__7__Impl6573 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__8__Impl_in_rule__Enforcement__Group__86604 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__9_in_rule__Enforcement__Group__86607 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enforcement__TypeAssignment_8_in_rule__Enforcement__Group__8__Impl6634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enforcement__Group__9__Impl_in_rule__Enforcement__Group__96664 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Enforcement__Group__9__Impl6692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group__0__Impl_in_rule__Service__Group__06743 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Service__Group__1_in_rule__Service__Group__06746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_rule__Service__Group__0__Impl6774 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group__1__Impl_in_rule__Service__Group__16805 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__Service__Group__2_in_rule__Service__Group__16808 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__NameAssignment_1_in_rule__Service__Group__1__Impl6835 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group__2__Impl_in_rule__Service__Group__26865 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_rule__Service__Group__3_in_rule__Service__Group__26868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Service__Group__2__Impl6896 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group__3__Impl_in_rule__Service__Group__36927 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Service__Group__4_in_rule__Service__Group__36930 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_rule__Service__Group__3__Impl6958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group__4__Impl_in_rule__Service__Group__46989 = new BitSet(new long[]{0x0600820000000000L});
+    public static final BitSet FOLLOW_rule__Service__Group__5_in_rule__Service__Group__46992 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__ServiceNameAssignment_4_in_rule__Service__Group__4__Impl7019 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group__5__Impl_in_rule__Service__Group__57049 = new BitSet(new long[]{0x0600820000000000L});
+    public static final BitSet FOLLOW_rule__Service__Group__6_in_rule__Service__Group__57052 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group_5__0_in_rule__Service__Group__5__Impl7079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group__6__Impl_in_rule__Service__Group__67110 = new BitSet(new long[]{0x0600820000000000L});
+    public static final BitSet FOLLOW_rule__Service__Group__7_in_rule__Service__Group__67113 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group_6__0_in_rule__Service__Group__6__Impl7140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group__7__Impl_in_rule__Service__Group__77171 = new BitSet(new long[]{0x0600820000000000L});
+    public static final BitSet FOLLOW_rule__Service__Group__8_in_rule__Service__Group__77174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group_7__0_in_rule__Service__Group__7__Impl7201 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group__8__Impl_in_rule__Service__Group__87232 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Service__Group__8__Impl7260 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group_5__0__Impl_in_rule__Service__Group_5__07309 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Service__Group_5__1_in_rule__Service__Group_5__07312 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__Service__Group_5__0__Impl7340 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group_5__1__Impl_in_rule__Service__Group_5__17371 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__DescriptionAssignment_5_1_in_rule__Service__Group_5__1__Impl7398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group_6__0__Impl_in_rule__Service__Group_6__07432 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Service__Group_6__1_in_rule__Service__Group_6__07435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_rule__Service__Group_6__0__Impl7463 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group_6__1__Impl_in_rule__Service__Group_6__17494 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Alternatives_6_1_in_rule__Service__Group_6__1__Impl7521 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group_7__0__Impl_in_rule__Service__Group_7__07555 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Service__Group_7__1_in_rule__Service__Group_7__07558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_rule__Service__Group_7__0__Impl7586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group_7__1__Impl_in_rule__Service__Group_7__17617 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__ServicePartAssignment_7_1_in_rule__Service__Group_7__1__Impl7644 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__0__Impl_in_rule__Recipient__Group__07679 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__1_in_rule__Recipient__Group__07682 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_rule__Recipient__Group__0__Impl7710 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__1__Impl_in_rule__Recipient__Group__17741 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__2_in_rule__Recipient__Group__17744 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__NameAssignment_1_in_rule__Recipient__Group__1__Impl7771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__2__Impl_in_rule__Recipient__Group__27801 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__3_in_rule__Recipient__Group__27804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Recipient__Group__2__Impl7832 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__3__Impl_in_rule__Recipient__Group__37863 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__4_in_rule__Recipient__Group__37866 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_rule__Recipient__Group__3__Impl7894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__4__Impl_in_rule__Recipient__Group__47925 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__5_in_rule__Recipient__Group__47928 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__RecipientNameAssignment_4_in_rule__Recipient__Group__4__Impl7955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__5__Impl_in_rule__Recipient__Group__57985 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__6_in_rule__Recipient__Group__57988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__Recipient__Group__5__Impl8016 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__6__Impl_in_rule__Recipient__Group__68047 = new BitSet(new long[]{0x3000000000000000L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__7_in_rule__Recipient__Group__68050 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__DescriptionAssignment_6_in_rule__Recipient__Group__6__Impl8077 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__7__Impl_in_rule__Recipient__Group__78107 = new BitSet(new long[]{0x3000000000000000L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__8_in_rule__Recipient__Group__78110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__Group_7__0_in_rule__Recipient__Group__7__Impl8137 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__8__Impl_in_rule__Recipient__Group__88168 = new BitSet(new long[]{0x0000000070000000L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__9_in_rule__Recipient__Group__88171 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_rule__Recipient__Group__8__Impl8199 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__9__Impl_in_rule__Recipient__Group__98230 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__10_in_rule__Recipient__Group__98233 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__ScopeAssignment_9_in_rule__Recipient__Group__9__Impl8260 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__10__Impl_in_rule__Recipient__Group__108290 = new BitSet(new long[]{0x0000000380000000L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__11_in_rule__Recipient__Group__108293 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_rule__Recipient__Group__10__Impl8321 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__11__Impl_in_rule__Recipient__Group__118352 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__12_in_rule__Recipient__Group__118355 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__TypeAssignment_11_in_rule__Recipient__Group__11__Impl8382 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__Group__12__Impl_in_rule__Recipient__Group__128412 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Recipient__Group__12__Impl8440 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__Group_7__0__Impl_in_rule__Recipient__Group_7__08497 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Recipient__Group_7__1_in_rule__Recipient__Group_7__08500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_rule__Recipient__Group_7__0__Impl8528 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__Group_7__1__Impl_in_rule__Recipient__Group_7__18559 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__RecipientPartAssignment_7_1_in_rule__Recipient__Group_7__1__Impl8586 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_rule__PrivateData__Group__0__Impl_in_rule__PrivateData__Group__08621 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__PrivateData__Group__1_in_rule__PrivateData__Group__08624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_62_in_rule__PrivateData__Group__0__Impl8652 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrivateData__Group__1__Impl_in_rule__PrivateData__Group__18683 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__PrivateData__Group__2_in_rule__PrivateData__Group__18686 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrivateData__NameAssignment_1_in_rule__PrivateData__Group__1__Impl8713 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrivateData__Group__2__Impl_in_rule__PrivateData__Group__28743 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_rule__PrivateData__Group__3_in_rule__PrivateData__Group__28746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__PrivateData__Group__2__Impl8774 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrivateData__Group__3__Impl_in_rule__PrivateData__Group__38805 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__PrivateData__Group__4_in_rule__PrivateData__Group__38808 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__PrivateData__Group__3__Impl8836 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrivateData__Group__4__Impl_in_rule__PrivateData__Group__48867 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_rule__PrivateData__Group__5_in_rule__PrivateData__Group__48870 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrivateData__DescriptionAssignment_4_in_rule__PrivateData__Group__4__Impl8897 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrivateData__Group__5__Impl_in_rule__PrivateData__Group__58927 = new BitSet(new long[]{0x0000000C00000000L});
+    public static final BitSet FOLLOW_rule__PrivateData__Group__6_in_rule__PrivateData__Group__58930 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_rule__PrivateData__Group__5__Impl8958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrivateData__Group__6__Impl_in_rule__PrivateData__Group__68989 = new BitSet(new long[]{0x8000020000000000L});
+    public static final BitSet FOLLOW_rule__PrivateData__Group__7_in_rule__PrivateData__Group__68992 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrivateData__TypeAssignment_6_in_rule__PrivateData__Group__6__Impl9019 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrivateData__Group__7__Impl_in_rule__PrivateData__Group__79049 = new BitSet(new long[]{0x8000020000000000L});
+    public static final BitSet FOLLOW_rule__PrivateData__Group__8_in_rule__PrivateData__Group__79052 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrivateData__AttributeAssignment_7_in_rule__PrivateData__Group__7__Impl9079 = new BitSet(new long[]{0x8000000000000002L});
+    public static final BitSet FOLLOW_rule__PrivateData__Group__8__Impl_in_rule__PrivateData__Group__89110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__PrivateData__Group__8__Impl9138 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__0__Impl_in_rule__Attribute__Group__09187 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__1_in_rule__Attribute__Group__09190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_rule__Attribute__Group__0__Impl9218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__1__Impl_in_rule__Attribute__Group__19249 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__2_in_rule__Attribute__Group__19252 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Attribute__NameAssignment_1_in_rule__Attribute__Group__1__Impl9279 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__2__Impl_in_rule__Attribute__Group__29309 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__3_in_rule__Attribute__Group__29312 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Attribute__Group__2__Impl9340 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__3__Impl_in_rule__Attribute__Group__39371 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__4_in_rule__Attribute__Group__39374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__Attribute__Group__3__Impl9402 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__4__Impl_in_rule__Attribute__Group__49433 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__5_in_rule__Attribute__Group__49436 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Attribute__DescriptionAssignment_4_in_rule__Attribute__Group__4__Impl9463 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__5__Impl_in_rule__Attribute__Group__59493 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__6_in_rule__Attribute__Group__59496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Attribute__Group__5__Impl9524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Attribute__Group__6__Impl_in_rule__Attribute__Group__69555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_rule__Attribute__Group__6__Impl9584 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group__0__Impl_in_rule__Collection__Group__09631 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Collection__Group__1_in_rule__Collection__Group__09634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_rule__Collection__Group__0__Impl9662 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group__1__Impl_in_rule__Collection__Group__19693 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__Collection__Group__2_in_rule__Collection__Group__19696 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__NameAssignment_1_in_rule__Collection__Group__1__Impl9723 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group__2__Impl_in_rule__Collection__Group__29753 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_rule__Collection__Group__3_in_rule__Collection__Group__29756 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Collection__Group__2__Impl9784 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group__3__Impl_in_rule__Collection__Group__39815 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Collection__Group__4_in_rule__Collection__Group__39818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__Collection__Group__3__Impl9846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group__4__Impl_in_rule__Collection__Group__49877 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_rule__Collection__Group__5_in_rule__Collection__Group__49880 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__DescriptionAssignment_4_in_rule__Collection__Group__4__Impl9907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group__5__Impl_in_rule__Collection__Group__59937 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Collection__Group__6_in_rule__Collection__Group__59940 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_rule__Collection__Group__5__Impl9968 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group__6__Impl_in_rule__Collection__Group__69999 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000078L});
+    public static final BitSet FOLLOW_rule__Collection__Group__7_in_rule__Collection__Group__610002 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__ConditionAssignment_6_in_rule__Collection__Group__6__Impl10029 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group__7__Impl_in_rule__Collection__Group__710059 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000078L});
+    public static final BitSet FOLLOW_rule__Collection__Group__8_in_rule__Collection__Group__710062 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group_7__0_in_rule__Collection__Group__7__Impl10089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group__8__Impl_in_rule__Collection__Group__810120 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000078L});
+    public static final BitSet FOLLOW_rule__Collection__Group__9_in_rule__Collection__Group__810123 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group_8__0_in_rule__Collection__Group__8__Impl10150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group__9__Impl_in_rule__Collection__Group__910181 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000078L});
+    public static final BitSet FOLLOW_rule__Collection__Group__10_in_rule__Collection__Group__910184 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group_9__0_in_rule__Collection__Group__9__Impl10211 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group__10__Impl_in_rule__Collection__Group__1010242 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000078L});
+    public static final BitSet FOLLOW_rule__Collection__Group__11_in_rule__Collection__Group__1010245 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group_10__0_in_rule__Collection__Group__10__Impl10272 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group__11__Impl_in_rule__Collection__Group__1110303 = new BitSet(new long[]{0x0000007000000000L});
+    public static final BitSet FOLLOW_rule__Collection__Group__12_in_rule__Collection__Group__1110306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_rule__Collection__Group__11__Impl10334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group__12__Impl_in_rule__Collection__Group__1210365 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__Collection__Group__13_in_rule__Collection__Group__1210368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__ModalityAssignment_12_in_rule__Collection__Group__12__Impl10395 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group__13__Impl_in_rule__Collection__Group__1310425 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Collection__Group__13__Impl10453 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group_7__0__Impl_in_rule__Collection__Group_7__010512 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Collection__Group_7__1_in_rule__Collection__Group_7__010515 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_rule__Collection__Group_7__0__Impl10543 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group_7__1__Impl_in_rule__Collection__Group_7__110574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__PartCollectionAssignment_7_1_in_rule__Collection__Group_7__1__Impl10601 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group_8__0__Impl_in_rule__Collection__Group_8__010635 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Collection__Group_8__1_in_rule__Collection__Group_8__010638 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_rule__Collection__Group_8__0__Impl10666 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group_8__1__Impl_in_rule__Collection__Group_8__110697 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Alternatives_8_1_in_rule__Collection__Group_8__1__Impl10724 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group_9__0__Impl_in_rule__Collection__Group_9__010758 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Collection__Group_9__1_in_rule__Collection__Group_9__010761 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_rule__Collection__Group_9__0__Impl10789 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group_9__1__Impl_in_rule__Collection__Group_9__110820 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Alternatives_9_1_in_rule__Collection__Group_9__1__Impl10847 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group_10__0__Impl_in_rule__Collection__Group_10__010881 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Collection__Group_10__1_in_rule__Collection__Group_10__010884 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_rule__Collection__Group_10__0__Impl10912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Group_10__1__Impl_in_rule__Collection__Group_10__110943 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__Alternatives_10_1_in_rule__Collection__Group_10__1__Impl10970 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__0__Impl_in_rule__Disclosure__Group__011004 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__1_in_rule__Disclosure__Group__011007 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_rule__Disclosure__Group__0__Impl11035 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__1__Impl_in_rule__Disclosure__Group__111066 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__2_in_rule__Disclosure__Group__111069 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__NameAssignment_1_in_rule__Disclosure__Group__1__Impl11096 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__2__Impl_in_rule__Disclosure__Group__211126 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__3_in_rule__Disclosure__Group__211129 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Disclosure__Group__2__Impl11157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__3__Impl_in_rule__Disclosure__Group__311188 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__4_in_rule__Disclosure__Group__311191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__Disclosure__Group__3__Impl11219 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__4__Impl_in_rule__Disclosure__Group__411250 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__5_in_rule__Disclosure__Group__411253 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__DescriptionAssignment_4_in_rule__Disclosure__Group__4__Impl11280 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__5__Impl_in_rule__Disclosure__Group__511310 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__6_in_rule__Disclosure__Group__511313 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_rule__Disclosure__Group__5__Impl11341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__6__Impl_in_rule__Disclosure__Group__611372 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000F68L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__7_in_rule__Disclosure__Group__611375 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__ConditionAssignment_6_in_rule__Disclosure__Group__6__Impl11402 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__7__Impl_in_rule__Disclosure__Group__711432 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000F68L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__8_in_rule__Disclosure__Group__711435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_7__0_in_rule__Disclosure__Group__7__Impl11462 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__8__Impl_in_rule__Disclosure__Group__811493 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000F68L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__9_in_rule__Disclosure__Group__811496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_8__0_in_rule__Disclosure__Group__8__Impl11523 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__9__Impl_in_rule__Disclosure__Group__911554 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000F68L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__10_in_rule__Disclosure__Group__911557 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_9__0_in_rule__Disclosure__Group__9__Impl11584 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__10__Impl_in_rule__Disclosure__Group__1011615 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000F68L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__11_in_rule__Disclosure__Group__1011618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_10__0_in_rule__Disclosure__Group__10__Impl11645 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__11__Impl_in_rule__Disclosure__Group__1111676 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000F68L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__12_in_rule__Disclosure__Group__1111679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_11__0_in_rule__Disclosure__Group__11__Impl11706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__12__Impl_in_rule__Disclosure__Group__1211737 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000F68L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__13_in_rule__Disclosure__Group__1211740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_12__0_in_rule__Disclosure__Group__12__Impl11767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__13__Impl_in_rule__Disclosure__Group__1311798 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000F68L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__14_in_rule__Disclosure__Group__1311801 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_13__0_in_rule__Disclosure__Group__13__Impl11828 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__14__Impl_in_rule__Disclosure__Group__1411859 = new BitSet(new long[]{0x0000007000000000L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__15_in_rule__Disclosure__Group__1411862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_rule__Disclosure__Group__14__Impl11890 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__15__Impl_in_rule__Disclosure__Group__1511921 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__16_in_rule__Disclosure__Group__1511924 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__ModalityAssignment_15_in_rule__Disclosure__Group__15__Impl11951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group__16__Impl_in_rule__Disclosure__Group__1611981 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Disclosure__Group__16__Impl12009 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_7__0__Impl_in_rule__Disclosure__Group_7__012074 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_7__1_in_rule__Disclosure__Group_7__012077 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_72_in_rule__Disclosure__Group_7__0__Impl12105 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_7__1__Impl_in_rule__Disclosure__Group_7__112136 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__PartDisclosureAssignment_7_1_in_rule__Disclosure__Group_7__1__Impl12163 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_8__0__Impl_in_rule__Disclosure__Group_8__012197 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_8__1_in_rule__Disclosure__Group_8__012200 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_73_in_rule__Disclosure__Group_8__0__Impl12228 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_8__1__Impl_in_rule__Disclosure__Group_8__112259 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Alternatives_8_1_in_rule__Disclosure__Group_8__1__Impl12286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_9__0__Impl_in_rule__Disclosure__Group_9__012320 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_9__1_in_rule__Disclosure__Group_9__012323 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_rule__Disclosure__Group_9__0__Impl12351 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_9__1__Impl_in_rule__Disclosure__Group_9__112382 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Alternatives_9_1_in_rule__Disclosure__Group_9__1__Impl12409 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_10__0__Impl_in_rule__Disclosure__Group_10__012443 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_10__1_in_rule__Disclosure__Group_10__012446 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_75_in_rule__Disclosure__Group_10__0__Impl12474 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_10__1__Impl_in_rule__Disclosure__Group_10__112505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Alternatives_10_1_in_rule__Disclosure__Group_10__1__Impl12532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_11__0__Impl_in_rule__Disclosure__Group_11__012566 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_11__1_in_rule__Disclosure__Group_11__012569 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_rule__Disclosure__Group_11__0__Impl12597 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_11__1__Impl_in_rule__Disclosure__Group_11__112628 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Alternatives_11_1_in_rule__Disclosure__Group_11__1__Impl12655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_12__0__Impl_in_rule__Disclosure__Group_12__012689 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_12__1_in_rule__Disclosure__Group_12__012692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_rule__Disclosure__Group_12__0__Impl12720 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_12__1__Impl_in_rule__Disclosure__Group_12__112751 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Alternatives_12_1_in_rule__Disclosure__Group_12__1__Impl12778 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_13__0__Impl_in_rule__Disclosure__Group_13__012812 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_13__1_in_rule__Disclosure__Group_13__012815 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_rule__Disclosure__Group_13__0__Impl12843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Group_13__1__Impl_in_rule__Disclosure__Group_13__112874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__Alternatives_13_1_in_rule__Disclosure__Group_13__1__Impl12901 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group__0__Impl_in_rule__Retention__Group__012935 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Retention__Group__1_in_rule__Retention__Group__012938 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_76_in_rule__Retention__Group__0__Impl12966 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group__1__Impl_in_rule__Retention__Group__112997 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__Retention__Group__2_in_rule__Retention__Group__113000 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__NameAssignment_1_in_rule__Retention__Group__1__Impl13027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group__2__Impl_in_rule__Retention__Group__213057 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_rule__Retention__Group__3_in_rule__Retention__Group__213060 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Retention__Group__2__Impl13088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group__3__Impl_in_rule__Retention__Group__313119 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Retention__Group__4_in_rule__Retention__Group__313122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__Retention__Group__3__Impl13150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group__4__Impl_in_rule__Retention__Group__413181 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_rule__Retention__Group__5_in_rule__Retention__Group__413184 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__DescriptionAssignment_4_in_rule__Retention__Group__4__Impl13211 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group__5__Impl_in_rule__Retention__Group__513241 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Retention__Group__6_in_rule__Retention__Group__513244 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_rule__Retention__Group__5__Impl13272 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group__6__Impl_in_rule__Retention__Group__613303 = new BitSet(new long[]{0x0000000000000000L,0x0000000000006000L});
+    public static final BitSet FOLLOW_rule__Retention__Group__7_in_rule__Retention__Group__613306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__ConditionAssignment_6_in_rule__Retention__Group__6__Impl13333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group__7__Impl_in_rule__Retention__Group__713363 = new BitSet(new long[]{0x0000000000000000L,0x0000000000006000L});
+    public static final BitSet FOLLOW_rule__Retention__Group__8_in_rule__Retention__Group__713366 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group_7__0_in_rule__Retention__Group__7__Impl13393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group__8__Impl_in_rule__Retention__Group__813424 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Retention__Group__9_in_rule__Retention__Group__813427 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_77_in_rule__Retention__Group__8__Impl13455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group__9__Impl_in_rule__Retention__Group__913486 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000068L});
+    public static final BitSet FOLLOW_rule__Retention__Group__10_in_rule__Retention__Group__913489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__PeriodAssignment_9_in_rule__Retention__Group__9__Impl13516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group__10__Impl_in_rule__Retention__Group__1013546 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000068L});
+    public static final BitSet FOLLOW_rule__Retention__Group__11_in_rule__Retention__Group__1013549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group_10__0_in_rule__Retention__Group__10__Impl13576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group__11__Impl_in_rule__Retention__Group__1113607 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000068L});
+    public static final BitSet FOLLOW_rule__Retention__Group__12_in_rule__Retention__Group__1113610 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group_11__0_in_rule__Retention__Group__11__Impl13637 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group__12__Impl_in_rule__Retention__Group__1213668 = new BitSet(new long[]{0x0200000000000000L,0x0000000000000068L});
+    public static final BitSet FOLLOW_rule__Retention__Group__13_in_rule__Retention__Group__1213671 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group_12__0_in_rule__Retention__Group__12__Impl13698 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group__13__Impl_in_rule__Retention__Group__1313729 = new BitSet(new long[]{0x0000007000000000L});
+    public static final BitSet FOLLOW_rule__Retention__Group__14_in_rule__Retention__Group__1313732 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_rule__Retention__Group__13__Impl13760 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group__14__Impl_in_rule__Retention__Group__1413791 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__Retention__Group__15_in_rule__Retention__Group__1413794 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__ModalityAssignment_14_in_rule__Retention__Group__14__Impl13821 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group__15__Impl_in_rule__Retention__Group__1513851 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Retention__Group__15__Impl13879 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group_7__0__Impl_in_rule__Retention__Group_7__013942 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Retention__Group_7__1_in_rule__Retention__Group_7__013945 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_78_in_rule__Retention__Group_7__0__Impl13973 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group_7__1__Impl_in_rule__Retention__Group_7__114004 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__PartRetentionAssignment_7_1_in_rule__Retention__Group_7__1__Impl14031 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group_10__0__Impl_in_rule__Retention__Group_10__014065 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Retention__Group_10__1_in_rule__Retention__Group_10__014068 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_rule__Retention__Group_10__0__Impl14096 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group_10__1__Impl_in_rule__Retention__Group_10__114127 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Alternatives_10_1_in_rule__Retention__Group_10__1__Impl14154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group_11__0__Impl_in_rule__Retention__Group_11__014188 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Retention__Group_11__1_in_rule__Retention__Group_11__014191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_rule__Retention__Group_11__0__Impl14219 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group_11__1__Impl_in_rule__Retention__Group_11__114250 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Alternatives_11_1_in_rule__Retention__Group_11__1__Impl14277 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group_12__0__Impl_in_rule__Retention__Group_12__014311 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Retention__Group_12__1_in_rule__Retention__Group_12__014314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_rule__Retention__Group_12__0__Impl14342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Group_12__1__Impl_in_rule__Retention__Group_12__114373 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__Alternatives_12_1_in_rule__Retention__Group_12__1__Impl14400 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group__0__Impl_in_rule__Usage__Group__014434 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Usage__Group__1_in_rule__Usage__Group__014437 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_79_in_rule__Usage__Group__0__Impl14465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group__1__Impl_in_rule__Usage__Group__114496 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__Usage__Group__2_in_rule__Usage__Group__114499 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__NameAssignment_1_in_rule__Usage__Group__1__Impl14526 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group__2__Impl_in_rule__Usage__Group__214556 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_rule__Usage__Group__3_in_rule__Usage__Group__214559 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Usage__Group__2__Impl14587 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group__3__Impl_in_rule__Usage__Group__314618 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Usage__Group__4_in_rule__Usage__Group__314621 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__Usage__Group__3__Impl14649 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group__4__Impl_in_rule__Usage__Group__414680 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_rule__Usage__Group__5_in_rule__Usage__Group__414683 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__DescriptionAssignment_4_in_rule__Usage__Group__4__Impl14710 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group__5__Impl_in_rule__Usage__Group__514740 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Usage__Group__6_in_rule__Usage__Group__514743 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_rule__Usage__Group__5__Impl14771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group__6__Impl_in_rule__Usage__Group__614802 = new BitSet(new long[]{0x0200000000000000L,0x0000000000010068L});
+    public static final BitSet FOLLOW_rule__Usage__Group__7_in_rule__Usage__Group__614805 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__ConditionAssignment_6_in_rule__Usage__Group__6__Impl14832 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group__7__Impl_in_rule__Usage__Group__714862 = new BitSet(new long[]{0x0200000000000000L,0x0000000000010068L});
+    public static final BitSet FOLLOW_rule__Usage__Group__8_in_rule__Usage__Group__714865 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group_7__0_in_rule__Usage__Group__7__Impl14892 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group__8__Impl_in_rule__Usage__Group__814923 = new BitSet(new long[]{0x0200000000000000L,0x0000000000010068L});
+    public static final BitSet FOLLOW_rule__Usage__Group__9_in_rule__Usage__Group__814926 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group_8__0_in_rule__Usage__Group__8__Impl14953 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group__9__Impl_in_rule__Usage__Group__914984 = new BitSet(new long[]{0x0200000000000000L,0x0000000000010068L});
+    public static final BitSet FOLLOW_rule__Usage__Group__10_in_rule__Usage__Group__914987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group_9__0_in_rule__Usage__Group__9__Impl15014 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group__10__Impl_in_rule__Usage__Group__1015045 = new BitSet(new long[]{0x0200000000000000L,0x0000000000010068L});
+    public static final BitSet FOLLOW_rule__Usage__Group__11_in_rule__Usage__Group__1015048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group_10__0_in_rule__Usage__Group__10__Impl15075 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group__11__Impl_in_rule__Usage__Group__1115106 = new BitSet(new long[]{0x0000007000000000L});
+    public static final BitSet FOLLOW_rule__Usage__Group__12_in_rule__Usage__Group__1115109 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_rule__Usage__Group__11__Impl15137 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group__12__Impl_in_rule__Usage__Group__1215168 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__Usage__Group__13_in_rule__Usage__Group__1215171 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__ModalityAssignment_12_in_rule__Usage__Group__12__Impl15198 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group__13__Impl_in_rule__Usage__Group__1315228 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Usage__Group__13__Impl15256 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group_7__0__Impl_in_rule__Usage__Group_7__015315 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Usage__Group_7__1_in_rule__Usage__Group_7__015318 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_80_in_rule__Usage__Group_7__0__Impl15346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group_7__1__Impl_in_rule__Usage__Group_7__115377 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__PartUsageAssignment_7_1_in_rule__Usage__Group_7__1__Impl15404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group_8__0__Impl_in_rule__Usage__Group_8__015438 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Usage__Group_8__1_in_rule__Usage__Group_8__015441 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_rule__Usage__Group_8__0__Impl15469 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group_8__1__Impl_in_rule__Usage__Group_8__115500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Alternatives_8_1_in_rule__Usage__Group_8__1__Impl15527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group_9__0__Impl_in_rule__Usage__Group_9__015561 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Usage__Group_9__1_in_rule__Usage__Group_9__015564 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_rule__Usage__Group_9__0__Impl15592 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group_9__1__Impl_in_rule__Usage__Group_9__115623 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Alternatives_9_1_in_rule__Usage__Group_9__1__Impl15650 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group_10__0__Impl_in_rule__Usage__Group_10__015684 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Usage__Group_10__1_in_rule__Usage__Group_10__015687 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_rule__Usage__Group_10__0__Impl15715 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Group_10__1__Impl_in_rule__Usage__Group_10__115746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__Alternatives_10_1_in_rule__Usage__Group_10__1__Impl15773 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group__0__Impl_in_rule__Informative__Group__015807 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Informative__Group__1_in_rule__Informative__Group__015810 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_81_in_rule__Informative__Group__0__Impl15838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group__1__Impl_in_rule__Informative__Group__115869 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__Informative__Group__2_in_rule__Informative__Group__115872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__NameAssignment_1_in_rule__Informative__Group__1__Impl15899 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group__2__Impl_in_rule__Informative__Group__215929 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_rule__Informative__Group__3_in_rule__Informative__Group__215932 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Informative__Group__2__Impl15960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group__3__Impl_in_rule__Informative__Group__315991 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Informative__Group__4_in_rule__Informative__Group__315994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__Informative__Group__3__Impl16022 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group__4__Impl_in_rule__Informative__Group__416053 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_rule__Informative__Group__5_in_rule__Informative__Group__416056 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__DescriptionAssignment_4_in_rule__Informative__Group__4__Impl16083 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group__5__Impl_in_rule__Informative__Group__516113 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Informative__Group__6_in_rule__Informative__Group__516116 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_rule__Informative__Group__5__Impl16144 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group__6__Impl_in_rule__Informative__Group__616175 = new BitSet(new long[]{0x0200000000000000L,0x0000000000040068L});
+    public static final BitSet FOLLOW_rule__Informative__Group__7_in_rule__Informative__Group__616178 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__ConditionAssignment_6_in_rule__Informative__Group__6__Impl16205 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group__7__Impl_in_rule__Informative__Group__716235 = new BitSet(new long[]{0x0200000000000000L,0x0000000000040068L});
+    public static final BitSet FOLLOW_rule__Informative__Group__8_in_rule__Informative__Group__716238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group_7__0_in_rule__Informative__Group__7__Impl16265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group__8__Impl_in_rule__Informative__Group__816296 = new BitSet(new long[]{0x0200000000000000L,0x0000000000040068L});
+    public static final BitSet FOLLOW_rule__Informative__Group__9_in_rule__Informative__Group__816299 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group_8__0_in_rule__Informative__Group__8__Impl16326 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group__9__Impl_in_rule__Informative__Group__916357 = new BitSet(new long[]{0x0200000000000000L,0x0000000000040068L});
+    public static final BitSet FOLLOW_rule__Informative__Group__10_in_rule__Informative__Group__916360 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group_9__0_in_rule__Informative__Group__9__Impl16387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group__10__Impl_in_rule__Informative__Group__1016418 = new BitSet(new long[]{0x0200000000000000L,0x0000000000040068L});
+    public static final BitSet FOLLOW_rule__Informative__Group__11_in_rule__Informative__Group__1016421 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group_10__0_in_rule__Informative__Group__10__Impl16448 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group__11__Impl_in_rule__Informative__Group__1116479 = new BitSet(new long[]{0x0000007000000000L});
+    public static final BitSet FOLLOW_rule__Informative__Group__12_in_rule__Informative__Group__1116482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_rule__Informative__Group__11__Impl16510 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group__12__Impl_in_rule__Informative__Group__1216541 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__Informative__Group__13_in_rule__Informative__Group__1216544 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__ModalityAssignment_12_in_rule__Informative__Group__12__Impl16571 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group__13__Impl_in_rule__Informative__Group__1316601 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Informative__Group__13__Impl16629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group_7__0__Impl_in_rule__Informative__Group_7__016688 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Informative__Group_7__1_in_rule__Informative__Group_7__016691 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_82_in_rule__Informative__Group_7__0__Impl16719 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group_7__1__Impl_in_rule__Informative__Group_7__116750 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__PartInformativeAssignment_7_1_in_rule__Informative__Group_7__1__Impl16777 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group_8__0__Impl_in_rule__Informative__Group_8__016811 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Informative__Group_8__1_in_rule__Informative__Group_8__016814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_rule__Informative__Group_8__0__Impl16842 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group_8__1__Impl_in_rule__Informative__Group_8__116873 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Alternatives_8_1_in_rule__Informative__Group_8__1__Impl16900 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group_9__0__Impl_in_rule__Informative__Group_9__016934 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Informative__Group_9__1_in_rule__Informative__Group_9__016937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_rule__Informative__Group_9__0__Impl16965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group_9__1__Impl_in_rule__Informative__Group_9__116996 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Alternatives_9_1_in_rule__Informative__Group_9__1__Impl17023 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group_10__0__Impl_in_rule__Informative__Group_10__017057 = new BitSet(new long[]{0x0000000000000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Informative__Group_10__1_in_rule__Informative__Group_10__017060 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_rule__Informative__Group_10__0__Impl17088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Group_10__1__Impl_in_rule__Informative__Group_10__117119 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__Alternatives_10_1_in_rule__Informative__Group_10__1__Impl17146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RecipientPart__Group__0__Impl_in_rule__RecipientPart__Group__017180 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__RecipientPart__Group__1_in_rule__RecipientPart__Group__017183 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RecipientPart__RecipientPartAssignment_0_in_rule__RecipientPart__Group__0__Impl17210 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RecipientPart__Group__1__Impl_in_rule__RecipientPart__Group__117240 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RecipientPart__Group_1__0_in_rule__RecipientPart__Group__1__Impl17267 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__RecipientPart__Group_1__0__Impl_in_rule__RecipientPart__Group_1__017302 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__RecipientPart__Group_1__1_in_rule__RecipientPart__Group_1__017305 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_rule__RecipientPart__Group_1__0__Impl17333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RecipientPart__Group_1__1__Impl_in_rule__RecipientPart__Group_1__117364 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RecipientPart__RefsAssignment_1_1_in_rule__RecipientPart__Group_1__1__Impl17391 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipient__Group__0__Impl_in_rule__RefRecipient__Group__017425 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__RefRecipient__Group__1_in_rule__RefRecipient__Group__017428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipient__RefRecipientAssignment_0_in_rule__RefRecipient__Group__0__Impl17455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipient__Group__1__Impl_in_rule__RefRecipient__Group__117485 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipient__Group_1__0_in_rule__RefRecipient__Group__1__Impl17512 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__RefRecipient__Group_1__0__Impl_in_rule__RefRecipient__Group_1__017547 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__RefRecipient__Group_1__1_in_rule__RefRecipient__Group_1__017550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_rule__RefRecipient__Group_1__0__Impl17578 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipient__Group_1__1__Impl_in_rule__RefRecipient__Group_1__117609 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipient__RefsAssignment_1_1_in_rule__RefRecipient__Group_1__1__Impl17636 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipientSource__Group__0__Impl_in_rule__RefRecipientSource__Group__017670 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__RefRecipientSource__Group__1_in_rule__RefRecipientSource__Group__017673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipientSource__RefRecipientSourceAssignment_0_in_rule__RefRecipientSource__Group__0__Impl17700 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipientSource__Group__1__Impl_in_rule__RefRecipientSource__Group__117730 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipientSource__Group_1__0_in_rule__RefRecipientSource__Group__1__Impl17757 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__RefRecipientSource__Group_1__0__Impl_in_rule__RefRecipientSource__Group_1__017792 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__RefRecipientSource__Group_1__1_in_rule__RefRecipientSource__Group_1__017795 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_rule__RefRecipientSource__Group_1__0__Impl17823 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipientSource__Group_1__1__Impl_in_rule__RefRecipientSource__Group_1__117854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipientSource__RefsAssignment_1_1_in_rule__RefRecipientSource__Group_1__1__Impl17881 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipientTarget__Group__0__Impl_in_rule__RefRecipientTarget__Group__017915 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__RefRecipientTarget__Group__1_in_rule__RefRecipientTarget__Group__017918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipientTarget__RefRecipientTargetAssignment_0_in_rule__RefRecipientTarget__Group__0__Impl17945 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipientTarget__Group__1__Impl_in_rule__RefRecipientTarget__Group__117975 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipientTarget__Group_1__0_in_rule__RefRecipientTarget__Group__1__Impl18002 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__RefRecipientTarget__Group_1__0__Impl_in_rule__RefRecipientTarget__Group_1__018037 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__RefRecipientTarget__Group_1__1_in_rule__RefRecipientTarget__Group_1__018040 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_rule__RefRecipientTarget__Group_1__0__Impl18068 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipientTarget__Group_1__1__Impl_in_rule__RefRecipientTarget__Group_1__118099 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefRecipientTarget__RefsAssignment_1_1_in_rule__RefRecipientTarget__Group_1__1__Impl18126 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefService__Group__0__Impl_in_rule__RefService__Group__018160 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__RefService__Group__1_in_rule__RefService__Group__018163 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefService__RefServiceAssignment_0_in_rule__RefService__Group__0__Impl18190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefService__Group__1__Impl_in_rule__RefService__Group__118220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefService__Group_1__0_in_rule__RefService__Group__1__Impl18247 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__RefService__Group_1__0__Impl_in_rule__RefService__Group_1__018282 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__RefService__Group_1__1_in_rule__RefService__Group_1__018285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_rule__RefService__Group_1__0__Impl18313 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefService__Group_1__1__Impl_in_rule__RefService__Group_1__118344 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefService__RefsAssignment_1_1_in_rule__RefService__Group_1__1__Impl18371 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ServicePart__Group__0__Impl_in_rule__ServicePart__Group__018405 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__ServicePart__Group__1_in_rule__ServicePart__Group__018408 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ServicePart__ServicePartAssignment_0_in_rule__ServicePart__Group__0__Impl18435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ServicePart__Group__1__Impl_in_rule__ServicePart__Group__118465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ServicePart__Group_1__0_in_rule__ServicePart__Group__1__Impl18492 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__ServicePart__Group_1__0__Impl_in_rule__ServicePart__Group_1__018527 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ServicePart__Group_1__1_in_rule__ServicePart__Group_1__018530 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_rule__ServicePart__Group_1__0__Impl18558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ServicePart__Group_1__1__Impl_in_rule__ServicePart__Group_1__118589 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ServicePart__RefsAssignment_1_1_in_rule__ServicePart__Group_1__1__Impl18616 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefPrivateData__Group__0__Impl_in_rule__RefPrivateData__Group__018650 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__RefPrivateData__Group__1_in_rule__RefPrivateData__Group__018653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefPrivateData__RefPrivateDataAssignment_0_in_rule__RefPrivateData__Group__0__Impl18680 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefPrivateData__Group__1__Impl_in_rule__RefPrivateData__Group__118710 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefPrivateData__Group_1__0_in_rule__RefPrivateData__Group__1__Impl18737 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__RefPrivateData__Group_1__0__Impl_in_rule__RefPrivateData__Group_1__018772 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__RefPrivateData__Group_1__1_in_rule__RefPrivateData__Group_1__018775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_rule__RefPrivateData__Group_1__0__Impl18803 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefPrivateData__Group_1__1__Impl_in_rule__RefPrivateData__Group_1__118834 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefPrivateData__RefsAssignment_1_1_in_rule__RefPrivateData__Group_1__1__Impl18861 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefEnforcement__Group__0__Impl_in_rule__RefEnforcement__Group__018895 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__RefEnforcement__Group__1_in_rule__RefEnforcement__Group__018898 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefEnforcement__RefEnforcementAssignment_0_in_rule__RefEnforcement__Group__0__Impl18925 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefEnforcement__Group__1__Impl_in_rule__RefEnforcement__Group__118955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefEnforcement__Group_1__0_in_rule__RefEnforcement__Group__1__Impl18982 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__RefEnforcement__Group_1__0__Impl_in_rule__RefEnforcement__Group_1__019017 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__RefEnforcement__Group_1__1_in_rule__RefEnforcement__Group_1__019020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_rule__RefEnforcement__Group_1__0__Impl19048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefEnforcement__Group_1__1__Impl_in_rule__RefEnforcement__Group_1__119079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RefEnforcement__RefsAssignment_1_1_in_rule__RefEnforcement__Group_1__1__Impl19106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Policy__NameAssignment_119145 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImport_in_rule__Policy__ImportelementsAssignment_319176 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMetadata_in_rule__Policy__MetadataAssignment_419207 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCollection_in_rule__Policy__CollectionAssignment_519238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDisclosure_in_rule__Policy__DisclosureAssignment_619269 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRetention_in_rule__Policy__RetentionAssignment_719300 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUsage_in_rule__Policy__UsageAssignment_819331 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInformative_in_rule__Policy__InformativeAssignment_919362 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrivateData_in_rule__Policy__PrivateDataAssignment_1019393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRecipient_in_rule__Policy__RecipientAssignment_1119424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleService_in_rule__Policy__ServiceAssignment_1219455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEnforcement_in_rule__Policy__EnforcementAssignment_1319486 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedNameWithWildcard_in_rule__Import__ImportedNamespaceAssignment_119517 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Metadata__NameAssignment_219548 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Metadata__DescriptionAssignment_419579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Metadata__AuthorsAssignment_619610 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Metadata__OrganizationsAssignment_819641 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDate_in_rule__Metadata__DateAssignment_1019672 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Metadata__VersionAssignment_1219703 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Date__DayAssignment_019734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMonth_in_rule__Date__MonthAssignment_219765 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Date__YearAssignment_419796 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Month__NameAlternatives_0_in_rule__Month__NameAssignment19827 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Enforcement__NameAssignment_119860 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Enforcement__EnforcementNameAssignment_419891 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Enforcement__DescriptionAssignment_619922 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enforcement__TypeAlternatives_8_0_in_rule__Enforcement__TypeAssignment_819953 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Service__NameAssignment_119986 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Service__ServiceNameAssignment_420017 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Service__DescriptionAssignment_5_120048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefPrivateData_in_rule__Service__RefPrivateDataAssignment_6_1_020079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Service__RefPDAllAssignment_6_1_120115 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleServicePart_in_rule__Service__ServicePartAssignment_7_120154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Recipient__NameAssignment_120185 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Recipient__RecipientNameAssignment_420216 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Recipient__DescriptionAssignment_620247 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRecipientPart_in_rule__Recipient__RecipientPartAssignment_7_120278 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__ScopeAlternatives_9_0_in_rule__Recipient__ScopeAssignment_920309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Recipient__TypeAlternatives_11_0_in_rule__Recipient__TypeAssignment_1120342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__PrivateData__NameAssignment_120375 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__PrivateData__DescriptionAssignment_420406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrivateData__TypeAlternatives_6_0_in_rule__PrivateData__TypeAssignment_620437 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAttribute_in_rule__PrivateData__AttributeAssignment_720470 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Attribute__NameAssignment_120501 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Attribute__DescriptionAssignment_420532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Collection__NameAssignment_120563 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Collection__DescriptionAssignment_420594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Collection__ConditionAssignment_620625 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Collection__PartCollectionAssignment_7_120660 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefPrivateData_in_rule__Collection__RefPrivateDataAssignment_8_1_020695 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Collection__RefPDAllAssignment_8_1_120731 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefService_in_rule__Collection__RefServiceAssignment_9_1_020770 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Collection__RefSAllAssignment_9_1_120806 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefEnforcement_in_rule__Collection__RefEnforcementAssignment_10_1_020845 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Collection__RefEAllAssignment_10_1_120881 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Collection__ModalityAlternatives_12_0_in_rule__Collection__ModalityAssignment_1220920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Disclosure__NameAssignment_120953 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Disclosure__DescriptionAssignment_420984 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Disclosure__ConditionAssignment_621015 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Disclosure__PartDisclosureAssignment_7_121050 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefRecipient_in_rule__Disclosure__RefRecipientAssignment_8_1_021085 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Disclosure__RefRAllAssignment_8_1_121121 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefRecipientSource_in_rule__Disclosure__RefRecipientSourceAssignment_9_1_021160 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Disclosure__RefRSAllAssignment_9_1_121196 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefRecipientTarget_in_rule__Disclosure__RefRecipientTargetAssignment_10_1_021235 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Disclosure__RefRTAllAssignment_10_1_121271 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefPrivateData_in_rule__Disclosure__RefPrivateDataAssignment_11_1_021310 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Disclosure__RefPDAllAssignment_11_1_121346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefService_in_rule__Disclosure__RefServiceAssignment_12_1_021385 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Disclosure__RefSAllAssignment_12_1_121421 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefEnforcement_in_rule__Disclosure__RefEnforcementAssignment_13_1_021460 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Disclosure__RefEAllAssignment_13_1_121496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Disclosure__ModalityAlternatives_15_0_in_rule__Disclosure__ModalityAssignment_1521535 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Retention__NameAssignment_121568 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Retention__DescriptionAssignment_421599 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Retention__ConditionAssignment_621630 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Retention__PartRetentionAssignment_7_121665 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Retention__PeriodAssignment_921700 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefPrivateData_in_rule__Retention__RefPrivateDataAssignment_10_1_021731 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Retention__RefPDAllAssignment_10_1_121767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefService_in_rule__Retention__RefServiceAssignment_11_1_021806 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Retention__RefSAllAssignment_11_1_121842 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefEnforcement_in_rule__Retention__RefEnforcementAssignment_12_1_021881 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Retention__RefEAllAssignment_12_1_121917 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Retention__ModalityAlternatives_14_0_in_rule__Retention__ModalityAssignment_1421956 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Usage__NameAssignment_121989 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Usage__DescriptionAssignment_422020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Usage__ConditionAssignment_622051 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Usage__PartUsageAssignment_7_122086 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefPrivateData_in_rule__Usage__RefPrivateDataAssignment_8_1_022121 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Usage__RefPDAllAssignment_8_1_122157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefService_in_rule__Usage__RefServiceAssignment_9_1_022196 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Usage__RefSAllAssignment_9_1_122232 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefEnforcement_in_rule__Usage__RefEnforcementAssignment_10_1_022271 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Usage__RefEAllAssignment_10_1_122307 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Usage__ModalityAlternatives_12_0_in_rule__Usage__ModalityAssignment_1222346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Informative__NameAssignment_122379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Informative__DescriptionAssignment_422410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Informative__ConditionAssignment_622441 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Informative__PartInformativeAssignment_7_122476 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefPrivateData_in_rule__Informative__RefPrivateDataAssignment_8_1_022511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Informative__RefPDAllAssignment_8_1_122547 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefService_in_rule__Informative__RefServiceAssignment_9_1_022586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Informative__RefSAllAssignment_9_1_122622 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefEnforcement_in_rule__Informative__RefEnforcementAssignment_10_1_022661 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_rule__Informative__RefEAllAssignment_10_1_122697 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Informative__ModalityAlternatives_12_0_in_rule__Informative__ModalityAssignment_1222736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__RecipientPart__RecipientPartAssignment_022773 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__RecipientPart__RefsAssignment_1_122812 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__RefRecipient__RefRecipientAssignment_022851 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__RefRecipient__RefsAssignment_1_122890 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__RefRecipientSource__RefRecipientSourceAssignment_022929 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__RefRecipientSource__RefsAssignment_1_122968 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__RefRecipientTarget__RefRecipientTargetAssignment_023007 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__RefRecipientTarget__RefsAssignment_1_123046 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__RefService__RefServiceAssignment_023085 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__RefService__RefsAssignment_1_123124 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ServicePart__ServicePartAssignment_023163 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ServicePart__RefsAssignment_1_123202 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__RefPrivateData__RefPrivateDataAssignment_023241 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__RefPrivateData__RefsAssignment_1_123280 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__RefEnforcement__RefEnforcementAssignment_023319 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__RefEnforcement__RefsAssignment_1_123358 = new BitSet(new long[]{0x0000000000000002L});
 
 }

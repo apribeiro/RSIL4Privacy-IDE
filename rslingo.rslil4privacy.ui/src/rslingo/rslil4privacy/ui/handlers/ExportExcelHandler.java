@@ -237,17 +237,16 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StModality", modality);
 			DocumentHelper.replaceText(nRow, "StType", "Collection");
 			
-			if (collection.getRefPrivateData().size() > 0) {
+			RefPrivateData refPrivateData = collection.getRefPrivateData();
+			
+			if (refPrivateData != null) {
 				StringBuilder pdIds = new StringBuilder();
+				PrivateData pd = refPrivateData.getRefPrivateData();
+				pdIds.append(pd.getName());
 				
-				for (RefPrivateData refPD : collection.getRefPrivateData()) {
-					PrivateData pd = refPD.getRefPrivateData();
-					pdIds.append(pd.getName());
-					
-					for (PrivateData refMulPD : refPD.getRefs()) {
-						pdIds.append(", ");
-						pdIds.append(refMulPD.getName());
-					}
+				for (PrivateData refMulPD : refPrivateData.getRefs()) {
+					pdIds.append(", ");
+					pdIds.append(refMulPD.getName());
 				}
 				
 				DocumentHelper.replaceText(nRow, "StPDId", pdIds.toString());
@@ -259,17 +258,17 @@ public class ExportExcelHandler extends AbstractHandler {
 			
 			DocumentHelper.replaceText(nRow, "StRId", "");
 			
-			if (collection.getRefService().size() > 0) {
+			RefService refService = collection.getRefService();
+			
+			if (refService != null) {
 				StringBuilder sIds = new StringBuilder();
 				
-				for (RefService ref : collection.getRefService()) {
-					Service s = ref.getRefService();
-					sIds.append(s.getName());
-					
-					for (Service refService : ref.getRefs()) {
-						sIds.append(", ");
-						sIds.append(refService.getName());
-					}
+				Service s = refService.getRefService();
+				sIds.append(s.getName());
+				
+				for (Service ref : refService.getRefs()) {
+					sIds.append(", ");
+					sIds.append(ref.getName());
 				}
 				
 				DocumentHelper.replaceText(nRow, "StSId", sIds.toString());
@@ -279,17 +278,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
 			
-			if (collection.getRefEnforcement().size() > 0) {
+			RefEnforcement refEnf = collection.getRefEnforcement();
+			
+			if (refEnf != null) {
 				StringBuilder eIds = new StringBuilder();
+				Enforcement e = refEnf.getRefEnforcement();
+				eIds.append(e.getName());
 				
-				for (RefEnforcement ref : collection.getRefEnforcement()) {
-					Enforcement e = ref.getRefEnforcement();
-					eIds.append(e.getName());
-					
-					for (Enforcement refEnforcement : ref.getRefs()) {
-						eIds.append(", ");
-						eIds.append(refEnforcement.getName());
-					}					
+				for (Enforcement refEnforcement : refEnf.getRefs()) {
+					eIds.append(", ");
+					eIds.append(refEnforcement.getName());
 				}
 				
 				DocumentHelper.replaceText(nRow, "StEId", eIds.toString());
@@ -318,17 +316,16 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StModality", modality);
 			DocumentHelper.replaceText(nRow, "StType", "Disclosure");
 			
-			if (disclosure.getRefPrivateData().size() > 0) {
+			RefPrivateData refPrivateData = disclosure.getRefPrivateData();
+			
+			if (refPrivateData != null) {
 				StringBuilder pdIds = new StringBuilder();
+				PrivateData pd = refPrivateData.getRefPrivateData();
+				pdIds.append(pd.getName());
 				
-				for (RefPrivateData ref : disclosure.getRefPrivateData()) {
-					PrivateData pd = ref.getRefPrivateData();
-					pdIds.append(pd.getName());
-					
-					for (PrivateData refMulPD : ref.getRefs()) {
-						pdIds.append(", ");
-						pdIds.append(refMulPD.getName());
-					}
+				for (PrivateData refMulPD : refPrivateData.getRefs()) {
+					pdIds.append(", ");
+					pdIds.append(refMulPD.getName());
 				}
 				
 				DocumentHelper.replaceText(nRow, "StPDId", pdIds.toString());
@@ -338,17 +335,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "StPDId", "");
 			}
 			
-			if (disclosure.getRefRecipient().size() > 0) {
+			RefRecipient refRecipient = disclosure.getRefRecipient();
+			
+			if (refRecipient != null) {
 				StringBuilder rIds = new StringBuilder();
+				Recipient r = refRecipient.getRefRecipient();
+				rIds.append(r.getName());
 				
-				for (RefRecipient ref : disclosure.getRefRecipient()) {
-					Recipient r = ref.getRefRecipient();
-					rIds.append(r.getName());
-					
-					for (Recipient refRec : ref.getRefs()) {
-						rIds.append(", ");
-						rIds.append(refRec.getName());
-					}
+				for (Recipient refRec : refRecipient.getRefs()) {
+					rIds.append(", ");
+					rIds.append(refRec.getName());
 				}
 				
 				DocumentHelper.replaceText(nRow, "StRId", rIds.toString());
@@ -358,17 +354,17 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "StRId", "");
 			}
 			
-			if (disclosure.getRefService().size() > 0) {
+			RefService refService = disclosure.getRefService();
+			
+			if (refService != null) {
 				StringBuilder sIds = new StringBuilder();
 				
-				for (RefService ref : disclosure.getRefService()) {
-					Service s = ref.getRefService();
-					sIds.append(s.getName());
-					
-					for (Service refService : ref.getRefs()) {
-						sIds.append(", ");
-						sIds.append(refService.getName());
-					}
+				Service s = refService.getRefService();
+				sIds.append(s.getName());
+				
+				for (Service ref : refService.getRefs()) {
+					sIds.append(", ");
+					sIds.append(ref.getName());
 				}
 				
 				DocumentHelper.replaceText(nRow, "StSId", sIds.toString());
@@ -378,17 +374,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
 			
-			if (disclosure.getRefEnforcement().size() > 0) {
+			RefEnforcement refEnf = disclosure.getRefEnforcement();
+			
+			if (refEnf != null) {
 				StringBuilder eIds = new StringBuilder();
+				Enforcement e = refEnf.getRefEnforcement();
+				eIds.append(e.getName());
 				
-				for (RefEnforcement ref : disclosure.getRefEnforcement()) {
-					Enforcement e = ref.getRefEnforcement();
-					eIds.append(e.getName());
-					
-					for (Enforcement refEnforcement : ref.getRefs()) {
-						eIds.append(", ");
-						eIds.append(refEnforcement.getName());
-					}
+				for (Enforcement refEnforcement : refEnf.getRefs()) {
+					eIds.append(", ");
+					eIds.append(refEnforcement.getName());
 				}
 				
 				DocumentHelper.replaceText(nRow, "StEId", eIds.toString());
@@ -417,17 +412,16 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StModality", modality);
 			DocumentHelper.replaceText(nRow, "StType", "Retention");
 			
-			if (retention.getRefPrivateData().size() > 0) {
+			RefPrivateData refPrivateData = retention.getRefPrivateData();
+			
+			if (refPrivateData != null) {
 				StringBuilder pdIds = new StringBuilder();
+				PrivateData pd = refPrivateData.getRefPrivateData();
+				pdIds.append(pd.getName());
 				
-				for (RefPrivateData ref : retention.getRefPrivateData()) {
-					PrivateData pd = ref.getRefPrivateData();
-					pdIds.append(pd.getName());
-					
-					for (PrivateData refMulPD : ref.getRefs()) {
-						pdIds.append(", ");
-						pdIds.append(refMulPD.getName());
-					}
+				for (PrivateData refMulPD : refPrivateData.getRefs()) {
+					pdIds.append(", ");
+					pdIds.append(refMulPD.getName());
 				}
 
 				DocumentHelper.replaceText(nRow, "StPDId", pdIds.toString());
@@ -439,17 +433,16 @@ public class ExportExcelHandler extends AbstractHandler {
 			
 			DocumentHelper.replaceText(nRow, "StRId", "");
 			
-			if (retention.getRefService().size() > 0) {
+			RefService refService = retention.getRefService();
+			
+			if (refService != null) {
 				StringBuilder sIds = new StringBuilder();
-				
-				for (RefService ref : retention.getRefService()) {
-					Service s = ref.getRefService();
-					sIds.append(s.getName());
+				Service s = refService.getRefService();
+				sIds.append(s.getName());
 					
-					for (Service refService : ref.getRefs()) {
-						sIds.append(", ");
-						sIds.append(refService.getName());
-					}
+				for (Service ref : refService.getRefs()) {
+					sIds.append(", ");
+					sIds.append(ref.getName());
 				}
 				
 				DocumentHelper.replaceText(nRow, "StSId", sIds.toString());
@@ -459,17 +452,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
 			
-			if (retention.getRefEnforcement().size() > 0) {
+			RefEnforcement refEnf = retention.getRefEnforcement();
+			
+			if (refEnf != null) {
 				StringBuilder eIds = new StringBuilder();
+				Enforcement e = refEnf.getRefEnforcement();
+				eIds.append(e.getName());
 				
-				for (RefEnforcement ref : retention.getRefEnforcement()) {
-					Enforcement e = ref.getRefEnforcement();
-					eIds.append(e.getName());
-					
-					for (Enforcement refEnforcement : ref.getRefs()) {
-						eIds.append(", ");
-						eIds.append(refEnforcement.getName());
-					}
+				for (Enforcement refEnforcement : refEnf.getRefs()) {
+					eIds.append(", ");
+					eIds.append(refEnforcement.getName());
 				}
 				
 				DocumentHelper.replaceText(nRow, "StEId", eIds.toString());
@@ -498,17 +490,16 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StModality", modality);
 			DocumentHelper.replaceText(nRow, "StType", "Usage");
 			
-			if (usage.getRefPrivateData().size() > 0) {
+			RefPrivateData refPrivateData = usage.getRefPrivateData();
+			
+			if (refPrivateData != null) {
 				StringBuilder pdIds = new StringBuilder();
+				PrivateData pd = refPrivateData.getRefPrivateData();
+				pdIds.append(pd.getName());
 				
-				for (RefPrivateData ref : usage.getRefPrivateData()) {
-					PrivateData pd = ref.getRefPrivateData();
-					pdIds.append(pd.getName());
-					
-					for (PrivateData refMulPD : ref.getRefs()) {
-						pdIds.append(", ");
-						pdIds.append(refMulPD.getName());
-					}
+				for (PrivateData refMulPD : refPrivateData.getRefs()) {
+					pdIds.append(", ");
+					pdIds.append(refMulPD.getName());
 				}
 				
 				DocumentHelper.replaceText(nRow, "StPDId", pdIds.toString());
@@ -520,17 +511,16 @@ public class ExportExcelHandler extends AbstractHandler {
 			
 			DocumentHelper.replaceText(nRow, "StRId", "");
 			
-			if (usage.getRefService().size() > 0) {
+			RefService refService = usage.getRefService();
+			
+			if (refService != null) {
 				StringBuilder sIds = new StringBuilder();
+				Service s = refService.getRefService();
+				sIds.append(s.getName());
 				
-				for (RefService ref : usage.getRefService()) {
-					Service s = ref.getRefService();
-					sIds.append(s.getName());
-					
-					for (Service refService : ref.getRefs()) {
-						sIds.append(", ");
-						sIds.append(refService.getName());
-					}
+				for (Service ref : refService.getRefs()) {
+					sIds.append(", ");
+					sIds.append(ref.getName());
 				}
 				
 				DocumentHelper.replaceText(nRow, "StSId", sIds.toString());
@@ -540,17 +530,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
 			
-			if (usage.getRefEnforcement().size() > 0) {
+			RefEnforcement refEnf = usage.getRefEnforcement();
+			
+			if (refEnf != null) {
 				StringBuilder eIds = new StringBuilder();
-				
-				for (RefEnforcement ref : usage.getRefEnforcement()) {
-					Enforcement e = ref.getRefEnforcement();
-					eIds.append(e.getName());
+				Enforcement e = refEnf.getRefEnforcement();
+				eIds.append(e.getName());
 					
-					for (Enforcement refEnforcement : ref.getRefs()) {
-						eIds.append(", ");
-						eIds.append(refEnforcement.getName());
-					}
+				for (Enforcement refEnforcement : refEnf.getRefs()) {
+					eIds.append(", ");
+					eIds.append(refEnforcement.getName());
 				}
 				
 				DocumentHelper.replaceText(nRow, "StEId", eIds.toString());
@@ -579,17 +568,16 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "StModality", modality);
 			DocumentHelper.replaceText(nRow, "StType", "Informative");
 			
-			if (informative.getRefPrivateData().size() > 0) {
+			RefPrivateData refPrivateData = informative.getRefPrivateData();
+			
+			if (refPrivateData != null) {
 				StringBuilder pdIds = new StringBuilder();
+				PrivateData pd = refPrivateData.getRefPrivateData();
+				pdIds.append(pd.getName());
 				
-				for (RefPrivateData ref : informative.getRefPrivateData()) {
-					PrivateData pd = ref.getRefPrivateData();
-					pdIds.append(pd.getName());
-					
-					for (PrivateData refMulPD : ref.getRefs()) {
-						pdIds.append(", ");
-						pdIds.append(refMulPD.getName());
-					}
+				for (PrivateData refMulPD : refPrivateData.getRefs()) {
+					pdIds.append(", ");
+					pdIds.append(refMulPD.getName());
 				}
 				
 				DocumentHelper.replaceText(nRow, "StPDId", pdIds.toString());
@@ -601,17 +589,16 @@ public class ExportExcelHandler extends AbstractHandler {
 			
 			DocumentHelper.replaceText(nRow, "StRId", "");
 			
-			if (informative.getRefService().size() > 0) {
+			RefService refService = informative.getRefService();
+			
+			if (refService != null) {
 				StringBuilder sIds = new StringBuilder();
-				
-				for (RefService ref : informative.getRefService()) {
-					Service s = ref.getRefService();
-					sIds.append(s.getName());
+				Service s = refService.getRefService();
+				sIds.append(s.getName());
 					
-					for (Service refService : ref.getRefs()) {
-						sIds.append(", ");
-						sIds.append(refService.getName());
-					}
+				for (Service ref : refService.getRefs()) {
+					sIds.append(", ");
+					sIds.append(ref.getName());
 				}
 				
 				DocumentHelper.replaceText(nRow, "StSId", sIds.toString());
@@ -621,17 +608,16 @@ public class ExportExcelHandler extends AbstractHandler {
 				DocumentHelper.replaceText(nRow, "StSId", "");
 			}
 			
-			if (informative.getRefEnforcement().size() > 0) {
+			RefEnforcement refEnf = informative.getRefEnforcement();
+			
+			if (refEnf != null) {
 				StringBuilder eIds = new StringBuilder();
+				Enforcement e = refEnf.getRefEnforcement();
+				eIds.append(e.getName());
 				
-				for (RefEnforcement ref : informative.getRefEnforcement()) {
-					Enforcement e = ref.getRefEnforcement();
-					eIds.append(e.getName());
-					
-					for (Enforcement refEnforcement : ref.getRefs()) {
-						eIds.append(", ");
-						eIds.append(refEnforcement.getName());
-					}
+				for (Enforcement refEnforcement : refEnf.getRefs()) {
+					eIds.append(", ");
+					eIds.append(refEnforcement.getName());
 				}
 				
 				DocumentHelper.replaceText(nRow, "StEId", eIds.toString());
@@ -684,17 +670,16 @@ public class ExportExcelHandler extends AbstractHandler {
 			DocumentHelper.replaceText(nRow, "SName", service.getServiceName());
 			DocumentHelper.replaceText(nRow, "SDescription", service.getDescription());
 			
-			if (service.getRefPrivateData().size() > 0) {
+			RefPrivateData refPD = service.getRefPrivateData();
+			
+			if (refPD != null) {
 				StringBuilder pdIds = new StringBuilder();
-				
-				for (RefPrivateData refPD : service.getRefPrivateData()) {
-					PrivateData pd = refPD.getRefPrivateData();
-					pdIds.append(pd.getName());
+				PrivateData pd = refPD.getRefPrivateData();
+				pdIds.append(pd.getName());
 					
-					for (PrivateData refMulPD : refPD.getRefs()) {
-						pdIds.append(", ");
-						pdIds.append(refMulPD.getName());
-					}
+				for (PrivateData refMulPD : refPD.getRefs()) {
+					pdIds.append(", ");
+					pdIds.append(refMulPD.getName());
 				}
 				
 				DocumentHelper.replaceText(nRow, "SPDId", pdIds.toString());

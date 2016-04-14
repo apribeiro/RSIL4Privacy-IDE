@@ -2,8 +2,6 @@
  */
 package rslingo.rslil4privacy.rSLIL4Privacy;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -145,20 +143,30 @@ public interface Disclosure extends EObject
   void setPartDisclosure(Disclosure value);
 
   /**
-   * Returns the value of the '<em><b>Ref Recipient</b></em>' containment reference list.
-   * The list contents are of type {@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipient}.
+   * Returns the value of the '<em><b>Ref Recipient</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Ref Recipient</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Ref Recipient</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Ref Recipient</em>' containment reference list.
+   * @return the value of the '<em>Ref Recipient</em>' containment reference.
+   * @see #setRefRecipient(RefRecipient)
    * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getDisclosure_RefRecipient()
    * @model containment="true"
    * @generated
    */
-  EList<RefRecipient> getRefRecipient();
+  RefRecipient getRefRecipient();
+
+  /**
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipient <em>Ref Recipient</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Ref Recipient</em>' containment reference.
+   * @see #getRefRecipient()
+   * @generated
+   */
+  void setRefRecipient(RefRecipient value);
 
   /**
    * Returns the value of the '<em><b>Ref RAll</b></em>' attribute.
@@ -187,20 +195,30 @@ public interface Disclosure extends EObject
   void setRefRAll(String value);
 
   /**
-   * Returns the value of the '<em><b>Ref Recipient Source</b></em>' containment reference list.
-   * The list contents are of type {@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientSource}.
+   * Returns the value of the '<em><b>Ref Recipient Source</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Ref Recipient Source</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Ref Recipient Source</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Ref Recipient Source</em>' containment reference list.
+   * @return the value of the '<em>Ref Recipient Source</em>' containment reference.
+   * @see #setRefRecipientSource(RefRecipientSource)
    * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getDisclosure_RefRecipientSource()
    * @model containment="true"
    * @generated
    */
-  EList<RefRecipientSource> getRefRecipientSource();
+  RefRecipientSource getRefRecipientSource();
+
+  /**
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipientSource <em>Ref Recipient Source</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Ref Recipient Source</em>' containment reference.
+   * @see #getRefRecipientSource()
+   * @generated
+   */
+  void setRefRecipientSource(RefRecipientSource value);
 
   /**
    * Returns the value of the '<em><b>Ref RS All</b></em>' attribute.
@@ -229,20 +247,30 @@ public interface Disclosure extends EObject
   void setRefRSAll(String value);
 
   /**
-   * Returns the value of the '<em><b>Ref Recipient Target</b></em>' containment reference list.
-   * The list contents are of type {@link rslingo.rslil4privacy.rSLIL4Privacy.RefRecipientTarget}.
+   * Returns the value of the '<em><b>Ref Recipient Target</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Ref Recipient Target</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Ref Recipient Target</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Ref Recipient Target</em>' containment reference list.
+   * @return the value of the '<em>Ref Recipient Target</em>' containment reference.
+   * @see #setRefRecipientTarget(RefRecipientTarget)
    * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getDisclosure_RefRecipientTarget()
    * @model containment="true"
    * @generated
    */
-  EList<RefRecipientTarget> getRefRecipientTarget();
+  RefRecipientTarget getRefRecipientTarget();
+
+  /**
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefRecipientTarget <em>Ref Recipient Target</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Ref Recipient Target</em>' containment reference.
+   * @see #getRefRecipientTarget()
+   * @generated
+   */
+  void setRefRecipientTarget(RefRecipientTarget value);
 
   /**
    * Returns the value of the '<em><b>Ref RT All</b></em>' attribute.
@@ -271,20 +299,30 @@ public interface Disclosure extends EObject
   void setRefRTAll(String value);
 
   /**
-   * Returns the value of the '<em><b>Ref Private Data</b></em>' containment reference list.
-   * The list contents are of type {@link rslingo.rslil4privacy.rSLIL4Privacy.RefPrivateData}.
+   * Returns the value of the '<em><b>Ref Private Data</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Ref Private Data</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Ref Private Data</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Ref Private Data</em>' containment reference list.
+   * @return the value of the '<em>Ref Private Data</em>' containment reference.
+   * @see #setRefPrivateData(RefPrivateData)
    * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getDisclosure_RefPrivateData()
    * @model containment="true"
    * @generated
    */
-  EList<RefPrivateData> getRefPrivateData();
+  RefPrivateData getRefPrivateData();
+
+  /**
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefPrivateData <em>Ref Private Data</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Ref Private Data</em>' containment reference.
+   * @see #getRefPrivateData()
+   * @generated
+   */
+  void setRefPrivateData(RefPrivateData value);
 
   /**
    * Returns the value of the '<em><b>Ref PD All</b></em>' attribute.
@@ -313,20 +351,30 @@ public interface Disclosure extends EObject
   void setRefPDAll(String value);
 
   /**
-   * Returns the value of the '<em><b>Ref Service</b></em>' containment reference list.
-   * The list contents are of type {@link rslingo.rslil4privacy.rSLIL4Privacy.RefService}.
+   * Returns the value of the '<em><b>Ref Service</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Ref Service</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Ref Service</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Ref Service</em>' containment reference list.
+   * @return the value of the '<em>Ref Service</em>' containment reference.
+   * @see #setRefService(RefService)
    * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getDisclosure_RefService()
    * @model containment="true"
    * @generated
    */
-  EList<RefService> getRefService();
+  RefService getRefService();
+
+  /**
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefService <em>Ref Service</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Ref Service</em>' containment reference.
+   * @see #getRefService()
+   * @generated
+   */
+  void setRefService(RefService value);
 
   /**
    * Returns the value of the '<em><b>Ref SAll</b></em>' attribute.
@@ -355,20 +403,30 @@ public interface Disclosure extends EObject
   void setRefSAll(String value);
 
   /**
-   * Returns the value of the '<em><b>Ref Enforcement</b></em>' containment reference list.
-   * The list contents are of type {@link rslingo.rslil4privacy.rSLIL4Privacy.RefEnforcement}.
+   * Returns the value of the '<em><b>Ref Enforcement</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Ref Enforcement</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Ref Enforcement</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Ref Enforcement</em>' containment reference list.
+   * @return the value of the '<em>Ref Enforcement</em>' containment reference.
+   * @see #setRefEnforcement(RefEnforcement)
    * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getDisclosure_RefEnforcement()
    * @model containment="true"
    * @generated
    */
-  EList<RefEnforcement> getRefEnforcement();
+  RefEnforcement getRefEnforcement();
+
+  /**
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.Disclosure#getRefEnforcement <em>Ref Enforcement</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Ref Enforcement</em>' containment reference.
+   * @see #getRefEnforcement()
+   * @generated
+   */
+  void setRefEnforcement(RefEnforcement value);
 
   /**
    * Returns the value of the '<em><b>Ref EAll</b></em>' attribute.
