@@ -397,6 +397,9 @@ public class DocumentHelper {
 			e.printStackTrace();
 		}
 		
+		// Imports are not needed in the Merged File
+		policy.getImportelements().clear();
+		
 		// Set the missing Policy Elements
 		for (IFile iFile : refs) {
 			Resource res = rs.getResource(
