@@ -21,3 +21,5 @@ The main goal of the project RSLingo4Privacy is to improve privacy by providing 
 [BR2013] T. D. Breaux, A. Rao, "Formal Analysis of Privacy Requirements Specifications for Multi-Tier Applications", IEEE 21st International Requirements Engineering Conference (RE), 2013.
 
 [BHR2014] T. D. Breaux, H. Hibshi, A. Rao, "Eddy, A Formal Language for Specifying and Analyzing Data Flow Specifications for Conflicting Privacy Requirements", Requirements Engineering Journal, Springer, 2014.
+
+**© 2016 André Ribeiro and Prof. Alberto Silva (Supervisor) – Instituto Superior Técnico, University of Lisbon, and INESC-ID. All rights reserved.**
