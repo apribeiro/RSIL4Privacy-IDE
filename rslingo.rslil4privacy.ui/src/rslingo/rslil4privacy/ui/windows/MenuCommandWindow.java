@@ -21,7 +21,9 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.ui.ide.IDE.SharedImages;
 
 public class MenuCommandWindow {
 	
@@ -122,6 +124,8 @@ public class MenuCommandWindow {
 		
 		for (IProject project : projects) {
 			TableItem item = new TableItem(table_1, SWT.NONE);
+			item.setImage(PlatformUI.getWorkbench().getSharedImages()
+					.getImage(SharedImages.IMG_OBJ_PROJECT));
 			item.setText(project.getName());
 		}
 		
