@@ -216,7 +216,7 @@ public class MenuCommandWindow {
 	class ProjectComparator implements Comparator<IProject> {
 		@Override
 		public int compare(IProject p1, IProject p2) {
-			return p1.getName().compareTo(p2.getName());
+			return p1.getName().compareToIgnoreCase(p2.getName());
 		}
 	}
 }
