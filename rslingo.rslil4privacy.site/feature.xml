@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="rslingo.rslil4privacy.site"
+	label="rslingo.rslil4privacy.site Feature"
+	version="1.0.0.qualifier">
+	<includes
+		id="rslingo.rslil4privacy.sdk"
+		version="0.0.0"/>
+</feature>
