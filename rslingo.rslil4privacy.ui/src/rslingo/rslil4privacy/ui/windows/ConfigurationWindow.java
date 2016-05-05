@@ -37,9 +37,9 @@ public class ConfigurationWindow {
 	private static final String DEF_EXCEL_PATH = "RSL-IL4Privacy-ExcelTemplate-v1.1.xlsx";
 	private static final String DEF_GRAPHVIZ_PATH = "C:/Program Files (x86)/Graphviz2.24/bin/dot.exe";
 	
-	private final String PLUGIN_PATH = Platform.getInstallLocation()
+	private final String RSLINGO_PATH = Platform.getInstallLocation()
 			.getURL().getPath().substring(1)
-			+ "plugins/RSLingo4Privacy/";
+			+ "RSLingo4Privacy/";
 	private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
 	
 	private Shell shell;
@@ -221,8 +221,8 @@ public class ConfigurationWindow {
 	}
 	
 	private void checkPluginFolder() {
-		File pluginFolder = new File(PLUGIN_PATH);
-		File configFile = new File(PLUGIN_PATH + CONFIG_PATH);
+		File pluginFolder = new File(RSLINGO_PATH);
+		File configFile = new File(RSLINGO_PATH + CONFIG_PATH);
 		
 		if (!pluginFolder.exists()) {
 			pluginFolder.mkdir();
@@ -275,7 +275,7 @@ public class ConfigurationWindow {
 	
 	private HashMap<String, String> getConfigurations() {
 		HashMap<String, String> configs = new HashMap<String, String>();
-		File configFile = new File(PLUGIN_PATH + CONFIG_PATH);
+		File configFile = new File(RSLINGO_PATH + CONFIG_PATH);
 		
 		try {
 			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
@@ -303,7 +303,7 @@ public class ConfigurationWindow {
 	}
 	
 	private void saveConfigurations(HashMap<String, String> configs) {
-		File configFile = new File(PLUGIN_PATH + CONFIG_PATH);
+		File configFile = new File(RSLINGO_PATH + CONFIG_PATH);
 
 		if (!configs.get("word-path").equals(DEF_WORD_PATH)
 			|| !configs.get("excel-path").equals(DEF_EXCEL_PATH)

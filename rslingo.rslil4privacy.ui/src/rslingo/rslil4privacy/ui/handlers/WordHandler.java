@@ -69,9 +69,9 @@ public class WordHandler extends AbstractHandler {
 	private static final String FILE_EXT = ".rslil";
 	private static final String DEF_WORD_PATH = "RSL-IL4Privacy-WordTemplate.docx";
 
-	private final String PLUGIN_PATH = Platform.getInstallLocation()
+	private final String RSLINGO_PATH = Platform.getInstallLocation()
 			.getURL().getPath().substring(1)
-			+ "plugins/RSLingo4Privacy/";
+			+ "RSLingo4Privacy/";
      
     @Inject
     IResourceSetProvider resourceSetProvider;
@@ -152,7 +152,7 @@ public class WordHandler extends AbstractHandler {
 				}
 				
 				try {
-					InputStream from = new FileInputStream(PLUGIN_PATH + DEF_WORD_PATH);
+					InputStream from = new FileInputStream(RSLINGO_PATH + DEF_WORD_PATH);
 					XWPFDocument document = new XWPFDocument(from);
 
 					writePolicyMetadata(policy.getMetadata(), document);
