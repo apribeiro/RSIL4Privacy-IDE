@@ -6,6 +6,14 @@
 	<feature id="rslingo.rslil4privacy.sdk.source" version="0.0.0">
 		<category name="main.source"/>
 	</feature>
-   <category-def name="main" label="RSL-IL4Privacy"/>
+   <category-def name="main" label="RSL-IL4Privacy">
+	  <description>
+         RSL-IL4Privacy
+      </description>
+   </category-def>
    <category-def name="main.source" label="Source for RSL-IL4Privacy"/>
+   <description>
+         Source for RSL-IL4Privacy
+      </description>
+   </category-def>
 </site>
