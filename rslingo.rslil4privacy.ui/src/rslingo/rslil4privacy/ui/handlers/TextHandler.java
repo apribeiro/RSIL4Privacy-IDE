@@ -35,7 +35,7 @@ import rslingo.rslil4privacy.ui.windows.MenuCommandWindow;
 public class TextHandler extends AbstractHandler {
 
 	private static final String GEN_FOLDER = "src-gen";
-	private static final String FILE_EXT = ".rslil";
+	private static final String FILE_EXT = ".rslil4privacy";
 	
 	@Inject
     private RSLIL4PrivacyGenerator generator;
@@ -120,10 +120,6 @@ public class TextHandler extends AbstractHandler {
 					generator.setGenMode(RSLIL4PrivacyGenerator.TEXT_MODE);
 			        generator.doGenerate(resource, fsa);
 			        project.refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
-			        // Delete Merged File
-			        // FIXME Not working!!!
-//			        IFile mergedFile = project.getFile(mergedPath);
-//			        mergedFile.delete(true, new NullProgressMonitor());
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

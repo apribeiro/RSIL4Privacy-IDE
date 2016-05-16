@@ -9,7 +9,7 @@
             class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
-            extensions="rslil"
+            extensions="rslil4privacy"
             id="rslingo.rslil4privacy.RSLIL4Privacy"
             name="RSLIL4Privacy Editor">
         </editor>
@@ -234,13 +234,13 @@
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
 			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
-			type="rslil">
+			type="rslil4privacy">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
         <resourceServiceProvider
             class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
-            uriExtension="rslil">
+            uriExtension="rslil4privacy">
         </resourceServiceProvider>
     </extension>
 
@@ -272,7 +272,7 @@
          point="org.eclipse.xtext.builder.participant">
       <participant
             class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
-            fileExtensions="rslil"
+            fileExtensions="rslil4privacy"
             >
       </participant>
    </extension>-->
@@ -505,7 +505,7 @@
              <iterate>
 		       <adapt type="org.eclipse.core.resources.IResource">
 					<test property="org.eclipse.core.resources.name" 
-		                value="*.rslil"/>
+		                value="*.rslil4privacy"/>
 		       </adapt>
 		    </iterate>
        		</visibleWhen>
@@ -593,24 +593,24 @@
   <extension point="org.eclipse.compare.contentViewers">
     <viewer id="rslingo.rslil4privacy.RSLIL4Privacy.compare.contentViewers"
             class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-            extensions="rslil">
+            extensions="rslil4privacy">
     </viewer>
   </extension>
   <extension point="org.eclipse.compare.contentMergeViewers">
     <viewer id="rslingo.rslil4privacy.RSLIL4Privacy.compare.contentMergeViewers"
             class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-            extensions="rslil" label="RSLIL4Privacy Compare">
+            extensions="rslil4privacy" label="RSLIL4Privacy Compare">
      </viewer>
   </extension>
   <extension point="org.eclipse.ui.editors.documentProviders">
     <provider id="rslingo.rslil4privacy.RSLIL4Privacy.editors.documentProviders"
             class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
-            extensions="rslil">
+            extensions="rslil4privacy">
     </provider>
   </extension>
   <extension point="org.eclipse.team.core.fileTypes">
     <fileTypes
-            extension="rslil"
+            extension="rslil4privacy"
             type="text">
     </fileTypes>
   </extension>

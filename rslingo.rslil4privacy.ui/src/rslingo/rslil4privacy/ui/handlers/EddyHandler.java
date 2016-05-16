@@ -35,7 +35,7 @@ import rslingo.rslil4privacy.ui.windows.MenuCommandWindow;
 public class EddyHandler extends AbstractHandler {
 
 	private static final String GEN_FOLDER = "src-gen";
-	private static final String FILE_EXT = ".rslil";
+	private static final String FILE_EXT = ".rslil4privacy";
 	
 	@Inject
     private RSLIL4PrivacyGenerator generator;

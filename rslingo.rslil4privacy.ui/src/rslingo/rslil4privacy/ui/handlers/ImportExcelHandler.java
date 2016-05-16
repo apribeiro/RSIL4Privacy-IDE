@@ -127,7 +127,7 @@ public class ImportExcelHandler extends AbstractHandler {
     	sb.deleteCharAt(sb.length() - 1);
 		sb.append("}");
 		
-		IFile file = srcGenFolder.getFile(fileName + ".rslil");
+		IFile file = srcGenFolder.getFile(fileName + ".rslil4privacy");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		if (!file.exists()) {
@@ -162,7 +162,7 @@ public class ImportExcelHandler extends AbstractHandler {
 	    	sb.deleteCharAt(sb.length() - 1);
 	    	sb.append("}");
 			
-			IFile file = srcGenFolder.getFile(fileName + ".Main.rslil");
+			IFile file = srcGenFolder.getFile(fileName + ".Main.rslil4privacy");
 			InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 			
 			if (!file.exists()) {
@@ -195,7 +195,7 @@ public class ImportExcelHandler extends AbstractHandler {
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("}");
 		
-		IFile file = srcGenFolder.getFile(fileName + ".Statements.rslil");
+		IFile file = srcGenFolder.getFile(fileName + ".Statements.rslil4privacy");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		if (!file.exists()) {
@@ -219,7 +219,7 @@ public class ImportExcelHandler extends AbstractHandler {
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("}");
 		
-		IFile file = srcGenFolder.getFile(fileName + ".Privatedata.rslil");
+		IFile file = srcGenFolder.getFile(fileName + ".Privatedata.rslil4privacy");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		if (!file.exists()) {
@@ -246,7 +246,7 @@ public class ImportExcelHandler extends AbstractHandler {
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("}");
 		
-		IFile file = srcGenFolder.getFile(fileName + ".Services.rslil");
+		IFile file = srcGenFolder.getFile(fileName + ".Services.rslil4privacy");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		if (!file.exists()) {
@@ -270,7 +270,7 @@ public class ImportExcelHandler extends AbstractHandler {
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("}");
 		
-		IFile file = srcGenFolder.getFile(fileName + ".Enforcements.rslil");
+		IFile file = srcGenFolder.getFile(fileName + ".Enforcements.rslil4privacy");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		if (!file.exists()) {
@@ -294,7 +294,7 @@ public class ImportExcelHandler extends AbstractHandler {
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("}");
 		
-		IFile file = srcGenFolder.getFile(fileName + ".Recipients.rslil");
+		IFile file = srcGenFolder.getFile(fileName + ".Recipients.rslil4privacy");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		if (!file.exists()) {

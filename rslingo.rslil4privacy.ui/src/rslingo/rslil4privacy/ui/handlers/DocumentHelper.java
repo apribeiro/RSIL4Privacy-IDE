@@ -385,7 +385,7 @@ public class DocumentHelper {
 				@Override
 				public boolean visit(IResource r) throws CoreException {
 					for (Import i : policy.getImportelements()) {
-						if (r instanceof IFile && r.getName().endsWith(".rslil")
+						if (r instanceof IFile && r.getName().endsWith(".rslil4privacy")
 							&& DocumentHelper.belongsToMainFile(i, (IFile) r)) {
 							refs.add((IFile) r);
 						}

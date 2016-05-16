@@ -6,7 +6,7 @@
     complianceLevel="6.0" copyrightFields="false" editPluginID="rslingo.rslil4privacy.edit"
     editorPluginID="rslingo.rslil4privacy.editor" runtimeVersion="2.11">
   <genPackages prefix="RSLIL4Privacy" basePackage="rslingo.rslil4privacy" disposableProviderFactory="true"
-      fileExtensions="rslil" ecorePackage="RSLIL4Privacy.ecore#/">
+      fileExtensions="rslil4privacy" ecorePackage="RSLIL4Privacy.ecore#/">
     <genClasses ecoreClass="RSLIL4Privacy.ecore#//Policy">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//Policy/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//Policy/importelements"/>

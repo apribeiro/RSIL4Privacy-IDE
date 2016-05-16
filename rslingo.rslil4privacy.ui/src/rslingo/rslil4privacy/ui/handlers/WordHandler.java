@@ -66,7 +66,7 @@ public class WordHandler extends AbstractHandler {
 
 	private static final String GEN_FOLDER = "src-gen";
 	private static final String DOCS_FOLDER = "docs";
-	private static final String FILE_EXT = ".rslil";
+	private static final String FILE_EXT = ".rslil4privacy";
 	private static final String DEF_WORD_PATH = "RSL-IL4Privacy-WordTemplate.docx";
 
 	private final String RSLINGO_PATH = Platform.getInstallLocation()
@@ -130,7 +130,7 @@ public class WordHandler extends AbstractHandler {
 			@Override
 			protected IStatus run(IProgressMonitor monitor) {
 				URI uri = URI.createPlatformResourceURI(file.getFullPath().toString(), true);
-				//URI.createURI("platform:/resource/rslingo.rslil/src/example.rslil"), true);
+				//URI.createURI("platform:/resource/rslingo.rslil/src/example.rslil4privacy"), true);
 		        ResourceSet resourceSet = resourceSetProvider.get(project);
 		        Resource resource = resourceSet.getResource(uri, true);
 				Policy policy = (Policy) resource.getContents().get(0);
