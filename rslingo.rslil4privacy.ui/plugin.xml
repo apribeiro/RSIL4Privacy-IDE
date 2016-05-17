@@ -54,7 +54,7 @@
 				</and>
             </activeWhen>
         </handler>
-        <!-- RSLIL4Privacy Handlers -->
+        <!-- RSL-IL4Privacy Handlers -->
         <handler
         	class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:rslingo.rslil4privacy.ui.handlers.EddyHandler"
             commandId="rslingo.rslil4privacy.ui.commandEddy">
