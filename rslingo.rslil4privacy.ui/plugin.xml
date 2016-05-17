@@ -3,232 +3,232 @@
 
 <plugin>
 
-    <extension
-            point="org.eclipse.ui.editors">
-        <editor
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
-            contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
-            default="true"
-            extensions="rslil4privacy"
-            id="rslingo.rslil4privacy.RSLIL4Privacy"
-            name="RSLIL4Privacy Editor">
-        </editor>
-    </extension>
-    <extension
-        point="org.eclipse.ui.handlers">
-        <handler
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
-            commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
-            <activeWhen>
-                <reference
-                    definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened">
-                </reference>
-            </activeWhen>
-        </handler>
-        <handler
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
-            commandId="rslingo.rslil4privacy.RSLIL4Privacy.validate">
-         <activeWhen>
-            <reference
-                    definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened">
-            </reference>
-         </activeWhen>
-      	</handler>
-      	<!-- copy qualified name -->
-        <handler
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
-            commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName">
-            <activeWhen>
+	<extension
+		point="org.eclipse.ui.editors">
+		<editor
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+			contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
+			default="true"
+			extensions="rslil4privacy"
+			id="rslingo.rslil4privacy.RSLIL4Privacy"
+			name="RSLIL4Privacy Editor">
+		</editor>
+	</extension>
+	<extension
+		point="org.eclipse.ui.handlers">
+		<handler
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
+			commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
+			<activeWhen>
+				<reference
+					definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened">
+				</reference>
+			</activeWhen>
+		</handler>
+		<handler
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
+			commandId="rslingo.rslil4privacy.RSLIL4Privacy.validate">
+			<activeWhen>
+				<reference
+					definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened">
+				</reference>
+			</activeWhen>
+		</handler>
+		<!-- copy qualified name -->
+		<handler
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
+			commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName">
+			<activeWhen>
 				<reference definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened" />
-            </activeWhen>
-        </handler>
-        <handler
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
-            commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName">
-            <activeWhen>
-            	<and>
-            		<reference definitionId="rslingo.rslil4privacy.RSLIL4Privacy.XtextEditor.opened" />
-	                <iterate>
+			</activeWhen>
+		</handler>
+		<handler
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
+			commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName">
+			<activeWhen>
+				<and>
+					<reference definitionId="rslingo.rslil4privacy.RSLIL4Privacy.XtextEditor.opened" />
+					<iterate>
 						<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 					</iterate>
 				</and>
-            </activeWhen>
-        </handler>
-        <!-- RSL-IL4Privacy Handlers -->
-        <handler
-        	class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:rslingo.rslil4privacy.ui.handlers.EddyHandler"
-            commandId="rslingo.rslil4privacy.ui.commandEddy">
-        </handler>
-        <handler
-        	class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:rslingo.rslil4privacy.ui.handlers.JSONHandler"
-            commandId="rslingo.rslil4privacy.ui.commandJSON">
-        </handler>
-        <handler
-        	class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:rslingo.rslil4privacy.ui.handlers.TextHandler"
-            commandId="rslingo.rslil4privacy.ui.commandText">
-        </handler>
-        <handler
-        	class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:rslingo.rslil4privacy.ui.handlers.WordHandler"
-            commandId="rslingo.rslil4privacy.ui.commandWord">
-        </handler>
-        <handler
-        	class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:rslingo.rslil4privacy.ui.handlers.ExportExcelHandler"
-            commandId="rslingo.rslil4privacy.ui.commandExportExcel">
-        </handler>
-    </extension>
-    <extension point="org.eclipse.core.expressions.definitions">
-        <definition id="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened">
-            <and>
-                <reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
-                <with variable="activeEditor">
-                    <test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-                        value="rslingo.rslil4privacy.RSLIL4Privacy" 
-                        forcePluginActivation="true"/>
-                </with>        
-            </and>
-        </definition>
-        <definition id="rslingo.rslil4privacy.RSLIL4Privacy.XtextEditor.opened">
-            <and>
-                <reference definitionId="isXtextEditorActive"/>
-                <with variable="activeEditor">
-                    <test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-                        value="rslingo.rslil4privacy.RSLIL4Privacy" 
-                        forcePluginActivation="true"/>
-                </with>        
-            </and>
-        </definition>
-    </extension>
-    <extension
-            point="org.eclipse.ui.preferencePages">
-        <page
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-            id="rslingo.rslil4privacy.RSLIL4Privacy"
-            name="RSLIL4Privacy">
-            <keywordReference id="rslingo.rslil4privacy.ui.keyword_RSLIL4Privacy"/>
-        </page>
-        <page
-            category="rslingo.rslil4privacy.RSLIL4Privacy"
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
-            id="rslingo.rslil4privacy.RSLIL4Privacy.coloring"
-            name="Syntax Coloring">
-            <keywordReference id="rslingo.rslil4privacy.ui.keyword_RSLIL4Privacy"/>
-        </page>
-        <page
-            category="rslingo.rslil4privacy.RSLIL4Privacy"
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
-            id="rslingo.rslil4privacy.RSLIL4Privacy.templates"
-            name="Templates">
-            <keywordReference id="rslingo.rslil4privacy.ui.keyword_RSLIL4Privacy"/>
-        </page>
-    </extension>
-    <extension
-            point="org.eclipse.ui.propertyPages">
-        <page
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-            id="rslingo.rslil4privacy.RSLIL4Privacy"
-            name="RSLIL4Privacy">
-            <keywordReference id="rslingo.rslil4privacy.ui.keyword_RSLIL4Privacy"/>
-            <enabledWhen>
-	            <adapt type="org.eclipse.core.resources.IProject"/>
+			</activeWhen>
+		</handler>
+		<!-- RSL-IL4Privacy Handlers -->
+		<handler
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:rslingo.rslil4privacy.ui.handlers.EddyHandler"
+			commandId="rslingo.rslil4privacy.ui.commandEddy">
+		</handler>
+		<handler
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:rslingo.rslil4privacy.ui.handlers.JSONHandler"
+			commandId="rslingo.rslil4privacy.ui.commandJSON">
+		</handler>
+		<handler
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:rslingo.rslil4privacy.ui.handlers.TextHandler"
+			commandId="rslingo.rslil4privacy.ui.commandText">
+		</handler>
+		<handler
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:rslingo.rslil4privacy.ui.handlers.WordHandler"
+			commandId="rslingo.rslil4privacy.ui.commandWord">
+		</handler>
+		<handler
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:rslingo.rslil4privacy.ui.handlers.ExportExcelHandler"
+			commandId="rslingo.rslil4privacy.ui.commandExportExcel">
+		</handler>
+	</extension>
+	<extension point="org.eclipse.core.expressions.definitions">
+		<definition id="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened">
+			<and>
+				<reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
+				<with variable="activeEditor">
+					<test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
+						value="rslingo.rslil4privacy.RSLIL4Privacy" 
+						forcePluginActivation="true"/>
+				</with>        
+			</and>
+		</definition>
+		<definition id="rslingo.rslil4privacy.RSLIL4Privacy.XtextEditor.opened">
+			<and>
+				<reference definitionId="isXtextEditorActive"/>
+				<with variable="activeEditor">
+					<test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
+						value="rslingo.rslil4privacy.RSLIL4Privacy" 
+						forcePluginActivation="true"/>
+				</with>        
+			</and>
+		</definition>
+	</extension>
+	<extension
+		point="org.eclipse.ui.preferencePages">
+		<page
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+			id="rslingo.rslil4privacy.RSLIL4Privacy"
+			name="RSLIL4Privacy">
+			<keywordReference id="rslingo.rslil4privacy.ui.keyword_RSLIL4Privacy"/>
+		</page>
+		<page
+			category="rslingo.rslil4privacy.RSLIL4Privacy"
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+			id="rslingo.rslil4privacy.RSLIL4Privacy.coloring"
+			name="Syntax Coloring">
+			<keywordReference id="rslingo.rslil4privacy.ui.keyword_RSLIL4Privacy"/>
+		</page>
+		<page
+			category="rslingo.rslil4privacy.RSLIL4Privacy"
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
+			id="rslingo.rslil4privacy.RSLIL4Privacy.templates"
+			name="Templates">
+			<keywordReference id="rslingo.rslil4privacy.ui.keyword_RSLIL4Privacy"/>
+		</page>
+	</extension>
+	<extension
+		point="org.eclipse.ui.propertyPages">
+		<page
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+			id="rslingo.rslil4privacy.RSLIL4Privacy"
+			name="RSLIL4Privacy">
+			<keywordReference id="rslingo.rslil4privacy.ui.keyword_RSLIL4Privacy"/>
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
-	        <filter name="projectNature" value="org.eclipse.xtext.ui.shared.xtextNature"/>
-        </page>
-    </extension>
-    <extension
-        point="org.eclipse.ui.keywords">
-        <keyword
-            id="rslingo.rslil4privacy.ui.keyword_RSLIL4Privacy"
-            label="RSLIL4Privacy"/>
-    </extension>
-    <extension
-         point="org.eclipse.ui.commands">
-      <command
-            description="Trigger expensive validation"
-            id="rslingo.rslil4privacy.RSLIL4Privacy.validate"
-            name="Validate">
-      </command>
-      <!-- copy qualified name -->
-      <command
-            id="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
-            categoryId="org.eclipse.ui.category.edit"
-            description="Copy the qualified name for the selected element"
-            name="Copy Qualified Name">
-      </command>
-      <command
-            id="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName"
-            categoryId="org.eclipse.ui.category.edit"
-            description="Copy the qualified name for the selected element"
-            name="Copy Qualified Name">
-      </command>
-    </extension>
-    <extension point="org.eclipse.ui.menus">
-        <menuContribution
-            locationURI="popup:#TextEditorContext?after=group.edit">
-             <command
-                 commandId="rslingo.rslil4privacy.RSLIL4Privacy.validate"
-                 style="push"
-                 tooltip="Trigger expensive validation">
-            <visibleWhen checkEnabled="false">
-                <reference
-                    definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened">
-                </reference>
-            </visibleWhen>
-         </command>  
-         </menuContribution>
-         <!-- copy qualified name -->
-         <menuContribution locationURI="popup:#TextEditorContext?after=copy">
-         	<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName" 
-         		style="push" tooltip="Copy Qualified Name">
-            	<visibleWhen checkEnabled="false">
-                	<reference definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened" />
-            	</visibleWhen>
-         	</command>  
-         </menuContribution>
-         <menuContribution locationURI="menu:edit?after=copy">
-         	<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
-            	style="push" tooltip="Copy Qualified Name">
-            	<visibleWhen checkEnabled="false">
-                	<reference definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened" />
-            	</visibleWhen>
-         	</command>  
-         </menuContribution>
-         <menuContribution locationURI="popup:org.eclipse.xtext.ui.outline?after=additions">
+			<filter name="projectNature" value="org.eclipse.xtext.ui.shared.xtextNature"/>
+		</page>
+	</extension>
+	<extension
+		point="org.eclipse.ui.keywords">
+		<keyword
+			id="rslingo.rslil4privacy.ui.keyword_RSLIL4Privacy"
+			label="RSLIL4Privacy"/>
+	</extension>
+	<extension
+		point="org.eclipse.ui.commands">
+		<command
+			description="Trigger expensive validation"
+			id="rslingo.rslil4privacy.RSLIL4Privacy.validate"
+			name="Validate">
+		</command>
+		<!-- copy qualified name -->
+		<command
+			id="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
+			categoryId="org.eclipse.ui.category.edit"
+			description="Copy the qualified name for the selected element"
+			name="Copy Qualified Name">
+		</command>
+		<command
+			id="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName"
+			categoryId="org.eclipse.ui.category.edit"
+			description="Copy the qualified name for the selected element"
+			name="Copy Qualified Name">
+		</command>
+	</extension>
+	<extension point="org.eclipse.ui.menus">
+		<menuContribution
+			locationURI="popup:#TextEditorContext?after=group.edit">
+			<command
+				commandId="rslingo.rslil4privacy.RSLIL4Privacy.validate"
+				style="push"
+				tooltip="Trigger expensive validation">
+				<visibleWhen checkEnabled="false">
+					<reference
+						definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened">
+					</reference>
+				</visibleWhen>
+			</command>  
+		</menuContribution>
+		<!-- copy qualified name -->
+		<menuContribution locationURI="popup:#TextEditorContext?after=copy">
+			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName" 
+				style="push" tooltip="Copy Qualified Name">
+				<visibleWhen checkEnabled="false">
+					<reference definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened" />
+				</visibleWhen>
+			</command>  
+		</menuContribution>
+		<menuContribution locationURI="menu:edit?after=copy">
+			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
+				style="push" tooltip="Copy Qualified Name">
+				<visibleWhen checkEnabled="false">
+					<reference definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened" />
+				</visibleWhen>
+			</command>  
+		</menuContribution>
+		<menuContribution locationURI="popup:org.eclipse.xtext.ui.outline?after=additions">
 			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName" 
 				style="push" tooltip="Copy Qualified Name">
-         		<visibleWhen checkEnabled="false">
-	            	<and>
-	            		<reference definitionId="rslingo.rslil4privacy.RSLIL4Privacy.XtextEditor.opened" />
+				<visibleWhen checkEnabled="false">
+					<and>
+						<reference definitionId="rslingo.rslil4privacy.RSLIL4Privacy.XtextEditor.opened" />
 						<iterate>
 							<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 						</iterate>
 					</and>
 				</visibleWhen>
 			</command>
-         </menuContribution>
-    </extension>
-    <extension point="org.eclipse.ui.menus">
+		</menuContribution>
+	</extension>
+	<extension point="org.eclipse.ui.menus">
 		<menuContribution locationURI="popup:#TextEditorContext?endof=group.find">
 			<command commandId="org.eclipse.xtext.ui.editor.FindReferences">
 				<visibleWhen checkEnabled="false">
-                	<reference definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened">
-                	</reference>
-            	</visibleWhen>
+					<reference definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened">
+					</reference>
+				</visibleWhen>
 			</command>
 		</menuContribution>
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
-	    <handler
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
-            commandId="org.eclipse.xtext.ui.editor.FindReferences">
-            <activeWhen>
-                <reference
-                    definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened">
-                </reference>
-            </activeWhen>
-        </handler>
-    </extension>   
+		<handler
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
+			commandId="org.eclipse.xtext.ui.editor.FindReferences">
+			<activeWhen>
+				<reference
+					definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened">
+				</reference>
+			</activeWhen>
+		</handler>
+	</extension>   
 
-<!-- adding resource factories -->
+	<!-- adding resource factories -->
 
 	<extension
 		point="org.eclipse.emf.ecore.extension_parser">
@@ -238,77 +238,75 @@
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
-        <resourceServiceProvider
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
-            uriExtension="rslil4privacy">
-        </resourceServiceProvider>
-    </extension>
-
+		<resourceServiceProvider
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+			uriExtension="rslil4privacy">
+		</resourceServiceProvider>
+	</extension>
 
 	<!-- marker definitions for rslingo.rslil4privacy.RSLIL4Privacy -->
 	<extension
-	        id="rslil4privacy.check.fast"
-	        name="RSLIL4Privacy Problem"
-	        point="org.eclipse.core.resources.markers">
-	    <super type="org.eclipse.xtext.ui.check.fast"/>
-	    <persistent value="true"/>
+		id="rslil4privacy.check.fast"
+		name="RSLIL4Privacy Problem"
+		point="org.eclipse.core.resources.markers">
+		<super type="org.eclipse.xtext.ui.check.fast"/>
+		<persistent value="true"/>
 	</extension>
 	<extension
-	        id="rslil4privacy.check.normal"
-	        name="RSLIL4Privacy Problem"
-	        point="org.eclipse.core.resources.markers">
-	    <super type="org.eclipse.xtext.ui.check.normal"/>
-	    <persistent value="true"/>
+		id="rslil4privacy.check.normal"
+		name="RSLIL4Privacy Problem"
+		point="org.eclipse.core.resources.markers">
+		<super type="org.eclipse.xtext.ui.check.normal"/>
+		<persistent value="true"/>
 	</extension>
 	<extension
-	        id="rslil4privacy.check.expensive"
-	        name="RSLIL4Privacy Problem"
-	        point="org.eclipse.core.resources.markers">
-	    <super type="org.eclipse.xtext.ui.check.expensive"/>
-	    <persistent value="true"/>
+		id="rslil4privacy.check.expensive"
+		name="RSLIL4Privacy Problem"
+		point="org.eclipse.core.resources.markers">
+		<super type="org.eclipse.xtext.ui.check.expensive"/>
+		<persistent value="true"/>
 	</extension>
 
-   <!--<extension
-         point="org.eclipse.xtext.builder.participant">
-      <participant
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
-            fileExtensions="rslil4privacy"
-            >
-      </participant>
+	<!--<extension
+			point="org.eclipse.xtext.builder.participant">
+		<participant
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
+			fileExtensions="rslil4privacy">
+		</participant>
    </extension>-->
-   <extension
-            point="org.eclipse.ui.preferencePages">
-        <page
-            category="rslingo.rslil4privacy.RSLIL4Privacy"
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-            id="rslingo.rslil4privacy.RSLIL4Privacy.compiler.preferencePage"
-            name="Compiler">
-            <keywordReference id="rslingo.rslil4privacy.ui.keyword_RSLIL4Privacy"/>
-        </page>
-    </extension>
-    <extension
-            point="org.eclipse.ui.propertyPages">
-        <page
-            category="rslingo.rslil4privacy.RSLIL4Privacy"
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-            id="rslingo.rslil4privacy.RSLIL4Privacy.compiler.propertyPage"
-            name="Compiler">
-            <keywordReference id="rslingo.rslil4privacy.ui.keyword_RSLIL4Privacy"/>
-            <enabledWhen>
-	            <adapt type="org.eclipse.core.resources.IProject"/>
+	<extension
+		point="org.eclipse.ui.preferencePages">
+		<page
+			category="rslingo.rslil4privacy.RSLIL4Privacy"
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+			id="rslingo.rslil4privacy.RSLIL4Privacy.compiler.preferencePage"
+			name="Compiler">
+			<keywordReference id="rslingo.rslil4privacy.ui.keyword_RSLIL4Privacy"/>
+		</page>
+	</extension>
+	<extension
+		point="org.eclipse.ui.propertyPages">
+		<page
+			category="rslingo.rslil4privacy.RSLIL4Privacy"
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+			id="rslingo.rslil4privacy.RSLIL4Privacy.compiler.propertyPage"
+			name="Compiler">
+			<keywordReference id="rslingo.rslil4privacy.ui.keyword_RSLIL4Privacy"/>
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
-	        <filter name="projectNature" value="org.eclipse.xtext.ui.shared.xtextNature"/>
-        </page>
-    </extension>
-    <extension point="org.eclipse.ui.menus">
+			<filter name="projectNature" value="org.eclipse.xtext.ui.shared.xtextNature"/>
+		</page>
+	</extension>
+	<extension point="org.eclipse.ui.menus">
 		<menuContribution locationURI="popup:#TextEditorContext?after=xtext.ui.openDeclaration">
 			<command
 				commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand"
 				id="rslingo.rslil4privacy.RSLIL4Privacy.OpenGeneratedCode"
 				style="push">
-					<visibleWhen checkEnabled="false">
-						<reference definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened" />
-					</visibleWhen>
+				<visibleWhen checkEnabled="false">
+					<reference definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened" />
+				</visibleWhen>
 			</command>
 		</menuContribution>
 	</extension>
@@ -316,9 +314,9 @@
 		<handler
 			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.generator.trace.OpenGeneratedFileHandler"
 			commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand">
-				<activeWhen>
-					<reference definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened" />
-				</activeWhen>
+			<activeWhen>
+				<reference definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened" />
+			</activeWhen>
 		</handler>
 	</extension>
 
@@ -355,207 +353,207 @@
 			</command>
 		</menuContribution>
 		<menuContribution locationURI="popup:#TextEditorContext?after=additions">
-		     	<menu
-		           id="rslingo4PrivacyTextEditorPopupMenu"
-		           label="RSLingo4Privacy">
-		           <menu
-		              id="exportToPopupMenu"
-		              label="Export To...">
-		           <command
-		                 commandId="rslingo.rslil4privacy.ui.commandWord"
-		                 label="Word"
-		                 style="push">
-		           </command>
-		           <command
-		                 commandId="rslingo.rslil4privacy.ui.commandExportExcel"
-		                 label="Excel"
-		                 style="push">
-		           </command>
-		           <command
-		                 commandId="rslingo.rslil4privacy.ui.commandJSON"
-		                 label="JSON"
-		                 style="push">
-		           </command>
-		           <command
-		                 commandId="rslingo.rslil4privacy.ui.commandEddy"
-		                 label="Eddy"
-		                 style="push">
-		           </command>
-		           <command
-		                 commandId="rslingo.rslil4privacy.ui.commandText"
-		                 label="Text"
-		                 style="push">
-		           </command>
-		           <visibleWhen
-		             checkEnabled="false">
-		             <reference
-                         definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened">
-                   	 </reference>
-		       	   </visibleWhen>
-		        </menu>
-		     </menu>
-	    </menuContribution>
-	  <menuContribution
-	        allPopups="false"
-	        locationURI="menu:org.eclipse.ui.main.menu">
-     	<menu
-           id="rslingo4PrivacyMenu"
-           label="RSLingo4Privacy">
-        <menu
-              id="importFromMenu"
-              label="Import From...">
-           <command
-                 commandId="rslingo.rslil4privacy.ui.commandImportExcel"
-                 label="Excel"
-                 style="push">
-           </command>
-           <command
-                 commandId="rslingo.rslil4privacy.ui.commandNLText"
-                 label="Natural Language Text"
-                 style="push">
-           </command>
-        </menu>
-        <menu
-              id="exportToMenu"
-              label="Export To...">
-           <command
-                 commandId="rslingo.rslil4privacy.ui.commandWord"
-                 label="Word"
-                 style="push">
-           </command>
-           <command
-                 commandId="rslingo.rslil4privacy.ui.commandExportExcel"
-                 label="Excel"
-                 style="push">
-           </command>
-           <command
-                 commandId="rslingo.rslil4privacy.ui.commandJSON"
-                 label="JSON"
-                 style="push">
-           </command>
-           <command
-                 commandId="rslingo.rslil4privacy.ui.commandEddy"
-                 label="Eddy"
-                 style="push">
-           </command>
-           <command
-                 commandId="rslingo.rslil4privacy.ui.commandText"
-                 label="Text"
-                 style="push">
-           </command>
-        </menu>
-        <command
-              commandId="rslingo.rslil4privacy.ui.commandCheckQuality"
-              label="Check Quality using Eddy Engine"
-              style="push">
-        </command>
-        <separator
-              name="rslingo.rslil4privacy.ui.separator1"
-              visible="true">
-        </separator>
-        <command
-              commandId="rslingo.rslil4privacy.ui.commandConfiguration"
-              label="Configuration"
-              style="push">
-        </command>
-        <command
-              commandId="rslingo.rslil4privacy.ui.commandExit"
-              label="Exit"
-              style="push"
-              tooltip="Exits the application">
-        </command>
-     </menu>
-  </menuContribution>
-  <menuContribution
-		allPopups="false"
-        locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
-     	<menu
-           id="rslingo4PrivacyPopupMenu"
-           label="RSLingo4Privacy">
-           <menu
-              id="exportToPopupMenu"
-              label="Export To...">
-           <command
-                 commandId="rslingo.rslil4privacy.ui.commandWord"
-                 label="Word"
-                 style="push">
-           </command>
-           <command
-                 commandId="rslingo.rslil4privacy.ui.commandExportExcel"
-                 label="Excel"
-                 style="push">
-           </command>
-           <command
-                 commandId="rslingo.rslil4privacy.ui.commandJSON"
-                 label="JSON"
-                 style="push">
-           </command>
-           <command
-                 commandId="rslingo.rslil4privacy.ui.commandEddy"
-                 label="Eddy"
-                 style="push">
-           </command>
-           <command
-                 commandId="rslingo.rslil4privacy.ui.commandText"
-                 label="Text"
-                 style="push">
-           </command>
-           <visibleWhen
-             checkEnabled="false">
-             <iterate>
-		       <adapt type="org.eclipse.core.resources.IResource">
-					<test property="org.eclipse.core.resources.name" 
-		                value="*.rslil4privacy"/>
-		       </adapt>
-		    </iterate>
-       		</visibleWhen>
-        </menu>
-        <command
-              commandId="rslingo.rslil4privacy.ui.commandCheckQuality"
-              label="Check Quality using Eddy Engine"
-              style="push">
-           <visibleWhen
-             checkEnabled="false">
-             <iterate>
-		       <adapt type="org.eclipse.core.resources.IResource">
-					<test property="org.eclipse.core.resources.name" 
-		                value="*.policy"/>
-		       </adapt>
-		    </iterate>
-       		</visibleWhen>
-        </command>
-     </menu>
-  </menuContribution>
+			<menu
+				id="rslingo4PrivacyTextEditorPopupMenu"
+				label="RSLingo4Privacy">
+				<menu
+					id="exportToPopupMenu"
+					label="Export To...">
+					<command
+						commandId="rslingo.rslil4privacy.ui.commandWord"
+						label="Word"
+						style="push">
+					</command>
+					<command
+						commandId="rslingo.rslil4privacy.ui.commandExportExcel"
+						label="Excel"
+						style="push">
+					</command>
+					<command
+						commandId="rslingo.rslil4privacy.ui.commandJSON"
+						label="JSON"
+						style="push">
+					</command>
+					<command
+						commandId="rslingo.rslil4privacy.ui.commandEddy"
+						label="Eddy"
+						style="push">
+					</command>
+					<command
+						commandId="rslingo.rslil4privacy.ui.commandText"
+						label="Text"
+						style="push">
+					</command>
+					<visibleWhen
+						checkEnabled="false">
+						<reference
+							definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened">
+						</reference>
+					</visibleWhen>
+				</menu>
+			</menu>
+		</menuContribution>
+		<menuContribution
+			allPopups="false"
+			locationURI="menu:org.eclipse.ui.main.menu">
+			<menu
+				id="rslingo4PrivacyMenu"
+				label="RSLingo4Privacy">
+				<menu
+					id="importFromMenu"
+					label="Import From...">
+					<command
+						commandId="rslingo.rslil4privacy.ui.commandImportExcel"
+						label="Excel"
+						style="push">
+					</command>
+					<command
+						commandId="rslingo.rslil4privacy.ui.commandNLText"
+						label="Natural Language Text"
+						style="push">
+					</command>
+				</menu>
+				<menu
+					id="exportToMenu"
+					label="Export To...">
+					<command
+						commandId="rslingo.rslil4privacy.ui.commandWord"
+						label="Word"
+						style="push">
+					</command>
+					<command
+						commandId="rslingo.rslil4privacy.ui.commandExportExcel"
+						label="Excel"
+						style="push">
+					</command>
+					<command
+						commandId="rslingo.rslil4privacy.ui.commandJSON"
+						label="JSON"
+						style="push">
+					</command>
+					<command
+						commandId="rslingo.rslil4privacy.ui.commandEddy"
+						label="Eddy"
+						style="push">
+					</command>
+					<command
+						commandId="rslingo.rslil4privacy.ui.commandText"
+						label="Text"
+						style="push">
+					</command>
+				</menu>
+				<command
+					commandId="rslingo.rslil4privacy.ui.commandCheckQuality"
+					label="Check Quality using Eddy Engine"
+					style="push">
+				</command>
+				<separator
+					name="rslingo.rslil4privacy.ui.separator1"
+					visible="true">
+				</separator>
+				<command
+					commandId="rslingo.rslil4privacy.ui.commandConfiguration"
+					label="Configuration"
+					style="push">
+				</command>
+				<command
+					commandId="rslingo.rslil4privacy.ui.commandExit"
+					label="Exit"
+					style="push"
+					tooltip="Exits the application">
+				</command>
+			</menu>
+		</menuContribution>
+		<menuContribution
+			allPopups="false"
+			locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+			<menu
+				id="rslingo4PrivacyPopupMenu"
+				label="RSLingo4Privacy">
+				<menu
+					id="exportToPopupMenu"
+					label="Export To...">
+					<command
+						commandId="rslingo.rslil4privacy.ui.commandWord"
+						label="Word"
+						style="push">
+					</command>
+					<command
+						commandId="rslingo.rslil4privacy.ui.commandExportExcel"
+						label="Excel"
+						style="push">
+					</command>
+					<command
+						commandId="rslingo.rslil4privacy.ui.commandJSON"
+						label="JSON"
+						style="push">
+					</command>
+					<command
+						commandId="rslingo.rslil4privacy.ui.commandEddy"
+						label="Eddy"
+						style="push">
+					</command>
+					<command
+						commandId="rslingo.rslil4privacy.ui.commandText"
+						label="Text"
+						style="push">
+					</command>
+					<visibleWhen
+						checkEnabled="false">
+						<iterate>
+							<adapt type="org.eclipse.core.resources.IResource">
+								<test property="org.eclipse.core.resources.name" 
+									value="*.rslil4privacy"/>
+							</adapt>
+						</iterate>
+					</visibleWhen>
+				</menu>
+				<command
+					commandId="rslingo.rslil4privacy.ui.commandCheckQuality"
+					label="Check Quality using Eddy Engine"
+					style="push">
+					<visibleWhen
+						checkEnabled="false">
+						<iterate>
+							<adapt type="org.eclipse.core.resources.IResource">
+								<test property="org.eclipse.core.resources.name" 
+									value="*.policy"/>
+							</adapt>
+						</iterate>
+					</visibleWhen>
+				</command>
+			</menu>
+		</menuContribution>
 	</extension>
-    <!-- quickfix marker resolution generator for rslingo.rslil4privacy.RSLIL4Privacy -->
-    <extension
-            point="org.eclipse.ui.ide.markerResolution">
-        <markerResolutionGenerator
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="rslingo.rslil4privacy.ui.rslil4privacy.check.fast">
-            <attribute
-                name="FIXABLE_KEY"
-                value="true">
-            </attribute>
-        </markerResolutionGenerator>
-        <markerResolutionGenerator
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="rslingo.rslil4privacy.ui.rslil4privacy.check.normal">
-            <attribute
-                name="FIXABLE_KEY"
-                value="true">
-            </attribute>
-        </markerResolutionGenerator>
-        <markerResolutionGenerator
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="rslingo.rslil4privacy.ui.rslil4privacy.check.expensive">
-            <attribute
-                name="FIXABLE_KEY"
-                value="true">
-            </attribute>
-        </markerResolutionGenerator>
-    </extension>
-   	<!-- Rename Refactoring -->
+	<!-- quickfix marker resolution generator for rslingo.rslil4privacy.RSLIL4Privacy -->
+	<extension
+		point="org.eclipse.ui.ide.markerResolution">
+		<markerResolutionGenerator
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="rslingo.rslil4privacy.ui.rslil4privacy.check.fast">
+			<attribute
+				name="FIXABLE_KEY"
+				value="true">
+			</attribute>
+		</markerResolutionGenerator>
+		<markerResolutionGenerator
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="rslingo.rslil4privacy.ui.rslil4privacy.check.normal">
+			<attribute
+				name="FIXABLE_KEY"
+				value="true">
+			</attribute>
+		</markerResolutionGenerator>
+		<markerResolutionGenerator
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="rslingo.rslil4privacy.ui.rslil4privacy.check.expensive">
+			<attribute
+				name="FIXABLE_KEY"
+				value="true">
+			</attribute>
+		</markerResolutionGenerator>
+	</extension>
+	<!-- Rename Refactoring -->
 	<extension point="org.eclipse.ui.handlers">
 		<handler 
 			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
@@ -567,129 +565,129 @@
 			</activeWhen>
 		</handler>
 	</extension>
-    <extension point="org.eclipse.ui.menus">
-         <menuContribution
-            locationURI="popup:#TextEditorContext?after=group.edit">
-         <command commandId="org.eclipse.xtext.ui.refactoring.RenameElement"
-               style="push">
-            <visibleWhen checkEnabled="false">
-               <reference
-                     definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened">
-               </reference>
-            </visibleWhen>
-         </command>
-      </menuContribution>
-   </extension>
-   <extension point="org.eclipse.ui.preferencePages">
-	    <page
-	        category="rslingo.rslil4privacy.RSLIL4Privacy"
-	        class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
-	        id="rslingo.rslil4privacy.RSLIL4Privacy.refactoring"
-	        name="Refactoring">
-	        <keywordReference id="rslingo.rslil4privacy.ui.keyword_RSLIL4Privacy"/>
-	    </page>
+	<extension point="org.eclipse.ui.menus">
+		<menuContribution
+			locationURI="popup:#TextEditorContext?after=group.edit">
+			<command commandId="org.eclipse.xtext.ui.refactoring.RenameElement"
+				style="push">
+				<visibleWhen checkEnabled="false">
+					<reference
+						definitionId="rslingo.rslil4privacy.RSLIL4Privacy.Editor.opened">
+					</reference>
+				</visibleWhen>
+			</command>
+		</menuContribution>
+	</extension>
+	<extension point="org.eclipse.ui.preferencePages">
+		<page
+			category="rslingo.rslil4privacy.RSLIL4Privacy"
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
+			id="rslingo.rslil4privacy.RSLIL4Privacy.refactoring"
+			name="Refactoring">
+			<keywordReference id="rslingo.rslil4privacy.ui.keyword_RSLIL4Privacy"/>
+		</page>
 	</extension>
 
-  <extension point="org.eclipse.compare.contentViewers">
-    <viewer id="rslingo.rslil4privacy.RSLIL4Privacy.compare.contentViewers"
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-            extensions="rslil4privacy">
-    </viewer>
-  </extension>
-  <extension point="org.eclipse.compare.contentMergeViewers">
-    <viewer id="rslingo.rslil4privacy.RSLIL4Privacy.compare.contentMergeViewers"
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-            extensions="rslil4privacy" label="RSLIL4Privacy Compare">
-     </viewer>
-  </extension>
-  <extension point="org.eclipse.ui.editors.documentProviders">
-    <provider id="rslingo.rslil4privacy.RSLIL4Privacy.editors.documentProviders"
-            class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
-            extensions="rslil4privacy">
-    </provider>
-  </extension>
-  <extension point="org.eclipse.team.core.fileTypes">
-    <fileTypes
-            extension="rslil4privacy"
-            type="text">
-    </fileTypes>
-  </extension>
-  <extension
-        point="org.eclipse.ui.commands">
-     <command
-           defaultHandler="rslingo.rslil4privacy.ui.handlers.ExitHandler"
-           id="rslingo.rslil4privacy.ui.commandExit"
-           name="Exit">
-     </command>
-     <command
-           id="rslingo.rslil4privacy.ui.commandGenerateExcel"
-           name="GenerateExcel">
-     </command>
-     <command
-           defaultHandler="rslingo.rslil4privacy.ui.handlers.ImportExcelHandler"
-           id="rslingo.rslil4privacy.ui.commandImportExcel"
-           name="ImportExcel">
-     </command>
-     <command
-           id="rslingo.rslil4privacy.ui.commandExportExcel"
-           name="ExportExcel">
-     </command>
-     <command
-           defaultHandler="rslingo.rslil4privacy.ui.handlers.NLTextHandler"
-           id="rslingo.rslil4privacy.ui.commandNLText"
-           name="NLText">
-     </command>
-     <command
-           id="rslingo.rslil4privacy.ui.commandWord"
-           name="Word">
-     </command>
-     <command
-           id="rslingo.rslil4privacy.ui.commandJSON"
-           name="JSON">
-     </command>
-     <command
-           id="rslingo.rslil4privacy.ui.commandEddy"
-           name="Eddy">
-     </command>
-     <command
-           id="rslingo.rslil4privacy.ui.commandText"
-           name="Text">
-     </command>
-     <command
-           defaultHandler="rslingo.rslil4privacy.ui.handlers.CheckQualityHandler"
-           id="rslingo.rslil4privacy.ui.commandCheckQuality"
-           name="CheckQuality">
-     </command>
-     <command
-           defaultHandler="rslingo.rslil4privacy.ui.handlers.ConfigurationHandler"
-           id="rslingo.rslil4privacy.ui.commandConfiguration"
-           name="Configuration">
-     </command>
-  </extension>
-  <!-- Wizards -->
-  <extension
-         point="org.eclipse.ui.newWizards">
-      <category
-            name="RSLingo"
-            id="RSLingo">
-      </category>
-      <wizard
-            name="RSL-IL4Privacy file"
-            icon="icons/req.png"
-            category="RSLingo"
-            class="rslingo.rslil4privacy.ui.wizards.NewRSLIL4PrivacyWizard"
-            finalPerspective="org.eclipse.jdt.ui.JavaPerspective"
-            id="rslingo.rslil4privacy.ui.wizards.NewRSLIL4PrivacyWizard">
-      </wizard>
-      <wizard
-            name="RSLingo Project"
-            icon="icons/rslingo-icon.png"
-            category="RSLingo"
-            class="rslingo.rslil4privacy.ui.wizards.NewRSLingoProjectWizard"
-            finalPerspective="org.eclipse.jdt.ui.JavaPerspective"
-            id="rslingo.rslil4privacy.ui.wizards.NewRSLingoProjectWizard"
-            project="true">
-      </wizard>
-   </extension>
+	<extension point="org.eclipse.compare.contentViewers">
+		<viewer id="rslingo.rslil4privacy.RSLIL4Privacy.compare.contentViewers"
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+			extensions="rslil4privacy">
+		</viewer>
+	</extension>
+	<extension point="org.eclipse.compare.contentMergeViewers">
+		<viewer id="rslingo.rslil4privacy.RSLIL4Privacy.compare.contentMergeViewers"
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+			extensions="rslil4privacy" label="RSLIL4Privacy Compare">
+		</viewer>
+	</extension>
+	<extension point="org.eclipse.ui.editors.documentProviders">
+		<provider id="rslingo.rslil4privacy.RSLIL4Privacy.editors.documentProviders"
+			class="rslingo.rslil4privacy.ui.RSLIL4PrivacyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
+			extensions="rslil4privacy">
+		</provider>
+	</extension>
+	<extension point="org.eclipse.team.core.fileTypes">
+		<fileTypes
+			extension="rslil4privacy"
+			type="text">
+		</fileTypes>
+	</extension>
+	<extension
+		point="org.eclipse.ui.commands">
+		<command
+			defaultHandler="rslingo.rslil4privacy.ui.handlers.ExitHandler"
+			id="rslingo.rslil4privacy.ui.commandExit"
+			name="Exit">
+		</command>
+		<command
+			id="rslingo.rslil4privacy.ui.commandGenerateExcel"
+			name="GenerateExcel">
+		</command>
+		<command
+			defaultHandler="rslingo.rslil4privacy.ui.handlers.ImportExcelHandler"
+			id="rslingo.rslil4privacy.ui.commandImportExcel"
+			name="ImportExcel">
+		</command>
+		<command
+			id="rslingo.rslil4privacy.ui.commandExportExcel"
+			name="ExportExcel">
+		</command>
+		<command
+			defaultHandler="rslingo.rslil4privacy.ui.handlers.NLTextHandler"
+			id="rslingo.rslil4privacy.ui.commandNLText"
+			name="NLText">
+		</command>
+		<command
+			id="rslingo.rslil4privacy.ui.commandWord"
+			name="Word">
+		</command>
+		<command
+			id="rslingo.rslil4privacy.ui.commandJSON"
+			name="JSON">
+		</command>
+		<command
+			id="rslingo.rslil4privacy.ui.commandEddy"
+			name="Eddy">
+		</command>
+		<command
+			id="rslingo.rslil4privacy.ui.commandText"
+			name="Text">
+		</command>
+		<command
+			defaultHandler="rslingo.rslil4privacy.ui.handlers.CheckQualityHandler"
+			id="rslingo.rslil4privacy.ui.commandCheckQuality"
+			name="CheckQuality">
+		</command>
+		<command
+			defaultHandler="rslingo.rslil4privacy.ui.handlers.ConfigurationHandler"
+			id="rslingo.rslil4privacy.ui.commandConfiguration"
+			name="Configuration">
+		</command>
+	</extension>
+	<!-- Wizards -->
+	<extension
+		point="org.eclipse.ui.newWizards">
+		<category
+			name="RSLingo"
+			id="RSLingo">
+		</category>
+		<wizard
+			name="RSL-IL4Privacy file"
+			icon="icons/req.png"
+			category="RSLingo"
+			class="rslingo.rslil4privacy.ui.wizards.NewRSLIL4PrivacyWizard"
+			finalPerspective="org.eclipse.jdt.ui.JavaPerspective"
+			id="rslingo.rslil4privacy.ui.wizards.NewRSLIL4PrivacyWizard">
+		</wizard>
+		<wizard
+			name="RSLingo Project"
+			icon="icons/rslingo-icon.png"
+			category="RSLingo"
+			class="rslingo.rslil4privacy.ui.wizards.NewRSLingoProjectWizard"
+			finalPerspective="org.eclipse.jdt.ui.JavaPerspective"
+			id="rslingo.rslil4privacy.ui.wizards.NewRSLingoProjectWizard"
+			project="true">
+		</wizard>
+	</extension>
 
 </plugin>
