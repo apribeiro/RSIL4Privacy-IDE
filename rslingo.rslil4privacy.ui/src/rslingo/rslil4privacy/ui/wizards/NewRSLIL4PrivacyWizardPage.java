@@ -29,7 +29,7 @@ public class NewRSLIL4PrivacyWizardPage extends WizardPage {
 	public NewRSLIL4PrivacyWizardPage(ISelection selection) {
 		super("wizardPage");
 		setTitle("RSL-IL4Privacy File");
-		setDescription("This wizard creates a new RSL-IL4Privacy file with the *.rslil extension.");
+		setDescription("This wizard creates a new RSL-IL4Privacy file with the *.rslil4privacy extension.");
 		this.selection = selection;
 	}
 
