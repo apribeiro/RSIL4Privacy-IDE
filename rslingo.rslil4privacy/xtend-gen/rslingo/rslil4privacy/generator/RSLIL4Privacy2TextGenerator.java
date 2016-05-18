@@ -75,7 +75,7 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
       boolean _not = (!_isEmpty);
       if (_not) {
         _builder.newLine();
-        _builder.append("#Enforcement ");
+        _builder.append("#Enforcement");
         _builder.newLine();
         _builder.append("------------------");
         _builder.newLine();
@@ -95,7 +95,7 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
       boolean _not_1 = (!_isEmpty_1);
       if (_not_1) {
         _builder.newLine();
-        _builder.append("#Service ");
+        _builder.append("#Service");
         _builder.newLine();
         _builder.append("------------------");
         _builder.newLine();
@@ -115,7 +115,7 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
       boolean _not_2 = (!_isEmpty_2);
       if (_not_2) {
         _builder.newLine();
-        _builder.append("#Recipients ");
+        _builder.append("#Recipients");
         _builder.newLine();
         _builder.append("------------------");
         _builder.newLine();
@@ -135,7 +135,7 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
       boolean _not_3 = (!_isEmpty_3);
       if (_not_3) {
         _builder.newLine();
-        _builder.append("#PrivateData ");
+        _builder.append("#PrivateData");
         _builder.newLine();
         _builder.append("------------------");
         _builder.newLine();
@@ -155,7 +155,7 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
       boolean _not_4 = (!_isEmpty_4);
       if (_not_4) {
         _builder.newLine();
-        _builder.append("#Collection ");
+        _builder.append("#Collection");
         _builder.newLine();
         _builder.append("------------------");
         _builder.newLine();
@@ -175,7 +175,7 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
       boolean _not_5 = (!_isEmpty_5);
       if (_not_5) {
         _builder.newLine();
-        _builder.append("#Disclosure ");
+        _builder.append("#Disclosure");
         _builder.newLine();
         _builder.append("------------------");
         _builder.newLine();
@@ -195,7 +195,7 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
       boolean _not_6 = (!_isEmpty_6);
       if (_not_6) {
         _builder.newLine();
-        _builder.append("#Retention ");
+        _builder.append("#Retention");
         _builder.newLine();
         _builder.append("------------------");
         _builder.newLine();
@@ -215,7 +215,7 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
       boolean _not_7 = (!_isEmpty_7);
       if (_not_7) {
         _builder.newLine();
-        _builder.append("#Usage ");
+        _builder.append("#Usage");
         _builder.newLine();
         _builder.append("------------------");
         _builder.newLine();
@@ -235,7 +235,7 @@ public class RSLIL4Privacy2TextGenerator implements IGenerator {
       boolean _not_8 = (!_isEmpty_8);
       if (_not_8) {
         _builder.newLine();
-        _builder.append("#Informative ");
+        _builder.append("#Informative");
         _builder.newLine();
         _builder.append("------------------");
         _builder.newLine();
