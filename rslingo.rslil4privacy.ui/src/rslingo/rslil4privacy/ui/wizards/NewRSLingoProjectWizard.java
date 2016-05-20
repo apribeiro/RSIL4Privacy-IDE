@@ -144,7 +144,7 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
     	sb.deleteCharAt(sb.length() - 1);
 		sb.append("}");
 		
-		IFile file = folder.getFile("new_policy.rslil");
+		IFile file = folder.getFile("new_policy.rslil4privacy");
 		InputStream stream = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		try {
@@ -180,7 +180,7 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("}");
 		
-		IFile file = folder.getFile("new_policy.Main.rslil");
+		IFile file = folder.getFile("new_policy.Main.rslil4privacy");
 		InputStream source = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		try {
@@ -214,7 +214,7 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("}");
 		
-		IFile file = folder.getFile("new_policy.Statements.rslil");
+		IFile file = folder.getFile("new_policy.Statements.rslil4privacy");
 		InputStream stream = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		try {
@@ -239,7 +239,7 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("}");
 		
-		IFile file = folder.getFile("new_policy.Privatedata.rslil");
+		IFile file = folder.getFile("new_policy.Privatedata.rslil4privacy");
 		InputStream stream = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		try {
@@ -267,7 +267,7 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("}");
 		
-		IFile file = folder.getFile("new_policy.Services.rslil");
+		IFile file = folder.getFile("new_policy.Services.rslil4privacy");
 		InputStream stream = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		try {
@@ -292,7 +292,7 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("}");
 		
-		IFile file = folder.getFile("new_policy.Enforcements.rslil");
+		IFile file = folder.getFile("new_policy.Enforcements.rslil4privacy");
 		InputStream stream = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		try {
@@ -317,7 +317,7 @@ public class NewRSLingoProjectWizard extends Wizard implements INewWizard {
     	sb.deleteCharAt(sb.length() - 1);
     	sb.append("}");
 		
-		IFile file = folder.getFile("new_policy.Recipients.rslil");
+		IFile file = folder.getFile("new_policy.Recipients.rslil4privacy");
 		InputStream stream = new ByteArrayInputStream(sb.toString().getBytes());
 		
 		try {

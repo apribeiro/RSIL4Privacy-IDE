@@ -97,7 +97,7 @@ public class NewRSLIL4PrivacyWizardPage extends WizardPage {
 				containerText.setText(container.getFullPath().toString());
 			}
 		}
-		fileText.setText("new_policy.rslil");
+		fileText.setText("new_policy.rslil4privacy");
 	}
 
 	private void handleBrowse() {
