@@ -49,3 +49,9 @@ Temporary Items
 bin/
 *.xtendbin
 *.java._trace
+*.class
+*~
+logs.zip
+*.orig
+
+target
