@@ -315,10 +315,10 @@ public class ImportExcelHandler extends AbstractHandler {
 		
     	Row row = rowIt.next();
     	Cell cellName = row.getCell(1);
-		String name = cellName.getStringCellValue();
+		String name = cellName.getStringCellValue().replaceAll("\"", "'");
 		row = rowIt.next();
 		Cell cellDescription = row.getCell(1);
-		String description = cellDescription.getStringCellValue();
+		String description = cellDescription.getStringCellValue().replaceAll("\"", "'");
 		row = rowIt.next();
 		Cell cellAuthors = row.getCell(1);
 		String authors = cellAuthors.getStringCellValue();
@@ -499,7 +499,7 @@ public class ImportExcelHandler extends AbstractHandler {
     			Cell cellType = row.getCell(1);
 	    		String type = cellType.getStringCellValue().replaceAll(" ", "");
     			Cell cellDescription = row.getCell(2);
-	    		String description = cellDescription.getStringCellValue();
+	    		String description = cellDescription.getStringCellValue().replaceAll("\"", "'");
 	    		Cell cellAttributes = row.getCell(3);
 	    		String attributes = cellAttributes.getStringCellValue();
 	    		sb.append("PrivateData PD" + id + " {");
@@ -542,9 +542,9 @@ public class ImportExcelHandler extends AbstractHandler {
     		if (cellId != null) {
     			int id = (int) cellId.getNumericCellValue();
     			Cell cellName = row.getCell(1);
-	    		String name = cellName.getStringCellValue();
+	    		String name = cellName.getStringCellValue().replaceAll("\"", "'");
 	    		Cell cellDescription = row.getCell(2);
-	    		String description = cellDescription.getStringCellValue();
+	    		String description = cellDescription.getStringCellValue().replaceAll("\"", "'");
 	    		Cell cellPrivateData = row.getCell(3);
 	    		Cell cellPartOf = row.getCell(4);
 	    		sb.append("Service S" + id + " {");
@@ -603,9 +603,9 @@ public class ImportExcelHandler extends AbstractHandler {
     		if (cellId != null) {
     			int id = (int) cellId.getNumericCellValue();
     			Cell cellName = row.getCell(1);
-	    		String name = cellName.getStringCellValue();
+	    		String name = cellName.getStringCellValue().replaceAll("\"", "'");
     			Cell cellDescription = row.getCell(2);
-	    		String description = cellDescription.getStringCellValue();
+	    		String description = cellDescription.getStringCellValue().replaceAll("\"", "'");
 	    		Cell cellType = row.getCell(3);
 	    		String type = cellType.getStringCellValue();
 	    		sb.append("Enforcement En" + id + " {");
@@ -638,7 +638,7 @@ public class ImportExcelHandler extends AbstractHandler {
     			if (cellId.getCellType() == Cell.CELL_TYPE_NUMERIC) {
     				int id = (int) cellId.getNumericCellValue();
         			Cell cellDescription = row.getCell(1);
-    	    		String description = cellDescription.getStringCellValue();
+    	    		String description = cellDescription.getStringCellValue().replaceAll("\"", "'");
     	    		Cell cellScope = row.getCell(2);
     	    		String scope = cellScope.getStringCellValue();
     	    		
