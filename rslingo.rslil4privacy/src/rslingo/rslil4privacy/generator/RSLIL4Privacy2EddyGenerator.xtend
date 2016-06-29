@@ -104,7 +104,7 @@ SPEC POLICY
 	'''
 	
 	def compile(PrivateData p)
-	'''«p.description.replaceAll(" ", "-")»'''
+	'''«p.description.replaceAll(" ", "-").replaceAll(",", "").replaceAll("[()]", "")»'''
 	
 	def compile(Service s)
 	'''«s.serviceName.replaceAll(" ", "-").replaceAll(",", "").replaceAll("[()]", "")»'''

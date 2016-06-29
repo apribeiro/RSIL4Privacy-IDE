@@ -712,7 +712,9 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     String _description = p.getDescription();
     String _replaceAll = _description.replaceAll(" ", "-");
-    _builder.append(_replaceAll, "");
+    String _replaceAll_1 = _replaceAll.replaceAll(",", "");
+    String _replaceAll_2 = _replaceAll_1.replaceAll("[()]", "");
+    _builder.append(_replaceAll_2, "");
     return _builder;
   }
   
