@@ -18,6 +18,8 @@ Download the ready-to-use Eclipse IDE version of RSLingo4Privacy Studio through 
 
 [CS2015] J. Caramujo, A. R. Silva, "Analyzing Privacy Policies based on a Privacy-Aware Profile: the Facebook and LinkedIn case studies", in Proceedings of IEEE CBI'2015, IEEE Computer Society, 2015.
 
+[AR2016] A. R. Silva et al., "Improving the Specification and Analysis of Privacy Policies: The RSLingo4Privacy Approach", in Proceedings of the 8th ICEIS conference, SCITEPRESS, 336-347, 2016.
+
 [BB2011] T. D. Breaux, D. L. Baumer, "Legally 'Reasonable' Security Requirements: A 10-year FTC Retrospective", Computers & Security, 30(4):178-193, 2011.
 
 [BA2008] T. D. Breaux, A. I. Antón, "Analyzing regulatory rules for privacy and security requirements", IEEE Trans. Soft. Eng., Special Issue on Soft. Engr. for Secure Sys., 34(1):5-20, 2008.
