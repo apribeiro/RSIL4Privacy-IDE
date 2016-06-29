@@ -66,17 +66,17 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("SPEC HEADER");
     _builder.newLine();
-    _builder.append("\t\t");
+    _builder.append("\t");
     _builder.append("ATTR NAMESPACE \"http://gaius.isri.cmu.edu/example2.owl\"");
     _builder.newLine();
-    _builder.append("\t\t");
+    _builder.append("\t");
     _builder.append("ATTR DESC \"");
     Metadata _metadata = p.getMetadata();
     String _description = _metadata.getDescription();
-    _builder.append(_description, "\t\t");
+    _builder.append(_description, "\t");
     _builder.append("\"");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
+    _builder.append("\t");
     {
       EList<Recipient> _recipient = p.getRecipient();
       boolean _isEmpty = _recipient.isEmpty();
@@ -86,13 +86,13 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
           EList<Recipient> _recipient_1 = p.getRecipient();
           for(final Recipient x : _recipient_1) {
             CharSequence _compileActor = this.compileActor(x);
-            _builder.append(_compileActor, "\t\t");
+            _builder.append(_compileActor, "\t");
           }
         }
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
+    _builder.append("\t");
     {
       EList<Service> _service = p.getService();
       boolean _isEmpty_1 = _service.isEmpty();
@@ -102,13 +102,13 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
           EList<Service> _service_1 = p.getService();
           for(final Service z : _service_1) {
             CharSequence _compilePurpose = this.compilePurpose(z);
-            _builder.append(_compilePurpose, "\t\t");
+            _builder.append(_compilePurpose, "\t");
           }
         }
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
+    _builder.append("\t");
     {
       EList<PrivateData> _privateData = p.getPrivateData();
       boolean _isEmpty_2 = _privateData.isEmpty();
@@ -118,13 +118,13 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
           EList<PrivateData> _privateData_1 = p.getPrivateData();
           for(final PrivateData y : _privateData_1) {
             CharSequence _compileDatum = this.compileDatum(y);
-            _builder.append(_compileDatum, "\t\t");
+            _builder.append(_compileDatum, "\t");
           }
         }
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
+    _builder.append("\t");
     _builder.append("D ALL-Information > ");
     {
       EList<PrivateData> _privateData_2 = p.getPrivateData();
@@ -138,19 +138,18 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
             if (!_hasElements) {
               _hasElements = true;
             } else {
-              _builder.appendImmediate(",", "\t\t");
+              _builder.appendImmediate(",", "\t");
             }
             CharSequence _compile = this.compile(z_1);
-            _builder.append(_compile, "\t\t");
+            _builder.append(_compile, "\t");
           }
         }
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t");
     _builder.append("SPEC POLICY");
     _builder.newLine();
-    _builder.append("\t\t");
+    _builder.append("\t");
     {
       EList<Collection> _collection = p.getCollection();
       boolean _isEmpty_4 = _collection.isEmpty();
@@ -160,13 +159,13 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
           EList<Collection> _collection_1 = p.getCollection();
           for(final Collection x_1 : _collection_1) {
             CharSequence _compileCollection = this.compileCollection(x_1);
-            _builder.append(_compileCollection, "\t\t");
+            _builder.append(_compileCollection, "\t");
           }
         }
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
+    _builder.append("\t");
     {
       EList<Disclosure> _disclosure = p.getDisclosure();
       boolean _isEmpty_5 = _disclosure.isEmpty();
@@ -176,55 +175,23 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
           EList<Disclosure> _disclosure_1 = p.getDisclosure();
           for(final Disclosure x_2 : _disclosure_1) {
             CharSequence _compileTransfer = this.compileTransfer(x_2);
-            _builder.append(_compileTransfer, "\t\t");
+            _builder.append(_compileTransfer, "\t");
           }
         }
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
+    _builder.append("\t");
     {
-      EList<Retention> _retention = p.getRetention();
-      boolean _isEmpty_6 = _retention.isEmpty();
+      EList<Usage> _usage = p.getUsage();
+      boolean _isEmpty_6 = _usage.isEmpty();
       boolean _not_6 = (!_isEmpty_6);
       if (_not_6) {
         {
-          EList<Retention> _retention_1 = p.getRetention();
-          for(final Retention x_3 : _retention_1) {
-            CharSequence _compileRetention = this.compileRetention(x_3);
-            _builder.append(_compileRetention, "\t\t");
-          }
-        }
-      }
-    }
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
-    {
-      EList<Usage> _usage = p.getUsage();
-      boolean _isEmpty_7 = _usage.isEmpty();
-      boolean _not_7 = (!_isEmpty_7);
-      if (_not_7) {
-        {
           EList<Usage> _usage_1 = p.getUsage();
-          for(final Usage x_4 : _usage_1) {
-            CharSequence _compileUsage = this.compileUsage(x_4);
-            _builder.append(_compileUsage, "\t\t");
-          }
-        }
-      }
-    }
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
-    {
-      EList<Informative> _informative = p.getInformative();
-      boolean _isEmpty_8 = _informative.isEmpty();
-      boolean _not_8 = (!_isEmpty_8);
-      if (_not_8) {
-        {
-          EList<Informative> _informative_1 = p.getInformative();
-          for(final Informative x_5 : _informative_1) {
-            CharSequence _compileInformative = this.compileInformative(x_5);
-            _builder.append(_compileInformative, "\t\t");
+          for(final Usage x_3 : _usage_1) {
+            CharSequence _compileUsage = this.compileUsage(x_3);
+            _builder.append(_compileUsage, "\t");
           }
         }
       }
@@ -268,7 +235,9 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     String _recipientName = r.getRecipientName();
     String _replaceAll = _recipientName.replaceAll(" ", "-");
-    _builder.append(_replaceAll, "");
+    String _replaceAll_1 = _replaceAll.replaceAll(",", "");
+    String _replaceAll_2 = _replaceAll_1.replaceAll("[()]", "");
+    _builder.append(_replaceAll_2, "");
     return _builder;
   }
   
@@ -336,7 +305,9 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     String _name = a.getName();
     String _replaceAll = _name.replaceAll(" ", "-");
-    _builder.append(_replaceAll, "");
+    String _replaceAll_1 = _replaceAll.replaceAll(",", "");
+    String _replaceAll_2 = _replaceAll_1.replaceAll("[()]", "");
+    _builder.append(_replaceAll_2, "");
     return _builder;
   }
   
@@ -547,7 +518,7 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
         }
       }
     }
-    _builder.append("RETAIN ");
+    _builder.append("USE ");
     {
       String _refPDAll = r.getRefPDAll();
       boolean _equals_2 = Objects.equal(_refPDAll, "All");
@@ -685,7 +656,7 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
         }
       }
     }
-    _builder.append("INFORM ");
+    _builder.append("USE ");
     {
       String _refPDAll = i.getRefPDAll();
       boolean _equals_2 = Objects.equal(_refPDAll, "All");
@@ -749,7 +720,9 @@ public class RSLIL4Privacy2EddyGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     String _serviceName = s.getServiceName();
     String _replaceAll = _serviceName.replaceAll(" ", "-");
-    _builder.append(_replaceAll, "");
+    String _replaceAll_1 = _replaceAll.replaceAll(",", "");
+    String _replaceAll_2 = _replaceAll_1.replaceAll("[()]", "");
+    _builder.append(_replaceAll_2, "");
     return _builder;
   }
 }

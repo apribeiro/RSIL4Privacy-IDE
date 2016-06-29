@@ -121,7 +121,7 @@ public class CheckQualityHandler extends AbstractHandler {
 			protected IStatus run(IProgressMonitor monitor) {
 				String pluginPath = Platform.getInstallLocation()
 						.getURL().getPath().substring(1)
-						+ "plugins/RSLingo4Privacy/";
+						+ "RSLingo4Privacy/";
 				String policyBase = "policy-base.owl";
 				String fileName = file.getName().split(FILE_EXT)[0];
 				StringBuilder logger = new StringBuilder();

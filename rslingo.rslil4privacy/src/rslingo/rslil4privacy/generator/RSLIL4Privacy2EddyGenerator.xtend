@@ -36,20 +36,20 @@ class RSLIL4Privacy2EddyGenerator implements IGenerator {
     }
     
 	def compile(Policy p)
-	'''SPEC HEADER
-		ATTR NAMESPACE "http://gaius.isri.cmu.edu/example2.owl"
-		ATTR DESC "«p.metadata.description»"
-		«IF !p.recipient.empty»«FOR x:p.recipient»«x.compileActor»«ENDFOR»«ENDIF»
-		«IF !p.service.empty»«FOR z:p.service»«z.compilePurpose»«ENDFOR»«ENDIF»
-		«IF !p.privateData.empty»«FOR y:p.privateData»«y.compileDatum»«ENDFOR»«ENDIF»
-		D ALL-Information > «IF !p.privateData.empty»«FOR z:p.privateData SEPARATOR ','»«z.compile»«ENDFOR»«ENDIF»
-	SPEC POLICY
-		«IF !p.collection.empty»«FOR x:p.collection»«x.compileCollection»«ENDFOR»«ENDIF»
-		«IF !p.disclosure.empty»«FOR x:p.disclosure»«x.compileTransfer»«ENDFOR»«ENDIF»
-		«IF !p.retention.empty»«FOR x:p.retention»«x.compileRetention»«ENDFOR»«ENDIF»
-		«IF !p.usage.empty»«FOR x:p.usage»«x.compileUsage»«ENDFOR»«ENDIF»
-		«IF !p.informative.empty»«FOR x:p.informative»«x.compileInformative»«ENDFOR»«ENDIF»
-	'''
+'''SPEC HEADER
+	ATTR NAMESPACE "http://gaius.isri.cmu.edu/example2.owl"
+	ATTR DESC "«p.metadata.description»"
+	«IF !p.recipient.empty»«FOR x:p.recipient»«x.compileActor»«ENDFOR»«ENDIF»
+	«IF !p.service.empty»«FOR z:p.service»«z.compilePurpose»«ENDFOR»«ENDIF»
+	«IF !p.privateData.empty»«FOR y:p.privateData»«y.compileDatum»«ENDFOR»«ENDIF»
+	D ALL-Information > «IF !p.privateData.empty»«FOR z:p.privateData SEPARATOR ','»«z.compile»«ENDFOR»«ENDIF»
+SPEC POLICY
+	«IF !p.collection.empty»«FOR x:p.collection»«x.compileCollection»«ENDFOR»«ENDIF»
+	«IF !p.disclosure.empty»«FOR x:p.disclosure»«x.compileTransfer»«ENDFOR»«ENDIF»
+«««	«IF !p.retention.empty»«FOR x:p.retention»«x.compileRetention»«ENDFOR»«ENDIF»
+	«IF !p.usage.empty»«FOR x:p.usage»«x.compileUsage»«ENDFOR»«ENDIF»
+«««	«IF !p.informative.empty»«FOR x:p.informative»«x.compileInformative»«ENDFOR»«ENDIF»
+'''
 	 
 	def compileActor(Recipient r)
 	'''«IF !r.recipientPart.empty»A «r.compileRecipient» > «FOR part:r.recipientPart SEPARATOR ','»«/*
@@ -57,7 +57,7 @@ class RSLIL4Privacy2EddyGenerator implements IGenerator {
 	'''
 	
 	def compileRecipient(Recipient r)
-	'''«r.recipientName.replaceAll(" ", "-")»'''
+	'''«r.recipientName.replaceAll(" ", "-").replaceAll(",", "").replaceAll("[()]", "")»'''
 	
 	def compilePurpose(Service s)
 	'''«IF !s.servicePart.empty»P «s.compile» > «FOR pur:s.servicePart SEPARATOR ','»«/*
@@ -69,7 +69,7 @@ class RSLIL4Privacy2EddyGenerator implements IGenerator {
 	'''
 	
 	def compileAttribute(Attribute a)
-	'''«a.name.replaceAll(" ", "-")»'''
+	'''«a.name.replaceAll(" ", "-").replaceAll(",", "").replaceAll("[()]", "")»'''
 	 
 	def compileCollection(Collection c)
 	'''«IF c.modality == 'Permitted'»P «ELSEIF c.modality == 'Obligation'»O «ELSE»R «ENDIF»COLLECT «/*
@@ -85,8 +85,8 @@ class RSLIL4Privacy2EddyGenerator implements IGenerator {
 	*/»«IF d.refService != null» FOR «d.refService.refService.compile»«FOR s:d.refService.refs», «s.compile»«ENDFOR»«ELSE» FOR anything«ENDIF»
 	'''
 	 
-	def compileRetention(Retention r)
-	'''«IF r.modality == 'Permitted'»P «ELSEIF r.modality == 'Obligation'»O «ELSE»R «ENDIF»RETAIN «/*
+	def compileRetention(Retention r) /* RETAIN is not supported */
+	'''«IF r.modality == 'Permitted'»P «ELSEIF r.modality == 'Obligation'»O «ELSE»R «ENDIF»USE «/*
 	*/»«IF r.refPDAll == 'All'»ALL-Information«ELSEIF r.refPrivateData != null»«r.refPrivateData.refPrivateData.compile»«FOR p:r.refPrivateData.refs», «p.compile»«ENDFOR»«ENDIF»«/*
 	*/»«IF r.refService != null» FOR «r.refService.refService.compile»«FOR s:r.refService.refs», «s.compile»«ENDFOR»«ELSE» FOR anything«ENDIF»
 	'''
@@ -97,8 +97,8 @@ class RSLIL4Privacy2EddyGenerator implements IGenerator {
 	*/»«IF u.refService != null» FOR «u.refService.refService.compile»«FOR s:u.refService.refs», «s.compile»«ENDFOR»«ELSE» FOR anything«ENDIF»
 	'''
 	 
-	def compileInformative(Informative i)
-	'''«IF i.modality == 'Permitted'»P «ELSEIF i.modality == 'Obligation'»O «ELSE»R «ENDIF»INFORM «/*
+	def compileInformative(Informative i) /* INFORM is not supported */
+	'''«IF i.modality == 'Permitted'»P «ELSEIF i.modality == 'Obligation'»O «ELSE»R «ENDIF»USE «/*
 	*/»«IF i.refPDAll == 'All'»ALL-Information«ELSEIF i.refPrivateData != null»«i.refPrivateData.refPrivateData.compile»«FOR p:i.refPrivateData.refs», «p.compile»«ENDFOR»«ENDIF»«/*
 	*/»«IF i.refService != null» FOR «i.refService.refService.compile»«FOR s:i.refService.refs», «s.compile»«ENDFOR»«ELSE» FOR anything«ENDIF»
 	'''
@@ -107,6 +107,6 @@ class RSLIL4Privacy2EddyGenerator implements IGenerator {
 	'''«p.description.replaceAll(" ", "-")»'''
 	
 	def compile(Service s)
-	'''«s.serviceName.replaceAll(" ", "-")»'''
+	'''«s.serviceName.replaceAll(" ", "-").replaceAll(",", "").replaceAll("[()]", "")»'''
 
 }
