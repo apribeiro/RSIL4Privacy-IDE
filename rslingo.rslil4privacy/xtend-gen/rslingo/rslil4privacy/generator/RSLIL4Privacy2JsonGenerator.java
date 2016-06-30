@@ -59,14 +59,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("{");
     _builder.newLine();
-    _builder.append("\t\t");
+    _builder.append("\t");
     _builder.append("\"name\": \"");
     Metadata _metadata = policy.getMetadata();
     String _name = _metadata.getName();
-    _builder.append(_name, "\t\t");
+    _builder.append(_name, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
+    _builder.append("\t");
     {
       EList<Collection> _collection = policy.getCollection();
       boolean _isEmpty = _collection.isEmpty();
@@ -74,7 +74,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       if (_not) {
         _builder.append("\"Collections\": [");
         _builder.newLineIfNotEmpty();
-        _builder.append("\t    ");
+        _builder.append("    ");
         {
           EList<Collection> _collection_1 = policy.getCollection();
           boolean _hasElements = false;
@@ -82,17 +82,17 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
             if (!_hasElements) {
               _hasElements = true;
             } else {
-              _builder.appendImmediate(",", "\t    ");
+              _builder.appendImmediate(", ", "    ");
             }
             CharSequence _compileCollection = this.compileCollection(c);
-            _builder.append(_compileCollection, "\t    ");
+            _builder.append(_compileCollection, "    ");
           }
         }
         _builder.append("],");
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t    ");
+    _builder.append("    ");
     {
       EList<Disclosure> _disclosure = policy.getDisclosure();
       boolean _isEmpty_1 = _disclosure.isEmpty();
@@ -100,7 +100,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       if (_not_1) {
         _builder.append("\"Disclosure\": [");
         _builder.newLineIfNotEmpty();
-        _builder.append("\t    ");
+        _builder.append("    ");
         {
           EList<Disclosure> _disclosure_1 = policy.getDisclosure();
           boolean _hasElements_1 = false;
@@ -108,17 +108,17 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
             if (!_hasElements_1) {
               _hasElements_1 = true;
             } else {
-              _builder.appendImmediate(",", "\t    ");
+              _builder.appendImmediate(", ", "    ");
             }
             CharSequence _compileDisclosure = this.compileDisclosure(d);
-            _builder.append(_compileDisclosure, "\t    ");
+            _builder.append(_compileDisclosure, "    ");
           }
         }
         _builder.append("],");
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t    ");
+    _builder.append("    ");
     {
       EList<Retention> _retention = policy.getRetention();
       boolean _isEmpty_2 = _retention.isEmpty();
@@ -126,7 +126,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       if (_not_2) {
         _builder.append("\"Retention\": [");
         _builder.newLineIfNotEmpty();
-        _builder.append("\t    ");
+        _builder.append("    ");
         {
           EList<Retention> _retention_1 = policy.getRetention();
           boolean _hasElements_2 = false;
@@ -134,17 +134,17 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
             if (!_hasElements_2) {
               _hasElements_2 = true;
             } else {
-              _builder.appendImmediate(",", "\t    ");
+              _builder.appendImmediate(", ", "    ");
             }
             CharSequence _compileRetention = this.compileRetention(r);
-            _builder.append(_compileRetention, "\t    ");
+            _builder.append(_compileRetention, "    ");
           }
         }
         _builder.append("],");
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t    ");
+    _builder.append("    ");
     {
       EList<Usage> _usage = policy.getUsage();
       boolean _isEmpty_3 = _usage.isEmpty();
@@ -152,7 +152,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       if (_not_3) {
         _builder.append("\"Usage\": [");
         _builder.newLineIfNotEmpty();
-        _builder.append("\t    ");
+        _builder.append("    ");
         {
           EList<Usage> _usage_1 = policy.getUsage();
           boolean _hasElements_3 = false;
@@ -160,17 +160,17 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
             if (!_hasElements_3) {
               _hasElements_3 = true;
             } else {
-              _builder.appendImmediate(",", "\t    ");
+              _builder.appendImmediate(",", "    ");
             }
             CharSequence _compileUsage = this.compileUsage(u);
-            _builder.append(_compileUsage, "\t    ");
+            _builder.append(_compileUsage, "    ");
           }
         }
         _builder.append("],");
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t    ");
+    _builder.append("    ");
     {
       EList<Informative> _informative = policy.getInformative();
       boolean _isEmpty_4 = _informative.isEmpty();
@@ -178,7 +178,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       if (_not_4) {
         _builder.append("\"Informative\": [");
         _builder.newLineIfNotEmpty();
-        _builder.append("\t    ");
+        _builder.append("    ");
         {
           EList<Informative> _informative_1 = policy.getInformative();
           boolean _hasElements_4 = false;
@@ -186,25 +186,25 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
             if (!_hasElements_4) {
               _hasElements_4 = true;
             } else {
-              _builder.appendImmediate(",", "\t    ");
+              _builder.appendImmediate(", ", "    ");
             }
             CharSequence _compileInformative = this.compileInformative(i);
-            _builder.append(_compileInformative, "\t    ");
+            _builder.append(_compileInformative, "    ");
           }
         }
         _builder.append("],");
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t    ");
+    _builder.append("    ");
     {
       EList<PrivateData> _privateData = policy.getPrivateData();
       boolean _isEmpty_5 = _privateData.isEmpty();
       boolean _not_5 = (!_isEmpty_5);
       if (_not_5) {
-        _builder.append(" \"PrivateDatums\": [");
+        _builder.append("\"PrivateDatums\": [");
         _builder.newLineIfNotEmpty();
-        _builder.append("\t    ");
+        _builder.append("    ");
         {
           EList<PrivateData> _privateData_1 = policy.getPrivateData();
           boolean _hasElements_5 = false;
@@ -212,25 +212,25 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
             if (!_hasElements_5) {
               _hasElements_5 = true;
             } else {
-              _builder.appendImmediate(",", "\t    ");
+              _builder.appendImmediate(", ", "    ");
             }
             CharSequence _compilePrivateData = this.compilePrivateData(pd);
-            _builder.append(_compilePrivateData, "\t    ");
+            _builder.append(_compilePrivateData, "    ");
           }
         }
         _builder.append("],");
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t    ");
+    _builder.append("    ");
     {
       EList<Recipient> _recipient = policy.getRecipient();
       boolean _isEmpty_6 = _recipient.isEmpty();
       boolean _not_6 = (!_isEmpty_6);
       if (_not_6) {
-        _builder.append(" \"Recipients\": [");
+        _builder.append("\"Recipients\": [");
         _builder.newLineIfNotEmpty();
-        _builder.append("\t    ");
+        _builder.append("    ");
         {
           EList<Recipient> _recipient_1 = policy.getRecipient();
           boolean _hasElements_6 = false;
@@ -238,17 +238,17 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
             if (!_hasElements_6) {
               _hasElements_6 = true;
             } else {
-              _builder.appendImmediate(",", "\t    ");
+              _builder.appendImmediate(", ", "    ");
             }
             CharSequence _compileRecipient = this.compileRecipient(r_1);
-            _builder.append(_compileRecipient, "\t    ");
+            _builder.append(_compileRecipient, "    ");
           }
         }
         _builder.append("],");
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t    ");
+    _builder.append("    ");
     {
       EList<Service> _service = policy.getService();
       boolean _isEmpty_7 = _service.isEmpty();
@@ -256,7 +256,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       if (_not_7) {
         _builder.append("\"Services\": [");
         _builder.newLineIfNotEmpty();
-        _builder.append("\t    ");
+        _builder.append("    ");
         {
           EList<Service> _service_1 = policy.getService();
           boolean _hasElements_7 = false;
@@ -264,17 +264,17 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
             if (!_hasElements_7) {
               _hasElements_7 = true;
             } else {
-              _builder.appendImmediate(",", "\t    ");
+              _builder.appendImmediate(", ", "    ");
             }
             CharSequence _compileService = this.compileService(s);
-            _builder.append(_compileService, "\t    ");
+            _builder.append(_compileService, "    ");
           }
         }
         _builder.append("],");
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t    ");
+    _builder.append("    ");
     {
       EList<Enforcement> _enforcement = policy.getEnforcement();
       boolean _isEmpty_8 = _enforcement.isEmpty();
@@ -282,7 +282,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       if (_not_8) {
         _builder.append("\"Enforcements\": [");
         _builder.newLineIfNotEmpty();
-        _builder.append("\t    ");
+        _builder.append("    ");
         {
           EList<Enforcement> _enforcement_1 = policy.getEnforcement();
           boolean _hasElements_8 = false;
@@ -290,46 +290,43 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
             if (!_hasElements_8) {
               _hasElements_8 = true;
             } else {
-              _builder.appendImmediate(",", "\t    ");
+              _builder.appendImmediate(", ", "    ");
             }
             CharSequence _compileEnforcement = this.compileEnforcement(e);
-            _builder.append(_compileEnforcement, "\t    ");
+            _builder.append(_compileEnforcement, "    ");
           }
         }
         _builder.append("]");
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t");
     _builder.append("}");
-    _builder.newLine();
     return _builder;
   }
   
   public CharSequence compileCollection(final Collection c) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("\t");
     _builder.append("{");
     _builder.newLine();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"ID\": \"");
     String _name = c.getName();
-    _builder.append(_name, "\t\t\t");
+    _builder.append(_name, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Description\": \"");
     String _description = c.getDescription();
-    _builder.append(_description, "\t\t\t");
+    _builder.append(_description, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Condition\": \"");
     String _condition = c.getCondition();
-    _builder.append(_condition, "\t\t\t");
+    _builder.append(_condition, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       RefPrivateData _refPrivateData = c.getRefPrivateData();
       boolean _notEquals = (!Objects.equal(_refPrivateData, null));
@@ -338,14 +335,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
         RefPrivateData _refPrivateData_1 = c.getRefPrivateData();
         PrivateData _refPrivateData_2 = _refPrivateData_1.getRefPrivateData();
         CharSequence _compileRefPrivateData = this.compileRefPrivateData(_refPrivateData_2);
-        _builder.append(_compileRefPrivateData, "\t\t\t");
+        _builder.append(_compileRefPrivateData, "\t");
         {
           RefPrivateData _refPrivateData_3 = c.getRefPrivateData();
           EList<PrivateData> _refs = _refPrivateData_3.getRefs();
           for(final PrivateData p : _refs) {
             _builder.append(", ");
             CharSequence _compileRefPrivateData_1 = this.compileRefPrivateData(p);
-            _builder.append(_compileRefPrivateData_1, "\t\t\t");
+            _builder.append(_compileRefPrivateData_1, "\t");
           }
         }
         _builder.append("],");
@@ -358,7 +355,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       RefService _refService = c.getRefService();
       boolean _notEquals_1 = (!Objects.equal(_refService, null));
@@ -367,14 +364,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
         RefService _refService_1 = c.getRefService();
         Service _refService_2 = _refService_1.getRefService();
         CharSequence _compileRefService = this.compileRefService(_refService_2);
-        _builder.append(_compileRefService, "\t\t\t");
+        _builder.append(_compileRefService, "\t");
         {
           RefService _refService_3 = c.getRefService();
           EList<Service> _refs_1 = _refService_3.getRefs();
           for(final Service s : _refs_1) {
             _builder.append(", ");
             CharSequence _compileRefService_1 = this.compileRefService(s);
-            _builder.append(_compileRefService_1, "\t\t\t");
+            _builder.append(_compileRefService_1, "\t");
           }
         }
         _builder.append("],");
@@ -387,7 +384,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       RefEnforcement _refEnforcement = c.getRefEnforcement();
       boolean _notEquals_2 = (!Objects.equal(_refEnforcement, null));
@@ -396,14 +393,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
         RefEnforcement _refEnforcement_1 = c.getRefEnforcement();
         Enforcement _refEnforcement_2 = _refEnforcement_1.getRefEnforcement();
         CharSequence _compileRefEnforcement = this.compileRefEnforcement(_refEnforcement_2);
-        _builder.append(_compileRefEnforcement, "\t\t\t");
+        _builder.append(_compileRefEnforcement, "\t");
         {
           RefEnforcement _refEnforcement_3 = c.getRefEnforcement();
           EList<Enforcement> _refs_2 = _refEnforcement_3.getRefs();
           for(final Enforcement e : _refs_2) {
             _builder.append(", ");
             CharSequence _compileRefEnforcement_1 = this.compileRefEnforcement(e);
-            _builder.append(_compileRefEnforcement_1, "\t\t\t");
+            _builder.append(_compileRefEnforcement_1, "\t");
           }
         }
         _builder.append("],");
@@ -416,7 +413,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Type\": \"");
     {
       String _modality = c.getModality();
@@ -435,36 +432,33 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
     }
     _builder.append("\"");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
     _builder.append("}");
-    _builder.newLine();
     return _builder;
   }
   
   public CharSequence compileDisclosure(final Disclosure d) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("\t");
     _builder.append("{");
     _builder.newLine();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"ID\": \"");
     String _name = d.getName();
-    _builder.append(_name, "\t\t\t");
+    _builder.append(_name, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Description\": \"");
     String _description = d.getDescription();
-    _builder.append(_description, "\t\t\t");
+    _builder.append(_description, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Condition\": \"");
     String _condition = d.getCondition();
-    _builder.append(_condition, "\t\t\t");
+    _builder.append(_condition, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       RefRecipient _refRecipient = d.getRefRecipient();
       boolean _notEquals = (!Objects.equal(_refRecipient, null));
@@ -473,14 +467,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
         RefRecipient _refRecipient_1 = d.getRefRecipient();
         Recipient _refRecipient_2 = _refRecipient_1.getRefRecipient();
         CharSequence _compileRefRecipient = this.compileRefRecipient(_refRecipient_2);
-        _builder.append(_compileRefRecipient, "\t\t\t");
+        _builder.append(_compileRefRecipient, "\t");
         {
           RefRecipient _refRecipient_3 = d.getRefRecipient();
           EList<Recipient> _refs = _refRecipient_3.getRefs();
           for(final Recipient r : _refs) {
             _builder.append(", ");
             CharSequence _compileRefRecipient_1 = this.compileRefRecipient(r);
-            _builder.append(_compileRefRecipient_1, "\t\t\t");
+            _builder.append(_compileRefRecipient_1, "\t");
           }
         }
         _builder.append("],");
@@ -493,7 +487,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       RefPrivateData _refPrivateData = d.getRefPrivateData();
       boolean _notEquals_1 = (!Objects.equal(_refPrivateData, null));
@@ -502,14 +496,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
         RefPrivateData _refPrivateData_1 = d.getRefPrivateData();
         PrivateData _refPrivateData_2 = _refPrivateData_1.getRefPrivateData();
         CharSequence _compileRefPrivateData = this.compileRefPrivateData(_refPrivateData_2);
-        _builder.append(_compileRefPrivateData, "\t\t\t");
+        _builder.append(_compileRefPrivateData, "\t");
         {
           RefPrivateData _refPrivateData_3 = d.getRefPrivateData();
           EList<PrivateData> _refs_1 = _refPrivateData_3.getRefs();
           for(final PrivateData p : _refs_1) {
             _builder.append(", ");
             CharSequence _compileRefPrivateData_1 = this.compileRefPrivateData(p);
-            _builder.append(_compileRefPrivateData_1, "\t\t\t");
+            _builder.append(_compileRefPrivateData_1, "\t");
           }
         }
         _builder.append("],");
@@ -522,7 +516,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       RefService _refService = d.getRefService();
       boolean _notEquals_2 = (!Objects.equal(_refService, null));
@@ -531,14 +525,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
         RefService _refService_1 = d.getRefService();
         Service _refService_2 = _refService_1.getRefService();
         CharSequence _compileRefService = this.compileRefService(_refService_2);
-        _builder.append(_compileRefService, "\t\t\t");
+        _builder.append(_compileRefService, "\t");
         {
           RefService _refService_3 = d.getRefService();
           EList<Service> _refs_2 = _refService_3.getRefs();
           for(final Service s : _refs_2) {
             _builder.append(", ");
             CharSequence _compileRefService_1 = this.compileRefService(s);
-            _builder.append(_compileRefService_1, "\t\t\t");
+            _builder.append(_compileRefService_1, "\t");
           }
         }
         _builder.append("],");
@@ -551,7 +545,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       RefEnforcement _refEnforcement = d.getRefEnforcement();
       boolean _notEquals_3 = (!Objects.equal(_refEnforcement, null));
@@ -560,14 +554,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
         RefEnforcement _refEnforcement_1 = d.getRefEnforcement();
         Enforcement _refEnforcement_2 = _refEnforcement_1.getRefEnforcement();
         CharSequence _compileRefEnforcement = this.compileRefEnforcement(_refEnforcement_2);
-        _builder.append(_compileRefEnforcement, "\t\t\t");
+        _builder.append(_compileRefEnforcement, "\t");
         {
           RefEnforcement _refEnforcement_3 = d.getRefEnforcement();
           EList<Enforcement> _refs_3 = _refEnforcement_3.getRefs();
           for(final Enforcement e : _refs_3) {
             _builder.append(", ");
             CharSequence _compileRefEnforcement_1 = this.compileRefEnforcement(e);
-            _builder.append(_compileRefEnforcement_1, "\t\t\t");
+            _builder.append(_compileRefEnforcement_1, "\t");
           }
         }
         _builder.append("],");
@@ -580,7 +574,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Type\": \"");
     {
       String _modality = d.getModality();
@@ -599,48 +593,45 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
     }
     _builder.append("\"");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
     _builder.append("}");
-    _builder.newLine();
     return _builder;
   }
   
   public CharSequence compileRetention(final Retention r) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("\t");
     _builder.append("{");
     _builder.newLine();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"ID\": \"");
     String _name = r.getName();
-    _builder.append(_name, "\t\t\t");
+    _builder.append(_name, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Description\": \"");
     String _description = r.getDescription();
-    _builder.append(_description, "\t\t\t");
+    _builder.append(_description, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Condition\": \"");
     String _condition = r.getCondition();
-    _builder.append(_condition, "\t\t\t");
+    _builder.append(_condition, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       String _period = r.getPeriod();
       boolean _isEmpty = _period.isEmpty();
       if (_isEmpty) {
         _builder.append("\"Period\": \"");
         String _period_1 = r.getPeriod();
-        _builder.append(_period_1, "\t\t\t");
+        _builder.append(_period_1, "\t");
         _builder.append("\",");
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       RefPrivateData _refPrivateData = r.getRefPrivateData();
       boolean _notEquals = (!Objects.equal(_refPrivateData, null));
@@ -649,14 +640,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
         RefPrivateData _refPrivateData_1 = r.getRefPrivateData();
         PrivateData _refPrivateData_2 = _refPrivateData_1.getRefPrivateData();
         CharSequence _compileRefPrivateData = this.compileRefPrivateData(_refPrivateData_2);
-        _builder.append(_compileRefPrivateData, "\t\t\t");
+        _builder.append(_compileRefPrivateData, "\t");
         {
           RefPrivateData _refPrivateData_3 = r.getRefPrivateData();
           EList<PrivateData> _refs = _refPrivateData_3.getRefs();
           for(final PrivateData p : _refs) {
             _builder.append(", ");
             CharSequence _compileRefPrivateData_1 = this.compileRefPrivateData(p);
-            _builder.append(_compileRefPrivateData_1, "\t\t\t");
+            _builder.append(_compileRefPrivateData_1, "\t");
           }
         }
         _builder.append("],");
@@ -669,7 +660,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       RefService _refService = r.getRefService();
       boolean _notEquals_1 = (!Objects.equal(_refService, null));
@@ -678,14 +669,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
         RefService _refService_1 = r.getRefService();
         Service _refService_2 = _refService_1.getRefService();
         CharSequence _compileRefService = this.compileRefService(_refService_2);
-        _builder.append(_compileRefService, "\t\t\t");
+        _builder.append(_compileRefService, "\t");
         {
           RefService _refService_3 = r.getRefService();
           EList<Service> _refs_1 = _refService_3.getRefs();
           for(final Service s : _refs_1) {
             _builder.append(", ");
             CharSequence _compileRefService_1 = this.compileRefService(s);
-            _builder.append(_compileRefService_1, "\t\t\t");
+            _builder.append(_compileRefService_1, "\t");
           }
         }
         _builder.append("],");
@@ -698,7 +689,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       RefEnforcement _refEnforcement = r.getRefEnforcement();
       boolean _notEquals_2 = (!Objects.equal(_refEnforcement, null));
@@ -707,14 +698,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
         RefEnforcement _refEnforcement_1 = r.getRefEnforcement();
         Enforcement _refEnforcement_2 = _refEnforcement_1.getRefEnforcement();
         CharSequence _compileRefEnforcement = this.compileRefEnforcement(_refEnforcement_2);
-        _builder.append(_compileRefEnforcement, "\t\t\t");
+        _builder.append(_compileRefEnforcement, "\t");
         {
           RefEnforcement _refEnforcement_3 = r.getRefEnforcement();
           EList<Enforcement> _refs_2 = _refEnforcement_3.getRefs();
           for(final Enforcement e : _refs_2) {
             _builder.append(", ");
             CharSequence _compileRefEnforcement_1 = this.compileRefEnforcement(e);
-            _builder.append(_compileRefEnforcement_1, "\t\t\t");
+            _builder.append(_compileRefEnforcement_1, "\t");
           }
         }
         _builder.append("],");
@@ -727,7 +718,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Type\": \"");
     {
       String _modality = r.getModality();
@@ -746,36 +737,33 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
     }
     _builder.append("\"");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
     _builder.append("}");
-    _builder.newLine();
     return _builder;
   }
   
   public CharSequence compileUsage(final Usage u) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("\t");
     _builder.append("{");
     _builder.newLine();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"ID\": \"");
     String _name = u.getName();
-    _builder.append(_name, "\t\t\t");
+    _builder.append(_name, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Description\": \"");
     String _description = u.getDescription();
-    _builder.append(_description, "\t\t\t");
+    _builder.append(_description, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Condition\": \"");
     String _condition = u.getCondition();
-    _builder.append(_condition, "\t\t\t");
+    _builder.append(_condition, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       RefPrivateData _refPrivateData = u.getRefPrivateData();
       boolean _notEquals = (!Objects.equal(_refPrivateData, null));
@@ -784,14 +772,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
         RefPrivateData _refPrivateData_1 = u.getRefPrivateData();
         PrivateData _refPrivateData_2 = _refPrivateData_1.getRefPrivateData();
         CharSequence _compileRefPrivateData = this.compileRefPrivateData(_refPrivateData_2);
-        _builder.append(_compileRefPrivateData, "\t\t\t");
+        _builder.append(_compileRefPrivateData, "\t");
         {
           RefPrivateData _refPrivateData_3 = u.getRefPrivateData();
           EList<PrivateData> _refs = _refPrivateData_3.getRefs();
           for(final PrivateData p : _refs) {
             _builder.append(", ");
             CharSequence _compileRefPrivateData_1 = this.compileRefPrivateData(p);
-            _builder.append(_compileRefPrivateData_1, "\t\t\t");
+            _builder.append(_compileRefPrivateData_1, "\t");
           }
         }
         _builder.append("],");
@@ -804,7 +792,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       RefService _refService = u.getRefService();
       boolean _notEquals_1 = (!Objects.equal(_refService, null));
@@ -813,14 +801,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
         RefService _refService_1 = u.getRefService();
         Service _refService_2 = _refService_1.getRefService();
         CharSequence _compileRefService = this.compileRefService(_refService_2);
-        _builder.append(_compileRefService, "\t\t\t");
+        _builder.append(_compileRefService, "\t");
         {
           RefService _refService_3 = u.getRefService();
           EList<Service> _refs_1 = _refService_3.getRefs();
           for(final Service s : _refs_1) {
             _builder.append(", ");
             CharSequence _compileRefService_1 = this.compileRefService(s);
-            _builder.append(_compileRefService_1, "\t\t\t");
+            _builder.append(_compileRefService_1, "\t");
           }
         }
         _builder.append("],");
@@ -833,7 +821,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       RefEnforcement _refEnforcement = u.getRefEnforcement();
       boolean _notEquals_2 = (!Objects.equal(_refEnforcement, null));
@@ -842,14 +830,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
         RefEnforcement _refEnforcement_1 = u.getRefEnforcement();
         Enforcement _refEnforcement_2 = _refEnforcement_1.getRefEnforcement();
         CharSequence _compileRefEnforcement = this.compileRefEnforcement(_refEnforcement_2);
-        _builder.append(_compileRefEnforcement, "\t\t\t");
+        _builder.append(_compileRefEnforcement, "\t");
         {
           RefEnforcement _refEnforcement_3 = u.getRefEnforcement();
           EList<Enforcement> _refs_2 = _refEnforcement_3.getRefs();
           for(final Enforcement e : _refs_2) {
             _builder.append(", ");
             CharSequence _compileRefEnforcement_1 = this.compileRefEnforcement(e);
-            _builder.append(_compileRefEnforcement_1, "\t\t\t");
+            _builder.append(_compileRefEnforcement_1, "\t");
           }
         }
         _builder.append("],");
@@ -862,7 +850,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Type\": \"");
     {
       String _modality = u.getModality();
@@ -881,36 +869,33 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
     }
     _builder.append("\"");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
     _builder.append("}");
-    _builder.newLine();
     return _builder;
   }
   
   public CharSequence compileInformative(final Informative i) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("\t");
     _builder.append("{");
     _builder.newLine();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"ID\": \"");
     String _name = i.getName();
-    _builder.append(_name, "\t\t\t");
+    _builder.append(_name, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Description\": \"");
     String _description = i.getDescription();
-    _builder.append(_description, "\t\t\t");
+    _builder.append(_description, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Condition\": \"");
     String _condition = i.getCondition();
-    _builder.append(_condition, "\t\t\t");
+    _builder.append(_condition, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       RefPrivateData _refPrivateData = i.getRefPrivateData();
       boolean _notEquals = (!Objects.equal(_refPrivateData, null));
@@ -919,14 +904,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
         RefPrivateData _refPrivateData_1 = i.getRefPrivateData();
         PrivateData _refPrivateData_2 = _refPrivateData_1.getRefPrivateData();
         CharSequence _compileRefPrivateData = this.compileRefPrivateData(_refPrivateData_2);
-        _builder.append(_compileRefPrivateData, "\t\t\t");
+        _builder.append(_compileRefPrivateData, "\t");
         {
           RefPrivateData _refPrivateData_3 = i.getRefPrivateData();
           EList<PrivateData> _refs = _refPrivateData_3.getRefs();
           for(final PrivateData p : _refs) {
             _builder.append(", ");
             CharSequence _compileRefPrivateData_1 = this.compileRefPrivateData(p);
-            _builder.append(_compileRefPrivateData_1, "\t\t\t");
+            _builder.append(_compileRefPrivateData_1, "\t");
           }
         }
         _builder.append("],");
@@ -939,7 +924,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       RefService _refService = i.getRefService();
       boolean _notEquals_1 = (!Objects.equal(_refService, null));
@@ -948,14 +933,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
         RefService _refService_1 = i.getRefService();
         Service _refService_2 = _refService_1.getRefService();
         CharSequence _compileRefService = this.compileRefService(_refService_2);
-        _builder.append(_compileRefService, "\t\t\t");
+        _builder.append(_compileRefService, "\t");
         {
           RefService _refService_3 = i.getRefService();
           EList<Service> _refs_1 = _refService_3.getRefs();
           for(final Service s : _refs_1) {
             _builder.append(", ");
             CharSequence _compileRefService_1 = this.compileRefService(s);
-            _builder.append(_compileRefService_1, "\t\t\t");
+            _builder.append(_compileRefService_1, "\t");
           }
         }
         _builder.append("],");
@@ -968,7 +953,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       RefEnforcement _refEnforcement = i.getRefEnforcement();
       boolean _notEquals_2 = (!Objects.equal(_refEnforcement, null));
@@ -977,14 +962,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
         RefEnforcement _refEnforcement_1 = i.getRefEnforcement();
         Enforcement _refEnforcement_2 = _refEnforcement_1.getRefEnforcement();
         CharSequence _compileRefEnforcement = this.compileRefEnforcement(_refEnforcement_2);
-        _builder.append(_compileRefEnforcement, "\t\t\t");
+        _builder.append(_compileRefEnforcement, "\t");
         {
           RefEnforcement _refEnforcement_3 = i.getRefEnforcement();
           EList<Enforcement> _refs_2 = _refEnforcement_3.getRefs();
           for(final Enforcement e : _refs_2) {
             _builder.append(", ");
             CharSequence _compileRefEnforcement_1 = this.compileRefEnforcement(e);
-            _builder.append(_compileRefEnforcement_1, "\t\t\t");
+            _builder.append(_compileRefEnforcement_1, "\t");
           }
         }
         _builder.append("],");
@@ -997,7 +982,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Type\": \"");
     {
       String _modality = i.getModality();
@@ -1016,9 +1001,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
     }
     _builder.append("\"");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
     _builder.append("}");
-    _builder.newLine();
     return _builder;
   }
   
@@ -1060,22 +1043,21 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
   
   public CharSequence compilePrivateData(final PrivateData p) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("\t");
     _builder.append("{");
     _builder.newLine();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"ID\": \"");
     String _name = p.getName();
-    _builder.append(_name, "\t\t\t");
+    _builder.append(_name, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Description\": \"");
     String _description = p.getDescription();
-    _builder.append(_description, "\t\t\t");
+    _builder.append(_description, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Type\": \"");
     {
       String _type = p.getType();
@@ -1088,7 +1070,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
     }
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       EList<Attribute> _attribute = p.getAttribute();
       boolean _isEmpty = _attribute.isEmpty();
@@ -1096,7 +1078,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       if (_not) {
         _builder.append("\"Attributes\": [");
         _builder.newLineIfNotEmpty();
-        _builder.append("\t\t\t");
+        _builder.append("\t");
         {
           EList<Attribute> _attribute_1 = p.getAttribute();
           boolean _hasElements = false;
@@ -1104,71 +1086,65 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
             if (!_hasElements) {
               _hasElements = true;
             } else {
-              _builder.appendImmediate(",", "\t\t\t");
+              _builder.appendImmediate(",", "\t");
             }
             CharSequence _compileAttr = this.compileAttr(a);
-            _builder.append(_compileAttr, "\t\t\t");
+            _builder.append(_compileAttr, "\t");
           }
         }
         _builder.newLineIfNotEmpty();
-        _builder.append("\t\t\t");
+        _builder.append("\t");
         _builder.append("]");
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
     _builder.append("}");
-    _builder.newLine();
     return _builder;
   }
   
   public CharSequence compileAttr(final Attribute a) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("\t");
     _builder.append("{");
     _builder.newLine();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"name\": \"");
     String _name = a.getName();
-    _builder.append(_name, "\t\t\t");
+    _builder.append(_name, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Description\": \"");
     String _description = a.getDescription();
-    _builder.append(_description, "\t\t\t");
+    _builder.append(_description, "\t");
     _builder.append("\"");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
     _builder.append("}");
-    _builder.newLine();
     return _builder;
   }
   
   public CharSequence compileRecipient(final Recipient r) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("\t");
     _builder.append("{");
     _builder.newLine();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"ID\": \"");
     String _name = r.getName();
-    _builder.append(_name, "\t\t\t");
+    _builder.append(_name, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Name\": \"");
     String _recipientName = r.getRecipientName();
-    _builder.append(_recipientName, "\t\t\t");
+    _builder.append(_recipientName, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Description\": \"");
     String _description = r.getDescription();
-    _builder.append(_description, "\t\t\t");
+    _builder.append(_description, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       EList<RecipientPart> _recipientPart = r.getRecipientPart();
       boolean _isEmpty = _recipientPart.isEmpty();
@@ -1182,17 +1158,17 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
             if (!_hasElements) {
               _hasElements = true;
             } else {
-              _builder.appendImmediate(",", "\t\t\t");
+              _builder.appendImmediate(",", "\t");
             }
             CharSequence _compilerpartr = this.compilerpartr(rp);
-            _builder.append(_compilerpartr, "\t\t\t");
+            _builder.append(_compilerpartr, "\t");
           }
         }
         _builder.append("],");
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Type\": \"");
     {
       String _type = r.getType();
@@ -1211,7 +1187,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
     }
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Scope\": \"");
     {
       String _scope = r.getScope();
@@ -1230,9 +1206,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
     }
     _builder.append("\"");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
     _builder.append("}");
-    _builder.newLine();
     return _builder;
   }
   
@@ -1248,22 +1222,21 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
   
   public CharSequence compileService(final Service s) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("\t");
     _builder.append("{");
     _builder.newLine();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"ID\": \"");
     String _name = s.getName();
-    _builder.append(_name, "\t\t\t");
+    _builder.append(_name, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Description\": \"");
     String _description = s.getDescription();
-    _builder.append(_description, "\t\t\t");
+    _builder.append(_description, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       RefPrivateData _refPrivateData = s.getRefPrivateData();
       boolean _notEquals = (!Objects.equal(_refPrivateData, null));
@@ -1272,14 +1245,14 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
         RefPrivateData _refPrivateData_1 = s.getRefPrivateData();
         PrivateData _refPrivateData_2 = _refPrivateData_1.getRefPrivateData();
         CharSequence _compileRefPrivateData = this.compileRefPrivateData(_refPrivateData_2);
-        _builder.append(_compileRefPrivateData, "\t\t\t");
+        _builder.append(_compileRefPrivateData, "\t");
         {
           RefPrivateData _refPrivateData_3 = s.getRefPrivateData();
           EList<PrivateData> _refs = _refPrivateData_3.getRefs();
           for(final PrivateData p : _refs) {
             _builder.append(", ");
             CharSequence _compileRefPrivateData_1 = this.compileRefPrivateData(p);
-            _builder.append(_compileRefPrivateData_1, "\t\t\t");
+            _builder.append(_compileRefPrivateData_1, "\t");
           }
         }
         _builder.append("],");
@@ -1292,7 +1265,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     {
       EList<ServicePart> _servicePart = s.getServicePart();
       boolean _isEmpty = _servicePart.isEmpty();
@@ -1306,19 +1279,17 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
             if (!_hasElements) {
               _hasElements = true;
             } else {
-              _builder.appendImmediate(",", "\t\t\t");
+              _builder.appendImmediate(",", "\t");
             }
             CharSequence _compilerservicePart = this.compilerservicePart(sp);
-            _builder.append(_compilerservicePart, "\t\t\t");
+            _builder.append(_compilerservicePart, "\t");
           }
         }
         _builder.append("]");
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
     _builder.append("}");
-    _builder.newLine();
     return _builder;
   }
   
@@ -1334,28 +1305,27 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
   
   public CharSequence compileEnforcement(final Enforcement e) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("\t");
     _builder.append("{");
     _builder.newLine();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"ID\": \"");
     String _name = e.getName();
-    _builder.append(_name, "\t\t\t");
+    _builder.append(_name, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Name\": \"");
     String _enforcementName = e.getEnforcementName();
-    _builder.append(_enforcementName, "\t\t\t");
+    _builder.append(_enforcementName, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Description\": \"");
     String _description = e.getDescription();
-    _builder.append(_description, "\t\t\t");
+    _builder.append(_description, "\t");
     _builder.append("\",");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t");
     _builder.append("\"Type\": \"");
     {
       String _type = e.getType();
@@ -1386,9 +1356,7 @@ public class RSLIL4Privacy2JsonGenerator implements IGenerator {
     }
     _builder.append("\"");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
     _builder.append("}");
-    _builder.newLine();
     return _builder;
   }
 }
