@@ -180,7 +180,7 @@ public class ConfigurationWindow {
 		btnUseGraphviz.setBounds(10, 23, 93, 16);
 		formToolkit.adapt(btnUseGraphviz, true, true);
 		btnUseGraphviz.setText("Use Graphviz?");
-		btnUseGraphviz.setSelection(true);
+		btnUseGraphviz.setSelection(Boolean.parseBoolean(configs.get("use-graphviz")));
 		btnUseGraphviz.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -304,51 +304,44 @@ public class ConfigurationWindow {
 	
 	private void saveConfigurations(HashMap<String, String> configs) {
 		File configFile = new File(RSLINGO_PATH + CONFIG_PATH);
-
-		if (!configs.get("word-path").equals(DEF_WORD_PATH)
-			|| !configs.get("excel-path").equals(DEF_EXCEL_PATH)
-			|| !configs.get("use-graphviz").equals("true")
-			|| !configs.get("graphviz-path").equals(DEF_GRAPHVIZ_PATH)) {
-			try {
-				DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-				DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-				Document doc = docBuilder.parse(configFile);
-				doc.getDocumentElement().normalize();
-				
-				XPath xPath = XPathFactory.newInstance().newXPath();
-				NodeList nodes = (NodeList) xPath.evaluate("/configurations/configuration",
-						doc.getDocumentElement(), XPathConstants.NODESET);
-				
-				if (!configs.get("word-path").equals(DEF_WORD_PATH)) {
-					Element wordConfig = (Element) nodes.item(0);
-					wordConfig.setAttribute("value", configs.get("word-path"));
-				}
-				
-				if (!configs.get("excel-path").equals(DEF_EXCEL_PATH)) {
-					Element excelConfig = (Element) nodes.item(1);
-					excelConfig.setAttribute("value", configs.get("excel-path"));
-				}
-				
-				if (!configs.get("use-graphviz").equals("true")) {
-					Element graphvizConfig = (Element) nodes.item(2);
-					graphvizConfig.setAttribute("value", configs.get("use-graphviz"));
-				}
-				
-				if (!configs.get("graphviz-path").equals(DEF_GRAPHVIZ_PATH)) {
-					Element graphvizConfig = (Element) nodes.item(3);
-					graphvizConfig.setAttribute("value", configs.get("graphviz-path"));
-				}
-				
-				// Write the content into the config.xml file
-				TransformerFactory transformerFactory = TransformerFactory.newInstance();
-				Transformer transformer = transformerFactory.newTransformer();
-				transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-				DOMSource source = new DOMSource(doc);
-				StreamResult result = new StreamResult(configFile);
-				transformer.transform(source, result);
-			} catch (Exception e) {
-				e.printStackTrace();
+		
+		try {
+			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+			Document doc = docBuilder.parse(configFile);
+			doc.getDocumentElement().normalize();
+			
+			XPath xPath = XPathFactory.newInstance().newXPath();
+			NodeList nodes = (NodeList) xPath.evaluate("/configurations/configuration",
+					doc.getDocumentElement(), XPathConstants.NODESET);
+			
+			if (!configs.get("word-path").equals(DEF_WORD_PATH)) {
+				Element wordConfig = (Element) nodes.item(0);
+				wordConfig.setAttribute("value", configs.get("word-path"));
 			}
+			
+			if (!configs.get("excel-path").equals(DEF_EXCEL_PATH)) {
+				Element excelConfig = (Element) nodes.item(1);
+				excelConfig.setAttribute("value", configs.get("excel-path"));
+			}
+			
+			Element graphvizConfig = (Element) nodes.item(2);
+			graphvizConfig.setAttribute("value", configs.get("use-graphviz"));
+			
+			if (!configs.get("graphviz-path").equals(DEF_GRAPHVIZ_PATH)) {
+				graphvizConfig = (Element) nodes.item(3);
+				graphvizConfig.setAttribute("value", configs.get("graphviz-path"));
+			}
+			
+			// Write the content into the config.xml file
+			TransformerFactory transformerFactory = TransformerFactory.newInstance();
+			Transformer transformer = transformerFactory.newTransformer();
+			transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+			DOMSource source = new DOMSource(doc);
+			StreamResult result = new StreamResult(configFile);
+			transformer.transform(source, result);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 }
