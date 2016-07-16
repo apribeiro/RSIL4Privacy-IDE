@@ -504,6 +504,8 @@ public class ImportExcelHandler extends AbstractHandler {
 	    		String attributes = cellAttributes.getStringCellValue();
 	    		sb.append("PrivateData PD" + id + " {");
 	    		sb.append("\n");
+	    		sb.append("\tName \"" + id + "\"");
+	    		sb.append("\n");
 	    		sb.append("\tDescription \"" + description + "\"");
 	    		sb.append("\n");
 	    		sb.append("\tType " + type);
