@@ -31,6 +31,7 @@ import rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage;
  * </p>
  * <ul>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.PrivateDataImpl#getName <em>Name</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.PrivateDataImpl#getPrivateDataName <em>Private Data Name</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.PrivateDataImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.PrivateDataImpl#getType <em>Type</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.PrivateDataImpl#getAttribute <em>Attribute</em>}</li>
@@ -59,6 +60,26 @@ public class PrivateDataImpl extends MinimalEObjectImpl.Container implements Pri
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getPrivateDataName() <em>Private Data Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPrivateDataName()
+   * @generated
+   * @ordered
+   */
+  protected static final String PRIVATE_DATA_NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getPrivateDataName() <em>Private Data Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPrivateDataName()
+   * @generated
+   * @ordered
+   */
+  protected String privateDataName = PRIVATE_DATA_NAME_EDEFAULT;
 
   /**
    * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -159,6 +180,29 @@ public class PrivateDataImpl extends MinimalEObjectImpl.Container implements Pri
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getPrivateDataName()
+  {
+    return privateDataName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPrivateDataName(String newPrivateDataName)
+  {
+    String oldPrivateDataName = privateDataName;
+    privateDataName = newPrivateDataName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, RSLIL4PrivacyPackage.PRIVATE_DATA__PRIVATE_DATA_NAME, oldPrivateDataName, privateDataName));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getDescription()
   {
     return description;
@@ -242,6 +286,8 @@ public class PrivateDataImpl extends MinimalEObjectImpl.Container implements Pri
     {
       case RSLIL4PrivacyPackage.PRIVATE_DATA__NAME:
         return getName();
+      case RSLIL4PrivacyPackage.PRIVATE_DATA__PRIVATE_DATA_NAME:
+        return getPrivateDataName();
       case RSLIL4PrivacyPackage.PRIVATE_DATA__DESCRIPTION:
         return getDescription();
       case RSLIL4PrivacyPackage.PRIVATE_DATA__TYPE:
@@ -265,6 +311,9 @@ public class PrivateDataImpl extends MinimalEObjectImpl.Container implements Pri
     {
       case RSLIL4PrivacyPackage.PRIVATE_DATA__NAME:
         setName((String)newValue);
+        return;
+      case RSLIL4PrivacyPackage.PRIVATE_DATA__PRIVATE_DATA_NAME:
+        setPrivateDataName((String)newValue);
         return;
       case RSLIL4PrivacyPackage.PRIVATE_DATA__DESCRIPTION:
         setDescription((String)newValue);
@@ -293,6 +342,9 @@ public class PrivateDataImpl extends MinimalEObjectImpl.Container implements Pri
       case RSLIL4PrivacyPackage.PRIVATE_DATA__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case RSLIL4PrivacyPackage.PRIVATE_DATA__PRIVATE_DATA_NAME:
+        setPrivateDataName(PRIVATE_DATA_NAME_EDEFAULT);
+        return;
       case RSLIL4PrivacyPackage.PRIVATE_DATA__DESCRIPTION:
         setDescription(DESCRIPTION_EDEFAULT);
         return;
@@ -318,6 +370,8 @@ public class PrivateDataImpl extends MinimalEObjectImpl.Container implements Pri
     {
       case RSLIL4PrivacyPackage.PRIVATE_DATA__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case RSLIL4PrivacyPackage.PRIVATE_DATA__PRIVATE_DATA_NAME:
+        return PRIVATE_DATA_NAME_EDEFAULT == null ? privateDataName != null : !PRIVATE_DATA_NAME_EDEFAULT.equals(privateDataName);
       case RSLIL4PrivacyPackage.PRIVATE_DATA__DESCRIPTION:
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
       case RSLIL4PrivacyPackage.PRIVATE_DATA__TYPE:
@@ -341,6 +395,8 @@ public class PrivateDataImpl extends MinimalEObjectImpl.Container implements Pri
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", privateDataName: ");
+    result.append(privateDataName);
     result.append(", description: ");
     result.append(description);
     result.append(", type: ");

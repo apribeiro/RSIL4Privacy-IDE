@@ -579,13 +579,22 @@ public interface RSLIL4PrivacyPackage extends EPackage
   int PRIVATE_DATA__NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Private Data Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRIVATE_DATA__PRIVATE_DATA_NAME = 1;
+
+  /**
    * The feature id for the '<em><b>Description</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PRIVATE_DATA__DESCRIPTION = 1;
+  int PRIVATE_DATA__DESCRIPTION = 2;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -594,7 +603,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRIVATE_DATA__TYPE = 2;
+  int PRIVATE_DATA__TYPE = 3;
 
   /**
    * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
@@ -603,7 +612,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRIVATE_DATA__ATTRIBUTE = 3;
+  int PRIVATE_DATA__ATTRIBUTE = 4;
 
   /**
    * The number of structural features of the '<em>Private Data</em>' class.
@@ -612,7 +621,7 @@ public interface RSLIL4PrivacyPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRIVATE_DATA_FEATURE_COUNT = 4;
+  int PRIVATE_DATA_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link rslingo.rslil4privacy.rSLIL4Privacy.impl.AttributeImpl <em>Attribute</em>}' class.
@@ -2132,6 +2141,17 @@ public interface RSLIL4PrivacyPackage extends EPackage
   EAttribute getPrivateData_Name();
 
   /**
+   * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getPrivateDataName <em>Private Data Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Private Data Name</em>'.
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getPrivateDataName()
+   * @see #getPrivateData()
+   * @generated
+   */
+  EAttribute getPrivateData_PrivateDataName();
+
+  /**
    * Returns the meta object for the attribute '{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getDescription <em>Description</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3616,6 +3636,14 @@ public interface RSLIL4PrivacyPackage extends EPackage
      * @generated
      */
     EAttribute PRIVATE_DATA__NAME = eINSTANCE.getPrivateData_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Private Data Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PRIVATE_DATA__PRIVATE_DATA_NAME = eINSTANCE.getPrivateData_PrivateDataName();
 
     /**
      * The meta object literal for the '<em><b>Description</b></em>' attribute feature.

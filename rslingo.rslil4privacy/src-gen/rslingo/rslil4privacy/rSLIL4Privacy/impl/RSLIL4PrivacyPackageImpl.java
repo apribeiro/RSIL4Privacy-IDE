@@ -762,7 +762,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getPrivateData_Description()
+  public EAttribute getPrivateData_PrivateDataName()
   {
     return (EAttribute)privateDataEClass.getEStructuralFeatures().get(1);
   }
@@ -772,7 +772,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getPrivateData_Type()
+  public EAttribute getPrivateData_Description()
   {
     return (EAttribute)privateDataEClass.getEStructuralFeatures().get(2);
   }
@@ -782,9 +782,19 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getPrivateData_Type()
+  {
+    return (EAttribute)privateDataEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getPrivateData_Attribute()
   {
-    return (EReference)privateDataEClass.getEStructuralFeatures().get(3);
+    return (EReference)privateDataEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1814,6 +1824,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
 
     privateDataEClass = createEClass(PRIVATE_DATA);
     createEAttribute(privateDataEClass, PRIVATE_DATA__NAME);
+    createEAttribute(privateDataEClass, PRIVATE_DATA__PRIVATE_DATA_NAME);
     createEAttribute(privateDataEClass, PRIVATE_DATA__DESCRIPTION);
     createEAttribute(privateDataEClass, PRIVATE_DATA__TYPE);
     createEReference(privateDataEClass, PRIVATE_DATA__ATTRIBUTE);
@@ -2015,6 +2026,7 @@ public class RSLIL4PrivacyPackageImpl extends EPackageImpl implements RSLIL4Priv
 
     initEClass(privateDataEClass, PrivateData.class, "PrivateData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPrivateData_Name(), ecorePackage.getEString(), "name", null, 0, 1, PrivateData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrivateData_PrivateDataName(), ecorePackage.getEString(), "privateDataName", null, 0, 1, PrivateData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPrivateData_Description(), ecorePackage.getEString(), "description", null, 0, 1, PrivateData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPrivateData_Type(), ecorePackage.getEString(), "type", null, 0, 1, PrivateData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPrivateData_Attribute(), this.getAttribute(), null, "attribute", null, 0, -1, PrivateData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

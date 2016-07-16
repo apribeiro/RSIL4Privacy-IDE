@@ -1418,15 +1418,37 @@ rulePrivateData returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getPrivateDataAccess().getLeftCurlyBracketKeyword_2());
     }
-	otherlv_3='Description' 
+	otherlv_3='Name' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getPrivateDataAccess().getDescriptionKeyword_3());
+    	newLeafNode(otherlv_3, grammarAccess.getPrivateDataAccess().getNameKeyword_3());
     }
 (
 (
-		lv_description_4_0=RULE_STRING
+		lv_privateDataName_4_0=RULE_STRING
 		{
-			newLeafNode(lv_description_4_0, grammarAccess.getPrivateDataAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
+			newLeafNode(lv_privateDataName_4_0, grammarAccess.getPrivateDataAccess().getPrivateDataNameSTRINGTerminalRuleCall_4_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrivateDataRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"privateDataName",
+        		lv_privateDataName_4_0, 
+        		"STRING");
+	    }
+
+)
+)	otherlv_5='Description' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getPrivateDataAccess().getDescriptionKeyword_5());
+    }
+(
+(
+		lv_description_6_0=RULE_STRING
+		{
+			newLeafNode(lv_description_6_0, grammarAccess.getPrivateDataAccess().getDescriptionSTRINGTerminalRuleCall_6_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1435,40 +1457,40 @@ rulePrivateData returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"description",
-        		lv_description_4_0, 
+        		lv_description_6_0, 
         		"STRING");
 	    }
 
 )
-)	otherlv_5='Type' 
+)	otherlv_7='Type' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getPrivateDataAccess().getTypeKeyword_5());
+    	newLeafNode(otherlv_7, grammarAccess.getPrivateDataAccess().getTypeKeyword_7());
     }
 (
 (
 (
-		lv_type_6_1=	'PersonalInformation' 
+		lv_type_8_1=	'PersonalInformation' 
     {
-        newLeafNode(lv_type_6_1, grammarAccess.getPrivateDataAccess().getTypePersonalInformationKeyword_6_0_0());
+        newLeafNode(lv_type_8_1, grammarAccess.getPrivateDataAccess().getTypePersonalInformationKeyword_8_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrivateDataRule());
 	        }
-       		setWithLastConsumed($current, "type", lv_type_6_1, null);
+       		setWithLastConsumed($current, "type", lv_type_8_1, null);
 	    }
 
-    |		lv_type_6_2=	'UsageInformation' 
+    |		lv_type_8_2=	'UsageInformation' 
     {
-        newLeafNode(lv_type_6_2, grammarAccess.getPrivateDataAccess().getTypeUsageInformationKeyword_6_0_1());
+        newLeafNode(lv_type_8_2, grammarAccess.getPrivateDataAccess().getTypeUsageInformationKeyword_8_0_1());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrivateDataRule());
 	        }
-       		setWithLastConsumed($current, "type", lv_type_6_2, null);
+       		setWithLastConsumed($current, "type", lv_type_8_2, null);
 	    }
 
 )
@@ -1477,24 +1499,24 @@ rulePrivateData returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getPrivateDataAccess().getAttributeAttributeParserRuleCall_7_0()); 
+	        newCompositeNode(grammarAccess.getPrivateDataAccess().getAttributeAttributeParserRuleCall_9_0()); 
 	    }
-		lv_attribute_7_0=ruleAttribute		{
+		lv_attribute_9_0=ruleAttribute		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getPrivateDataRule());
 	        }
        		add(
        			$current, 
        			"attribute",
-        		lv_attribute_7_0, 
+        		lv_attribute_9_0, 
         		"Attribute");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)*	otherlv_8='}' 
+)*	otherlv_10='}' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getPrivateDataAccess().getRightCurlyBracketKeyword_8());
+    	newLeafNode(otherlv_10, grammarAccess.getPrivateDataAccess().getRightCurlyBracketKeyword_10());
     }
 )
 ;

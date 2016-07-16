@@ -65,6 +65,7 @@ Recipient:
  		
 PrivateData:
 	'PrivateData' name=ID '{'
+	'Name' privateDataName=STRING
 	'Description' description=STRING
 	'Type' type=('PersonalInformation'| 'UsageInformation')
 	attribute+=Attribute* '}'; 	

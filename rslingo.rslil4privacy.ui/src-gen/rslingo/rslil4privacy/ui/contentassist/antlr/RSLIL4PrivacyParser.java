@@ -42,7 +42,7 @@ public class RSLIL4PrivacyParser extends AbstractContentAssistParser {
 					put(grammarAccess.getServiceAccess().getAlternatives_6_1(), "rule__Service__Alternatives_6_1");
 					put(grammarAccess.getRecipientAccess().getScopeAlternatives_9_0(), "rule__Recipient__ScopeAlternatives_9_0");
 					put(grammarAccess.getRecipientAccess().getTypeAlternatives_11_0(), "rule__Recipient__TypeAlternatives_11_0");
-					put(grammarAccess.getPrivateDataAccess().getTypeAlternatives_6_0(), "rule__PrivateData__TypeAlternatives_6_0");
+					put(grammarAccess.getPrivateDataAccess().getTypeAlternatives_8_0(), "rule__PrivateData__TypeAlternatives_8_0");
 					put(grammarAccess.getCollectionAccess().getAlternatives_8_1(), "rule__Collection__Alternatives_8_1");
 					put(grammarAccess.getCollectionAccess().getAlternatives_9_1(), "rule__Collection__Alternatives_9_1");
 					put(grammarAccess.getCollectionAccess().getAlternatives_10_1(), "rule__Collection__Alternatives_10_1");
@@ -166,9 +166,10 @@ public class RSLIL4PrivacyParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRecipientAccess().getScopeAssignment_9(), "rule__Recipient__ScopeAssignment_9");
 					put(grammarAccess.getRecipientAccess().getTypeAssignment_11(), "rule__Recipient__TypeAssignment_11");
 					put(grammarAccess.getPrivateDataAccess().getNameAssignment_1(), "rule__PrivateData__NameAssignment_1");
-					put(grammarAccess.getPrivateDataAccess().getDescriptionAssignment_4(), "rule__PrivateData__DescriptionAssignment_4");
-					put(grammarAccess.getPrivateDataAccess().getTypeAssignment_6(), "rule__PrivateData__TypeAssignment_6");
-					put(grammarAccess.getPrivateDataAccess().getAttributeAssignment_7(), "rule__PrivateData__AttributeAssignment_7");
+					put(grammarAccess.getPrivateDataAccess().getPrivateDataNameAssignment_4(), "rule__PrivateData__PrivateDataNameAssignment_4");
+					put(grammarAccess.getPrivateDataAccess().getDescriptionAssignment_6(), "rule__PrivateData__DescriptionAssignment_6");
+					put(grammarAccess.getPrivateDataAccess().getTypeAssignment_8(), "rule__PrivateData__TypeAssignment_8");
+					put(grammarAccess.getPrivateDataAccess().getAttributeAssignment_9(), "rule__PrivateData__AttributeAssignment_9");
 					put(grammarAccess.getAttributeAccess().getNameAssignment_1(), "rule__Attribute__NameAssignment_1");
 					put(grammarAccess.getAttributeAccess().getDescriptionAssignment_4(), "rule__Attribute__DescriptionAssignment_4");
 					put(grammarAccess.getCollectionAccess().getNameAssignment_1(), "rule__Collection__NameAssignment_1");

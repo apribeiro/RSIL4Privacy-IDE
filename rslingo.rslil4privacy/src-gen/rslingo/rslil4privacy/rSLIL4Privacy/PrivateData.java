@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getName <em>Name</em>}</li>
+ *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getPrivateDataName <em>Private Data Name</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getDescription <em>Description</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getType <em>Type</em>}</li>
  *   <li>{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getAttribute <em>Attribute</em>}</li>
@@ -52,6 +53,32 @@ public interface PrivateData extends EObject
    * @generated
    */
   void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Private Data Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Private Data Name</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Private Data Name</em>' attribute.
+   * @see #setPrivateDataName(String)
+   * @see rslingo.rslil4privacy.rSLIL4Privacy.RSLIL4PrivacyPackage#getPrivateData_PrivateDataName()
+   * @model
+   * @generated
+   */
+  String getPrivateDataName();
+
+  /**
+   * Sets the value of the '{@link rslingo.rslil4privacy.rSLIL4Privacy.PrivateData#getPrivateDataName <em>Private Data Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Private Data Name</em>' attribute.
+   * @see #getPrivateDataName()
+   * @generated
+   */
+  void setPrivateDataName(String value);
 
   /**
    * Returns the value of the '<em><b>Description</b></em>' attribute.

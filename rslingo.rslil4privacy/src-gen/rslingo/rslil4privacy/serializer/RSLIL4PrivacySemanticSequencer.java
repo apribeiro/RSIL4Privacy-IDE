@@ -331,7 +331,7 @@ public class RSLIL4PrivacySemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (name=ID description=STRING (type='PersonalInformation' | type='UsageInformation') attribute+=Attribute*)
+	 *     (name=ID privateDataName=STRING description=STRING (type='PersonalInformation' | type='UsageInformation') attribute+=Attribute*)
 	 */
 	protected void sequence_PrivateData(EObject context, PrivateData semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

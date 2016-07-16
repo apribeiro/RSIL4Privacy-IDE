@@ -743,25 +743,28 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cDescriptionKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cDescriptionAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cDescriptionSTRINGTerminalRuleCall_4_0 = (RuleCall)cDescriptionAssignment_4.eContents().get(0);
-		private final Keyword cTypeKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cTypeAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final Alternatives cTypeAlternatives_6_0 = (Alternatives)cTypeAssignment_6.eContents().get(0);
-		private final Keyword cTypePersonalInformationKeyword_6_0_0 = (Keyword)cTypeAlternatives_6_0.eContents().get(0);
-		private final Keyword cTypeUsageInformationKeyword_6_0_1 = (Keyword)cTypeAlternatives_6_0.eContents().get(1);
-		private final Assignment cAttributeAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cAttributeAttributeParserRuleCall_7_0 = (RuleCall)cAttributeAssignment_7.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cNameKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cPrivateDataNameAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cPrivateDataNameSTRINGTerminalRuleCall_4_0 = (RuleCall)cPrivateDataNameAssignment_4.eContents().get(0);
+		private final Keyword cDescriptionKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cDescriptionAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cDescriptionSTRINGTerminalRuleCall_6_0 = (RuleCall)cDescriptionAssignment_6.eContents().get(0);
+		private final Keyword cTypeKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cTypeAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final Alternatives cTypeAlternatives_8_0 = (Alternatives)cTypeAssignment_8.eContents().get(0);
+		private final Keyword cTypePersonalInformationKeyword_8_0_0 = (Keyword)cTypeAlternatives_8_0.eContents().get(0);
+		private final Keyword cTypeUsageInformationKeyword_8_0_1 = (Keyword)cTypeAlternatives_8_0.eContents().get(1);
+		private final Assignment cAttributeAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cAttributeAttributeParserRuleCall_9_0 = (RuleCall)cAttributeAssignment_9.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//PrivateData:
-		//	"PrivateData" name=ID "{" "Description" description=STRING "Type" type=("PersonalInformation" | "UsageInformation")
-		//	attribute+=Attribute* "}";
+		//	"PrivateData" name=ID "{" "Name" privateDataName=STRING "Description" description=STRING "Type"
+		//	type=("PersonalInformation" | "UsageInformation") attribute+=Attribute* "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"PrivateData" name=ID "{" "Description" description=STRING "Type" type=("PersonalInformation" | "UsageInformation")
-		//attribute+=Attribute* "}"
+		//"PrivateData" name=ID "{" "Name" privateDataName=STRING "Description" description=STRING "Type"
+		//type=("PersonalInformation" | "UsageInformation") attribute+=Attribute* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"PrivateData"
@@ -776,38 +779,47 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"Description"
-		public Keyword getDescriptionKeyword_3() { return cDescriptionKeyword_3; }
+		//"Name"
+		public Keyword getNameKeyword_3() { return cNameKeyword_3; }
 
-		//description=STRING
-		public Assignment getDescriptionAssignment_4() { return cDescriptionAssignment_4; }
+		//privateDataName=STRING
+		public Assignment getPrivateDataNameAssignment_4() { return cPrivateDataNameAssignment_4; }
 
 		//STRING
-		public RuleCall getDescriptionSTRINGTerminalRuleCall_4_0() { return cDescriptionSTRINGTerminalRuleCall_4_0; }
+		public RuleCall getPrivateDataNameSTRINGTerminalRuleCall_4_0() { return cPrivateDataNameSTRINGTerminalRuleCall_4_0; }
+
+		//"Description"
+		public Keyword getDescriptionKeyword_5() { return cDescriptionKeyword_5; }
+
+		//description=STRING
+		public Assignment getDescriptionAssignment_6() { return cDescriptionAssignment_6; }
+
+		//STRING
+		public RuleCall getDescriptionSTRINGTerminalRuleCall_6_0() { return cDescriptionSTRINGTerminalRuleCall_6_0; }
 
 		//"Type"
-		public Keyword getTypeKeyword_5() { return cTypeKeyword_5; }
+		public Keyword getTypeKeyword_7() { return cTypeKeyword_7; }
 
 		//type=("PersonalInformation" | "UsageInformation")
-		public Assignment getTypeAssignment_6() { return cTypeAssignment_6; }
+		public Assignment getTypeAssignment_8() { return cTypeAssignment_8; }
 
 		//"PersonalInformation" | "UsageInformation"
-		public Alternatives getTypeAlternatives_6_0() { return cTypeAlternatives_6_0; }
+		public Alternatives getTypeAlternatives_8_0() { return cTypeAlternatives_8_0; }
 
 		//"PersonalInformation"
-		public Keyword getTypePersonalInformationKeyword_6_0_0() { return cTypePersonalInformationKeyword_6_0_0; }
+		public Keyword getTypePersonalInformationKeyword_8_0_0() { return cTypePersonalInformationKeyword_8_0_0; }
 
 		//"UsageInformation"
-		public Keyword getTypeUsageInformationKeyword_6_0_1() { return cTypeUsageInformationKeyword_6_0_1; }
+		public Keyword getTypeUsageInformationKeyword_8_0_1() { return cTypeUsageInformationKeyword_8_0_1; }
 
 		//attribute+=Attribute*
-		public Assignment getAttributeAssignment_7() { return cAttributeAssignment_7; }
+		public Assignment getAttributeAssignment_9() { return cAttributeAssignment_9; }
 
 		//Attribute
-		public RuleCall getAttributeAttributeParserRuleCall_7_0() { return cAttributeAttributeParserRuleCall_7_0; }
+		public RuleCall getAttributeAttributeParserRuleCall_9_0() { return cAttributeAttributeParserRuleCall_9_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 
 	public class AttributeElements extends AbstractParserRuleElementFinder {
@@ -2458,8 +2470,8 @@ public class RSLIL4PrivacyGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//PrivateData:
-	//	"PrivateData" name=ID "{" "Description" description=STRING "Type" type=("PersonalInformation" | "UsageInformation")
-	//	attribute+=Attribute* "}";
+	//	"PrivateData" name=ID "{" "Name" privateDataName=STRING "Description" description=STRING "Type"
+	//	type=("PersonalInformation" | "UsageInformation") attribute+=Attribute* "}";
 	public PrivateDataElements getPrivateDataAccess() {
 		return pPrivateData;
 	}

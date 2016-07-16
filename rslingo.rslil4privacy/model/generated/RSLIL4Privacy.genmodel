@@ -64,6 +64,7 @@
     </genClasses>
     <genClasses ecoreClass="RSLIL4Privacy.ecore#//PrivateData">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//PrivateData/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//PrivateData/privateDataName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//PrivateData/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RSLIL4Privacy.ecore#//PrivateData/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RSLIL4Privacy.ecore#//PrivateData/attribute"/>
