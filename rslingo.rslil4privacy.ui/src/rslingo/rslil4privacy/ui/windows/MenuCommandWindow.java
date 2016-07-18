@@ -84,20 +84,10 @@ public class MenuCommandWindow {
 		shell.setSize(450, 300);
 		shell.setText("RSLingo4Privacy Studio");
 		
-		Button btnRadioButtonAll = new Button(shell, SWT.RADIO);
-		btnRadioButtonAll.setBounds(10, 10, 100, 16);
-		btnRadioButtonAll.setText("Use all projects");
-		btnRadioButtonAll.setSelection(true);
-		btnRadioButtonAll.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				table_1.setEnabled(false);
-			}
-		});
-		
 		Button btnRadioButtonSelected = new Button(shell, SWT.RADIO);
-		btnRadioButtonSelected.setBounds(240, 10, 166, 16);
+		btnRadioButtonSelected.setBounds(10, 10, 166, 16);
 		btnRadioButtonSelected.setText("Use projects selected below");
+		btnRadioButtonSelected.setSelection(true);
 		btnRadioButtonSelected.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -105,10 +95,20 @@ public class MenuCommandWindow {
 			}
 		});
 		
+		Button btnRadioButtonAll = new Button(shell, SWT.RADIO);
+		btnRadioButtonAll.setBounds(268, 10, 100, 16);
+		btnRadioButtonAll.setText("Use all projects");
+		btnRadioButtonAll.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				table_1.setEnabled(false);
+			}
+		});
+		
 		CheckboxTableViewer checkboxTableViewer = CheckboxTableViewer.newCheckList(shell, SWT.BORDER | SWT.MULTI | SWT.FULL_SELECTION);
 		table_1 = checkboxTableViewer.getTable();
 		table_1.setBounds(10, 32, 414, 189);
-		table_1.setEnabled(false);
+		table_1.setEnabled(true);
 		formToolkit.paintBordersFor(table_1);
 		
 		IWorkspaceRoot workspace = ResourcesPlugin.getWorkspace().getRoot();
