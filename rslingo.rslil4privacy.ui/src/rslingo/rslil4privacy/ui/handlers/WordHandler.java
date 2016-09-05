@@ -152,7 +152,15 @@ public class WordHandler extends AbstractHandler {
 				}
 				
 				try {
-					InputStream from = new FileInputStream(RSLINGO_PATH + DEF_WORD_PATH);
+					String wordPath = ConfigurationHelper.getWordPath();
+					InputStream from = null;
+					
+					if (wordPath.equals(DEF_WORD_PATH)) {
+						from = new FileInputStream(RSLINGO_PATH + DEF_WORD_PATH);
+					} else {
+						from = new FileInputStream(wordPath);
+					}
+					
 					XWPFDocument document = new XWPFDocument(from);
 
 					writePolicyMetadata(policy.getMetadata(), document);

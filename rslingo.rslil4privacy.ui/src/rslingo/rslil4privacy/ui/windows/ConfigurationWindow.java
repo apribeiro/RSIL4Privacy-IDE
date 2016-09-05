@@ -119,7 +119,7 @@ public class ConfigurationWindow {
 			public void widgetSelected(SelectionEvent e) {
 				FileDialog dialog = new FileDialog(shell, SWT.OPEN);
 				dialog.setFilterExtensions(new String[] { "*.docx", "*.doc" });
-				dialog.setText("Select the Word file to upload");
+				dialog.setText("Select the Word template file");
 				String path = dialog.open();
 				
 				if (path != null) {
@@ -137,7 +137,7 @@ public class ConfigurationWindow {
 			public void widgetSelected(SelectionEvent e) {
 				FileDialog dialog = new FileDialog(shell, SWT.OPEN);
 				dialog.setFilterExtensions(new String[] { "*.xlsx", "*.xls" });
-				dialog.setText("Select the Excel file to upload");
+				dialog.setText("Select the Excel template file");
 				String path = dialog.open();
 				
 				if (path != null) {
@@ -167,7 +167,7 @@ public class ConfigurationWindow {
 			public void widgetSelected(SelectionEvent e) {
 				FileDialog dialog = new FileDialog(shell, SWT.OPEN);
 				dialog.setFilterExtensions(new String[] { "*.exe" });
-				dialog.setText("Select the Graphviz dot.exe file to upload");
+				dialog.setText("Select the Graphviz dot.exe file");
 				String path = dialog.open();
 				
 				if (path != null) {

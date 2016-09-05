@@ -64,7 +64,7 @@ public class ExportExcelHandler extends AbstractHandler {
 	private static final String GEN_FOLDER = "src-gen";
 	private static final String DOCS_FOLDER = "docs";
 	private static final String FILE_EXT = ".rslil4privacy";
-	private static final String DEF_WORD_PATH = "RSL-IL4Privacy-ExcelTemplate.xlsx";
+	private static final String DEF_EXCEL_PATH = "RSL-IL4Privacy-ExcelTemplate.xlsx";
 
 	private final String RSLINGO_PATH = Platform.getInstallLocation()
 			.getURL().getPath().substring(1)
@@ -149,7 +149,15 @@ public class ExportExcelHandler extends AbstractHandler {
 				}
 
 				try {
-					InputStream from = new FileInputStream(RSLINGO_PATH + DEF_WORD_PATH);
+					String excelPath = ConfigurationHelper.getExcelPath();
+					InputStream from = null;
+					
+					if (excelPath.equals(DEF_EXCEL_PATH)) {
+						from = new FileInputStream(RSLINGO_PATH + DEF_EXCEL_PATH);
+					} else {
+						from = new FileInputStream(excelPath);
+					}
+					
 					XSSFWorkbook workbook = new XSSFWorkbook(from);
 
 					writeMetadata(policy.getMetadata(), workbook);
