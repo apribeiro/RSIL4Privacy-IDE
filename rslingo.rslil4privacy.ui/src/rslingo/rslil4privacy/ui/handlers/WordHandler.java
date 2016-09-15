@@ -5,9 +5,12 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
@@ -219,31 +222,65 @@ public class WordHandler extends AbstractHandler {
 		}
 	}
 
+	private Map<XWPFParagraph, ArrayList<Pair<String, String>>> getParagraphsMap(ArrayList<Pair<String, String>> tags, XWPFDocument document) {
+		Map<XWPFParagraph, ArrayList<Pair<String, String>>> map = new TreeMap<XWPFParagraph, ArrayList<Pair<String, String>>>(new XWPFParagraphComparator(document));
+		
+		for (Pair<String, String> tag : tags) {
+			XWPFParagraph paragraph = DocumentHelper.getParagraph(document, tag.getFirst());
+			
+			if (map.containsKey(paragraph)) {
+				map.get(paragraph).add(tag);
+			} else {
+				ArrayList<Pair<String, String>> tagList = new ArrayList<Pair<String, String>>();
+				tagList.add(tag);
+				map.put(paragraph, tagList);
+			}
+		}
+		return map;
+	}
+	
 	private void writePrivateData(Policy policy, XWPFDocument document) {
 		for (PrivateData data : Lists.reverse(policy.getPrivateData())) {
 			XWPFParagraph tEnd = DocumentHelper.getParagraph(document, "@PDEnd");
 			// Get the position of the paragraph after the end tag
 			int endPos = document.getParagraphPos(document.getPosOfParagraph(tEnd)) + 1;
 			tEnd = document.getParagraphArray(endPos);
-			XmlCursor cursor = tEnd.getCTP().newCursor();
+			XmlCursor cursor = null;//tEnd.getCTP().newCursor();
 
-			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@PDName");
-			XWPFParagraph nName = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nName, tName);
-			DocumentHelper.replaceText(nName, "@PDName", data.getDescription()
-					+ " (" + data.getName() + ")");
-
-			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@PDType");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nType = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nType, tType);
-			DocumentHelper.replaceText(nType, "@PDType", data.getType());
-
-			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@PDDescription");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nDesc, tDesc);
-			DocumentHelper.replaceText(nDesc, "@PDDescription", data.getDescription());
+			ArrayList<Pair<String, String>> tags = new ArrayList<Pair<String, String>>();
+			tags.add(new Pair<String, String>("@PDName", data.getName()));
+			tags.add(new Pair<String, String>("@PDType", data.getType()));
+			tags.add(new Pair<String, String>("@PDDescription", data.getDescription()));
+			
+			Map<XWPFParagraph, ArrayList<Pair<String, String>>> map = getParagraphsMap(tags, document);
+			
+			for (XWPFParagraph tParagraph : map.keySet()) {
+				cursor = tEnd.getCTP().newCursor();
+				XWPFParagraph nParagraph = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nParagraph, tParagraph);
+				
+				for (Pair<String, String> pair : map.get(tParagraph)) {
+					DocumentHelper.replaceText(nParagraph, pair.getFirst(), pair.getSecond());
+				}
+			}
+			
+//			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@PDName");
+//			XWPFParagraph nName = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nName, tName);
+//			DocumentHelper.replaceText(nName, "@PDName", data.getDescription()
+//					+ " (" + data.getName() + ")");
+//
+//			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@PDType");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nType = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nType, tType);
+//			DocumentHelper.replaceText(nType, "@PDType", data.getType());
+//
+//			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@PDDescription");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nDesc, tDesc);
+//			DocumentHelper.replaceText(nDesc, "@PDDescription", data.getDescription());
 
 			// Copy Attributes Section
 			XWPFParagraph tAttrSection = DocumentHelper.getParagraph(document, "@PDAttrName");
@@ -256,12 +293,28 @@ public class WordHandler extends AbstractHandler {
 			XWPFParagraph nAttr = null;
 			
 			for (Attribute attr : data.getAttribute()) {
-				XWPFParagraph tAttr = DocumentHelper.getParagraph(document, "@PDAttrName");
-				cursor = tEnd.getCTP().newCursor();
-				nAttr = document.insertNewParagraph(cursor);
-				DocumentHelper.cloneParagraph(nAttr, tAttr);
-				DocumentHelper.replaceText(nAttr, "@PDAttrName", attr.getName());
-				DocumentHelper.replaceText(nAttr, "@PDAttrDescription", attr.getDescription());
+				tags = new ArrayList<Pair<String, String>>();
+				tags.add(new Pair<String, String>("@PDAttrName", attr.getName()));
+				tags.add(new Pair<String, String>("@PDAttrDescription", attr.getDescription()));
+				
+				map = getParagraphsMap(tags, document);
+				
+				for (XWPFParagraph tParagraph : map.keySet()) {
+					cursor = tEnd.getCTP().newCursor();
+					nAttr = document.insertNewParagraph(cursor);
+					DocumentHelper.cloneParagraph(nAttr, tParagraph);
+					
+					for (Pair<String, String> pair : map.get(tParagraph)) {
+						DocumentHelper.replaceText(nAttr, pair.getFirst(), pair.getSecond());
+					}
+				}
+				
+//				XWPFParagraph tAttr = DocumentHelper.getParagraph(document, "@PDAttrName");
+//				cursor = tEnd.getCTP().newCursor();
+//				nAttr = document.insertNewParagraph(cursor);
+//				DocumentHelper.cloneParagraph(nAttr, tAttr);
+//				DocumentHelper.replaceText(nAttr, "@PDAttrName", attr.getName());
+//				DocumentHelper.replaceText(nAttr, "@PDAttrDescription", attr.getDescription());
 			}
 
 			// Add a newline to the last paragraph
@@ -1469,6 +1522,25 @@ public class WordHandler extends AbstractHandler {
 			
 			// Add a newline to the last paragraph
 			DocumentHelper.addLineBreakToParagraph(last);
+		}
+	}
+	
+	class XWPFParagraphComparator implements Comparator<XWPFParagraph> {
+		private XWPFDocument document;
+		
+		public XWPFParagraphComparator(XWPFDocument document) {
+			this.document = document;
+		}
+		
+		@Override
+		public int compare(XWPFParagraph p1, XWPFParagraph p2) {
+			if (document.getPosOfParagraph(p1) > document.getPosOfParagraph(p2)) {
+				return 1;
+			} else if (p1.equals(p2)) {
+				return 0;
+			} else {
+				return -1;
+			}
 		}
 	}
 }
