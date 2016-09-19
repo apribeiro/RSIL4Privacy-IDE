@@ -329,19 +329,37 @@ public class WordHandler extends AbstractHandler {
 			// Get the position of the paragraph after the end tag
 			int endPos = document.getParagraphPos(document.getPosOfParagraph(tEnd)) + 1;
 			tEnd = document.getParagraphArray(endPos);
-			XmlCursor cursor = tEnd.getCTP().newCursor();
+			XmlCursor cursor = null;
 
-			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@SName");
-			XWPFParagraph nName = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nName, tName);
-			DocumentHelper.replaceText(nName, "@SName", service.getServiceName()
-					+ " (" + service.getName() + ")");
-
-			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@SDescription");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nDesc, tDesc);
-			DocumentHelper.replaceText(nDesc, "@SDescription", service.getDescription());
+			ArrayList<Pair<String, String>> tags = new ArrayList<Pair<String, String>>();
+			tags.add(new Pair<String, String>("@SName", service.getServiceName()
+					+ " (" + service.getName() + ")"));
+			tags.add(new Pair<String, String>("@SDescription", service.getDescription()));
+			
+			Map<XWPFParagraph, ArrayList<Pair<String, String>>> map = getParagraphsMap(tags, document);
+			XWPFParagraph nParagraph = null;
+			
+			for (XWPFParagraph tParagraph : map.keySet()) {
+				cursor = tEnd.getCTP().newCursor();
+				nParagraph = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nParagraph, tParagraph);
+				
+				for (Pair<String, String> pair : map.get(tParagraph)) {
+					DocumentHelper.replaceText(nParagraph, pair.getFirst(), pair.getSecond());
+				}
+			}
+			
+//			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@SName");
+//			XWPFParagraph nName = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nName, tName);
+//			DocumentHelper.replaceText(nName, "@SName", service.getServiceName()
+//					+ " (" + service.getName() + ")");
+//
+//			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@SDescription");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nDesc, tDesc);
+//			DocumentHelper.replaceText(nDesc, "@SDescription", service.getDescription());
 
 			List<Service> subservices = Lists.reverse(servicesMap.get(service));
 			
@@ -355,18 +373,37 @@ public class WordHandler extends AbstractHandler {
 				DocumentHelper.cloneParagraph(nSubSection, tSubSection);
 				
 				for (Service subService : subservices) {
-					XWPFParagraph tSSName = DocumentHelper.getParagraph(document, "@SSName");
-					cursor = tEnd.getCTP().newCursor();
-					XWPFParagraph nSSName = document.insertNewParagraph(cursor);
-					DocumentHelper.cloneParagraph(nSSName, tSSName);
-					DocumentHelper.replaceText(nSSName, "@SSName", subService.getServiceName()
-							+ " (" + subService.getName() + ")");
+//					XWPFParagraph tSSName = DocumentHelper.getParagraph(document, "@SSName");
+					cursor = null;
 					
-					XWPFParagraph tSSDescription = DocumentHelper.getParagraph(document, "@SSDescription");
-					cursor = tEnd.getCTP().newCursor();
-					XWPFParagraph nSSDescription = document.insertNewParagraph(cursor);
-					DocumentHelper.cloneParagraph(nSSDescription, tSSDescription);
-					DocumentHelper.replaceText(nSSDescription, "@SSDescription", subService.getDescription());
+					tags = new ArrayList<Pair<String, String>>();
+					tags.add(new Pair<String, String>("@SSName", subService.getServiceName()
+							+ " (" + subService.getName() + ")"));
+					tags.add(new Pair<String, String>("@SSDescription", subService.getDescription()));
+					
+					map = getParagraphsMap(tags, document);
+					nParagraph = null;
+					
+					for (XWPFParagraph tParagraph : map.keySet()) {
+						cursor = tEnd.getCTP().newCursor();
+						nParagraph = document.insertNewParagraph(cursor);
+						DocumentHelper.cloneParagraph(nParagraph, tParagraph);
+						
+						for (Pair<String, String> pair : map.get(tParagraph)) {
+							DocumentHelper.replaceText(nParagraph, pair.getFirst(), pair.getSecond());
+						}
+					}
+					
+//					XWPFParagraph nSSName = document.insertNewParagraph(cursor);
+//					DocumentHelper.cloneParagraph(nSSName, tSSName);
+//					DocumentHelper.replaceText(nSSName, "@SSName", subService.getServiceName()
+//							+ " (" + subService.getName() + ")");
+//					
+//					XWPFParagraph tSSDescription = DocumentHelper.getParagraph(document, "@SSDescription");
+//					cursor = tEnd.getCTP().newCursor();
+//					XWPFParagraph nSSDescription = document.insertNewParagraph(cursor);
+//					DocumentHelper.cloneParagraph(nSSDescription, tSSDescription);
+//					DocumentHelper.replaceText(nSSDescription, "@SSDescription", subService.getDescription());
 				}
 			}
 
@@ -458,29 +495,25 @@ public class WordHandler extends AbstractHandler {
 			tEnd = document.getParagraphArray(endPos);
 			XmlCursor cursor = tEnd.getCTP().newCursor();
 
-			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@RName");
-			XWPFParagraph nName = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nName, tName);
-			DocumentHelper.replaceText(nName, "@RName", recipient.getRecipientName()
-					+ " (" + recipient.getName() + ")");
-
-			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@RDescription");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nDesc, tDesc);
-			DocumentHelper.replaceText(nDesc, "@RDescription", recipient.getDescription());
+			ArrayList<Pair<String, String>> tags = new ArrayList<Pair<String, String>>();
+			tags.add(new Pair<String, String>("@RName", recipient.getRecipientName()
+					+ " (" + recipient.getName() + ")"));
+			tags.add(new Pair<String, String>("@RDescription", recipient.getDescription()));
+			tags.add(new Pair<String, String>("@RScope", recipient.getScope()));
+			tags.add(new Pair<String, String>("@RType", recipient.getType()));
 			
-			XWPFParagraph tScope = DocumentHelper.getParagraph(document, "@RScope");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nScope = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nScope, tScope);
-			DocumentHelper.replaceText(nScope, "@RScope", recipient.getScope());
+			Map<XWPFParagraph, ArrayList<Pair<String, String>>> map = getParagraphsMap(tags, document);
+			XWPFParagraph nParagraph = null;
 			
-			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@RType");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nType = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nType, tType);
-			DocumentHelper.replaceText(nType, "@RType", recipient.getType());
+			for (XWPFParagraph tParagraph : map.keySet()) {
+				cursor = tEnd.getCTP().newCursor();
+				nParagraph = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nParagraph, tParagraph);
+				
+				for (Pair<String, String> pair : map.get(tParagraph)) {
+					DocumentHelper.replaceText(nParagraph, pair.getFirst(), pair.getSecond());
+				}
+			}
 
 			List<Recipient> subRecipients = Lists.reverse(recipientsMap.get(recipient));
 			
@@ -515,7 +548,7 @@ public class WordHandler extends AbstractHandler {
 					DocumentHelper.addLineBreakToParagraph(nSRDescription);
 				}
 			} else {
-				DocumentHelper.addLineBreakToParagraph(nType);
+				DocumentHelper.addLineBreakToParagraph(nParagraph);
 			}
 		}
 
@@ -599,32 +632,51 @@ public class WordHandler extends AbstractHandler {
 			// Get the position of the paragraph after the end tag
 			int endPos = document.getParagraphPos(document.getPosOfParagraph(tEnd)) + 1;
 			tEnd = document.getParagraphArray(endPos);
-			XmlCursor cursor = tEnd.getCTP().newCursor();
+			XmlCursor cursor = null;
 
-			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@StId");
-			XWPFParagraph nName = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nName, tName);
-			DocumentHelper.replaceText(nName, "@StId", informative.getName());
-
-			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@StDescription");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nDesc, tDesc);
-			DocumentHelper.replaceText(nDesc, "@StDescription", informative.getDescription());
+			ArrayList<Pair<String, String>> tags = new ArrayList<Pair<String, String>>();
+			tags.add(new Pair<String, String>("@StId", informative.getName()));
+			tags.add(new Pair<String, String>("@StDescription", informative.getDescription()));
+			tags.add(new Pair<String, String>("@StType", "Informative"));
+			tags.add(new Pair<String, String>("@StModality", informative.getModality()));
 			
-			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@StType");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nType = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nType, tType);
-			DocumentHelper.replaceText(nType, "@StType", "Informative");
-
-			XWPFParagraph tModality = DocumentHelper.getParagraph(document, "@StModality");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nModality = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nModality, tModality);
-			DocumentHelper.replaceText(nModality, "@StModality", informative.getModality());
+			Map<XWPFParagraph, ArrayList<Pair<String, String>>> map = getParagraphsMap(tags, document);
+			XWPFParagraph nParagraph = null;
 			
-			XWPFParagraph last = nModality;
+			for (XWPFParagraph tParagraph : map.keySet()) {
+				cursor = tEnd.getCTP().newCursor();
+				nParagraph = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nParagraph, tParagraph);
+				
+				for (Pair<String, String> pair : map.get(tParagraph)) {
+					DocumentHelper.replaceText(nParagraph, pair.getFirst(), pair.getSecond());
+				}
+			}
+			
+//			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@StId");
+//			XWPFParagraph nName = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nName, tName);
+//			DocumentHelper.replaceText(nName, "@StId", informative.getName());
+//
+//			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@StDescription");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nDesc, tDesc);
+//			DocumentHelper.replaceText(nDesc, "@StDescription", informative.getDescription());
+//			
+//			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@StType");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nType = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nType, tType);
+//			DocumentHelper.replaceText(nType, "@StType", "Informative");
+//
+//			XWPFParagraph tModality = DocumentHelper.getParagraph(document, "@StModality");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nModality = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nModality, tModality);
+//			DocumentHelper.replaceText(nModality, "@StModality", informative.getModality());
+			
+			XWPFParagraph last = nParagraph;
 			
 			// Add Private Data Section
 			RefPrivateData refPrivateData = informative.getRefPrivateData();
@@ -769,32 +821,51 @@ public class WordHandler extends AbstractHandler {
 			// Get the position of the paragraph after the end tag
 			int endPos = document.getParagraphPos(document.getPosOfParagraph(tEnd)) + 1;
 			tEnd = document.getParagraphArray(endPos);
-			XmlCursor cursor = tEnd.getCTP().newCursor();
+			XmlCursor cursor = null;
 
-			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@StId");
-			XWPFParagraph nName = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nName, tName);
-			DocumentHelper.replaceText(nName, "@StId", usage.getName());
-
-			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@StDescription");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nDesc, tDesc);
-			DocumentHelper.replaceText(nDesc, "@StDescription", usage.getDescription());
+			ArrayList<Pair<String, String>> tags = new ArrayList<Pair<String, String>>();
+			tags.add(new Pair<String, String>("@StId", usage.getName()));
+			tags.add(new Pair<String, String>("@StDescription", usage.getDescription()));
+			tags.add(new Pair<String, String>("@StType", "Usage"));
+			tags.add(new Pair<String, String>("@StModality", usage.getModality()));
 			
-			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@StType");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nType = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nType, tType);
-			DocumentHelper.replaceText(nType, "@StType", "Usage");
-
-			XWPFParagraph tModality = DocumentHelper.getParagraph(document, "@StModality");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nModality = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nModality, tModality);
-			DocumentHelper.replaceText(nModality, "@StModality", usage.getModality());
+			Map<XWPFParagraph, ArrayList<Pair<String, String>>> map = getParagraphsMap(tags, document);
+			XWPFParagraph nParagraph = null;
 			
-			XWPFParagraph last = nModality;
+			for (XWPFParagraph tParagraph : map.keySet()) {
+				cursor = tEnd.getCTP().newCursor();
+				nParagraph = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nParagraph, tParagraph);
+				
+				for (Pair<String, String> pair : map.get(tParagraph)) {
+					DocumentHelper.replaceText(nParagraph, pair.getFirst(), pair.getSecond());
+				}
+			}
+			
+//			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@StId");
+//			XWPFParagraph nName = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nName, tName);
+//			DocumentHelper.replaceText(nName, "@StId", usage.getName());
+//
+//			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@StDescription");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nDesc, tDesc);
+//			DocumentHelper.replaceText(nDesc, "@StDescription", usage.getDescription());
+//			
+//			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@StType");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nType = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nType, tType);
+//			DocumentHelper.replaceText(nType, "@StType", "Usage");
+//
+//			XWPFParagraph tModality = DocumentHelper.getParagraph(document, "@StModality");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nModality = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nModality, tModality);
+//			DocumentHelper.replaceText(nModality, "@StModality", usage.getModality());
+			
+			XWPFParagraph last = nParagraph;
 			
 			// Add Private Data Section
 			RefPrivateData refPrivateData = usage.getRefPrivateData();
@@ -939,30 +1010,49 @@ public class WordHandler extends AbstractHandler {
 			// Get the position of the paragraph after the end tag
 			int endPos = document.getParagraphPos(document.getPosOfParagraph(tEnd)) + 1;
 			tEnd = document.getParagraphArray(endPos);
-			XmlCursor cursor = tEnd.getCTP().newCursor();
+			XmlCursor cursor = null;
 
-			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@StId");
-			XWPFParagraph nName = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nName, tName);
-			DocumentHelper.replaceText(nName, "@StId", retention.getName());
-
-			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@StDescription");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nDesc, tDesc);
-			DocumentHelper.replaceText(nDesc, "@StDescription", retention.getDescription());
+			ArrayList<Pair<String, String>> tags = new ArrayList<Pair<String, String>>();
+			tags.add(new Pair<String, String>("@StId", retention.getName()));
+			tags.add(new Pair<String, String>("@StDescription", retention.getDescription()));
+			tags.add(new Pair<String, String>("@StType", "Retention"));
+			tags.add(new Pair<String, String>("@StModality", retention.getModality()));
 			
-			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@StType");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nType = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nType, tType);
-			DocumentHelper.replaceText(nType, "@StType", "Retention");
-
-			XWPFParagraph tModality = DocumentHelper.getParagraph(document, "@StModality");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nModality = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nModality, tModality);
-			DocumentHelper.replaceText(nModality, "@StModality", retention.getModality());
+			Map<XWPFParagraph, ArrayList<Pair<String, String>>> map = getParagraphsMap(tags, document);
+			XWPFParagraph nParagraph = null;
+			
+			for (XWPFParagraph tParagraph : map.keySet()) {
+				cursor = tEnd.getCTP().newCursor();
+				nParagraph = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nParagraph, tParagraph);
+				
+				for (Pair<String, String> pair : map.get(tParagraph)) {
+					DocumentHelper.replaceText(nParagraph, pair.getFirst(), pair.getSecond());
+				}
+			}
+			
+//			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@StId");
+//			XWPFParagraph nName = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nName, tName);
+//			DocumentHelper.replaceText(nName, "@StId", retention.getName());
+//
+//			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@StDescription");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nDesc, tDesc);
+//			DocumentHelper.replaceText(nDesc, "@StDescription", retention.getDescription());
+//			
+//			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@StType");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nType = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nType, tType);
+//			DocumentHelper.replaceText(nType, "@StType", "Retention");
+//
+//			XWPFParagraph tModality = DocumentHelper.getParagraph(document, "@StModality");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nModality = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nModality, tModality);
+//			DocumentHelper.replaceText(nModality, "@StModality", retention.getModality());
 			
 			// Add Private Data Section
 			RefPrivateData refPrivateData = retention.getRefPrivateData();
@@ -1104,32 +1194,51 @@ public class WordHandler extends AbstractHandler {
 			// Get the position of the paragraph after the end tag
 			int endPos = document.getParagraphPos(document.getPosOfParagraph(tEnd)) + 1;
 			tEnd = document.getParagraphArray(endPos);
-			XmlCursor cursor = tEnd.getCTP().newCursor();
+			XmlCursor cursor = null;
 
-			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@StId");
-			XWPFParagraph nName = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nName, tName);
-			DocumentHelper.replaceText(nName, "@StId", disclosure.getName());
-
-			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@StDescription");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nDesc, tDesc);
-			DocumentHelper.replaceText(nDesc, "@StDescription", disclosure.getDescription());
+			ArrayList<Pair<String, String>> tags = new ArrayList<Pair<String, String>>();
+			tags.add(new Pair<String, String>("@StId", disclosure.getName()));
+			tags.add(new Pair<String, String>("@StDescription", disclosure.getDescription()));
+			tags.add(new Pair<String, String>("@StType", "Disclosure"));
+			tags.add(new Pair<String, String>("@StModality", disclosure.getModality()));
 			
-			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@StType");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nType = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nType, tType);
-			DocumentHelper.replaceText(nType, "@StType", "Disclosure");
-
-			XWPFParagraph tModality = DocumentHelper.getParagraph(document, "@StModality");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nModality = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nModality, tModality);
-			DocumentHelper.replaceText(nModality, "@StModality", disclosure.getModality());
+			Map<XWPFParagraph, ArrayList<Pair<String, String>>> map = getParagraphsMap(tags, document);
+			XWPFParagraph nParagraph = null;
 			
-			XWPFParagraph last = nModality;
+			for (XWPFParagraph tParagraph : map.keySet()) {
+				cursor = tEnd.getCTP().newCursor();
+				nParagraph = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nParagraph, tParagraph);
+				
+				for (Pair<String, String> pair : map.get(tParagraph)) {
+					DocumentHelper.replaceText(nParagraph, pair.getFirst(), pair.getSecond());
+				}
+			}
+			
+//			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@StId");
+//			XWPFParagraph nName = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nName, tName);
+//			DocumentHelper.replaceText(nName, "@StId", disclosure.getName());
+//
+//			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@StDescription");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nDesc, tDesc);
+//			DocumentHelper.replaceText(nDesc, "@StDescription", disclosure.getDescription());
+//			
+//			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@StType");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nType = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nType, tType);
+//			DocumentHelper.replaceText(nType, "@StType", "Disclosure");
+//
+//			XWPFParagraph tModality = DocumentHelper.getParagraph(document, "@StModality");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nModality = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nModality, tModality);
+//			DocumentHelper.replaceText(nModality, "@StModality", disclosure.getModality());
+			
+			XWPFParagraph last = nParagraph;
 			
 			// Add Private Data Section
 			RefPrivateData refPrivateData = disclosure.getRefPrivateData();
@@ -1320,32 +1429,51 @@ public class WordHandler extends AbstractHandler {
 			// Get the position of the paragraph after the end tag
 			int endPos = document.getParagraphPos(document.getPosOfParagraph(tEnd)) + 1;
 			tEnd = document.getParagraphArray(endPos);
-			XmlCursor cursor = tEnd.getCTP().newCursor();
+			XmlCursor cursor = null;
 
-			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@StId");
-			XWPFParagraph nName = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nName, tName);
-			DocumentHelper.replaceText(nName, "@StId", collection.getName());
-
-			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@StDescription");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nDesc, tDesc);
-			DocumentHelper.replaceText(nDesc, "@StDescription", collection.getDescription());
+			ArrayList<Pair<String, String>> tags = new ArrayList<Pair<String, String>>();
+			tags.add(new Pair<String, String>("@StId", collection.getName()));
+			tags.add(new Pair<String, String>("@StDescription", collection.getDescription()));
+			tags.add(new Pair<String, String>("@StType", "Collection"));
+			tags.add(new Pair<String, String>("@StModality", collection.getModality()));
 			
-			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@StType");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nType = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nType, tType);
-			DocumentHelper.replaceText(nType, "@StType", "Collection");
-
-			XWPFParagraph tModality = DocumentHelper.getParagraph(document, "@StModality");
-			cursor = tEnd.getCTP().newCursor();
-			XWPFParagraph nModality = document.insertNewParagraph(cursor);
-			DocumentHelper.cloneParagraph(nModality, tModality);
-			DocumentHelper.replaceText(nModality, "@StModality", collection.getModality());
+			Map<XWPFParagraph, ArrayList<Pair<String, String>>> map = getParagraphsMap(tags, document);
+			XWPFParagraph nParagraph = null;
 			
-			XWPFParagraph last = nModality;
+			for (XWPFParagraph tParagraph : map.keySet()) {
+				cursor = tEnd.getCTP().newCursor();
+				nParagraph = document.insertNewParagraph(cursor);
+				DocumentHelper.cloneParagraph(nParagraph, tParagraph);
+				
+				for (Pair<String, String> pair : map.get(tParagraph)) {
+					DocumentHelper.replaceText(nParagraph, pair.getFirst(), pair.getSecond());
+				}
+			}
+			
+//			XWPFParagraph tName = DocumentHelper.getParagraph(document, "@StId");
+//			XWPFParagraph nName = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nName, tName);
+//			DocumentHelper.replaceText(nName, "@StId", collection.getName());
+//
+//			XWPFParagraph tDesc = DocumentHelper.getParagraph(document, "@StDescription");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nDesc = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nDesc, tDesc);
+//			DocumentHelper.replaceText(nDesc, "@StDescription", collection.getDescription());
+//			
+//			XWPFParagraph tType = DocumentHelper.getParagraph(document, "@StType");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nType = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nType, tType);
+//			DocumentHelper.replaceText(nType, "@StType", "Collection");
+//
+//			XWPFParagraph tModality = DocumentHelper.getParagraph(document, "@StModality");
+//			cursor = tEnd.getCTP().newCursor();
+//			XWPFParagraph nModality = document.insertNewParagraph(cursor);
+//			DocumentHelper.cloneParagraph(nModality, tModality);
+//			DocumentHelper.replaceText(nModality, "@StModality", collection.getModality());
+			
+			XWPFParagraph last = nParagraph;
 			
 			// Add Private Data Section
 			RefPrivateData refPrivateData = collection.getRefPrivateData();
