@@ -150,8 +150,8 @@ public class NewRSLIL4PrivacyWizardPage extends WizardPage {
 		if (dotLoc != -1) {
 			String ext = fileName.substring(dotLoc + 1);
 			
-			if (ext.equalsIgnoreCase("rslil") == false) {
-				updateStatus("File extension must be \"rslil\"");
+			if (ext.equalsIgnoreCase("rslil4privacy") == false) {
+				updateStatus("File extension must be \"rslil4privacy\"");
 				return;
 			}
 		}
