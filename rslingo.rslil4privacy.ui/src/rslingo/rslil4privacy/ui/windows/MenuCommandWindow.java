@@ -150,9 +150,12 @@ public class MenuCommandWindow {
 								}
 							}
 						}
-					} else if (btnRadioButtonSelected.getSelection()) {				
+					} else if (btnRadioButtonSelected.getSelection()) {
+						boolean checked = false;
+						
 						for (TableItem item : table_1.getItems()) {
 							if (item.getChecked()) {
+								checked = true;
 								IProject project = workspace.getProject(item.getText());
 									
 								if (importMode) {
@@ -165,6 +168,13 @@ public class MenuCommandWindow {
 									}
 								}
 							}
+						}
+						
+						if (!checked) {
+							MessageDialog warningDialog = new MessageDialog(parent, "RSLingo4Privacy Studio",
+						    		null, "At least one project should be selected!", MessageDialog.WARNING, new String[] { "OK" }, 0);
+						    warningDialog.open();
+						    return;
 						}
 					}
 				} catch (Exception e2) {
