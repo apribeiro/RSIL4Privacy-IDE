@@ -28,4 +28,4 @@ Download the ready-to-use Eclipse IDE version of RSLingo4Privacy Studio through 
 
 [BHR2014] T. D. Breaux, H. Hibshi, A. Rao, "Eddy, A Formal Language for Specifying and Analyzing Data Flow Specifications for Conflicting Privacy Requirements", Requirements Engineering Journal, Springer, 2014.
 
-**© 2016 André Ribeiro and Prof. Alberto Silva (Supervisor) – Instituto Superior Técnico, University of Lisbon, and INESC-ID. All rights reserved.**
+**© 2016-2017 André Ribeiro and Prof. Alberto Silva (Supervisor) – Instituto Superior Técnico, University of Lisbon, and INESC-ID. All rights reserved.**
